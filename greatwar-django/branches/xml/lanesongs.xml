@@ -1,0 +1,2813 @@
+<TEI.2>
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>POEMS: Electronic Edition</title>
+            <author><name type="person" reg="Lane, John">John Lane ed. </name></author>
+         </titleStmt>
+	 <publicationStmt>
+	   <publisher>Lewis H. Beck Center for Electronic Collections
+	   and Services, Emory University</publisher>
+	   <pubPlace>Atlanta, GA</pubPlace>
+	   <address>
+	     <addrLine>540 Asbury Circle</addrLine>
+	     <addrLine>Woodruff Library</addrLine>
+	     <addrLine>Atlanta, GA 30322</addrLine>
+	   </address>
+	   <availability><p>&#x00A9;Emory University. Permission is
+	   granted to download, transmit, or otherwise reproduce,
+	   distribute or display the contributions to the work claimed
+	   by Emory University for non-profit educational purposes,
+	   provided this header is included in its entirety.  For
+	   inquiries about commercial uses, contact either: Institute
+	   for Jewish Studies, Emory University, Atlanta GA 30322 or
+	   the Lewis H. Beck Center for Electronic Collections and
+	   Services, Woodruff Library, Emory University, Atlanta,
+	   Georgia 30322 </p></availability> 
+	   <date>2004</date>
+	 </publicationStmt>
+	 <seriesStmt>
+	   <title>Great War</title>
+	 </seriesStmt>
+	 <notesStmt><note></note></notesStmt>
+         <sourceDesc>
+            <bibl>
+	     <title>Songs and Sonnets for England in War Time: Being a Collection of Lyrics by Various Authors Inspired by the Great War</title>
+	     <author>R. Watson Kerr</author>
+	     <pubPlace>London</pubPlace>
+	     <publisher>John Lane</publisher>
+             <pubPlace>New York</pubPlace>
+	     <publisher>John Lane Company</publisher>
+	     <date>1919</date>
+	   </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+	<projectDesc><p>Poetry contemporary to World War I (the Great
+	War) has been digitized by OCR or rekeying. The work has been
+	done in conjunction with Dr. Harry Rusche of the English
+	Department, Emory University</p></projectDesc>
+	<tagsDecl>
+	  <rendition id="quote">Paragraphs including q or quote
+	  elements indicate material that is in a block
+	  quote.</rendition>
+	  <rendition id="title">Where the title of a work is
+	  italicized, it is marked with a title element, both in the
+	  text and in footnotes.</rendition>
+	  <tagUsage gi="q" render="quote">blockquote</tagUsage>
+	  <tagUsage gi="quote" render="quote">blockquote</tagUsage>
+	  <tagUsage gi="title" render="title">italic</tagUsage>
+	</tagsDecl>
+	<refsDecl><p>The page numbers of the volumes are indicated by
+	page break elements</p>
+	<p></p>
+	</refsDecl>
+	<classDecl>
+	  <taxonomy id="lcsh">
+	    <bibl>
+	      <title>Library of Congress Subject Headings</title>
+	    </bibl>
+	  </taxonomy>
+	</classDecl>
+      </encodingDesc>
+      <profileDesc>
+         <creation>
+	   <rs type="collection">poetry</rs>
+	   <rs type="language">English</rs>
+            <rs type="ethnicity">Caucasian</rs>
+            <rs type="form">Unedited</rs>
+            <rs type="genre">Poetry</rs>
+            <rs type="geography">Great Britain</rs>
+            <date>1900-1999</date>
+         </creation>
+	 <textClass>
+	   <keywords scheme="lcsh">
+	     <list>
+	       <item>World War, 1914-1918--Poetry.</item>
+	       <item>English poetry--20th Century.</item>
+	       <item>War.</item>
+	     </list>
+	   </keywords>
+	 </textClass></profileDesc>
+      <revisionDesc><!-- add your information here -->
+	<change>
+	  <date>2009</date>
+	  <respStmt>
+	    <name>Shruthi Vissa</name>
+	    <resp>Beck Center staff</resp>
+	  </respStmt>
+	    <item>Proofing, encoding</item>
+	</change>
+      </revisionDesc>
+   </teiHeader>
+<text>
+<front>
+
+<pb n="i"/>
+<titlePage id="" type="half">
+     <docTitle>
+       <titlePart type="main">SONGS &#x0026; SONNETS<lb/>FOR ENGLAND IN<lb/>WAR TIME</titlePart>
+     </docTitle>
+   </titlePage>
+
+<pb n="[ii]"/>
+?????not sure what to call this page.
+
+<pb n="[iii]"/>
+<titlePage id="" type="full">
+     <docTitle>
+       <titlePart type="main">SONGS AND SONNETS<lb/>FOR ENGLAND IN<lb/>WAR TIME</titlePart>
+<titlePart type="sub">BEING A COLLECTION OF LYRICS<lb/>BY VARIOUS AUTHORS INSPIRED BY<lb/>THE GREAT WAR</titlePart>
+     </docTitle>
+       <epigraph><cit><q><lg type="stanza"><l><hi rend="italic">Sound, sound the clarion, fill the file !</hi></l>
+<l rend="inline"><hi rend="italic">To all the sensual world proclaim,</hi></l>
+<l><hi rend="italic">One crowded hour of glorious life</hi></l>
+<l rend="inline"><hi rend="italic">Is worth an age without a name.</hi></l></lg>
+<bibl><byline>SIR WALTER SCOTT,</byline> "Old Mortality"</bibl></q></cit></epigraph>
+       <docImprint>
+        <pubPlace>LONDON:<publisher> JOHN LANE, THE BODLEY HEAD</publisher></pubPlace>
+	 <pubPlace>NEW YORK:
+	 <publisher>JOHN LANE COMPANY,</publisher></pubPlace>
+<pubPlace> TORONTO: <publisher> BELL AND COCKBURN
+	 <docDate>MCMXIV [1914]</docDate></publisher></pubPlace>
+       </docImprint>
+   </titlePage>
+
+<pb n="iv"/>
+<div type="colophon" id="fm2">
+<p>THE BALLANTYNE PRESS TAVISTOCK STREET COVENT GARDEN LONDON</p>
+</div>
+
+<pb n="v"/>
+<div type="introduction" id="fm3">
+<head>INTRODUCTION</head>
+
+<p>In the stress of a nation's peril some of its greatest songs are born. In the stress of a nation's peril the poet at last comes into his own again, and with clarion call he rouses the sleeping soul of the empire. Prophet he is, champion and consoler.</p>
+<p>If in these later times the poet has been neglected, now in our infinite need, in our pride and our sorrow, he is here to strengthen, comfort and inspire. The poet is vindicated.</p>
+
+<p>What can so nobly uplift the hearts of a people facing war with its unspeakable agony as music and poetry? The sound of martial music steels men's hearts before battle. The sound of martial words inspires human souls to do and to endure. God, His poetry, and His music are the Holy Trinity of war.</p>
+
+<p>Not always the greatest songs that have sent men on to victory. Sometimes it has been a modest verse  that  has   found  refuge   in  the  heart   of   the
+
+<pb n="vi INTRODUCTION"/>
+
+soldier ready for the ultimate sacrifice, cheered on his way by the lilt of a humble song. Who else,indeed, can take the place of a poet ?</p>
+
+<p>As Mr. William Watson has most nobly said :</p>
+<q><lg type="stanza">
+<l>" Empires dissolve and peoples disappear :</l>
+<l>Song passes not away.</l>
+<l>Captains and conquerors leave a little dust,</l>
+<l>And kings a dubious legend of their reign ;</l>
+<l>The swords of Caesars, they are less than rust:</l>
+<l>The poet doth remain."</l></lg></q>
+</div>
+
+
+<pb n="vii"/>
+
+<div id="fm4" type="publisher's note">
+
+<head>PUBLISHER'S NOTE</head>
+
+<p>Of our poets who have been inspired to write and publish separate volumes of war poems during the actual progress of a campaign, we can only recall one--the late Sydney Dobell, whose " Sonnets on the War," and " England in Time of War," both dealt with the Crimea. Mr. William Watson's "The Purple East" was read and quoted the world over during the Armenian atrocities : indeed, " Abdul the Damned " has passed into the language. Although this famous sonnet sequence sprang out of events which could not be called a campaign in the accepted and legitimate sense of the word, yet it may be fairly argued that the Kaiser has surpassed the Turk in inflicting suffering on defenceless people.</p>
+
+<p>Doubtless, however, some of the many poets writing during the present war will in the course of time collect their verses and issue them as independent volumes.</p>
+
+
+
+<pb n="viii                                  PUBLISHER'S NOTE"/>
+
+<p>Anthologies also there are, without number, of poems of war on land and sea ; but none of these, so far as I can discover, has been formed during the conflict itself. In this respect, therefore, this collection is unique. I am proposing to issue a series of these volumes during the progress of this great war, dealing with its outstanding events. The next will include a number of poems that have appeared in American and Canadian papers, and will thus have a peculiar interest as expressing the feelings of our kinsmen beyond the sea. All the profits derived from the sale of these anthologies will be given to the Prince of Wales's Fund. Perhaps,therefore, in the event of similar collections being made, it would generally be well if the poet would prevent any possible overlapping by consenting to his poem's appearance in one collection only. In this way the public may be induced to buy the various collections rather than any particular one.</p>
+
+<p>Viscount Dillon sends me the following, taken from <hi rend="italic">La France du Nord</hi> of August 23. These lines, by a poetic ally, who remains anonymous, are as correct in feeling as they are ingenious in adapting themselves to the rhythm of our own National Anthem.</p>
+
+
+
+<pb n="PUBLISHER'S NOTE   ix"/>
+
+<div id="fm1000" type="poem"  n="1">
+<head>WELCOME TO YOU, GALLANT BRITONS</head>
+
+<lg type="stanza">
+<l>Welcome to you, brave friends,</l>
+<l>English, Irish, and Scotch,</l>
+<l rend="inline">Hail to our friends !</l>
+<l>Soon at the front with us,</l>
+<l>Of foes so treacherous</l>
+<l rend="inline">They will be victorious ;</l>
+<l>Hail to them all!</l></lg>
+
+<lg type="stanza">
+<l>And not these friends alone,</l>
+<l>But the little Servians,</l>
+<l rend="inline">And the Russians;</l>
+<l>The Belgians so gallant,</l>
+<l>Who have checked the tyrant</l>
+<l>From Li&#x00E8;ge to Dinant;</l>
+<l rend="inline">Hail to them all!</l></lg>
+
+<lg type="stanza">
+<l>The soldiers of fair France</l>
+<l>Welcome their British friends,</l>
+<l rend="inline">And grasp their hands,</l>
+<l>May their combined army</l>
+<l>Bear off the victory,</l>
+<l>And reap final glory ;</l>
+<l rend="inline">Hail to them all!</l></lg>
+
+<byline>G. C.</byline>
+</div>
+
+
+<pb n="X                                     PUBLISHER'S NOTE"/>
+
+<p>I have also been favoured with another poem which has an added interest from the fact that the writer has for many years been well acquainted with German politics and German statesmen.</p>
+
+<div id="fm1001" type="poem" n="2">
+<head>A PARTNERSHIP</head>
+
+<lg type="stanza">
+<l>God for the Kaiser !    God for the Hun !</l>
+<l>God for the fiercest war ever the sun</l>
+<l>Shone on !--No wonder it hid its face <ref target="p2">1</ref></l>
+<l>When the Kaiser rode forth to his big disgrace.</l></lg>
+
+<lg type="stanza">
+<l>God for the Kaiser !    Burn ! burn ! burn !</l>
+<l>Soldiers let harmless civilians learn</l>
+<l>That I am the great almighty Lord,</l>
+<l>Lord by the right of torch and sword.</l></lg>
+
+<lg type="stanza">
+<l>God for the Kaiser!    Shield your front,</l>
+<l>With women and children to bear the brunt</l>
+<l>Lest one brave German soldier be hurt</l>
+<l>One German helmet be rolled in the dirt!</l></lg>
+
+<lg type="stanza">
+<l>God for the Kaiser!    Kill! kill! kill!</l>
+<l>Blood is your draught, so drink your fill!</l>
+<l>Murder the old men, slaughter the young.</l>
+<l>Scatter their bodies abroad for dung.</l></lg>
+
+<note place="foot" id="p2" n="1">The eclipse of the sun.</note>
+
+
+
+<pb n="PUBLISHER'S NOTE           xi"/>
+
+<lg type="stanza">
+<l>God and the Kaiser!    God and I</l>
+<l>Can bid men to live or bid them to die;</l>
+<l>Mine to command and yours to obey</l>
+<l>Lest I wipe you out from the light of day.</l></lg>
+
+<lg type="stanza">
+<l>God and the Kaiser !   A sacred alliance</l>
+<l>Bidding the whole wide world defiance--</l>
+<l>Wait! and perhaps his Partner may send</l>
+<l>The blasphemous Kaiser a fitting end.</l></lg>
+</div>
+
+<p>My thanks are due for the great generosity displayed by all the authors whose poems appear in this volume, and whose names will be found on following pages ;and also to the Editors of the <hi rend="italic">Times, Daily Chronicle, Westminster Gazette, Daily News and Leader, Morning Post, Daily Telegraph, Evening Standard, Daily Express,Pall Mall Gazette, Punch, New Weekly, New Witness, Truth, Saturday Review, T.P.'s Weekly, Yorkshire Post, Glasgow Evening News</hi>, for full permission to reprint the poems that have appeared in their columns.</p>
+
+<p>Mr. Vernon Hill has drawn and presented the cover design.</p>
+
+<byline>JOHN LANE</byline>
+
+<dateline><name type="place">THE BODLEY HEAD.</name></dateline>
+</div>
+
+
+<pb n="[xi]"/>
+
+
+<pb n="xiii"/>
+<div id="lanesongsfm5" type="list of authors">
+<figure type="lanesongsl1" rend="inline">
+<figDesc> Alphabetic list of authors in front of "Songs and Sonnets for England in War Time"</figDesc>
+</figure>
+
+<pb n="xiv"/>
+<figure type="lanesongsl2" rend="inline">
+<figDesc> Alphabetic list of authors in front of "Songs and Sonnets for England in War Time"</figDesc>
+</figure>
+</div>
+</front>
+
+<body>
+<pb n="1"/>
+<div id="lanesongs001" type="poem" n="1">
+<head>TO THE TROUBLER OF THE WORLD</head>
+
+<lg type="stanza">
+<l>At last we know you, War-lord. You, that flung</l>
+<l rend="inline">The gauntlet down, fling down the mask you wore,</l>
+<l rend="inline">Publish your heart, and let its pent hate pour,</l>
+<l>You that had God for ever on your tongue.</l>
+<l>We are old in war, and if in guile we are young,</l>
+<l rend="inline">Young also is the spirit that evermore</l>
+<l rend="inline">Burns in our bosom ev'n as heretofore,</l>
+<l>Nor are these thews unbraced, these nerves unstrung.</l>
+<l>We do not with God's name make wanton play;</l>
+<l rend="inline">We are not on such easy terms with Heaven ;</l>
+<l>But in Earth's hearing we can verily say,</l>
+<l rend="inline">" Our hands are pure ; for peace, for peace we have striven ";</l>
+<l rend="inline">And not by Earth shall he be soon forgiven</l>
+<l>Who lit the fire accurst that flames to-day.</l></lg>
+
+<byline>WILLIAM WATSON</byline>
+<bibl>Times, August 6, 1914</bibl>
+</div>
+
+
+<pb n="2"/>
+
+<div id="lanesongs002" type="poem" n="2">
+<head>TO BRITAIN<lb/>
+(BEFORE HER DECLARATION OF WAR)</head>
+
+<lg type="stanza">
+<l>Art thou awake at last, or wilt thou sleep</l>
+<l rend="inline">Still on the downy cushions of thy sloth,</l>
+<l>Trusting the ambient armour of the deep</l>
+<l rend="inline">To ward the foeman's darts ?    However loth,</l>
+<l>Thou must arise, draw thine own armour on,</l>
+<l rend="inline">Unsheathe thy sword, and, faithful, take thy stand,</l>
+<l>Foremost amid thy friends.   Thy banners shone</l>
+<l rend="inline">On Belgian fields before; as now, thy land</l>
+<l>Was menaced then ; as then, be strong, endure !</l>
+<l rend="inline">But when the dark days pass, if pass they do,</l>
+<l>Slumber no more, in foolish dream secure;</l>
+<l rend="inline">With blood and sweat anneal thy sword anew.</l></lg>
+
+<byline>FRANCIS COUTTS</byline>
+</div>
+
+
+<pb n="3"/>
+
+<div id="lanesongs003" type="poem" n="3">
+<head>ARMAGEDDON</head>
+
+<lg type="stanza">
+<l>MEN talk of Armageddon !    Has the World</l>
+<l>Lost all her garnered wisdom ?   Must we scan</l>
+<l>The Devil's legions, Ban and Arriere-Ban,</l>
+<l>Bear challenges with flags of war unfurled,</l>
+<l>That foolish prince to foolish prince has hurled,</l>
+<l>While grinning Glory's pale horse heads the van,</l>
+<l>And far to rear round wretched Everyman</l>
+<l>The coils of Dragon Agony are curled ?</l>
+<l>Quicken, ye peoples.   Look to it, ye kings,</l>
+<l>Who break an age in pieces for your play :</l>
+<l>Please God your trampling vanities will jar</l>
+<l>A sleeping giant, and such petty things</l>
+<l>As crowns and C&#x00E6;sars shall at last make way</l>
+<l>Before mankind's Republic, ending war.</l></lg>
+
+<byline>JUSTIN HUNTLY MCCARTHY</byline>
+<bibl><hi rend="italic">Daily Chronicle, August</hi> 3, 1914</bibl>
+</div>
+
+
+<pb n="4"/>
+
+
+<div id="lanesongs004" type="poem" n="4">
+<head>A PRAYER FOR PEACE</head>
+
+<lg type="stanza">
+<l>Nearer the eagles swoop in darkening rings,</l>
+<l rend="inline">Death scents his awful quarry from afar,</l>
+<l rend="inline">While men in millions march to bloody war</l>
+<l>Hateless, unhated, at the word of Kings :</l>
+<l>But somewhere hid beneath His secret wings</l>
+<l rend="inline">The sons of God, before a juster bar,</l>
+<l rend="inline">Plead in His name who bore the cross and scar</l>
+<l>For Love that sees clear-eyed what war-lust brings.</l></lg>
+
+<lg type="stanza">
+<l>Plead on ye seers with love-enlightened eyes,</l>
+<l rend="inline">Hold up your hands to where the angels gaze</l>
+<l rend="inline">With deep compassion on our human strife;</l>
+<l>Prayer moves the world with power beyond amaze.</l>
+<l rend="inline">And they who look beyond this mortal life</l>
+<l>Know Peace on earth in Heaven hath great allies.</l></lg>
+
+<byline>H. D. RAWNSLEY</byline>
+<bibl><hi rend="italic">Westminster Gazette, August</hi> 4, 1914</bibl>
+</div>
+
+<pb n="5"/>
+
+<div id="lanesongs005" type="poem" n="5">
+<div id="lanesongs1000" type="section" n="1">
+<head>THE SONG OF THE BRITONS</head>
+
+<head>THE DEAD</head>
+
+<lg type="stanza">
+<l>DEEP beneath the fallen years,</l>
+<l>Slain by glittering foemen's spears,</l>
+<l>With empty hands and a brow uncrowned,</l>
+<l>To our native land our eyes we turn</l>
+<l rend="inline">By snares encompassed round.</l>
+<l>Ah ! God, as we gaze our steeled hearts yearn !</l>
+<l>About her head, like a wind that veers,</l>
+<l>The vultures of war whirl thick in the skies,</l>
+<l>Hate in their hearts, in their gleaming eyes</l>
+<l>Hate, and she stands, gentle of breath,</l>
+<l>Watching the venomous eyes of Death !</l></lg>
+
+<lg type="stanza">
+<l>O would we could range there, row on row,</l>
+<l>Facing her foes at our sons' right hand,</l>
+<l>Sunder them, sift them like dust, and go</l>
+<l>Deathwards again for our motherland.</l></lg>
+
+</div>
+
+<pb n="6 THE SONG OF THE BRITONS"/>
+
+<div id="lanesongs1001" type="section" n="2">
+
+<head>THE LIVING</head>
+
+<lg type="stanza">
+<l>Lord God of Hosts, within Thy keeping hold</l>
+<l>Our motherland !    With mercies manifold</l>
+<l>And gracious gifts divine point Thou the way</l>
+<l>Her feet shall follow to the Judgment Day,</l>
+<l>Lord God of Hosts !</l></lg>
+
+<lg type="stanza">
+<l rend="inline">When for the great assize</l>
+<l>Thy trumpet sounds, O grant her strength to rise,</l>
+<l>Peerless from her omnipotent estate,</l>
+<l>With honour, power, and fame inviolate,</l>
+<l>Lord God of Hosts!</l></lg>
+
+<byline>ANTHONY KIRBY GILL</byline>
+<bibl><hi rend="italic">Pall Mall Gazette, August</hi> 5, 1914</bibl>
+</div>
+
+
+<pb n="7"/>
+
+
+<div id="lanesongs006" type="poem" n="6">
+<head>THE VIGIL</head>
+
+<lg type="stanza">
+<l>ENGLAND : where the sacred flame</l>
+<l rend="inline">Burns before the inmost shrine,</l>
+<l>Where the lips that love thy name</l>
+<l rend="inline">Consecrate their hopes and thine,</l>
+<l>Where the banners of thy dead</l>
+<l>Weave their shadows overhead,</l>
+<l>Watch beside thine arms to-night,</l>
+<l>Pray that God defend the Right.</l></lg>
+
+<lg type="stanza">
+<l>Think that when to-morrow comes</l>
+<l rend="inline">War shall claim command of all,</l>
+<l>Thou must hear the roll of drums,</l>
+<l rend="inline">Thou must hear the trumpet's call.</l>
+<l>Now before they silence ruth,</l>
+<l>Commune with the voice of truth ;</l>
+<l>England ! on thy knees to-night</l>
+<l>Pray that God defend the Right.</l></lg>
+
+
+<pb n="8    THE VIGIL"/>
+
+<lg type="stanza">
+<l>Single-hearted, unafraid,</l>
+<l rend="inline">Hither all thy heroes came,</l>
+<l>On this altar's steps were laid</l>
+<l rend="inline">Gordon's life and Outram's fame.</l>
+<l>England ! if thy will be yet</l>
+<l>By their great example set,</l>
+<l>Here beside thine arms to-night</l>
+<l>Pray that God defend the Right.</l></lg>
+
+<lg type="stanza">
+<l>So shalt thou when morning comes</l>
+<l rend="inline">Rise to conquer or to fall,</l>
+<l>Joyful hear the rolling drums,</l>
+<l rend="inline">Joyful hear the trumpets call.</l>
+<l>Then let Memory tell thy heart:</l>
+<l>"<hi rend="italic">England! what thou wert thou art! "</hi></l>
+<l>Gird thee with thine ancient might,</l>
+<l>Forth ! and God defend the Right!</l></lg>
+
+<byline>HENRY NEWBOLT</byline>
+<bibl><hi rend="italic">Times, August</hi> 5, 1914</bibl>
+</div>
+
+
+<pb n="9"/>
+
+<div id="lanesongs007" type="poem" n="7">
+
+<head>WAR</head>
+
+<lg type="stanza">
+<l>We passed the days in the sun's eye,</l>
+<l rend="inline">The clouds that poised on high</l>
+<l>Ringed round about with luxury of light</l>
+<l rend="inline">For our delight,</l>
+<l>And her white oil of gladness the moon shed</l>
+<l rend="inline">On the untrampled ocean bed;</l>
+<l>No admonition there, nor fear</l>
+<l rend="inline">Fell on the drowsy ear</l>
+<l>Louder than thunder rolled along the breeze</l>
+<l rend="inline">From surfless seas.</l></lg>
+
+<milestone unit="section" rend="stars"/>
+
+<lg type="stanza">
+<l>The sun is dark as sackcloth and the seven</l>
+<l>Seals open : see the fourth part of the earth</l>
+<l>Shaken with a mighty wind, untimely power</l>
+<l>Unto one sitting on a pale horse given</l>
+<l>To tame with blood and bitterness and dearth,</l>
+<l>And waste Peace from the world; and up in Heaven</l>
+<l>Was silence for the space of half an hour.</l></lg>
+
+<byline>M JOURDAIN</byline>
+<bibl><hi rend="italic">Westminster Gazette, August</hi> 6, 1914</bibl>
+
+</div>
+
+<pb n="10"/>
+
+<div id="lanesongs008" type="poem" n="8">
+<head>HYMN AFTER BATTLE</head>
+
+<p>[The Kaiser has been thanking God for his successes; and whilst the Christian nations of Europe are engaged in murdering each other, the heathen, whom they have failed to convert, remain so ignorant of the gospel that they are still living together in peace.]</p>
+
+<div id="mackintosh1002" type="section" n="1">
+<head>I</head>
+
+<lg type="stanza">
+<l>Lord of this blood-drenched battle plain,</l>
+<l>Lord of the foe our hands have slain--</l>
+<l>Glory to Thee amidst the dead,</l>
+<l>That Thou hast still Thy people led,</l>
+<l>And shattered thus, O Lord benign,</l>
+<l>This people that was also Thine !</l></lg>
+
+<lg type="stanza">
+<l>Lord ot our high, triumphant state,</l>
+<l>Lord of the hearths made desolate--</l>
+<l>Shall they not praise Thee, they that rue</l>
+<l>Beside those hearths the dead we slew ?</l>
+<l>Yea, at Thine altar let them bow,</l>
+<l>God of their dead and them art Thou !</l></lg>
+
+<pb n="HYMN AFTER BATTLE    11 "/>
+
+<lg type="stanza">
+<l>Lord of the darkness and the sun,</l>
+<l>While we give thanks for victory won,</l>
+<l>Surely each blackening wound that gapes</l>
+<l>Here in these broken human shapes,</l>
+<l>Mouths but its praise of all Thy powers!</l>
+<l>Thou wert their God no less than ours.</l></lg>
+
+</div>
+
+<div id="lanesongs1003" type="section" n="2">
+<head>II</head>
+
+<lg type="stanza">
+<l>Yet is it well that men to-day</l>
+<l>Recrown their fathers' god of clay ?</l>
+<l>Yet is it well that from his sleep</l>
+<l>The savage in our blood should leap</l>
+<l>To flatter from this reeking sod</l>
+<l>The spirit of his primal god ?</l></lg>
+
+<lg type="stanza">
+<l>Nay, we were best be mute, and raise</l>
+<l>No blasphemy of boastful praise,</l>
+<l>Scatter no incense on the air,</l>
+<l>Nor lift our reddened hands in prayer,</l>
+<l>But dig the earth our steps defame,</l>
+<l>And hide these trophies of our shame.</l></lg>
+
+<lg type="stanza">
+<l>Silence the braggart lips that call</l>
+<l>The brute that slumbers in us all</l>
+
+<pb n="12     HYMN AFTER BATTLE"/>
+
+<l>Back to the ravening triumph foul</l>
+<l>Of rending claws and bloody jowl--</l>
+<l>Lest we forget the heights sublime,</l>
+<l>And lapse into our ancient slime.</l></lg>
+
+<byline>A. ST. JOHN ADCOCK.</byline>
+<l><hi rend="italic">Daily Herald, August</hi> 6, 1914</l>
+</div>
+</div>
+
+<pb n="13"/>
+
+<div id="lanesongs009" type="poem" n="9">
+
+<head>BRITANNIA</head>
+
+<lg type="stanza">
+<l>Men deemed her changed, and lo !</l>
+<l rend="inline">At word of war unveiled,</l>
+<l>She stands, as long ago,</l>
+<l rend="inline">She stood when Nelson sailed.</l>
+<l>The sea wind in her hair.</l>
+<l rend="inline">The salt upon her lips,</l>
+<l>Upon the Forelands fair</l>
+<l rend="inline">She guards the English ships.</l></lg>
+
+<lg type="stanza">
+<l>She watched the Normans land,</l>
+<l rend="inline">The <hi rend="italic">Golden Hind</hi> set sail,</l>
+<l>And, touched as by a hand,</l>
+<l rend="inline">The great Armada fail.</l>
+<l>She watched the <hi rend="italic">Victory</hi></l>
+<l rend="inline">Lead out the Fleet to war,</l>
+<l>And o'er the salt blue sea</l>
+<l rend="inline">Return from Trafalgar.</l>
+</lg>
+
+<pb n="14      BRITANNIA"/>
+
+<lg type="stanza">
+<l>Men deemed her changed, and lo !</l>
+<l rend="inline">She stands unto the end,</l>
+<l>With sword to strike the foe</l>
+<l rend="inline">And shield to guard a friend.</l>
+<l>Across the wave she rules</l>
+<l rend="inline">That lesson shall be read</l>
+<l>By foemen--and the fools</l>
+<l rend="inline">Who dream that Drake is dead.</l></lg>
+
+<byline>H. DE VERE STACPOOLE</byline>
+<bibl><hi rend="italic">Daily Express, August</hi> 7, 1914</bibl>
+</div>
+
+
+<pb n="15"/>
+
+<div id="lanesongs010" type="poem" n="10">
+<head>THE ANSWER</head>
+
+<p>[" . . It would be a disgrace for us to make this bargain with Germany at the expense of France, a disgrace from which the good name of this country would never recover."--SIR EDWARD GREY to SIR E. GOSCHEN.]</p>
+
+<lg type="stanza">
+<l>WHEN Honour on her silver bugle blows a point of war</l>
+<l rend="inline">Then Englishmen arise</l>
+<l rend="inline">With battle in their eyes,</l>
+<l>They can  only give  one  answer,  as  their  fathers answered, for</l>
+<l rend="inline">The choice that they are making</l>
+<l rend="inline">Is fighting or forsaking,</l>
+<l>And a false, fair-weather friendship is a lie that they abhor.</l></lg>
+
+<lg type="stanza">
+<l>O'er the narrow seas the Gallic cock was crowing shrill alarms,</l>
+<l rend="inline">He saw them coming forth,</l>
+<l rend="inline">The War Lords of the North,</l>
+
+<pb n="16        THE ANSWER"/>
+
+<l>He said--" My little soldiers, it is time to fall to arms;</l>
+<l rend="inline">But our coasts are lying bare,</l>
+<l rend="inline">Will England do her share ?</l>
+<l>A friendship that is fickle is the worst of Fortune's harms.</l></lg>
+
+<lg type="stanza">
+<l>" Through Luxemburg and Belgium they are marching in their might,</l>
+<l rend="inline">They trample on the weak,</l>
+<l rend="inline">Our overthrow to seek ;</l>
+<l>They tear up every treaty, and they laugh at every right;</l>
+<l rend="inline">Will England see her name</l>
+<l rend="inline">Put thus to open shame?</l>
+<l>Will she see her Royal pledges torn in pieces in her sight ? "</l></lg>
+
+<lg type="stanza">
+<l>But the  Germans  in   their arrogance   our   Minister addressed,</l>
+<l rend="inline">Half-wheedling, half-commanding--</l>
+<l rend="inline">" Let us make an understanding,</l>
+<l>Her coasts we will not batter nor her ports will we invest;</l>
+<l rend="inline">If you will stand apart</l>
+<l rend="inline">While we pierce her to the heart,</l>
+<l>We will let you show your friendship by a bargain for the rest."</l></lg>
+
+
+<pb n="THE ANSWER       17"/>
+
+<lg type="stanza">
+<l>Then Sir Edward Grey replied, to the honour of his race--</l>
+<l rend="inline">To what England puts her hand,</l>
+<l rend="inline">Upon that she takes her stand,</l>
+<l>She will not barter treaties in your German market-place,</l>
+<l rend="inline">Nor will she condescend</l>
+<l rend="inline">To pledge away a friend,</l>
+<l>Such contracting out of danger were  for  ever her disgrace."</l></lg>
+
+<lg type="stanza">
+<l>So o'er the perilous seas to Death or Victory we go,</l>
+<l rend="inline">Our sailors rushing forth,</l>
+<l rend="inline">To give battle in the North;</l>
+<l>There as it was aforetime our ships will meet the foe;</l>
+<l rend="inline">And our brave soldiers too--</l>
+<l rend="inline">The Baltic, Waterloo</l>
+<l>As then so now, twice armed are we since Honour backs the blow !</l></lg>
+
+<byline>IAN COLVIN</byline>
+
+<bibl><hi rend="italic">Morning Post, August</hi> 8, 1914</bibl>
+</div>
+
+
+<pb n="18  THE KAISER AND BELGIUM"/>
+
+<div id="lanesongs011" type="poem" n="11">
+
+<head>THE KAISER AND BELGIUM</head>
+
+<lg type="stanza">
+<l>He said : " Thou petty people, let me pass !</l>
+<l rend="inline">What canst thou do but bow to me and kneel ? "</l>
+<l>But sudden a dry land caught fire like grass,</l>
+<l rend="inline">And answer hurtled but from shell and steel.</l>
+<l>He looked for silence, but a thunder came ;</l>
+<l rend="inline">Upon him from Li&#x00E8;ge a leaden hail.</l>
+<l>All Belgium flew up at his throat in flame,</l>
+<l rend="inline">Till at her gates amazed his legions quail!</l></lg>
+
+<lg type="stanza">
+<l>Take heed, for now on haunted ground thy tread ;</l>
+<l rend="inline">There bowed a mightier War-Lord to his fall ;</l>
+<l>Fear!  Lest that very grass again grow red</l>
+<l rend="inline">With blood of German now, as then of Gaul!</l>
+<l>If him whom God destroys He maddens first.</l>
+<l>Then thy destruction slake thy madman's thirst!</l></lg>
+
+<byline>STEPHEN PHILLIPS</byline>
+<bibl><hi rend="italic">Daily Chronicle, August</hi> 8, 1914</bibl>
+</div>
+
+<pb n="CANADA TO ENGLAND  19"/>
+
+
+<div id="lanesongs012" type="poem" n="12">
+<head>CANADA TO ENGLAND</head>
+
+<lg type="stanza">
+<l>Great names of thy great captains gone before</l>
+<l>Beat with our blood, who have that blood of thee:</l>
+<l>Raleigh and Grenville, Wolfe, and all the free</l>
+<l>Fine souls who dared to front a world in war.</l>
+<l>Such only may outreach the envious years</l>
+<l>Where feebler crowns and fainter stars remove,</l>
+<l>Nurtured in one remembrance and one love</l>
+<l>Too high for passion and too stern for tears.</l>
+
+<l>O little isle our fathers held for home,</l>
+<l>Not, not alone thy standards and thy hosts</l>
+<l>Lead where thy sons shall follow, Mother Land:</l>
+<l>Quick as the north wind, ardent as the foam,</l>
+<l>Behold, behold the invulnerable ghosts</l>
+<l>Of all past greatnesses about thee stand.</l></lg>
+
+<byline>MARJORIE L. C. PICKTHALL</byline>
+<bibl><hi rend="italic">Times, August</hi>10, 1914 </bibl>
+</div>
+
+<pb n=" 20 TO LITTLE BELGIUM"/>
+<div id="lanesongs013" type="poem" n="13">
+
+
+<head>TO "LITTLE" BELGIUM</head>
+<div id="lanesongs1004" type="section" n="1">
+
+<head>I</head>
+
+<epigraph> <cit><q>"There was war in Heaven" <bibl>(Rev. xii. 7)</bibl></q>
+</cit></epigraph>
+
+<lg type="stanza">
+<l>SURELY 'twas hell, not heaven, where first was war,</l>
+<l rend="inline">Where first infernal passions woke and stirred--</l>
+<l rend="inline">War, which makes heaven impossible in a word,</l>
+<l>And Murder bids her bloody gate unbar !</l></lg>
+
+<lg type="stanza">
+<l>As well might one, under the Juggernaut car,</l>
+<l rend="inline">And knowing all annihilate shall be,</l>
+<l rend="inline">Babble of life and immortality</l>
+<l>As call that " heaven " where hell and hatred are.</l></lg>
+
+<lg type="stanza">
+<l>Yet there was war in heaven, as on this star,</l>
+<l rend="inline">Yea, even there was War's red flag unfurled,</l>
+<l rend="inline">As if High God would warn a craven world</l>
+<l>In heaven itself, worse can befall than war.</l></lg>
+</div>
+
+<pb n="TO  LITTLE  BELGIUM  21"/>
+
+<div id="lanesongs1005" type="section" n="2">
+<head>II</head>
+
+<lg type="stanza">
+<epigraph><cit><q>"Give peace in our time, O Lord!" <bibl>(Prayer Book)</bibl></q></cit></epigraph>
+
+<lg type="stanza">
+<l>So runs the ancient prayer, and I who hold</l>
+<l rend="inline">War to be bloody, damnable, abhorred,</l>
+<l rend="inline">Pray: " Not in our time, only, be it Lord,</l>
+<l>But for all time may peace this isle enfold !"</l></lg>
+
+<l>Yet rather than our England cease to be</l>
+<l rend="inline">What England is--Honour's own diadem ;</l>
+<l rend="inline">Rather than fail one promised sword to them</l>
+<l>(Our word, God's arm, their surest guarantee),</l></lg>
+
+<lg type="stanza">
+<l>That " little " but loyal race whom, near and far,</l>
+<l rend="inline">A world acclaims for glorious, deathless deed,</l>
+<l rend="inline">Rather than fail GREAT Belgium in her need,</l>
+<l>Rather than this, in God's own name, be war!</l></lg>
+
+<byline>COULSON KERNAHAN</byline>
+<bibl><hi rend="italic">Daily Chronicle, August</hi> 10, 1914</bibl>
+</div>
+</div>
+
+<pb n="22  THE TRIBUTE"/>
+
+
+<div id="lanesongs014" type="poem" n="14">
+
+<head>THE TRIBUTE</head>
+
+<lg type="stanza">
+<l>Not by the valour of Belgium, nor the lightning sabre of France,</l>
+<l>Not by the thunder of Britain's Fleet, and the Bear's unchecked advance,</l>
+<l>Not by these fears, Lord Kaiser, tho' they shatter a tyrant's lust,</l>
+<l>Is your heart most  darkly troubled, and your  soul brought down to the dust,</l></lg>
+
+<lg type="stanza">
+<l>But by the great affirming of the lands we have knit as one;</l>
+<l>By the love, by the passionate  loyal love, of each separate free-born son,</l>
+<l>Canada cries " We are coming !" and Australasia " We come! "</l>
+<l>And you scowl that no Boer is rising at the beat of your German drum.</l></lg>
+
+<lg type="stanza">
+<l>And the Men of Ind bear witness--We have grumbled, but now no more ;</l>
+<l>We have shared your plentiful righteous Peace, we will share your righteous War,</l>
+
+<pb n="THE TRIBUTE                                       23"/>
+
+<l>Trust US to guard your Honour, one with yours is our breath;</l>
+
+<l>You have dealt us an even justice, we are yours to the gates of Death.</l></lg>
+
+<lg type="stanza">
+<l>Here in these storm-swept islands where we fought for the things of peace,</l>
+<l>Where we quarrelled and  strove in factions, at a stroke all factions cease,</l>
+<l>And there in the vast dominions, more free than your Prussian lords,</l>
+<l>The women are shouting for England and the men are drawing their swords.</l></lg>
+
+<lg type="stanza">
+<l>Never was flag so world-loved as the flag we lift on high,</l>
+<l>While your Prussian legions muster, while your Eagle screams in the sky;</l>
+<l>And the God of Right give answer to your blood-and-iron brag,</l>
+<l>Whether your hand is worthy to wrest from our hand that flag.</l></lg>
+
+<byline>HAROLD BEGBIE</byline>
+<bibl><hi rend="italic">Daily Chronicle, August</hi> 11, 1914</bibl>
+</div>
+
+
+<pb n="24  IN THE RED DAWN"/>
+
+<div id="lanesongs015" type="poem" n="15">
+<head>IN THE RED DAWN</head>
+
+<lg type="stanza">
+<l>Oh, my England ! thou hast heard--</l>
+<l rend="inline">Could the hearing leave thee cold ?--</l>
+<l>Shattered vow and shameless word,</l>
+<l rend="inline">Bribe and menace and affront ;</l>
+<l>Think they that thou growest old</l>
+<l rend="inline">Since La Haie and Hougoumont ?</l></lg>
+
+<lg type="stanza">
+<l>Oh, my England ! thou hast seen,</l>
+<l rend="inline">Not with dull or hopeless eyes,</l>
+<l>How they wait, elate, serene,</l>
+<l rend="inline">For thine utter darkening ;</l>
+<l>How they hover o'er the prize,</l>
+<l rend="inline">Eagles red of claw and wing!</l></lg>
+
+<lg type="stanza">
+<l>Thou hast heard--and they shall hear ;</l>
+<l rend="inline">Thou hast seen--and they shall see;</l>
+<l>With the sun upon thy spear,</l>
+<l rend="inline">And the moon upon thy helm,</l>
+<l>Thou hast spoken, thou art free--</l>
+<l rend="inline">Thou shalt strike and overwhelm.</l></lg>
+
+<pb n="IN THE RED DAWN                                  25"/>
+
+<lg type="stanza">
+<l>Thou art ours, and we are thine,</l>
+<l rend="inline">And the circling sea is ours;</l>
+<l>In the dark immortal wine</l>
+<l rend="inline">We will pledge them, though we die.</l>
+<l>For flame still upon our towers</l>
+<l rend="inline">Flags of hope and victory.</l></lg>
+
+<byline>DOROTHY MARGARET STUART</byline>
+<bibl><hi rend="italic">Evening Standard, August</hi> 11, 1914</bibl>
+</div>
+
+
+<pb n="26  PRO PATRIA"/>
+
+
+<div id="lanesongs016" type="poem" n="16">
+<head>PRO PATRIA</head>
+
+<lg type="stanza">
+<l>ENGLAND, in this great fight to which you go</l>
+<l rend="inline">Because, where Honour calls you, go you must,</l>
+<l>Be glad, whatever comes, at least to know</l>
+<l rend="inline">You have your quarrel just.</l></lg>
+
+<lg type="stanza">
+<l>Peace was your care; before the nations' bar</l>
+<l rend="inline">Her cause you pleaded and her ends you sought;</l>
+<l>But not for her sake, being what you are,</l>
+<l rend="inline">Could you be bribed and bought.</l></lg>
+
+<lg type="stanza">
+<l>Others may spurn the pledge of land to land,</l>
+<l>May with the brute sword stain a gallant past;</l>
+<l>But by the seal to which <hi rend="italic">you</hi> set your hand,</l>
+<l>Thank God, you still stand fast!</l></lg>
+
+<lg type="stanza">
+<l>Forth, then, to front that peril of the deep</l>
+<l rend="inline">With smiling lips and in your eyes the light,</l>
+<l>Steadfast and confident, of those who keep</l>
+<l rend="inline">Their storied scutcheon bright.</l></lg>
+
+
+
+<pb n="PRO PATRIA                                         27"/>
+
+<lg type="stanza">
+<l>And we, whose burden is to watch and wait--</l>
+<l rend="inline">High-hearted ever, strong in faith and prayer,</l>
+<l>We ask what offering we may consecrate,</l>
+<l rend="inline">What humble service share.</l></lg>
+
+<lg type="stanza">
+<l>To steel our souls against the lust of ease ;</l>
+<l rend="inline">To find our welfare in the common good;</l>
+<l>To hold together, merging all degrees</l>
+<l rend="inline">In one wide brotherhood ;--</l></lg>
+
+<lg type="stanza">
+<l>To teach that he who saves himself is lost ;</l>
+<l rend="inline">To bear in silence though our hearts may bleed ;</l>
+<l>To spend ourselves and never count the cost,</l>
+<l rend="inline">For others' greater need;--</l></lg>
+
+<lg type="stanza">
+<l>To go our quiet ways, subdued and sane;</l>
+<l rend="inline">To hush all vulgar clamour of the street;</l>
+<l>With level calm to face alike the strain</l>
+<l rend="inline">Of triumph or defeat;--</l></lg>
+
+<lg type="stanza">
+<l>This be our part, for so we serve you best,</l>
+<l rend="inline">So best confirm their prowess and their pride,</l>
+<l>Your warrior sons, to whom in this high test</l>
+<l rend="inline">Our fortunes we confide.</l></lg>
+
+<byline>SIR OWEN SEAMAN</byline>
+<bibl><hi rend="italic">Punch, August</hi> 12, 1914</bibl>
+</div>
+
+
+<pb n="28    THE WAR CRY"/>
+
+
+<div id="lanesongs017" type="poem" n="17">
+<head>THE WAR CRY</head>
+
+<lg type="stanza">
+<l>GRIM the struggle we've to face!</l>
+<l rend="inline">Setting now our task about,</l>
+<l>As becomes our name and race,</l>
+<l rend="inline">Grimly we must fight it out.</l>
+<l>Not elated, not depressed,</l>
+<l rend="inline">Equanimity our rule;</l>
+<l>Through all happenings self-possessed,</l>
+<l rend="inline">Silent, strong, determined, cool.</l></lg>
+
+<lg type="stanza">
+<l>Came the challenge from the foe ;</l>
+<l rend="inline">Naught we did to court this fight;</l>
+<l>But since they will have it so,</l>
+<l rend="inline">Let them have--what they invite.</l>
+<l>For a Europe's flouted laws</l>
+<l rend="inline">We the sword reluctant drew,</l>
+<l>Righteous in a righteous cause:</l>
+<l rend="inline">Britons, we must see it through.</l></lg>
+
+<pb n="THE WAR CRY                                      29"/>
+
+<lg type="stanza">
+<l>Wooden walls once held these strands</l>
+<l rend="inline">Safe from every foe that came.</l>
+<l>Times are changed; but now our land's</l>
+<l rend="inline">Iron walls shall do the same.</l>
+<l>Times are changed--our sailors, nay !</l>
+<l rend="inline">What their sea-sires were they are.</l>
+<l>Drake's and Nelson's heart to-day</l>
+<l rend="inline">Beats in every British tar.</l></lg>
+
+<lg type="stanza">
+<l>While they range the Northern deep,</l>
+<l rend="inline">Lies our sea-girt isle secure;</l>
+<l>Britain's honour's theirs to keep ;</l>
+<l rend="inline">Trust we them to keep it sure.</l>
+<l>What though random mine shall deal</l>
+<l rend="inline">Here and there its dastard blow,</l>
+<l>They'll avenge each shattered keel</l>
+<l rend="inline">Twice, thrice over, on the foe.</l></lg>
+
+<lg type="stanza">
+<hi rend="italic"><l>Came the challenge from the foe;</l>
+<l rend="inline">Naught we did to court this fight;</l>
+<l>But since they will have it so,</l>
+<l rend="inline">Let them have--what they invite.</l></hi></lg>
+
+
+
+<pb n="30                                      THE WAR CRY"/>
+
+<lg type="stanza">
+<l><hi rend="italic">For a Europe's flouted laws</hi></l>
+<l><hi rend="italic">We the sword reluctant drew,</hi></l>
+<l><hi rend="italic">Righteous in a righteous cause:</hi></l>
+<l><hi rend="italic">Britons, we </hi>WILL<hi rend="italic">see it through !</hi></l></lg>
+
+<byline>R. M. FREEMAN</byline>
+<bibl><hi rend="italic">Truth, August</hi> 12, 1914</bibl>
+
+</div>
+
+<pb n="FRANCE    31"/>
+
+<div id="lanesongs018" type="poem" n="18">
+<head>FRANCE</head>
+
+<lg type="stanza">
+<l>BECAUSE for once the sword broke in her hand,</l>
+<l rend="inline">The words she spoke seemed perished for a space:</l>
+<l>All wrong was brazen, and in every land</l>
+<l rend="inline">The tyrants walked abroad with naked face.</l></lg>
+
+<lg type="stanza">
+<l>The waters turned to blood, as rose the Star</l>
+<l rend="inline">Of evil fate denying all release.</l>
+<l>The rulers smote the feeble crying " War ! "</l>
+<l rend="inline">The usurers robbed the naked crying " Peace !"</l></lg>
+
+<lg type="stanza">
+<l>And her own feet were caught in nets of gold,</l>
+<l rend="inline">And her own soul profaned by sects that squirm,</l>
+<l>And little men climbed her high seats and sold</l>
+<l rend="inline">Her honour to the vulture and the worm.</l></lg>
+
+<lg type="stanza">
+<l>And she seemed broken and they thought her dead,</l>
+<l rend="inline">The Over-Men, so brave against the weak.</l>
+<l>Has your last word of sophistry been said,</l>
+<l rend="inline">O cult of slaves ? Then it is hers to speak</l></lg>
+
+
+<pb n="32                FRANCE"/>
+
+<lg type="stanza">
+<l>Clear the slow mists from her half-darkened eyes,</l>
+<l rend="inline">As slow mists parted over Valmy fell,</l>
+<l>And once again her hands in high surprise</l>
+<l rend="inline">Take hold upon the battlements of Hell.</l></lg>
+
+<byline>CECIL CHESTERTON</byline>
+<bibl><hi rend="italic">New Witness, August</hi> 13, 1914</bibl>
+</div>
+
+
+<pb n="TO FRANCE    33"/>
+
+<div id="lanesongs019" type="poem" n="19">
+<head>TO FRANCE</head>
+
+<lg type="stanza">
+<l>THOSE who have stood for thy cause when the dark was around thee,</l>
+<l>Those who have pierced through the shadows and shining have found thee,</l>
+<l>Those who have held to their faith in thy courage and power,</l>
+<l>Thy spirit, thy honour, thy strength for a terrible hour,</l>
+<l>Now can rejoice that they see thee in light and in glory,</l>
+<l>Facing whatever may come as an end to the story</l> 
+<l>In calm undespairing, with steady eyes fixed on the morrow--</l>
+<l>The morn that is pregnant with blood and with death and with sorrow.</l>
+<l>And whether the victory crowns thee, O France the eternal,</l>
+<l>Or whether the smoke and the dusk of a nightfall infernal</l>
+<l>Gather about thee, and us, and the foe; and all treasures</l>
+<l>Run with the flooding of war into bottomless measures--</l>
+
+
+
+<pb n="34                                          TO FRANCE"/>
+
+<l>Fall what befalls: in this hour all those who are near thee</l>
+<l>And all who have loved thee, they rise and salute and revere thee !</l></lg>
+
+<byline>HERBERT JONES</byline>
+<bibl><hi rend="italic">Westminster Gazette, August</hi> 13, 1914</bibl>
+</div>
+
+
+<pb n="THE HUSH   35"/>
+<div id="lanesongs019" type="poem" n="19">
+
+<head>THE HUSH</head>
+
+<lg type="stanza">
+<l>THERE is a hush before the thunder-jar,</l>
+<l>When white the steeples against purple stand :</l>
+<l>There is a hush when night with star on star</l>
+<l>Goes ashen on the summer like a brand.</l>
+<l>Now a more awful pause appals the soul,</l>
+<l>When concentrating armies crouch to spring ;</l>
+<l>Stillness more fraught than any thunder-roll,</l>
+<l>Dawn European with a redder wing.</l>
+<l>The Teuton host no conscience onward drives ;</l>
+<l>Sullen they come ; to slaughter shepherded ;</l>
+<l>Timed for the shambles with unwilling lives,</l>
+<l>With doubt each soldier is already dead.</l>
+<l>The massed battalions as a myth shall reel;</l>
+<l>Vainly they fight, if first they cannot feel.</l></lg>
+
+<byline>STEPHEN PHILLIPS</byline>
+<bibl><hi rend="italic">Times, August</hi> 13, 1914</bibl>
+</div>
+
+
+<pb n="36  ALLITERATIVISM"/>
+
+<div id="lanesongs019" type="poem" n="19"> 
+
+<head type="main">ALLITERATIVISM</head>
+
+<head type="sub">(THE   LATEST   SCHOOL)</head>
+
+<epigraph><cit><q>
+<p>[French airmen have been flying over Baden and Bavaria, violating Belgian neutrality.--<hi rend="italic">Stated, on German authority, in <bibl>" Westminster Gazette</bibl></hi>."</p></q></cit></epigraph>
+
+
+<lg type="stanza">
+<l>SEE the flying French depart</l>
+<l>Like the bees of Bonaparte,</l>
+<l>Swarming up with a most venomous vitality.</l>
+<l>Over Baden and Bavaria,</l>
+<l>And Brighton and Bulgaria,</l>
+<l>Thus violating Belgian neutrality.</l></lg>
+
+
+<lg type="stanza">
+<l>And the injured Prussian may</l>
+<l>Not unreasonably say</l>
+<l>" Why, it cannot be so small a nationality !</l>
+<l>Since Brixton and Batavia,</l>
+<l>Bolivia and Belgravia,</l>
+<l>Are bursting with the Belgian neutrality."</l></lg>
+
+<lg type="stanza">
+<l>Beluchistan and Bonn,</l>
+<l>Braemar and Babylon</l>
+
+
+<pb n="ALLITERATIVISM     37"/>
+
+<l>All feel the French offence against legality,</l>
+<l>And Boston and Bilbao</l>
+<l>And Bucks and Bulawayo</l>
+<l>Will perish for their Belgian neutrality.</l></lg>
+
+<lg type="stanza">
+<l>By pure Alliteration</l>
+<l>You may trace this curious nation,</l>
+<l>And respect this somewhat scattered principality;</l>
+<l>When you see a B in Both</l>
+<l>You may take your Bible oath</l>
+<l>You are violating Belgian neutrality.</l></lg>
+
+<byline>G. K. CHESTERTON</byline>
+<bibl><hi rend="italic">New Witness, August</hi> 13, 1914</bibl>
+</div>
+
+
+<pb n="38   TO THE AGGRESSOR"/>
+
+<div id="lanesongs020" type="poem" n="20">
+
+<head>TO THE AGGRESSOR</head>
+
+<lg type="stanza">
+<l>Not ours the stroke, for we maintain</l>
+<l>The Truth by which the just abide,</l>
+<l>That murder is the lust of Hell.</l>
+<l>If Europe must be crucified,</l>
+<l>Not ours the guilt!    Let it be known.</l>
+<l><hi rend="italic">Aye ! by the blood upon thy throne !</hi></l></lg>
+
+<lg type="stanza">
+<l>Not ours this war, and all its waste,</l>
+<l>Nor do we take the sword in vain--</l>
+<l>The Holy Sword our fathers bore</l>
+<l>To brand it with the mark of Cain.</l>
+<l>" Thou art the Man !"   For thee 'twas planned.</l>
+<l><hi rend="italic">Aye ! by the Bible in thy hand !</hi></l></lg>
+
+<byline>REGINALD R. BUCKLEY</byline>
+<bibl><hi rend="italic">T. P.'s Weekly, August 13, 1914</hi></bibl>
+</div>
+
+
+<pb n="EVENING PRAYER"/>
+
+<div id="lanesongs021" type="poem" n="21">
+
+<head>EVENING PRAYER OF A PEOPLE<lb/>
+SUNDAY, AUGUST 9, 1914</head>
+
+<lg type="stanza">
+<l>LORD, from this storm-awakened isle,</l>
+<l rend="inline">At this dark hour on land and sea,</l>
+<l>'Twixt bugle-call and Sabbath bell</l>
+<l rend="inline">Go up our prayers to Thee.</l></lg>
+
+<lg type="stanza">
+<l>For the long years of sanctuary</l>
+<l rend="inline">We tender thanks, O Lord !</l>
+<l>For peaceful fields and sacred hearths,</l>
+<l rend="inline">And the unused sword.</l></lg>
+
+<lg type="stanza">
+<l>Thine be the praise !    And now when quakes</l>
+<l rend="inline">The world, and trials come,</l>
+<l>O God ! preserve inviolate</l>
+<l rend="inline">Our ancient island Home !</l></lg>
+
+<lg type="stanza">
+<l>O ! had we died untried, unproved,</l>
+<l rend="inline">And missed this hour of stress !--</l>
+<l>Praise be to God for this last gift,</l>
+<l rend="inline">The joy of steadfastness!</l></lg>
+
+
+<pb n="40       EVENING PRAYER OF A PEOPLE"/>
+
+<lg type="stanza">
+<l>Where'er our people be to-night,</l>
+<l rend="inline">Our husbands or our sons,</l>
+<l>Tossed on the thunder-bolted deep,</l>
+<l rend="inline">Or bivouacked by the guns ;</l></lg>
+
+<lg type="stanza">
+<l>Treading the mire of foreign lands,</l>
+<l rend="inline">Or guarding our native coasts,</l>
+<l>Be Thou their Shield and Comforter,</l>
+<l rend="inline">We pray Thee, God of Hosts !</l></lg>
+
+<byline>NEIL MUNRO</byline>
+<bibl><hi rend="italic">>Glasgow Evening News, August</hi> 9, 1914</bibl>
+</div>
+
+
+<pb n="THE MAN FORSWORN   41"/>
+
+<div id="lanesongs022" type="poem" n="22">
+<head>THE MAN FORSWORN</head>
+
+<lg type="stanza">
+<l>WHO draws to-day the unrighteous sword ?</l>
+<l rend="inline">Behold him stand, the Man Forsworn,</l>
+<l>The warrior of the faithless word,</l>
+<l rend="inline">The pledge disowned, the covenant torn,</l>
+<l>Who prates of honour, truth, and trust,</l>
+<l>Ere he profanes them in the dust.</l></lg>
+
+<lg type="stanza">
+<l>When to yon fabric grey in fame,</l>
+<l rend="inline">That Windsor lifts against the sky,</l>
+<l>In martial cloak the Kaiser came,</l>
+<l rend="inline">We did not dream it cloaked a spy ;</l>
+<l>Yet there he sat, as now we know,</l>
+<l>A guest, a kinsman, and a foe.</l></lg>
+
+<lg type="stanza">
+<l>France was a gallant foe and fair,</l>
+<l rend="inline">That looked us proudly in the face,</l>
+<l>With her frank eyes and freeborn air,</l>
+<l rend="inline">And valour half-concealed in grace.</l>
+<l>Noblest of all with whom we strove,</l>
+<l>At last she gives us noble love.</l></lg>
+
+<pb n="42     THE MAN FORSWORN"/>
+
+<lg type="stanza">
+<l>But he that took our proffered hand,</l>
+<l rend="inline">Thinking to take our birthright too,</l>
+<l>He, in this hospitable land,</l>
+<l rend="inline">Bore him as only dastards do.</l>
+<l>Here, where the Earth still nurtures men,</l>
+<l>His hand shall soil not ours again.</l></lg>
+
+<lg type="stanza">
+<l>We know his people great and strong ;</l>
+<l rend="inline">On such as these we cast no slur;</l>
+<l>Our wonder is that they so long</l>
+<l rend="inline">Suffer ungalled his bit and spur.</l>
+<l>'Tis with no heart of joy that we</l>
+<l>Arise to smite them on the sea.</l></lg>
+
+<lg type="stanza">
+<l>Glory we count of lesser worth</l>
+<l rend="inline">Than wife and babe and hearth and home;</l>
+<l>Theirs is the mandate speeding forth</l>
+<l rend="inline">Our steps of thunder on the foam ;</l>
+<l>For them we fight, for them we stand,</l>
+<l>Yea, and for faith 'twixt land and land.</l></lg>
+
+<lg type="stanza">
+<l>You that have linked your might with ours,</l>
+<l rend="inline">To break his pride who breaks the laws,</l>
+<l>You wear to-day, 'mid perjured Powers,</l>
+<l rend="inline">The armour of a spotless cause ;</l>
+
+
+
+<pb n="THE MAN FORSWORN                                43"/>
+
+<l>Your legions march in Truth arrayed,</l>
+<l>And knightly Honour whets your blade.</l></lg>
+
+<lg type="stanza">
+<l>From Baltic or Biscayan shores ;</l>
+<l rend="inline">Where Loire to the Atlantic runs ;</l>
+<l>Where Volga to the Caspian pours,</l>
+<l rend="inline">You have not poured in vain your sons.</l>
+<l>From laughing lands of Rhone and Seine</l>
+<l>You have not poured your sons in vain.</l></lg>
+
+<lg type="stanza">
+<l>Let us a League of Man proclaim</l>
+<l rend="inline">Against such knavery 'neath a crown</l>
+<l>As would be rightly held to shame</l>
+<l rend="inline">A swineherd and his fellow clown.</l>
+<l>Shall all the false and creeping things</l>
+<l>Find a last refuge among Kings?</l></lg>
+
+<lg type="stanza">
+<l>At least on this unageing throne,</l>
+<l rend="inline">That baffles the long siege of Time,</l>
+<l>We have a monarch of our own</l>
+<l rend="inline">To whom a crime is still a crime ;</l>
+<l>And pure in aim there sits afar</l>
+<l>The patient, silent, storm-worn Czar.</l></lg>
+
+
+
+<pb n="44                    THE MAN FORSWORN"/>
+
+<lg type="stanza">
+<l>For one sole mortal it remained,</l>
+<l rend="inline">One rash insulter of the Earth,</l>
+<l>To teach the world wherein he reigned</l>
+<l rend="inline">How much a Kaiser's word is worth.</l>
+<l>A Kaiser's word, a Caitiffs vow !</l>
+<l>Well have we learned their value now.</l></lg>
+
+<lg type="stanza">
+<l>Over the bland and kindly Day,</l>
+<l rend="inline">Unseasonable Night he flings;</l>
+<l>Sinister darkness blear and grey,</l>
+<l rend="inline">A horror of malignant wings.</l>
+<l>Pain and red havoc he bestows</l>
+<l>On them that only asked repose.</l></lg>
+
+<lg type="stanza">
+<l>He is not hungrier for your lands</l>
+<l rend="inline">Than he is thirsty for your seas.</l>
+<l>Smite him with all your thunderous hands,</l>
+<l rend="inline">Fight him and smite him to his knees--</l>
+<l>You that on him and falsehood hurled</l>
+<l>Shall guard the fortress of the world.</l></lg>
+
+<byline>WILLIAM WATSON</byline>
+<bibl><hi rend="italic">Daily Chronicle, August</hi>14, 1914</bibl>
+</div>
+
+
+<pb n="TO THE KING   45"/>
+
+<div id="lanesongs023" type="poem" n="23">
+
+<head>TO THE KING OF THE BELGIANS</head>
+
+<lg type="stanza">
+<l>MULTITUDES upon multitudes they throng</l>
+<l>And thicken : who shall number their array ?</l>
+<l>They bid the peoples tremble and obey:</l>
+<l>Their faces are set forward, all for wrong.</l>
+<l>They trample on the covenant and are strong</l>
+<l>And terrible.    Who shall dare to say them nay ?</l>
+<l>How shall a little nation bar the way</l>
+<l>Where that resistless host is borne along ?</l></lg>
+
+<lg type="stanza">
+<l>You never thought, O ! gallant King, to bow</l>
+<l>To overmastering force and stand aside.</l>
+<l>Safe and secure you might have reigned.    But now</l>
+<l>Your Belgium is transfigured, glorified,</l>
+<l>The friend of France and England, who avow</l>
+<l>An Equal here, and thank the men who died.</l></lg>
+
+<byline>H. M.</byline>
+<bibl><hi rend="italic">Times, August</hi> 14, 1914</bibl>
+</div>
+
+<pb n="46   THE VINDICATION"/>
+
+<div id="lanesongs024" type="poem" n="24">
+
+<head>THE VINDICATION</head>
+
+<p>[It is announced that all the Territorial battalions are already at full strength, and that Lord Kitchener's "second army" is now in course of formation.]</p>
+
+<lg type="stanza">
+<l>THE Summer wanes : and, 'Erbert, in the haunts</l>
+<l rend="inline">That have been hallowed by your yearly favour</l>
+<l>The "fag" that you affect no longer flaunts</l>
+<l rend="inline">Its unattractive savour.</l></lg>
+
+<lg type="stanza">
+<l>Your bare but lustrous poll, your lurid ties,</l>
+<l rend="inline">The wond'rous garb you choose for your adorning</l>
+<l>At Margate gladden no expectant eyes;</l>
+<l rend="inline">And Southend is in mourning.</l></lg>
+
+<lg type="stanza">
+<l>The rail you used, in your adjacent park,</l>
+<l rend="inline">Whereon to perch, that girls might glance in gladness,</l>
+<l>Stands tenantless (and they, I may remark, Show little trace of sadness).</l></lg>
+
+
+<pb n="THE VINDICATION                                   47"/>
+
+<lg type="stanza">
+<l>Your expert views of 'Ayward, 'Obbs, and 'Itch</l>
+<l rend="inline">Disturb no more the matutinal travel ;</l>
+<l>And "form"--you scarcely know which horse is which--</l>
+<l rend="inline">No longer you unravel.</l></lg>
+
+<lg type="stanza">
+<l>You have been, more or less, an ornament,</l>
+<l rend="inline">Too precious for the strenuous endeavour</l>
+<l>Of those on getting goals, or wickets, bent;</l>
+<l rend="inline">And not unduly clever.</l></lg>
+
+<lg type="stanza">
+<l>We held you as a nuisance at your worst,</l>
+<l rend="inline">And at your best a useless sort of blighter,</l>
+<l>Never imagining that you might burst,</l>
+<l rend="inline">Some day, into a fighter.</l></lg>
+
+<lg type="stanza">
+<l>We've heard you call on God to save the King,</l>
+<l rend="inline">And shout the " Marseillaise "--somewhat shyly--</l>
+<l>But, still, your martial ardour was a thing</l>
+<l rend="inline">We did not value highly.</l></lg>
+
+<lg type="stanza">
+<l>Yet, in the altered circumstances, 'Erb,</l>
+<l rend="inline">We feel that in our world there's something lacking--</l>
+<l>The place has grown more sombre, less superb,</l>
+<l rend="inline">Since you have started packing !</l></lg>
+
+
+<pb n="48                    THE VINDICATION"/>
+
+<lg type="stanza">
+<l>We held your thews and sinews rather cheap,</l>
+<l rend="inline">Knowing you'd never been inclined to use them ;</l>
+<l>And might, had not emotion run so deep.</l>
+<l rend="inline">Have ventured to refuse them:</l></lg>
+
+<lg type="stanza">
+<l>But--here's where our apology comes in--</l>
+<l rend="inline">The hour of need was all we lacked to try you !</l>
+<l>So, 'Erb, my hero, march along and win :</l>
+<l rend="inline">The God of Wars stand by you!</l></lg>
+
+<byline>PHILIP BUSSY</byline>
+<bibl><hi rend="italic">Westminster Gazette, August</hi> 14, 1914</bibl>
+</div>
+
+
+<pb n="THE SPIRIT OF ENGLAND    49"/>
+
+<div id="mackintosh025" type="poem" n="25">
+
+<head>THE SPIRIT OF ENGLAND</head>
+
+<lg type="stanza">
+<l>My sea-winds I gather, my fields I fill</l>
+<l>With life-giving roots and grain.</l>
+<l>My sons I unite for my greatest fight</l>
+<l>My dream and desire to gain.</l></lg>
+
+<lg type="stanza">
+<l>My land I have clothed in its fairest garb,</l>
+<l>Corn-yellow and green and blue.</l>
+<l>I arise in my pride, once more to decide</l>
+<l>In the conflict of false and true.</l></lg>
+
+<lg type="stanza">
+<l>I summon to battle from plain and hill,</l>
+<l>From woodland and fen and dale,</l>
+<l>From my reeking towns and greyhound downs</l>
+<l>My men to be cast in the scale.</l></lg>
+
+<lg type="stanza">
+<l>My flesh still quivers.    The poisoned barb</l>
+<l>By treacherous foe is flung.</l>
+<l>I have plucked it out; my children shout</l>
+<l>Of the vengeance to be wrung.</l></lg>
+
+
+
+<pb n="50                            THE SPIRIT OF ENGLAND"/>
+
+<lg type="stanza">
+<l>But I seek no vengeance, nor demand</l>
+<l>An eye for an eye, nor tooth</l>
+<l>For tooth.    I desire to raise from the mire</l>
+<l>My vision of peace and truth.</l></lg>
+
+<lg type="stanza">
+<l>I have cleansed the seas, and have opened them</l>
+<l>To traffic of many ships :</l>
+<l>I would purge the land with the same firm hand</l>
+<l>To let peace know no eclipse.</l></lg>
+
+<lg type="stanza">
+<l>My dreams are challenged. I make my stand.</l>
+<l>My vision shall still prevail.</l>
+<l>From my white tower I send my power</l>
+<l>Arrayed in its proven mail.</l></lg>
+
+<lg type="stanza">
+<l>No glory I covet, nor diadem,</l>
+<l>Save honour and peace of soul,</l>
+<l>But to see far-flung as my singers have sung</l>
+<l>My Freedom from pole to pole.</l></lg>
+
+<byline>GILBERT CANNAN</byline>
+<bibl><hi rend="italic">Saturday Review, August</hi> 15, 1914</bibl>
+</div>
+
+
+<pb n="THE NAVAL RESERVE    51"/>
+
+<div id="lanesongs026" type="poem" n="26">
+
+<head>THE NAVAL RESERVE</head>
+
+<lg type="stanza">
+<l>FROM the undiscovered deep</l>
+<l rend="inline">Where the blessed lie at ease--</l>
+<l>Since the ancient navies keep</l>
+<l rend="inline">Empire of the heavenly seas--</l>
+<l rend="inline">Back they come, the mighty dead,</l>
+<l rend="inline">Quick to serve where they have led.</l></lg>
+
+<lg type="stanza">
+<l>Rushing on the homeward gale,</l>
+<l rend="inline">Swift they come, to seek their place</l>
+<l>Where the grey flotillas sail,</l>
+<l rend="inline">Where the children of their race</l>
+<l rend="inline">Now against the foe maintain</l>
+<l rend="inline">All they gave their lives to gain.</l></lg>
+
+<lg type="stanza">
+<l>Rank on rank, the admirals</l>
+<l rend="inline">Rally to their old commands ;</l>
+<l>Where the crash of battle falls,</l>
+<l rend="inline">There the one-armed hero stands.</l>
+<l rend="inline">Loud upon his phantom mast</l>
+<l rend="inline">Speak the signals of the past.</l></lg>
+
+<pb n="52                                THE NAVAL RESERVE"/>
+
+<lg type="stanza">
+<l>Where upon the friendly wave</l>
+<l rend="inline">Stand our squadrons as of old,</l>
+<l>Where the lonely deed and brave</l>
+<l rend="inline">Shall the ancient torch uphold--</l>
+<l rend="inline">Strive for England, side by side,</l>
+<l>Those who live and those who died.</l></lg>
+
+<byline>EVELYN UNDERHILL</byline>
+<bibl><hi rend="italic">New Weekly, August</hi> 15, 1914</bibl>
+</div>
+
+
+<pb n="ICONOCLASTS    53"/>
+
+
+<div id="lanesongs027" type="poem" n="27">
+<head>ICONOCLASTES</head>
+
+<lg type="stanza">
+<l>LIVED in days of old a nation</l>
+<l>Stark and sturdy, valiant-hearted,</l>
+<l>Rich in honest, kindly manhood,</l>
+<l rend="inline">Rich in tender womanhood;</l></lg>
+
+<lg type="stanza">
+<l>Rich in deft and cunning craftsmen,</l>
+<l>Singers mighty and melodious,</l>
+<l>Thinkers of sublimest stature--</l>
+<l rend="inline">Masters of the undaunted mind;</l></lg>
+
+<lg type="stanza">
+<l>Rich--yea, richest--in titanic</l>
+<l>Wondrous harmony-compellers,</l>
+<l>Weaving descants world-enthralling,</l>
+<l rend="inline">Echoes of the voice of God.</l></lg>
+
+<lg type="stanza">
+<l>But, alas! and in an evil</l>
+<l>Day for them, this glorious people</l>
+<l>Went a-wandering after idols,</l>
+<l rend="inline">Went a-worshipping false gods.</l></lg>
+
+
+<pb n="54             ICONOCLASTES"/>
+
+<lg type="stanza">
+<l>One grim Idol in especial,</l>
+<l>One colossal Moloch-image,</l>
+<l>Moulded of blood-tempered iron,</l>
+<l rend="inline">They erected in their midst.</l></lg>
+
+<lg type="stanza">
+<l>Dark and sinister its aspect,</l>
+<l>Rigid, menacing, inhuman,</l>
+<l>From its swooping helmet-eagle</l>
+<l rend="inline">To its trailing sabre-tip.</l></lg>
+
+<lg type="stanza">
+<l>Shaggy brows o'erhung and shaded</l>
+<l>Eyes of cynical clairvoyance</l>
+<l>Into all the baser instincts</l>
+<l rend="inline">Of the shivering, thrall-bound soul:</l></lg>
+
+<lg type="stanza">
+<l>Stone-blind to the far horizons</l>
+<l>Of the aspiring human spirit:</l>
+<l>Stone-blind to the dawning promise</l>
+<l rend="inline">Of a wiser, happier age.</l></lg>
+
+<lg type="stanza">
+<l>Rose the bullet-head defiant</l>
+<l>From aggressive, padded shoulders ;</l>
+<l>On the breast a steely corset</l>
+<l rend="inline">Bastioned a stony heart.</l></lg>
+
+
+
+<pb n="ICONOCLASTES                       55"/>
+
+<lg type="stanza">
+<l>Planted firm on mighty jack-boots</l>
+<l>Stood the rugged, rough-hewn image--</l>
+<l>Seven-league jack-boots, swift to trample</l>
+<l rend="inline">Homes, and hearts, and plighted faith.</l></lg>
+
+<lg type="stanza">
+<l>Once this god--so ran the legend--</l>
+<l>Led his chosen folk to triumph--</l>
+<l>Triumph, dear-bought, triumph tragic,</l>
+<l rend="inline">Yet resplendent in its day.</l></lg>
+
+<lg type="stanza">
+<l>Whereupon the people, dazzled</l>
+<l>By his blood-red blaze of glory,</l>
+<l>Saw in him a Teuton Saviour,</l>
+<l rend="inline">Crucifying, not crucified:</l></lg>
+
+<lg type="stanza">
+<l>Made of him an ogre-fetish,</l>
+<l>A cast-iron Mumbo-Jumbo,</l>
+<l>Worshipped in a tortuous ritual</l>
+<l>Known as <hi rend="italic">Real-Politik</hi>.</l></lg>
+
+<lg type="stanza">
+<l>Hierarchies of priests before him</l>
+<l>Moved through ponderous <hi rend="italic">Kriegs-Man&#x00F6;ver</hi>,</l>
+<l>Headed by the Archimandrite</l>
+<l rend="inline">Of the far-famed Mail&#x00EB;d Fist.</l></lg>
+
+
+
+<pb n="56                                      ICONOCLASTES"/>
+
+<lg type="stanza">
+<l>O'er the land his spirit brooded :</l>
+<l><hi rend="italic">Renommieren, Schwadronieren</hi></l>
+<l>Were accounted saving graces,</l>
+<l rend="inline">And heel-clicking <hi rend="italic">Schneidigkeit</hi>.</l></lg>
+
+<lg type="stanza">
+<l>Year by year, in huge battalions,</l>
+<l>Were the young men of the nation</l>
+<l>At his altar consecrated</l>
+<l rend="inline">To a soulless slavery;</l></lg>
+
+<lg type="stanza">
+<l>While on the o'erburdened ocean</l>
+<l>Steel-clad monsters hurtled, thundering,</l>
+<l>Through unhallowed demon-dances,</l>
+<l rend="inline">To propitiate his ghost.</l></lg>
+
+<lg type="stanza">
+<l>Nor on his own people only</l>
+<l>Weighed his worship like a nightmare--</l>
+<l>All the nations needs must pay him</l>
+<l rend="inline">Tribute of their youth and strength.</l></lg>
+
+<lg type="stanza">
+<l>Every nation at his altar</l>
+<l>Needs must bow in sullen thraldom,</l>
+<l>Pouring tithes of all their treasure</l>
+<l>Into his insatiate maw.</l></lg>
+
+<pb n="ICONOCLASTES                                      57"/>
+
+<lg type="stanza">
+<l>Vainly did they murmur, craving</l>
+<l>Some remission of their tribute ;</l>
+<l>Still the Archimandrite answered,</l>
+<l>"<hi rend="italic">Real-Politik</hi> forbids !"</l></lg>
+
+<lg type="stanza">
+<l>Till at last, in fierce rebellion</l>
+<l>Rose his victims, over-driven,</l>
+<l>Rose against the Archimandrite</l>
+<l>And his <hi rend="italic">schneidig</hi> hierarchy,</l></lg>
+
+<lg type="stanza">
+<l>Saying, " Let us smash the Idol,</l>
+<l>Pulverize the Moloch-image,</l>
+<l>Exorcize the accurs&#x00EB;d vampire--</l>
+<l rend="inline">From its menace free the world :</l></lg>
+
+<lg type="stanza">
+<l>" Free ourselves, and free the noble,</l>
+<l>Richly dowered, <hi rend="italic">gem&#x00FC;tlich</hi> nation,</l>
+<l>Doomed by some malign enchantment</l>
+<l rend="inline">To this dire idolatry:</l></lg>
+
+<lg type="stanza">
+<l>" Free the workers, thinkers, singers,</l>
+<l>To their saner selves restore them,</l>
+<l>Save their souls, reclaim their genius</l>
+<l>For the service of mankind."</l></lg>
+<milestone unit="section" rend="dots"/>
+
+
+<pb n="58                                      ICONOCLASTES"/>
+
+<lg type="stanza">
+<l>Can we crush the Idol ?    Never</l>
+<l>Doubt it! for a mightier godhead,</l>
+<l>Ancient, awful, fights on our side,</l>
+<l>And its name is NEMESIS.</l></lg>
+
+<byline>WILLIAM ARCHER</byline>
+<bibl><hi rend="italic">Daily News, August</hi> 15, 1914</bibl>
+
+</div>
+
+<pb n="THE CALL TO ARMS     59"/>
+
+<div id="lanesongs028" type="poem" n="28">
+<head>THE CALL TO ARMS IN OUR<lb/>STREET</head>
+
+<lg type="stanza">
+<l>There's a woman sobs her heart out,</l>
+<l>With her head against the door,</l>
+<l>For the man that's called to leave her,</l>
+<l>--God have pity on the poor!</l>
+<l rend="inline">But it's beat, drums, beat,</l>
+<l rend="inline">While the lads march down the street,</l>
+<l rend="inline">And it's blow, trumpets, blow,</l>
+<l rend="inline">Keep your tears until they go</l></lg>
+
+<lg type="stanza">
+<l>There's a crowd of little children</l>
+<l>That march along and shout,</l>
+<l>For it's fine to play at soldiers</l>
+<l>Now their fathers are called out.</l>
+<l rend="inline">So it's beat, drums, beat;</l>
+<l rend="inline">But who'll find them food to eat ?</l>
+<l rend="inline">And it's blow, trumpets, blow,</l>
+<l rend="inline">Ah ! the children little know.</l></lg>
+
+
+<pb n="60                 THE CALL TO ARMS IN OUR STREET"/>
+
+<lg type="stanza">
+<l>There's a mother who stands watching</l>
+<l>For the last look of her son,</l>
+<l>A worn poor widow woman,</l>
+<l>And he her only one.</l>
+<l rend="inline">But it's beat; drums, beat,</l>
+<l rend="inline">Though God knows when we shall meet;</l>
+<l rend="inline">And it's blow, trumpets, blow,</l>
+<l rend="inline">We must smile and cheer them so.</l></lg>
+
+<lg type="stanza">
+<l>There's a young girl who stands laughing,</l>
+<l>For she thinks a war is grand,</l>
+<l>And it's fine to see the lads pass,</l>
+<l>And it's fine to hear the band.</l>
+<l rend="inline">So it's beat, drums, beat,</l>
+<l rend="inline">To the fall of many feet ;</l>
+<l rend="inline">And it's blow, trumpets, blow,</l>
+<l rend="inline">God go with you where you go</l>
+<l rend="inline">To the war.</l></lg>
+
+<byline>W. M. LETTS</byline>
+<bibl><hi rend="italic">Saturday Westminster, August</hi> 15, 1914</bibl>
+</div>
+
+
+<pb n="TO THE CREW    61"/>
+
+
+<div id="lanesongs029" type="poem" n="29">
+<head>TO THE CREW OF H.M.S.<lb/>
+<hi rend="italic">BIRMINGHAM</hi></head>
+
+<lg type="stanza">
+<l>You that have been first in war</l>
+<l rend="inline">To meet that menace of the sea,</l>
+<l>The sunken craft that ne'er before</l>
+<l rend="inline">Hath tried death's instrument to be,--</l>
+<l>You have won honour and success</l>
+<l>By daring and by skilfulness.</l></lg>
+
+<lg type="stanza">
+<l>Daring is yours by pure descent</l>
+<l rend="inline">From heroes of an earlier age,</l>
+<l>Who blood and treasure freely spent</l>
+<l rend="inline">To make the sea our heritage,</l>
+<l>Who faced the cannon and the steel,</l>
+<l>And lived and died for England's weal.</l></lg>
+
+<lg type="stanza">
+<l>And skill is yours, with patience won</l>
+<l>And labour neither brief nor light--</l>
+<l>No novice aimed the blinding gun</l>
+<l>That reft the submarine of sight--</l>
+
+
+<pb n="62              TO THE CREW OF H.M.S. BIRMINGHAM"/>
+
+<l>Honoured of England let him be</l>
+<l>As Robin Hood of gunnery.</l></lg>
+
+<lg type="stanza">
+<l>Yours then is England's love and praise,</l>
+<l rend="inline">O cruiser of the honoured name !</l>
+<l>For whatsoever future days</l>
+<l rend="inline">May bring of peril or of fame,</l>
+<l>In your first battle on the sea</l>
+<l>You win your immortality.</l></lg>
+
+<byline>R. H. FORSTER</byline>
+<bibl><hi rend="italic">Yorkshire Post, August</hi> 16, 1914</bibl>
+</div>
+
+
+<pb n="GERMANIA     63"/>
+
+<div id="lanesongs030" type="poem" n="30">
+
+<head>GERMANIA</head>
+
+<lg type="stanza">
+<l>SURGEON her, world !    Let myriad scalpels bright</l>
+<l>Flash in her sores with all thy bitter might,</l>
+<l rend="inline">So that their aching cease.</l>
+<l>Cut clean the cursed canker that doth foul</l>
+<l>Her spirit; tent and cleanse her sorry soul,</l>
+<l rend="inline">And give her bosom peace.</l></lg>
+
+<lg type="stanza">
+<l>We do not smite a nation, but a pest;</l>
+<l>Humanity makes reasonable quest</l>
+<l rend="inline">To free a noble slave.</l>
+<l>Full deep she groans and faints, and fainting feels</l>
+<l>Archaic torture of a tyrant's heels</l>
+<l rend="inline">Grinding her to her grave.</l></lg>
+
+<lg type="stanza">
+<l>Possessed of devils now, mad with her woes,</l>
+<l>She wounds the world and turns her friends to foes ;</l>
+<l rend="inline">But cast her devils down</l>
+<l>And broken, humbled, contrite, healed and sane</l>
+<l>Oh may she shine her glorious self again--</l>
+<l>Pearl in Europa's crown.</l></lg>
+
+
+
+
+<pb n="64                                          GERMANIA"/>
+
+<lg type="stanza">
+<l>And they accurs'd, who bred this in her heart,</l>
+<l>Shall from the councils of mankind depart,</l>
+<l rend="inline">While over sea and shore,</l>
+<l>The silver trumpets of the sunrise cry</l>
+<l>That earth pursue her solemn destiny</l>
+<l>By blood and iron no more.</l></lg>
+
+<byline>EDEN PHILLPOTTS</byline>
+<bibl><hi rend="italic">Daily Chronicle, August</hi> 17, 1914</bibl>
+</div>
+
+
+<pb n="THE CALL     65"/>
+
+<div id="lanesongs031" type="poem" n="31">
+
+<head>THE CALL</head>
+
+<lg type="stanza">
+<l>LAD, with the merry smile and the eyes</l>
+<l rend="inline">Quick as a hawk's and clear as the day,</l>
+<l>You, who have counted the game the prize,</l>
+<l rend="inline">Here is the game of games to play.</l>
+<l rend="inline">Never a goal--the captains say-—</l>
+<l>Matches the one that's needed now :</l>
+<l rend="inline">Put the old blazer and cap away--</l>
+<l>England's colours await your brow.</l></lg>
+
+<lg type="stanza">
+<l>Man, with the square-set jaws and chin,</l>
+<l rend="inline">Always, it seems, you have moved to your end</l>
+<l>Sure of yourself, intent to win</l>
+<l rend="inline">Fame and wealth and the power to bend--</l>
+<l rend="inline">All that you've made you're called to spend,</l>
+<l>All that you've sought you're asked to miss—</l>
+<l rend="inline">What's ambition compared with this</l>
+<l>That a man lay down his life for his friend ?</l></lg>
+
+
+<pb n="66        THE CALL"/>
+
+<lg type="stanza">
+<l>Dreamer, oft in your glancing mind</l>
+<l rend="inline">Brave with drinking the faerie brew,</l>
+<l>You have smitten the ogres blind</l>
+<l rend="inline">When the fair Princess cried out to you.</l>
+<l rend="inline">Dreamer, what if your dreams are true ?</l>
+<l>Yonder's a bayonet, magical, since</l>
+<l rend="inline">Him whom it strikes, the blade sinks through--</l>
+<l>Take it and strike for England, Prince !</l></lg>
+
+<lg type="stanza">
+<l>Friend with the face so hard and worn,</l>
+<l rend="inline">The Devil and you have sometime met,</l>
+<l>And now you curse the day you were born,</l>
+<l rend="inline">And want one boon of God--to forget.</l>
+<l rend="inline">Ah, but I know, and yet--and yet--</l>
+<l>I think, out there in the shrapnel spray,</l>
+<l rend="inline">You shall stand up and not regret</l>
+<l>The Life that gave so splendid a day.</l></lg>
+
+<lg type="stanza">
+<l>Lover of ease, you've lolled and forgot</l>
+<l rend="inline">All the things that you meant to right;</l>
+<l>Life has been soft for you, has it not ?</l>
+<l rend="inline">What offer does England make to-night ?</l></lg>
+
+
+
+<pb n="THE CALL                                           67"/>
+
+<lg type="stanza">
+<l>This--to toil and to march and to fight</l>
+<l rend="inline">As never you've dreamed since your life began;</l>
+<l>This--to carry the steel-swept height,</l>
+<l rend="inline">This--to know that you've played the man !</l></lg>
+
+<lg type="stanza">
+<l>Brothers, brothers, the time is short,</l>
+<l rend="inline">Nor soon again shall it so betide</l>
+<l>That a man may pass from the common sort</l>
+<l rend="inline">Sudden and stand by the heroes' side.</l>
+<l rend="inline">Are there some that being named yet bide ?--</l>
+<l>Hark once more to the clarion call--</l>
+<l rend="inline">Sounded by him who deathless died--</l>
+<l rend="inline">" This day England expects you all."</l></lg>
+
+<byline>R. E. VERN&#x00C8;DE</byline>
+<bibl><hi rend="italic">Times, August</hi> 19, 1914</bibl>
+</div>
+
+
+<pb n="68   DIES IRAE"/>
+
+
+<div id="lanesongs032" type="poem" n="32">
+
+<head>DIES IRAE<lb/>TO THE GERMAN KAISER</head>
+
+<lg type="stanza">
+<l>AMAZING Monarch ! who at various times,</l>
+<l rend="inline">Posing as Europe's self-appointed saviour,</l>
+<l>Afforded copy for our ribald rhymes</l>
+<l rend="inline">By your behaviour;</l></lg>
+
+<lg type="stanza">
+<l>We nursed no malice; nay, we thanked you much</l>
+<l rend="inline">Because your head-piece, swollen like a tumour,</l>
+<l>Lent to a dullish world the needed touch</l>
+<l rend="inline">Of saving humour.</l></lg>
+
+<lg type="stanza">
+<l>What with your wardrobes stuffed with warrior gear,</l>
+<l rend="inline">Your gander-step parades, your prancing Prussians,</l>
+<l>Your menaces that shocked the deafened sphere</l>
+<l rend="inline">With rude concussions ;</l></lg>
+
+<lg type="stanza">
+<l>Your fist that turned the pinkest rivals pale</l>
+<l rend="inline">Alike with sceptre, chisel, pen or palette,</l>
+<l>And could at any moment, gloved in mail,</l>
+<l rend="inline">Smite like a mallet ;</l></lg>
+
+
+<pb n="DIES IRAE                        69"/>
+
+<lg type="stanza">
+<l>Master of all the Arts, and, what was more,</l>
+<l rend="inline">Lord of the limelight blaze that let us know it--</l>
+<l>You seemed a gift designed on purpose for</l>
+<l rend="inline">The flippant poet.</l></lg>
+
+<lg type="stanza">
+<l>Time passed and put to these old jests an end ;</l>
+<l rend="inline">Into our open hearts you found admission,</l>
+<l>Ate of our bread and pledged us like a friend</l>
+<l rend="inline">Above suspicion.</l></lg>
+
+<lg type="stanza">
+<l>You shared our griefs with seeming-gentle eyes ;</l>
+<l rend="inline">You moved among us cousinly entreated;</l>
+<l>Still hiding, under that fair outward guise,</l>
+<l rend="inline">A heart that cheated.</l></lg>
+
+<lg type="stanza">
+<l>And now the mask is down, and forth you stand</l>
+<l rend="inline">Known for a King whose word is no great matter,</l>
+<l>A traitor proved, for every honest hand</l>
+<l rend="inline">To strike and shatter.</l></lg>
+
+<lg type="stanza">
+<l>This was the " Day " foretold by yours and you</l>
+<l rend="inline">In whispers here, and there with beery clamours--</l>
+<l>You and your rat-hole spies and blustering crew</l>
+<l rend="inline">Of loud Potsdamers.</l></lg>
+
+<pb n="70         DIES IRAE"/>
+
+<lg type="stanza">
+<l>And lo, there dawns another, swift and stern,</l>
+<l rend="inline">When on the wheels of wrath, by Justice' token,</l>
+<l>Breaker of God's own Peace, you shall in turn</l>
+<l rend="inline">Yourself be broken.</l></lg>
+
+<byline>SIR OWEN SEAMAN</byline>
+<bibl><hi rend="italic">Punch, August</hi> 19, 1914</bibl>
+</div>
+
+
+<pb n="TO WOMEN       71"/>
+
+<div id="lanesongs032" type="poem" n="32">
+
+<head>TO WOMEN</head>
+
+<lg type="stanza">
+<l>YOUR hearts are lifted up, your hearts</l>
+<l>That have foreknown the utter price,</l>
+<l>Your hearts burn upward as a flame</l>
+<l>Of splendour and of sacrifice.</l></lg>
+
+<lg type="stanza">
+<l>For you, you too to battle go,</l>
+<l>Not with the marching drums and cheers,</l>
+<l>But in the watch of solitude</l>
+<l>And through the boundless night of fears.</l></lg>
+
+<lg type="stanza">
+<l>Swift, swifter than those hawks of war,</l>
+<l>Those threatening wings that pulse the air,</l>
+<l>Far as the vanward ranks are set,</l>
+<l>You are gone before them, you are there !</l></lg>
+
+<lg type="stanza">
+<l>And not a shot comes blind with death,</l>
+<l>And not a stab of steel is pressed</l>
+<l>Home, but invisibly it tore</l>
+<l>And entered first a woman's breast.</l></lg>
+
+<pb n="72   TO WOMEN"/>
+
+<lg type="stanza">
+<l>Amid the thunder of the guns,</l>
+<l>The lightning of the lance and sword,</l>
+<l>Your hope, your dread, your throbbing pride,</l>
+<l>Your infinite passion is outpoured</l></lg>
+
+<lg type="stanza">
+<l>From hearts that are as one high heart</l>
+<l>Withholding naught from doom and bale,</l>
+<l>Burningly offered up--to bleed,</l>
+<l>To bear, to break, but not to fail.</l></lg>
+
+<byline>LAURENCE BINYON</byline>
+<bibl><hi rend="italic">Times, August</hi> 20,1914</bibl>
+</div>
+
+
+<pb n="TOWARDS THE LIGHT      73"/>
+
+<div id="lanesongs033" type="poem" n="33">
+
+<head>TOWARDS THE LIGHT</head>
+
+<lg type="stanza">
+<l>ONCE o'er those downs wild beacons blazed,</l>
+<l rend="inline">Weird messengers of fate and fight,</l>
+<l><hi rend="italic">She</hi> was not wild, dismayed, or dazed,</l>
+<l rend="inline">But calmly looked towards the light--</l>
+<l>Towards the light that springs from night,</l>
+<l rend="inline">As sure as courage springs from faith.</l>
+<l>So now, when like some hideous wraith</l>
+<l rend="inline">War mocks, with bodings from the dead,</l>
+<l>Our moonlit harvests, swathe on swathe,</l>
+<l rend="inline">May she, dear England, lift her head</l>
+<l rend="inline">Towards the light, towards the light--</l>
+<l rend="inline">Praying that God defend the right.</l></lg>
+
+<byline>WALTER SICHEL</byline>
+<bibl><hi rend="italic">Westminster Gazette, August</hi> 10, 1914</bibl>
+</div>
+
+
+<pb n="74                                       ROLL UP!"/>
+
+<div id="lanesongs034" type="poem" n="34">
+
+<head>ROLL UP!</head>
+
+<lg type="stanza">
+<l>" ROLL up the map of Europe ! "</l>
+<l rend="inline">The German Kaiser cried,</l>
+<l>" For I'm the new Napoleon,</l>
+<l rend="inline">An' England's 'ands are tied."</l>
+<l>But another sort o' rollin' up</l>
+<l rend="inline">Is comin' into play--</l>
+<l>"<hi rend="italic">Roll up ! Roll up !" sez Kitchener</hi>,</l>
+<l rend="inline"><hi rend="italic">An' we're rollin' up all day</hi>.</l></lg>
+
+<lg type="stanza">
+<l>'E thought, did Kaiser William,</l>
+<l rend="inline">That England would stand by,</l>
+<l>While 'e an' 'is five million</l>
+<l rend="inline">Were crushin' 'er ally.</l>
+<l>" For they 'aven't got the men," 'e said,</l>
+<l rend="inline">" To fight acrost the seas."</l>
+<l>" Roll up ! Roll up !" sez Kitchener,</l>
+<l rend="inline">" New Army, forward, please ! "</l></lg>
+
+
+<pb n="ROLL UP!                                          75"/>
+
+<lg type="stanza">
+<l>Yes, 'e wants a Second Army--</l>
+<l rend="inline">'E's goin' to get it, too ;</l>
+<l>For we know the man that calls us,</l>
+<l rend="inline">An' we trust 'im thro' and thro'</l>
+<l>If K. should need a million men,</l>
+<l rend="inline">'E's only got to say--</l>
+<l><hi rend="italic">" Roll up for King and Country ! "</hi></l>
+<l rend="inline"><hi rend="italic">An' they'll roll up right away.</hi></l></lg>
+
+<lg type="stanza">
+<l>An' while we do our part 'ere,</l>
+<l rend="inline">We'll think with love an' pride</l>
+<l>Of our comrades now a-rallyin'</l>
+<l rend="inline">Acrost the oceans wide.</l>
+<l>For East an' West an' furthest South</l>
+<l rend="inline">They hear K.'s call resound--</l>
+<l><hi rend="italic">" Roll up ! Roll up for England!"</hi></l>
+<l rend="inline"><hi rend="italic">An' they're rolling up all round.</hi></l></lg>
+
+<byline>W. M. L. HUTCHINSON</byline>
+<bibl><hi rend="italic">Pall Mall Gazette, August</hi> 20, 1914</bibl>
+</div>
+
+
+<pb n="76"/>
+
+<div id="lanesongs034" type="poem" n="34">
+
+<lg type="stanza">
+<l>NOT for passion or for power,</l>
+<l rend="inline">Clean of hands, and calm of soul,</l>
+<l>England at this awful hour</l>
+<l rend="inline">Bids her battle-thunders roll,</l></lg>
+
+<lg type="stanza">
+<l>That crown'd arrogance may quail</l>
+<l rend="inline">And brute-force be backward hurled--</l>
+<l>Lest the hypocrite prevail,</l>
+<l rend="inline">Lest a lie should win the world;</l></lg>
+
+<lg type="stanza">
+<l>Lest she see the trustful weak</l>
+<l rend="inline">Trampled by the perjured strong--</l>
+<l>That her arm may help to wreak</l>
+<l rend="inline">Justice on red-handed wrong,</l></lg>
+
+<lg type="stanza">
+<l>Till the hierophants of fear</l>
+<l rend="inline">Cease, beneath the darkened sun,</l>
+<l>To boom out in Europe's ear</l>
+<l rend="inline">The grim gospel of the gun.</l></lg>
+
+<pb n="77"/>
+
+
+<lg type="stanza">
+<l>So, to meet yon myriad host</l>
+<l rend="inline">As we muster, land by land,</l>
+<l>Witness Heaven--no braggart boast--</l>
+<l rend="inline">That for righteousness we stand !</l></lg>
+
+<lg type="stanza">
+<l>In the dread impending hour</l>
+<l rend="inline">Heedful of that warning word,</l>
+<l>" ' Not by might, and not by power--</l>
+<l rend="inline">By my Spirit,' saith the Lord."</l></lg>
+
+<byline>JAMES RHOADES</byline>
+<bibl><hi rend="italic">Times, August</hi> 21, 1914</bibl>
+</div>
+
+
+<pb n="78    TO THE BRITISH ARMY"/>
+
+<head>TO THE BRITISH ARMY</head>
+
+<lg type="stanza">
+<l>British soldiers, once again</l>
+<l>Ye are marshalled on the plain</l>
+<l>By our fathers' blood renowned;</l>
+<l>Ye are treading sacred ground !</l>
+<l>Hearken, hearken as ye pass</l>
+<l>To the voices in the grass !</l>
+<l>On the Belgian soil it waves</l>
+<l>O'er the lone, unnumbered graves</l>
+<l>Where immortal warriors lie,</l>
+<l>Devotees of Liberty,</l>
+<l>Nobly fallen in the fray.</l>
+<l>Ramillies and Malplaquet,</l>
+<l>Quatre Bras and Waterloo</l>
+<l>Yield their legions up to you !</l></lg>
+
+<lg type="stanza">
+<l>British soldiers, ye will fight</l>
+<l>'Neath the banner of the Right:</l>
+<l>Ye are holding in your hands</l>
+<l>Liberty of little lands,</l>
+
+
+<pb n="TO IHE BRITISH ARMY                             79"/>
+
+<l>Seeking nothing, giving all,</l>
+<l>Answering to Honour's call,</l>
+<l>Stay Aggression's grim attack !</l>
+<l>Hurl the impious menace back!</l>
+<l>Devotees of Liberty,</l>
+<l>Ride ye now to victory!</l>
+<l>We in England watch and pray :—</l>
+<l>Ramillies and Malplaquet,</l>
+<l>Quatre Bras and Waterloo</l>
+<l>Yield their soul to strengthen you!</l></lg>
+
+<byline>R. GORELL BARNES</byline>
+<bibl><hi rend="italic">Times, August</hi> 22, 1914</bibl>
+</div>
+
+<pb n="80    REDEMPTION"/>
+
+<div id="lanesongs035" type="poem" n="35">
+
+<head>REDEMPTION</head>
+
+<lg type="stanza">
+<l>As though Youth had not all the best, this day</l>
+<l rend="inline">Offers him one excelling best-of-all,--</l>
+<l rend="inline">The glorious summons of a trumpet-call</l>
+<l>To prove his manhood in man's noblest fray ;</l>
+<l>To be with those who fight at last to slay</l>
+<l rend="inline">That ancient despot, War.   Whate'er befall,</l>
+<l rend="inline">His is a prize so rich as to forestall</l>
+<l>The invidious years and venom of decay.</l>
+<l>No fruitless age shall he regret who pays</l>
+<l rend="inline">Thus timely his arrears to Motherland</l>
+<l rend="inline">And humankind, ensuing Earth's desire ;</l>
+<l>Who stakes his else immemorable days</l>
+<l rend="inline">And wins his life back, holy from Death's hand,</l>
+<l rend="inline">Redeemed in one brief ecstasy of fire!</l></lg>
+
+<byline>HAROLD E. GOAD</byline>
+<bibl><hi rend="italic">Times, August</hi> 26, 1914</bibl>
+
+</div>
+
+<pb n="A BATTLE SONG         81"/>
+
+<div id="lanesongs036" type="poem" n="36">
+
+<head>A BATTLE-SONG</head>
+
+<lg type="stanza">
+<l>Sons of Britain, old in fame,</l>
+<l>Heirs of an immortal name,</l>
+<l>Strike, because the danger's near,</l>
+<l>Strike for all ye hold most dear;</l>
+<l>Plunged in combat, whelmed with strife,</l>
+<l>Strike for liberty and life !</l></lg>
+
+<lg type="stanza">
+<l>Sons of Britain, ye know well</l>
+<l>How the clarion trumpets swell</l>
+<l>When, like some tempestuous star,</l>
+<l>Flares the oriflamme of war !</l>
+<l>If it summon you to strife</l>
+<l>Strike for liberty and life !</l></lg>
+
+<lg type="stanza">
+<l>Will ye bear the Teuton heel</l>
+<l>Crushing down your Commonweal ?</l>
+<l>Will ye not avenge the wrong</l>
+<l>Europe hath endured so long ?</l>
+<l>Stay the tyranny and strife,</l>
+<l>Strike for liberty and life ?</l></lg>
+
+
+<pb n="82                                     A BATTLE-SONG"/>
+
+<lg type="stanza">
+<l>Hark ! they mutter in their sleep,</l>
+<l>All those heroes of the deep--</l>
+<l>Nelson, Rodney, Hawkins, Drake,</l>
+<l>All who fought for Britain's sake,</l>
+<l>Fought and died that such as we</l>
+<l>Might strike for life and liberty !</l></lg>
+
+<lg type="stanza">
+<l>Ye, who answer Honour's call</l>
+<l>To strive, to conquer, or to fall--</l>
+<l>Ye who call yourselves the sons</l>
+<l>Of Marlboroughs and Wellingtons--</l>
+<l>Claim your heritage of strife,</l>
+<l>Strike for liberty and life.</l></lg>
+
+<lg type="stanza">
+<l>Straining upwards to the light,</l>
+<l>Striving ever for the right,</l>
+<l>Sons of Britain, dauntless stand</l>
+<l>For God and King and Fatherland.</l>
+<l>Join the battle, face the strife,</l>
+<l>Strike for liberty and life !</l></lg>
+
+<byline>W. L. COURTNEY</byline>
+<bibl><hi rend="italic">Daily Telegraph, August</hi> 27, 1914</bibl>
+
+</div>
+
+<pb n="THE KAISER AND GOD      83"/>
+
+<div id="lanesongs037" type="poem" n="37">
+
+<head>THE KAISER AND GOD</head>
+
+<epigraph><cit><q><p>[" I rejoice with you in Wilhelm's first victory. How magnificently God supported him!"--<bibl><hi rend="italic">Telegram from the Kaiser to the Crown Princess</hi>.</bibl>]</p></q></cit></epigraph>
+
+<lg type="stanza">
+<l>LED by Wilhelm, as you tell,</l>
+<l>God has done extremely well;</l>
+<l>You with patronizing nod</l>
+<l>Show that you approve of God.</l>
+<l>Kaiser, face a question new--</l>
+<l>This--does God approve of you ?</l></lg>
+
+<lg type="stanza">
+<l>Broken pledges, treaties torn,</l>
+<l>Your first page of war adorn ;</l>
+<l>We on fouler things must look</l>
+<l>Who read further in that book,</l>
+<l>Where you did in time of war</l>
+<l>All that you in peace forswore,</l>
+<l>Where you, barbarously wise,</l>
+<l>Bade your soldiers terrorize,</l>
+
+
+<pb n="84        THE KAISER AND GOD"/>
+
+<l>Where you made--the deed was fine--</l>
+<l>Women screen your firing line.</l>
+<l>Villages burned down to dust,</l>
+<l>Torture, murder, bestial lust,</l>
+<l>Filth too foul for printer's ink,</l>
+<l>Crimes from which the apes would shrink--</l>
+<l>Strange the offerings that you press</l>
+<l>On the God of Righteousness!</l></lg>
+
+<lg type="stanza">
+<l>Kaiser, when you'd decorate</l>
+<l>Sons or friends who serve your State,</l>
+<l>Not that Iron Cross bestow,</l>
+<l>But a Cross of Wood, and so--</l>
+<l>So remind the world that you</l>
+<l>Have made Calvary anew.</l></lg>
+
+<lg type="stanza">
+<l>Kaiser, when you'd kneel in prayer</l>
+<l>Look upon your hands, and there</l>
+<l>Let that deep and awful stain</l>
+<l>From the blood of children slain</l>
+<l>Burn your very soul with shame.</l>
+<l>Till you dare not breathe that Name</l>
+<l>That now you glibly advertise--</l>
+<l>God as one of your allies.</l></lg>
+
+
+
+<pb n="THE KAISER AND GOD               85"/>
+
+<lg type="stanza">
+<l>Impious braggart, you forget;</l>
+<l>God is not your conscript yet;</l>
+<l>You shall learn in dumb amaze</l>
+<l>That His ways are not your ways,</l>
+<l>That the mire through which you trod</l>
+<l>Is not the high white road of God,</l></lg>
+
+<lg type="stanza">
+<l><hi rend="italic">To Whom, whichever way the combat rolls</hi>,</l>
+<l><hi rend="italic">We, fighting to the end, commend our souls</hi>.</l></lg>
+
+<byline>BARRY PAIN</byline>
+<bibl><hi rend="italic">Times, August</hi> 28, 1914</bibl>
+</div>
+
+
+<pb n="86     THE SHIRKER"/>
+
+<div id="lanesongs038" type="poem" n="38">
+
+<head type="main">THE SHIRKER</head>
+
+<head type="sub">[Suggested by Mr. Robert Blatchford's article in<lb/>
+<hi rend="italic">The Daily Mail</hi>.]</head>
+
+<lg type="stanza">
+<l>HE moors the skiff within the cooler gloom</l>
+<l>Of river-branches, unaware of doom ;</l>
+<l>Cushioned he lolls, and looks in faces fair,</l>
+<l>Nursing with placid hand anointed hair.</l>
+<l>It seems he scarcely can uplift the weight</l>
+<l>Of summer afternoon, far less of fate.</l>
+<l>So the young Briton, sprawling in his strength,</l>
+<l>Supports a heavy Sabbath at full length,</l>
+<l>Till sinks the sun on more than that sweet river,</l>
+<l>Perhaps upon our day goes down for ever.</l>
+<l>But though that orb may on an Empire set,</l>
+<l>Tomlinson lights another cigarette.</l></lg>
+
+<byline>STEPHEN PHILLIPS</byline>
+<bibl><hi rend="italic">Daily Mail, August</hi> 30, 1914</bibl>
+</div>
+
+
+<pb n="GHOSTS AT BOULOGNE    87"/>
+
+
+<div id="lanesongs039" type="poem" n="39">
+<head>GHOSTS AT BOULOGNE</head>
+
+<lg type="stanza">
+<l>ONE dreamer, when our English soldiers trod</l>
+<l>But yesterday the welcoming fields of France,</l>
+<l>Saw war-gaunt shadows gathering stare askance</l>
+<l>Upon those levies and that alien sod--</l>
+<l>Saw Churchill's smile, and Wellington's curt nod,</l>
+<l>Saw Harry with his Crispins, Chandos' lance,</l>
+<l>And the Edwards on whose breasts the leopards dance:</l>
+<l>Then heard a gust of ghostly thanks to God</l>
+<l>That the most famous quarrel of all time</l>
+<l>In the most famous friendship ends at last;</l>
+<l>Such flame of friendship as God fans to forge</l>
+<l>A sword to strike the Dragon of the Slime,</l>
+<l>Bidding St. Denis with St. George stand fast</l>
+<l>Against the Worm.    St. Denis and St. George!</l></lg>
+
+<byline>JUSTIN HUNTLY MCCARTHY</byline>
+<bibl><hi rend="italic">Daily Chronicle, August</hi> 30,1914</bibl>
+</div>
+
+
+<pb n="88   TO THE BELGIANS"/>
+
+
+<div id="lanesongs040" type="poem" n="40">
+
+<head>TO THE  BELGIANS<lb/>
+FROM ENGLAND</head>
+
+<lg type="stanza">
+<l>O MEN of mickle heart and little speech,</l>
+<l>Slow, stubborn countrymen of heath and plain,</l>
+<l>Now have ye shown these insolent again</l>
+<l>That which to C&#x00E6;sar's legions ye could teach,</l>
+<l>That slow-provok'd is long-provok'd.    May each</l>
+<l>Crass Caesar learn this of the Keltic grain,</l>
+<l>Until at last they reckon it in vain</l>
+<l>To browbeat us who hold the Western reach.</l></lg>
+
+<lg type="stanza">
+<l>For even as you, so we are, ill to rouse,</l>
+<l>Rooted in Custom, Order, Church and King;</l>
+<l>And as you fight for their sake, so shall we,</l>
+<l>Stubbornly, inch by inch, and house by house;</l>
+<l>Seeing for us, too, there's a dearer thing</l>
+<l>Than land or blood--and that thing Liberty.</l></lg>
+
+<byline>MAURICE HEWLETT</byline>
+<bibl><hi rend="italic">Westminster Gazette, September</hi> 9, 1914</bibl>
+</div>
+
+
+<pb n="SONG OF THE SOLDIERS    89"/>
+
+<div id="lanesongs041" type="poem" n="41">
+
+<head>SONG OF THE SOLDIERS</head>
+
+<lg type="stanza">
+<l>WHAT of the faith and fire within us</l>
+<l rend="inline">Men who march away</l>
+<l rend="inline">Ere the barn-cocks say</l>
+<l rend="inline">Night is growing gray,</l>
+<l>To hazards whence no tears can win us;</l>
+<l>What of the faith and fire within us</l>
+<l rend="inline">Men who march away ?</l></lg>
+
+<lg type="stanza">
+<l>Is it a purblind prank, O think you,</l>
+<l rend="inline">Friend with the musing eye</l>
+<l rend="inline">Who watch us stepping by,</l>
+<l rend="inline">With doubt and dolorous sigh ?</l>
+<l>Can much pondering so hoodwink you!</l>
+<l>Is it a purblind prank, O think you,</l>
+<l rend="inline">Friend with the musing eye ?</l></lg>
+
+<lg type="stanza">
+<l>Nay.   We see well what we are doing,</l>
+<l rend="inline">Though some may not see--</l>
+<l rend="inline">Dalliers as they be !--</l>
+<l rend="inline">England's need are we ;</l>
+
+
+<pb n="90                  SONG OF THE SOLDIERS"/>
+
+<l>Her distress would leave us rueing:</l>
+<l>Nay.    We see well what we are doing,</l>
+<l rend="inline">Though some may not see !</l></lg>
+
+<lg type="stanza">
+<l>In our heart of hearts believing</l>
+<l rend="inline">Victory crowns the just,</l>
+<l rend="inline">And that braggarts must</l>
+<l rend="inline">Surely bite the dust,</l>
+<l>Press we to the field ungrieving,</l>
+<l>In our heart of hearts believing</l>
+<l rend="inline">Victory crowns the just.</l></lg>
+
+<lg type="stanza">
+<l>Hence the faith and fire within us</l>
+<l rend="inline">Men who march away</l>
+<l rend="inline">Ere the barn-cocks say</l>
+<l rend="inline">Night is growing gray,</l>
+<l>To hazards whence no tears can win us ;</l>
+<l>Hence the faith and fire within us</l>
+<l rend="inline">Men who march away.</l></lg>
+
+<byline>THOMAS HARDY</byline>
+<bibl><hi rend="italic">Times, September</hi> 9, 1914</bibl>
+</div>
+
+
+<pb n="A CAP TO FIT THE KAISER      91"/>
+
+<div id="lanesongs042" type="poem" n="42">
+
+<head>A CAP TO FIT THE KAISER</head>
+
+<epigraph><cit><q><lg type="stanza">
+<l>Impiger, iracundus, inexorabilis, acer,</l>
+<l>Jura neget sibi nata, nihil non arroget armis.</l></lg>
+<bibl>(<hi rend="italic">ARS POETICA</hi> 12)</bibl></q></cit></epigraph>
+
+<lg type="stanza">
+<l>Eager, implacable, untired,</l>
+<l>By pride and anger quickly fired,</l>
+<l>He laughs at laws and plighted word,</l>
+<l>His sole arbitrament the sword.</l></lg>
+
+<byline>THE BISHOP OF LINCOLN</byline>
+</div>
+
+
+<pb n="92            FOR ALL WE HAVE AND ARE"/>
+
+<div id="lanesongs043" type="poem" n="43">
+
+<head>"FOR ALL WE HAVE AND ARE"</head>
+
+<lg type="stanza">
+<l>For all we have and are,</l>
+<l>For all our children's fate,</l>
+<l>Stand up and meet the war.</l>
+<l>The Hun is at the gate !</l>
+<l>Our world has passed away</l>
+<l>In wantonness o'erthrown.</l>
+<l>There is nothing left to-day</l>
+<l>But steel and fire and stone.</l></lg>
+
+<lg type="stanza">
+<l>Though all we knew depart,</l>
+<l>The old commandments stand:</l>
+<l>" In courage keep your heart,</l>
+<l>In strength lift up your hand."</l></lg>
+
+<lg type="stanza">
+<l>Once more we hear the word</l>
+<l>That sickened earth of old :</l>
+<l>" No law except the sword</l>
+<l>Unsheathed and uncontrolled."</l></lg>
+
+
+<pb n="FOR ALL WE HAVE AND ARE                      93"/>
+
+<lg type="stanza">
+<l>Once more it knits mankind,</l>
+<l>Once more the nations go</l>
+<l>To meet and break and bind</l>
+<l>A crazed and driven foe.</l></lg>
+
+<lg type="stanza">
+<l>Comfort, content, delight--</l>
+<l>The ages' slow-bought gain</l>
+<l>They shrivelled in a night,</l>
+<l>Only ourselves remain</l>
+<l>To face the naked days</l>
+<l>In silent fortitude</l>
+<l>Through perils and dismays</l>
+<l>Renewed and re-renewed.</l>
+<l>Though all we made depart</l>
+<l>The old commandments stand:</l>
+<l>" In patience keep your heart,</l>
+<l>In strength lift up your hand."</l></lg>
+
+<lg type="stanza">
+<l>No easy hopes or lies</l>
+<l>Shall bring us to our goal,</l>
+<l>But iron sacrifice</l>
+<l>Of body, will, and soul.</l></lg>
+
+<pb n="94                       FOR ALL WE HAVE AND ARE"/>
+
+<lg type="stanza">
+<l>There is but one task for all--</l>
+<l>For each one life to give.</l>
+<l>Who stands if freedom fall ?</l>
+<l>Who dies if England live ?</l></lg>
+
+<byline>RUDYARD KIPLING</byline>
+<bibl><hi rend="italic">Times, September</hi> 2, 1914</bibl>
+</div>
+
+
+<pb n="THE BATTLE OF THE BIGHT    95"/>
+
+<div id="lanesongs044" type="poem" n="44">
+
+<head>THE BATTLE OF THE BIGHT</head>
+
+<lg type="stanza">
+<l>HAD I the fabled herb</l>
+<l rend="inline">That brought to life the dead,</l>
+<l>Whom would I dare disturb</l>
+<l rend="inline">In his eternal bed ?</l>
+<l>Great Grenville would I wake,</l>
+<l>And with glad tidings make</l>
+<l>The soul of mighty Drake</l>
+<l rend="inline">Heave up a glorying head.</l></lg>
+
+<lg type="stanza">
+<l>As rose the misty sun,</l>
+<l rend="inline">Our men the North Sea scanned,</l>
+<l>And each rejoicing gun</l>
+<l rend="inline">Welcomed a Foe at hand,</l>
+<l>And thundering its delight,</l>
+<l>Opened its mouth outright,</l>
+<l>And bit them in the Bight,</l>
+<l rend="inline">The Bight of Helgoland.</l></lg>
+
+
+<pb n="96                          THE BATTLE OF THE BIGHT"/>
+
+<lg type="stanza">
+<l>With Captains who could each</l>
+<l rend="inline">Do aught but yield or flee ;</l>
+<l>With guns that spake the speech</l>
+<l rend="inline">Shall keep this Kingdom free ;</l>
+<l>We hammered to their doom</l>
+<l>Four Giants mid the gloom,</l>
+<l>And one to a fiercer tomb</l>
+<l rend="inline">Sent blazing down the sea.</l></lg>
+
+<lg type="stanza">
+<l>Sleep on, O Drake, sleep well,</l>
+<l rend="inline">In days not wholly dire !</l>
+<l>Grenville, whom nought could quell,</l>
+<l rend="inline">Unquenched is still thy fire.</l>
+<l>And thou that hadst no peer,</l>
+<l>Nelson ! thou need'st not fear:</l>
+<l>Thy sons and heirs are here,</l>
+<l rend="inline">Nor shall they shame their sire.</l></lg>
+
+<byline>WILLI.AM WATSON</byline>
+<bibl><hi rend="italic">Times</hi></bibl>
+</div></body></text></TEI.2>
+
+
+
+

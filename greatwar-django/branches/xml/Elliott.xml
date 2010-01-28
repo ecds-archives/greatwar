@@ -1,0 +1,2494 @@
+<TEI.2>
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Lest We Forget: Electronic Edition</title>
+            <editor><name type="person" reg="Elliot, H. B.">H. B. Elliot</name></editor>
+         </titleStmt>
+	 <publicationStmt>
+	   <publisher>Lewis H. Beck Center for Electronic Collections
+	   and Services, Emory University</publisher>
+	   <pubPlace>Atlanta, GA</pubPlace>
+	   <address>
+	     <addrLine>540 Asbury Circle</addrLine>
+	     <addrLine>Woodruff Library</addrLine>
+	     <addrLine>Atlanta, GA 30322</addrLine>
+	   </address>
+	   <availability><p>&#x00A9;Emory University. Permission is
+	   granted to download, transmit, or otherwise reproduce,
+	   distribute or display the contributions to the work claimed
+	   by Emory University for non-profit educational purposes,
+	   provided this header is included in its entirety.  For
+	   inquiries about commercial uses, contact either: Institute
+	   for Jewish Studies, Emory University, Atlanta GA 30322 or
+	   the Lewis H. Beck Center for Electronic Collections and
+	   Services, Woodruff Library, Emory University, Atlanta,
+	   Georgia 30322 </p></availability> 
+	   <date>2004</date>
+	 </publicationStmt>
+	 <seriesStmt>
+	   <title>The Great War</title>
+	 </seriesStmt>
+	 <notesStmt><note/></notesStmt>
+         <sourceDesc><!-- put the actual publication data for the book
+	   in this section --> 
+            <bibl>
+	     <title>Lest We Forget</title>
+	     <editor>H. B. Elliot</editor>
+	     <pubPlace>London</pubPlace>
+	     <publisher>Jarrold &#x0026; Sons</publisher>
+	     <date>1915</date>
+	   </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+	<projectDesc><p>Poetry contemporary to World War I (the Great
+	War) has been digitized by OCR or rekeying. The work has been
+	done in conjunction with Dr. Harry Rusche of the English
+	Department, Emory University</p></projectDesc>
+	<editorialDecl>
+	<p>Block quotes are marked with q or quote
+	elements</p>
+	</editorialDecl>
+	<tagsDecl>
+	  <rendition id="quote">Paragraphs including q or quote
+	  elements indicate material that is in a block
+	  quote.</rendition>
+	  <rendition id="title">Where the title of a work is
+	  italicized, it is marked with a title element, both in the
+	  text and in footnotes.</rendition>
+	  <rendition id="byline">Bylines in this text are aligned
+	  right after the last line of text</rendition>
+	  <rendition id="note">Notes (<note/>) are always
+	  italic.</rendition>
+	  <rendition id="indent">The "indent" value is two spaces,
+	  unless otherwise noted.</rendition>
+	  <tagUsage gi="q" render="quote">blockquote</tagUsage>
+	  <tagUsage gi="quote" render="quote">blockquote</tagUsage>
+	  <tagUsage gi="title" render="title">italic</tagUsage>
+	  <tagUsage gi="byline" render="byline">right</tagUsage>
+	  <tagUsage gi="note" render="note">italic</tagUsage>
+	  <tagUsage gi="l" render="indent">indent 2</tagUsage>
+	</tagsDecl>
+	<refsDecl><p>The page numbers of the volumes are indicated by
+	page break elements</p>
+	<p/>
+	</refsDecl>
+	<classDecl>
+	  <taxonomy id="lcsh">
+	    <bibl>
+	      <title>Library of Congress Subject Headings</title>
+	    </bibl>
+	  </taxonomy>
+	</classDecl>
+      </encodingDesc>
+      <profileDesc>
+         <creation>
+	   <rs type="collection">poetry</rs>
+	   <rs type="language">English</rs>
+            <rs type="ethnicity">Caucasian</rs>
+            <rs type="form">Unedited</rs>
+            <rs type="genre">Poetry</rs>
+            <rs type="geography">Great Britain</rs>
+            <date>1900-1999</date>
+         </creation>
+	 <textClass>
+	   <keywords scheme="lcsh">
+	     <list>
+	       <item>World War, 1914-1918--Poetry.</item>
+	       <item>English poetry--20th Century.</item>
+	       <item>War.</item>
+	     </list>
+	   </keywords>
+	 </textClass></profileDesc>
+      <revisionDesc>
+	<change>
+	  <date>2004</date>
+	  <respStmt>
+	    <name>Alden Mahler</name>
+	    <resp>Beck Center Staff</resp>
+	  </respStmt>
+	    <item>Scanning, proofreading and encoding</item>
+	</change>
+	<change>
+	  <date>September 2004</date>
+	  <respStmt>
+	    <name>Alice Hickcox</name>
+	    <resp>Beck Center Staff</resp>
+	  </respStmt>
+	    <item>Header added; encoding checked</item>
+	</change>
+      </revisionDesc>
+   </teiHeader>
+
+<text>
+<front>
+<pb n="1"/>
+<div id="elliott001" type="epigraph">
+<epigraph><q direct="unspecified">
+<l rend="indent7">"O God to-day</l>
+<milestone unit="line" rend="dots"/>
+<l>Shield with Thy wings the many, far away;</l>
+<l rend="indent">Soothe those who watch and wait and do each task</l>
+<l>With brave hands working, while their brave lips pray."</l></q></epigraph>
+<byline>LILLIAN GARD.</byline>
+<p> </p>
+<pb n="5"/>
+</div>
+
+
+
+<div id="elliott002" type="note">
+<head rend="center">NOTE.</head>
+
+<p>
+<hi rend="smallcap">The</hi> purpose for which this Anthology has been compiled is to aid the Queen Mary Needlework Guild, and it is earnestly hoped that so worthy an object, may secure for the book such a measure of success as will ensure a considerable addition being made to the Fund.</p>
+
+<p>
+Among so many volumes of a similar nature it is inevitable that one or perhaps two poems should be duplicated, but in these cases their very excellence will doubtless save them from becoming hackneyed thereby.</p>
+
+<p>
+I am under a heavy obligation to the various authors who have so generously placed their verses at my disposal, to the papers and reviews in which they have previously appeared, and also to the representatives of the late Mr. James Elroy Flecker for permission to reprint "God Save the King" (one of the last compositions from the pen of this gifted author); to the proprietors of "Punch" for their <pb n="6"/>kind permission to reproduce the cartoons by Mr. Bernard Partridge, and to Mr. H. Haley, A.R.C.A., for the design on the title-page. With a further expression of gratitude, for the honour conferred on so modest a volume by the Baroness Orczy, in writing the Foreword, it remains for me only to hope that the book may prove as pleasing in the reading as it has been interesting in the preparation.</p>
+<byline>H. B. ELLIOTT.</byline>
+<dateline><date>February, 1915.</date></dateline>
+</div>
+
+<pb n="7"/>
+<div id="elliott003" type="foreword">
+<head rend="center">FOREWORD.</head>
+
+<p>
+<hi rend="smallcap">This</hi> book is inscribed to every individual woman and girl of Great Britain who to-day is bearing so heroically -- so uncomplainingly -- her own share of Britain's burden in this Great War. She is asked to give of her dearest and her best, to see the man she loves -- husband, son, sweetheart or friend -- go to fight his country's battles, to fight in the cause of justice and humanity and honour whilst she -- mother, wife or sweetheart -- must perforce stay at home and strive with all her might to hide her tears, to keep back the one little word which perhaps would shake the loved one's resolution, the one little word which might unnerve him and cause him to stay by her side. Indeed, the burden laid upon all the women and girls of Great Britain is no light one! and they are bearing it with all the heroism of their race. Their sorrow is great -- and in that sorrow but one solace is left to them -- that of thinking and planning and working for <pb n="8"/>those who have so bravely gone. It is their skill, their industry, their devotion which makes our gallant soldiers' and sailors' lives at the post of duty a little more happy and a little more comfortable. The warm clothing, which loving fingers at home fashion for the magnificent man who fights on land or at sea, is a comfort not only to his body, but also for his heart, for it reminds him of home, of brave hands that work while brave lips are praying for him.</p>
+
+<p>
+It is to aid this work that this book has been compiled; it is to the workers that it is dedicated. Cheered by the patronage of a gracious Queen they will continue their labour of love so long as their fingers have the strength to wield needles and pins, and in the years to come, when the history of the twentieth century comes to be written, not its least heroic page will be the account of how the women and girls of Great Britain bore their part in the Great War by working for the material comfort of Britain's fighting men.</p>
+<byline>EMMUSKA ORCZY.</byline>
+<dateline><name type="place" rend="italics">Snowfield,
+Bearsted,
+Kent.</name></dateline>
+</div>
+
+</front>
+
+<body>
+
+<div id="elliott004" type="anthology" n="Lest We Forget:  A War Anthology">
+
+
+<pb n="11"/>
+<div id="elliott005" type="poem" n="Ode">
+<docAuthor n="Binyon, Laurence">Laurence Binyon</docAuthor>
+<head rend="center">"ODE."</head>
+
+<lg type="stanza">
+<head rend="center">I.</head>
+<l n="1"><hi rend="smallcap">On</hi> that long day when England held her breath,</l>
+<l>Suddenly gripped at heart</l>
+<l>And called to choose her part</l>
+<l>Between her loyal soul and luring sophistries,</l>
+<l>We watched the wide, green-bosomed land beneath</l>
+<l>Driven and tumultuous skies;</l>
+<l>We watched the volley of white shower after shower</l>
+<l>Desolate with fierce drops the fallen flower;</l>
+<l>And still the rain's retreat</l>
+<l>Drew glory on its track,</l>
+<l>And still, when all was darkness and defeat,</l>
+<l>Upon dissolving cloud the bow of peace shone back.</l>
+<l>So in our hearts was alternating beat,</l>
+<l>With every dread elate;</l>
+<l>And Earth dyed all her day in colours of our fate.</l></lg>
+
+<lg>
+<pb n="12"/>
+<head rend="center">II.</head>
+<l>But, oh, how faint the image we foretold</l>
+<l>In fancies of our fear</l>
+<l>Now that the truth is here</l>
+<l>And we awake from dream, yet think it still a dream.</l>
+<l>It bursts our thoughts with more than thought can hold;</l>
+<l>And more than human seem</l>
+<l>These agonies of conflict; Elements</l>
+<l>At war! yet not with vast indifference</l>
+<l>Casually crushing; nay,</l>
+<l>It is as if were hurled</l>
+<l>Lightnings that murdered, seeking out their prey;</l>
+<l>As if an earthquake shook to chaos half the world,</l>
+<l>Equal in purpose as in power to slay;</l>
+<l>And thunder stunned our ears</l>
+<l>Streaming in rain of blood on torrents that are tears.</l></lg>
+
+<lg>
+<head rend="center">III.</head>
+<l>Around a planet rolls the drum's alarm.</l>
+<l>Far where the summer smiles</l>
+<l>Upon the utmost isles,</l>
+<l>Danger is treading silent as a fever-breath.</l>
+<l>Now in the North the secret waters arm;</l>
+<pb n="13"/>
+<l>Under the wave is Death:</l>
+<l>They fight in the very air, the virgin air,</l>
+<l>Hovering on fierce wings to the onset there</l>
+<l>Nations to battle stream;</l>
+<l>Earth smokes and cities burn;</l>
+<l>Heaven thickens in a storm of shells that scream;</l>
+<l>The long lines shattering break, turn and again return;</l>
+<l>And still across a continent they teem,</l>
+<l>Moving in myriads; more</l>
+<l>Than ranks of flesh and blood, but soul with soul at war!</l></lg>
+
+<lg>
+<head rend="center">IV.</head>
+<l>All the hells are awake: the old serpents hiss</l>
+<l>From dungeons of the mind;</l>
+<l>Fury of hate born blind,</l>
+<l>Madness and lust, despairs and treacheries unclean;</l>
+<l>They shudder up from man's most dark abyss.</l>
+<l>But there are heavens serene</l>
+<l>That answer strength with strength; they stand secure;</l>
+<l>They arm us from within, and we endure.</l>
+<pb n="14"/>
+<l>Now are the brave more brave,</l>
+<l>Now is the cause more dear,</l>
+<l>The more the tempests of the darkness rave,</l>
+<l>As, when the sun goes down, the shining stars are clear.</l>
+<l>Radiant the spirit rushes to the grave.</l>
+<l>Glorious it is to live</l>
+<l>In such an hour, but life is lovelier yet to give.</l></lg>
+
+<lg>
+<head rend="center">V.</head>
+<l>Alas! what comfort for the uncomforted,</l>
+<l>Who knew no cause, nor sought</l>
+<l>Glory or gain? they are taught,</l>
+<l>Homeless in homes that burn, what human hearts can bear.</l>
+<l>The children stumble over their dear dead,</l>
+<l>Wandering they know not where.</l>
+<l>And there is one who simply fights, obeys,</l>
+<l>Tramps, till he loses count of nights and days,</l>
+<l>Tired, mired in dust and sweat,</l>
+<l>Far from his own hearthstone;</l>
+<l>A common man of common earth, and yet</l>
+<l>The battle-winner he, a man of no renown,</l>
+<l>Where food for cannon pays a nation's debt.</l>
+<l>This is Earth's hero, whom</l>
+<l>The pride of Empire tosses careless to his doom.</l></lg>
+
+<lg>
+<pb n="15"/>
+<head rend="center">VI.</head>
+<l>Now will we speak, while we have eyes for tears</l>
+<l>And fibres to be wrung</l>
+<l>And in our mouths a tongue.</l>
+<l>We will bear wrongs untold, but will not only bear;</l>
+<l>Not only bear, but build through striving years</l>
+<l>The answer of our prayer,</l>
+<l>That whosoever has the noble name</l>
+<l>Of man shall not be yoked to alien shame;</l>
+<l>That life shall be indeed</l>
+<l>Life, not permitted breath</l>
+<l>Of spirits wrenched and forced to other's need,</l>
+<l>Robbed of their nature's joy and free alone in death.</l>
+<l>The world shall travail in that cause, shall bleed;</l>
+<l>But deep in hope it dwells</l>
+<l>Until the morning break which the long night foretells.</l></lg>
+
+<lg>
+<head rend="center">VII.</head>
+<l>O children, filled with your own airy glee,</l>
+<l>Or with a grief that comes</l>
+<l>So swift, so strange, it numbs,</l>
+<pb n="16"/>
+<l>If on your growing youth this page of terror bite,</l>
+<l>Harden not then your senses, feel and be</l>
+<l>The promise of the light.</l>
+<l>O heirs of Man, keep in your hearts not less</l>
+<l>The divine torrents of his tenderness!</l>
+<l>'Tis ever war; but rust</l>
+<l>Grows on the sword; the tale</l>
+<l>Of earth is strewn with empires heaped in dust</l>
+<l>Because they dreamed that force should punish and prevail.</l>
+<l>The will to kindness lives beyond their lust;</l>
+<l>Their grandeurs are undone:</l>
+<l>Deep, deep within man's soul are all his victories won.</l></lg>
+<byline>LAURENCE BINYON.<lb/>
+Fortnightly Review.</byline>
+</div>
+
+
+<pb n="17"/>
+<div id="elliott006" type="poem" n="The Roll of Honour">
+<docAuthor n="Peterson, Margaret">Margaret Peterson</docAuthor>
+<head rend="center">THE ROLL OF HONOUR.</head>
+
+<lg type="stanza">
+<l n="1"><hi rend="smallcap">Your</hi> faces haunt me from the printed pages,</l>
+<l>The roll call of our valiant English dead;</l>
+<l>What woman's hands, I wonder, clung in parting?</l>
+<l>What woman's heart breaks now the shot is sped?</l>
+<l>We speak of Glory and the Cause you died for,</l>
+<l rend="indent">We lay our homage on your bloodstained grave,</l>
+<l>Will Glory help to ease the women's anguish</l>
+<l rend="indent">Or solace them for these dear dead they gave?</l></lg>
+
+<lg>
+<l>Yea, surely. For your spirits go before them,</l>
+<l rend="indent">You, who made Death a crown about your lives!</l>
+<l>And in the splendour of your souls that conquered</l>
+<l rend="indent">We learn this lesson. Blessed is he who strives,</l>
+<pb n="18"/>
+<l>For Love and Faith, for Truth and priceless Honour,</l>
+<l rend="indent">These cannot pass away with mortal breath,</l>
+<l>God guards them safe, and in His mighty keeping</l>
+<l rend="indent">Are also those who nobly looked on Death!</l></lg>
+<byline>MARGARET PETERSON,<lb/>
+<hi rend="italic">Author of "The Lure of the Little Drum,"<lb/>"Blind Eyes," "Tony Bellew," etc.</hi>
+<title rend="left">Daily Chronicle.</title></byline>
+</div>
+
+
+<pb n="19"/>
+<div id="elliott007" type="poem" n="Litany in War-Time">
+<docAuthor n="Allen, J. W.">J. W. Allen</docAuthor>
+<head rend="center">LITANY IN WAR-TIME.</head>
+
+<lg type="stanza">
+<l n="1"><hi rend="smallcap">Now</hi> that the heavens are opened,</l>
+<l rend="indent">Now that the call has come,</l>
+<l>Now that Hell's driven legions</l>
+<l rend="indent">Strike the old voices dumb;</l>
+<l>Now that Thy hand is upon us,</l>
+<l rend="indent">Now that our trial begins,</l>
+<l>Lord God of love as of battles --</l>
+<l rend="indent">Lord, forgive us our sins!</l></lg>
+
+<lg>
+<l>The naked we have not cloth&egrave;d,</l>
+<l rend="indent">The hungry we have not fed,</l>
+<l>The women degraded and outcast,</l>
+<l rend="indent">The children crying for bread!</l>
+<l>Vanity, sloth and falsehood,</l>
+<l rend="indent">Luxury, greed and fear,</l>
+<l>Help, Lord, to cast them behind us,</l>
+<l rend="indent">Now that Thy Word is clear.</l></lg>
+
+<lg>
+<l>Set not our blindness before Thee!</l>
+<l rend="indent">Open our eyes to see --</l>
+<l>To see in this darkness the glory</l>
+<l rend="indent">Of Thy great peace to be!</l>
+<l>If for our sins we must perish,</l>
+<l rend="indent">Grant us the grace, Most High --</l>
+<l>If for our sins we must perish, --</l>
+<l rend="indent">Yet for this cause to die!</l></lg>
+
+<milestone unit="stanza" rend="asterisk"/>
+
+<lg>
+<pb n="20"/>
+<l>High above fears and chances</l>
+<l rend="indent">Our England that is to be!</l>
+<l>Peace upon earth, goodwill among men,</l>
+<l rend="indent">Justice and Liberty.</l>
+<l>High in the raging storm-wind</l>
+<l rend="indent">The banner of England streams:</l>
+<l>England! our city of heart's desire,</l>
+<l rend="indent">The England of our dreams.</l></lg>
+
+<lg>
+<l>Thou wilt not fail that England,</l>
+<l rend="indent">Living, or dying we know.</l>
+<l>Lord, we have nothing to fear from mischance,</l>
+<l rend="indent">Nothing to fear from the foe:</l>
+<l>Wrapped in their own desolation,</l>
+<l rend="indent">By terror and death bestrid;</l>
+<l>Lord, in that hour have mercy on them</l>
+<l rend="indent">Who knew not what they did.</l></lg>
+
+<lg>
+<l>Now that the heavens are opened,</l>
+<l rend="indent">Now that the trump is blown,</l>
+<l>Lord, Thou wilt search the nations,</l>
+<l rend="indent">Lord, Thou wilt know Thine own!</l>
+<l>High in the raging storm-wind</l>
+<l rend="indent">The banner of England streams:</l>
+<l>England! our city of heart's desire,</l>
+<l rend="indent">The England of our dreams!</l></lg>
+<byline>J. W. ALLEN.<lb/>
+<title rend="left">New Witness.</title></byline>
+</div>
+
+
+<pb n="21"/>
+<pb n="22"/>
+<pb n="23"/>
+
+<pb n="24"/>
+<div id="elliott009" type="poem" n="The Women of Belgium to the Women of England">
+<docAuthor n="Booth, Mary">Mary Booth</docAuthor>
+<head rend="center">THE WOMEN OF BELGIUM TO THE WOMEN OF ENGLAND.</head>
+
+<lg type="stanza">
+<l n="1"><hi rend="smallcap">Oh</hi>, English women! see, our country's dying;</l>
+<l>Her life-blood from her gaping wounds is sighing,</l>
+<l>Her bitter wrongs to God for vengeance crying!</l></lg>
+
+<lg>
+<l>The Iron hand has struck, but in the smiting</l>
+<l>Its own dishonour on the wall is writing,</l>
+<l>And Belgium's funeral pyre the world is lighting.</l></lg>
+
+<lg>
+<l>If we had failed or shrunk before the paying,</l>
+<l>If we had saved our dearest from the slaying,</l>
+<l>What price had you not paid for the delaying?</l></lg>
+
+<lg>
+<l>Oh, mothers! who your man-grown sons are keeping,</l>
+<l>Oh, fathers! to the patriot's duty, sleeping,</l>
+<l>Oh, lovers! at the thought of parting, weeping,</l>
+<l>Awake, and give us Men to do our Reaping!</l></lg>
+<byline>MARY BOOTH.<lb/>
+<title rend="left">The Queen.</title></byline>
+</div>
+
+
+<pb n="25"/>
+<div id="elliott010" type="poem" n="Le Jour Des Morts">
+<docAuthor n="Chesterton, Frances">Frances Chesterton</docAuthor>
+<head rend="center">LE JOUR DES MORTS.</head>
+
+<lg type="stanza">
+<l n="1"><hi rend="smallcap">The</hi> day of the dead, the day of the dead,</l>
+<l rend="indent">Down on your knees and pray,</l>
+<l>For the souls of the living, the souls of the dying,</l>
+<l rend="indent">The souls that have passed away.</l></lg>
+
+<lg>
+<l rend="indent4">And the great bell tolls</l>
+<l rend="indent4">For the treasure of souls</l>
+<l rend="indent4">Delivered into his hand,</l>
+<l rend="indent6">Gabriel, Michael, Uriel, reap</l>
+<l rend="indent4">Souls as a measure of sand,</l>
+<l rend="indent6">Souls from the restless deep,</l>
+<l rend="indent4">Souls from the blood-red land.</l></lg>
+
+<lg>
+<l>The day of the dead, the day of the dead,</l>
+<l rend="indent">Down on your knees and pray,</l>
+<l>For the souls of the outcast, despised and rejected,</l>
+<l rend="indent">The heroes and victors to-day.</l></lg>
+
+<lg>
+<pb n="26"/>
+<l rend="indent4">And the great bell rings,</l>
+<l rend="indent4">And the great bell swings,</l>
+<l rend="indent4">As death makes up the number</l>
+<l rend="indent6">Of men's lives as grains of sand,</l>
+<l rend="indent4">From the decks their bodies cumber,</l>
+<l rend="indent6">From the panting shivering land,</l>
+<l rend="indent4">From crash and shriek to slumber.</l></lg>
+
+<lg>
+<l>The day of the dead, the day of the dead,</l>
+<l rend="indent">Up on your feet and stand</l>
+<l>For the souls of the living, the fighting, the striving,</l>
+<l>For the gun and the sword in hand.</l></lg>
+
+<lg>
+<l rend="indent4">And His Transfiguration</l>
+<l rend="indent4">Descends on a nation,</l>
+<l rend="indent4">And death is a little thing,</l>
+<l rend="indent6">And lives as a grain of sand.</l>
+<l rend="indent4">Michael, Gabriel, Uriel, bring</l>
+<l rend="indent6">From the desolate blood-red land,</l>
+<l rend="indent4">From the tall ships foundering.</l></lg>
+
+<lg>
+<l>The day of the dead, the day of the dead,</l>
+<l rend="indent">Down on your knees and pray</l>
+<l>For the souls of the living, the souls of the dying,</l>
+<l rend="indent">The souls that have passed away.</l></lg>
+<byline>FRANCES CHESTERTON.</byline>
+</div>
+
+
+<pb n="27"/>
+<div id="elliott011" type="poem" n="The Men Who Man">
+<docAuthor n="Watson, William">William Watson</docAuthor>
+<head rend="center">THE MEN WHO MAN.</head>
+
+<lg type="stanza">
+<l n="1"><hi rend="smallcap">The</hi> men who man our batteries,</l>
+<l rend="indent">The men who serve our guns,</l>
+<l>They need not honeyed flatteries,</l>
+<l rend="indent">For they are Britain's sons!</l>
+<l>They go, when Duty speeds them,</l>
+<l rend="indent">Wherever bullets fly;</l>
+<l>Wherever England needs them,</l>
+<l rend="indent">When Duty bids, they die.</l></lg>
+
+<lg>
+<l>The men who man our strongholds,</l>
+<l rend="indent">Or march to yonder field</l>
+<l>Where Valour against Wrong holds</l>
+<l rend="indent">A realm that scorns to yield,</l>
+<l>From Chiltern Hills or Grampians</l>
+<l rend="indent">May pour their living tide,</l>
+<l>But all are England's champions</l>
+<l rend="indent">And all are England's pride.</l></lg>
+
+<lg>
+<l>And, lo! how the abhorrence</l>
+<l rend="indent">Of sceptred crime can join</l>
+<l>The Thames and the St. Lawrence,</l>
+<l rend="indent">The Liffey and the Boyne.</l>
+<l>For England need but ask aid</l>
+<l rend="indent">Where'er her branches grow,</l>
+<l>And like a leaping cascade</l>
+<l rend="indent">It thunders on the foe.</l></lg>
+
+<lg>
+<pb n="28"/>
+<l>Our cheery sailors, lapt in</l>
+<l rend="indent">The maiden sea's light sleep,</l>
+<l>From commodore and captain</l>
+<l rend="indent">To all who man the deep,</l>
+<l>They hear around their bed nought</l>
+<l rend="indent">But echoes of their fame,</l>
+<l>And well they man the Dreadnought</l>
+<l rend="indent">Who dread not aught but shame.</l></lg>
+
+<lg>
+<l>And whether calmly harboured,</l>
+<l rend="indent">Or when the rocking State</l>
+<l>Lurches to port and starboard,</l>
+<l rend="indent">They sail the seas of Fate;</l>
+<l>With everlasting laughter</l>
+<l rend="indent">They luff to wind and rain,</l>
+<l>Aforetime and hereafter</l>
+<l rend="indent">The men who man the main.</l></lg>
+
+<lg>
+<l>The men who man Great Britain,</l>
+<l rend="indent">And fight for royal George,</l>
+<l>On battle's anvil smitten</l>
+<l rend="indent">Leap mightier from the forge:</l>
+<l>Like oaks in Orkney's rough spring</l>
+<l rend="indent">They flourish torn and blown,</l>
+<l>For all are Honour's offspring</l>
+<l rend="indent">And all are England's own.</l></lg>
+
+<lg>
+<l>The men who man this nation,</l>
+<l rend="indent">And sow her fame abroad,</l>
+<l>They ask not acclamation,</l>
+<l rend="indent">They need not England's laud;</l>
+<pb n="29"/>
+<l>And when too late it finds them,</l>
+<l rend="indent">And falls on lifeless ears,</l>
+<l>Where yon red tempest blinds them</l>
+<l rend="indent">They need but England's tears.</l></lg>
+
+<lg>
+<l>Yet, while the storm grows vaster</l>
+<l rend="indent">Around them and above,</l>
+<l>In triumph or disaster</l>
+<l rend="indent">They shall not lack our love --</l>
+<l>They who to Glory's fanning</l>
+<l rend="indent">This streamer have unfurled,</l>
+<l>The men whose joy is manning,</l>
+<l rend="indent">The men who man the world!</l></lg>
+<byline>WILLIAM WATSON.<lb/>
+<title rend="left">Saturday Review.</title></byline>
+</div>
+
+
+<pb n="30"/>
+<div id="elliott012" type="poem" n="Suspense">
+<docAuthor n="Gard, Lillian">Lillian Gard</docAuthor>
+<head rend="center">SUSPENSE.</head>
+
+<lg type="stanza">
+<l n="1"><hi rend="smallcap">O'er</hi> oceans, lands, bend down, O God to-day,</l>
+<l rend="indent">And as we ask,</l>
+<l>Shield with Thy wings the many, far away;</l>
+<l>Soothe those who watch and wait and do each task</l>
+<l rend="indent">With brave hands working, while their brave lips pray.</l></lg>
+
+<lg>
+<l>'Tis but a little world, O God, to Thee,</l>
+<l rend="indent8">Who rulest all!</l>
+<l>'Tis such a little way earth-sight may see</l>
+<l rend="indent8">The dusk-times fall.</l>
+<l>Across each hour, perchance -- we dare not face</l>
+<l>Such shades alone -- unstrengthened! Send us Grace.</l></lg>
+<byline>LILLIAN GARD.<lb/>
+<title rend="left">The Queen.</title></byline>
+</div>
+
+
+<pb n="31"/>
+<pb n="32"/>
+<pb n="33"/>
+<pb n="34"/>
+
+<pb n="35"/>
+<div id="elliott014" type="poem" n="Honour's Utmost Task">
+<docAuthor n="Danby, Frank">Frank Danby</docAuthor>
+<head rend="center">HONOUR'S UTMOST TASK.</head>
+
+<lg type="stanza">
+<l n="1"><hi rend="smallcap">Clean-stripped</hi> for action -- neither overbold,</l>
+<l rend="indent">Nor fearing overmuch what chance may bring --</l>
+<l>We join the lists. Let none hereafter hold</l>
+<l rend="indent">We grasped this sword for gain's sake, caste, nor king</l>
+<l rend="indent">Power-crazed to his own people's ruining!</l></lg>
+
+<lg>
+<l>We weighed, but stayed not counting it, our loss</l>
+<l rend="indent">In blood and tears and darkling years to be;</l>
+<l>Appraised the instant's faith against the dross</l>
+<l rend="indent">Of gold fear-clenched in base immunity --</l>
+<l rend="indent">The coward shelter of geography; --</l></lg>
+
+<lg>
+<l>And drew for little peoples, for our word</l>
+<l rend="indent">Once given, which we hold inviolate</l>
+<l>As these our combes, our downs, our cliffs that heard</l>
+<l rend="indent">The vain Dons thunder at our sea-barred gate</l>
+<l rend="indent">And frowned one true Napoleon to his fate.</l></lg>
+
+<lg>
+<pb n="36"/>
+<l>Battlers for world-peace, slaves of Honour's lamp,</l>
+<l rend="indent">Tending a Vestal flame which never dies,</l>
+<l>We brook no bribe from any traitor camp</l>
+<l rend="indent">That trades, mailed fist on hilt to back its lies,</l>
+<l rend="indent">With broken pledges and with blasphemies!</l></lg>
+
+<lg>
+<l>Wherefore, in dour purged sober earnestness,</l>
+<l rend="indent">Unfactioned, linked, ungrudging each to each,</l>
+<l>One People welded for our Empire's stress,</l>
+<l rend="indent">We Warden Nations hie us to the breach;</l>
+<l rend="indent">Nor waste swift hours, that shout for deeds, in speech.</l></lg>
+
+<lg>
+<l>Our blades shall not be sheathed, our banners furled,</l>
+<l rend="indent">Till Honour's utmost task be trebly done;</l>
+<l>Till, bright across the devastated world,</l>
+<l rend="indent">New-risen and blood-cleansed, Freedom's sun</l>
+<l rend="indent">Dawns for God's vengeance on the shattered Hun!</l></lg>
+<byline>FRANK DANBY.<lb/>
+<title rend="left">Nash's Magazine.</title></byline>
+</div>
+
+
+<pb n="37"/>
+<div id="elliott015" type="poem" n="Called Up!">
+<docAuthor n="Gard, Lillian">Lillian Gard</docAuthor>
+<head rend="center">CALLED UP!</head>
+
+<lg type="stanza">
+<l n="1"><hi rend="smallcap">Give</hi> them a cheer as they march along!</l>
+<l>A life is a life, so don't mistake</l>
+<l>There's death to meet or a name to make.</l>
+<l rend="indent10">Give them a cheer!</l></lg>
+
+<lg>
+<l>Give them a song as they take the way!</l>
+<l>There's not a bird or a passing breeze</l>
+<l>But mingles notes in the roadside trees,</l>
+<l>Lilt of hope is a true heartease.</l>
+<l rend="indent10">Give them a song !</l></lg>
+
+<lg>
+<l>Give them a prayer as you watch them go.</l>
+<l>(May be lips have forgotten to pray.)</l>
+<l>For right upheld to the end of the way,</l>
+<l>For goal of peace at the set of the day,</l>
+<l rend="indent10">Give them a prayer!</l></lg>
+<byline>LILLIAN GARD.<lb/>
+<title rend="left">The Queen.</title></byline>
+</div>
+
+
+<pb n="38"/>
+<div id="elliott016" type="poem" n="A Singsong of England">
+<docAuthor n="Hewlett, Maurice">Maurice Hewlett</docAuthor>
+<head rend="center">A SINGSONG OF ENGLAND.</head>
+
+<lg type="stanza">
+<l n="1">O <hi rend="smallcap">England</hi> is an island,</l>
+<l rend="indent">The fairest ever seen;</l>
+<l>They say men come to England</l>
+<l rend="indent">To learn that grass is green.</l>
+<l>And Englishmen are now at war,</l>
+<l rend="indent">All for this they say,</l>
+<l>That they are free, and other men</l>
+<l rend="indent">Must be as free as they.</l></lg>
+
+<lg>
+<l>The Englishmen are shepherds,</l>
+<l rend="indent">They plow, they sow and reap;</l>
+<l>Their King may wear his leopards,</l>
+<l rend="indent">His men must run their sheep.</l>
+<l>But now the crook and reaping-hook,</l>
+<l rend="indent">The coulter and the sieve</l>
+<l>Are thrown aside; they take the gun</l>
+<l rend="indent">That other men may live.</l></lg>
+
+<lg>
+<l>Some Englishmen are fishermen,</l>
+<l rend="indent">And other some are miners,</l>
+<l>And others man the shipping yards</l>
+<l rend="indent">And build the ocean liners;</l>
+<l>But one and all will down tools</l>
+<l rend="indent">And up with gun and sword</l>
+<l>To make a stand for Freedom</l>
+<l rend="indent">Against the War Lord.</l></lg>
+
+<lg>
+<pb n="39"/>
+<l>The pretty girls of England</l>
+<l rend="indent">Are husbanding their charms,</l>
+<l>For not a girl of them but has</l>
+<l rend="indent">A sweetheart under arms.</l>
+<l>But not a girl of all the flock</l>
+<l rend="indent">Would call across the waves</l>
+<l>Her sweetheart to her kindness</l>
+<l rend="indent">While other men are slaves.</l></lg>
+
+<lg>
+<l>There's been an English kingdom</l>
+<l rend="indent">For twice a thousand years;</l>
+<l>Her men have plough'd and reap'd it</l>
+<l rend="indent">Thro' merriment and tears.</l>
+<l>But never a twenty year has passed</l>
+<l rend="indent">Without some stroke's been given</l>
+<l>For Freedom; and the land is free</l>
+<l rend="indent">As any under heaven.</l></lg>
+
+<lg>
+<l>The Roman and the Spaniard,</l>
+<l rend="indent">The Corsican, have tried</l>
+<l>Their worst, and now the German</l>
+<l rend="indent">Must perish in his pride.</l>
+<l>He may burn and thieve and slaughter,</l>
+<l rend="indent">He may scold and storm and pray;</l>
+<l>But we shall fight till even his</l>
+<l rend="indent">Stand up freemen some day.</l></lg>
+
+<lg>
+<l>When he is free of Germany</l>
+<l rend="indent">And Germany of him</l>
+<l>There'll be a chance for plain men</l>
+<l rend="indent">To get old Europe trim.</l>
+<pb n="40"/>
+<l>Then on, you sturdy English hands,</l>
+<l rend="indent">And keep the colours flying,</l>
+<l>And we'll not grudge your blessed blood</l>
+<l rend="indent">If Tyranny's a-dying.</l></lg>
+<byline>MAURICE HEWLETT.<lb/>
+<title rend="left">Daily Chronicle.</title></byline>
+</div>
+
+
+<pb n="41"/>
+<pb n="42"/>
+<pb n="43"/>
+<pb n="44"/>
+<pb n="45"/>
+<pb n="46"/>
+
+<pb n="47"/>
+<div id="elliott019" type="poem" n="The Call">
+<docAuthor n="Gomme, Laurence">Laurence Gomme</docAuthor>
+<head rend="center">THE CALL.</head>
+
+<lg type="stanza">
+<head rend="center">I.</head>
+<l n="1"><hi rend="smallcap">There</hi> was hush of the human voice, halt of the human tread,</l>
+<l>When an emperor's word proclaimed that the God of Love was dead;</l>
+<l>Dead in the homes of millions, dead in the temple shrine,</l>
+<l>Dead in the soul of nations, dead in yours and mine.</l>
+<l>God! you strike too hard to make us fight the foe</l>
+<l>We've fought and conquered in the ages long ago.</l></lg>
+
+<lg>
+<head rend="center">II.</head>
+<l>Broken human hopes, shattered human thought,</l>
+<l>As dreamland, hopeland, vanish into naught,</l>
+<l>Tearing out the heart, hacking through the soul,</l>
+<l>Making hell of human might marching to its goal.</l>
+<l>God! we want new words to tell of present wrongs.</l>
+<l>We want new music to the sadness of our songs.</l></lg>
+
+<lg>
+<pb n="48"/>
+<head rend="center">III.</head>
+<l>There is nothing from the church, nothing from the priest,</l>
+<l>Gloom along the west, darkness in the east.</l>
+<l>The wisdom of the schools, the glories of the great,</l>
+<l>Blotted out by blood, drenched in human hate.</l>
+<l>God! they're our defenders standing by the gun,</l>
+<l>Dying man by man there to keep what they have won.</l></lg>
+
+<lg>
+<head rend="center">IV.</head>
+<l>Torn away from lov&egrave;d homes to hurl the savage back,</l>
+<l>To learn the lust of fight, the joy of the attack;</l>
+<l>But when they throw away the sword and bring the banner home,</l>
+<l>'Twill be enscrolled with victories won for ages yet to come.</l>
+<l>God! for kings and emperors there is no longer room,</l>
+<l>The freedom they have scorned is the measure of their doom.</l></lg>
+
+<lg>
+<pb n="49"/>
+<l>England, stand you steadfast, come along from Wales,</l>
+<l>Scotland, send your warriors, Ireland never fails,</l>
+<l>Britons all beyond the seas, answer to the call</l>
+<l>To fight for freedom, to conquer for us all.</l></lg>
+<byline>LAURENCE GOMME.<lb/>
+<title rend="left">Daily Chronicle.</title></byline>
+</div>
+
+
+<pb n="50"/>
+<pb n="51"/>
+<pb n="52"/>
+<pb n="53"/>
+<pb n="54"/>
+<pb n="55"/>
+<div id="elliott022" type="poem" n="The Avengers">
+<docAuthor n="Seaman, Owen">Owen Seaman</docAuthor>
+<head rend="center">THE AVENGERS</head>
+<note place="inline" rend="center">To our Soldiers in the Field.</note>
+
+<lg type="stanza">
+<l n="1"><hi rend="smallcap">Not</hi> only that your cause is just and right --</l>
+<l rend="indent">This much was never doubted; war or play,</l>
+<l>We go with clean hands into any fight;</l>
+<l rend="indent8">That is our English way; --</l></lg>
+
+<lg>
+<l>Not this high thought alone shall brace your thews</l>
+<l rend="indent">To trample under heel those Vandal hordes</l>
+<l>Who laugh when blood of mother and babe imbrues</l>
+<l rend="indent8">Their damn&egrave;d craven swords.</l></lg>
+
+<lg>
+<l>But here must be hot passion, white of flame,</l>
+<l rend="indent">Pure hate of this unutterable wrong,</l>
+<l>Sheer wrath for Christendom so sunk in shame,</l>
+<l rend="indent8">To make you trebly strong.</l></lg>
+
+<lg>
+<pb n="56"/>
+<l>These smoking hearths of fair and peaceful lands,</l>
+<l rend="indent">This reeking trail of deeds abhorred of Hell,</l>
+<l>They cry aloud for vengeance at your hands,</l>
+<l rend="indent8">Ruthless and swift and fell.</l></lg>
+
+<lg>
+<l>Strike, then -- and spare not -- for the innocent dead</l>
+<l rend="indent">Who lie there, stark beneath the weeping skies,</l>
+<l>As though you saw your dearest in their stead</l>
+<l rend="indent8">Butchered before your eyes.</l></lg>
+
+<lg>
+<l>And though the guiltless pay for others' guilt</l>
+<l rend="indent">Who preached these brute ideals in camp and Court;</l>
+<l>Though lives of brave and gentle foes be spilt,</l>
+<l rend="indent8">That loathe this coward sport;</l></lg>
+
+<lg>
+<l>On each, without distinction, worst or best</l>
+<l rend="indent">Fouled by a nation's crime, one doom must fall;</l>
+<l>Be you its instrument, and leave the rest</l>
+<l rend="indent8">To God, the Judge of all.</l></lg>
+
+<lg>
+<pb n="57"/>
+<l>Let it be said of you, when sounds at length</l>
+<l rend="indent">Over the final field the victor's strain: --</l>
+<l>"They struck at infamy with all their strength,</l>
+<l rend="indent8">And earth is clean again!"</l></lg>
+<byline>OWEN SEAMAN.<lb/>
+<title rend="left">Punch.</title></byline>
+</div>
+
+
+<pb n="58"/>
+<div id="elliott023" type="poem" n="Dirae Faces">
+<docAuthor n="Gales, R. L.">R. L. Gales</docAuthor>
+<head rend="center">DIRAE FACES.</head>
+
+<lg type="stanza">
+<l n="1"><hi rend="smallcap">The</hi> Flemish Carillon towers are cracked and scorched</l>
+<l rend="indent">As Hell's red fury round them flames and hails;</l>
+<l>Into Ancona the drowned fisher lads</l>
+<l rend="indent">From the Adriatic wrapped in sheets and sails</l>
+<l>They bring from their mined boats; the carnage grows</l>
+<l rend="indent">Till the earth shudders and all Europe wails.</l>
+<l>Everywhere is the rustle of Death's wings.</l>
+<l rend="indent">To the mad despot as he cowers and quails</l>
+<l>Appear the direful faces that portend</l>
+<l rend="indent">The imminent doom of Kaisers and of Kings;</l>
+<l>And the Hohenzollern's fated shameful end</l>
+<l rend="indent">As the divine and popular will prevails;</l>
+<l>And loaded with the curses of mankind</l>
+<l rend="indent">They sink into the Bloody sea, and all help fails.</l></lg>
+<byline>R. L. GALES.<lb/>
+<title rend="left">Daily News.</title></byline>
+</div>
+
+
+<pb n="59"/>
+<div id="elliott024" type="poem" n="To Wilhelm II">
+<docAuthor n="Gales, R. L.">R. L. Gales</docAuthor>
+<head rend="center">TO WILHELM II.</head>
+
+<lg type="stanza">
+<l n="1"><hi rend="smallcap">You</hi> sowed the seas with death and filled the world with weeping,</l>
+<l rend="indent">You whose pride was glutted with an unmeasured pain,</l>
+<l>You who fired on drowning lads, threw bombs on children sleeping,</l>
+<l rend="indent">You who wrecked the Rose of Rheims, you who sacked Louvain;</l>
+<l>Caitiff, you shall see ere your vile day is ended,</l>
+<l rend="indent">Springing from the blood of those unnumbered slain</l>
+<l>Europe's one Republic rise serene and splendid,</l>
+<l rend="indent">Happy lands and holy seas from Russia unto Spain</l></lg>
+<byline>R. L. GALES.<lb/>
+<title rend="left">Daily News.</title></byline>
+</div>
+
+
+<pb n="60"/>
+<div id="elliott025" type="poem" n="Four Things I Ask">
+<docAuthor n="Leonard, G. H.">G. H. Leonard</docAuthor>
+<head rend="center">FOUR THINGS I ASK.</head>
+
+<lg type="stanza">
+<l n="1"><hi rend="smallcap">Four</hi> things, Almighty God, I ask</l>
+<l>For England in her awful task.</l></lg>
+
+<lg>
+<l>The passionate heart of one who fights,</l>
+<l>Compassionate even when she smites.</l></lg>
+
+<lg>
+<l>Set lips, and close, from which shall fall</l>
+<l>Speech, grave and pure, if speech at all.</l></lg>
+
+<lg>
+<l>Hands bloody -- since it must be! -- seen,</l>
+<l>By Thee, indubitably clean.</l></lg>
+
+<lg>
+<l>Eyes, which though dimmed with blood, or tear,</l>
+<l>Or the dark shadow itself, see clear.</l></lg>
+
+<lg>
+<l>Four things I ask: four things and one --</l>
+<l rend="italic">The mind that was in Christ Thy Son.</l></lg>
+
+<lg>
+<l>So well equipped shall England stand,</l>
+<l>Arisen again at Heaven's command.</l></lg>
+
+<lg>
+<l>So view her from Thy seat above,</l>
+<l>God! full of noble wrath -- and love.</l></lg>
+<byline>G. H. LEONARD.<lb/>
+<title rend="left">British Weekly.</title></byline>
+</div>
+
+
+<pb n="61"/>
+<div id="elliott026" type="poem" n="The People's Gift">
+<docAuthor n="Sidgwick, Frank">Frank Sidgwick</docAuthor>
+<head rend="center">THE PEOPLE'S GIFT.</head>
+
+<lg type="stanza">
+<l n="1"><hi rend="smallcap">In</hi> days of old a tale was told of a people noted for thrift,</l>
+<l>Who on an occasion of jubilation would give their King a gift:</l>
+<l>Said they, "For his share let each prepare to contribute a flask of wine</l>
+<l>Which he will pour in a common store -- a barrel of vast design."</l></lg>
+
+<lg>
+<l>Great staves they cut for a mighty butt, and fashioned it high and wide,</l>
+<l>And laid it along on gantrees strong, and set a ladder beside:</l>
+<l>Then, one by one, they came to the tun; each, poised on the topmost rung</l>
+<l>By the flank of the cask, uncorked his flask, and turned it over the bung.</l></lg>
+
+<lg>
+<l>When the day approached for the cask to be broached, the people, small and great,</l>
+<l>Made a roaring crowd, gay, loyal and proud, as the King drove by in state;</l>
+<pb n="62"/>
+<l>They cheered and clapped as the Chamberlain tapped... but guilt fell on all, and fear;</l>
+<l>When the King would have quaffed his earliest draught -- 'twas <hi rend="italic">water</hi> thin and clear!</l></lg>
+
+<lg>
+<l>Each man of thrift had planned his gift, and said to his niggard's heart,</l>
+<l>Is there any to know what I bestow, if my neighbours play their part?</l>
+<l>Is there any to guess my -- thriftiness, when I bear my flask to the tun?</l>
+<l>If ninety and nine be full of wine, what matters water in one?"</l></lg>
+
+<lg>
+<l rend="italic">Take the lesson, then, young Englishmen, when the war cloud lowers black</l>
+<l rend="italic">Let no man shift his burden of gift on to the next man's back,</l>
+<l rend="italic">Answer to-day what part you will play, when your country gives the sign --</l>
+<l rend="italic">What gift you will bring to your country and King -- is your blood water or wine?</l></lg>
+<byline>FRANK SIDGWICK.<lb/>
+<title rend="left">Saturday Review.</title></byline>
+</div>
+
+
+<pb n="63"/>
+<pb n="64"/>
+<pb n="65"/>
+<div id="elliott028" type="poem" n="Verse">
+<docAuthor n="Jung, Nizamat">Nizamat Jung</docAuthor>
+<head rend="center">VERSE.</head>
+<head rend="center">TO OUR INDIAN TROOPS GOING TO THE WAR.</head>
+
+<lg type="stanza">
+<l n="1"><hi rend="smallcap">Forward</hi>! Forward, gallant band!</l>
+<l>Forward, over sea and land.</l>
+<l>Where, upon a foreign strand,</l>
+<l rend="indent4">Beckons Death or Victory!</l></lg>
+
+<lg>
+<l>Love and Faith and Duty call:</l>
+<l>England's honour summons all,</l>
+<l>By her side to stand or fall</l>
+<l rend="indent4">Makers of her history!</l></lg>
+
+<lg>
+<l>Let the Western foemen trace</l>
+<l>In your heart and in your face</l>
+<l>Manhood of the Aryan race</l>
+<l rend="indent4">And its pristine chivalry!</l></lg>
+
+<lg>
+<l>Let your dauntless deeds attest,</l>
+<l>Nobly, proudly to the West</l>
+<l>That within the Eastern breast</l>
+<l rend="indent4">Throbs a heart as proud and free.</l></lg>
+
+<lg>
+<l>By you, at Britannia's side</l>
+<l>Be the banded world defied!</l>
+<l>Yours the glory, yours the pride</l>
+<l rend="indent4">There to conquer or to die.</l></lg>
+
+<lg>
+<pb n="66"/>
+<l>Honour lives from age to age</l>
+<l>Bright on Time's recorded page.</l>
+<l>Be your sons' the heritage</l>
+<l rend="indent4">Of your dauntless memory!</l></lg>
+
+<lg>
+<l>Forward! forward, gallant band,</l>
+<l>Forward, over sea and land,</l>
+<l>Where, upon a foreign strand,</l>
+<l rend="indent4">Beckons Death or Victory!</l></lg>
+<byline>NIZAMAT JUNG.</byline>
+</div>
+
+
+<pb n="67"/>
+<div id="elliott029" type="poem" n="War and Peace">
+<docAuthor n="Jung, Nizamat">Nizamat Jung</docAuthor>
+<head rend="center">WAR AND PEACE.</head>
+<note>[We specially commend to the British Nation, no less renowned for the victories of peace than for those of war, the following poem by Nawab Nizamat Jung, of Hyderabad, whose loyal tribute of verse to Great Britain will, we feel sure, be no less welcome to her than other offerings from India's dutiful sons. -- <hi rend="smallcap">Editor</hi>.]</note>
+
+<lg type="stanza">
+<l n="1">A <hi rend="smallcap">hundred</hi> toilsome years have rolled in vain</l>
+<l>Since one proud eagle drooped his shattered wings:</l></lg>
+
+<lg>
+<l>Another rises -- and the welkin rings</l>
+<l>With the mad cry "For Glory" once again!</l></lg>
+
+<lg>
+<l>And legions rush through carnage to attain</l>
+<l>Some fancied good that blood-stained Conquest brings.</l></lg>
+
+<lg>
+<l>Is this the boast of Councils and of Kings,</l>
+<l>O God! to triumph over millions' pain?</l></lg>
+
+<lg>
+<l>Guardians of Good! Ye Nations of the West!</l>
+<l>Shall mind still worship brute Force deified?</l></lg>
+
+<lg>
+<pb n="68"/>
+<l>'Tis Mind not Force doth Nations' worth attest:</l>
+<l>Force died with Rome -- high Thought hath outlived Greece!</l></lg>
+
+<lg>
+<l>Be thine, O England! thine the nobler pride</l>
+<l>To win true Glory with the arts of Peace!</l></lg>
+<byline>NIZAMAT JUNG.<lb/>
+<title rend="left">The Comrade (Delhi).</title></byline>
+</div>
+
+
+<pb n="69"/>
+<div id="elliott030" type="poem" n="Louvain">
+<docAuthor n="Archer, William">William Archer</docAuthor>
+<head rend="center">LOUVAIN.</head>
+
+<lg type="stanza">
+<l n="1"><hi rend="smallcap">Has</hi> History a direr deed to show</l>
+<l>Than this? Rests any darker, deadlier stain</l>
+<l>On Attila's renown? Was Tamburlaine</l>
+<l>To anguish'd human kind a fiercer foe</l>
+<l>Than Germany's mad War-Lord? Blow on blow</l>
+<l rend="indent">He overtops the iniquities of Spain,</l>
+<l rend="indent">Outdoes the branded crimes of Alva's reign,</l>
+<l>And drags his country's glory low, how low!</l>
+<l>The world looks on appalled: and not alone</l>
+<l rend="indent">We mortals -- shuddering gaze the mighty dead.</l>
+<l rend="indent4">Luther, Kant, Goethe, Bach, and Beethoven</l>
+<l>Ask "Are these Germans? Nay, then, we disown</l>
+<l rend="indent">Our kinship with a breed reversive-bred,</l>
+<l rend="indent4">Who war on arts and learning. We were Men."</l></lg>
+<byline>WILLIAM ARCHER.
+<title>Observer</title>, <date value="1914-08-30">August 30th, 1914.</date></byline>
+</div>
+
+
+<pb n="70"/>
+<pb n="71"/>
+<pb n="72"/>
+<div id="elliott032" type="poem" n="A Call to the Four Nations">
+<docAuthor n="McCarthy, Justin Huntly">Justin Huntly McCarthy</docAuthor>
+<head rend="center">A CALL TO THE FOUR NATIONS.</head>
+
+<lg type="stanza">
+<l n="1"><hi rend="smallcap">Men</hi> of the English nation, men of the English race,</l>
+<l>Your kinsmen battle in Flanders; you must back them in their place.</l>
+<l>They have done the deeds of heroes; try to do better than they;</l>
+<l>For if ever the Devil triumph there is ever the Devil to pay.</l>
+<l>Shall Trafalgar, Waterloo, Agincourt, all the immortal lot,</l>
+<l>Mean no more than a fairy tale, to be told and to be forgot?</l>
+<l>Here in our little island, we have heard the roar of the guns;</l>
+<l>Let manhood answer the challenge, and strike the stroke at the Huns.</l>
+<l>They sap our cities with spying, would sap our spirit with lies</l>
+<l>They talk of surprising England; be it her part to surprise.</l>
+<l rend="indent4">The Bugle of Hope is blowing, the Flag of Faith unfurled.</l>
+<l rend="indent4">So follow the Call and the Colours and save the Soul of the World.</l></lg>
+
+<lg>
+<pb n="73"/>
+<l>Men of the Scottish nation, men of the Scottish race,</l>
+<l>When the cries of your pipes are uttered, the foe goes pale in the face.</l>
+<l>They have lilted loud on a thousand fields, they must lilt louder still,</l>
+<l>Till the heart of the Hun is water for the surly songs they shrill.</l>
+<l>Lads of the Clans and the Tartans, lads of the Lowland kin,</l>
+<l>if none can teach you a losing game, you need no teaching to win.</l>
+<l>You have shared great pages of story; there's a greater story to spell;</l>
+<l>Highlanders, Lowlanders, bear in mind, it is partly yours to tell:</l>
+<l>For the more you send to the muster, the more will have power to deal</l>
+<l>With the killers of women and children, the preachers of Blood and Steel.</l>
+<l rend="indent4">The Bugle of Hope is blowing, the Flag of Faith unfurled.</l>
+<l rend="indent4">So follow the Call and the Colours and save the Soul of the World.</l></lg>
+
+<lg>
+<l>Men of the Cymric nation, men of the Cymric race,</l>
+<l>With English and Irish and Scotchmen, will Welshmen not keep pace?</l>
+<pb n="74"/>
+<l>Roman and Saxon and Norman you fought in the days of old;</l>
+<l>You gave kings and queens to England, to have her and to hold;</l>
+<l>You did well for queen and country when the rage of Spain was strong;</l>
+<l>Do better for king and country, in the face of a greater wrong.</l>
+<l>For the shade of Elizabeth Tudor entreats you to send your men,</l>
+<l>From hill and lake and river, from pen and fen and glen,</l>
+<l>So come from the northland and southland, come from the west and the east.</l>
+<l>To shoulder the rifle of empire, and fight with the Yellow Beast.</l>
+<l rend="indent4">The Bugle of Hope is blowing, the Flag of Faith unfurled.</l>
+<l rend="indent4">So follow the Call and the Colours and save the Soul of the World.</l></lg>
+
+<lg>
+<l>Men of the Irish nation, men of the Irish race</l>
+<l>England has given you freedom; repay her with grace for grace;</l>
+<l>Double the deed of Fontenoy, when you saved the day for France;</l>
+<l>Serve France again, and England, with an Irish Brigade's advance.</l>
+<pb n="75"/>
+<l>On the nameless grave of Emmet you may epitaph his worth,</l>
+<l>Taking your place in the fighting line with the Nations of the Earth.</l>
+<l>Though you shed your blood like Sarsfield, you do not share his rue,</l>
+<l>You shed your blood for Ireland, you shed it for England too.</l>
+<l>Give in the cause of the Holy War the best account you can</l>
+<l>Of the knaves who train their cannon on the shrines of the Son of Man.</l>
+<l rend="indent4">The Bugle of Hope is blowing, the Flag of Faith unfurled.</l>
+<l rend="indent4">So follow the Cause and the Colours and save the Soul of the World.</l></lg>
+<byline>JUSTIN HUNTLY McCARTHY.</byline>
+</div>
+
+
+<pb n="76"/>
+<div id="elliott033" type="poem" n="Winter Night">
+<docAuthor n="Phillpotts, Eden">Eden Phillpotts</docAuthor>
+<head rend="center">WINTER NIGHT.</head>
+
+<lg type="stanza">
+<l n="1"><hi rend="smallcap">Roams</hi> the East wind across a midnight sky,</l>
+<l>And shapes of cloud, transparent, curdled, white,</l>
+<l>Like homing spirits take their lowly flight</l>
+<l>Before his breath; but glittering on high</l>
+<l>A throb of winter stars doth chequer heaven with light.</l></lg>
+
+<lg>
+<l>Here, underneath the Hunter, all is still,</l>
+<l>And silver Sirius sparkles at his feet;</l>
+<l>While nearer, children of the earth, they fleet --</l>
+<l>Those sad, etiolate clouds along the hill --</l>
+<l>As though our dead returned their native land to greet.</l></lg>
+
+<lg>
+<l>How may one slumber, how the curtain close</l>
+<l>And shut them out and turn to blessed rest,</l>
+<l>While, panging like a poison in the breast,</l>
+<l>Their agony for ever flows and flows?</l>
+<l>By day, by night they fall, our bravest and our best.</l></lg>
+
+<lg>
+<pb n="77"/>
+<l>O little clouds, the stars ye cannot hide,</l>
+<l>Yet shadow in your impotence a plea</l>
+<l>Mightier than all the night's immensity</l>
+<l>Hath power to conjure of her pomp and pride:</l>
+<l>The claim of men who die that man may still go free.</l></lg>
+
+<lg>
+<l>Your vapours sink to earth; down from his height,</l>
+<l>Flashing red gold, each ancient star departs;</l>
+<l>Chill Eurus droops at dawn's approaching darts;</l>
+<l>For clouds and stars and winds shall pass with night;</l>
+<l>The ever living dead shine on within our hearts.</l></lg>
+<byline>EDEN PHILLPOTTS.<lb/>
+<title rend="left">British Review.</title></byline>
+</div>
+
+
+<pb n="78"/>
+<pb n="79"/>
+<pb n="80"/>
+<pb n="81"/>
+<pb n="82"/>
+<pb n="83"/>
+<div id="elliott035" type="poem" n="To Great Britain">
+<docAuthor n="Rawnsley, H. D. (Hardwicke Drummond)">H. D. Rawnsley</docAuthor>
+<head rend="center">TO GREAT BRITAIN.</head>
+
+<lg type="stanza">
+<l n="1"><hi rend="smallcap">Britain</hi>! you with a heart of flame</l>
+<l rend="indent4">One as in days gone by,</l>
+<l>You who honour your Nelson's name,</l>
+<l>How could you hear the word of shame</l>
+<l rend="indent4">Nor rise and give it the lie!</l></lg>
+
+<lg>
+<l>Better endure war's worst of ills,</l>
+<l rend="indent4">The woe of a hundred fights,</l>
+<l>Than cower behind your banks and tills</l>
+<l>And smug with your money, your mines, your mills,</l>
+<l rend="indent4">Forswear a neighbour's rights.</l></lg>
+
+<lg>
+<l>For how could you hope for a wide world's trust</l>
+<l rend="indent4">If, traitor by land and sea,</l>
+<l>You had let French lilies lie in the dust</l>
+<l>Nor challenged for peace the War-Lord's lust</l>
+<l rend="indent4">And struck for a Europe free.</l></lg>
+
+<lg>
+<l>Fight and in hope, for battle is banned,</l>
+<l rend="indent4">The world shall yet rejoice,</l>
+<l>For the peoples rise in wrath to demand</l>
+<l>Henceforth no war shall trouble the land</l>
+<l rend="indent4">Except at a people's voice.</l></lg>
+<byline>H. D. RAWNSLEY.<lb/>
+<title rend="left">English Review.</title></byline>
+</div>
+
+
+<pb n="84"/>
+<div id="elliott036" type="poem" n="Reason and Honour">
+<docAuthor n="Phillpotts, Eden">Eden Phillpotts</docAuthor>
+<head rend="center">REASON AND HONOUR.</head>
+
+<lg type="stanza">
+<l n="1"><hi rend="smallcap">Was</hi> not the bounty of the grape and corn,</l>
+<l rend="indent">Burned into ripeness by a summer sped,</l>
+<l>Harvest enough without all they have borne</l>
+<l rend="indent">In their own aching flesh and from their bosoms fed?</l></lg>
+
+<lg>
+<l>Shall they, the mothers of the time to be,</l>
+<l rend="indent">Create for nothing but a league-long grave,</l>
+<l>That swallows up their immortality</l>
+<l rend="indent">And hideous yawns across a kingdom while they rave?</l></lg>
+
+<lg>
+<l>'Tis they who forge the bolt, when nations chafe</l>
+<l rend="indent">And howl their battle cries of right and wrong;</l>
+<l>'Tis they who lead the mighty armies safe</l>
+<l rend="indent">To manhood's threshold, brave and beautiful and strong.</l></lg>
+
+<lg>
+<pb n="85"/>
+<l>For death's the only answer that we make</l>
+<l rend="indent">When hungry kingdoms rise and fall on strife;</l>
+<l>Still one insensate spirit's greed can break</l>
+<l rend="indent">The wide world's peace, and drain her holy founts of life.</l></lg>
+
+<lg>
+<l>And still the grandest death that man may die</l>
+<l rend="indent">Is held the death of war, at some great need</l>
+<l>Beyond all human reason's power to try,</l>
+<l rend="indent">Since honour often spurns her sister, reason's rede.</l></lg>
+
+<lg>
+<l>For reason's dumb while honour's thirsty blade</l>
+<l rend="indent">Still flashes to the universe how man</l>
+<l>Remains so blind, so faltering, so afraid</l>
+<l rend="indent">That carnage yet controls his highest hope and plan.</l></lg>
+
+<lg>
+<l>But reason, guarding well her golden light,</l>
+<l rend="indent">Denies he shall for ever sate his dearth</l>
+<l>Like wolf or tiger; wills such futile might</l>
+<l rend="indent">Anon be banned and thrust from off the good round earth.</l></lg>
+
+<lg>
+<pb n="86"/>
+<l>She dawns upon the darkness of our eyes;</l>
+<l rend="indent">Reveals that war can only hurl us back</l>
+<l>On hostile values; whispers to the wise</l>
+<l rend="indent">How virtue in the fed is vice to them that lack.</l></lg>
+
+<lg>
+<l>Virtue and vice are names, not qualities,</l>
+<l rend="indent">And when the baffled cry that might is right,</l>
+<l>No smug opinion from the unconscious skies</l>
+<l rend="indent">For doubtful virtue's sake shall hold them to their plight.</l></lg>
+
+<lg>
+<l>All nations live by ideals; but in need</l>
+<l rend="indent">They linger with no ethic obsolete;</l>
+<l>They bend the knee to no unfriendly creed;</l>
+<l rend="indent">But tramp their values firm beneath an army's feet.</l></lg>
+
+<lg>
+<l>Remains to man this everlasting truth</l>
+<l rend="indent">That for his sure defence and steadfast guide,</l>
+<l>Reason and honour, by the way of ruth,</l>
+<l rend="indent">Shall yet march, hand in hand, and onward, side by side.</l></lg>
+
+<lg>
+<pb n="87"/>
+<l>Again the world is meeting might with might,</l>
+<l rend="indent">And when the battle's fought and lost and won,</l>
+<l>Pray victory decree, as primal right,</l>
+<l rend="indent">That reason also wins a kingdom in the sun.</l></lg>
+
+<lg>
+<l>Then shall she swiftly, for our world-wide shame,</l>
+<l rend="indent">Bend to the Mother from her starry place,</l>
+<l>And, in humanity's almighty name,</l>
+<l rend="indent">For ever dry the tears upon that sacred face.</l></lg>
+<byline>EDEN PHILLPOTTS.<lb/>
+<title rend="left">English Review.</title></byline>
+</div>
+
+
+<pb n="88"/>
+<div id="elliott037" type="poem" n="The New Spirit">
+<docAuthor n="Melbourne, Edward">Edward Melbourne</docAuthor>
+<head rend="center">THE NEW SPIRIT.</head>
+
+<lg type="stanza">
+<l n="1"><hi rend="smallcap">When</hi> England of the quiet heart</l>
+<l rend="indent">Flung back the covenant of shame,</l>
+<l>A dignity of high resolve</l>
+<l rend="indent">Upon her councils came.</l></lg>
+
+<lg>
+<l>Freedom's old standard, long laid by</l>
+<l rend="indent">Shook out its tattered folds once more;</l>
+<l>And rank on rank with steady eyes</l>
+<l rend="indent">Her sons went out to war.</l></lg>
+
+<lg>
+<l>Unbroken in these ancient fields</l>
+<l rend="indent">A Sabbath calm dwells in the air,</l>
+<l>And men along the shady road</l>
+<l rend="indent">Go quietly to prayer.</l></lg>
+
+<lg>
+<l>Vial of wrath has burst the seal</l>
+<l rend="indent">Thrones fall and dominations cease;</l>
+<l>The silent face of England wears</l>
+<l rend="indent">The dignity of peace.</l></lg>
+<byline>EDWARD MELBOURNE.<lb/>
+<title rend="left">Saturday Review.</title></byline>
+</div>
+
+
+<pb n="89"/>
+<div id="elliott038" type="poem" n="To Our Dead">
+<docAuthor n="Courtney, W. L.">W. L. Courtney</docAuthor>
+<head rend="center">TO OUR DEAD.</head>
+
+<lg type="stanza">
+<l n="1"><hi rend="smallcap">Sleep</hi> well, heroic souls, in silence sleep,</l>
+<l>Lapped in the circling arms of kindly death!</l>
+<l>No ill can vex your slumbers, no foul breath</l>
+<l>Of slander, hate, derision mar the deep</l>
+<l>Repose that holds you close. Your kinsmen reap</l>
+<l>The harvest you have sown, while each man saith</l>
+<l>"So would I choose, when danger threateneth,</l>
+<l>Let my death be as theirs," we dare not weep.</l></lg>
+
+<lg>
+<l>For you have scaled the starry heights of fame,</l>
+<l>Nor ever shrunk from peril and distress</l>
+<l>In fight undaunted for the conqueror's prize;</l>
+<l>Therefore your death, engirt with loveliness</l>
+<l>Of simple service done for England's name,</l>
+<l>Shall shine like beacon-stars of sacrifice.</l></lg>
+<byline>W. L. COURTNEY.<lb/>
+<title rend="left">Fortnightly Review.</title></byline>
+</div>
+
+
+<pb n="90"/>
+<div id="elliott039" type="poem" n="Mediation in War-Time">
+<docAuthor n="Tynan, Katharine">Katherine Tynan</docAuthor>
+<head rend="center">MEDIATION IN WAR-TIME</head>
+<note place="inline" rend="center">(After St. Anselm.)</note>
+
+<lg type="stanza">
+<l n="1"><hi rend="smallcap">If</hi> Thou, Lord God, willest to judge</l>
+<l rend="indent">This Thy most piteous clay,</l>
+<l>Which to save, Christ did not grudge</l>
+<l rend="indent">His red dying I should say:</l>
+<l>"Now I interpose His death</l>
+<l>'Twixt these children and Thy wrath."</l></lg>
+
+<lg>
+<l>Then if Thou should'st say, "Their shame</l>
+<l rend="indent">Is as scarlet in Mine eyes,"</l>
+<l>I should ask, "Who bare the blame?</l>
+<l rend="indent">Look on Thy Son's sacrifice!</l>
+<l>His dear Blood is far more bright</l>
+<l>That shall wash the scarlet white."</l></lg>
+
+<lg>
+<l>Still if Thou Thy frown must keep</l>
+<l rend="indent">And Thine eyes Thou dost avert</l>
+<l>(Ah! dear Shepherd of the Sheep)</l>
+<l rend="indent">I will say, "Who took the hurt?</l>
+<l>I present Christ's death and pain</l>
+<l>'Twixt Thine anger and these slain."</l></lg>
+
+<lg>
+<pb n="91"/>
+<l>Dear, they die in millions</l>
+<l rend="indent">For a quarrel not their own;</l>
+<l>Look to this poor flock, Thy Son's,</l>
+<l rend="indent">Harried all and overthrown.</l>
+<l>See, I lay Christ's Cross between</l>
+<l>Dear, Thy justice and their sin.</l></lg>
+<byline>KATHERINE TYNAN.<lb/>
+<title rend="left">New Witness.</title></byline>
+</div>
+
+
+<pb n="92"/>
+<div id="elliott040" type="poem" n="To the Memory of Field-Marshal Earl Roberts">
+<docAuthor n="Seaman, Owen">Owen Seaman</docAuthor>
+<head rend="center">TO THE MEMORY</head>
+<head rend="center">of</head>
+<head rend="center">FIELD-MARSHAL EARL ROBERTS</head>
+<head rend="center">of Kandahar and Pretoria.</head>
+<note place="inline" rend="center">[Born, 1832. Died on service at the Front, November 141h, 1914.]</note>
+
+<lg type="stanza">
+<l n="1"><hi rend="smallcap">He</hi> died, as soldiers die, amid the strife,</l>
+<l rend="indent">Mindful of England in his latest prayer;</l>
+<l>God, of His love, would have so fair a life</l>
+<l rend="indent12">Crowned with a death as fair.</l></lg>
+
+<lg>
+<l>He might not lead the battle as of old,</l>
+<l rend="indent">But, as of old, among his own he went,</l>
+<l>Breathing a faith that never once grew cold,</l>
+<l rend="indent12">A courage still unspent.</l></lg>
+
+<lg>
+<l>So was his end; and, in that hour, across</l>
+<l rend="indent">The face of War a wind of silence blew,</l>
+<l>And bitterest foes paid tribute to the loss</l>
+<l rend="indent12">Of a great heart and true.</l></lg>
+
+<lg>
+<pb n="93"/>
+<l>But we who loved him, what have we to lay</l>
+<l rend="indent">For sign of worship on his warrior-bier?</l>
+<l>What homage, could his lips but speak to-day,</l>
+<l rend="indent12">Would he have held most dear?</l></lg>
+
+<lg>
+<l>Not grief, as for a life untimely reft;</l>
+<l rend="indent">Not vain regret for counsel given in vain;</l>
+<l>Not pride of that high record he has left,</l>
+<l rend="indent12">Peerless and pure of stain;</l></lg>
+
+<lg>
+<l>But service of our lives to keep her free,</l>
+<l rend="indent">The land he served; a pledge above his grave</l>
+<l>To give her even such a gift as he,</l>
+<l rend="indent12">The soul of loyalty, gave.</l></lg>
+
+<lg>
+<l>That oath we plight, as now the trumpets swell</l>
+<l rend="indent">His requiem, and the men-at-arms stand mute,</l>
+<l>And through the mist the guns he loved so well</l>
+<l rend="indent12">Thunder a last salute!</l></lg>
+<byline>OWEN SEAMAN.<lb/>
+<title rend="left">Punch.</title></byline>
+</div>
+
+
+<pb n="94"/>
+<div id="elliott041" type="poem" n="The War-Shadow">
+<docAuthor n="Hardy, Thomas">Thomas Hardy</docAuthor>
+<head rend="center">THE WAR-SHADOW.</head>
+
+<lg type="stanza">
+<head rend="center">I.</head>
+<l n="1"><hi rend="smallcap">Last</hi> year I called this world of gaingivings</l>
+<l>The darkest thinkable, and questioned sadly</l>
+<l>If my own land could heave its pulse less gladly,</l>
+<l>So charged it seemed with circumstance that brings</l>
+<l rend="indent8">The tragedy of things.</l></lg>
+
+<lg>
+<head rend="center">II.</head>
+<l>Yet at that censured time no heart was rent</l>
+<l>Or feature blanched of parent, wife, or daughter</l>
+<l>By hourly blazoned sheets of listed slaughter;</l>
+<l>Death waited Nature's wont; Peace smiled unshent</l>
+<l rend="indent8">From Ind to Occident.</l></lg>
+<byline>THOMAS HARDY.<lb/>
+<title rend="left">War Poems.</title></byline>
+</div>
+
+
+<pb n="95"/>
+<div id="elliott042" type="poem" n="Mater Dolorosa">
+<docAuthor n="Stuart, Dorothy Margaret">Dorothy Margaret Stuart</docAuthor>
+<head rend="center">MATER DOLOROSA.</head>
+
+<lg type="stanza">
+<l n="1" rend="indent4">What have I given thee,</l>
+<l rend="indent4">England, beloved of me?</l>
+<l>I have no gold for thy desolate,</l>
+<l>I have no spear to guard thy gate,</l>
+<l>My hands are weak on the harp of fate</l>
+<l rend="indent4">In the hour of threnody.</l></lg>
+
+<lg>
+<l rend="indent4">Yet I have given, I;</l>
+<l rend="indent4">And, England, my gifts lie</l>
+<l>Far from thee and thy sacred strand.</l>
+<l>I have given the hand that held my hand,</l>
+<l>The feet that once on my palm could stand,</l>
+<l rend="indent4">The hopes I was nourished by.</l></lg>
+
+<lg>
+<l rend="indent4">All that I had, I give,</l>
+<l rend="indent4">The life that I bade live,</l>
+<l>The heart that my heart made to beat,</l>
+<l>The lips erstwhile on my lips so sweet --</l>
+<l>These have I given; is it not meet</l>
+<l rend="indent4">To have striven that thou mayst strive?</l></lg>
+
+<lg>
+<pb n="96"/>
+<l rend="indent4">The clay of France doth shrine</l>
+<l rend="indent4">This only gift of mine;</l>
+<l>England, be it not made in vain,</l>
+<l>Be but thy glory great as our pain.</l>
+<l>We are glad to have given -- would give again</l>
+<l rend="indent4">The light of our days for thine!</l></lg>
+<byline>DOROTHY MARGARET STUART.<lb/>
+<title rend="left">British Review.</title></byline>
+</div>
+
+
+<pb n="97"/>
+<div id="elliott043" type="poem" n="Abi, Viator --">
+<docAuthor n="Stuart, Dorothy Margaret">Dorothy Margaret Stuart</docAuthor>
+<head rend="center">ABI, VIATOR --.</head>
+
+<lg type="stanza">
+<l n="1"><hi rend="smallcap">If</hi> thou hast seen the standard dim</l>
+<l rend="indent">Droop in its mesh of dust and grime</l>
+<l>Above the carven hands of him</l>
+<l rend="indent">Who bore it in some ancient time;</l>
+<l>If thou hast seen the silent sword</l>
+<l rend="indent">Rust redly in its tattered sheath,</l>
+<l>Hast caught the echo of the word</l>
+<l rend="indent">That flung an English glove at death,</l>
+<l>And yet thy pulses march unstirred,</l>
+<l rend="indent">And still thy breath comes calm and slow,</l>
+<l rend="indent">Pass on -- no Englishman art thou!</l></lg>
+
+<lg>
+<l>If thou canst hear and see to-day</l>
+<l rend="indent">The distant clamour and the fume</l>
+<l>Of crimson fate, and yet canst say</l>
+<l rend="indent">"The gain is mine, be theirs the doom."</l>
+<l>If thou thy unthrilled hands canst fold,</l>
+<l rend="indent">If thou canst check thy seaward tread,</l>
+<l>Canst shun the dust and guard the gold,</l>
+<l rend="indent">Thou hast no kinship with thy dead;</l>
+<l>Ah! if thy craven heart is cold,</l>
+<l rend="indent">Pause not the perilous page to scan --</l>
+<l rend="indent">Pass on -- thou art no Englishman!</l></lg>
+
+<lg>
+<pb n="98"/>
+<l>But if the distant unison</l>
+<l rend="indent">Of swooping sword and flying dart,</l>
+<l>Of straining sail and muttering gun,</l>
+<l rend="indent">Touches thy spirit and thy heart;</l>
+<l>If England's day and England's call</l>
+<l rend="indent">Find thee a son of England, then</l>
+<l>Thou canst not falter -- thou, nor all</l>
+<l rend="indent">Her noble heritage of men;</l>
+<l>Pass on -- she stands, although we fall,</l>
+<l rend="indent">Pass on unshaken though stars shake --</l>
+<l rend="indent">Thyself canst tell what road to take!</l></lg>
+<byline>DOROTHY MARGARET STUART<lb/>
+<title rend="left">British Review.</title></byline>
+</div>
+
+
+<pb n="99"/>
+<div id="elliott044" type="poem" n="A Re Alberto">
+<docAuthor n="Chartres, Annie Vivanti">Annie Vivanti Chartres</docAuthor>
+<head rend="center">A RE ALBERTO.</head>
+<head rend="center">Saluto Italico.</head>
+
+<lg type="stanza">
+<l n="1">O <hi rend="smallcap">Alberto</hi>, biondo e leggendario re,</l>
+<l>Che ne lusinga menzognera ammalia</l>
+<l>N&egrave; ferreo pugno piega -- noi vorremmo</l>
+<l>Mietere tutti i flori dell'Italia</l>
+<l>E darli a te!</l></lg>
+
+<lg>
+<l>Anche I'Italia contro l'oppressore</l>
+<l>Magnifica e furente combatt&egrave;;</l>
+<l>Tra le antiche ferite nel suo cuore</l>
+<l>Una nuova ferita di dolore</l>
+<l>Aperta or s'&egrave;:</l></lg>
+
+<lg>
+<l>Questa -- che pur fremente di stupenda</l>
+<l>Ferocia e di magnanimo fervore</l>
+<l>Il popolo d'Italia, o eroico re,</l>
+<l>Nell'ora tua pi&#x00F9; sacra e pi&#x00F9; tremenda</l>
+<l>Non fu con te.</l></lg>
+<byline>ANNIE VIVANTI CHARTRES.<lb/>
+<title rend="left">Times.</title></byline>
+</div>
+
+
+<pb n="100"/>
+<div id="elliott045" type="poem" n="A Tribute from Italy">
+<docAuthor n="Chartres, Annie Vivanti">Annie Vivanti Chartres</docAuthor>
+<head rend="center">A TRIBUTE FROM ITALY.</head>
+
+<lg type="stanza">
+<l n="1"><hi rend="smallcap">Albert</hi>, thou standest where the storm-cloud lowers</l>
+<l>Unvanquished in thy glorious defeat.</l>
+<l>Oh! to strip Italy of all her flowers</l>
+<l>And bring them to thy feet!</l></lg>
+
+<lg>
+<l>No deeper sorrow shall Italia know,</l>
+<l>Whose sons for freedom's sake have fought and died,</l>
+<l>Than this -- that in thine hour of darkest woe</l>
+<l>She was not by thy side.</l></lg>
+<byline>A.V.C.<lb/>
+<title rend="left">Times.</title></byline>
+</div>
+
+
+<pb n="101"/>
+<div id="elliott046" type="poem" n="The Yser">
+<docAuthor n="Clayton, Philip Byard">Philip Byard Clayton</docAuthor>
+<head rend="center">THE YSER.</head>
+
+<lg type="stanza">
+<l n="1"><hi rend="smallcap">Sweet</hi> and soft was thy stream, Yser,</l>
+<l>As it first sang the song of the Spirit that wrought thee;</l>
+<l>When down to thy brim came the dry-tongued hare,</l>
+<l>And the little low hills their moist tribute brought thee.</l>
+<l>Lithe, yet lowly,</l>
+<l>Like a maid half-holy,</l>
+<l>As thy lover the sun in the white dawn caught thee.</l></lg>
+
+<lg>
+<l>Sad and sluggish thy tide, Yser,</l>
+<l>When man cast his mantle of sin about thee,</l>
+<l>And the mean alley stoops to the wharfinger's stair,</l>
+<l>And the sodden string of the barges flout thee.</l>
+<l>Sad and shamed,</l>
+<l>Like a wild thing tamed,</l>
+<l>As the slimy lock-gates dare thee and doubt thee.</l></lg>
+
+<lg>
+<pb n="102"/>
+<l>Red and royal thy flood, Yser,</l>
+<l>When the nations flock to debate thy fording,</l>
+<l>And the great guns crash, and the bugles blare,</l>
+<l>And the blood soaks into thy banks for hoarding.</l>
+<l>Red, rose-red,</l>
+<l>Is thy bosom with dead,</l>
+<l>As the shells strike home on the frail bridge-boarding.</l></lg>
+
+<lg>
+<l>It is no great span to thy stream, Yser,</l>
+<l>But the Styx were an impotent babble beside.</l>
+<l>Though thy ooze be slow as a midnight mere,</l>
+<l>There's the ebbing of life in its ghastly tide.</l>
+<l>Thou art consecrate</l>
+<l>To a proud foe's fate,</l>
+<l>Who peered in the ink of thy magic, and died.</l></lg>
+
+<lg>
+<l>When the Judgment sounds on thy life, Yser,</l>
+<l>And thou liest prone in thy penitency,</l>
+<l>The God who girt Eden with rivers fair,</l>
+<pb n="103"/>
+<l>And set on our walls that old watchman, the sea --</l>
+<l>He shall not forget, When the thrones are set,</l>
+<l>How thou gavest thy soul to the stand of the free.</l></lg>
+<byline>PHILIP BYARD CLAYTON.<lb/>
+<title rend="left">British Review.</title></byline>
+</div>
+
+
+<pb n="104"/>
+<pb n="105"/>
+<pb n="106"/>
+<pb n="107"/>
+<div id="elliott049" type="poem" n="The Army of the Dead">
+<docAuthor n="Pain, Barry">Barry Pain</docAuthor>
+<head rend="center">THE ARMY OF THE DEAD.</head>
+
+<lg type="stanza">
+<l n="1">I <hi rend="smallcap">dreamed</hi> that overhead</l>
+<l rend="indent">I saw in twilight grey</l>
+<l>The Army of the Dead</l>
+<l rend="indent">Marching upon its way,</l>
+<l>So still and passionless,</l>
+<l rend="indent">With faces so serene,</l>
+<l>That scarcely could one guess</l>
+<l rend="indent">Such men in War had been.</l></lg>
+
+<lg>
+<l>No mark of hurt they bore</l>
+<l rend="indent">Nor smoke, nor bloody stain;</l>
+<l>Nor suffered any more</l>
+<l rend="indent">Famine, fatigue, or pain;</l>
+<l>Nor any lust of hate</l>
+<l rend="indent">Now lingered in their eyes --</l>
+<l>Who have fulfilled their fate,</l>
+<l rend="indent">Have lost all enmities.</l></lg>
+
+<lg>
+<l>A new, a greater pride</l>
+<l rend="indent">So quenched the pride of race</l>
+<l>That foes marched side by side</l>
+<l rend="indent">Who once fought face to face.</l>
+<l>That ghostly Army's plan</l>
+<l rend="indent">Knows but one race, one rod --</l>
+<l>All Nations there are Man</l>
+<l rend="indent">And the one King is God.</l></lg>
+
+<lg>
+<pb n="108"/>
+<l>No longer on their ears</l>
+<l rend="indent">The bugle's summons falls;</l>
+<l>Beyond these tangled spheres</l>
+<l rend="indent">The Archangel's trumpet calls;</l>
+<l>And by that trumpet led</l>
+<l rend="indent">Far up the exalted sky</l>
+<l>The Army of the Dead</l>
+<l rend="indent">Goes by, and still goes by --</l>
+<l>Look upward, standing mute;</l>
+<l rend="indent4">Salute!</l></lg>
+<byline>BARRY PAIN.<lb/>
+<title rend="left">Westminster Gazette.</title></byline>
+</div>
+
+
+<pb n="109"/>
+<pb n="110"/>
+<pb n="111"/>
+<pb n="112"/>
+<pb n="113"/>
+<div id="elliott052" type="poem" n="The Bulwarks">
+<docAuthor n="Bustridge, A. W.">A. W. Bustridge</docAuthor>
+<head rend="center">THE BULWARKS.</head>
+<note place="inline">[The splendid spirt of gallantry and devotion which animates the officers and men of his Majesty's forces. -- Sir John French.]</note>
+
+<lg type="stanza">
+<l n="1"><hi rend="smallcap">What</hi> though, with sullen roar,</l>
+<l rend="indent">The raging billows beat,</l>
+<l>Against the everlasting shore,</l>
+<l rend="indent">Where strength and patience meet?</l>
+<l>At last the mad assault is o'er</l>
+<l rend="indent">And broken waves retreat.</l></lg>
+
+<lg>
+<l>So swells the Teuton wave,</l>
+<l rend="indent">Against the British strand --</l>
+<l>And so, indomitably brave,</l>
+<l rend="indent">The British legions stand,</l>
+<l>While disappointed despots rave</l>
+<l>To see her living bulwarks save</l>
+<l rend="indent6">The threatened Motherland.</l></lg>
+<byline>A. W. BUSTRIDGE.<lb/>
+<title rend="left">Daily Chronicle.</title></byline>
+</div>
+
+
+<pb n="114"/>
+<div id="elliott053" type="poem" n="In Lachrymarum Valle">
+<docAuthor n="Gales, R. L.">R. L. Gales</docAuthor>
+<head rend="center">IN LACHRYMARUM VALLE.</head>
+<head rend="center"><hi rend="italic">Christmas, 1914.</hi></head>
+
+<lg type="stanza">
+<l n="1"><hi rend="smallcap">The</hi> valley of the shadows tenebrous,</l>
+<l>The valley of tears, the valley desolate</l>
+<l>We tread where fiends of ravin and of hate</l>
+<l>Strike mortal cold to hearts most valorous;</l>
+<l>Mother, we cry to thee: our need is great;</l>
+<l>To thee we send up voices clamorous;</l>
+<l>Bend pitying eyes upon our woeful state,</l>
+<l>Mother of the Saviour, Mary Immaculate,</l>
+<l>Mary Annunciate, Mary Dolorous,</l>
+<l>Mary in Glory, pray thy Son for us,</l>
+<l>That He send forth the Dove from Heaven's gate</l>
+<l>Into our wasted lands and devastate,</l>
+<l>That He Who is our Peace rule over us</l>
+<l>In Peace that wars no more may desecrate.</l></lg>
+<byline>R. L. GALES.<lb/>
+<title rend="left">British Review.</title></byline>
+</div>
+
+
+<pb n="115"/>
+<div id="elliott054" type="poem" n="In a Harvest Field">
+<docAuthor n="Rawnsley, H. D. (Hardwicke Drummond)">H. D. Rawnsley</docAuthor>
+<head rend="center">IN A HARVEST FIELD.</head>
+
+<lg type="stanza">
+<l n="1"><hi rend="smallcap">How</hi> quietly beneath the quiet sky</l>
+<l>These men are sleeping who shall never wake!</l>
+<l>But soon the plough, the harrow, and the rake</l>
+<l>Shall pass them as I pass unheeded by;</l>
+<l>For underneath the fallows they will lie</l>
+<l rend="indent">Who front to foe -- good seed for Freedom's sake --</l>
+<l rend="indent">Have fallen, and those who here their harvest make</l>
+<l>Will wonder at the richness of the rye.</l></lg>
+
+<lg>
+<l>But He Who lets no single sparrow fall</l>
+<l rend="indent">Unnoted, unremembered, in His care</l>
+<l rend="indent4">Has garnered all their great self-sacrifice;</l>
+<l rend="indent4">And though too 'soon in tender earth there lies</l>
+<l rend="indent">-- Till crack of doom -- each body made so fair,</l>
+<l>A happier world shall be memorial.</l></lg>
+<byline>H. D. RAWNSLEY.</byline>
+</div>
+
+
+<pb n="116"/>
+<div id="elliott055" type="poem" n="A Contrast">
+<docAuthor n="Rawnsley, H. D. (Hardwicke Drummond)">H. D. Rawnsley</docAuthor>
+<head rend="center">A CONTRAST.</head>
+
+<lg type="stanza">
+<l n="1">I <hi rend="smallcap">by</hi> the lapping of my household fire,</l>
+<l>You in the trenches, starved and stiff for cold,</l>
+<l>You by fatigue in few days grey and old,</l>
+<l>I with my strength no needs, no calls require:</l>
+<l>I wrapt in all the peace of heaven entire,</l>
+<l rend="indent">You with Hell's powers of darkness fold on fold,</l>
+<l rend="indent">You lacking all that life most dear can hold,</l>
+<l>And I with all my utmost heart's desire.</l></lg>
+
+<lg>
+<l>But God shall strike the balance: I have had</l>
+<l rend="indent">My good in this my lifetime -- all and more,</l>
+<l rend="indent4">Have selfish sucked advantage from your strife,</l>
+<l rend="indent">While you, brave heroes, on that further shore</l>
+<l>Shall find all good has equalised all bad;</l>
+<l rend="indent">Death may be mine -- you win eternal life.</l></lg>
+<byline>H. D. RAWNSLEY.<lb/>
+<title rend="left">British Review.</title></byline>
+</div>
+
+
+<pb n="117"/>
+<pb n="118"/>
+<pb n="119"/>
+<div id="elliott057" type="poem" n="All's Well">
+<docAuthor n="Bourdillon, F. W.">F. W. Bourdillon</docAuthor>
+<head rend="center">"ALL'S WELL"</head>
+<note place="inline">[Reprinted from "Christmas Roses" by permission of the author.]</note>
+
+<lg type="stanza">
+<l n="1" rend="italic">Watchman, watchman, what of the night,</l>
+<l rend="indent"><hi rend="italic">What of the night to tell?</hi></l>
+<l>The heavens are dark, and never a light</l>
+<l rend="indent">But the far-off flicker of Hell.</l>
+<l>But the steed is in the stall,</l>
+<l rend="indent12">Unsleeping;</l>
+<l>And the warder on the wall,</l>
+<l rend="indent12">Watch-keeping;</l>
+<l>And the granary is stored,</l>
+<l>And ready gun and sword.</l>
+<l rend="italic">In the name of the Lord,</l>
+<l rend="indent6"><hi rend="italic">All's Well!</hi></l></lg>
+
+<lg>
+<l rend="italic">Watchman, watchman, what of the night,</l>
+<l rend="indent"><hi rend="italic">What of the night to tell?</hi></l>
+<l>The wind blows fierce, and the foam flies white,</l>
+<l rend="indent">And the waters moan and swell.</l>
+<l>But the foes to haven keep,</l>
+<l rend="indent12">Safe hiding;</l>
+<l>And our ships are on the deep,</l>
+<l rend="indent12">Sure riding;</l>
+<pb n="120"/>
+<l>And the gallant hearts on board</l>
+<l>Keep ceaseless watch and ward.</l>
+<l rend="italic">In the name of the Lord,</l>
+<l rend="indent"><hi rend="italic">All's Well!</hi></l></lg>
+
+<lg>
+<l rend="italic">Watchman, watchman, what of the night,</l>
+<l rend="indent"><hi rend="italic">What of the night to tell?</hi></l>
+<l>There are widows weeping, and babes affright,</l>
+<l rend="indent">And a ceaseless burial bell.</l>
+<l>But the hand that holds the gun</l>
+<l rend="indent12">Still shakes not;</l>
+<l>And the line drops one by one,</l>
+<l rend="indent12">Yet breaks not.</l>
+<l>Of the blood so nobly poured</l>
+<l>There shall surely be reward.</l>
+<l rend="italic">In the name of the Lord,</l>
+<l rend="indent"><hi rend="italic">All's Well!</hi></l></lg>
+<byline>F. W. BOURDILLON.</byline>
+</div>
+
+
+<pb n="121"/>
+<pb n="122"/>
+<pb n="123"/>
+<div id="elliott059" type="poem" n="To the Prussianizers of Germany">
+<docAuthor n="Steuart, Douglas S. Spens">Douglas S. Spens Steuart</docAuthor>
+<head rend="center">TO THE PRUSSIANIZERS OF GERMANY.</head>
+
+<lg type="stanza">
+<l n="1"><hi rend="smallcap">Lo</hi>! would -- be War Lord of the Western World!</l>
+<l>How dost thou now? -- thou, who the die didst cast!</l>
+<l>Thou, who ten millions of mankind hast hurled</l>
+<l>Hosts against hosts, -- as foes, who, in the past</l>
+<l>Contented dwelt to strive -- e'en when outclassed --</l>
+<l>Mid peaceful rivalry; the while mankind</l>
+<l>True progress made; whereby the world amassed</l>
+<l>Knowledge, with wisdom -- matter ruled by Mind</l>
+<l>For human weal, -- and blessings unto all, freely assigned.</l></lg>
+
+<lg>
+<l>I here indict -- thee, and the Wilhelmstrass' --</l>
+<l>Sure haven for each sordid sycophant,</l>
+<l>Whose fulsome flatteries well nigh surpass</l>
+<l>That vanity dire fate did in thee plant,</l>
+<l>With megalomania impious, whose cant</l>
+<l>Proclaims: "God is the Highest, but of all,</l>
+<l>The Highest is the Kaiser." Miscreant! --</l>
+<l>Daring the Hosts of Heaven to battle call;</l>
+<l>Sealed is thy doom, and, e'en as Lucifer, thou, too, shalt fall.</l></lg>
+
+<lg>
+<l>A canc'rous kaiseritis Prussia's blood</l>
+<l>Pervades, and hath empoisoned, since the day</l>
+<l>Fred'rick the Great engulfed her in his flood,</l>
+<l>And o'er the land cast his imperious sway.</l>
+<l>One prayer there is which Germany doth pray;</l>
+<l>'Tis "Deutschland uber Alles," -- where the "All"</l>
+<l>This maxim's infamy doth now betray,</l>
+<l>Since, for its sake, Honour and Justice fall,</l>
+<l>Swamped in a welling sea of blood, whose waves the World appal.</l></lg>
+
+<lg>
+<pb n="124"/>
+<l>O Peaceless Soul! Did Lucifer unbound</l>
+<l>Become re-incarnated at thy birth?</l>
+<l>In all this World there is no spirit found,</l>
+<l>Like thine afflicted; holding nothing worth,</l>
+<l>Save, what should make thee mightiest on Earth --</l>
+<l>Impoverished, through long years, by thy strife</l>
+<l>For armaments; who naught recked of the dearth</l>
+<l>Amongst thy toiling millions, where burned rife</l>
+<l>Sin -- conjured up from Hell, midst Sorrow's sweat -- to soil each life.</l></lg>
+
+<lg>
+<l>Whom the gods would destroy, they first make mad!</l>
+<l>E'en as with thee, -- if ever thou wert wise? --</l>
+<l>Who flung aside good councillors for bad,</l>
+<l>Heedless of Bismarck's words: whilst Tchirschky's eyes</l>
+<l>Their gleam malevolent -- beneath the guise</l>
+<l>Of frank solicitude for Prussia's good --</l>
+<l>Scarce hid; as, Servia thirsting to chastise,</l>
+<l>He with Count Berchtold pandered to thy mood,</l>
+<l>Till, thou, with Austria, a bond endorsed -- whose ink was blood.</l></lg>
+
+<lg>
+<l>By flatterers misled -- with wild uproar</l>
+<l>That Britain was divided, and mischance</l>
+<l>Had plunged old England into Civil War, --</l>
+<l>Thou cri'dst: "The Day is come! and fertile France</l>
+<l>Our plunder lies; ere turn we to make dance</l>
+<l>The Russian bear, with fire and shrapnel steel;</l>
+<l>Nor, at his ponderous weight look we askance --</l>
+<l>Too slow his pace, where Prussia's Eagles wheel,</l>
+<l>Who,'neath the impact of our beak and claws, shall stagg'ring reel."</l></lg>
+
+<lg>
+<l>By pacifist diplomacy deceived,</l>
+<l>Berchtold, too late, all fearful, did implore</l>
+<l>In language which, his subtle mind conceived,</l>
+<l>Would balm of Gilead prove to Russia's sore;</l>
+<pb n="125"/>
+<l>And cried: "Austria has not banged the door" --</l>
+<l>On Peace! Had, hence, some wireless whisper sped</l>
+<l>In widening circles? -- as though, from our shore,</l>
+<l>A hurtling missile to the ocean fled,</l>
+<l>Wave after wave sends forth, whose powers survive when they are dead.</l></lg>
+
+<lg>
+<l>Mad, fatal fool! declining to unfold --</l>
+<l>Dreading perchance thy Ministers might scoff --</l>
+<l>The plot thou hadst fomented with Berchtold</l>
+<l>And others kindred; deeming Sazonoff</l>
+<l>Would promptly at thine ultimatum doff</l>
+<l>Honour for Shame; and, the Imperial Czar,</l>
+<l>With Holy Russia, grovel in its trough.</l>
+<l>Thus --'gainst the very door of Hope ajar --</l>
+<l>Thou, Peace didst murder, with thy mailed fist, Death's Head Hussar.</l>
+<l>While peace lay dying, thy Chancellory,</l>
+<l>Fearful of foes its deeds might call to view,</l>
+<l>Proffered to England what thy history</l>
+<l>Shall with the blackest infamy endue,</l>
+<l>How dared ye think that England would -- in lieu</l>
+<l>Of guarding Truth and Honour with her Name, --</l>
+<l>Betray the World's high trust because she knew,</l>
+<l>By such apostasy, War's sword of flame</l>
+<l>She might escape! -- the only "cost" she recked -- undying Shame.</l></lg>
+
+<lg>
+<l>Civilization looks on thee askance,</l>
+<l>Perfidious Prussia! -- such thy name shall stay --</l>
+<l>Who strove, brave Belgium and immortal France</l>
+<l>That England with her Honour should betray.</l>
+<l>How thou and thine misjudged Sir Edward Grey --</l>
+<l>Unto thy Chancellor rebuked, appeal!</l>
+<l>Treaties to violate! Not such the way,</l>
+<l>Towards these "scraps of paper," Britons feel!</l>
+<l>Though you hold: "Parchment parchment only is, but steel is steel!"</l></lg>
+
+<lg>
+<pb n="126"/>
+<l>As, with her golden sandal'd feet, fair Dawn</l>
+<l>Danced in sheer joyfulness of life, and all</l>
+<l>The glad land did rejoice, -- its ripening corn</l>
+<l>In billowing beauty tossed with rustling call</l>
+<l>To peaceful harvest, -- Suddenly, did fall</l>
+<l>Ambition's mailed fist: and each field strewed</l>
+<l>Where a relentless hail of steel did maul</l>
+<l>Close serried ranks of Manhood's flower: and hewed</l>
+<l>Red lanes of slaughter, "hacking a way through" -- its "Cannon food."</l></lg>
+
+<lg>
+<l>Too late! -- Since once the challenge thou hadst given --</l>
+<l>War's thunder clouds to dissipate, which blew</l>
+<l>From every quarter of outraged heaven,</l>
+<l>As if the very Elementals knew;</l>
+<l>Whilst a dread shadow o'er the Sun's face drew</l>
+<l>His light from off the Earth, o'er which did loom --</l>
+<l>Threatening and murky with the awful hue</l>
+<l>Of Europe's blood -- dread Armageddon's doom,</l>
+<l>Rolling in crimsoned waves such as ne'er flowed from out Time's womb.</l></lg>
+
+<lg>
+<l>We deemed, forsooth, that Eagles were our foes!</l>
+<l>But now, you hop before us, self-confessed --</l>
+<l>Whose naked gory necks, outstretched, disclose</l>
+<l>Foul vultures, in mere Eagle's plumage dressed.</l>
+<l>That, Potsdam's eyrie hatched -- we little guessed --</l>
+<l>So vile a brood of megalomaniac stock,</l>
+<l>Whose crimes nameless atrocities attest;</l>
+<l>While, wheresoe'er the Prussian Vultures flock,</l>
+<l>Their sins defile humanity, and make its God a mock.</l></lg>
+
+<lg>
+<l>We have beheld thy carrion neck laid bare,</l>
+<l>Thrusting, with rav'ning beak, into the heart</l>
+<l>Of Belgium's gallant children who did dare --</l>
+<l>Fast holding rights thine own hand did impart --</l>
+<pb n="127"/>
+<l>Refuse to barter Honour at thy mart.</l>
+<l>And Luxemburg! She, too, stood out in vain,</l>
+<l>Small, and defenceless 'gainst the Uhlan dart,</l>
+<l>Which hath laid waste fair Alsace and Louvain</l>
+<l>With sins obscene -- whose cup of punishment deep shalt thou drain!</l></lg>
+
+<lg>
+<l>For deeds of infamy this doth record,</l>
+<l>Thee, and the Wilhelmstrass', the World shall shame, --</l>
+<l>Chastising, whilst Humanity applaud --</l>
+<l>Whose troops, atrocities in Prussia's name</l>
+<l>Inflicted unrestrained. Eternal blame</l>
+<l>Shall cleave to thee and thine who did command --</l>
+<l>The innocent, to pillage, murder, maim;</l>
+<l>Thinking, by Fear, to thus subdue the land! --</l>
+<l>Heedless of retribution's germs, wide sown, from blood-stained hand.</l></lg>
+
+<lg>
+<l>Cursed, for ever cursed! -- be the hand</l>
+<l>That kennelled and unleashed the Potsdam Pack,</l>
+<l>To hurl them ravaging o'er Belgium's land</l>
+<l>No hound of hell was ever whelped so black,</l>
+<l>Nor spoored with nameless horrors such foul track --</l>
+<l>As where the Prussian War-dogs gorge and gloat</l>
+<l>O'er childhood's ravished forms -- from which they hack</l>
+<l>White limbs and trembling breasts, vainly besmote</l>
+<l>In piteous prayers for Mercy, slowly choked down each fair throat.</l></lg>
+
+<lg>
+<l>Not vain the cry of those wild agonies,</l>
+<l>Ascending from War's shambles thou hast fed;</l>
+<l>Whence, swifter and more deadly foes now rise,</l>
+<l>Countless, invisible, -- at whose grim head</l>
+<l>Ride Famine gaunt, and Pestilence, and Dread.</l>
+<l>When these, their direful purpose shall attain --</l>
+<l>Avenging armies of the butchered dead --</l>
+<l>No Eagle o'er thy murderer's brow shall reign,</l>
+<pb n="128"/>
+<l>Whereon accursed, is blazed in lurid glow -- the brand of Cain.</l>
+<l>Not on thy chosen Godhead doth the doom</l>
+<l>Thy deeds of blood have destined thee depend! --</l>
+<l>No man-imagined Deity, to whom</l>
+<l>Thou, Kaiser, can'st thine ultimatums send!</l>
+<l>The God thy impious challenge doth offend</l>
+<l>Knows no appeals, He is the Causeless Cause</l>
+<l>Of All; for Him Time hath no birth nor end, --</l>
+<l>By some, called "Nature," -- Evolution's Cause;</l>
+<l>For thee, "Necessity," He shall be named -- "who knows no laws!"</l></lg>
+
+<lg>
+<l>Himself the Law of Progress, -- He, your Judge,</l>
+<l>Whom none can influence -- He reigns supreme,</l>
+<l>Vain braggarts! boasting from your Potsdam sludge,</l>
+<l>You would of human progress stem the stream</l>
+<l>With waves of blood; -- the while you dare blaspheme,</l>
+<l>Naming the God of Gods as your ally!</l>
+<l>Lo! You and yours shall pass, as fades a dream</l>
+<l>Of nightmare horror 'fore the bright'ning sky;</l>
+<l>Cursed ever of the World, and all which once -- was Germany!</l></lg>
+<byline>DOUGLAS S. SPENS STEUART.<lb/>
+<title rend="left">Poetry Review.</title></byline>
+</div>
+
+
+<pb n="129"/>
+<div id="elliott060" type="poem" n="To a Friend -- Killed in Action">
+<docAuthor n="Simpson, Harold">Harold Simpson</docAuthor>
+<head rend="center">TO A FRIEND -- KILLED IN ACTION.</head>
+
+<lg type="stanza">
+<l n="1">I <hi rend="smallcap">fain</hi> would weep, and yet my eyes are dry;</l>
+<l>My lips are dumb, for fear lest they should speak</l>
+<l>The hasty word, and in reproaches seek</l>
+<l>Revolt from God's decree that you should die.</l>
+<l>I know you would not ask me for my tears,</l>
+<l>But rather have me face with courage calm</l>
+<l>The lonely hours, and find some healing balm</l>
+<l>To fill the emptiness of future years.</l>
+<l>And so I pray for strength to bind my soul</l>
+<l>With faith unconquerable and hope divine;</l>
+<l>And from the grief and sorrow that are mine</l>
+<l>Draw cleansing grace to make my being whole</l>
+<l>Thus from your loss one friend at least shall gain</l>
+<l>New life, to prove you have not died in vain.</l></lg>
+<byline>HAROLD SIMPSON.<lb/>
+<title rend="left">Poetry Review.</title></byline>
+</div>
+
+
+<pb n="130"/>
+<div id="elliott061" type="poem" n="War">
+<docAuthor n="Tollemache, Grace E.">Grace E. Tollemache</docAuthor>
+<head rend="center">WAR.</head>
+
+<lg type="stanza">
+<l n="1">O <hi rend="smallcap">Hell</hi>-sped fury War, with wings raised high</l>
+<l rend="indent">Hawk-like that hoverest to smite! --</l>
+<l>How many eager now, stark-dead shall lie,</l>
+<l rend="indent">Ere thou hast flown thy fatal flight!</l></lg>
+
+<lg>
+<l>O sea of strife, whose armed hosts still come on,</l>
+<l rend="indent">Like wind-urged waves across the main! --</l>
+<l>What throes must flesh endure ere thou sink down</l>
+<l rend="indent">In smoothly flowing Peace again!</l></lg>
+
+<lg>
+<l>O callous War! Cold-blooded game of death,</l>
+<l rend="indent">With men 'gainst men as foes arrayed, --</l>
+<l>What pride of youth must yield life's precious breath</l>
+<l rend="indent">Ere to an end thy game be played!</l></lg>
+
+<lg>
+<l>O devastating, desolating War,</l>
+<l rend="indent">What dirges follow thee! what dearth</l>
+<l>And blackened ruin, where thou goest, mar</l>
+<l rend="indent">The goodly pleasantness of Earth!</l></lg>
+<byline>GRACE E. TOLLEMACHE.<lb/>
+<date rend="left" value="1915-08-01"><hi rend="italic">August 1st.</hi></date></byline>
+</div>
+
+
+<pb n="131"/>
+<div id="elliott062" type="poem" n="Sonnet">
+<docAuthor n="Tollemache, Grace E.">Grace E. Tollemache</docAuthor>
+<head rend="center">SONNET.</head>
+
+<lg type="stanza">
+<l n="1">O <hi rend="smallcap">ye</hi> to whom dear life is still most dear,</l>
+<l rend="indent">Heed not the sirens' soft perfidious song</l>
+<l>That bids you barter, for a brief term here,</l>
+<l rend="indent">Abiding honour! As the martyr-throng</l>
+<l>For love of Christ went stedfast to the stake</l>
+<l rend="indent">And by faith's rapturous power embraced the flame,</l>
+<l>So, gladly, ye, for your own Country's sake,</l>
+<l rend="indent">Must court the fiery Fates that wound and maim!</l>
+<l>And if on valour's path to victory's end,</l>
+<l rend="indent">Sweet life in one swift flash ye must renounce, --</l>
+<l>Rejoice that your high lot should so transcend</l>
+<l rend="indent">Man's common doom! The brave can die but once,</l>
+<l>But in your death, thrice-gloriously ye'll die, --</l>
+<l>For England, for men's hearths, and Liberty!</l></lg>
+<byline>GRACE E. TOLLEMACHE.<lb/>
+<date rend="left" value="1915-09-01"><hi rend="italic">September 1st.</hi></date></byline>
+</div>
+
+
+<pb n="132"/>
+<pb n="133"/>
+<div id="elliott064" type="poem" n="One Night">
+<docAuthor n="Sutherland, Millicent">Millicent Sutherland</docAuthor>
+<head rend="center">ONE NIGHT.</head>
+
+<lg type="stanza">
+<l n="1">I <hi rend="smallcap">walked</hi> into a moon of gold last night</l>
+<l>Across grey sands she seemed to shine so bright.</l></lg>
+
+<lg>
+<l>Wide, wide the sands until I met the sea,</l>
+<l>Cradle of moons, yet searchlights followed me.</l></lg>
+
+<lg>
+<l>I asked the moon if creeping round the Zones</l>
+<l>She had seen good, or only poor things' bones.</l></lg>
+
+<lg>
+<l>"Pale faces I have seen, unconscious men</l>
+<l>Bereft of struggling horror now and then.</l></lg>
+
+<lg>
+<l>"And sinking ships I see, and floating mines,</l>
+<l>And cries I hear, 'O God,' and choking whines.</l></lg>
+
+<lg>
+<l>"But later when the stars shine on the wave</l>
+<l>And give more light, I know the dead die brave.</l></lg>
+
+<lg>
+<pb n="134"/>
+<l>"Passing so quickly from the things that count,</l>
+<l>Count to all mortal thoughts, to find the Fount,</l></lg>
+
+<lg>
+<l>"Where angels pour elixir into bowls,</l>
+<l>Drink, not for broken hearts, but thirsty souls."</l></lg>
+
+<lg>
+<l>"And what on shore?" I asked, "the great Divide</l>
+<l>Where rivers run, and trenches side by side?"</l></lg>
+
+<lg>
+<l>"There," the moon said, "the snow was on the ground</l>
+<l>And the frost pinched me as I beamed around.</l></lg>
+
+<lg>
+<l>"Red pools of gore, and ghastly shadows lay</l>
+<l>In deep dug corners, so I sank away.</l></lg>
+
+<lg>
+<l>"Let misty cloudlets sweep across my face</l>
+<l>To hide the earth, and give me heart of grace.</l></lg>
+
+<lg>
+<l>"Sudden the air seemed filled with eager breath</l>
+<l>Of great Adventurers, released from death,</l></lg>
+
+<lg>
+<pb n="135"/>
+<l>"And shaking blood from out their eyes and hair</l>
+<l>Shouting for further knowledge here and there.</l></lg>
+
+<lg>
+<l>"I lighted these across the treacherous Path</l>
+<l>To reach the garden of Life's aftermath.</l></lg>
+
+<lg>
+<l>"And as they sped in troops the great guns boomed,</l>
+<l>With flashes lightning swift, and dark hordes loomed,</l></lg>
+
+<lg>
+<l>"And phantom shapes of patient warrior bands --</l>
+<l>Then more snow fell and shrouded all the lands."</l></lg>
+
+<milestone unit="stanza" rend="asterisk"/>
+
+<lg>
+<l>Now pondering from the moon I turned again,</l>
+<l>Over the sands, back to our House of Pain.</l></lg>
+<byline>MILLICENT SUTHERLAND.
+<hi rend="left">British Hospital,<lb/>
+Malo, Dunkirk, France.<lb/>
+<title>English Review.</title></hi></byline>
+</div>
+
+
+<pb n="136"/>
+<div id="elliott065" type="poem" n="Night Outposts">
+<docAuthor n="Whiting-Baker, A. E.">A. E. Whiting-Baker</docAuthor>
+<head rend="center">NIGHT OUTPOSTS.</head>
+<note>(British Expeditionary Force.)</note>
+
+<lg type="stanza">
+<l n="1"><hi rend="smallcap">Zip</hi>! --- Zing! ---</l>
+<l rend="indent">A bullet sped!</l>
+<l>The grim Hun chuckled;</l>
+<l rend="indent">A poor heart bled.</l></lg>
+
+<lg>
+<l>Then the lilt of a boyish voice</l>
+<l rend="indent">Rang out through the murky night:</l>
+<l>"Say, Dad -- I'm hurt -- and, why, here's Joyce:</l>
+<l rend="indent">Play -- up -- old school -- Good-night!"</l></lg>
+
+<lg>
+<l>And wan and dreary crept up the day</l>
+<l rend="indent">On a lonely outpost place;</l>
+<l>For the light of life had stolen away</l>
+<l rend="indent">From a dear brown smiling face.</l></lg>
+
+<lg>
+<l>Then pray to your gods for the life, grit and power,</l>
+<l rend="indent">To tear with your hands, sword and gun --</l>
+<l>O! English sons, avenge that hour! --</l>
+<l rend="indent">And CHOKE that chuckling Hun.</l></lg>
+<byline>A. E. WHITING-BAKER.</byline>
+</div>
+
+
+<pb n="137"/>
+<div id="elliott066" type="poem" n="God Save the King">
+<docAuthor n="Flecker, James Elroy">James Elroy Flecker</docAuthor>
+<head rend="center">GOD SAVE THE KING.</head>
+<note>[Copyright. By permission of the late Mr. James Elroy Flecker's representatives.]</note>
+
+<lg type="stanza">
+<l n="1"><hi rend="smallcap">God</hi> save our gracious King,</l>
+<l>Nations and State and King,</l>
+<l rend="indent">God save the King!</l>
+<l>Grant him good Peace Divine,</l>
+<l>But if his Wars be Thine,</l>
+<l>Flash on his Fighting Line</l>
+<l rend="indent">Victory's Wing!</l></lg>
+
+<lg>
+<l>Thou in his suppliant hands</l>
+<l>Hast placed such mighty Lands:</l>
+<l rend="indent4">Save Thou our King!</l>
+<l>As once from golden skies</l>
+<l>Rebels with flaming eyes</l>
+<l>So the King's enemies</l>
+<l rend="indent4">Doom Thou and fling.</l></lg>
+
+<lg>
+<l>Mountains that break the night</l>
+<l>Holds he by Eagle Right,</l>
+<l rend="indent4">Stretching far wing:</l>
+<l>Dawn lands for youth to reap,</l>
+<l>Dim lands where Empires sleep</l>
+<l>His! And the Lion-Deep</l>
+<l rend="indent4">Roars for the King.</l></lg>
+
+<lg>
+<pb n="138"/>
+<l>But most these few dear miles</l>
+<l>Of star-flower-meadowed isles,</l>
+<l rend="indent4">England, all Spring.</l>
+<l>Scotland that by the marge</l>
+<l>Where the blank north doth charge</l>
+<l>Hears Thy voice loud and large</l>
+<l rend="indent4">Guard, and their King!</l></lg>
+
+<lg>
+<l>Grace on the golden dales</l>
+<l>Of Thine old Christian Wales</l>
+<l rend="indent4">Shower till they sing, --</l>
+<l>Till Erin's island Lawn</l>
+<l>Echo the dulcet-drawn</l>
+<l>Song with a shout of Dawn --</l>
+<l rend="indent4">God save the King!</l></lg>
+<byline>JAMES ELROY FLECKER.</byline>
+</div>
+
+</div>
+</body>
+</text>
+</TEI.2>

@@ -1,0 +1,1609 @@
+<TEI.2>
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Late Songs: Electronic Edition</title>
+            <author><name type="person" reg="Tynan, Katharine, 1861-1931">Katharine Tynan</name></author>
+         </titleStmt>
+	 <publicationStmt>
+	   <publisher>Lewis H. Beck Center for Electronic Collections
+	   and Services, Emory University</publisher>
+	   <pubPlace>Atlanta, GA</pubPlace>
+	   <address>
+	     <addrLine>540 Asbury Circle</addrLine>
+	     <addrLine>Woodruff Library</addrLine>
+	     <addrLine>Atlanta, GA 30322</addrLine>
+	   </address>
+	   <availability><p>&#x00A9;Emory University. Permission is
+	   granted to download, transmit, or otherwise reproduce,
+	   distribute or display the contributions to the work claimed
+	   by Emory University for non-profit educational purposes,
+	   provided this header is included in its entirety.  For
+	   inquiries about commercial uses, contact either: Institute
+	   for Jewish Studies, Emory University, Atlanta GA 30322 or
+	   the Lewis H. Beck Center for Electronic Collections and
+	   Services, Woodruff Library, Emory University, Atlanta,
+	   Georgia 30322 </p></availability> 
+	   <date>2004</date>
+	 </publicationStmt>
+	 <seriesStmt>
+	   <title>The Great War</title>
+	 </seriesStmt>
+	 <notesStmt><note></note></notesStmt>
+         <sourceDesc>
+            <bibl>
+	     <title>Late Songs</title>
+	     <author>Katharine Tynan</author>
+	     <pubPlace>London</pubPlace>
+	     <publisher></publisher>
+	     <date></date>
+	   </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+	<projectDesc><p>Poetry contemporary to World War I (the Great
+	War) has been digitized by OCR or rekeying. The work has been
+	done in conjunction with Dr. Harry Rusche of the English
+	Department, Emory University</p></projectDesc>
+	<editorialDecl>
+	<p>Block quotes are marked with q or quote
+	elements</p>
+	</editorialDecl>
+	<tagsDecl>
+	  <rendition id="quote">Paragraphs including q or quote
+	  elements indicate material that is in a block
+	  quote.</rendition>
+	  <rendition id="title">Where the title of a work is
+	  italicized, it is marked with a title element, both in the
+	  text and in footnotes.</rendition>
+	  <tagUsage gi="q" render="quote">blockquote</tagUsage>
+	  <tagUsage gi="quote" render="quote">blockquote</tagUsage>
+	  <tagUsage gi="title" render="title">italic</tagUsage>
+	</tagsDecl>
+	<refsDecl><p>The page numbers of the volumes are indicated by
+	page break elements</p>
+	<p></p>
+	</refsDecl>
+	<classDecl>
+	  <taxonomy id="lcsh">
+	    <bibl>
+	      <title>Library of Congress Subject Headings</title>
+	    </bibl>
+	  </taxonomy>
+	</classDecl>
+      </encodingDesc>
+      <profileDesc>
+         <creation>
+	   <rs type="collection">poetry</rs>
+	   <rs type="language">English</rs>
+            <rs type="ethnicity">Caucasian</rs>
+            <rs type="form">Unedited</rs>
+            <rs type="genre">Poetry</rs>
+            <rs type="geography">Great Britain</rs>
+            <date>1900-1999</date>
+         </creation>
+	 <textClass>
+	   <keywords scheme="lcsh">
+	     <list>
+	       <item>World War, 1914-1918--Poetry.</item>
+	       <item>English poetry--20th Century.</item>
+	       <item>War.</item>
+	     </list>
+	   </keywords>
+	 </textClass></profileDesc>
+      <revisionDesc>
+	<change>
+	  <date>February 2005</date>
+	  <respStmt>
+	    <name>Alice Hickcox</name>
+	    <resp>Electronic Text Specialist</resp>
+	  </respStmt>
+	    <item>completed proof and encode; spell-check and validated.</item>
+	</change>
+	<change>
+	  <date>November 2004</date>
+	  <respStmt>
+	    <name>Amy Parker</name>
+	    <resp>Student Assistant</resp>
+	  </respStmt>
+	    <item>proof and encode</item>
+	</change>
+      </revisionDesc>
+   </teiHeader>
+<text id="latesongs">
+<body>
+<div type="chapter" id="latesongs_001" n="In War Time">
+<head>IN WAR TIME</head>
+<div type="poem" id="latesongs_002" n="The Children's War">
+<head>THE CHILDREN'S WAR</head>
+<lg type="stanza">
+<l n="1"><hi rend="smallcap">This</hi> is the Children's War, because</l>
+<l rend="indent">The victory's to the young and clean.</l>
+<l>Up to the Dragon's ravening jaws</l>
+<l rend="indent">Run dear Eighteen and Seventeen.</l></lg>
+<lg>
+<l>Fresh from the Chrisom waters pure,</l>
+<l rend="indent">Dear boys, so eager to attain</l>
+<l>To the bright visions that allure,</l>
+<l rend="indent">The fierce ordeal, the red pain.</l></lg>
+<lg>
+<l>The light is yet upon their curls:</l>
+<l rend="indent">The dream is still within their eyes;</l>
+<l>Their cheeks are silken as a girl's,</l>
+<l rend="indent">The little Knights of Paradise.</l></lg>
+<lg>
+<l>O men with many scars and stains,</l>
+<l rend="indent">Stand back, abase your souls and pray!</l>
+<l>For now to Nineteen are the gains</l>
+<l rend="indent">And golden Twenty wins the day.</l></lg>
+<pb n="12"/>
+<lg>
+<l>Brown heads with curls all rippled over,</l>
+<l rend="indent">Young bodies slender as a flame,</l>
+<l>They leap to darkness like a lover;</l>
+<l rend="indent">To Twenty-One is fall'n the game.</l></lg>
+<lg>
+<l>It is the Boys' War. Praise be given</l>
+<l rend="indent">To Percivale and Galahad</l>
+<l>Who have won earth and taken Heaven.</l>
+<l rend="indent">By violence! <hi rend="italic">Weep not, but be
+glad.</hi></l></lg></div>
+<pb n="13"/>
+<div type="poem" id="latesongs_003" n="After Jutland">
+<head>AFTER JUTLAND</head>
+<lg type="stanza">
+<l n="1"><hi rend="smallcap">The</hi> City of God is late become a seaport town</l> 
+<l>For the clean and bronzed sailors walking up and down</l>
+<l>And the bearded Commanders, the Captains so brave,</l>
+<l>Bringing there the taste of the sea from the salt sea</l>
+<l rend="indent">wave.</l></lg>
+<lg>
+<l>There are boys in the City's streets make holiday</l>
+<l>And all around are playing-fields and the boys at play;</l>
+<l>They dive in clear waters, climb many a high tree,</l>
+<l>They look out as they used to do for a ship at sea.</l></lg>
+<lg>
+<l>The sailor keeps a clean soul on the seas untrod;</l>
+<l>There is room in the great spaces for the Vision of God</l>
+<l>Walking on the waters, bidding him not fear;</l>
+<l>He has the very cleanest eyes so brave, so clear.</l></lg>
+<lg>
+<l>There's salt wind in Heaven and the salt sea-spray,</l>
+<l>And the little midshipmen boys are shouting at their</l>
+<l rend="indent">play;</l>
+<l>There's a soft sound of waters lapping on the shore,</l>
+<l>The sailor he is home from sea to go back no more.</l></lg></div>
+<pb n="14"/>
+<div type="poem" id="latesongs_004" n="The Mother">
+<head>THE MOTHER</head>
+<lg type="stanza">
+<l n="1"><hi rend="smallcap">Her</hi> boys are not shut out. They come</l>
+<l rend="indent">Homing like pigeons to her door,</l>
+<l> Sure of her tender welcome home,</l>
+<l rend="indent">As many a time before.</l></lg>
+<lg>
+<l>Their bed is made so smooth and sweet,</l>
+<l rend="indent">The fire is lit, the table spread;</l>
+<l>She has poured water for their feet,</l>
+<l rend="indent">That they be comforted.</l></lg>
+<lg>
+<l>As with a fluttering of wings</l>
+<l rend="indent">They are come home, come home to stay;</l>
+<l>With all the bitter dreadful things</l>
+<l rend="indent">Forgot, clean washed away.</l></lg>
+<lg>
+<l>They are so glad to stay, so glad</l>
+<l rend="indent">They nestle to her gown's soft flow,</l>
+<l>As in the loving times they had,</l>
+<l rend="indent">Long ago, long ago.</l></lg>
+<pb n="15"/>
+<lg>
+<l>Oh, not like lonely ghosts in mist</l>
+<l rend="indent">Her boys come from the night and rain,</l>
+<l>But to be clasped, but to be kissed,</l>
+<l rend="indent">And not go out again.</l></lg></div>
+<pb n="16"/>
+<div type="poem" id="latesongs_005" n="At Parting">
+<head>AT PARTING</head>
+<lg type="stanza">
+<l n="1"><hi rend="smallcap">It</hi> was sad weather when you went away,</l>
+<l>Wind, and the rain was raining every day:</l>
+<l rend="indent">And all night long I heard in lonesome sleep</l>
+<l rend="indent">The water running under the bows of the ship,</l>
+<l>All the dark night and till the dawning grey.</l></lg>
+<lg>
+<l>At Salonika it is golden weather.</l>
+<l>Go light of heart, O child, light as a feather,</l>
+<l rend="indent">Valiant and full of laughter, free as air.</l>
+<l rend="indent">God is at Salonika-here and there</l>
+<l>God and my heart are keeping watch together.</l></lg>
+<lg>
+<l>But O when you come back, though skies should weep,</l>
+<l>The water running under the bows of the ship</l>
+<l rend="indent">Shall in my dreams make music exquisite</l>
+<l rend="indent">And all my happy sleep be drenched with it;</l>
+<l>And you coming home, home through the hours of</l>
+<l rend="indent">sleep.</l></lg></div>
+<pb n="17"/>
+<div type="poem" id="latesongs_006" n="The Tears">
+<head>THE TEARS</head>
+<lg type="stanza">
+<l n="1"><hi rend="smallcap">Amid</hi> the Alleluias</l> 
+<l>Small bliss of Heaven he had, alas!</l>
+<l>Because her tears ran down like rain</l>
+<l>And turned his blessing into bane.</l></lg>
+<lg>
+<l>Oh, who is it doth weep and weep,</l>
+<l>When I would run, when I would leap,</l>
+<l>With all my blithe companions?</l>
+<l>Whose rain of tears puts out the suns?</l></lg>
+<lg>
+<l>The others go in gold, in white,</l>
+<l>In the green bowers they have delight;</l>
+<l>They take their pleasure and their play</l>
+<l>After the bitter yesterday.</l></lg>
+<lg>
+<l>They have new garments of the silk,</l>
+<l>Red as a rose and white as milk;</l>
+<l>But ever on my own there lies</l>
+<l>A rain of tears puts out the skies.</l></lg>
+<pb n="18"/>
+<lg>
+<l>O mother, mother, do not weep!</l>
+<l>Fain would I run, fain would I leap;</l>
+<l>And of my youth would have great bliss,</l>
+<l>But that your tears give little ease.</l></lg>
+<lg>
+<l>O mother, mother, do not mourn!</l>
+<l>Because your small tears and forlorn</l>
+<l>Put out Heaven's candles, trickling through,</l>
+<l>And chill me as with bitter dew.</l></lg>
+<lg>
+<l>Amid the Alleluias</l>
+<l>Small joy of Heaven he had, alas!</l>
+<l>From all the bliss of Heaven apart,</l>
+<l>Because her tears fell on his heart.</l></lg></div>
+<pb n="19"/>
+<div type="poem" id="latesongs_007" n="The Nurse">
+<head>THE NURSE</head>
+<lg type="stanza">
+<l n="1"><hi rend="smallcap">A year</hi> before the war God sent</l>
+<l rend="indent">And took her from her tender task,</l>
+<l>Now that we know His kind intent</l>
+<l rend="indent">Nor why, nor wherefore, do we ask.</l></lg>
+<lg>
+<l>He saw the dreadful, glorious war,</l>
+<l rend="indent">And in what scourged and bitter strait</l>
+<l>The young souls thronging from afar</l>
+<l rend="indent">Should fall and faint at Heaven's gate.</l></lg>
+<lg>
+<l>Red wounds for to be staunched and healed</l>
+<l rend="indent">And broken things to be made new;</l>
+<l>The crushed sheaves of the battlefield,</l>
+<l rend="indent">Drenched with a dark and bitter dew.</l></lg>
+<lg>
+<l>Such weariness to put to bed,</l>
+<l rend="indent">Such heaviness to be made glad,</l>
+<l>Such younglings to be comforted</l>
+<l rend="indent">Before their mothers came, she had.</l></lg>
+<pb n="20"/>
+<lg>
+<l>Soft hands to make rough pillows smooth,</l>
+<l rend="indent">A passionate kindness for all pain</l>
+<l>Were hers-God called her home in ruth</l>
+<l rend="indent">And pity for His broken men.</l></lg>
+<lg>
+<l>She plies her lovely business,</l>
+<l rend="indent">Goes hither and thither like a light.</l>
+<l>To yours, to mine, she may give ease;</l>
+<l rend="indent">A King's nurse now goes clad in white.</l></lg></div>
+<pb n="21"/>
+<div type="poem" id="latesongs_008" n="All Souls">
+<head>ALL SOULS</head>
+<lg type="stanza">
+<l n="1"><hi rend="smallcap">The</hi> door of Heaven is on the latch</l>
+<l rend="indent">To-night, and many a one is fain</l>
+<l>To go home for one night's watch</l>
+<l rend="indent">With his Love again.</l></lg>
+<lg>
+<l>Oh, where the father and mother sit</l>
+<l rend="indent">There's drift of dead leaves at the door</l>
+<l>Like pitter-patter of little feet</l>
+<l rend="indent">That come no more.</l></lg>
+<lg>
+<l>Their thoughts are in the night and cold,</l>
+<l rend="indent">Their tears are heavier than the clay,</l>
+<l>But who is this at the threshold</l>
+<l rend="indent">So young and gay?</l></lg>
+<lg>
+<l>They are come from the land o' the young,</l>
+<l rend="indent">They have forgotten how to weep;</l>
+<l>Words of comfort on the tongue,</l>
+<l rend="indent">And a kiss to keep.</l></lg>
+<pb n="22"/>
+<lg>
+<l>They sit down and they stay a while,</l>
+<l rend="indent">Kisses and comfort none shall lack;</l>
+<l>At morn they steal forth with a smile</l>
+<l rend="indent">And a long look back.</l></lg></div>
+<pb n="23"/>
+<div type="poem" id="latesongs_009" n="Colonists">
+<head>COLONISTS</head>
+<lg type="stanza">
+<l n="1"><hi rend="smallcap">What</hi> new star now in the sky</l>
+<l>Needs a starry colony</l>
+<l>That our men flock forth in troops,</l>
+<l>All our joys, our loves, our hopes?</l></lg>
+<lg>
+<l>Wise and brave and kind they go</l>
+<l>Through the lonesome gate and low;</l>
+<l>All our starry colonists</l>
+<l>Through the rains and through the mists,</l></lg>
+<lg>
+<l>To what glories may they fare,</l>
+<l>To what floods of ambient air,</l>
+<l>To what rivers, to what trees,</l>
+<l>To what dreaming palaces?</l></lg>
+<lg>
+<l>Just beyond the gate may be</l>
+<l>Leagues on leagues of crystal sea,</l>
+<l>And high galleons, poop on poop,</l>
+<l>Where they shall go climbing up.</l></lg>
+<pb n="24"/>
+<lg>
+<l>Twisted cordage of spun gold,</l>
+<l>Sails of silk in fold on fold.</l>
+<l>Like a flock of heavenly birds</l>
+<l>Sails the squadron Paradise-wards.</l></lg>
+<lg>
+<l>Spiced winds have ta'en the sails.</l>
+<l>Singing like the nightingales</l>
+<l>The young souls go glad and gay,</l>
+<l>All their faces turned one way.</l></lg>
+<lg>
+<l>Now the Great Adventure calls,</l>
+<l>And they steal, with hushed footfalls,</l>
+<l>For there's work awaits them yonder</l>
+<l>In a starry world of wonder.</l></lg>
+<lg>
+<l>Young and fond and fair and brave,</l>
+<l>What new planet now may crave</l>
+<l>All these starry colonists</l>
+<l>From the rains and from the mists?</l></lg></div>
+<pb n="25"/>
+<div type="poem" id="latesongs_010" n="The Welcome">
+<head>THE WELCOME</head>
+<lg type="stanza">
+<l n="1"><hi rend="smallcap">We</hi> will not banish them as they were
+lost,</l>
+<l>But in our daily talk their names be most,</l>
+<l>Nor from our laughter be they shut away.</l></lg>
+<lg>
+<l>We shall tell over fond old stories of them</l>
+<l>When they were little and we leant above them</l>
+<l>Guarding from danger as God's angels may.</l></lg>
+<lg>
+<l>They come no more as they were used to come,</l>
+<l>Yet in the quiet dawning and the gloam</l>
+<l>Whose eyes are in the shadow and whose smile</l></lg>
+<lg>
+<l>Wavers and vanishes? Oh, is it you,</l>
+<l>Child, are you come, with darkness and the dew,</l>
+<l>To sit down and give comfort for a while?</l></lg>
+<pb n="26"/>
+<lg>
+<l>To sit down as of old and lay your face</l>
+<l>On a poor heart you have left comfortless,</l>
+<l>To draw fond arms about your golden head,</l></lg>
+<lg>
+<l>So glad because you are not put away</l>
+<l>Out of familiar things of every day,</l>
+<l>Like a sad ghost dreaming that he is dead.</l></lg></div>
+<pb n="27"/>
+<div type="poem" id="latesongs_011" n="The Message">
+<head>THE MESSAGE</head>
+<lg type="stanza">
+<l n="1"><hi rend="smallcap">Dear</hi> angel friend, speak to his angel for her;</l>
+<l rend="indent">Tell him a mother prays his angel keep</l>
+<l>Her little son in the battle and the horror</l>
+<l rend="indent">When all her prayers are laid away in sleep.</l></lg>
+<lg>
+<l>All day her prayers flow like a running river</l>
+<l rend="indent">Under the eyes of Him, mighty and kind.</l>
+<l>His angel's prayers shall be as a sweet savour</l>
+<l rend="indent">Lest that her bitter need be out of mind.</l></lg>
+<lg>
+<l>Go tell his angel, where Death flies and hovers</l>
+<l rend="indent">Her son, her little son, is under the swords.</l>
+<l>Blue are his eyes as pools the June sky covers,</l>
+<l rend="indent">Brown his young head, as brown as any bird's.</l></lg>
+<lg>
+<l>Tell him the boy is young and tall for token;</l>
+<l rend="indent">Pluck thou his angel that he speed, alert;</l>
+<l>Lest that her trust of eighteen years be broken,</l>
+<l rend="indent">Lest that her precious young son should be hurt.</l></lg>
+<pb n="28"/>
+<lg>
+<l>Tell him he fights amid the gloomy mountains</l>
+<l rend="indent">So slight, so brave, against the terrible Kings.</l>
+<l>Say that he thirsts and harsh earth has no fountains,</l>
+<l rend="indent">Say that he falls-oh, pluck his angel's wings!</l></lg>
+<lg>
+<l>Shout to his angel if he should be roaming</l>
+<l rend="indent">That her one little son's lost if he fail.</l>
+<l>Bid him be quick and splendid at his coming,</l>
+<l rend="indent">Dreadful with beauty so that he prevail.</l></lg></div>
+<pb n="29"/>
+<div type="poem" id="latesongs_012" n="For an Airman">
+<head>FOR AN AIRMAN</head>
+<lg type="stanza">
+<l n="1"><hi rend="smallcap">Having</hi> found wings, he tossed, light as a feather,</l>
+<l rend="indent">Airy as thistledown, 'twixt earth and sky.</l>
+<l>Oh, but the dark earth held his soul in tether!</l>
+<l rend="indent">Could he come back who knew what 'twas to fly?</l></lg>
+<lg>
+<l>His gravitation's now for stars and planets:</l>
+<l rend="indent">These draw him, while the earth drops like a stone.</l>
+<l>Strong-winged beyond the flight of gulls or gannets</l>
+<l rend="indent">He rises, ever rises; he is flown.</l></lg>
+<lg>
+<l>When he came back all Spring was in his vision;</l>
+<l rend="indent">Yet pined he like a wild bird in a net.</l>
+<l>His dreams were all of fields and groves Elysian</l>
+<l rend="indent">Where he flew ever and no bounds were set.</l></lg>
+<lg>
+<l>Did someone bring his body down? Then gaily</l>
+<l rend="indent">He waved to his foe: "Your luck to-day, not mine";</l>
+<l>Shook himself free of bonds that irked him daily</l>
+<l rend="indent">With the last courtesy, so brave and fine.</l></lg>
+<pb n="30"/>
+<lg>
+<l>He has o'erflown return in the wild rapture.</l>
+<l rend="indent">What rumour of him in the unending space?</l>
+<l>Flying so far, so fast, beyond recapture;</l>
+<l rend="indent">The flying ecstasy bright in his face.</l></lg></div>
+<pb n="31"/>
+<div type="poem" id="latesongs_013" n="The Prayer">
+<head>THE PRAYER</head>
+<lg type="stanza">
+<l n="1"><hi rend="smallcap">She</hi> drew the grey shawl round her head;</l>
+<l>"Sure it is bitter cold," she said;</l>
+<l>"An' is there news of <hi rend="italic">him</hi>, asthore?"</l>
+<l rend="indent"><hi rend="italic">God help the mothers of the world!</hi></l></lg>
+<lg>
+<l>"I do be prayin' to mesel'</l>
+<l>The Lord may keep him safe and well</l>
+<l>An' bring him back to his mother's door."</l>
+<l rend="indent"><hi rend="italic">God help the mothers of the world!</hi></l></lg>
+<lg>
+<l>"The lambs are perished wid the storm.</l>
+<l>God keep his darlin' head from harm!</l>
+<l>It's well for her has ne'er a one!"</l>
+<l rend="indent"><hi rend="italic">God help the mothers of the world!</hi></l></lg>
+<lg>
+<l>And as I went my way I heard</l>
+<l>Her call like a lamenting bird:</l>
+<l>"I used to fret that had no son."</l>
+<l rend="indent"><hi rend="italic">God help the mothers of the world!</hi></l></lg></div>
+<pb n="32"/>
+<div type="poem" id="latesongs_014" n="In Thy Likeness">
+<head>IN THY LIKENESS</head>
+<lg type="stanza">
+<l n="1"><hi rend="smallcap">Now</hi> those who would and who would not</l>
+<l rend="indent">Must drink Thy bitter Cup.</l>
+<l>No angels in their garden plot</l>
+<l rend="indent">Their heads have lifted up.</l></lg>
+<lg>
+<l>They have been scourged and been stripped bare</l>
+<l rend="indent">As Thou wast long ago:</l>
+<l>The bloodied thorns are in their hair,</l>
+<l rend="indent">Pressed deep as Thou didst know.</l></lg>
+<lg>
+<l>They have toiled up Thy Calvary hill</l>
+<l rend="indent">And fainted 'neath their load:</l>
+<l>With a good will or an ill will</l>
+<l rend="indent">Have taken the whip, the goad.</l></lg>
+<lg>
+<l>And they with Thee are crucified</l>
+<l rend="indent">Whether they will or no:</l>
+<l>Now bid to left side and right side</l>
+<l rend="indent">Thy healing mercies flow.</l></lg>
+<pb n="33"/>
+<lg>
+<l>Yea, when Thou dost commend Thy Sprite</l>
+<l rend="indent">And the Third Hour has struck,</l>
+<l>Summon from left hand and from right</l>
+<l rend="indent">Thy black and Thy white flock!</l></lg>
+<lg>
+<l>On these, on those, Thy judgments fell.</l>
+<l rend="indent">They died because they must.</l>
+<l>Give them Thy Eastertide as well</l>
+<l rend="indent">And New Life from the dust.</l></lg>
+<lg>
+<l>When with Ascension Thou dost rise</l>
+<l rend="indent">Shall these not rise and go,</l>
+<l>To find once more the Paradise</l>
+<l rend="indent">They lost so long ago?</l></lg></div></div>
+<pb n="35"/>
+<div type="chapter" id="latesongs_015" n="The Other Side">
+<head>THE OTHER SIDE</head>
+<pb n="37"/>
+<div type="poem" id="latesongs_016" n="The Fulfilment">
+<head>THE FULFILMENT</head>
+<lg type="stanza">
+<l n="1"><hi rend="smallcap">Who</hi> are these that go with our girl white as snow,</l>
+<l rend="indent">The one speckless lily since the world began?</l>
+<l>They carry the well-water for our little dear</l>
+<l rend="indent">daughter,</l>
+<l rend="indent">Their wings are as sapphire, my good wife Anne.</l></lg>
+<lg>
+<l>Joachim, my husband, there is naught amiss,</l>
+<l rend="indent">Though something's changed our girl from the child</l>
+<l rend="indent">she was</l>
+<l>When from the hidden Temple she came, gentle and</l>
+<l rend="indent">simple-</l>
+<l rend="indent">Surely some wonderful thing of God has come to pass!</l></lg>
+<lg>
+<l>Anne, in the dawning when the lights were low</l>
+<l rend="indent">And the first bird was stirring I was sore afeard.</l>
+<l>There was someone with our girl, clad in the rose and</l>
+<l rend="indent">pearl,</l>
+<l rend="indent">For I heard his talking and her answer heard.</l></lg>
+<pb n="38"/>
+<lg>
+<l>When she plucks the grapes from the clinging vine,</l>
+<l rend="indent">When she sweeps the hearth-place and kneads the</l>
+<l rend="indent">bread,</l>
+<l>There's a hand fine and slender, quick aid to render.</l>
+<l rend="indent">What light grows about her, our little maid?</l></lg>
+<lg>
+<l>Anne, in the house there's a stirring of feet,</l>
+<l rend="indent">Winnow of wings and rustle upon the stair.</l>
+<l>The flowers spring before her and the stars lean o'er her,</l>
+<l rend="indent">And a ring of light dazzles gold in her hair.</l></lg>
+<lg>
+<l>Joachim, my goodman, great things are afoot,</l>
+<l rend="indent">The Hour of God is striking and the Word fulfilled.</l>
+<l>The child that shall be born shall wear the Crown of</l>
+<l rend="indent">Thorn.</l>
+<l rend="indent">Yea, for world's healing His Blood be spilled.</l></lg>
+<lg>
+<l>Mary goes by them, slender and young.</l>
+<l rend="indent">The Rose of Sharon's budded and Jesse's Rod in</l>
+<l rend="indent">flower,</l>
+<l>Magnificat she is singing and her song soaring, winging,</l>
+<l rend="indent">Sets all the roses swinging in Heaven's bower.</l></lg></div>
+<pb n="39"/>
+<div type="poem" id="latesongs_017" n="The Sleep">
+<head>THE SLEEP</head>
+<lg type="stanza">
+<l n="1"><hi rend="smallcap">God</hi> thought of sleep, so that He might</l>
+<l>Cradle His Man in the cool night</l>
+<l>With more than mother's love, and hold</l>
+<l>Warm to His breast the child of old.</l></lg>
+<lg>
+<l>Poor Man, that is so proud and high,</l>
+<l>Yet he must fall asleep and lie</l>
+<l>Open to all the winds and harms,</l>
+<l>Unless God rocks him in His arms.</l></lg>
+<lg>
+<l>Poor Man, though all besmirched, shall keep</l>
+<l>Yet the last innocence of sleep,</l>
+<l>And like a child must lie alone</l>
+<l>Defenceless, harmless, overthrown.</l></lg>
+<lg>
+<l>God's gentleness with sinners see!</l>
+<l>In sleep they will not disagree</l>
+<l>Nor hurt as only lovers can;</l>
+<l>They are at one, God and His Man.</l></lg>
+<pb n="40"/>
+<lg>
+<l>Tenderly night shall find him, held</l>
+<l>To a kind breast, who late rebelled;</l>
+<l>New-reconciled with kisses he</l>
+<l>Shall slumber on a mighty knee.</l></lg>
+<lg>
+<l>Man's but a toddling child, stripped bare</l>
+<l>Of all the countless years that were;</l>
+<l>Little and low: God's art to keep</l>
+<l>A youngling thing in His arms asleep.</l></lg></div>
+<pb n="41"/>
+<div type="poem" id="latesongs_018" n="The Tryst">
+<head>THE TRYST</head>
+<lg type="stanza">
+<l n="1"><hi rend="smallcap">Lest</hi> that His love should nod asleep,</l>
+<l rend="indent">His fainting arms fall by His side,</l>
+<l>Lest He forget His tryst to keep,</l>
+<l rend="indent">One sinner turn away denied,</l>
+<l>Wide on the Cross His arms are spread,</l>
+<l>His bosom for the whole world's head.</l></lg>
+<lg>
+<l>Now, now, Himself He will not save,</l>
+<l rend="indent">His feet are halt for evermore.</l>
+<l>Yea, though they lay Him in the grave</l>
+<l rend="indent">And seal the stone and guard the door,</l>
+<l>He keeps the place He chose upon</l>
+<l>The Hill: His anguish is not done.</l></lg>
+<lg>
+<l>The nails of Love have fixed Him there,</l>
+<l rend="indent">He will not take His bed and go.</l>
+<l>His feet are hid in Magdalen's hair;</l>
+<l rend="indent">Through all the centuries, sad and slow,</l>
+<l>While Heaven awaits Him He delays,</l>
+<l>Love's Prisoner through the unending days.</l></lg>
+<pb n="42"/>
+<lg>
+<l>He broods above the battle-field,</l>
+<l rend="indent">His heavy head upon His breast:</l>
+<l>Come, all ye wounded, and be healed.</l>
+<l rend="indent">Come, all ye broken hearts, and rest.</l>
+<l>Come home, come home, black sheep and white,</l>
+<l>In from the darkness to the light.</l></lg></div>
+<pb n="43"/>
+<div type="poem" id="latesongs_019" n="Loneliness">
+<head>LONELINESS</head>
+<lg type="stanza">
+<l n="1"><hi rend="smallcap">He</hi> who had all else Heaven and earth</l>
+<l>Could give Him, till His human Birth</l>
+<l>He had no mother, though He had</l>
+<l>His Father's love, secure and glad;</l>
+<l>Yet He made mothers for delight</l>
+<l>Of the small babes in the cold night.</l></lg>
+<lg>
+<l>He saw how well His hand had made</l>
+<l>Her bosom for the baby's head,</l>
+<l>How tender are her arms to fold</l>
+<l>The shivering thing in a soft fold,</l>
+<l>And how her voice goes hush-a-lo</l>
+<l>Rocking the cradle to and fro.</l></lg>
+<lg>
+<l>He has had all these for content.</l>
+<l>For three-and-thirty years has leant</l>
+<l>On a fond heart that fails him not.</l>
+<l>He is in the fiery chariot!</l>
+<l>The clouds have ta'en him and the wind.</l>
+<l><hi rend="italic">But His sweet Mother's left behind!</hi></l></lg>
+<pb n="44"/>
+<lg>
+<l>What's wrong with Heaven? His Father's there,</l>
+<l>The brooding Dove's aloft in air,</l>
+<l>Heaven's as it was, serene, unflawed.</l>
+<l>For the first time the Heart of God,</l>
+<l>Lately made man, hath little ease,</l>
+<l>For loneliness, for loneliness.</l></lg></div>
+<pb n="45"/>
+<div type="poem" id="latesongs_020" n="The Soul Praises the Body">
+<head>THE SOUL PRAISES THE BODY</head>
+<lg type="stanza">
+<l n="1"><hi rend="smallcap">This</hi> holy body where Thou hast kept</l>
+<l rend="indent">For a brief season watch with me,</l>
+<l>It shall not go unpraised, unwept,</l>
+<l rend="indent">When it shall break to set me free.</l></lg>
+<lg>
+<l>At its low door Thou hast come in,</l>
+<l rend="indent">And in Thy passage made it bright;</l>
+<l>The poor stones where Thy feet have been</l>
+<l rend="indent">Turn now to rose and diamond light.</l></lg>
+<lg>
+<l>Face downward on my dusty floor,</l>
+<l rend="indent">Angels have bowed since Thou wert there,</l>
+<l>And made it clean Thine eyes before,</l>
+<l rend="indent">Swept by their feathers and their hair.</l></lg>
+<lg>
+<l>Fragrances linger, a sweet smoke</l>
+<l rend="indent">Blown backward from Thy royal way,</l>
+<l>So all the envious heavenly folk</l>
+<l rend="indent">Guess Thou wert here at break of day.</l></lg>
+<pb n="46"/>
+<lg>
+<l>This body is now Thy holy house</l>
+<l rend="indent">Where Thou didst come and sit at feast,</l>
+<l>While all the golden birds in boughs</l>
+<l rend="indent">Acclaimed the Day-Star and my Guest.</l></lg></div>
+<pb n="47"/>
+<div type="poem" id="latesongs_021" n="The Vision of Mary">
+<head>THE VISION OF MARY</head>
+<lg type="stanza">
+<l n="1"><hi rend="smallcap">There's</hi> a white rose on the thorn,</l>
+<l rend="indent">A red rose on the tree,</l>
+<l>And Christ is born on Christmas morn</l>
+<l rend="indent">That all men may go free.</l></lg>
+<lg>
+<l>The white rose for Mary,</l>
+<l rend="indent">The red rose for her Son;</l>
+<l>When she came down through the sleeping town,</l>
+<l rend="indent">The red and white were one.</l></lg>
+<lg>
+<l>Curled like a little moon</l>
+<l rend="indent">He shone amid the hay,</l>
+<l>The stars forsake their heavenly track</l>
+<l rend="indent">To sing him lullalay.</l></lg>
+<lg>
+<l>She kneels for to adore</l>
+<l rend="indent">The earth and Heaven's Desire.</l>
+<l>Oh, what is this beneath her kiss</l>
+<l rend="indent">Throbs like a little fire?</l></lg>
+<pb n="48"/>
+<lg>
+<l>In each small hand she sees</l>
+<l rend="indent">A red rose-petal lie,</l>
+<l>And while she sees hath little ease</l>
+<l rend="indent">Lest Herod should draw nigh.</l></lg>
+<lg>
+<l>And when on each small foot</l>
+<l rend="indent">She sees the red-rose stain,</l>
+<l>She would snatch him fast unto her breast</l>
+<l rend="indent">Lest he in snares be ta'en.</l></lg>
+<lg>
+<l>Oh, when she sees the smirch</l>
+<l rend="indent">Of the red rose on His side,</l>
+<l>What sword is in her heart; what dart</l>
+<l rend="indent">That will not be denied?</l></lg>
+<lg>
+<l>What coronal of gems,</l>
+<l rend="indent">Of ruby or coral spine,</l>
+<l>Now, now is laid on His pretty head,</l>
+<l rend="indent">With His sweet curls doth twine</l></lg>
+<lg>
+<l>His Mother stoops to kiss</l>
+<l rend="indent">The wounds of her Baby Son;</l>
+<l>In dreams she sees a high trellis</l>
+<l rend="indent">And one red rose thereon.</l></lg>
+<pb n="49"/>
+<lg>
+<l>The sword turns in her heart,</l>
+<l rend="indent">She clasps Him warm and close,</l>
+<l>With lullaby-loo His fret unto</l>
+<l rend="indent">She lulls her Destined Rose.</l></lg></div>
+<pb n="50"/>
+<div type="poem" id="latesongs_022" n="The Pasch">
+<head>THE PASCH</head>
+<lg type="stanza">
+<l n="1"><hi rend="smallcap">Not</hi> yet, not yet has He arisen,</l>
+<l rend="indent">The mourning world awaits Him still,</l>
+<l>Awhile He keeps His rock-bound prison,</l>
+<l rend="indent">Hard as the iceberg and as chill.</l>
+<l>Love's willing prisoner He waits</l>
+<l>While men and angels watch the gates.</l></lg>
+<lg>
+<l>For all the stone is rolled away,</l>
+<l rend="indent">For all the garden waits the sun;</l>
+<l>His Mother for her Star of Day</l>
+<l rend="indent">Still watching while the minutes run,</l>
+<l>Cries: Son, wilt Thou not rise? O rise,</l>
+<l>My Sun, my Moon of Paradise!</l></lg>
+<lg>
+<l>The Friend of sinners, once again</l>
+<l rend="indent">Awhile with sinners He delays;</l>
+<l>Not such as loving Magdalen,</l>
+<l rend="indent">Whose lovely eyes are water-ways</l>
+<l>To bathe His feet and, having done,</l>
+<l>Dry them in cobwebs of the sun.</l></lg>
+<pb n="51"/>
+<lg>
+<l>Cold as the grave the stony heart</l>
+<l rend="indent">Where He comes in and sits at feast.</l>
+<l>There's a white table spread apart:</l>
+<l rend="indent">While Heaven awaits the Star in the East,</l>
+<l>And the poor garden sleeps in shade,</l>
+<l>He lifts the graceless heart He made.</l></lg></div>
+<pb n="52"/>
+<div type="poem" id="latesongs_0221" n="The Grey Country">
+<head>THE GREY COUNTRY</head>
+<lg type="stanza">
+<l n="1">I <hi rend="smallcap">dreamt</hi> a dream on November Night</l>
+<l rend="indent">Of the dear souls that wait in pain</l>
+<l>For the full Vision, the Delight,</l>
+<l rend="indent">Beauty that shall not change nor wane.</l></lg>
+<lg>
+<l>The grey country's to Heaven close,</l>
+<l rend="indent">Not Heaven but almost Heaven's twin;</l>
+<l>As a grey rose to a gold rose,</l>
+<l rend="indent">As a grey image faint and thin.</l></lg>
+<lg>
+<l>In the grey land were bliss enough</l>
+<l rend="indent">Did not the Vision shine and gleam,</l>
+<l>Turning the softest ways to rough</l>
+<l rend="indent">Until they might attain to Him?</l></lg>
+<lg>
+<l>Mary walking in Heaven's bower</l>
+<l rend="indent">Heard the sighing after her Son:</l>
+<l>Give me Thy Mercy for an hour,</l>
+<l rend="indent">Thou who wert once my little one!</l></lg>
+<pb n="53"/>
+<lg>
+<l>Mary came with stars in her hair,</l>
+<l rend="indent">The new moon was under her feet;</l>
+<l>In the grey world so still and fair</l>
+<l rend="indent">The heart of the world began to beat.</l></lg>
+<lg>
+<l>Some were clinging beside her skirt,</l>
+<l rend="indent">Soul on soul like a flock of birds;</l>
+<l>Others nested, oh past desert!</l>
+<l rend="indent">On the heart that had seven swords.</l></lg>
+<lg>
+<l>Mary gathers them one and all,</l>
+<l rend="indent">Many a one late home from war,</l>
+<l>As they were children tender and small-</l>
+<l rend="indent">Sweetly gathers them all to her.</l></lg>
+<lg>
+<l>As a green tree in a bird's flight</l>
+<l rend="indent">I saw Mary amid her flock,</l>
+<l>Carrying souls in her veil white,</l>
+<l rend="indent">Hiding them warm in her blue cloak.</l></lg></div>
+<pb n="54"/>
+<div type="poem" id="latesongs_023" n="The Little Brothers">
+<head>THE LITTLE BROTHERS</head>
+<lg type="stanza">
+<l n="1"><hi rend="smallcap">God</hi> the Son in Paradise,</l>
+<l rend="indent">Being young, looked down to see</l>
+<l>Sons of God in earth's disguise:</l>
+<l rend="indent">Are not these my brothers? said He.</l></lg>
+<lg>
+<l>Though they stray so far, He said,</l>
+<l rend="indent">From My Father's purpose kind,</l>
+<l>His bright image overlaid</l>
+<l rend="indent">Mirrors now no more His mind.</l></lg>
+<lg>
+<l>All these children, brothers all,</l>
+<l rend="indent">Heirs to Heaven as it was meant;</l>
+<l>Shall their Brother see them thrall</l>
+<l rend="indent">While His Heaven holds Him content?</l></lg>
+<lg>
+<l>Take My orb and diadem!</l>
+<l rend="indent">I am weary of My throne:</l>
+<l>Let Me be as one of them,</l>
+<l rend="indent">Their own brother, yea, their own.</l></lg>
+<pb n="55"/>
+<lg>
+<l>Let Me be of woman born,</l>
+<l rend="indent">Just as weak, as frail as these;</l>
+<l>Subject to their shame and scorn,</l>
+<l rend="indent">Solaces and agonies.</l></lg>
+<lg>
+<l>Take Humanity for wear,</l>
+<l rend="indent">Put on Sorrow for a dress;</l>
+<l>Know the piteous things they bear-</l>
+<l rend="indent">Poverty and loneliness.</l></lg>
+<lg>
+<l>God the Father, Whom His Son</l>
+<l rend="indent">Pleases well, in fatherhood</l>
+<l>Smiled upon His only One:</l>
+<l rend="indent">Go, dear Son: the thought is good.</l></lg>
+<lg>
+<l>Those who have lost Paradise,</l>
+<l rend="indent">My poor stained and wounded flock,</l>
+<l>Now My own Son pays the price</l>
+<l rend="indent">And the Key turns in the lock.</l></lg>
+<lg>
+<l>Son, there is a day to come</l>
+<l rend="indent">And Thy cry shakes Heaven that day,</l>
+<l>While Thy Father's bowed in gloom;</l>
+<l rend="indent">Yet-I would not bid Thee stay.</l></lg></div>
+<div type="poem" id="latesongs_024" n="The Dreams">
+<head>THE DREAMS</head>
+<lg type="stanza">
+<l n="1"><hi rend="smallcap">When</hi> I am sleeping I go in dreams</l>
+<l rend="indent">Far from the children and the man beside,</l>
+<l>I meet with the dead and talk, nor strange it seems,</l>
+<l rend="indent">Since I've forgotten that they ever died.</l></lg>
+<lg>
+<l>They come in so quietly, the loved and lost.</l>
+<l rend="indent">There is so much to say in a short while.</l>
+<l>Nowise strange it is that a dear ghost</l>
+<l rend="indent">Should be as the living and be glad and smile.</l></lg>
+<lg>
+<l>In the old garden we go hand in hand.</l>
+<l rend="indent">When friends are long parted there is much to say,</l>
+<l>Much to be explaining and to understand.</l>
+<l rend="indent">We walk in old gardens in a long-dead May.</l></lg>
+<lg>
+<l>Breasting the hill we go we skirt the wheat,</l>
+<l rend="indent">By houses and gardens that once I knew.</l>
+<l>All too fast the time goes when old friends meet.</l>
+<l rend="indent">Sure, I was starved for you, and you, and you!</l></lg>
+<pb n="60"/>
+<lg><l>Was I forgetting, then, the patient dead?</l>
+<l rend="indent">Mercy of mercies that in dreams they live!</l>
+<l>They come seeking and finding me upon my bed.</l>
+<l rend="indent">In dreams they comfort me, in dreams forgive.</l></lg>
+<lg>
+<l>They come to me in my dreams, not cold and lone.</l>
+<l rend="indent">Oh, never sad ghosts they come to fret my sleep,</l>
+<l>But just as I knew them in the days long gone.</l>
+<l rend="indent">When I wake from my dreams I wake to weep.</l></lg></div>
+<pb n="61"/>
+<div type="poem" id="latesongs_025" n="After Years">
+<head>AFTER YEARS</head>
+<lg type="stanza">
+<l n="1"><hi rend="smallcap">I give</hi> God glory and grace</l>
+<l>I am come home again</l>
+<l rend="indent">To the delightsome ways</l>
+<l>And the wild soft rain.</l>
+<l rend="indent">Lights on the hill and plain</l>
+<l>As in remembered days.</l>
+<l>Now I am home again,</l>
+<l rend="indent">I give great praise.</l></lg>
+<lg>
+<l>When I awake at dawn,</l>
+<l rend="indent">I hear the birdies sing;</l>
+<l>Deep dews in field and lawn,</l>
+<l rend="indent">The mountains in a ring;</l>
+<l>Life an enchanted thing,</l>
+<l rend="indent">The hour grey as a fawn;</l>
+<l>I whisper thanksgiving</l>
+<l rend="indent">When I awake at dawn.</l></lg>
+<lg>
+<l>I seek no more the town,</l>
+<l rend="indent">Ah, wherefore should I go?</l>
+<l>Hills to the sea look down,</l>
+<l rend="indent">The rivers softly flow.</l>
+<pb n="62"/>
+<l>With friends of long ago</l>
+<l rend="indent">Life has a golden crown,</l>
+<l>In fields I used to know,</l>
+<l rend="indent">And meadows grey and brown.</l></lg>
+<lg>
+<l>And if the night be chill,</l>
+<l rend="indent">Of fuel I have great store;</l>
+<l>We heap the fire until</l>
+<l rend="indent">The faggots leap and roar.</l>
+<l>All my beloveds of yore</l>
+<l rend="indent">Of talk shall take their fill</l>
+<l>Till the grey dawn's at the door</l>
+<l rend="indent">And the grey wind at the sill.</l></lg></div>
+<pb n="63"/>
+<div type="poem" id="latesongs_026" n="The Little Old Woman">
+<head>THE LITTLE OLD WOMAN</head>
+<lg type="stanza">
+<l n="1"><hi rend="smallcap">The</hi> Little Old Woman has found you at last,</l>
+<l rend="indent">The Little Old Woman who is born a Queen;</l>
+<l>She stands and she rattles at the door long-fast:</l>
+<l rend="indent">Gladly it opes to her, and she steps in.</l></lg>
+<lg>
+<l>The Little Old Woman is the World's Rose.</l>
+<l rend="indent">With the milk and the honey she comes again.</l>
+<l>Were you forgetting her for These or Those?</l>
+<l rend="indent">The Little Old Woman has the hearts of men.</l></lg>
+<lg>
+<l>Under her tatters she is fair and young:</l>
+<l rend="indent">Sweetness of sweetness is her honey mouth;</l>
+<l>Men have died for her to save her wrong;</l>
+<l rend="indent">Love been spilt for her through the long
+drouth.</l></lg>
+<lg>
+<l>Were you forgetting her for These or Those?</l>
+<l rend="indent">Shall you forget her to the last heart-beat?</l>
+<l>Dark Rose of Tenderness, and the One Rose</l>
+<l rend="indent">To turn Life bitter and to make Death sweet.</l></lg></div>
+<pb n="64"/>
+<div type="poem" id="latesongs_027" n="Sanctuaries">
+<head>SANCTUARIES</head>
+<lg type="stanza">
+<l n="1"><hi rend="smallcap">Thou</hi> givest me greenest sanctuaries</l>
+<l>As the birds have the trees.</l>
+<l>The birds have the trees and I</l>
+<l>Deep shadow and blue sky, </l>
+<l>A well of waters, a palm tree,</l>
+<l>A bird and a bee.</l></lg>
+<lg>
+<l>As though I were Thine only one</l>
+<l>Thou makest for me alone </l>
+<l>A hearth-fire in the wintry cold,</l>
+<l>A walled city, a sweet fold, </l>
+<l>A winged sentinel to tell </l>
+<l>To the night: All's well!</l></lg>
+<lg>
+<l>Thou spreadest over me and mine </l>
+<l>The night a-shine </l>
+<l>With strange and wonderful eyes of stars; </l>
+<l>And weary of the day's wars </l>
+<l>Into the nest of love we creep</l>
+<l>And lie asleep.</l></lg>
+<lg>
+<l>Hearts are Thy sanctuaries: Thou hast set</l>
+<l>Wide open a heart's gate</l>
+<l>Where I come in and am at rest,</l>
+<l>A bed for my heart, a nest, </l>
+<l>Sure comfort, surplusage of love.</l>
+<l>Thou givest enough!</l></lg>
+<lg>
+<l>Woods are Thy sanctuaries and all</l>
+<l>Dear gardens musical,</l>
+<l>And fields and groves where it may be</l>
+<l>Thine angel walks with me.</l>
+<l>Thine angel! Nay, but Thou dost walk</l>
+<l>With me and talk.</l></lg>
+</div>
+<pb n="66"/>
+<div type="poem" id="latesongs_028" n="An Abiding City">
+<head>AN ABIDING CITY</head>
+<lg type="stanza">
+<l n="1"><hi rend="smallcap">My</hi> city walls are builded sure</l>
+<l rend="indent">Whatever foes assail;</l>
+<l>I go my ways in peace secure</l>
+<l rend="indent">As I were clad in mail.</l></lg>
+<lg>
+<l>The Hand that holds me keeps me well,</l>
+<l rend="indent">'Twixt earth and heaven I rest.</l>
+<l>Within that Hand in joy I dwell,</l>
+<l rend="indent">Without am sore distrest.</l></lg>
+<lg>
+<l>Free from all cares this Hand doth hold</l>
+<l rend="indent">Poor folk that creep within.</l>
+<l>Darkness and grief are turned to gold,</l>
+<l rend="indent">There's naught of soil or sin.</l></lg>
+<lg>
+<l>When dawn comes redly up like wine</l>
+<l rend="indent">It shines through Fingers five;</l>
+<l>The Precious Blood was shed long-syne</l>
+<l rend="indent">To keep my soul alive.</l></lg>
+<pb n="67"/>
+<lg>
+<l>Safe in that Hand nothing I dread,</l>
+<l rend="indent">No foe shall make me fear.</l>
+<l>I who have roses for my bed</l>
+<l rend="indent">Soft as a bosom dear.</l></lg>
+<lg>
+<l>My city walls are builded strong,</l>
+<l rend="indent">My sentries go in white,</l>
+<l>The years long and the seasons long</l>
+<l rend="indent">Pass in a dream of light.</l></lg>
+</div>
+<pb n="68"/>
+<div type="poem" id="latesongs_029" n="Anniversary">
+<head>ANNIVERSARY</head>
+<lg type="stanza">
+<l n="1"><hi rend="smallcap">There</hi> were so many to pray for, O dear grey head,</l>
+<l rend="indent">Your day went out unnoted; but when I slept,</l>
+<l>Tender and all-forgiving you came from the dead,</l>
+<l rend="indent">Came in my dreams to remind me of trysts unkept.</l></lg>
+<lg>
+<l>Never a prayer was offered: no Mass was sung:</l>
+<l rend="indent">I thought day-long on the stranger in bitter need.</l>
+<l>Into my dreams, my dear one, as when I was young,</l>
+<l rend="indent">You came and we clung together, O dear grey
+head.</l></lg>
+<lg>
+<l>All night long it was parting, and parting soon&#x2014;</l>
+<l rend="indent">All night long I was weeping, and weeping sore&#x2014;</l>
+<l>That was the loneliest parting under the moon,</l>
+<l rend="indent">When the day and the night together met at the
+door.</l></lg>
+<lg>
+<l>Dear, but you had to travel so far to remind</l>
+<l rend="indent">Your daughter who went forgetting, ah, cold as the clay!</l>
+<l>All night long you stayed with me, fond and kind;</l>
+<l rend="indent">All night long you grieved with me until the day.</l>
+</lg>
+</div>
+<pb n="69"/>
+<div type="poem" id="latesongs_030" n="The Last Quarrel">
+<head>THE LAST QUARREL</head>
+<lg type="stanza">
+<l n="1"><hi rend="smallcap">As</hi> I lay sleeping on my bed,</l>
+<l rend="indent">Before the dawn of day,</l>
+<l>I dreamt my only Love was dead&#x2014;</l>
+<l rend="indent">My only Love alway.</l></lg>
+<lg>
+<l>Oh, dreadful anguish of a dream,</l>
+<l rend="indent">Beyond all waking grief!</l>
+<l>In all the darkness not a gleam,</l>
+<l rend="indent">Nor in the pang relief.</l></lg>
+<lg>
+<l>Yet was I spared the sharpest sword,</l>
+<l rend="indent">And the fierce thrust thereof&#x2014;</l>
+<l>I had forgotten the last word</l>
+<l rend="indent">Wherewith I sped my Love.</l></lg>
+</div>
+<pb n="70"/>
+<div type="poem" id="latesongs_031" n="The Tree">
+<head>THE TREE</head>
+<lg type="stanza">
+<l n="1"><hi rend="smallcap">Think</hi> of her when she shall be dead</l>
+<l rend="indent">As of a kindly tree</l>
+<l>Within whose boughs some nests were made</l>
+<l rend="indent">For downy babes to be.</l></lg>
+<lg>
+<l>Through sun and shade on the greensward</l>
+<l rend="indent">Her songs went up in praise</l>
+<l>Who mused upon the forest's Lord</l>
+<l rend="indent">Through all her length of days.</l></lg>
+<lg>
+<l>No king of woodland she, but just</l>
+<l rend="indent">A small tree, low and wide,</l>
+<l>By which some faint from heat and dust</l>
+<l rend="indent">Sat down well satisfied.</l></lg>
+<lg>
+<l>Say that she had a well to keep</l>
+<l rend="indent">Where all might drink their fill,</l>
+<l>Say that she comforted with sleep</l>
+<l rend="indent">The sorefoot traveller still.</l></lg>
+<pb n="70"/>
+<lg>
+<l>Say that the creatures came to graze, </l>
+<l rend="indent">And lay in pastures cool</l>
+<l>Beside the pleasant water-ways, </l>
+<l rend="indent">And her content was full.</l></lg>
+<lg>
+<l>Say that her pleasant maze of shade </l>
+<l rend="indent">Soothed the aching eyes</l>
+<l>Like dew upon the heavy head </l>
+<l rend="indent">Under the throbbing skies.</l></lg>
+<lg>
+<l>Say that her birds were never far </l>
+<l rend="indent">But they came home again</l>
+<l>And in her branches singing were </l>
+<l rend="indent">Despite the snow and rain.</l></lg>
+<lg>
+<l>Say that in Spring her boughs were green,</l>
+<l rend="indent">The joy ran in her blood,</l>
+<l>That Summer clad her like a Queen </l>
+<l rend="indent">Under a velvet hood.</l></lg>
+<lg>
+<l>But say that when her Autumn came </l>
+<l rend="indent">Her best was yet to be:</l>
+<l>She clad herself in gold and flame </l>
+<l rend="indent">Like to a Burning Tree.</l></lg>
+<pb n="72"/>
+<lg>
+<l>Say that she feared no Winter white </l>
+<l rend="indent">In whose thin boughs did swing</l>
+<l>The moon, the stars, for a lantern bright </l>
+<l rend="indent">To light the feet of Spring.</l></lg>
+<lg>
+<l>Say that her head was never bowed </l>
+<l rend="indent">Though trouble might befall,</l>
+<l>The bird in her heart sang low and loud </l>
+<l rend="indent">And made amends for all.</l></lg>
+<lg>
+<l>Say that in fine, her spring beside </l>
+<l rend="indent">She was merry and gave grace.</l>
+<l>And some were sorry when she died </l>
+<l rend="indent">Who lost a resting place.</l></lg>
+</div>
+</div>
+<pb n="73"/>
+<div type="chapter" id="latesongs_032" n="In Peace Time">
+<head>IN PEACE TIME</head>
+<pb n="[74]"/>
+<pb n="75"/>
+<div type="poem" id="latesongs_033" n="The Story of Bambino">
+<head>THE STORY OF THE BAMBINO</head>
+<lg type="couplet">
+<l n="1"><hi rend="smallcap">What</hi> is it like a light that goes</l> 
+<l>Swaddled in gold from head to toes</l></lg>
+<lg>
+<l>With chanting cleric and acolyte </l>
+<l>In the crimson and in the white.</l></lg>
+<lg>
+<l>'Tis the Bambino goeth with speed </l>
+<l>To succour a woman in her need,</l></lg>
+<lg>
+<l>For the dear Lady's sake who lay </l>
+<l>And bore her Son in the cattle's hay.</l></lg>
+<lg>
+<l>The woman is taken in mortal strait. </l>
+<l><hi rend="italic">Peace!</hi> the Bambino is at the gate!</l></lg>
+<lg>
+<l>The woman cries from her loneliness. </l>
+<l><hi rend="italic">Peace!</hi> the Bambino cometh to bless!</l></lg>
+<lg>
+<l>Three fair sons she hath borne in pain: </l>
+<l>The three lie out in the night and rain.</l></lg>
+<pb n="76"/>
+<lg>
+<l>Dear Bambino, dear holy one, </l>
+<l>Save for this mother one little son!</l></lg>
+<lg>
+<l>To her own heart she speaks: If he, </l>
+<l>The blest Bambino, would stay with me,</l></lg>
+<lg>
+<l>Surely my pangs would be light and short, </l>
+<l>Nor the little bird new-'scaped take hurt.</l></lg>
+<lg>
+<l>Joy and peace would be mine and his </l>
+<l>Who comes when the travail hardest is.</l></lg>
+<lg>
+<l>Surely my little son would thrive</l>
+<l>Nor go to his brothers who would not live.</l></lg>
+<lg>
+<l>Under the linen sheet there is </l>
+<l>Another Bambino like to this;</l></lg>
+<lg>
+<l>Painted so fine, carven so well, </l>
+<l>No man could one from the other tell.</l></lg>
+<lg>
+<l>The dear Bambino by her is laid, </l>
+<l>Joy is come to the childing-bed.</l></lg>
+<pb n="77"/>
+<lg>
+<l>She takes from Bambino his robe and crown; </l>
+<l>The false Bambino hath a gold gown.</l></lg>
+<lg>
+<l>On the Bambino she turns the key: </l>
+<l>I and my babe shall have joy: saith she.</l></lg>
+<lg>
+<l>Her travail is over; the child is come </l>
+<l>No finer baby may be in Rome.</l></lg>
+<lg>
+<l>The women cry from their beds and pray: </l>
+<l>Blessed Bambino, where dost thou stay</l></lg>
+<lg>
+<l>The priests come singing their hymns and bear </l>
+<l>The false Bambino high in the air.</l></lg>
+<lg>
+<l>The people drop on their knees and cry </l>
+<l><hi rend="italic">Viva Bambino!</hi> while that goes by.</l></lg>
+<lg>
+<l>Bambino goeth in gold and white; </l>
+<l>No woman is eased of her grief to-night.</l></lg>
+<lg>
+<l>For the true Bambino lieth forlorn, </l>
+<l>Naked as Christ in the stable born.</l></lg>
+<pb n="78"/>
+<lg>
+<l>Patience, Lordkin, the woman saith: </l>
+<l>Who has saved this night my son from death,</l></lg>
+<lg>
+<l>I will build Bambino so fair a shrine </l>
+<l>For Ara C&#x0153;li he will not pine.</l></lg>
+<lg>
+<l>He shall have a cradle as soft as down, </l>
+<l>And finest woollen to be his gown,</l></lg>
+<lg>
+<l>Not stiff with jewels, nor miniver, </l>
+<l>But soft for a precious baby dear.</l></lg>
+<lg>
+<l>The night is dark and the snows fall. </l>
+<l>What is it flits by the outer wall?</l></lg>
+<lg>
+<l>There's a patter of naked feet, as soft </l>
+<l>As Mary kissed in the cattle-croft.</l></lg>
+<lg>
+<l>Whence is this baby in the chill light, </l>
+<l>Ringed about with a ring of light?</l></lg>
+<lg>
+<l>The Burning Bush that Moses saw, </l>
+<l>And a golden bird in the golden shaw.</l></lg>
+<pb n="79"/>
+<lg>
+<l>At Ara C&#x0153;li they sleep and dream. </l>
+<l>What is it flits in the wet moonbeam?</l></lg>
+<lg>
+<l>The bell soundeth, the knocker too: </l>
+<l>Let me in: I have much to do.</l></lg>
+<lg>
+<l>Let me in, for I heard as I ran </l>
+<l>The women call me in street and lane.</l></lg>
+<lg>
+<l>The sleepy brother is come awake: </l>
+<l>Who is it knocketh before daybreak?</l></lg>
+<lg>
+<l>A little child on the door doth knock. </l>
+<l>Oh, hear them crying, my piteous folk!</l></lg>
+<lg>
+<l>The door was opened and in there came </l>
+<l>A naked child in a golden flame.</l></lg>
+<lg>
+<l>The rain falls and the wind blows; </l>
+<l>In comes Bambino, fresh as a rose.</l></lg>
+<lg>
+<l>The women called me and I made haste. </l>
+<l>I, the Bambino, have travelled fast.</l></lg>
+<pb n="80"/>
+<lg>
+<l>One hath taken my robe away: </l>
+<l>His feet are plaster, his body clay.</l></lg>
+<lg>
+<l>He hath no healing for them that cry </l>
+<l>On me in their bitter agony.</l></lg>
+<lg>
+<l>They have stripped the false usurper bare; </l>
+<l>They have taken the crown of gold from his hair.</l></lg>
+<lg>
+<l>They have cast him out, of his splendour shorn, </l>
+<l>He hath no care for the people's scorn.</l></lg>
+<lg>
+<l>Once more Bambino goes up and down </l>
+<l>The steep high streets of the groaning town,</l></lg>
+<lg>
+<l>And climbs the stairway, and through the door </l>
+<l>Brings life and healing as oft before.</l></lg>
+<lg>
+<l rend="italic">The shrine in Ara C&#x0153;li hath </l>
+<l rend="italic">Many new cradles, many a wreath.</l></lg>
+</div>
+<div type="poem" id="latesongs_034" n="Magic">
+<head>MAGIC</head>
+<lg type="stanza">
+<l n="1"><hi rend="smallcap">A god</hi>, a god sits on my hearth, </l>
+<l>Laughs and plays with sober mirth, </l>
+<l>Sings a small song, merry and wild, </l>
+<l>As a bird might or a child.</l></lg>
+<lg>
+<l>As a kitten plays will play, </l>
+<l>Or a lamb on a May day. </l>
+<l>A happy, busy household elf </l>
+<l>Croons a wee song to himself.</l></lg>
+<lg>
+<l>Strayed here from some Olympian hill, </l>
+<l>This god in rose and daffodil, </l>
+<l>Yet boils my kettle, cooks my dish, </l>
+<l>Gives savour to the meats and fish.</l></lg>
+<lg>
+<l>I stretch my chilly hands above, </l>
+<l>And like my dog he fawns in love: </l>
+<l>Licks at me with a playful tongue </l>
+<l>And frisks, a bright thing, merry and young.</l></lg>
+<lg>
+<l>And yet so great a god is he, </l>
+<l>You shall approach him on your knee, </l>
+<l>Lest that his lightnings teach you awe, </l>
+<l>This Burning Bush that Moses saw.</l></lg>
+<lg>
+<l>He is the Ark no hand may touch, </l>
+<l>The Lily of Light without a smutch, </l>
+<l>The Living Rose that none may take, </l>
+<l>Caged in a gold and thorny brake.</l></lg>
+<lg>
+<l>This holy one stays with me still, </l>
+<l>Singing his small song merry and shrill, </l>
+<l>And hath so many things to do, </l>
+<l>There is no time to grieve or rue</l></lg>
+<lg>
+<l>For the great state he hath foregone, </l>
+<l>The Lord Sun's dear companion, </l>
+<l>Who toils and plays upon my hearth, </l>
+<l>Nor yet forgets his starry birth.</l></lg>
+</div>
+<pb n="83"/>
+<div type="poem" id="latesongs_035" n="Caldra">
+<head>CALDRA<lb/>
+(<hi rend="italic">On a Tyrone hillside</hi>)</head>
+<lg type="stanza">
+<l n="1"><hi rend="smallcap">The</hi> little valley folded lies</l>
+<l rend="indent"> Amid the hills a-dream,</l>
+<l>The silence, soft as lullabies,</l>
+<l rend="indent">Hushes the wind, the stream.</l></lg>
+<lg>
+<l>Here where no dreadful thing affrights,</l>
+<l rend="indent"> No lurking shadows creep,</l>
+<l>Only the short sweet grass invites</l>
+<l rend="indent">The cropping kine and sheep,</l></lg>
+<lg>
+<l>The pagan giant takes his rest</l>
+<l rend="indent">Who died when this was new.</l>
+<l>His huge slab broken o'er his breast</l>
+<l rend="indent">Has let the daisies through.</l></lg>
+<lg>
+<l>And round about and all around</l>
+<l rend="indent">The unchristened babies lie.</l>
+<l>Only the mother knows the mound</l>
+<l rend="indent">And the name to call it by.</l></lg>
+<pb n="84"/>
+<lg>
+<l>When the sad world is all in shade</l>
+<l rend="indent">They bring the babies here,</l>
+<l>The little weary ones unstayed</l>
+<l rend="indent">By any Angel dear.</l></lg>
+<lg>
+<l>The mother lays her lamb away</l>
+<l rend="indent">Where soft South winds will blow</l>
+<l>And where the sweet sun shines all day</l>
+<l rend="indent">On small graves in a row.</l></lg>
+<lg>
+<l>The mother smooths the clayey bed,</l>
+<l rend="indent">And sets the piteous stone</l>
+<l>Where some most precious drowsy-head</l>
+<l rend="indent">Sleeps on alone, alone.</l></lg>
+<lg>
+<l>But when the Winter nights are long</l>
+<l rend="indent">And the hearth fires are bright</l>
+<l>And babes sleep sweetly and grow strong</l>
+<l rend="indent">Lapped up in fleeces white,</l></lg>
+<lg>
+<l>And when the mother's arms let go</l>
+<l rend="indent">The happy babe full-fed,</l>
+<l>These hapless ones in frost and snow</l>
+<l rend="indent">Must go uncomforted.</l></lg>
+<pb n="85"/>
+<lg>
+<l>But the old giant in the mirk</l>
+<l rend="indent">He hears the cry and call:</l>
+<l>Come hither, O children from the dark,</l>
+<l rend="indent">My arms have room for all.</l></lg>
+<lg>
+<l>No little babe need go afeard</l>
+<l rend="indent">Since he is strong and kind,</l>
+<l>For all his armour and his beard,</l>
+<l rend="indent">His great voice on the wind.</l></lg>
+<lg>
+<l>The unchristened children rustle and stir,</l>
+<l rend="indent">Their hearts are not dismayed,</l>
+<l>God sends as once St. Christopher</l>
+<l rend="indent">His pagan to their aid.</l></lg>
+<lg>
+<l>Now like a flock of frightened birds</l>
+<l rend="indent">The little ghosts will fly.</l>
+<l>He hath mothered them with tender words</l>
+<l rend="indent">And stilled their lonely cry.</l></lg>
+<lg>
+<l>The pagan giant now grown mild,</l>
+<l rend="indent">His notched sword by his arm,</l>
+<l>Draws close to him the hapless child</l>
+<l rend="indent">That never else was warm.</l></lg>
+<pb n="86"/>
+<lg>
+<l>As a hen gathereth her brood </l>
+<l rend="indent">He keeps from eve till morn </l>
+<l>The little orphaned ones of God</l>
+<l rend="indent">That died ere they were born.</l></lg>
+</div>
+<div type="poem" id="latesongs_036" n="The Recompense">
+<head>THE RECOMPENSE</head>
+<lg type="stanza">
+<l n="1"><hi rend="smallcap">God</hi> made a Garden first for Man</l>
+<l rend="indent">Where He and Man might walk together,</l>
+<l>Before the bitter days began</l>
+<l rend="indent">And when 'twas always perfect weather;</l>
+<l>A Garden full of fruit and flowers,</l>
+<l rend="indent">The butterfly, the bee, the dew;</l>
+<l>Man had enough in those sweet bowers</l>
+<l rend="indent">Before the old snake wriggled through.</l>
+</lg>
+<lg>
+<l>But when poor Man was driven away,</l>
+<l rend="indent">Hobbled and sad, from those bright portals,</l>
+<l>When there was nothing more to say</l>
+<l rend="indent">Between the stript unhappy mortals;</l>
+<l>When Eve went shivering in the wind,</l>
+<l rend="indent">With all her sweetness nipt by frost,</l>
+<l>God put it into Adam's mind</l>
+<l rend="indent">To build a House; so all's not lost!</l></lg>
+<lg>
+<l>'Twas built of clay and wattled boughs.</l>
+<l rend="indent">So comfortable 'twas, the creeping</l>
+<l>Out of the rain into their House,</l>
+<l rend="indent">To dream of Eden in their sleeping.</l>
+<pb n="88"/>
+<l>He taught them next to capture Fire,&#x2014;</l>
+<l rend="indent">The wild sprite of the roaring storm,</l>
+<l>And tether him to their desire</l>
+<l rend="indent">Upon a hearthstone bright and warm.</l></lg>
+<lg>
+<l>Yet there was something incomplete;</l>
+<l rend="indent">They wept for their remembered blisses;</l>
+<l>Till God slipt something wondrous sweet</l>
+<l rend="indent">Betwixt His anger and their kisses:</l>
+<l>The Woman shall make Home: He said:</l>
+<l rend="indent">With children, and the hearth-fires burning,</l>
+<l>And with her bosom for his bed</l>
+<l rend="indent">My Adam praise Me night and morning.</l></lg>
+</div>
+<pb n="89"/>
+<div type="poem" id="latesongs_037" n="The Immortal">
+<head>THE IMMORTAL</head>
+<lg type="stanza">
+<l n="1"><hi rend="smallcap">Here</hi>, where I went in and out,</l>
+<l rend="indent">I no more may come and go.</l>
+<l>This with sweetbriar fringed about</l>
+<l rend="indent">Is another's garden, so</l>
+<l>His the master's foot to come</l>
+<l>In each dear, remembered room.</l>
+</lg><lg>
+<l>Such a blank, forgetting face</l>
+<l rend="indent">The house turns that was my house,</l>
+<l>Where I built a little space,</l>
+<l rend="indent">As the birds build in the boughs.</l>
+<l>But the birds&#x2014;the birds are gone</l>
+<l>And the vernal days are done.</l>
+</lg><lg>
+<l>Forth I fare that once would stay.</l>
+<l rend="indent">I have neither walls nor roof,</l>
+<l>Being a traveller, blithe and gay,</l>
+<l rend="indent">In a world that's weather-proof,</l>
+<l>Where no rust eats in, no moth</l>
+<l>Frets the sacred altar-cloth.</l></lg>
+<pb n="90"/>
+<lg>
+<l>Open, skies, and let me through.</l>
+<l rend="indent">Here I struck no roots to be</l>
+<l>Fearful of all winds that blew.</l>
+<l rend="indent">There I shall grow a tree, a tree </l>
+<l>Where in calm and shining weather, </l>
+<l>My birds and I shall be together.</l></lg>
+</div>
+<pb n="91"/>
+<div type="poem" id="latesongs_038" n="The House of Life">
+<head>THE HOUSE OF LIFE</head>
+<lg>
+<l n="1"><hi rend="smallcap">The</hi> life of the body's a cage,</l>
+<l rend="indent">And the soul within it</l>
+<l>Frets to escape, to be free,</l>
+<l rend="indent">Like a lark or a linnet.</l>
+<l>But since the struggle's in vain,</l>
+<l rend="indent">She is weary ere long;</l>
+<l>She chirps and she sings a little</l>
+<l rend="indent">To assuage her wrong.</l></lg>
+<lg>
+<l>Behind the bars she sits brooding</l>
+<l rend="indent"> Her evil mishap,</l>
+<l>Like a wild little hare or a rabbit</l>
+<l rend="indent">That's caught in a trap,</l>
+<l>Till, dazed with despair, she is weary,</l>
+<l rend="indent">And struggles no more,</l>
+<l>But plays with the sun and leaf-shadow</l>
+<l rend="indent">That dance on the floor.</l></lg>
+<lg>
+<l>They call&#x2014;they call to each other</l>
+<l rend="indent">O sister so small,</l>
+<pb n="92"/>
+<l>Are you there? Are you there, little brother, </l>
+<l rend="indent">Behind the blank wall?</l>
+<l>Like a bird, or a hare, or a rabbit, </l>
+<l rend="indent">Frightened, undone, </l>
+<l>The soul calls to another,</l>
+<l rend="indent">be not alone.</l></lg>
+</div>
+<pb n="93"/>
+<div type="poem" id="latesongs_039" n="Summer Airs">
+<head>SUMMER AIRS</head>
+<lg>
+<l n="1"><hi rend="smallcap">This</hi> air's a lovely thing: it blows</l>
+<l rend="indent">Softer than any kisses are;</l>
+<l>Touches my cheek like a wet rose</l>
+<l rend="indent">Drenched in all sweetness, near and far.</l>
+</lg><lg>
+<l>There's heather in it, miles on miles,</l>
+<l rend="indent">Rough sweetness of great seas that break</l>
+<l>On Achill cliffs and Clew's dear isles;</l>
+<l rend="indent">Oh many a mountain, many a lake!</l></lg>
+<lg>
+<l>What soft invisible Loving clings</l>
+<l rend="indent">About my neck and lifts my hair</l>
+<l>The Eternal Love in these wild wings</l>
+<l rend="indent">Meets me and clasps me everywhere.</l></lg>
+<lg>
+<l>Thou mad'st for me this air, this wind,</l>
+<l rend="indent">These heavenly sweets for me, for me</l>
+<l rend="indent">That I might live and thrive, O kind!</l>
+<l>Fed on the very Breath of Thee.</l>
+</lg>
+</div>
+<pb n="94"/>
+<div type="poem" id="latesongs_040" n="The Newly-born">
+<head>THE NEWLY-BORN</head>
+<lg type="stanza">
+<l n="1"><hi rend="smallcap">The</hi> little soul looked out</l>
+<l rend="indent">Into a world of pain,</l>
+<l>And sore oppressed with fear and doubt,</l>
+<l rend="indent">Shut eyes again.</l></lg>
+<lg>
+<l>Heard not the mother's cries</l>
+<l rend="indent">Nor saw her arms stretched wide,</l>
+<l>Slipped back again to Paradise</l>
+<l rend="indent">On the next tide.</l></lg>
+<lg>
+<l>So small, so soft, so fair,</l>
+<l rend="indent">And like a carrier-dove,</l>
+<l>The little soul, Love's messenger,</l>
+<l rend="indent">Fled back to Love.</l></lg>
+<lg>
+<l>O, in this storm and din</l>
+<l rend="indent">What place for her abode?</l>
+<l>The little white soul but looked in&#x2014;</l>
+<l rend="indent">Flew back to God.</l>
+</lg>
+</div></div>
+</body>
+<back>
+<div type="note" id="latesongs_041" n="Author's Note">
+<head rend="italic">AUTHOR'S NOTE</head>
+<p rend="italic">The poem "For an Airman" at page 29 is a rhymed
+version of an article on the death of Lord Lucas which appeared in the
+"Times." I make the acknowledgment with apologies to the unknown
+writer.</p></div>
+</back>
+</text>
+</TEI.2>

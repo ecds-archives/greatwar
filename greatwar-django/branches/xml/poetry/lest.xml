@@ -1,0 +1,767 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI.2 TEIform="TEI.2">
+   <teiHeader TEIform="teiHeader" status="new" type="text">
+      <fileDesc TEIform="fileDesc">
+         <titleStmt TEIform="titleStmt" n="Lest We Forget: A War Anthology">
+            <title TEIform="title"> Lest We Forget: A War Anthology </title>
+            <author TEIform="author" n="Elliot, H. B.">H.B. Elliot, ed.</author>
+            <respStmt TEIform="respStmt">
+               <resp TEIform="resp">Compiled and edited by</resp>
+               <name TEIform="name">Beck Center</name>
+            </respStmt>
+         </titleStmt>
+         <extent TEIform="extent"/>
+         <publicationStmt TEIform="publicationStmt">
+            <publisher TEIform="publisher">Lewis H. Beck Center</publisher>
+            <pubPlace TEIform="pubPlace">Emory University</pubPlace>
+            <address TEIform="address">
+               <addrLine TEIform="addrLine">Atlanta, Georgia</addrLine>
+            </address>
+            <availability TEIform="availability" status="unknown">
+               <p TEIform="p">2002 Emory University. Permission is granted to download, transmit, or otherwise reproduce, distribute or display the contributions to the work claimed by Emory University for non-profit educational purposes, provided this header is included in its entirety.  For inquiries about commercial uses, contact either: Women Writers Resource Project or Lewis H. Beck Center for Electronic collections and services, Emory University, Atlanta, Georgia 30322</p>
+            </availability>
+            <date TEIform="date">2002</date>
+         </publicationStmt>
+         <seriesStmt TEIform="seriesStmt">
+            <title TEIform="title">Women Writers Resource Project</title>
+         </seriesStmt>
+         <sourceDesc TEIform="sourceDesc" default="NO">
+            <bibl TEIform="bibl" default="NO"> Elliot, H.B. <hi TEIform="hi" rend="italic">Lest We Forget: A War Anthology</hi>.  London: Jarrold &amp; Sons, 1915. 138.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc TEIform="encodingDesc">
+         <projectDesc TEIform="projectDesc" default="NO">
+            <p TEIform="p">This digital text is produced from a first edition volume of the World War I poetry anthology, <hi TEIform="hi" rend="italic">Lest We Forget: A War Anthology</hi>.  While this anthology includes poetry from a varied group of male and female poets, our edition includes only those poems penned by women.  Also included in this electronic edition is the forward written by Baroness Orczy.  The production of this digital text was undertaken by the Beck Center for the Women Writers Resource Project at Emory University.</p>
+         </projectDesc>
+      </encodingDesc>
+      <profileDesc TEIform="profileDesc">
+         <creation TEIform="creation">
+            <rs TEIform="rs" type="ethnicity">Caucasian</rs>
+            <rs TEIform="rs" type="form">Unedited</rs>
+            <rs TEIform="rs" type="genre">Poetry</rs>
+            <rs TEIform="rs" type="geography">Great Britain</rs>
+            <date TEIform="date">1900-1999</date>
+         </creation>
+      </profileDesc>
+      <revisionDesc TEIform="revisionDesc">
+         <change TEIform="change">
+            <date TEIform="date">2002</date>
+            <respStmt TEIform="respStmt">
+               <name TEIform="name">Erika Farr</name>
+               <resp TEIform="resp">Project Manager</resp>
+            </respStmt>
+            <item TEIform="item">SGML tags inserted in compliance with TEI guidelines using TEILITE</item>
+         </change>
+      </revisionDesc>
+   </teiHeader>
+   <text TEIform="text">
+      <front TEIform="front">
+         <div1 TEIform="div1" id="lest.front" org="uniform" part="N" sample="complete" type="Foreword">
+            <head TEIform="head">FOREWORD.</head>
+            <p TEIform="p">THIS book is inscribed to every individual woman and girl of Great Britain who to-day is bearing so heroically--so uncomplainingly--her own share of Britain's burden in this Great War. She is asked to give of her dearest and her best, to see the man she loves--husband, son, sweetheart or friend--go to fight his country's battles, to fight in the cause of justice and humanity and honour whilst she--mother, wife or sweetheart--must perforce stay at home and strive with all her might to hide her tears, to keep back the one little word which perhaps would shake the loved one's resolution, the one little word which might unnerve him and cause him to stay by her side. Indeed, the burden laid upon all the women and girls of Great Britain is no light one! and they are bearing it with all the heroism of their race. Their sorrow is great--and in that sorrow but one solace is left to them--that of thinking and planning and working for </p>
+            <pb TEIform="pb" n="8 FOREWORD"/>
+            <p TEIform="p">those who have so bravely gone. It is their skill, their industry, their devotion which makes our gallant soldiers' and sailors' lives at the post of duty a little more happy and a little more comfortable. The warm clothing, which loving fingers at home fashion for the magnificent man who fights on land or at sea, is a comfort not only to his body, but also for his heart, for it reminds him of home, of brave hands that work while brave lips are praying for him.</p>
+            <p TEIform="p">It is to aid this work that this book has been compiled; it is to the workers that it is dedicated. Cheered by the patronage of a gracious Queen they will continue their labour of love so long as their fingers have the strength to wield needles and pins, and in the years to come, when the history of the twentieth century comes to be written, not its least heroic page will be the account of how the women and girls of Great Britain bore their part in the Great War by working for the material comfort of Britain's fighting men.</p>
+            <byline TEIform="byline">EMMUSKA ORCZY.</byline>
+            <trailer TEIform="trailer">
+               <hi TEIform="hi" rend="italic">Snowfield, Bearsted, Kent.</hi>
+            </trailer>
+         </div1>
+      </front>
+      <body TEIform="body">
+         <div1 TEIform="div1" id="lest01" n="Lest We Forget" org="uniform" part="N" sample="complete" type="Anthology">
+            <div2 TEIform="div2" id="lest02" n="The Roll of Honour" org="uniform" part="N" sample="complete" type="poem"><docAuthor n="Peterson, Margaret">Margaret Peterson</docAuthor>
+               <pb TEIform="pb" n="17 LEST WE FORGET"/>
+               <head TEIform="head" rend="center">THE ROLL OF HONOUR.</head>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">YOUR faces haunt me from the printed pages,</l>
+                  <l TEIform="l" part="N">The roll call of our valiant English dead;</l>
+                  <l TEIform="l" part="N">What woman's hands, I wonder, clung in parting?</l>
+                  <l TEIform="l" part="N">What woman's heart breaks now the shot is sped?</l>
+                  <l TEIform="l" part="N">We speak of Glory and the Cause you died for,</l>
+                  <l TEIform="l" part="N">We lay our homage on your bloodstained grave,</l>
+                  <l TEIform="l" part="N">Will Glory help to ease the women's anguish</l>
+                  <l TEIform="l" part="N">Or solace them for these dear dead they gave?</l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Yea, surely. For your spirits go before them,</l>
+                  <l TEIform="l" part="N">You, who made Death a crown about your lives!</l>
+                  <l TEIform="l" part="N">And in the splendour of your souls that conquered</l>
+                  <l TEIform="l" part="N">We learn this lesson. Blessed is he who strives,</l>
+               </lg>
+               <pb TEIform="pb" n="18 LEST WE FORGET"/>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">For Love and Faith, for Truth and priceless Honour,</l>
+                  <l TEIform="l" part="N">These cannot pass away with mortal breath,</l>
+                  <l TEIform="l" part="N">God guards them safe, and in His mighty keeping</l>
+                  <l TEIform="l" part="N">Are also those who nobly looked on Death!</l>
+               </lg>
+               <byline TEIform="byline">MARGARET PETERSON, <hi TEIform="hi" rend="italic">Author of "The Lure of the Little Drums,""Blind Eyes," " Tony Bellew," etc.</hi>
+               </byline>
+               <trailer TEIform="trailer">
+                  <hi TEIform="hi" rend="italic">Daily Chronicle.</hi>
+               </trailer>
+            </div2>
+            <div2 TEIform="div2" id="lest03" n="The Women of Belgium to the Women of England" org="uniform" part="N" sample="complete" type="poem"><docAuthor n="Booth, Mary">Mary Booth</docAuthor>
+               <pb TEIform="pb" n="24 LEST WE FORGET"/>
+               <head TEIform="head" rend="center">THE WOMEN OF BELGIUM TO THE WOMEN OF ENGLAND.</head>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">OH, English women! see, our country's dying;</l>
+                  <l TEIform="l" part="N">Her life-blood from her gaping wounds is sighing,</l>
+                  <l TEIform="l" part="N">Her bitter wrongs to God for vengeance crying!</l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">The Iron hand has struck, but in the smiting</l>
+                  <l TEIform="l" part="N">Its own dishonour on the wall is writing,</l>
+                  <l TEIform="l" part="N">And Belgium's funeral pyre the world is lighting.</l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">If we had failed or shrunk before the paying,</l>
+                  <l TEIform="l" part="N">If we had saved our dearest from the slaying,</l>
+                  <l TEIform="l" part="N">What price had you not paid for the delaying?</l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Oh, mothers! who your man-grown sons are keeping,</l>
+                  <l TEIform="l" part="N">Oh, fathers! to the patriot's duty, sleeping,</l>
+                  <l TEIform="l" part="N">Oh, lovers! at the thought of parting, weeping,</l>
+                  <l TEIform="l" part="N">Awake, and give us Men to do our Reaping!</l>
+               </lg>
+               <byline TEIform="byline">MARY BOOTH.</byline>
+               <trailer TEIform="trailer">
+                  <hi TEIform="hi" rend="italic">The Queen.</hi>
+               </trailer>
+            </div2>
+            <div2 TEIform="div2" id="lest04" n="Le Jour Des Morts" org="uniform" part="N" sample="complete" type="poem"><docAuthor n="Chesterton, Frances">Frances Chesterton</docAuthor>
+               <pb TEIform="pb" n="25 LEST WE FORGET"/>
+               <head TEIform="head" rend="center">LE JOUR DES MORTS.</head>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">THE day of the dead, the day of the dead,</l>
+                  <l TEIform="l" part="N">Down on your knees and pray,</l>
+                  <l TEIform="l" part="N">For the souls of the living, the souls of the dying,</l>
+                  <l TEIform="l" part="N">The souls that have passed away.</l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">And the great bell tolls</l>
+                  <l TEIform="l" part="N">For the treasure of souls</l>
+                  <l TEIform="l" part="N">Delivered into his hand,</l>
+                  <l TEIform="l" part="N">Gabriel, Michael, Uriel, reap</l>
+                  <l TEIform="l" part="N">Souls as a measure of sand,</l>
+                  <l TEIform="l" part="N">Souls from the restless deep,</l>
+                  <l TEIform="l" part="N">Souls from the blood-red land.</l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">The day of the dead, the day of the dead, </l>
+                  <l TEIform="l" part="N">Down on your knees and pray,</l>
+                  <l TEIform="l" part="N">For the souls of the outcast, despised and rejected,</l>
+                  <l TEIform="l" part="N">The heroes and victors to-day.</l>
+               </lg>
+               <pb TEIform="pb" n="26 LEST WE FORGET"/>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">And the great bell rings,</l>
+                  <l TEIform="l" part="N">And the great bell swings,</l>
+                  <l TEIform="l" part="N">As death makes up the number</l>
+                  <l TEIform="l" part="N">Of men's lives as grains of sand,</l>
+                  <l TEIform="l" part="N">From the decks their bodies cumber,</l>
+                  <l TEIform="l" part="N">From the panting shivering land,</l>
+                  <l TEIform="l" part="N">From crash and shriek to slumber.</l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">The day of the dead, the day of the dead,</l>
+                  <l TEIform="l" part="N">Up on your feet and stand</l>
+                  <l TEIform="l" part="N">For the souls of the living, the fighting, the striving,</l>
+                  <l TEIform="l" part="N">For the gun and the sword in hand.</l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">And His Transfiguration</l>
+                  <l TEIform="l" part="N">Descends on a nation, </l>
+                  <l TEIform="l" part="N">And death is a little thing,</l>
+                  <l TEIform="l" part="N">And lives as a grain of sand.</l>
+                  <l TEIform="l" part="N">Michael, Gabriel Uriel, bring</l>
+                  <l TEIform="l" part="N">From the desolate blood-red land,</l>
+                  <l TEIform="l" part="N">From the tall ships foundering.</l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">The day of the dead, the day of the dead,</l>
+                  <l TEIform="l" part="N">Down on your knees and pray</l>
+                  <l TEIform="l" part="N">For the souls of the living, the souls of the dying,</l>
+                  <l TEIform="l" part="N">The souls that have passed away.</l>
+               </lg>
+               <byline TEIform="byline">FRANCES CHESTERTON.</byline>
+            </div2>
+            <div2 TEIform="div2" id="lest05" n="Suspense" org="uniform" part="N" sample="complete" type="poem"><docAuthor n="Gard, Lillian">Lillian Gard</docAuthor>
+               <pb TEIform="pb" n="30 LEST WE FORGET"/>
+               <head TEIform="head" rend="center">SUSPENSE.</head>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">O'ER oceans, lands, bend down, O God to-day,</l>
+                  <l TEIform="l" part="N">And as we ask,</l>
+                  <l TEIform="l" part="N">Shield with Thy wings the many, far away;</l>
+                  <l TEIform="l" part="N">Soothe those who watch and wait and do each task</l>
+                  <l TEIform="l" part="N">With brave hands working, while their brave lips pray.</l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">'Tis but a little world, O God, to Thee,</l>
+                  <l TEIform="l" part="N">Who rulest all!</l>
+                  <l TEIform="l" part="N">'Tis such a little way earth-sight may see</l>
+                  <l TEIform="l" part="N">The dusk-times fall.</l>
+                  <l TEIform="l" part="N">Across each hour, perchance--we dare not face</l>
+                  <l TEIform="l" part="N">Such shades alone--unstrengthened! Send us Grace.</l>
+               </lg>
+               <byline TEIform="byline">LILLIAN GARD.</byline>
+               <trailer TEIform="trailer">
+                  <hi TEIform="hi" rend="italic">The Queen.</hi>
+               </trailer>
+            </div2>
+            <div2 TEIform="div2" id="lest06" n="Called Up!" org="uniform" part="N" sample="complete" type="poem"><docAuthor n="Gard, Lillian">Lillian Gard</docAuthor>
+               <pb TEIform="pb" n="37 LEST WE FORGET"/>
+               <head TEIform="head" rend="center">CALLED UP!</head>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">GIVE them a cheer as they march along!</l>
+                  <l TEIform="l" part="N">A life is a life, so don't mistake</l>
+                  <l TEIform="l" part="N">There's death to meet or a name to make.</l>
+                  <l TEIform="l" part="N">Give them a cheer!</l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Give them a song as they take the way!</l>
+                  <l TEIform="l" part="N">There's not a bird or a passing breeze</l>
+                  <l TEIform="l" part="N">But mingles notes in the roadside trees,</l>
+                  <l TEIform="l" part="N">Lilt of hope is a true heartease.</l>
+                  <l TEIform="l" part="N">Give them a song!</l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Give them a prayer as you watch them go.</l>
+                  <l TEIform="l" part="N">(May be lips have forgotten to pray.)</l>
+                  <l TEIform="l" part="N">For right upheld to the end of the way,</l>
+                  <l TEIform="l" part="N">For goal of peace at the set of the day,</l>
+                  <l TEIform="l" part="N">Give them a prayer!</l>
+               </lg>
+               <byline TEIform="byline">LILLIAN GARD.</byline>
+               <trailer TEIform="trailer">
+                  <hi TEIform="hi" rend="italic">The Queen.</hi>
+               </trailer>
+            </div2>
+            <div2 TEIform="div2" id="lest07" n="Winter Night" org="uniform" part="N" sample="complete" type="poem"><docAuthor n="Phillpotts, Eden">Eden Phillpotts</docAuthor>
+               <pb TEIform="pb" n="76 LEST WE FORGET"/>
+               <head TEIform="head" rend="center">WINTER NIGHT.</head>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">ROAMS the East wind across a midnight sky,</l>
+                  <l TEIform="l" part="N">And shapes of cloud, transparent, curdled, white,</l>
+                  <l TEIform="l" part="N">Like homing spirits take their lowly flight</l>
+                  <l TEIform="l" part="N">Before his breath; but glittering on high</l>
+                  <l TEIform="l" part="N">A throb of winter stars doth chequer heaven with light.</l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Here, underneath the Hunter, all is still,</l>
+                  <l TEIform="l" part="N">And silver Sirius sparkles at his feet;</l>
+                  <l TEIform="l" part="N">While nearer, children of the earth, they fleet--</l>
+                  <l TEIform="l" part="N">Those sad, etiolate clouds along the hill--</l>
+                  <l TEIform="l" part="N">As though our dead returned their native land to greet.</l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">How may one slumber, how the curtain close</l>
+                  <l TEIform="l" part="N">And shut them out and turn to blessed rest,</l>
+                  <l TEIform="l" part="N">While, panging like a poison in the breast,</l>
+                  <l TEIform="l" part="N">Their agony for ever flows and flows?</l>
+                  <l TEIform="l" part="N">By day, by night they fall our bravest and our best.</l>
+               </lg>
+               <pb TEIform="pb" n="77 LEST WE FORGET"/>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">O little clouds, the stars ye cannot hide,</l>
+                  <l TEIform="l" part="N">Yet shadow in your impotence a plea</l>
+                  <l TEIform="l" part="N">Mightier than all the night's immensity</l>
+                  <l TEIform="l" part="N">Hath power to conjure of her pomp and pride:</l>
+                  <l TEIform="l" part="N">The claim of men who die that man may still go free.</l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Your vapours sink to earth; down from his height,</l>
+                  <l TEIform="l" part="N">Flashing red gold, each ancient star departs;</l>
+                  <l TEIform="l" part="N">Chill Eurus droops at dawn's approaching darts;</l>
+                  <l TEIform="l" part="N">For clouds and stars and winds shall pass with night;</l>
+                  <l TEIform="l" part="N">The ever living dead shine on within our hearts.</l>
+               </lg>
+               <byline TEIform="byline">EDEN PHILLPOTTS.</byline>
+               <trailer TEIform="trailer">
+                  <hi TEIform="hi" rend="italic">British Review.</hi>
+               </trailer>
+            </div2>
+            <div2 TEIform="div2" id="lest08" n="Reason and Honour" org="uniform" part="N" sample="complete" type="poem"><docAuthor n="Phillpotts, Eden">Eden Phillpotts</docAuthor>
+               <pb TEIform="pb" n="84 LEST WE FORGET"/>
+               <head TEIform="head" rend="center">REASON AND HONOUR.</head>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">WAS not the bounty of the grape and corn,</l>
+                  <l TEIform="l" part="N">Burned into ripeness by a summer sped,</l>
+                  <l TEIform="l" part="N">Harvest enough without all they have borne</l>
+                  <l TEIform="l" part="N">In their own aching flesh and from their bosoms fed?</l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Shall they, the mothers of the time to be,</l>
+                  <l TEIform="l" part="N">Create for nothing but a league-long grave,</l>
+                  <l TEIform="l" part="N">That swallows up their immortality</l>
+                  <l TEIform="l" part="N">And hideous yawns across a kingdom while they rave?</l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">'Tis they who forge the bolt, when nations chafe</l>
+                  <l TEIform="l" part="N">And howl their battle cries of right and wrong;</l>
+                  <l TEIform="l" part="N">'Tis they who lead the mighty armies safe</l>
+                  <l TEIform="l" part="N">To manhood's threshold, brave and beautiful and strong.</l>
+               </lg>
+               <pb TEIform="pb" n="85 LEST WE FORGET"/>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">For death's the only answer that we make</l>
+                  <l TEIform="l" part="N">When hungry kingdoms rise and fall on strife;</l>
+                  <l TEIform="l" part="N">Still one insensate spirit's greed can break</l>
+                  <l TEIform="l" part="N">The wide world's peace, and drain her holy founts of life.</l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">And still the grandest death that man may die</l>
+                  <l TEIform="l" part="N">Is held the death of war, at some great need</l>
+                  <l TEIform="l" part="N">Beyond all human reason's power to try,</l>
+                  <l TEIform="l" part="N">Since honour often spurns her sister, reason's rede.</l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">For reason's dumb while honour's thirsty blade</l>
+                  <l TEIform="l" part="N">Still flashes to the universe how man</l>
+                  <l TEIform="l" part="N">Remains so blind, so faltering, so afraid</l>
+                  <l TEIform="l" part="N">That carnage yet controls his highest hope and plan.</l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">But reason, guarding well her golden light,</l>
+                  <l TEIform="l" part="N">Denies he shall for ever sate his dearth</l>
+                  <l TEIform="l" part="N">Like wolf or tiger; wills such futile might</l>
+                  <l TEIform="l" part="N">Anon be banned and thrust from off the good round earth.</l>
+               </lg>
+               <pb TEIform="pb" n="86 LEST WE FORGET"/>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">She dawns upon the darkness of our eyes;</l>
+                  <l TEIform="l" part="N">Reveals that war can only hurl us back</l>
+                  <l TEIform="l" part="N">On hostile values; whispers to the wise</l>
+                  <l TEIform="l" part="N">How virtue in the fed is vice to them that lack.</l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Virtue and vice are names, not qualities,</l>
+                  <l TEIform="l" part="N">And when the baffled cry that might is right,</l>
+                  <l TEIform="l" part="N">No smug opinion from the unconscious skies</l>
+                  <l TEIform="l" part="N">For doubtful virtue's sake shall hold them to their plight.</l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">All nations live by ideals; but in need</l>
+                  <l TEIform="l" part="N">They linger with no ethic obsolete;</l>
+                  <l TEIform="l" part="N">They bend the knee to no unfriendly creed;</l>
+                  <l TEIform="l" part="N">But tramp their values firm beneath an army's feet.</l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Remains to man this everlasting truth:</l>
+                  <l TEIform="l" part="N">That for his sure defence and steadfast guide,</l>
+                  <l TEIform="l" part="N">Reason and honour, by the way of truth,</l>
+                  <l TEIform="l" part="N">Shall yet march, hand in hand, and onward, side by side.</l>
+               </lg>
+               <pb TEIform="pb" n="87 LEST WE FORGET"/>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Again the world is meeting might with might,</l>
+                  <l TEIform="l" part="N">And when the battle's fought and lost and won,</l>
+                  <l TEIform="l" part="N">Pray victory decree, as primal right,</l>
+                  <l TEIform="l" part="N">That reason also wins a kingdom in the sun.</l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Then shall she swiftly, for our world-wide shame,</l>
+                  <l TEIform="l" part="N">Bend to the Mother from her starry place,</l>
+                  <l TEIform="l" part="N">And, in humanity's almighty name,</l>
+                  <l TEIform="l" part="N">For ever dry the tears upon that sacred face.</l>
+               </lg>
+               <byline TEIform="byline">EDEN PHILLPOTTS.</byline>
+               <trailer TEIform="trailer">
+                  <hi TEIform="hi" rend="italic">English Review.</hi>
+               </trailer>
+            </div2>
+            <div2 TEIform="div2" id="lest09" n="Mediation in War-Time" org="uniform" part="N" sample="complete" type="poem"><docAuthor n="Tynan, Katharine">Katherine Tynan</docAuthor>
+               <pb TEIform="pb" n="90 LEST WE FORGET"/>
+               <head TEIform="head" rend="center">MEDIATION IN WAR-TIME</head>
+               <head TEIform="head" rend="center">(<hi TEIform="hi" rend="italic">After St. Anselm.</hi>)</head>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">IF Thou, Lord God, willest to judge</l>
+                  <l TEIform="l" part="N">This Thy most piteous clay,</l>
+                  <l TEIform="l" part="N">Which to save, Christ did not grudge</l>
+                  <l TEIform="l" part="N">His red dying I should say:</l>
+                  <l TEIform="l" part="N">"Now I interpose His death</l>
+                  <l TEIform="l" part="N">'Twixt these children and Thy wrath."</l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Then if Thou should'st say, "Their shame</l>
+                  <l TEIform="l" part="N">Is as scarlet in Mine eyes,"</l>
+                  <l TEIform="l" part="N">I should ask, "Who bare the blame?</l>
+                  <l TEIform="l" part="N">Look on Thy Son's sacrifice!</l>
+                  <l TEIform="l" part="N">His dear Blood is far more bright</l>
+                  <l TEIform="l" part="N">That shall wash the scarlet white."</l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Still if Thou Thy frown must keep</l>
+                  <l TEIform="l" part="N">And Thine eyes Thou dost avert</l>
+                  <l TEIform="l" part="N">(Ah! dear Shepherd of the Sheep)</l>
+                  <l TEIform="l" part="N">I will say, "Who took the hurt?</l>
+                  <l TEIform="l" part="N">I present Christ's death and pain</l>
+                  <l TEIform="l" part="N">'Twixt Thine anger and these slain."</l>
+               </lg>
+               <pb TEIform="pb" n="91 LEST WE FORGET"/>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Dear, they die in millions</l>
+                  <l TEIform="l" part="N">For a quarrel not their own;</l>
+                  <l TEIform="l" part="N">Look to this poor flock, Thy Son's,</l>
+                  <l TEIform="l" part="N">Harried all and overthrown.</l>
+                  <l TEIform="l" part="N">See, I lay Christ's Cross between</l>
+                  <l TEIform="l" part="N">Dear, Thy justice and their sin.</l>
+               </lg>
+               <byline TEIform="byline">KATHERINE TYNAN.</byline>
+               <trailer TEIform="trailer">
+                  <hi TEIform="hi" rend="italic">New Witness.</hi>
+               </trailer>
+            </div2>
+            <div2 TEIform="div2" id="lest10" n="Mater Dolorosa" org="uniform" part="N" sample="complete" type="poem"><docAuthor n="Stuart, Dorothy Margaret">Dorothy Margaret Stuart</docAuthor>
+               <pb TEIform="pb" n="95 LEST WE FORGET"/>
+               <head TEIform="head" rend="center">MATER DOLOROSA.</head>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">WHAT have I given thee,</l>
+                  <l TEIform="l" part="N">England, beloved of me?</l>
+                  <l TEIform="l" part="N">I have no gold for thy desolate,</l>
+                  <l TEIform="l" part="N">I have n spear to guard thy gate,</l>
+                  <l TEIform="l" part="N">My hands are weak on the harp of fate</l>
+                  <l TEIform="l" part="N">In the hour of threnody.</l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Yet have given, I;</l>
+                  <l TEIform="l" part="N">And England, my gifts lie</l>
+                  <l TEIform="l" part="N">Far from thee and thy sacred strand.</l>
+                  <l TEIform="l" part="N">I have given the hand that held my hand,</l>
+                  <l TEIform="l" part="N">The feet that once on my palm could stand,</l>
+                  <l TEIform="l" part="N">The hopes I was nourished by.</l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">All that I had, I give,</l>
+                  <l TEIform="l" part="N">The life that I bade live,</l>
+                  <l TEIform="l" part="N">The heart that my heart made to beat,</l>
+                  <l TEIform="l" part="N">The lips erstwhile on my lips so sweet</l>
+                  <l TEIform="l" part="N">These have I given; is it not meet</l>
+                  <l TEIform="l" part="N">To have striven that thou mayst strive?</l>
+               </lg>
+               <pb TEIform="pb" n="96 LEST WE FORGET"/>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">The day of France doth shrine</l>
+                  <l TEIform="l" part="N">This only gift of mine;</l>
+                  <l TEIform="l" part="N">England, be it not made in vain,</l>
+                  <l TEIform="l" part="N">Be but thy glory great as our pain.</l>
+                  <l TEIform="l" part="N">We are glad to have given--would give again</l>
+                  <l TEIform="l" part="N">The light of our days for thine!</l>
+               </lg>
+               <byline TEIform="byline">DOROTHY MARGARET STUART.</byline>
+               <trailer TEIform="trailer">
+                  <hi TEIform="hi" rend="italic">British Review.</hi>
+               </trailer>
+            </div2>
+            <div2 TEIform="div2" id="lest11" n="Abi, Viator---" org="uniform" part="N" sample="complete" type="poem"><docAuthor n="Stuart, Dorothy Margaret">Dorothy Margaret Stuart</docAuthor>
+               <pb TEIform="pb" n="97 LEST WE FORGET"/>
+               <head TEIform="head" rend="center">ABI, VIATOR---.</head>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">IF thou hast seen the standard dim</l>
+                  <l TEIform="l" part="N">Droop in its mesh of dust and grime</l>
+                  <l TEIform="l" part="N">Above the carven hands of him</l>
+                  <l TEIform="l" part="N">Who bore it in some ancient time;</l>
+                  <l TEIform="l" part="N">If thou hast seen the silent sword</l>
+                  <l TEIform="l" part="N">Rust redly in its tattered sheath,</l>
+                  <l TEIform="l" part="N">Hast caught the echo of the word</l>
+                  <l TEIform="l" part="N">That flung an English glove at death,</l>
+                  <l TEIform="l" part="N">And yet thy pulses march unstirred,</l>
+                  <l TEIform="l" part="N">And still thy breath comes calm and slow,</l>
+                  <l TEIform="l" part="N">Pass on--no Englishman art thou!</l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">If thou canst hear and see to-day</l>
+                  <l TEIform="l" part="N">The distant clamour and the fume </l>
+                  <l TEIform="l" part="N">Of crimson fate, and yet canst say</l>
+                  <l TEIform="l" part="N">"The gain is mine, be theirs the doom."</l>
+                  <l TEIform="l" part="N">If thou thy unthrilled hands canst fold,</l>
+                  <l TEIform="l" part="N">If thou canst check thy seaward tread, </l>
+                  <l TEIform="l" part="N">Canst shun the dust and guard the gold,</l>
+                  <l TEIform="l" part="N">Thou hast no kinship with thy dead;</l>
+                  <l TEIform="l" part="N">Ah! if thy craven heart is cold,</l>
+                  <l TEIform="l" part="N">Pause not the perilous page to scan--</l>
+                  <l TEIform="l" part="N">Pass on--thou art no Englishman!</l>
+               </lg>
+               <pb TEIform="pb" n="98 LEST WE FORGET"/>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">But if the distant unison</l>
+                  <l TEIform="l" part="N">Of swooping sword and flying dart,</l>
+                  <l TEIform="l" part="N">Of straining sail and muttering gun,</l>
+                  <l TEIform="l" part="N">Touches thy spirit and thy heart;</l>
+                  <l TEIform="l" part="N">If England's day and England's call</l>
+                  <l TEIform="l" part="N">Find thee a son of England, then</l>
+                  <l TEIform="l" part="N">Thou canst not falter--thou, nor all</l>
+                  <l TEIform="l" part="N">Her noble heritage of men;</l>
+                  <l TEIform="l" part="N">Pass on--she stands, although we fall,</l>
+                  <l TEIform="l" part="N">Pass on unshaken though stars shake</l>
+                  <l TEIform="l" part="N">Thyself canst tell what road to take!</l>
+               </lg>
+               <byline TEIform="byline">DOROTHY MARGARET STUART.</byline>
+               <trailer TEIform="trailer">
+                  <hi TEIform="hi" rend="italic">British Review.</hi>
+               </trailer>
+            </div2>
+            <div2 TEIform="div2" id="lest12" n="A Re Alberto" org="uniform" part="N" sample="complete" type="poem">
+	<docAuthor n="Chartres, Annie Vivanti">Annie Vivanti Chartres</docAuthor>
+               <pb TEIform="pb" n="99 LEST WE FORGET"/>
+               <head TEIform="head" rend="center">A RE ALBERTO.</head>
+               <head TEIform="head" rend="center">Saluto Italico.</head>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">O ALBERTO, biondo e leggendario re,</l>
+                  <l TEIform="l" part="N">Che ne lusinga menzognera ammalia</l>
+                  <l TEIform="l" part="N">N&#x00E8; ferreo pugno piega--noi vorremmo</l>
+                  <l TEIform="l" part="N">Mietere tutti i fiori dell'Italia</l>
+                  <l TEIform="l" part="N">E darli a te!</l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Anche l'Italia contro l'oppressore </l>
+                  <l TEIform="l" part="N">Magnifica e furente combatt&#x00E8;</l>
+                  <l TEIform="l" part="N">Tra le antiche ferite nel suo cuore </l>
+                  <l TEIform="l" part="N">Una nuova ferita di dolore </l>
+                  <l TEIform="l" part="N">Aperta or s'&#x00E8;:</l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Questa--che pur fremente di stupenda</l>
+                  <l TEIform="l" part="N">Ferocia e di magnanimo fervore</l>
+                  <l TEIform="l" part="N">Il popolo d'Italia, o eroico re,</l>
+                  <l TEIform="l" part="N">Nell'ora tua pi&#x00F9; sacra e pi&#x00F9; tremenda</l>
+                  <l TEIform="l" part="N">Non fu con te.</l>
+               </lg>
+               <byline TEIform="byline">ANNIE VIVANTI CHARTRES.</byline>
+               <trailer TEIform="trailer">
+                  <hi TEIform="hi" rend="italic">Times.</hi>
+               </trailer>
+            </div2>
+            <div2 TEIform="div2" id="lest13" n="A Tribute From Italy"
+org="uniform" part="N" sample="complete" type="poem">
+	<docAuthor n="Chartres, Annie Vivanti">Annie Vivanti Chartres</docAuthor>
+               <pb TEIform="pb" n="100 LEST WE FORGET"/>
+               <head TEIform="head" rend="center">A TRIBUTE FROM ITALY.</head>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">ALBERT, thou standest where the storm-cloud lowers</l>
+                  <l TEIform="l" part="N">Unvanquished in thy glorious defeat.</l>
+                  <l TEIform="l" part="N">Oh! to strip Italy of all her flowers</l>
+                  <l TEIform="l" part="N">And bring them to thy feet!</l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">No deeper sorrow shall Italia know,</l>
+                  <l TEIform="l" part="N">Whose sons for freedom's sake have fought and died,</l>
+                  <l TEIform="l" part="N">Than this--that in thine hour of darkest woe</l>
+                  <l TEIform="l" part="N">She was not by thy side.</l>
+               </lg>
+               <byline TEIform="byline">A.V.C.</byline>
+               <trailer TEIform="trailer">
+                  <hi TEIform="hi" rend="italic">Times.</hi>
+               </trailer>
+            </div2>
+            <div2 TEIform="div2" id="lest14" n="Non-Combatant" org="uniform" part="N" sample="complete" type="poem"><docAuthor n="Hamilton, Cicely">Cicely Hamilton</docAuthor>
+               <pb TEIform="pb" n="117 LEST WE FORGET"/>
+               <head TEIform="head" rend="center">NON-COMBATANT.</head>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">BEFORE one drop of angry blood was shed</l>
+                  <l TEIform="l" part="N">I was sore hurt and beaten to my knee;</l>
+                  <l TEIform="l" part="N">efore one fighting man reeled back and died</l>
+                  <l TEIform="l" part="N">The War-Lords struck at me.</l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">They struck me down--an idle, useless mouth,</l>
+                  <l TEIform="l" part="N">As cumbrous--nay, more cumbrous than the dead,</l>
+                  <l TEIform="l" part="N">With life and heart afire to give and give</l>
+                  <l TEIform="l" part="N">I take a dole instead.</l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">With life and heart afire to give and give</l>
+                  <l TEIform="l" part="N">I take and eat the bread of charity.</l>
+                  <l TEIform="l" part="N">In all the length of all this eager land,</l>
+                  <l TEIform="l" part="N">No man has need of me.</l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">That is my hurt--my burning, beating wound;</l>
+                  <l TEIform="l" part="N">That is the spear--thrust driven through my pride!</l>
+                  <l TEIform="l" part="N">With aimless hands, and mouth that must be fed,</l>
+                  <l TEIform="l" part="N">I wait and stand aside.</l>
+               </lg>
+               <pb TEIform="pb" n="118 LEST WE FORGET"/>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Let me endure it, then, with stiffened lip:</l>
+                  <l TEIform="l" part="N">I, even, I have suffered in the strife!</l>
+                  <l TEIform="l" part="N">Let me endure it then--then I give my pride</l>
+                  <l TEIform="l" part="N">Where others give a life.</l>
+               </lg>
+               <byline TEIform="byline">Cicely Hamilton.</byline>
+               <trailer TEIform="trailer">
+                  <hi TEIform="hi" rend="italic">Westminster Gazette</hi>
+               </trailer>
+            </div2>
+            <div2 TEIform="div2" id="lest15" n="War" org="uniform" part="N" sample="complete" type="poem"><docAuthor n="Tollemache, Grace E.">Grace B. Tollemache</docAuthor>
+               <pb TEIform="pb" n="130 LEST WE FORGET"/>
+               <head TEIform="head" rend="center">WAR.</head>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">O HELL-SPED fury War, with wings raised high</l>
+                  <l TEIform="l" part="N">Hawk-like that hoverest to smite!</l>
+                  <l TEIform="l" part="N">How many eager now, stark-dead shall lie,</l>
+                  <l TEIform="l" part="N">Ere thou hast flown thy fatal flight!</l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">O sea of strife, whose armed hosts still come on,</l>
+                  <l TEIform="l" part="N">Like wind-urged waves across the main!--</l>
+                  <l TEIform="l" part="N">What throes must flesh endure ere thou sink down</l>
+                  <l TEIform="l" part="N">In smoothly flowing Peace again!</l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">O callous War! Cold-blooded game of death,</l>
+                  <l TEIform="l" part="N">With men 'gainst men as foes arrayed,--</l>
+                  <l TEIform="l" part="N">What pride of youth must yield life's precious breath</l>
+                  <l TEIform="l" part="N">Ere to an end thy game be played!</l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">O devastating, desolating War, --</l>
+                  <l TEIform="l" part="N">What dirges follow thee! what dearth</l>
+                  <l TEIform="l" part="N">And blackened ruin, where thou goest, mar</l>
+                  <l TEIform="l" part="N">The goodly pleasantness of Earth!</l>
+               </lg>
+               <byline TEIform="byline">GRACE B. TOLLEMACHE.</byline>
+               <trailer TEIform="trailer">
+                  <hi TEIform="hi" rend="italic">August 1st.</hi>
+               </trailer>
+            </div2>
+            <div2 TEIform="div2" id="lest16" n="Sonnet" org="uniform" part="N" sample="complete" type="poem"><docAuthor n="Tollemache, Grace E.">Grace E. Tollemache</docAuthor>
+               <pb TEIform="pb" n="131 LEST WE FORGET"/>
+               <head TEIform="head" rend="center">SONNET.</head>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="sonnet">
+                  <l TEIform="l" part="N">O YE to whom dear life is still most dear,</l>
+                  <l TEIform="l" part="N">Heed not the sirens' soft perfidious song</l>
+                  <l TEIform="l" part="N">That bids you barter, for a brief term here,</l>
+                  <l TEIform="l" part="N">Abiding honour! As the martyr-throng</l>
+                  <l TEIform="l" part="N">For love of Christ went stedfast to the stake</l>
+                  <l TEIform="l" part="N">And by faith's rapturous power embraced the flame,</l>
+                  <l TEIform="l" part="N">So, gladly, ye, for your own Country's sake,</l>
+                  <l TEIform="l" part="N">Must court the fiery Fates that wound and maim!</l>
+                  <l TEIform="l" part="N">And if on valour's path to victory's end,</l>
+                  <l TEIform="l" part="N">Sweet life in one swift flash ye must renounce--</l>
+                  <l TEIform="l" part="N">Rejoice that your high lot should so transcend</l>
+                  <l TEIform="l" part="N">Man's common doom! The brave can die but once,</l>
+                  <l TEIform="l" part="N">But in your death, thrice-gloriously ye'll die,--</l>
+                  <l TEIform="l" part="N">For England, for men's hearths, and Liberty!</l>
+               </lg>
+               <byline TEIform="byline">GRACE E. TOLLEMACHE.</byline>
+               <trailer TEIform="trailer">
+                  <hi TEIform="hi" rend="italic">September 1st.</hi>
+               </trailer>
+            </div2>
+            <div2 TEIform="div2" id="lest17" n="Sonnet" org="uniform" part="N" sample="complete" type="poem"><docAuthor n="Tollemache, Grace E.">Grace E. Tollemache</docAuthor>
+               <pb TEIform="pb" n="132 LEST WE FORGET"/>
+               <head TEIform="head" rend="center">SONNET.</head>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="sonnet">
+                  <l TEIform="l" part="N">ENGLAND! that thou wast faint of heart we said,</l>
+                  <l TEIform="l" part="N">Or inly thought; and that the wreath of bays</l>
+                  <l TEIform="l" part="N">Drooped on thy brow, withered with length of days,</l>
+                  <l TEIform="l" part="N">A dust-layered trophy of the age-long Dead:</l>
+                  <l TEIform="l" part="N">We wronged thee much! --Myriads this month have bled</l>
+                  <l TEIform="l" part="N">And died for thee, and though the end delays,</l>
+                  <l TEIform="l" part="N">There's not one that a daunted spirit betrays</l>
+                  <l TEIform="l" part="N">Nor that for thee life's last drop would not shed!</l>
+                  <l TEIform="l" part="N">We deemed thy robes grown faded,--but fresh-dyed</l>
+                  <l TEIform="l" part="N">We now behold them,--and their crimson dye</l>
+                  <l TEIform="l" part="N">Is of thy sons' spilt blood, deep-hued and glowing:</l>
+                  <l TEIform="l" part="N">O England! thou art comely in thy pride</l>
+                  <l TEIform="l" part="N">And clad in glorious raiment, and thy going</l>
+                  <l TEIform="l" part="N">Is as of one who goes to victory!</l>
+               </lg>
+               <byline TEIform="byline">GRACE E. TOLLEMACHE.</byline>
+               <trailer TEIform="trailer">
+                  <hi TEIform="hi" rend="italic">October 1st.</hi>
+               </trailer>
+            </div2>
+            <div2 TEIform="div2" id="lest18" n="One Night" org="uniform" part="N" sample="complete" type="poem"><docAuthor n="Sutherland, Millicent">Millicent Sutherland</docAuthor>
+               <pb TEIform="pb" n="133 LEST WE FORGET"/>
+               <head TEIform="head" rend="center">ONE NIGHT.</head>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="couplet">
+                  <l TEIform="l" part="N">I WALKED into a moon of gold last night</l>
+                  <l TEIform="l" part="N">Across grey sands she seemed to shine so bright.</l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="couplet">
+                  <l TEIform="l" part="N">Wide, wide the sands until I met the sea,</l>
+                  <l TEIform="l" part="N">Cradle of moons, yet searchlights followed me.</l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="couplet">
+                  <l TEIform="l" part="N">I asked the moon if creeping round the Zones</l>
+                  <l TEIform="l" part="N">She had seen good, or only poor things' bones.</l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="couplet">
+                  <l TEIform="l" part="N">"Pale faces I have seen, unconscious men</l>
+                  <l TEIform="l" part="N">Bereft of struggling horror now and then.</l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="couplet">
+                  <l TEIform="l" part="N">"And sinking ships I see, and floating mines,</l>
+                  <l TEIform="l" part="N">And cries I hear, 'O God,' and choking whines.</l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="couplet">
+                  <l TEIform="l" part="N">But later when the stars shine on the wave</l>
+                  <l TEIform="l" part="N">And give more light, I know the dead die brave.</l>
+               </lg>
+               <pb TEIform="pb" n="134 LEST WE FORGET"/>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="couplet">
+                  <l TEIform="l" part="N">"Passing so quickly from the things that count,</l>
+                  <l TEIform="l" part="N">Count to all mortal thoughts, to find the Fount,</l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="couplet">
+                  <l TEIform="l" part="N">"Where angels pour elixir into bowls,</l>
+                  <l TEIform="l" part="N">Drink, not for broken hearts, but thirsty souls."</l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="couplet">
+                  <l TEIform="l" part="N">And what on shore?" I asked, "the great Divide</l>
+                  <l TEIform="l" part="N">Where rivers run, and trenches side by side?"</l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="couplet">
+                  <l TEIform="l" part="N">"There," the moon said, "the snow was on the ground</l>
+                  <l TEIform="l" part="N">And the frost pinched me as I beamed around.</l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="couplet">
+                  <l TEIform="l" part="N">"Red pools of gore, and ghastly shadows lay</l>
+                  <l TEIform="l" part="N">In deep dug corners, so I sank away.</l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="couplet">
+                  <l TEIform="l" part="N">"Let misty cloudlets sweep across my face</l>
+                  <l TEIform="l" part="N">To hide the earth, and give me heart of grace.</l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="couplet">
+                  <l TEIform="l" part="N">"Sudden the air seemed filled with eager breath</l>
+                  <l TEIform="l" part="N">Of great Adventurers, released from death,</l>
+               </lg>
+               <pb TEIform="pb" n="135 LEST WE FORGET"/>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="couplet">
+                  <l TEIform="l" part="N">"And shaking blood from out their eyes and hair</l>
+                  <l TEIform="l" part="N">Shouting for further knowledge here and there.</l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="couplet">
+                  <l TEIform="l" part="N">"I lighted these across the treacherous Path</l>
+                  <l TEIform="l" part="N">To reach the garden of Life's aftermath.</l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="couplet">
+                  <l TEIform="l" part="N">"And as they sped in troops the great guns boomed,</l>
+                  <l TEIform="l" part="N">With flashes lightning swift, and dark hordes loomed,</l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="couplet">
+                  <l TEIform="l" part="N">"And phantom shapes of patient warrior bands--</l>
+                  <l TEIform="l" part="N">Then more snow fell and shrouded all the lands.</l>
+               </lg>
+               <p TEIform="p">*	*	*	*	*	*	*	*	*	*</p>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="couplet">
+                  <l TEIform="l" part="N">Now pondering from the moon I turned again,</l>
+                  <l TEIform="l" part="N">Over the sands, back to our House of Pain.</l>
+               </lg>
+               <byline TEIform="byline">MILLICENT SUTHERLAND.</byline>
+               <trailer TEIform="trailer">
+                  <hi TEIform="hi" rend="italic">British Hospital, Malo, Dunkirk, France.</hi>
+               </trailer>
+               <trailer TEIform="trailer">
+                  <hi TEIform="hi" rend="italic">English Review.</hi>
+               </trailer>
+            </div2>
+         </div1>
+      </body>
+   </text>
+</TEI.2>

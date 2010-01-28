@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TEI.2>
+<teiHeader>
+
+<fileDesc>
+<titleStmt>
+<title>The Great War in Postcards</title>
+<author>Beck Center staff</author>
+<respStmt><resp></resp>
+<name></name></respStmt>
+</titleStmt>
+<extent></extent>
+<publicationStmt>
+<publisher>Lewis H. Beck Center for Electronic Collections and
+Services, Woodruff Library, Emory University</publisher>
+<pubPlace>Atlanta, GA</pubPlace>
+<address><addrLine>540 Asbury Circle</addrLine></address>
+<availability><p></p></availability>
+<date>2004</date>
+</publicationStmt>
+<seriesStmt><title>The Great War</title>
+</seriesStmt>
+<sourceDesc>
+<bibl>
+</bibl>
+</sourceDesc>
+</fileDesc>
+
+<encodingDesc>
+<projectDesc><p></p>
+</projectDesc>
+</encodingDesc>
+
+<revisionDesc>
+<change>
+<date>October 2004</date>
+<respStmt>
+<name>Kate Schelbe</name>
+<resp>Beck Center Staff</resp></respStmt>
+<item>Postcards scanned</item>
+</change>
+<change>
+<date>November 2004</date>
+<respStmt>
+<name>Alice Hickcox</name>
+<resp>Beck Center Staff</resp></respStmt>
+<item>Descriptions, categories and header added</item>
+</change>
+</revisionDesc>
+</teiHeader>
+<text>
+<body>
+<p>
+<figure entity="ofv_working_man" ana="nat-brit hf-p im-dr t-wwi">
+<head>Out for Victory</head>
+<figDesc>At a Post Office an older man hands the clerk payment for
+a war savings certificate. At lower left of drawing: L Raven Hill. At
+bottom the caption: <hi rend="smallcap">British Working Man</hi>:
+"Give us another fifteen-an'-sixer, miss, to take home to the old
+girl."  On reverse: No. 515.
+</figDesc>
+</figure>
+
+<figure entity="ofv_minesweeper" ana="nat-brit hf-p im-dr t-wwi"><head>Out for Victory</head><figDesc>A man
+dressed in yellow slicker and pants stands at the wheel of a ship. At
+lower left of drawing: L Raven Hill. At bottom the caption: The
+Minesweeper. All's Fish that comes to his net! On reverse: No. 510.</figDesc></figure>
+
+<figure entity="ofv_jack_signals" ana="nat-brit hf-p im-dr t-wwi"><head>Out for Victory</head><figDesc>A
+sailor holds red and yellow signal flags. At
+lower right of drawing: L Raven Hill. At bottom the caption: Jack
+Signals To Us, "Carry On." On reverse: No. 508.</figDesc></figure>
+
+<figure entity="ofv_poilu" ana="nat-brit hf-p im-dr t-wwi"><head>Out for Victory</head><figDesc>A
+soldier in a gray uniform with rifle on his shoulder and hand
+upraised. At lower right of drawing: L Raven Hill. At bottom the
+caption: The Poilu. Whose motto is, "They shall not pass!" On reverse:
+No. 504.</figDesc></figure>
+
+<figure entity="ofv_allotment" ana="nat-brit hf-p im-dr t-wwi"><head>Out for Victory</head><figDesc>A man
+in a field, with a spading fork, and potatoes on the ground. At lower right of drawing: L Raven Hill. At bottom the
+caption: The Allotment Holder. Too old to fight, but doing his bit to
+beat the U boats. On reverse: No. 513.</figDesc></figure>
+
+<figure entity="ofv_merchant" ana="nat-brit hf-p im-dr t-wwi"><head>Out for Victory</head><figDesc>Four
+men in a boat, with a sinking ship in the distance and a submarine
+moving away. One man stands, his arm in a sling, and shakes his fist. At
+lower left of drawing: L Raven Hill. At bottom the caption: The
+Merchant Seaman. Going home to sign on again. On reverse: No. 509.</figDesc></figure>
+
+<figure entity="souville" ana="nat-de mil-f im-ph t-wwi"><head>V&#x00F6;llig zerst&#x00F6;rter
+feindlicher Sch&#x00FC;tzengraben b. Souville for
+Verdun</head><figDesc>This black and white photograph shows a
+destroyed trench. On reverse: Nr. 368. N. Engel, Photogr. Kunstantalt, Diedenhofen</figDesc></figure>
+
+<figure entity="fighting_fifth" ana="nat-brit mil-a mil-f im-ph t-wwi"><head>The "Fighting
+Fifth"</head><figDesc>This black and white photograph shows
+soldiers cheering. At bottom: The "Fighting Fifth" (Northumberland
+Fusiliers) after the battle of St. Eloi. In small script at the top:
+Official Photograph Crown Copyright Reserved, and at bottom, Daily
+Mail War Pictures. On reverse: Assisted by the Royal Fusiliers, the
+"Fighting Fifth" (Northumberland Fusiliers) took with splendid dash
+the first and second line trenches at St. Eloi. At left on reverse:
+Official War Photographs/Crown Copryright Reserved/Series 6. No. 46.</figDesc></figure>
+</p>
+</body>
+<back>
+<div>
+<p>
+<interpGrp type="nationality">
+<interp id="nat-brit" value="Britain"/>
+<interp id="nat-fr" value="France"/>
+<interp id="nat-us" value="United States"/>
+<interp id="nat-it" value="Italy"/>
+<interp id="nat-de" value="Germany"/>
+<interp id="nat-rus" value="Russia"/>
+<interp id="nat-ee" value="Eastern Europe"/>
+<interp id="nat-bel" value="Belgium"/>
+<interp id="nat-ca" value="Canada"/>
+<interp id="nat-jp" value="Japan"/>
+<interp id="nat-nl" value="Netherlands"/>
+<interp id="nat-au" value="Austria"/>
+</interpGrp>
+<interpGrp type="military">
+<interp id="mil-a" value="Army"/>
+<interp id="mil-na" value="Navy"/>
+<interp id="mil-p" value="propaganda"/>
+<interp id="mil-f" value="battle front"/>
+<interp id="mil-nur" value="nurse"/>
+</interpGrp>
+<interpGrp type="homefront">
+<interp id="hf-w" value="women"/>
+<interp id="hf-c" value="children"/>
+<interp id="hf-p" value="propaganda"/>
+<interp id="hf-re" value="religion"/>
+<interp id="hf-ro" value="romance"/>
+<interp id="hf-h" value="home"/>
+</interpGrp>
+<interpGrp type="content">
+<interp id="con-v" value="verse"/>
+<interp id="con-h" value="humor"/>
+<interp id="con-p" value="person"/>
+<interp id="con-m" value="memorial"/><!-- use with im-ph to indicate
+photo of memorial -->
+<interp id="con-f" value="flag"/>
+<interp id="con-r" value="war ruins"/>
+<interp id="con-el" value="Uncle Elmer"/>
+</interpGrp>
+<interpGrp type="image">
+<interp id="im-s" value="silks"/>
+<interp id="im-ph" value="photo"/>
+<interp id="im-pa" value="painting"/>
+<interp id="im-dr" value="drawing"/>
+<interp id="im-ca" value="cartoon"/>
+<interp id="im-en" value="engraving"/>
+<interp id="im-po" value="poster"/>
+</interpGrp>
+<interpGrp type="time period">
+<interp id="t-pre" value="pre Great War"/>
+<interp id="t-wwi" value="during Great War"/>
+<interp id="t-post" value="post Great War"/>
+<interp id="t-ww2" value="World War II"/>
+<interp id="t-post2" value="post World War II"/>
+</interpGrp>
+</p></div>
+</back>
+</text>
+</TEI.2>
