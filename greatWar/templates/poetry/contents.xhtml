@@ -1,0 +1,55 @@
+<html>
+  <head> 
+   	<link rel="stylesheet" type="text/css" href="/site_media/css/wwi.css">
+    <title>The Great War : Poetry : Poem - {{fullPoem.heads.0.content}}</title> 
+    <meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'>
+  </head> 
+<body>
+{% include "header.xhtml" %}
+<p class='breadcrumbs'><a href="/">Home</a> > <a href="/poetry/volume_browse/">poetry</a> > Contents </p>
+
+<div class="content">
+{% if volumeContent %}
+	{{volumeContent.c}}
+	<ul>
+	
+	{% for frontComponent in volumeContent.frontComponents %}
+		<li><a href="/poetry/front/{{frontComponent.id}}">{% if frontComponent.name %} {{frontComponent.name|upper}} {% else %} {{frontComponent.fcType|upper}}{% endif %}</a><font class="type">{{frontComponent.fcType}}</font></li>
+	{% endfor %}
+	
+	{% for bodyComponent in volumeContent.bodyComponents %}
+		<li>{% if bodyComponent.name %} {{bodyComponent.name}} {% else %} {{bodyComponent.title}}{% endif %}<font class="type">{{bodyComponent.bcType}}</font></li>
+		<ul>
+		{% for subBodyComponent in bodyComponent.subBodyComponents %}
+			{% if subBodyComponent.isEssay %}<!-- essay -->
+				<li><a href="/poetry/{{subBodyComponent.sbcType}}/{{subBodyComponent.id}}">{{subBodyComponent.title}}</a><font class="type">{{subBodyComponent.sbcType}}</font></li>
+				<ul>
+					{% for poem in subBodyComponent.poems %}
+						<li><a href="/poetry/{{subBodyComponent.sbcType}}/{{subBodyComponent.id}}">{{poem.title}}</a> 
+						{% if poem.author %}- {{poem.author}}{%endif%}<font class="type">{{poem.bpType}}</font></li>
+					{% endfor %}
+				</ul>
+			{% else %}<!-- poems -->
+				<li><a href="/poetry/{{bodyComponent.bcType}}/{{subBodyComponent.id}}">{{subBodyComponent.title}}</a>{% if subBodyComponent.author %}- {{subBodyComponent.author}}{%endif%} - <font class="type">{{subBodyComponent.sbcType}}</font></li>
+			{% endif %}
+		{% endfor %}
+		</ul>
+	{% endfor %}
+	
+	</ul>
+{% else %}
+ <div class="summary warning" id="summary_warning">No content for this volume.</div>
+{% endif %}
+
+</div>
+
+<div class="sidebar">
+{% include "poetry/nav.html" %}
+{% include "searchbox.xhtml" %}
+</div>
+
+{% include "footer.html" %}
+
+
+</body>
+</html>

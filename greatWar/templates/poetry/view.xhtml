@@ -1,0 +1,57 @@
+<html>
+  <head> 
+   	<link rel="stylesheet" type="text/css" href="/site_media/css/wwi.css">
+    <title>The Great War : Poetry : Poem - {{fullPoem.heads.0.content}}</title> 
+    <meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'>
+  </head> 
+<body>
+{% include "header.xhtml" %}
+
+<div class="content">
+<p class='breadcrumbs'><a href="/">Home</a> > <a href="/poetry/volume_browse/">poetry</a> > View - "{% for head in fullPoem.heads %}{{head.content}}{% endfor %}"</p>
+
+
+<p class="source">Contents - <a href="/poetry/volume/{{fullPoem.xmlFileName}}">{{fullPoem.title}}</a>, {{fullPoem.editor}}</p>
+<table class="poem">
+	<tr>
+		<td>
+		{% for head in fullPoem.heads %}
+			<p align="{{head.rend}}" class="head">{{head.content}}</p>
+		{% endfor %}
+		
+		{% for para in fullPoem.paragraphs %}
+			<p class="{{para.pType}}">{{head.content}}
+			{% for line in para.lines %}
+				{{line.content}}<br/>
+			{% endfor %}
+			</p>
+		{% endfor %}
+		{% if fullPoem.byline %}
+			<p class="byline">{{fullPoem.byline}}</p>
+		{% endif %}
+		{% for date in fullPoem.dateline %}
+			{{date}}<br/>
+		{% endfor %}
+		</td>
+	</tr>
+</table>
+
+<p class="source">from <a href="/poetry/volume/{{fullPoem.xmlFileName}}">{{fullPoem.title}}</a>, {{fullPoem.editor}}</p>
+
+<p class="copyright">{{fullPoem.peditor}}, ed.
+<i>{{fullPoem.ptitle}}. </i>{{fullPoem.pplace}}: 
+      {{fullPoem.publisher}}
+      {{fullPoem.pdate}}
+    </p>
+</div>
+
+<div class="sidebar">
+{% include "poetry/nav.html" %}
+{% include "searchbox.xhtml" %}
+</div>
+
+{% include "footer.html" %}
+
+
+</body>
+</html>

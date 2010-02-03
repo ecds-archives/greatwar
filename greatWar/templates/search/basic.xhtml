@@ -1,0 +1,19 @@
+{% extends "site/base.xhtml" %}
+
+{% block content %}
+<p class="searchHeading"> Search Our Data Holdings </p>
+<p id="id_term" class="searchHeading">Search my study abstracts for:</p>
+
+{{ form.errors }}
+
+<form action="{{ form_action }}" method="GET">
+    <div class="fieldWrapper">                
+        {{ form.term.errors }}
+        {{ form.term }} <br>            
+        {{ form.term1.errors }}
+        {{ form.term1 }}
+    </div>
+    {{form.page}}
+    <input class="smallButton" type="submit" value="Submit" />
+</form>
+{% endblock %}

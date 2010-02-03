@@ -1,0 +1,28 @@
+<br/><br/>
+<table>
+{% for label, group in codebook.downloadable_files.group_for_display.items %}
+    <tr class="detail row">
+        <td class="detail subheader">{{ label }}:</td>
+    </tr>
+    
+    {% for file in group %}
+    <tr>
+        <td>&nbsp;</td>
+        <td>
+            <a href="{{ file.href }}" target="_blank">{{ file.name }}</a>
+        <td>
+    </tr>
+    {% endfor %}
+    
+{% endfor %}
+
+<tr><td>&nbsp;</td></tr>
+<tr class="detail row">
+    <td class="detail subheader">data files:</td>
+    <td>
+        <div class="download_button">
+            <a class="download_link" href="{{ codebook.doi_url }}" target="_blank">Download study #{{ codebook.id }} from ICPSR site</a>
+        </div>
+    </td>
+</tr>
+</table>

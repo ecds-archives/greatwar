@@ -1,0 +1,20 @@
+<div class="row {% cycle 'even' 'odd' %}">
+    <div class="field id">Document ID: {{ codebook.id }}</div>
+    <div class="field titlestmt">
+        <a href="{{ app_root }}/study/{{ codebook.id }}/?{{ qry_data }}">{{ codebook.title }}</a>
+    </div>
+
+    <div class="field authentity">
+    {% for authEntity in codebook.stdy_authEntity|slice:"0:4" %}
+        {% if not forloop.first %}, {% endif %}
+        {% ifequal forloop.counter0 2 %}
+            ...
+        {% else %}
+            {{ authEntity }}
+        {% endifequal %}
+    {% endfor %}
+    </div>
+
+    
+    <div class="field matches">{{ codebook.hits }} match{{ codebook.hits|pluralize:"es" }}</div>
+</div>

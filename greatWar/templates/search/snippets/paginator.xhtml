@@ -1,0 +1,31 @@
+<div class="pagination">
+    <span class="step-links">
+        {% ifnotequal result_list.number 1 %}
+            <a href="?{{qry_data}}&page=1">< First</a>
+        {% else %}
+            < First
+        {% endifnotequal %}
+
+        {% if result_list.has_previous %}
+            <a href="?{{qry_data}}&page={{ result_list.previous_page_number }}"><< Previous</a>
+        {% else %}
+            << Previous
+        {% endif %}
+
+        <span class="current">
+            Page {{ result_list.number }} of {{ result_list.paginator.num_pages }}.
+        </span>
+
+        {% if result_list.has_next %}
+            <a href="?{{qry_data}}&page={{ result_list.next_page_number }}">Next >></a>
+        {% else %}
+            Next >>
+        {% endif %}
+
+        {% ifnotequal result_list.number result_list.paginator.num_pages %}
+            <a href="?{{qry_data}}&page={{ result_list.paginator.num_pages }}">Last ></a>
+        {% else %}
+            Last >
+        {% endifnotequal %}
+    </span>
+</div>

@@ -1,0 +1,79 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="/site_media/css/wwi.css">
+<title>The Great War</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+a:link	  { color: #000000; }
+a:active  { color: #687c54; } 
+a:visited { color: #b52512; }
+a:hover   { background-color: #ededed; }
+body { text-align: center; }
+</style>
+  <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"/>
+  <link rel="schema.DCTERMS" href="http://purl.org/dc/terms/"/>
+  <meta name="DC.title" content="The Great War, 1914-1918"/>
+  <meta name="DC.creator" content="Lewis H. Beck Center for Electronic Collections & Services"/>
+  <meta name="DC.publisher" content="Lewis H. Beck Center for Electronic Collections & Services"/>
+  <meta name="DC.subject" content="Poetry"/>
+  <meta name="DC.subject" content="Postcards"/>
+  <meta name="DC.subject" content="World War I"/>
+  <meta name="DC.subject" content="World War, 1914-1918"/>
+  <meta name="DC.subject" content="Emory University"/>
+  <meta name="DC.description" content="Poetry written between 1914 and 1918 from 50 scarce volumes acquired by Emory University and a collection of some 450 postcards from World War I."/>
+  <meta name="DC.type" scheme="DCTERMS.DCMIType" content="text"/>
+  <meta name="DC.format" scheme="DCTERMS.IMT" content="text/html"/>
+  <meta name="DC.identifier" content="http://cti.library.emory.edu/greatwar/"/>
+  <meta name="DC.date" content="2004-10-01"/>
+</head>
+
+<body bgcolor="#5d6a50">
+
+<div class="index">
+<p>
+<img src="/site_media/images/index.jpg" width="600" height="400" border="0" alt="">
+</p>
+
+<table class="indexlinks">
+<tr>
+<td><a href='/about'>About the Site</a></td>
+<td class="separator">&bull;</td>
+<td><a href="/postcards">Postcards</a></td>
+<td class="separator">&bull;</td>
+<td><a href="/poetry/volume_browse">Poetry</a></td>
+<td class="separator">&bull;</td>
+<td><a href="/links">Links</a></td>
+</tr>
+
+</table>
+
+
+<div class="indexsearch">
+<p>
+<h3>Search</h3>
+<form action="{{ form_action }}" >
+<!--
+<input type="text" name="keyword" size="20">
+<input type="submit" value="Go">
+-->
+{{ basicSearchBox.term }}
+<input type="submit" value="Go">
+<h4>Search within:</h4>
+<font size="-1">
+<!--
+<input type='checkbox' name='poetry' checked>Poetry
+<input type='checkbox' name='postcards' checked>Postcards
+<input type='checkbox' name='links' checked>Links
+-->
+{{ basicSearchBox.search_poetry }}{{ basicSearchBox.search_poetry.label_tag }}
+{{ basicSearchBox.search_postcards }}{{ basicSearchBox.search_postcards.label_tag }}
+{{ basicSearchBox.search_links }}{{ basicSearchBox.search_links.label_tag }}
+</font>
+</form>
+</div> <!-- indexsearch -->
+ 
+</div> <!-- center -->
+
+</body>
+</html>

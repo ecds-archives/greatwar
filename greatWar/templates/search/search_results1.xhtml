@@ -1,0 +1,11 @@
+    {% if fp %}
+    	{% for poem in fp %}
+    		{{poem.heads.0.content}}
+    		{% for head in poem.heads %}
+        	<p>{{head.content}}</p>
+        	{% endfor %}
+        {% endfor %}
+        
+    {% else %}
+        <p>no</p>
+    {% endif %}

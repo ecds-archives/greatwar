@@ -1,0 +1,47 @@
+<html>
+  <head>
+   	<link rel="stylesheet" type="text/css" href="/site_media/css/wwi.css">
+    <title>The Great War : Poetry : Search Results</title>
+    <meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'>
+  </head> 
+<body>
+
+{% include "header.xhtml" %}
+                  <p class='breadcrumbs'><a href="/">Home</a> > <a href="/poetry/volume_browse/">poetry</a> > Search </p>
+
+<div class="content">
+<p align='center'>Found  {{count}} 
+{% ifnotequal count 0 %}
+	{% ifnotequal count 1%}
+		matches
+	{% else %}
+		match
+	{% endifnotequal %}
+{% else %}
+	match
+{% endifnotequal %}
+</p>
+
+{% ifnotequal count 0 %}
+	{% include "paginator.xhtml" %}
+{% endifnotequal %}
+
+
+{% if result_list.object_list %}
+        {% for bpoem in result_list.object_list %}
+        <p><a href="/poetry/poem/{{bpoem.id}}">{{bpoem.title}}</a> - {{bpoem.author}}</p>
+        {% endfor %}
+    {% else %}
+        <div class="summary warning" id="summary_warning">No matching results were found.</div>
+    {% endif %}
+</div>
+
+<div class="sidebar">
+{% include "poetry/nav.html" %}
+{% include "searchbox.xhtml" %}
+</div>
+
+{% include "footer.html" %}
+
+</body>
+</html>

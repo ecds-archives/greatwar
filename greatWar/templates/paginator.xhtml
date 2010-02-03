@@ -1,0 +1,62 @@
+<div class="pagination">
+    <span class="step-links">
+        {% ifnotequal result_list.number 1 %}
+            <a href="?{{qry_data}}&page=1">< First</a>
+        {% else %}
+            < First
+        {% endifnotequal %}
+
+        {% if result_list.has_previous %}
+            <a href="?{{qry_data}}&epg={{epg}}&page={{ result_list.previous_page_number }}"><< Previous</a>
+        {% else %}
+            << Previous
+        {% endif %}
+
+        <span class="current">
+            Page {{ result_list.number }} of {{ result_list.paginator.num_pages }}.
+        </span>
+
+        {% if result_list.has_next %}
+            <a href="?{{qry_data}}&epg={{epg}}&page={{ result_list.next_page_number }}">Next >></a>
+        {% else %}
+            Next >>
+        {% endif %}
+
+        {% ifnotequal result_list.number result_list.paginator.num_pages %}
+            <a href="?{{qry_data}}&epg={{epg}}&page={{ result_list.paginator.num_pages }}">Last ></a>
+        {% else %}
+            Last >
+        {% endifnotequal %}
+        
+        <ul class="horiz">Entries per page:
+		<li class="horiz" id="first">
+		{% ifequal epg 10 %}
+			10
+		{% else %}
+			<a href='?{{qry_data}}&epg=10'>10</a>
+		{% endifequal %}
+		</li>
+		<li class="horiz">
+		{% ifequal epg 20 %}
+			20
+		{% else %}
+			<a href='?{{qry_data}}&epg=20'>20</a>
+		{% endifequal %}
+		</li>
+		<li class="horiz">
+		{% ifequal epg 50 %}
+			50
+		{% else %}
+			<a href='?{{qry_data}}&epg=50'>50</a>
+		{% endifequal %}
+		</li>
+		<li class="horiz">
+		{% ifequal epg 100 %}
+			100
+		{% else %}
+			<a href='?{{qry_data}}&epg=100'>100</a>
+		{% endifequal %}
+		</li>
+		</ul>
+    </span>
+</div>

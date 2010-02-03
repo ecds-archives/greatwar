@@ -1,0 +1,26 @@
+{% extends "site/base.xhtml" %}
+
+{% block sub_title %}- ICPSR Study Subject Listing{% endblock %}
+
+{% block content %}
+{% if previous_page %}
+    <div><a href="{{ app_root }}/{{previous_page}}">New Search</a></div>
+{% endif %}
+
+{% include "search/snippets/paginator.xhtml" %}
+
+<h2 id="summary_pretty_qry">{{ pretty_qry|safe }}</h2>
+<h2 id="summary_pretty_showing">Showing {{show_from}} - {{ show_to }} of {{ hits }} </h2>
+
+<div class="summary" id="summary_table">
+    {% if result_list.object_list %}
+        {% for bpoem in result_list.object_list %}
+        <p>Poem ID: {{bpoem.id}}</p>
+            <!--{% include "search/snippets/results_summary_test.xhtml" %}-->
+        {% endfor %}
+    {% else %}
+        <div class="summary warning" id="summary_warning">No matching results were found.</div>
+    {% endif %}
+</div>
+{% include "search/snippets/paginator.xhtml" %}
+{% endblock %}
