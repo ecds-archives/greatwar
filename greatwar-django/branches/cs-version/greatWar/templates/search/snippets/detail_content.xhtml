@@ -1,0 +1,345 @@
+<div class="download_button">
+    <a href="{{ app_root }}/download/{{ codebook.id }}/?{{ previous_data }}">Download Data</a>
+</div>
+
+<div id="detail_heading" class="detail title">
+    <div id="heading_title">{{ codebook.title }}</div>
+    <div id="heading_id">ICPSR Study # {{ codebook.id }}</div>
+</div>
+
+<div id="docDscr">
+    <div class="detail header"><a name="docDscr">Document Description</a></div>
+</div>
+
+{% if codebook.title %}
+<div id="title" class="detail row">
+    <div class="detail subheader">Title</div>
+    <div class="detail content">{{ codebook.title }}</div>
+</div>
+{% endif %}
+
+{% if codebook.authEntity %}
+<div id="authEntity" class="detail row">
+    <div class="detail subheader">Authoring Entity</div>
+    {% for authEntity in codebook.authEnty %}
+        <div class="detail content">{{ authEntity }}</div>
+    {% endfor %}
+</div>
+{% endif %}
+
+{% if codebook.otherID %}
+<div id="otherID" class="detail row">
+    <div class="detail subheader">Other identifications</div>
+    <div class="detail content">{{ codebook.otherID }}</div>
+</div>
+{% endif %}
+
+{% if codebook.principal_investigator %}
+<div id="principal_investigator" class="detail row">
+    <div class="detail subheader">Principal Investigator</div>
+    {% for pi in codebook.principal_investigator %}
+        <div class="detail content">{{ pi }}</div>
+    {% endfor %}
+</div>
+{% endif %}
+
+{% if codebook.copyright %}
+<div id="copyright" class="detail row">
+    <div class="detail subheader">Copyright</div>
+    <div class="detail content">{{ codebook.copyright }}</div>
+</div>
+{% endif %}
+
+{% if codebook.prodDate %}
+<div id="prod_date" class="detail row">
+    <div class="detail subheader">Date of Production</div>
+    <div class="detail content">{{ codebook.prodDate }}</div>
+</div>
+{% endif %}
+
+{% if codebook.citation_version %}
+<div id="version" class="detail row">
+    <div class="detail subheader">Version</div>
+    <div class="detail content">{{ codebook.citation_version }}</div>
+</div>
+{% endif %}
+
+{% if codebook.citation_verResp %}
+<div id="version_responsibility" class="detail row">
+    <div class="detail subheader">Version Responsibility</div>
+    <div class="detail content">{{ codebook.citation_verResp }}</div>
+</div>
+{% endif %}
+
+{% if codebook.citation_notes %}
+<div id="citation_notes" class="detail row">
+    <div class="detail subheader">Notes</div>
+    <div class="detail content">{{ codebook.citation_notes }}</div>
+</div>
+{% endif %}
+
+<div id="stdyDscr">
+    <div class="detail header"><a name="stdyDscr">Study Description</a></div>
+</div>
+
+{% if codebook.stdy_title %}
+<div id="stdy_title" class="detail row">
+    <div class="detail subheader">Title</div>
+    <div class="detail content">{{ codebook.stdy_title }}</div>
+</div>
+{% endif %}
+
+{% if codebook.subtitle %}
+<div id="stdy_subtitle" class="detail row">
+    <div class="detail subheader">Subtitle</div>
+    <div class="detail content">{{ codebook.stdy_subtitle }}</div>
+</div>
+{% endif %}
+
+{% if codebook.alttitle %}
+<div id="stdy_alttitle" class="detail row">
+    <div class="detail subheader">Alternative Title</div>
+    <div class="detail content">{{ codebook.stdy_alttitle }}</div>
+</div>
+{% endif %}
+
+{% if codebook.stdy_Entity %}
+<div id="stdy_authEntity" class="detail row">
+    <div class="detail subheader">Authoring Entity</div>
+    {% for authEntity in codebook.stdy_Entity %}
+        <div class="detail content">{{ authEntity }}</div>
+    {% endfor %}
+</div>
+{% endif %}
+
+{% if codebook.stdy_version %}
+<div id="stdy_version" class="detail row">
+    <div class="detail subheader">Version</div>
+    <div class="detail content">{{ codebook.stdy_version }}</div>
+</div>
+{% endif %}
+
+{% if codebook.collection_size %}
+<div id="collection_extent" class="detail row">
+    <div class="detail subheader">Extent of Collection</div>
+    <div class="detail content">{{ codebook.collection_size }}</div>
+</div>
+{% endif %}
+
+{% if codebook.stdy_notes %}
+<div id="stdy_notes" class="detail row">
+    <div class="detail subheader">Notes</div>
+    <div class="detail content">{{ codebook.stdy_notes }}</div>
+</div>
+{% endif %}
+
+<div id="stdyScope">
+    <div class="detail header"><a name="stdyScope">Study Scope</a></div>
+</div>
+
+{% if codebook.subjectKeywords %}
+<div id="subjects" class="detail row">
+    <div class="detail subheader">Subject Term{{ codebook.subjectKeywords|pluralize }}</div>
+    <ul class="detail content">
+        {{ codebook.subjectKeywords|unordered_list }}
+    </ul>
+</div>
+{% endif %}
+
+{% if codebook.subjectTopics %}
+<div id="topics" class="detail row">
+    <div class="detail subheader">Topical Classification{{ codebook.subjectTopics|pluralize }}</div>
+    <ul class="detail content">
+        {{ codebook.subjectTopics|unordered_list }}
+    </ul>
+</div>
+{% endif %}
+
+{% if codebook.universe %}
+<div id="universe" class="detail row">
+    <div class="detail subheader">Universe</div>
+    <div class="detail content">{{ codebook.universe }}</div>
+</div>
+{% endif %}
+
+{% if codebook.biblioCit %}
+<div id="biblioCit" class="detail row">
+    <div class="detail subheader">Bibliographic Citation</div>
+    <div class="detail content">{{ codebook.biblioCit }}</div>
+</div>
+{% endif %}
+
+{% if codebook.versionHistory %}
+<div id="version_history" class="detail row">
+    <div class="detail subheader">Version History</div>
+    {% for version in codebook.versionHistory %}
+        <div class="detail content">{{ version }}</div>
+    {% endfor %}
+</div>
+{% endif %}
+
+{% if codebook.abstract %}
+<div id="abstract" class="detail row">
+    <div class="detail subheader">Abstract</div>
+    <div class="detail content">{{ codebook.abstract }}</div>
+</div>
+{% endif %}
+
+{% if codebook.timePrd_start or codebook.timePrd_end %}
+<div id="time_period" class="detail row">
+    <div class="detail subheader">Time Period</div>
+    <div class="detail content">{{ codebook.timePrd_start }} - {{ codebook.timePrd_end}} </div>
+</div>
+{% endif %}
+
+<div id="geoCoverages" class="detail row">
+    <div class="detail subheader">Geographic Coverage{{ codebook.geoCoverages|pluralize }}</div>
+    <ul class="detail content">
+        {{ codebook.geoCoverages|unordered_list }}
+    </ul>
+</div>
+
+{% if codebook.nations %}
+<div id="nations" class="detail row">
+    <div class="detail subheader">Nations</div>
+    <ul class="detail content">
+        {{ codebook.nations|unordered_list }}
+    </ul>
+</div>
+{% endif %}
+
+{% if codebook.geoUnits %}
+<div id="geoUnits" class="detail row">
+    <div class="detail subheader">Geographic Unit{{ codebook.geoCoverages|pluralize }}</div>
+    <ul class="detail content">
+        {{ codebook.geoUnits|unordered_list }}
+    </ul>
+</div>
+{% endif %}
+
+{% if codebook.anlyUnit %}
+<div id="ayalysis_unit" class="detail row">
+    <div class="detail subheader">Unit of Analysis</div>
+    <div class="detail content">{{ codebook.anlyUnit }}</div>
+</div>
+{% endif %}
+
+{% if codebook.dataKind %}
+<div id="data_kind" class="detail row">
+    <div class="detail subheader">Kind of Data</div>
+    <div class="detail content">{{ codebook.dataKind }}</div>
+</div>
+{% endif %}
+
+{% if codebook.stdyDscr_notes %}
+<div id="scope_notes" class="detail row">
+    <div class="detail subheader">Notes</div>
+    <div class="detail content">{{ codebook.stdyDscr_notes }}</div>
+</div>
+{% endif %}
+
+<div id="methodology">
+    <div class="detail header"><a name="methodology">Methodology and Processing</a></div>
+</div>
+
+{% if codebook.frequency %}
+<div id="frequency" class="detail row">
+    <div class="detail subheader">Frequency of Data Collection</div>
+    <div class="detail content">{{ codebook.frequency }}</div>
+</div>
+{% endif %}
+
+{% if codebook.cleanOps %}
+<div id="processing" class="detail row">
+    <div class="detail subheader">Extent of Processing</div>
+    <div class="detail content">{{ codebook.cleanOps }}</div>
+</div>
+{% endif %}
+
+{% if codebook.method_notes %}
+<div id="method_notes" class="detail row">
+    <div class="detail subheader">Notes</div>
+    <div class="detail content">{{ codebook.method_notes }}</div>
+</div>
+{% endif %}
+
+<div id="dataAccess">
+    <div class="detail header"><a name="data_access">Data Access</a></div>
+</div>
+
+{% if codebook.locations %}
+<div id="locations" class="detail row">
+    <div class="detail subheader">Location{{ codebook.locations|pluralize }}</div>
+    <ul class="detail content">
+        {{ codebook.locations|unordered_list }}
+    </ul>
+</div>
+{% endif %}
+
+{% if codebook.restriction %}
+<div id="restrictions" class="detail row">
+    <div class="detail subheader">Restrictions</div>
+    <div class="detail content">{{ codebook.restriction }}</div>
+</div>
+{% endif %}
+
+{% if codebook.conditions %}
+<div id="conditions" class="detail row">
+    <div class="detail subheader">Conditions</div>
+    <div class="detail content">
+        {# filter unescape #}
+            {{ codebook.conditions|safe }}
+        {# endfilter #}
+    </div>
+</div>
+{% endif %}
+
+{% if codebook.access_notes %}
+<div id="access_notes" class="detail row">
+    <div class="detail subheader">Notes</div>
+    <div class="detail content">{{ codebook.access_notes }}</div>
+</div>
+{% endif %}
+
+<div id="file_desc">
+    <div class="detail header"><a name="fileDscr">File Description</a></div>
+</div>
+
+{% if codebook.file_type %}
+<div id="data_format" class="detail row">
+    <div class="detail subheader">Data Format</div>
+    <div class="detail content">{{ codebook.file_type }}</div>
+</div>
+{% endif %}
+
+{% if codebook.file_notes %}
+<div id="data_notes" class="detail row">
+    <div class="detail subheader">Notes</div>
+    <div class="detail content">{{ codebook.file_notes }}</div>
+</div>
+{% endif %}
+
+{% if codebook.parts %}
+<div id="file_parts" class="detail row">
+    <div class="detail subheader">Part{{ codebook.parts|pluralize }}</div>
+    {% for part in codebook.parts %}
+        {% if part.id %}
+            <table>
+                <tr><td>part name:</td><td>{{ part.filename }}</td></tr>
+                <tr><td>file structure:</td><td>{{ part.fileStrc }}</td></tr>
+                <tr><td>case count:</td><td>{{ part.caseQnty }}</td></tr>
+                <tr><td>variable count:</td><td>{{ part.varQnty }}</td></tr>
+                <tr><td>lrecl (logical record length):</td><td>{{ part.logRecl }}</td></tr>
+                <tr><td>records per case:</td><td>{{ part.recPrCas }}</td></tr>
+            </table>
+        {% else %}
+            <div class="detail content">{{ part.filetype }}</div>
+            <div class="detail content"><a href="{{ part.extLink }}" target="download">{{ part.extLink }}</a></div>
+        {% endif %}        
+    {% endfor %}
+</div>
+{% endif %}
+
+<div class="download_button">
+    <a href="{{ app_root }}/download/{{ codebook.id }}/??{{ previous_data }}">Download Data</a>
+</div>

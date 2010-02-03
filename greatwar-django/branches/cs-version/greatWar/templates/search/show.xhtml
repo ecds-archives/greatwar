@@ -1,0 +1,25 @@
+{% extends "site/base.xhtml" %}
+
+{% block sub_title %}- ICPSR Study Subject Listing{% endblock %}
+
+{% block content %}
+
+{% if previous_page %}
+    <div><a href="{{ app_root }}/{{ previous_page }}?{{ previous_data }}">Return to Search Results</a></div>
+    <div><a href="{{ app_root }}/{{ previous_page }}">New Search</a></div>
+{% endif %}
+
+<div class="nav" id="detail_nav">
+    {% include "search/snippets/detail_menu.xhtml" %}
+</div>
+<div class="detail" id="detail_content">
+    {% if data %}
+        {% for codebook in data %}            
+            {% include "search/snippets/detail_content.xhtml" %}
+        {% endfor %}
+    {% else %}
+        <div class="detail warning" id="detail_warning">No records match ID {{survey_id}}.</div>
+    {% endif %}
+</div>
+
+{% endblock %}

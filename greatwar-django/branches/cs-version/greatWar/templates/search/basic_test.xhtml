@@ -1,0 +1,11 @@
+<p class="searchHeading"> Search keyword in titile</p>
+
+<form action="{{ form_action }}" method="GET">
+    <div class="fieldWrapper">                
+        {{ form.term.errors }}
+        {{ form.term }}
+
+    </div>
+    {{form.page}}
+    <input class="smallButton" type="submit" value="search" />
+</form>

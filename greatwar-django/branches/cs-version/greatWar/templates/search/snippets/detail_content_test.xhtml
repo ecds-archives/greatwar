@@ -1,0 +1,35 @@
+<div id="detail_heading" class="detail title">
+    <div id="heading_title">{{ book.title }}</div>
+    <div id="heading_id">Book ID # {{ book.id }}</div>
+</div>
+
+{% if book.title %}
+<div id="title" class="detail row">
+    <div class="detail subheader">Title</div>
+    <div class="detail content">{{ book.title }}</div>
+</div>
+{% endif %}
+
+{% if book.authors %}
+<div id="authEntity" class="detail row">
+    <div class="detail subheader">Authoring Entity</div>
+    {% for auth in book.authors %}
+        <div class="detail content">{{ auth }}</div>
+    {% endfor %}
+</div>
+{% endif %}
+
+{% if book.lang %}
+<div id="otherID" class="detail row">
+    <div class="detail subheader">Language</div>
+    <div class="detail content">{{ book.lang }}</div>
+</div>
+{% endif %}
+
+{% if book.year %}
+<div id="otherID" class="detail row">
+    <div class="detail subheader">year</div>
+    <div class="detail content">{{ book.year }}</div>
+</div>
+{% endif %}
+

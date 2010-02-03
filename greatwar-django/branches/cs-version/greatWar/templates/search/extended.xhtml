@@ -1,0 +1,29 @@
+{% extends "site/base.xhtml" %}
+
+{% block content %}
+<p class="searchHeading"> Search Our Data Holdings </p>
+<p id="id_term" class="searchHeading">Search all study abstracts for:</p>
+
+<div>{{ condition_form.errors }}</div>
+
+<form method="GET" action="{{ form_action }}">
+    {{condition_form.operator}}
+    <div class="extended">
+        {% for f in form.forms %}
+            <div class="row">
+                <span class="fieldWrapper">{{ f.term }}</span>
+                <span class="searchHeading"> from the </span>
+                <span class="fieldWrapper">{{ f.field }}</span>
+                <span class="searchHeading"> region</span>
+            </div>
+            <div>{{ f.errors }}</div>
+        {% endfor %}
+    </div>
+    <input class="smallButton" type="submit" value="Submit" />
+    {{ form.management_form }}
+</form>
+
+<br/><br/>
+
+{% include "search/snippets/search_tips.xhtml" %}
+{% endblock %}

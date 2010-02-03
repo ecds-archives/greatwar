@@ -1,0 +1,33 @@
+{% extends "site/base.xhtml" %}
+
+{% block sub_title %}- ICPSR Study Subject Listing{% endblock %}
+
+{% block content %}
+
+<div><a href="{{ app_root }}/study/{{ data.0.id }}/?{{ previous_data }}">Return to Study</a></div>
+{% if previous_page %}
+    <div><a href="{{ app_root }}/{{ previous_page }}?{{ previous_data }}">Return to Search Results</a></div>
+    <div><a href="{{ app_root }}/{{ previous_page }}?{{ previous_page }}">New Search</a></div>
+{% endif %}
+
+<div class="detail" id="detail_content">
+    {% if data %}
+        {% for codebook in data %}
+            <div id="docDownload">
+                <div class="detail header">Download Study</div>
+            </div>
+
+            <div id="study_id" class="detail row">
+                <div class="detail subheader">Study: {{ codebook.id }}</div>
+                <div class="detail content">{{ codebook.title }}</div>
+            </div>
+
+            {% include "search/snippets/download_data.xhtml" %}
+
+        {% endfor %}
+    {% else %}
+        <div class="detail warning" id="detail_warning">No records match ID {{survey_id}}.</div>
+    {% endif %}
+</div>
+
+{% endblock %}

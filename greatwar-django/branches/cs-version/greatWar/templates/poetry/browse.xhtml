@@ -1,0 +1,37 @@
+<html>
+  <head> 
+   	<link rel="stylesheet" type="text/css" href="/site_media/css/wwi.css">
+    <title>The Great War : Poetry : Browse</title> 
+    <meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'>
+  </head> 
+<body>
+{% include "header.xhtml" %}
+<p class='breadcrumbs'><a href="/">Home</a> > <a href="/poetry/volume_browse/">poetry</a> > Browse</p>
+
+<div class="content">
+{% if result_list %}
+		<ul>
+        {% for vol in result_list %}
+        <li><a href="/poetry/volume/{{vol.filename}}">{{vol.title}}</a></li>
+        	{% if vol.author %}
+        		{{vol.author}}
+        	{% endif %}
+        	{% if vol.editor %}
+        		{{vol.editor}}, ed
+        	{% endif %}
+        {% endfor %}
+        </ul>
+{% else %}
+        <div class="summary warning" id="summary_warning">No volume to browse.</div>
+{% endif %}
+</div>
+
+<div class="sidebar">
+{% include "poetry/nav.html" %}
+{% include "searchbox.xhtml" %}
+</div>
+
+{% include "footer.html" %}
+
+</body>
+</html>

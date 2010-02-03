@@ -1,0 +1,18 @@
+<div class="row {% cycle 'even' 'odd' %}">
+    <div class="field id">BOOK ID: {{ book.id }}</div>
+    <div class="field titlestmt">
+        <a href="{{ app_root }}/book/{{ book.id }}/">{{ book.title }}</a>
+    </div>
+
+    <div class="field authentity">
+    {% for auth in book.authors|slice:"0:4" %}
+        {% if not forloop.first %}, {% endif %}
+        {% ifequal forloop.counter0 2 %}
+            ...
+        {% else %}
+            {{ auth }}
+        {% endifequal %}
+    {% endfor %}
+    </div>
+
+</div>

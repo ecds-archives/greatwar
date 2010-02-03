@@ -1,0 +1,15 @@
+<div class='search'>
+<h3>Search</h3> 
+
+<form action='/'>
+{{ basicSearchBox.term }}<input type='submit' value='Go'>
+<font size='-1'>
+
+<h4>Search within:</h4>
+{{ basicSearchBox.search_poetry }}{{ basicSearchBox.search_poetry.label_tag }}<br>
+{{ basicSearchBox.search_postcards }}{{ basicSearchBox.search_postcards.label_tag }}<br>
+{{ basicSearchBox.search_links }}{{ basicSearchBox.search_links.label_tag }}<br>
+</font>
+</form>
+
+</div>
