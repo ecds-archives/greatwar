@@ -1,0 +1,13 @@
+{% extends "base_page.html" %}
+{% block pagetitle %} Poetry |  Poets | {{ name }} {% endblock %}
+
+{% block content %}
+Poems by {{ name }}
+<ul>
+ {% for poem in poems %}
+   <li>{{ poem.title }} - {{ poem.doctitle }}</li>
+ {% empty %}
+   <li>No match<li>
+ {% endfor %}
+</ul>
+{% endblock %}

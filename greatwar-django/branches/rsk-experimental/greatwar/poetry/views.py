@@ -1,5 +1,5 @@
 from django.shortcuts import render_to_response
-from greatwar.poetry.models import PoetryBook, Poem
+from greatwar.poetry.models import PoetryBook, Poem, Poet
 from django.http import HttpResponse
 
 
@@ -19,5 +19,11 @@ def div(request, docname, div_id):
     return render_to_response('poetry/div.html', { 'div' : div,
                                                    'body' : body})
    
+def poet(request):
+    poets = Poet.objects.distinct().order_by('.').all()
+    return render_to_response('poetry/poets.html', { 'poets' : poets })
     
-
+def poet_list(request, name):
+    poems = Poem.objects.filter(poet__exact=name).also(['doctitle', 'doc_id']).order_by('title').all()
+    return render_to_response('poetry/poem_list.html', { 'poems' : poems,
+                                                         'poet'  : name})
