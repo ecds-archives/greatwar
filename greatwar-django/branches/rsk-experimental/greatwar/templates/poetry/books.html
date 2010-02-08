@@ -1,0 +1,17 @@
+{% extends "base_page.html" %}
+{% block pagetitle %} Poetry : Browse {% endblock %}
+
+{% block content %}
+{% if books %}
+    <ul>
+    {% for book in books %}
+        <li>{{ book.title }} <br/>
+	    {% if book.author %} {{ book.author }} <br/> {% endif %}
+	    {% if book.editor %} {{ book.editor }} <br/> {% endif %}
+        </li>
+    {% endfor %}
+   </ul>
+{% else %}
+    <p>Nothing found.</p>
+{% endif %}
+{% endblock %}

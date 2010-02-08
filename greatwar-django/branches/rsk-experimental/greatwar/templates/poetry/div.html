@@ -1,0 +1,12 @@
+{% extends "base_page.html" %}
+{% block pagetitle %} Poetry | {{div.doctitle }} | {{ div.title }} {% endblock %} {# add book title... #}
+
+{% block content %}
+{% if div %}
+from <a href="/poetry/{{div.doc_id}}">{{ div.doctitle }}</a> (id =  {{div.doc_id}} )
+<h2>{{ div.title }}</h2>
+     {% if div.author %} {{div.author }} <br/> {% endif %}
+
+{{ body|safe }}
+{% endif %}
+{% endblock %}

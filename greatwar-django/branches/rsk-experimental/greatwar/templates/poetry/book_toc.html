@@ -1,0 +1,43 @@
+{% extends "base_page.html" %}
+{% block pagetitle %} Poetry : {{ book.title }} {% endblock %}
+{% block content %}
+
+{% if book %}
+  {{ book.title }}
+     {% if book.author %} {{ book.author }} <br/> {% endif %}
+     {% if book.editor %} {{ book.editor }} <br/> {% endif %}
+
+  {% if book.divs %}
+    <ul>
+    {% for d in book.divs %}
+        <li> {{ d.title }} {% if d.author %} - {{ d.author }} {% endif %} <i>({{ d.type }})</i> </li>
+	  {% if d.divs %}
+	    <ul>
+	    {% for subdiv in d.divs %}
+	        <li> {{ subdiv.title }} - {{ subdiv.author }} <i>{{ subdiv.type }}</i> </li>
+
+	    {% endfor %}
+	   </ul>
+	  {% endif %}
+
+    {% endfor %}
+   </ul>
+  {% endif %}
+
+
+<hr/>
+(all poems, anywhere in text)
+
+  {% if book.poems %}
+    <ul>
+    {% for p in book.poems %}
+        <li> <a href="{{book.title}}/{{p.id }}">{{ p.title }}</a> - {{ p.author }} </li>
+    {% endfor %}
+   </ul>
+  {% endif %}
+
+
+ {% else %}
+    <p>No book?</p>
+{% endif %}
+{% endblock %}
