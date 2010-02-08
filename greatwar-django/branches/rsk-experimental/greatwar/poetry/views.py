@@ -15,7 +15,7 @@ def book_toc(request, docname):
 
 def div(request, docname, div_id):
     div = Poem.objects.also(['doctitle', 'doc_id']).get(id__exact=div_id)
-    body = div.xslTransform(filename='templates/poetry/div.xsl')
+    body = div.xslTransform(filename='templates/xslt/div.xsl')
     return render_to_response('poetry/div.html', { 'div' : div,
                                                    'body' : body})
    
