@@ -6,19 +6,19 @@ from django.core.paginator import Paginator, InvalidPage, EmptyPage
 
 def books(request):
     "Browse list of volumes"
-    books = PoetryBook.objects.only(['title', 'author', 'editor'])
+    books = PoetryBook.objects.only(['id', 'title', 'author', 'editor'])
     return render_to_response('poetry/books.html', { 'books' : books })
 
 
-def book_toc(request, docname):
+def book_toc(request, doc_id):
     "Display the contents of a book"
     #book = PoetryBook.objects.getDocument(docname)
-    book = PoetryBook.objects.get(title__exact=docname)
+    book = PoetryBook.objects.get(id__exact=doc_id)
     return render_to_response('poetry/book_toc.html', { 'book' : book })
 
-def div(request, docname, div_id):
+def div(request, doc_id, div_id):
     "Display a single div (poem)"
-    div = Poem.objects.also(['doctitle', 'doc_id']).get(id__exact=div_id)
+    div = Poem.objects.also(['doctitle', 'doc_id']).filter(doc_id__exact=doc_id).get(id__exact=div_id)
     body = div.xslTransform(filename='templates/xslt/div.xsl')
     return render_to_response('poetry/div.html', { 'div' : div,
                                                    'body' : body})   
