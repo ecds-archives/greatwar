@@ -4,8 +4,8 @@
 {% block content %}
 Poems by <b>{{ poet }}</b>
 <ul>
- {% for poem in poems %} {# FIXME: put book id in here? #}
-   <li><a href="/poetry/BOOKID/{{ poem.id }}">{{ poem.title }}</a> - {{ poem.doctitle }}</li>
+ {% for poem in poems %} 
+   <li><a href="{% url greatwar.poetry.views.div poem.doc_id,poem.id %}">{{ poem.title }}</a> - {{ poem.doctitle }}</li>
  {% empty %}
    <li>No match<li>
  {% endfor %}

@@ -1,44 +1,48 @@
 {% extends "poetry/base_page.html" %}
-{% block page_subtitle %}  | {{ book.title }} {% endblock %}
+{% block page_subtitle %} {{ book.title }} {% endblock %}
 
 
 {% block content %}
 {% if book %}
-  {{ book.title }}
+     {{ book.title }}
      {% if book.author %} {{ book.author }} <br/> {% endif %}
      {% if book.editor %} {{ book.editor }} <br/> {% endif %}
 
-  {% if book.divs %}
-    <ul>
-    {% for d in book.divs %}
-        <li> {{ d.title }} {% if d.author %} - {{ d.author }} {% endif %} <i>({{ d.type }})</i> </li>
-	  {% if d.divs %}
+  <ul>
+  {% for div in book.front.div %}
+     <li><a href="{% url greatwar.poetry.views.div book.id,div.id %}">{{ div.title|default:div.type|capfirst }}</a></li>
+  {% endfor %}
+  
+  {% if book.body %}
+    {% for d in book.body.div %}
+        <li> {{ d.title|default:"" }} 
+ 	     {% if d.author %} - {{ d.author }} {% endif %} 
+	     <i>({{ d.type }})</i> 
+	  {% if d.div %}
 	    <ul>
-	    {% for subdiv in d.divs %}
-	        <li> {{ subdiv.title }} - {{ subdiv.author }} <i>{{ subdiv.type }}</i> </li>
-
+	    {% for subdiv in d.div %}
+	        <li> <a href="{% url greatwar.poetry.views.div book.id,subdiv.id %}">{{ subdiv.title }}</a>
+		     {% if subdiv.author %} - {{ subdiv.author }} {% endif %}
+		    {% ifnotequal subdiv.type|lower 'poem' %}  <i>({{ subdiv.type }})</i> {% endifnotequal %}
+		</li>
 	    {% endfor %}
 	   </ul>
 	  {% endif %}
-
+        </li>
     {% endfor %}
-   </ul>
   {% endif %}
 
+  {% for div in book.back.div %}
+     {% ifequal div.type "Colophon" %} {# other types ? #}
+	<li>{{ div.text }} <i>({{ div.type }})</i></li>
+     {% else %}
+     <li><a href="{% url greatwar.poetry.views.div book.id,div.id %}">{{ div.title|default:div.type|capfirst }}</a></li>
+     {% endifequal %}
+  {% endfor %}
 
-<hr/>
-(all poems, anywhere in text)
+  </ul>
 
-  {% if book.poems %}
-    <ul>
-    {% for p in book.poems %}
-        <li> <a href="{{book.title}}/{{p.id }}">{{ p.title }}</a> - {{ p.author }} </li>
-    {% endfor %}
-   </ul>
-  {% endif %}
-
-
- {% else %}
-    <p>No book?</p>
+{% else %}
+    <p>No book specified?</p>
 {% endif %}
 {% endblock %}

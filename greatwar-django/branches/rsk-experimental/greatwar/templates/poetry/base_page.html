@@ -6,9 +6,9 @@
 {% block section_nav %}
 <h3>Navigation</h3>
   <p>
-   <a href="/poetry">Browse Volumes</a><br>
-   <a href="/poetry/poet">Browse by Poet</a><br>
-   <a href="/poetry">Advanced Search</a>
+   <a href="{% url greatwar.poetry.views.books %}">Browse Volumes</a><br>
+   <a href="{% url greatwar.poetry.views.poets %}">Browse by Poet</a><br>
+   <a href="">Advanced Search</a>
   </p>
 {% endblock %}
 

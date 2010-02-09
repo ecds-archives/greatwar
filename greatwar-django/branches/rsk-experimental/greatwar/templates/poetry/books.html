@@ -1,20 +1,16 @@
 {% extends "poetry/base_page.html" %}
 {% block page_subtitle %} Browse Volumes {% endblock %}
 
-{% block section_nav %}
-<h3>Navigation</h3>
-  <p>
-   <a href="/poetry">Browse Volumes</a><br>
-   <a href="/poetry/poet">Browse by Poet</a><br>
-   <a href="/poetry">Advanced Search</a>
-  </p>
-{% endblock %}
-
 {% block content %}
 {% if books %}
     <ul>
     {% for book in books %}
-        <li>{{ book.title }} <br/>
+        <li>
+{% if book.id %}
+<a href="{% url greatwar.poetry.views.book_toc book.id %}">{{ book.title }}</a>  
+{% else %} 
+{{ book.title }}
+ {% endif %}<br/> 
 	    {% if book.author %} {{ book.author }} <br/> {% endif %}
 	    {% if book.editor %} {{ book.editor }} <br/> {% endif %}
         </li>

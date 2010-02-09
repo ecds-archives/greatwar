@@ -5,7 +5,7 @@
 {{ poets.paginator.count }} poets found, displaying {{ poets.start_index }} - {{ poets.end_index }}
 <ul>
  {% for poet in poets.object_list %}
-   <li><a href="/poetry/poet/{{ poet|urlencode }}">{{ poet }}</a></li>
+   <li><a href="{% url greatwar.poetry.views.poet_list poet %}">{{ poet }}</a></li>
  {% empty %}
    <li>No match<li>
  {% endfor %}
