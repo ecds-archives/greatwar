@@ -20,10 +20,11 @@ class Poem(TeiDiv):
 Poem.objects.model = Poem
 
 class Poet(XmlObject):
-    # NOTE: this xpath won't work by itself; meant to be used with distinct()
-    objects = QuerySet(xpath="//div[@type='poem']/docAuthor/@n",
+    first_letter = XPathString("substring(@n,1,1)")
+    name  = XPathString("@n")
+    objects = QuerySet(xpath="//div[@type='poem']/docAuthor",
                        using=ExistDB(),
                        collection=settings.EXISTDB_ROOT_COLLECTION)
+Poet.objects.model = Poet
 
-    
     
