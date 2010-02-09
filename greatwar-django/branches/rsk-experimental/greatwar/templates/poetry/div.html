@@ -1,5 +1,5 @@
-{% extends "base_page.html" %}
-{% block pagetitle %} Poetry | {{div.doctitle }} | {{ div.title }} {% endblock %} {# add book title... #}
+{% extends "poetry/base_page.html" %}
+{% block page_subtitle %} {{ div.doctitle }} | {{ div.title }} {% endblock %}
 
 {% block content %}
 {% if div %}

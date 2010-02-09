@@ -1,11 +1,11 @@
-{% extends "base_page.html" %}
-{% block pagetitle %} Poetry |  Poets | {{ name }} {% endblock %}
+{% extends "poetry/base_page.html" %}
+{% block page_subtitle %}  Poems by {{ poet }} {% endblock %}
 
 {% block content %}
-Poems by {{ name }}
+Poems by <b>{{ poet }}</b>
 <ul>
- {% for poem in poems %}
-   <li>{{ poem.title }} - {{ poem.doctitle }}</li>
+ {% for poem in poems %} {# FIXME: put book id in here? #}
+   <li><a href="/poetry/BOOKID/{{ poem.id }}">{{ poem.title }}</a> - {{ poem.doctitle }}</li>
  {% empty %}
    <li>No match<li>
  {% endfor %}

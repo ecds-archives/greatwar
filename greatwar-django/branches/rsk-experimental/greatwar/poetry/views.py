@@ -19,7 +19,7 @@ def div(request, docname, div_id):
     return render_to_response('poetry/div.html', { 'div' : div,
                                                    'body' : body})
    
-def poet(request):
+def poets(request):
     poets = Poet.objects.distinct().order_by('.').all()
     return render_to_response('poetry/poets.html', { 'poets' : poets })
     
