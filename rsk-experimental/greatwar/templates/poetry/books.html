@@ -1,0 +1,22 @@
+{% extends "poetry/poetry_base.html" %}
+{% block page_subtitle %} Browse Volumes {% endblock %}
+
+{% block content %}
+{% if books %}
+    <ul>
+    {% for book in books %}
+        <li>
+{% if book.id %}
+<a href="{% url greatwar.poetry.views.book_toc book.id %}">{{ book.title }}</a>  
+{% else %} 
+{{ book.title }}
+ {% endif %}<br/> 
+	    {% if book.author %} {{ book.author }} <br/> {% endif %}
+	    {% if book.editor %} {{ book.editor }} <br/> {% endif %}
+        </li>
+    {% endfor %}
+   </ul>
+{% else %}
+    <p>Nothing found.</p>
+{% endif %}
+{% endblock %}
