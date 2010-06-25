@@ -1,0 +1,45 @@
+{% extends "poetry/poetry_base.html" %}
+{% block page_subtitle %} Browse Poets {% endblock %}
+
+{% block content %}
+
+<p>
+ <a href="{% url greatwar.poetry.views.poets %}">All</a>
+ {% for letter in first_letters %}
+  {% ifequal letter current_letter %}
+    {{ letter }}
+  {% else %}
+    <a href="{% url greatwar.poetry.views.poets_by_firstletter letter %}">{{ letter }}</a>
+  {% endifequal %}
+{% endfor %}
+</p>
+
+
+{{ poets.paginator.count }} poet{{ poets.paginator.count|pluralize }} found, displaying {{ poets.start_index }} - {{ poets.end_index }}
+<ul>
+ {% for poet in poets.object_list %}
+   <li><a href="{% url greatwar.poetry.views.poet_list poet %}">{{ poet }}</a></li>
+ {% empty %}
+   <li>No match<li>
+ {% endfor %}
+</ul>
+
+{% ifnotequal poets.paginator.num_pages 1 %}
+<div class="pagination">
+    <span class="step-links">
+        {% if poets.has_previous %}
+            <a href="?page={{ poets.previous_page_number }}">&lt; previous</a>
+        {% endif %}
+
+        <span class="current">
+            Page {{ poets.number }} of {{ poets.paginator.num_pages }}.
+        </span>
+
+        {% if poets.has_next %}
+            <a href="?page={{ poets.next_page_number }}">next &gt;</a>
+        {% endif %}
+    </span>
+</div>
+{% endifnotequal %}
+
+{% endblock %}
