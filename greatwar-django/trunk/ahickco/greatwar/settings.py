@@ -1,4 +1,4 @@
-# Django settings for findingaids project.
+# Django settings for findingaids project. Or great war project.
 from os import path
 
 # Get the directory of this file for relative dir paths.
@@ -39,7 +39,7 @@ DATABASE_PORT = ''             # Set to empty string for default. Not used with 
 # although not all choices may be available on all operating systems.
 # If running in a Windows environment this must be set to the same as your
 # system time zone.
-TIME_ZONE = 'America/Chicago'
+TIME_ZONE = 'America/New_York'
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
@@ -53,7 +53,8 @@ USE_I18N = True
 
 # Absolute path to the directory that holds media.
 # Example: "/home/media/media.lawrence.com/"
-MEDIA_ROOT = '/home/rsutton/workarea/django-greatwar/media/'
+MEDIA_ROOT = '/Beck-files/WWI/greatwar/greatwar-django/trunk/ahickco/media/'
+# '/home/rsutton/workarea/django-greatwar/media/'
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash if there is a path component (optional in other cases).
@@ -96,7 +97,13 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.sites',
     'eulcore', # https://svn.library.emory.edu/svn/python-eulcore/
+   # 'eulcore.django.testsetup',
+   # 'eulcore.django.existdb',
+   # 'eulcore.django.ldap.emory',
+   # 'eulcore.django.util',
 )
+
+EXISTDB_INDEX_CONFIGFILE = path.join(BASE_DIR, "exist_index.xconf")
 
 EXTENSION_DIRS = (
     path.join(BASE_DIR, '../externals/django-modules'),

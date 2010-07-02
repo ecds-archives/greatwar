@@ -3,10 +3,12 @@ from greatwar.poetry.models import PoetryBook, Poem, Poet
 from django.http import HttpResponse
 from django.core.paginator import Paginator, InvalidPage, EmptyPage
 
+from eulcore.django.existdb.db import ExistDB
+from eulcore.existdb.exceptions import DoesNotExist # ReturnedMultiple needed also ?
 
 def books(request):
     "Browse list of volumes"
-    books = PoetryBook.objects.only(['id', 'title', 'author', 'editor'])
+    books = PoetryBook.objects.only('id', 'title', 'author', 'editor')
     return render_to_response('poetry/books.html', { 'books' : books,
                                                      'querytime' : books.queryTime()})
 
@@ -19,22 +21,22 @@ def book_toc(request, doc_id):
 
 def div(request, doc_id, div_id):
     "Display a single div (poem)"
-    div = Poem.objects.also(['doctitle', 'doc_id']).filter(doc_id__exact=doc_id).get(id__exact=div_id)
+    div = Poem.objects.also('doctitle', 'doc_id').filter(doc_id__exact=doc_id).get(id__exact=div_id)
     body = div.xslTransform(filename='templates/xslt/div.xsl')
     return render_to_response('poetry/div.html', { 'div' : div,
                                                    'body' : body})   
 def poets(request):
     "Browse list of poets"
-    return _show_poets(request, Poet.objects.only(['name']).distinct().order_by('name'))
+    return _show_poets(request, Poet.objects.only('name').distinct().order_by('name'))
 
 def poets_by_firstletter(request, letter):
     "Browse list of poets by first letter"
-    return _show_poets(request, Poet.objects.filter(name__startswith=letter).only(['name']).distinct().order_by('name'), letter)
+    return _show_poets(request, Poet.objects.filter(name__startswith=letter).only('name').distinct().order_by('name'), letter)
 
 
 def _show_poets(request, poets, current_letter=None):
     poet_paginator = Paginator(poets, 50)
-    first_letters = Poet.objects.only(['first_letter']).order_by('name').distinct()
+    first_letters = Poet.objects.only('first_letter').order_by('name').distinct()
     # pagination options (from django docs)
     # Make sure page request is an int. If not, deliver first page.
     try:
@@ -56,7 +58,7 @@ def _show_poets(request, poets, current_letter=None):
     
 def poet_list(request, name):
     "List poems by a particular poet"
-    poems = Poem.objects.filter(poet__exact=name).also(['doctitle', 'doc_id']).order_by('title').all()
+    poems = Poem.objects.filter(poet__exact=name).also('doctitle', 'doc_id').order_by('title').all()
     return render_to_response('poetry/poem_list.html', { 'poems' : poems,
                                                          'poet'  : name,
                                                          'querytime' : poems.queryTime()})

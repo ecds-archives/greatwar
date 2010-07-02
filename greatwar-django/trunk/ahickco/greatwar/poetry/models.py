@@ -1,9 +1,10 @@
 from django.conf import settings
+from eulcore import xmlmap
 from eulcore.xmlmap.teimap import Tei, TeiDiv
 from eulcore.existdb.query import QuerySet
 from eulcore.django.existdb.db import ExistDB
-from eulcore.xmlmap.core import XmlObject, XPathString
-
+from eulcore.xmlmap.core import XmlObject #, XPathString
+from eulcore.django.existdb.models import XmlModel
 
 # TEI poetry model
 # currently just a wrapper around tei xmlmap object,
@@ -14,14 +15,14 @@ class PoetryBook(Tei):
                        collection=settings.EXISTDB_ROOT_COLLECTION)
 
 class Poem(TeiDiv):
-    poet = XPathString("docAuthor/@n")
+    poet = xmlmap.StringField("docAuthor/@n")
     objects = QuerySet(model=TeiDiv, xpath="//div", using=ExistDB(),
                        collection=settings.EXISTDB_ROOT_COLLECTION)
 Poem.objects.model = Poem
 
 class Poet(XmlObject):
-    first_letter = XPathString("substring(@n,1,1)")
-    name  = XPathString("@n")
+    first_letter = xmlmap.StringField("substring(@n,1,1)")
+    name  = xmlmap.StringField("@n")
     objects = QuerySet(xpath="//div[@type='poem']/docAuthor",
                        using=ExistDB(),
                        collection=settings.EXISTDB_ROOT_COLLECTION)

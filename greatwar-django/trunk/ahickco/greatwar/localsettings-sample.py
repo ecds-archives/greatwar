@@ -26,11 +26,32 @@ EXISTDB_SERVER_PROTOCOL = "http://"
 EXISTDB_SERVER_HOST     = ""
 EXISTDB_SERVER_USER     = ""
 EXISTDB_SERVER_PWD      = ""
-EXISTDB_SERVER_URL      = EXISTDB_SERVER_PROTOCOL + EXISTDB_SERVER_USER + ":" + \
-    EXISTDB_SERVER_PWD + "@" + EXISTDB_SERVER_HOST
+#EXISTDB_SERVER_URL      = EXISTDB_SERVER_PROTOCOL + EXISTDB_SERVER_USER + ":" + \
+#    EXISTDB_SERVER_PWD + "@" + EXISTDB_SERVER_HOST
+EXISTDB_SERVER_URL      = 'http://user:password@existdb.example.com/exist/xmlrpc' #from fa/localsettings-sample.py
 # collection should begin with / -  e.g., /edc
 EXISTDB_ROOT_COLLECTION = ""
 EXISTDB_TEST_COLLECTION = ""
+# NOTE: EXISTDB_INDEX_CONFIGFILE is configured in settings.py (for fa; is it for gw?)
+
+# from fa:
+# a bug in python xmlrpclib loses the timezone; override it here
+# most likely, you want either tz.tzlocal() or tz.tzutc()
+from dateutil import tz
+EXISTDB_SERVER_TIMEZONE = tz.tzlocal()
+
+# from fa:
+# EULCORE LDAP SETTINGS
+# LDAP login settings. These are configured for emory, but you'll need
+# to get a base user DN and password elsewhere.
+AUTH_LDAP_SERVER = '' # i.e. 'ldaps://vlad.service.emory.edu'
+AUTH_LDAP_BASE_USER = '' # i.e. 'uid=USERNAME,ou=services,o=emory.edu'
+AUTH_LDAP_BASE_PASS = '' # password for USERNAME above
+AUTH_LDAP_SEARCH_SUFFIX = '' # i.e. 'o=emory.edu'
+AUTH_LDAP_SEARCH_FILTER = '' # i.e. '(uid=%s)'
+AUTH_LDAP_CHECK_SERVER_CERT = False # ALWAYS SET True in production.
+AUTH_LDAP_CA_CERT_PATH = '' # absolute path of cert
+
 
 ADDITIONAL_DATA_INDEX   = ""
 DOI_PURL_HOST = "http://dx.doi.org/"
