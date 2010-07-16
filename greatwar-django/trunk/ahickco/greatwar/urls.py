@@ -8,7 +8,8 @@ from django.conf import settings
 urlpatterns = patterns('',
     # Example:
     # (r'^greatwar/', include('greatwar.foo.urls')),
-                       (r'^poetry/', include('greatwar.poetry.urls')),                       
+                       (r'^poetry/', include('greatwar.poetry.urls')),
+                       (r'^postcards/', include('greatwar.postcards.urls')),
 
     # Uncomment the admin/doc line below and add 'django.contrib.admindocs' 
     # to INSTALLED_APPS to enable admin documentation:
