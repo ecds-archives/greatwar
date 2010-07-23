@@ -1,0 +1,35 @@
+{% extends "postcards/postcard_base.html" %}
+{% block page_subtitle %} Browse Postcards {% endblock %}
+
+{% if postcards.paginator.count %}
+    <p>{{ postcards.paginator.count }} postcard{{ postcards.paginator.count|pluralize }} found,
+    displaying {{ postcards.start_index }} - {{ postcards.end_index }}</p>
+{% endif %}
+
+{% block content %}
+{% if postcards %}
+      <p>
+      {% for postcard in postcards.object_list %}
+      {#<a href="{url postcards/card/{{entity}} }"> #}
+      <img class="thumbnail" alt="postcard thumbnail" src="{ url greatwar.postcards.views.postcards postcard.entity }" /> {# </a> #}
+      <br/>
+       {{ postcard.card }}</p>
+      {% endfor %}
+{% endif %}
+{% endblock %}
+
+<div class="pagination">
+  <span class="postcardnav">
+       {% if postcards.has_previous %}
+           <a href="?page={{ postcards.previous_page_number }}">previous</a>
+       {% endif %}
+
+       <span class="current">
+            Page {{ postcards.number }} of {{ postcards.paginator.num_pages }}.
+       </span>
+
+       {% if postcards.has_next %}
+            <a href="?page={{ postcards.next_page_number }}">next</a>
+       {% endif %}
+  </span>
+</div>

@@ -1,9 +1,0 @@
-{% extends "postcards/postcard_base.html" %}
-{% block page_subtitle %} Browse Postcards {% endblock %}
-
-{% block content %}
-{% if postcards %}
-      <p>
-      {% for postcard in postcards %}
-      <img class="thumbnail" alt="postcard thumbnail" src="{% url greatwar.postcard.views.postcard_actual postcard.entity %}" /><br/>
-       { postcard.head }
