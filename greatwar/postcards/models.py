@@ -4,6 +4,7 @@ from eulcore import xmlmap
 from eulcore.xmlmap.teimap import TeiFigure
 from eulcore.existdb.query import QuerySet
 from eulcore.django.existdb.db import ExistDB
+from eulcore.django.existdb.manager import Manager
 from eulcore.xmlmap.core import XmlObject #, XPathString
 from eulcore.django.existdb.models import XmlModel
 
@@ -13,11 +14,17 @@ from eulcore.django.existdb.models import XmlModel
 #     objects = QuerySet(model=TeiFigure, xpath="/TEI.2", using=ExistDB()
 #                        collection=settings.EXISTDB_ROOT_COLLECTION)
 
-class PostcardThumb(TeiFigure):
-     card = xmlmap.StringField("head")
+class Postcard(XmlModel, TeiFigure):
+     head = xmlmap.StringField("head")
      entity = xmlmap.StringField("@entity")
      ana = xmlmap.StringField("@ana")
      description = xmlmap.StringField("figDesc")
-     objects = QuerySet(model=TeiFigure, xpath="//figure", using=ExistDB()
-                        collection=localsettings.EXISTDB_ROOT_COLLECTION)
-PostcardThumb.objects.model = PostcardThumb
+     objects = Manager("//figure")
+
+     def to_python(self, value):
+          if isinstance(value, ana):
+               ana_list = string.split(ana)
+               return ana_list
+Postcard.objects.model = Postcard
+
+
