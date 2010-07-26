@@ -1,6 +1,6 @@
 from eulcore.django.existdb.manager import Manager
 from eulcore.django.existdb.models import XmlModel
-from eulcore.fedora.models import DigitalObject, FileDatastream
+#from eulcore.fedora.models import DigitalObject, FileDatastream
 from eulcore.xmlmap.teimap import TeiFigure, TeiInterpGroup
 
 
@@ -20,9 +20,9 @@ class Categories(XmlModel, TeiInterpGroup):
     objects = Manager("//interpGrp")
 
 # preliminary fedora object for images
-class ImageObject(DigitalObject):
-    # DC & RELS-EXT inherited
-    image = FileDatastream("IMAGE", "Master TIFF image", defaults={
-            'mimetype': 'image/tiff',
+#class ImageObject(DigitalObject):
+#    # DC & RELS-EXT inherited
+#    image = FileDatastream("IMAGE", "Master TIFF image", defaults={
+#            'mimetype': 'image/tiff',
             # FIXME: versioned? checksum?
-        })
+#        })

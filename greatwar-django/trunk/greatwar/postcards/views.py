@@ -8,22 +8,27 @@ from eulcore.existdb.exceptions import DoesNotExist
 def postcards(request):
     "Browse thumbnail list of postcards"
     postcards = Postcard.objects.only('head', 'entity')
-   # paginator = paginate_queryset(request, postcards) #show 50 thumbnails per page
-    show_pages = []
+    count = Postcard.objects.count()
+    paginator = paginate_queryset(request, postcards) #show 50 thumbnails per page
     postcard_subset, paginator = paginate_queryset(request, postcards, per_page=50, orphans=3)
     show_pages = pages_to_show(paginator, postcard_subset.number)
     return render_to_response('postcards/postcards.html', { 'postcards' : postcard_subset, 
                                                          'show_pages' : show_pages,
-                                                           })
+                                                          'count' : count, })
 
 def card(request):
     "Show an individual card at real size with description"
     card = Postcard.objects.only('head', 'entity', 'ana', 'figDesc')
-    return render_to_resonse('postcards/card', { 'card' : card, })
+    return render_to_resonse('postcards/card.html', { 'card' : card, })
+
+def index():
+   "Show the postcard home page"
+   return render_to_response('postcards/index.html', { 'index' : index, })
+
 
  # object pagination - adapted directly from django paginator documentation
  # from findingaids/fa/util.py to here
-def paginate_queryset(request, qs, per_page=50, orphans=0):    # 0 is django default
+def paginate_queryset(request, qs, per_page=10, orphans=0):    # 0 is django default
     # FIXME: should num-per-page be configurable via local settings?
     paginator = Paginator(qs, per_page, orphans=orphans)
     # Make sure page request is an int. If not, deliver first page.

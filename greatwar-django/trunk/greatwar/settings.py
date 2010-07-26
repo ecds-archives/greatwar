@@ -55,7 +55,7 @@ USE_I18N = True
 
 # Absolute path to the directory that holds media.
 # Example: "/home/media/media.lawrence.com/"
-MEDIA_ROOT = '/Beck-files/WWI/greatwar/greatwar-django/trunk/ahickco/media/'
+MEDIA_ROOT = '/Beck-files/WWI/greatwar/greatwar-django/trunk/media/'
 # '/home/rsutton/workarea/django-greatwar/media/'
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a

@@ -8,12 +8,12 @@
 
 {% block content %}
 {% if postcards %}
-      <p>
-      {% for postcard in postcards.object_list %}
-      {#<a href="{url postcards/card/{{entity}} }"> #}
-      <img class="thumbnail" alt="postcard thumbnail" src="{ url greatwar.postcards.views.postcards postcard.entity }" /> {# </a> #}
+     {% for postcard in postcards.object_list %}
+      <p class="thumbnail">
+       <a href="{url postcards/card/{{entity}} }" class="img"> 
+      <img class="thumbnail" alt="postcard thumbnail" src="{ url greatwar.postcards.views.postcards postcard.entity }" />  </a> 
       <br/>
-       {{ postcard.card }}</p>
+       {{ postcard.head }}</p>
       {% endfor %}
 {% endif %}
 {% endblock %}
