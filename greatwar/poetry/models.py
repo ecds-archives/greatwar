@@ -1,31 +1,21 @@
-from django.conf import settings
-from eulcore import xmlmap
-from eulcore.xmlmap.teimap import Tei, TeiDiv
-from eulcore.existdb.query import QuerySet
-from eulcore.django.existdb.db import ExistDB
-from eulcore.xmlmap.core import XmlObject #, XPathString
+from eulcore.django.existdb.manager import Manager
 from eulcore.django.existdb.models import XmlModel
+from eulcore.xmlmap import XmlObject
+from eulcore.xmlmap.fields import StringField
+from eulcore.xmlmap.teimap import Tei, TeiDiv
 
-# TEI poetry model
-# currently just a wrapper around tei xmlmap object,
-# with a exist queryset initialized using django-exist settings and tei model
+# TEI poetry models
+# currently just slightly-modified versions of tei xmlmap objects
 
-class PoetryBook(Tei):
-    objects = QuerySet(model=Tei, xpath="/TEI.2", using=ExistDB(),
-                       collection=settings.EXISTDB_ROOT_COLLECTION)
+class PoetryBook(XmlModel, Tei):
+    objects = Manager('/TEI.2')
 
-class Poem(TeiDiv):
-    poet = xmlmap.StringField("docAuthor/@n")
-    objects = QuerySet(model=TeiDiv, xpath="//div", using=ExistDB(),
-                       collection=settings.EXISTDB_ROOT_COLLECTION)
-Poem.objects.model = Poem
+class Poem(XmlModel, TeiDiv):
+    poet = StringField("docAuthor/@n")
+    objects = Manager('//div')      # should this have [@type='poem'] ?
 
-class Poet(XmlObject):
-    first_letter = xmlmap.StringField("substring(@n,1,1)")
-    name  = xmlmap.StringField("@n")
-    objects = QuerySet(xpath="//div[@type='poem']/docAuthor",
-                       using=ExistDB(),
-                       collection=settings.EXISTDB_ROOT_COLLECTION)
-Poet.objects.model = Poet
-
+class Poet(XmlModel, XmlObject):
+    first_letter = StringField("substring(@n,1,1)")
+    name  = StringField("@n")
+    objects = Manager("//div[@type='poem']/docAuthor")
     
