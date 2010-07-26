@@ -1,30 +1,28 @@
-#from django.db import models
-from django.conf import settings
-from eulcore import xmlmap
-from eulcore.xmlmap.teimap import TeiFigure
-from eulcore.existdb.query import QuerySet
-from eulcore.django.existdb.db import ExistDB
 from eulcore.django.existdb.manager import Manager
-from eulcore.xmlmap.core import XmlObject #, XPathString
 from eulcore.django.existdb.models import XmlModel
+from eulcore.fedora.models import DigitalObject, FileDatastream
+from eulcore.xmlmap.teimap import TeiFigure, TeiInterpGroup
 
 
-# TEI postcard model
-#class Postcard(TeiFigure):
-#     objects = QuerySet(model=TeiFigure, xpath="/TEI.2", using=ExistDB()
-#                        collection=settings.EXISTDB_ROOT_COLLECTION)
+# TEI postcard models
 
 class Postcard(XmlModel, TeiFigure):
-     head = xmlmap.StringField("head")
-     entity = xmlmap.StringField("@entity")
-     ana = xmlmap.StringField("@ana")
-     description = xmlmap.StringField("figDesc")
-     objects = Manager("//figure")
+    # entity, head, ana, and description all inherited from TeiFigure    
+    objects = Manager("//figure")
 
-     def to_python(self, value):
-          if isinstance(value, ana):
-               ana_list = string.split(ana)
-               return ana_list
-Postcard.objects.model = Postcard
+    # FIXME: should not use to_python here... 
+    def to_python(self, value):
+        if isinstance(value, ana):
+            ana_list = string.split(ana)
+            return ana_list
 
+class Categories(XmlModel, TeiInterpGroup):
+    objects = Manager("//interpGrp")
 
+# preliminary fedora object for images
+class ImageObject(DigitalObject):
+    # DC & RELS-EXT inherited
+    image = FileDatastream("IMAGE", "Master TIFF image", defaults={
+            'mimetype': 'image/tiff',
+            # FIXME: versioned? checksum?
+        })
