@@ -10,11 +10,13 @@ class Postcard(XmlModel, TeiFigure):
     # entity, head, ana, and description all inherited from TeiFigure    
     objects = Manager("//figure")
 
-    # FIXME: should not use to_python here... 
-    def to_python(self, value):
+    def ana_split(self, value):
         if isinstance(value, ana):
             ana_list = string.split(ana)
             return ana_list
+
+class Card(XmlModel, TeiFigure):
+    objects = Manager("//figure[@entity]")
 
 class Categories(XmlModel, TeiInterpGroup):
     objects = Manager("//interpGrp")

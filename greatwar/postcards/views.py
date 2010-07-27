@@ -16,10 +16,10 @@ def postcards(request):
                                                          'show_pages' : show_pages,
                                                           'count' : count, })
 
-def card(request):
+def card(request, entity):
     "Show an individual card at real size with description"
     card = Postcard.objects.only('head', 'entity', 'ana', 'figDesc')
-    return render_to_resonse('postcards/card.html', { 'card' : card, })
+    return render_to_response('postcards/card.html', { 'card' : card, })
 
 def index():
    "Show the postcard home page"

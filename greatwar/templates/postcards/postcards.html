@@ -10,7 +10,7 @@
 {% if postcards %}
      {% for postcard in postcards.object_list %}
       <p class="thumbnail">
-       <a href="{url postcards/card/{{entity}} }" class="img"> 
+       <a href="{% url greatwar.postcards.views.card postcard.entity %}" class="img"> 
       <img class="thumbnail" alt="postcard thumbnail" src="{ url greatwar.postcards.views.postcards postcard.entity }" />  </a> 
       <br/>
        {{ postcard.head }}</p>
