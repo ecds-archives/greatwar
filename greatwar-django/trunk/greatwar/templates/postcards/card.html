@@ -1,0 +1,12 @@
+{% extends "postcards/postcard_base.html" %}
+{% block page_subtitle %} {{head}} {% endblock %}
+
+{% block content %}
+<table>
+  <tr>
+    <td class="image"><img src="{{entity}}"/></td>
+    <td class="description">{{description}}</td>
+  </tr>
+</table>
+
+{% endblock %}
