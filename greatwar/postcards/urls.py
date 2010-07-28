@@ -3,7 +3,7 @@ from django.conf.urls.defaults import patterns, include
 urlpatterns = patterns('greatwar.postcards.views',
     (r'^$', 'postcards'),
     (r'^$', 'index'),
-    (r'^$', 'card'),                   
+    (r'^card/(?P<entity>[-A-Za-z_0-9]+)$', 'card'),                   
 #    (r'^poet$', 'poets'),
 #    (r'^poet/(?P<letter>[A-Z]*)$', 'poets_by_firstletter'),                       
 #    (r'^poet/(?P<name>.*)$', 'poet_list'),

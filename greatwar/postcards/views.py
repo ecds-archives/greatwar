@@ -18,10 +18,17 @@ def postcards(request):
 
 def card(request, entity):
     "Show an individual card at real size with description"
-    card = Postcard.objects.only('head', 'entity', 'ana', 'figDesc')
-    return render_to_response('postcards/card.html', { 'card' : card, })
+    card = Postcard.objects.also('head', 'entity', 'ana', 'figDesc').filter(id__exact=entity)
+    ana_list = str.split('ana')
+    #categories = Categories.objects.also('type', 'interp'('id', 'value')) #How to render interp groups?
+    #key_value = Interp.objects.only('id', 'value')
+    return render_to_response('postcards/card.html', { 'card' : card,
+                                                       'ana_list' : ana_list,
+                                                       #'categories' :  {'type': 'interp'},
+                                                       #'interp' : {'id': 'value'}
+                                                       })
 
-def index():
+def index(request):
    "Show the postcard home page"
    return render_to_response('postcards/index.html', { 'index' : index, })
 
@@ -65,3 +72,8 @@ def pages_to_show(paginator, page):
             show_pages.append(page + i)
 
     return show_pages
+
+#def ana_split(value):
+#    if isinstance(value):
+#        ana_list = str.split(value)
+#        return ana_list
