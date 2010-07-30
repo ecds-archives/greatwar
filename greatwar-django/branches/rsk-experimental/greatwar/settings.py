@@ -96,6 +96,8 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.sites',
     'eulcore', # https://svn.library.emory.edu/svn/python-eulcore/
+    'greatwar.poetry',
+    'greatwar.postcards'
 )
 
 EXTENSION_DIRS = (
