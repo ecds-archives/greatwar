@@ -25,7 +25,7 @@ def postcards(request):
 
 def card(request, entity):
     "Show an individual card at real size with description"
-    card = Postcard.objects.also('head', 'entity', 'ana', 'figDesc').filter(id__exact=entity).get()
+    card = Postcard.objects.also('head', 'entity', 'ana', 'figDesc').filter(entity=entity).get()
     ana_list = str.split('card.ana')
     #categories = Categories.objects.also('type', 'interp'('id', 'value')) #How to render interp groups?
     #key_value = Interp.objects.only('id', 'value')
