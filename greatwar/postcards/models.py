@@ -1,7 +1,7 @@
 from eulcore.django.existdb.manager import Manager
 from eulcore.django.existdb.models import XmlModel
 #from eulcore.fedora.models import DigitalObject, FileDatastream
-from eulcore.xmlmap.teimap import TeiFigure, TeiInterpGroup
+from eulcore.xmlmap.teimap import TeiFigure, TeiInterpGroup, TeiInterp
 
 
 # TEI postcard models
@@ -10,10 +10,6 @@ class Postcard(XmlModel, TeiFigure):
     # entity, head, ana, and description all inherited from TeiFigure    
     objects = Manager("//figure")
 
-
-
-#class Card(XmlModel, TeiFigure):
-#    objects = Manager("//figure")
 
 class Categories(XmlModel, TeiInterpGroup):
     objects = Manager("//interpGrp")

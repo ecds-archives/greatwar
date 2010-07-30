@@ -1,9 +1,10 @@
 from django.conf.urls.defaults import patterns, include
 
 urlpatterns = patterns('greatwar.postcards.views',
-    (r'^$', 'postcards'),
     (r'^$', 'index'),
-    (r'^card/(?P<entity>[-A-Za-z_0-9]+)$', 'card'),                   
+    (r'^view/$', 'postcards'),
+    (r'^card/(?P<entity>[-A-Za-z_0-9]+)$', 'card'),
+    (r'^about/$', 'about'),
 #    (r'^poet$', 'poets'),
 #    (r'^poet/(?P<letter>[A-Z]*)$', 'poets_by_firstletter'),                       
 #    (r'^poet/(?P<name>.*)$', 'poet_list'),
