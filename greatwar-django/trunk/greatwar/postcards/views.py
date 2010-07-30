@@ -1,4 +1,4 @@
-from greatwar.postcards.models import Postcard
+from greatwar.postcards.models import Postcard, Categories
 from django.http import HttpResponse
 from django.core.paginator import Paginator, InvalidPage, EmptyPage
 from django.shortcuts import render_to_response
@@ -30,7 +30,14 @@ def card(request, entity):
 
 def index(request):
    "Show the postcard home page"
-   return render_to_response('postcards/index.html', { 'index' : index, })
+   categories = Categories.objects.also('type', 'interp') #How to render interp groups?
+   return render_to_response('postcards/index.html', { 'index' : index,
+                                                       'categories' : categories,})
+
+def about(request):
+    "Show the about page"
+    about = include('about.xml')
+    return render_to_response('postcards/about.html', { 'about' : about,})
 
 
  # object pagination - adapted directly from django paginator documentation
