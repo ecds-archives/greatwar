@@ -7,8 +7,9 @@ from django.template import RequestContext
 
 from eulcore.django.existdb.db import ExistDB
 from eulcore.existdb.exceptions import DoesNotExist
+from eulcore.django.fedora.server import Repository
 
-from greatwar.postcards.models import Postcard, Categories, KeyValue
+from greatwar.postcards.models import Postcard, Categories, KeyValue, ImageObject
 
 def postcards(request):
     "Browse thumbnail list of postcards"
@@ -60,6 +61,47 @@ def searchform(request):
                               {'categories' : categories,
                                'keyvalue' : keyvalue, })
     
+
+
+## EXPERIMENTAL - fedora-based views for postcards
+
+def fedora_postcards(request):
+    "EXPERIMENTAL fedora-based postcard browse"
+    
+    repo = Repository()
+    repo.default_object_type = ImageObject
+    search_opts = {'pid__contains': '%s:*' % settings.FEDORA_PIDSPACE }
+    postcards = repo.find_objects(**search_opts)
+    return render_to_response('postcards/repo_postcards.html',
+                              { 'postcards' : postcards },
+                                context_instance=RequestContext(request))
+
+def repo_thumbnail(request, pid):
+    # serve out thumbnail image
+    repo = Repository()
+    obj = repo.get_object(pid, type=ImageObject)
+    return HttpResponse(obj.thumbnail(), mimetype='image/jpeg')
+
+def repo_medium_img(request, pid):
+    # serve out medium image dissemination
+    repo = Repository()
+    obj = repo.get_object(pid, type=ImageObject)
+    return HttpResponse(obj.getDissemination('djatoka:jp2SDef', 'getRegion', {'level': '3'}),
+            mimetype='image/jpeg')
+
+def repo_large_img(request, pid):
+    # serve out large image dissemination
+    repo = Repository()
+    obj = repo.get_object(pid, type=ImageObject)
+    return HttpResponse(obj.getDissemination('djatoka:jp2SDef', 'getRegion', {'level': '5'}),
+            mimetype='image/jpeg')
+
+def repo_postcard(request, pid):
+    repo = Repository()
+    obj = repo.get_object(pid, type=ImageObject)
+    return render_to_response('postcards/repo_postcard.html',
+                              { 'card' : obj },
+                                context_instance=RequestContext(request))
 
 
  # object pagination - adapted directly from django paginator documentation
