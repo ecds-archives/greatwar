@@ -13,13 +13,13 @@
 <tr>
      <td><a href='/'>Home</a></td>
      <td class="separator">&bull;</td>	
-     <td><a href="{% url greatwar.postcards.views.postcards">Postcards</a></td>
+     <td><a href="{% url greatwar.postcards.views.index %}">Postcards</a></td>
      <td class="separator">&bull;</td>
      <td><a href="{% url greatwar.poetry.views.books %}">Poetry</a></td>
      <td class="separator">&bull;</td>
      <td><a href="">Links</a></td>
      <td class="separator">&bull;</td>
-     <td><a href="">About the Site</a></td>
+     <td><a href="{% url greatwar.postcards.views.about %}">About the Site</a></td>
      <td class="separator">&bull;</td>
      <td><a href="">Credits</a></td>
 </tr>
@@ -66,6 +66,7 @@
 
    <table width="500" border="0" align="center">
      <tr>
+        <td><a href="http://beck.library.emory.edu/">The Beck Center</a></td>
         <td><a href="http://www.library.emory.edu/">EUCLID</a></td>
         <td><a href="http://www.library.emory.edu/IG/">Information Gateway</a></td>
         <td><a href="http://www.emory.edu/LIBRARIES/">General Library</a></td>

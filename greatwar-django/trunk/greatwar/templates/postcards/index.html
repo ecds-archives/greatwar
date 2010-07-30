@@ -1,0 +1,32 @@
+{% extends "postcards/postcard_base.html" %}
+{% block page_subtitle %} Introduction {% endblock %}
+
+
+{% block content %}
+<p>For more information about the postcards, read <a href="{% url greatwar.postcards.views.about %}">about this project</a>.</p> 
+<p> 
+There are several different ways to view the postcards: 
+<ul> 
+<li><a href="view">Browse</a> - browse through all <b>{{count}}</b> postcards<br>
+View thumbnails with titles, or thumbnails with a brief description<br> 
+(not advisable for slow connections) </li>
+
+
+<li>Browse by category
+<div class="categories">
+{{categories}}
+</div>
+</li>
+<li><a href="{# url search % #}">Search</a> the postcards by keyword, title, description, and category
+</li>
+</ul>
+
+<p>Images of the postcards are available in three sizes:</p>
+<ul>
+<li>Thumbnail - browse pages & search results<br>
+(may be viewed with titles only, or with brief descriptions)
+</li>
+<li>realsize - view an individual postcard at approximately actual size with full details</li>
+<li>doublesize - from the realsize view, select an enlarged individual postcard view</li>
+</ul>
+{% endblock %}

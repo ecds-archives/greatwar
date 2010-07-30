@@ -1,12 +1,14 @@
 {% extends "postcards/postcard_base.html" %}
 {% block page_subtitle %} Browse Postcards {% endblock %}
 
+{% block content %}
 {% if postcards.paginator.count %}
     <p>{{ postcards.paginator.count }} postcard{{ postcards.paginator.count|pluralize }} found,
     displaying {{ postcards.start_index }} - {{ postcards.end_index }}</p>
+{# % assert False % #}
 {% endif %}
 
-{% block content %}
+
 {% if postcards %}
      {% for postcard in postcards.object_list %}
       <p class="thumbnail">
@@ -16,7 +18,8 @@
        {{ postcard.head }}</p>
       {% endfor %}
 {% endif %}
-{% endblock %}
+
+
 
 <div class="pagination">
   <span class="postcardnav">
@@ -33,3 +36,4 @@
        {% endif %}
   </span>
 </div>
+{% endblock %}

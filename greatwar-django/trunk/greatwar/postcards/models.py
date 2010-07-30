@@ -14,8 +14,8 @@ class Postcard(XmlModel, TeiFigure):
 class Categories(XmlModel, TeiInterpGroup):
     objects = Manager("//interpGrp")
 
-#class KeyValue(XmlModel, TeiInterp):
-#    objects = Manager("//interp")
+class KeyValue(XmlModel, TeiInterp):
+    objects = Manager("//interp")
 
 # preliminary fedora object for images
 #class ImageObject(DigitalObject):

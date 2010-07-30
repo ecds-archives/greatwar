@@ -1,43 +1,65 @@
-from greatwar.postcards.models import Postcard, Categories
-from django.http import HttpResponse
+from django.http import HttpResponse, Http404
+from django.conf import settings
 from django.core.paginator import Paginator, InvalidPage, EmptyPage
+from django.core.urlresolvers import reverse
 from django.shortcuts import render_to_response
+from django.template import RequestContext
+
 from eulcore.django.existdb.db import ExistDB
 from eulcore.existdb.exceptions import DoesNotExist
+
+from greatwar.postcards.models import Postcard, Categories, KeyValue
 
 def postcards(request):
     "Browse thumbnail list of postcards"
     postcards = Postcard.objects.only('head', 'entity')
     count = Postcard.objects.count()
     paginator = paginate_queryset(request, postcards) #show 50 thumbnails per page
-    postcard_subset, paginator = paginate_queryset(request, postcards, per_page=50, orphans=3)
+    postcard_subset, paginator = paginate_queryset(request, postcards, per_page=50, orphans=3) #FIXME paginator doesn't show
     show_pages = pages_to_show(paginator, postcard_subset.number)
-    return render_to_response('postcards/postcards.html', { 'postcards' : postcard_subset, 
-                                                         'show_pages' : show_pages,
-                                                          'count' : count, })
+    return render_to_response('postcards/postcards.html',
+                              { 'postcards' : postcard_subset, 
+                                'show_pages' : show_pages,
+                                'count' : count, },
+                                context_instance=RequestContext(request))
 
 def card(request, entity):
     "Show an individual card at real size with description"
-    card = Postcard.objects.also('head', 'entity', 'ana', 'figDesc').filter(id__exact=entity)
-    ana_list = str.split('ana')
+    card = Postcard.objects.also('head', 'entity', 'ana', 'figDesc').filter(id__exact=entity).get()
+    ana_list = str.split('card.ana')
     #categories = Categories.objects.also('type', 'interp'('id', 'value')) #How to render interp groups?
     #key_value = Interp.objects.only('id', 'value')
-    return render_to_response('postcards/card.html', { 'card' : card,
-                                                       'ana_list' : ana_list,
-                                                       #'categories' :  {'type': 'interp'},
-                                                       #'interp' : {'id': 'value'}
+    return render_to_response('postcards/card.html',
+                              { 'card' : card,
+                                'ana_list' : ana_list,
+                                #'categories' :  {'type': 'interp'},
+                                #'interp' : {'id': 'value'}
                                                        })
 
 def index(request):
    "Show the postcard home page"
+   count = Postcard.objects.count()
    categories = Categories.objects.also('type', 'interp') #How to render interp groups?
-   return render_to_response('postcards/index.html', { 'index' : index,
-                                                       'categories' : categories,})
+   return render_to_response('postcards/index.html',
+                             { 'index' : index,
+                               'categories' : categories,
+                               'count' : count, })
 
 def about(request):
     "Show the about page"
     about = include('about.xml')
-    return render_to_response('postcards/about.html', { 'about' : about,})
+    return render_to_response('postcards/about.html',
+                              { 'about' : about,})
+
+
+def searchform(request):
+    "Show a detailed search form page"
+    categories = Categories.objects.only('type', )
+    keyvalue = KeyValue.objects.only('id', 'value')
+    return render_to_response('postcards/search.html',
+                              {'categories' : categories,
+                               'keyvalue' : keyvalue, })
+    
 
 
  # object pagination - adapted directly from django paginator documentation
@@ -80,7 +102,3 @@ def pages_to_show(paginator, page):
 
     return show_pages
 
-#def ana_split(value):
-#    if isinstance(value):
-#        ana_list = str.split(value)
-#        return ana_list
