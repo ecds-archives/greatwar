@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<foxml:digitalObject xmlns:foxml="info:fedora/fedora-system:def/foxml#" VERSION="1.1" PID="greatwar:postcards-collection">
+  <foxml:objectProperties>
+    <foxml:property NAME="info:fedora/fedora-system:def/model#state" VALUE="A"/>
+    <foxml:property NAME="info:fedora/fedora-system:def/model#label" VALUE="The Great War: Postcards"/>
+    <foxml:property NAME="info:fedora/fedora-system:def/model#ownerId" VALUE="smallpox"/>     <!-- permissions hack -->
+  </foxml:objectProperties>
+  <foxml:datastream ID="RELS-EXT" CONTROL_GROUP="X" STATE="A" VERSIONABLE="false">
+    <foxml:datastreamVersion ID="RELS-EXT.0" MIMETYPE="application/rdf+xml" FORMAT_URI="info:fedora/fedora-system:FedoraRELSExt-1.0" LABEL="External Relations">
+      <foxml:xmlContent>
+        <rdf:RDF xmlns:fedora-model="info:fedora/fedora-system:def/model#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+          <rdf:Description rdf:about="info:fedora/greatwar:postcards-collection">
+            <fedora-model:hasModel rdf:resource="info:fedora/emory-control:Collection-1.0"/>
+          </rdf:Description>
+        </rdf:RDF>
+      </foxml:xmlContent>
+    </foxml:datastreamVersion>
+  </foxml:datastream>
+  <foxml:datastream ID="INTERP" CONTROL_GROUP="M" STATE="A" VERSIONABLE="true">
+    <foxml:datastreamVersion ID="INTERP.0" MIMETYPE="text/xml" LABEL="Postcard Categories">
+      <foxml:xmlContent>
+          <div>
+            <interpGrp type="nationality">
+                <interp id="nat-brit" value="Britain"/>
+                <interp id="nat-fr" value="France"/>
+                <interp id="nat-us" value="United States"/>
+                <interp id="nat-it" value="Italy"/>
+                <interp id="nat-de" value="Germany"/>
+                <interp id="nat-rus" value="Russia"/>
+                <interp id="nat-ee" value="Eastern Europe"/>
+                <interp id="nat-bel" value="Belgium"/>
+                <interp id="nat-ca" value="Canada"/>
+                <interp id="nat-jp" value="Japan"/>
+                <interp id="nat-nl" value="Netherlands"/>
+                <interp id="nat-au" value="Austria"/>
+            </interpGrp>
+            <interpGrp type="military">
+                <interp id="mil-a" value="Army"/>
+                <interp id="mil-na" value="Navy"/>
+                <interp id="mil-p" value="propaganda"/>
+                <interp id="mil-f" value="battle front"/>
+                <interp id="mil-nur" value="nurse"/>
+            </interpGrp>
+            <interpGrp type="homefront">
+                <interp id="hf-w" value="women"/>
+                <interp id="hf-c" value="children"/>
+                <interp id="hf-p" value="propaganda"/>
+                <interp id="hf-re" value="religion"/>
+                <interp id="hf-ro" value="romance"/>
+                <interp id="hf-h" value="home"/>
+            </interpGrp>
+            <interpGrp type="content">
+                <interp id="con-v" value="verse"/>
+                <interp id="con-h" value="humor"/>
+                <interp id="con-p" value="person"/>
+                <interp id="con-m" value="memorial"/><!-- use with im-ph to indicate
+    photo of memorial -->
+                <interp id="con-f" value="flag"/>
+                <interp id="con-r" value="war ruins"/>
+                <interp id="con-el" value="Uncle Elmer"/>
+            </interpGrp>
+            <interpGrp type="image">
+                <interp id="im-s" value="silks"/>
+                <interp id="im-ph" value="photo"/>
+                <interp id="im-pa" value="painting"/>
+                <interp id="im-dr" value="drawing"/>
+                <interp id="im-ca" value="cartoon"/>
+                <interp id="im-en" value="engraving"/>
+                <interp id="im-po" value="poster"/>
+            </interpGrp>
+            <interpGrp type="time period">
+                <interp id="t-pre" value="pre Great War"/>
+                <interp id="t-wwi" value="during Great War"/>
+                <interp id="t-post" value="post Great War"/>
+                <interp id="t-ww2" value="World War II"/>
+                <interp id="t-post2" value="post World War II"/>
+            </interpGrp>
+        </div>
+      </foxml:xmlContent>
+    </foxml:datastreamVersion>
+  </foxml:datastream>
+  <foxml:datastream ID="DC" CONTROL_GROUP="X" STATE="A" VERSIONABLE="false">
+    <foxml:datastreamVersion ID="DC.0" MIMETYPE="text/xml" FORMAT_URI="http://www.openarchives.org/OAI/2.0/oai_dc/" LABEL="Dublin Core">
+      <foxml:xmlContent>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+          <dc:title>The Great War: Postcards</dc:title>
+        </oai_dc:dc>
+      </foxml:xmlContent>
+    </foxml:datastreamVersion>
+  </foxml:datastream>
+</foxml:digitalObject>
