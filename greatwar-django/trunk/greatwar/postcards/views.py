@@ -10,6 +10,7 @@ from eulcore.existdb.exceptions import DoesNotExist
 from eulcore.django.fedora.server import Repository
 
 from greatwar.postcards.models import Postcard, Categories, KeyValue, ImageObject, PostcardCollection
+from greatwar.postcards.forms import SearchForm
 
 def postcards(request):
     "Browse thumbnail list of postcards"
@@ -81,6 +82,45 @@ def fedora_postcards(request):
     return render_to_response('postcards/repo_postcards.html',
                               { 'postcards' : postcards },
                                 context_instance=RequestContext(request))
+
+def search(request):
+    # rough fedora-based postcard search (borrowed heavily from digital masters)
+    form = SearchForm(request.GET)
+    response_code = None
+    context = {'search': form}
+    if form.is_valid() and \
+        'title' in request.GET or 'description' in request.GET:
+        # TODO: custom form validation -- at least one search term is required
+
+        # adding wildcards because fedora has a weird notion of what 'contains' means
+
+        # TODO: terms search can't be used with with field search
+        # -- how to allow a keyword search but restrict to postcards?
+        #keywords = '%s*' % form.cleaned_data['keyword'].rstrip('*')
+        
+        # TEMPORARY: restrict to postcards by pidspace
+        search_opts = {'pid__contains': '%s:*' % settings.FEDORA_PIDSPACE }
+        if 'title' in form.cleaned_data:
+            search_opts['title__contains'] = '%s*' % form.cleaned_data['title'].rstrip('*')
+        if 'description' in form.cleaned_data:
+            search_opts['description__contains'] = '%s*' % form.cleaned_data['description'].rstrip('*')
+        try:
+            repo = Repository()          
+            found = repo.find_objects(type=ImageObject, **search_opts)
+            context['postcards'] = list(found)
+        except:
+            response_code = 500
+            ctx_dict['server_error'] = 'There was an error ' + \
+                    'contacting the digital repository. This ' + \
+                    'prevented us from completing your search. If ' + \
+                    'this problem persists, please alert the ' + \
+                    'repository administrator.'
+
+    response = render_to_response('postcards/search.html', context,
+                context_instance=RequestContext(request))
+    if response_code is not None:
+        response.status_code = response_code
+    return response
 
 def repo_thumbnail(request, pid):
     # serve out thumbnail image
