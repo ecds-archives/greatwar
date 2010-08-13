@@ -1,7 +1,48 @@
 {% extends "postcards/postcard_base.html" %}
-{% block page_subtitle %} Advanced Search {% endblock %}
+{% block page_subtitle %} Search {% endblock %}
 
 {% block content %}
+
+<h2>Search for postcards.</h2>
+<form method="get" action="{% url postcards:search %}">
+    <table>
+    {{ search.as_table }}
+    </table>
+    <input type="submit" value="Search" />
+</form>
+
+<hr/>
+{% if postcards %}     
+<table class="thumbnail">
+    {% for postcard in postcards %}
+    <tr>
+       <td>
+         <a href="{% url postcards:repo-view pid=postcard.pid %}" class="img">
+            <img class="thumbnail" alt="postcard thumbnail"
+                src="{% url postcards:img-thumb pid=postcard.pid %}" />
+         </a>
+       </td>
+       <td class="description">
+           {# FIXME: duplicates display logic from single-postcard template #}
+           <h4>{{ postcard.dc.content.title }}</h4>
+           <p>{{ postcard.dc.content.description }}</p>
+           <h5>Categories:</h5>
+           <ul>
+                {% for subject in postcard.dc.content.subject_list %}
+                 <li>{{ subject }}</li>
+                {% endfor %}
+           </ul>
+       </td>
+    </tr>
+    {% empty %}
+      <tr><td>no results</td></tr>
+    {% endfor %}
+</table>
+{% endif %}
+
+
+
+{% comment %}
 <form name="postcardquery" action="postcards/search.php" method="get">
 <table class="searchform" border="0">
 <tr><th>Keyword</th><td><input type="text" size="40" name="keyword"></td></tr>
@@ -16,5 +57,6 @@
 <input type="submit" value="Submit"> 
 <input type="reset" value="Reset">
 </form>
+{% endcomment %}
 
 {% endblock %}
