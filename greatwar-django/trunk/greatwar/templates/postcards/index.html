@@ -3,7 +3,7 @@
 
 
 {% block content %}
-<p>For more information about the postcards, read <a href="{% url greatwar.postcards.views.about %}">about this project</a>.</p> 
+<p>For more information about the postcards, read <a href="{% url postcards:about %}">about this project</a>.</p>
 <p> 
 There are several different ways to view the postcards: 
 <ul> 
@@ -14,6 +14,16 @@ View thumbnails with titles, or thumbnails with a brief description<br>
 
 <li>Browse by category
 <div class="categories">
+    {% for interp_group in categories.interp_groups %}
+    {# TODO: javascript not yet included #}
+      <div><a onclick="javascript:toggle_ul('{{interp_group.type}}')"><h4>{{ interp_group.type }}</h4></a>
+      <ul id="{{ interp_group.type }}" style="display:block"> {# force display for now #}
+          {% for interp in interp_group.interps %}
+            <li><a href="{% url postcards:repo-browse %}?subject={{interp_group.type }}: {{interp.value }}">{{ interp.value }}</a></li>
+          {% endfor %}
+      </ul>
+      </div>
+    {% endfor %}
 {{categories}}
 </div>
 </li>
