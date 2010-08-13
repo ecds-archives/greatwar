@@ -101,13 +101,18 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.sites',
     'eulcore', # https://svn.library.emory.edu/svn/python-eulcore/
-   # 'eulcore.django.testsetup',
+    'eulcore.django.testsetup',
+    'eulcore.django.fedora',
    # 'eulcore.django.existdb',
    # 'eulcore.django.ldap.emory',
    # 'eulcore.django.util',
+    'greatwar.postcards',
 )
 
 EXISTDB_INDEX_CONFIGFILE = path.join(BASE_DIR, "exist_index.xconf")
+
+# temporary pid - should eventually use ARK. must match PID in fixture
+POSTCARD_COLLECTION_PID = 'greatwar:postcards-collection'
 
 EXTENSION_DIRS = (
     path.join(BASE_DIR, '../externals/django-modules'),
