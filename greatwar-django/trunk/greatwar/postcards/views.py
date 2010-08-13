@@ -110,7 +110,7 @@ def search(request):
             context['postcards'] = list(found)
         except:
             response_code = 500
-            ctx_dict['server_error'] = 'There was an error ' + \
+            context['server_error'] = 'There was an error ' + \
                     'contacting the digital repository. This ' + \
                     'prevented us from completing your search. If ' + \
                     'this problem persists, please alert the ' + \

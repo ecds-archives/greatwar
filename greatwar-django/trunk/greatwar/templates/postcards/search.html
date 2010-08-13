@@ -12,6 +12,8 @@
 </form>
 
 <hr/>
+{% if server_error %}{{ server_error }}{% endif %}
+
 {% if postcards %}     
 <table class="thumbnail">
     {% for postcard in postcards %}
