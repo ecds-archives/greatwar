@@ -1,18 +1,18 @@
-from django.conf.urls.defaults import patterns
+from django.conf.urls.defaults import patterns, url
 
 urlpatterns = patterns('greatwar.postcards.views',
-    (r'^$', 'index'),
-    (r'^view/$', 'postcards'),
-    (r'^card/(?P<entity>[-A-Za-z_0-9]+)$', 'card'),
-    (r'^about/$', 'about'),
-    (r'^search/$', 'searchform'),
+    url(r'^$', 'index', name='index'),
+    url(r'^view/$', 'postcards', name='browse'),
+    url(r'^card/(?P<entity>[-A-Za-z_0-9]+)$', 'card'),
+    url(r'^about/$', 'about', name='about'),
+    url(r'^search/$', 'searchform'),
 
     ## experimental fedora-based version of postcards
-    (r'^repo/$', 'fedora_postcards'),
-    (r'^repo/(?P<pid>[^/]+)$', 'repo_postcard'),
-    (r'^repo/(?P<pid>[^/]+)/thumbnail$', 'repo_thumbnail'),
-    (r'^repo/(?P<pid>[^/]+)/medium$', 'repo_medium_img'),
-    (r'^repo/(?P<pid>[^/]+)/large$', 'repo_large_img'),
+    url(r'^repo/$', 'fedora_postcards', name='repo-browse'),
+    url(r'^repo/(?P<pid>[^/]+)$', 'repo_postcard', name='repo-view'),
+    url(r'^repo/(?P<pid>[^/]+)/thumbnail$', 'repo_thumbnail', name='img-thumb'),
+    url(r'^repo/(?P<pid>[^/]+)/medium$', 'repo_medium_img', name='img-medium'),
+    url(r'^repo/(?P<pid>[^/]+)/large$', 'repo_large_img', name='img-large'),
 #    (r'^poet$', 'poets'),
 #    (r'^poet/(?P<letter>[A-Z]*)$', 'poets_by_firstletter'),                       
 #    (r'^poet/(?P<name>.*)$', 'poet_list'),
