@@ -9,7 +9,7 @@ from eulcore.django.existdb.db import ExistDB
 from eulcore.existdb.exceptions import DoesNotExist
 from eulcore.django.fedora.server import Repository
 
-from greatwar.postcards.models import Postcard, Categories, KeyValue, ImageObject
+from greatwar.postcards.models import Postcard, Categories, KeyValue, ImageObject, PostcardCollection
 
 def postcards(request):
     "Browse thumbnail list of postcards"
@@ -39,8 +39,9 @@ def card(request, entity):
 
 def index(request):
    "Show the postcard home page"
-   count = Postcard.objects.count()
-   categories = Categories.objects.also('type', 'interp') #How to render interp groups?
+   count = Postcard.objects.count()   
+   categories = PostcardCollection.get().interp.content
+   #categories = Categories.objects.also('type', 'interp') #How to render interp groups?
    return render_to_response('postcards/index.html',
                              { 'index' : index,
                                'categories' : categories,
@@ -70,7 +71,12 @@ def fedora_postcards(request):
     
     repo = Repository()
     repo.default_object_type = ImageObject
+    # TEMPORARY: restrict to postcards by pidspace
     search_opts = {'pid__contains': '%s:*' % settings.FEDORA_PIDSPACE }
+
+    if 'subject' in request.GET:
+        search_opts['subject'] = request.GET['subject']
+
     postcards = repo.find_objects(**search_opts)
     return render_to_response('postcards/repo_postcards.html',
                               { 'postcards' : postcards },
