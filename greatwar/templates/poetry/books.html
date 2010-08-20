@@ -7,7 +7,7 @@
     {% for book in books %}
         <li>
 {% if book.id %}
-<a href="{% url greatwar.poetry.views.book_toc book.id %}">{{ book.title }}</a>  
+<a href="{% url poetry:book-toc book.id %}">{{ book.title }}</a>  
 {% else %} 
 {{ book.title }}
  {% endif %}<br/> 

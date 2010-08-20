@@ -10,7 +10,7 @@
 
   <ul>
   {% for div in book.front.div %}
-     <li><a href="{% url greatwar.poetry.views.div book.id,div.id %}">{{ div.title|default:div.type|capfirst }}</a></li>
+     <li><a href="{% url poetry:poem book.id,div.id %}">{{ div.title|default:div.type|capfirst }}</a></li>
   {% endfor %}
   
   {% if book.body %}
@@ -21,7 +21,7 @@
 	  {% if d.div %}
 	    <ul>
 	    {% for subdiv in d.div %}
-	        <li> <a href="{% url greatwar.poetry.views.div book.id,subdiv.id %}">{{ subdiv.title }}</a>
+	        <li> <a href="{% url poetry:poem book.id,subdiv.id %}">{{ subdiv.title }}</a>
 		     {% if subdiv.author %} - {{ subdiv.author }} {% endif %}
 		    {% ifnotequal subdiv.type|lower 'poem' %}  <i>({{ subdiv.type }})</i> {% endifnotequal %}
 		</li>
@@ -36,7 +36,7 @@
      {% ifequal div.type "Colophon" %} {# other types ? #}
 	<li>{{ div.text }} <i>({{ div.type }})</i></li>
      {% else %}
-     <li><a href="{% url greatwar.poetry.views.div book.id,div.id %}">{{ div.title|default:div.type|capfirst }}</a></li>
+     <li><a href="{% url poetry:poem book.id,div.id %}">{{ div.title|default:div.type|capfirst }}</a></li>
      {% endifequal %}
   {% endfor %}
 
