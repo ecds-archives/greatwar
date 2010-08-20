@@ -1,5 +1,6 @@
 from django.http import HttpResponse, Http404
 from django.conf import settings
+from django.core import serializers
 from django.core.paginator import Paginator, InvalidPage, EmptyPage
 from django.core.urlresolvers import reverse
 from django.shortcuts import render_to_response
@@ -12,12 +13,14 @@ from eulcore.django.fedora.server import Repository
 from greatwar.postcards.models import Postcard, Categories, KeyValue, ImageObject, PostcardCollection
 from greatwar.postcards.forms import SearchForm
 
+gwpc_listfields = ['head', 'entity' 'figDesc' ]
+
 def postcards(request):
     "Browse thumbnail list of postcards"
     postcards = Postcard.objects.only('head', 'entity')
     count = Postcard.objects.count()
     paginator = paginate_queryset(request, postcards) #show 50 thumbnails per page
-    postcard_subset, paginator = paginate_queryset(request, postcards, per_page=50, orphans=3) #FIXME paginator doesn't show
+    postcard_subset, paginator = paginate_queryset(request, postcards, per_page=50, orphans=3) 
     show_pages = pages_to_show(paginator, postcard_subset.number)
     return render_to_response('postcards/postcards.html',
                               { 'postcards' : postcard_subset, 
@@ -28,12 +31,12 @@ def postcards(request):
 def card(request, entity):
     "Show an individual card at real size with description"
     card = Postcard.objects.also('head', 'entity', 'ana', 'figDesc').filter(entity=entity).get()
-    ana_list = str.split('card.ana')
+    # ana_list = str.split('card.ana')
     #categories = Categories.objects.also('type', 'interp'('id', 'value')) #How to render interp groups?
     #key_value = Interp.objects.only('id', 'value')
     return render_to_response('postcards/card.html',
                               { 'card' : card,
-                                'ana_list' : ana_list,
+                               # 'ana_list' : ana_list,
                                 #'categories' :  {'type': 'interp'},
                                 #'interp' : {'id': 'value'}
                                                        })
@@ -46,11 +49,14 @@ def index(request):
    return render_to_response('postcards/index.html',
                              { 'index' : index,
                                'categories' : categories,
-                               'count' : count, })
+                               'count' : count,
+                               },
+                              context_instance=RequestContext(request))
+
+
 
 def about(request):
     "Show the about page"
-    about = include('about.xml')
     return render_to_response('postcards/about.html',
                               { 'about' : about,})
 
@@ -190,3 +196,34 @@ def pages_to_show(paginator, page):
 
     return show_pages
 
+def keyword_search(request):
+    "Simple keyword search - runs exist full-text terms query on all terms included."
+    form = KeywordSearchForm(request.GET)
+    if form.is_valid():
+        # not yet implemented - if no search terms, display search form
+        search_terms = request.GET.get('keywords')
+        # common ead fields for list display, plus full-text relevance score
+        return_fields = gwpc_listfields
+        return_fields.append('fulltext_score')
+        # NOTE: adding the "only" filter makes the query slower because eXist has
+        # to construct return results; the more documents in a result set, the bigger
+        # the cost in time - currently returning entire document plus fulltext relevance score
+        results = FindingAid.objects.filter(fulltext_terms=search_terms).order_by('-fulltext_score').only(*return_fields) #.also('fulltext_score') #.only(*return_fields)
+        result_subset, paginator = paginate_queryset(request, results)
+
+        query_times = results.queryTime()
+        # FIXME: does not currently include keyword param in generated urls
+        # create a better browse view - display search terms, etc.
+
+        return render_to_response('postcards/search_results.html',
+                {'postcards' : result_subset,
+                 'keywords'  : search_terms,
+                 'url_params' : '?' + urlencode({'keywords': search_terms}),
+                 'querytime': [query_times]},
+                 context_instance=RequestContext(request))
+    else:
+        form = KeywordSearchForm()
+            
+    return render_to_response('findingaids/search_form.html',
+                    {'form' : form, 'request': request },
+                    context_instance=RequestContext(request))
