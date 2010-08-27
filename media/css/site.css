@@ -38,6 +38,10 @@ div.content {	position: relative;
 		overflow: visible;
 		min-height: 60%;
 	    }
+p.title { text-align: center;
+	  font-size: 120%;
+	  font-weight: bold;
+              }
 /* formatting for 'about the site' essay */
 div#about { margin-left: 1in; margin-right: 3in; }
 div.sig { margin-right: 1in; text-align: right; }
