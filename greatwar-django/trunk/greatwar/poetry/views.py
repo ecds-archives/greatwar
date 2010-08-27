@@ -5,6 +5,7 @@ from django.core.paginator import Paginator, InvalidPage, EmptyPage
 
 from eulcore.django.existdb.db import ExistDB
 from eulcore.existdb.exceptions import DoesNotExist # ReturnedMultiple needed also ?
+from eulcore.xmlmap.teimap import TEI_NAMESPACE
 
 def books(request):
     "Browse list of volumes"
