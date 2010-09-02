@@ -4,9 +4,16 @@
 {% block content %}
 {% if div %}
 from <a href="/poetry/{{div.doc_id}}">{{ div.doctitle }}</a> (id =  {{div.doc_id}} )
-<h2>{{ div.title }}</h2>
+{# <h2>{{ div.title }}</h2> #}
      {% if div.author %} {{div.author }} <br/> {% endif %}
 
+
 {{ body|safe }}
+{% if div.prevdiv %}
+     <a href="/poetry/{{div.doc_id}}/{{div.prevdiv.id}}">Previous: {{ div.prevdiv.doctitle }}</a> 
+{% endif %}
+{% if div.nextdiv %}
+     <a href="/poetry/{{div.doc_id}}/{{div.nextdiv.id}}">Next: {{ div.nextdiv.doctitle }}</a>
+{% endif %}
 {% endif %}
 {% endblock %}
