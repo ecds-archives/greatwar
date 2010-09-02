@@ -3,7 +3,8 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0"
 	xmlns:html="http://www.w3.org/TR/REC-html40" 
 	xmlns:ino="http://namespaces.softwareag.com/tamino/response2" 
-	xmlns:xql="http://metalab.unc.edu/xql/">
+	xmlns:xql="http://metalab.unc.edu/xql/"
+	xmlns:tei="http://www.tei-c.org/ns/1.0">
 
 <!-- templates to transform & display TEI poetry -->
 
@@ -30,7 +31,7 @@
 </xsl:template>
 
 
-<xsl:template match="head">
+<xsl:template match="tei:head">
   <xsl:element name="p">
    <xsl:attribute name="align"><xsl:value-of select="@rend"/></xsl:attribute>
     <xsl:attribute name="class">head</xsl:attribute>
@@ -39,21 +40,21 @@
 </xsl:template>
 
 <!-- subheading -->
-<xsl:template match="lg/head">
+<xsl:template match="tei:lg/tei:head">
   <xsl:element name="p">
     <xsl:attribute name="class">subhead</xsl:attribute>
 	  <xsl:apply-templates />
   </xsl:element>  <!-- p -->
 </xsl:template>
 
-<xsl:template match="trailer">
+<xsl:template match="tei:trailer">
   <xsl:element name="p">
     <xsl:attribute name="class">trailer</xsl:attribute>
       <xsl:apply-templates />
   </xsl:element>  <!-- p -->
 </xsl:template>
 
-<xsl:template match="byline">
+<xsl:template match="tei:byline">
   <xsl:element name="p">
     <xsl:attribute name="class">byline</xsl:attribute>
     <xsl:apply-templates />
@@ -61,55 +62,65 @@
 </xsl:template>
 
 <!-- dedication -->
-<xsl:template match="dedicat">
+<xsl:template match="tei:dedicat">
   <xsl:element name="p">
     <xsl:attribute name="class">dedication</xsl:attribute>
     <xsl:apply-templates/>
   </xsl:element> <!-- p -->
 </xsl:template>
 
-<xsl:template match="lb">
+<xsl:template match="tei:lb">
 <br/>
 </xsl:template>
 
 <!-- line group -->
-<xsl:template match="lg">
-  <xsl:element name="p">
+<xsl:template match="tei:lg">
+  <xsl:element name="div">
+    <xsl:choose>
+    <xsl:when test="@type != ''">
      <xsl:attribute name="class"><xsl:value-of select="@type"/></xsl:attribute>
-    <xsl:apply-templates />
+     </xsl:when>
+     <xsl:otherwise>
+       <xsl:attribute name="class">stanza</xsl:attribute>
+       </xsl:otherwise>
+     </xsl:choose>
+      <xsl:apply-templates />
   </xsl:element>
 </xsl:template>
 
 <!-- line  -->
 <!--   Indentation should be specified in format rend="indent#", where # is
        number of spaces to indent.  --> 
-<xsl:template match="l">
+<xsl:template match="tei:l">
+  <xsl:element name="p">
+    <xsl:attribute name="class">line</xsl:attribute>
   <!-- retrieve any specified indentation -->
-  <xsl:if test="@rend">
+ <xsl:if test="@rend">
   <xsl:variable name="rend">
     <xsl:value-of select="./@rend"/>
   </xsl:variable>
   <xsl:variable name="indent">
      <xsl:choose>
-       <xsl:when test="$rend='indent'">		
+       <xsl:when test="$rend='indent'">
 	<!-- if no number is specified, use a default setting -->
-         <xsl:value-of select="$defaultindent"/>
+       <xsl:value-of select="$defaultindent"/>
        </xsl:when>
        <xsl:otherwise>
          <xsl:value-of select="substring-after($rend, 'indent')"/>
        </xsl:otherwise>
      </xsl:choose>
   </xsl:variable>
-   <xsl:call-template name="indent">
-     <xsl:with-param name="num" select="$indent"/>
-   </xsl:call-template>
+   <xsl:attribute name="style">text-indent:<xsl:value-of select="$indent"/>%</xsl:attribute>
+   <!-- <xsl:call-template name="indent"> -->
+   <!--   <xsl:with-param name="num" select="$indent"/> -->
+   <!-- </xsl:call-template> -->
  </xsl:if>
-
-  <xsl:apply-templates/>
-  <xsl:element name="br"/>
+ <xsl:apply-templates/>
+  </xsl:element>
+  <!-- <xsl:element name="br"/> -->
 </xsl:template>
 
-<xsl:template match="q">
+<xsl:template match="tei:q">
   <p>
    <xsl:choose>
      <xsl:when test="@rend='indent'">
@@ -157,16 +168,21 @@
 
 <!-- recursive template to indent by inserting non-breaking spaces -->
 <xsl:template name="indent">
-  <xsl:param name="num">0</xsl:param>
-  <xsl:variable name="space">&#160;</xsl:variable>
+<!-- <xsl:text>DEBUG: in indent template</xsl:text> -->
+  <!-- <xsl:param name="num">0</xsl:param> -->
+  <!-- <xsl:variable name="space">&#160;</xsl:variable> -->
 
-  <xsl:value-of select="$space"/>
+  <!-- <xsl:value-of select="$space"/> -->
 
-  <xsl:if test="$num > 1">
-    <xsl:call-template name="indent">
-       <xsl:with-param name="num" select="$num - 1"/>
-    </xsl:call-template>
-  </xsl:if>
+  <!-- <xsl:if test="$num > 1"> -->
+  <!--   <xsl:call-template name="indent"> -->
+  <!--      <xsl:with-param name="num" select="$num - 1"/> -->
+  <!--   </xsl:call-template> -->
+  <!-- </xsl:if> -->
+
+  
+
+
 </xsl:template>
 
 

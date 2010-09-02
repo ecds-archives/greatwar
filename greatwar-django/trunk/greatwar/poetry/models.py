@@ -1,7 +1,7 @@
 from eulcore.django.existdb.manager import Manager
 from eulcore.django.existdb.models import XmlModel
 from eulcore.xmlmap import XmlObject
-from eulcore.xmlmap.fields import StringField
+from eulcore.xmlmap.fields import StringField, NodeField
 from eulcore.xmlmap.teimap import Tei, TeiDiv, TEI_NAMESPACE
 
 # TEI poetry models
@@ -16,6 +16,8 @@ class PoetryBook(XmlModel, Tei):
 class Poem(XmlModel, TeiDiv):
     ROOT_NAMESPACES = {'tei' : TEI_NAMESPACE}
     poet = StringField("tei:docAuthor/@n")
+    nextdiv = NodeField("following-sibling::tei:div[1]")
+    prevdiv = NodeField("preceding-sibling::tei:div[1]")
     objects = Manager('//tei:div')      # should this have [@type='poem'] ?
 
 class Poet(XmlModel, XmlObject):

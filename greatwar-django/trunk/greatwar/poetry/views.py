@@ -20,9 +20,9 @@ def book_toc(request, doc_id):
     book = PoetryBook.objects.get(id__exact=doc_id)
     return render_to_response('poetry/book_toc.html', { 'book' : book})
 
-def div(request, doc_id, div_id):
+def div(request, doc_id, div_id, nextdiv, prevdiv):
     "Display a single div (poem)"
-    div = Poem.objects.also('doctitle', 'doc_id').filter(doc_id__exact=doc_id).get(id__exact=div_id)
+    div = Poem.objects.also('doctitle', 'doc_id', 'next-div__div_id', 'prev-div__div_id').filter(doc_id__exact=doc_id).get(id__exact=div_id)
     body = div.xslTransform(filename='templates/xslt/div.xsl')
     return render_to_response('poetry/div.html', { 'div' : div,
                                                    'body' : body})   
