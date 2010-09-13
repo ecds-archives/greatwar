@@ -16,8 +16,8 @@ class PoetryBook(XmlModel, Tei):
 class Poem(XmlModel, TeiDiv):
     ROOT_NAMESPACES = {'tei' : TEI_NAMESPACE}
     poet = StringField("tei:docAuthor/@n")
-    nextdiv = NodeField("following-sibling::tei:div[1]")
-    prevdiv = NodeField("preceding-sibling::tei:div[1]")
+    nextdiv = NodeField("following::tei:div[@type='poem'][1]", "self")
+    prevdiv = NodeField("preceding::tei:div[@type='poem'][1]", "self")
     objects = Manager('//tei:div')      # should this have [@type='poem'] ?
 
 class Poet(XmlModel, XmlObject):

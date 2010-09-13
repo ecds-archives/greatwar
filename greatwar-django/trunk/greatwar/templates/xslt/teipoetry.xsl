@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>  
+<?xml version="1.0" encoding="utf-8"?>  
 
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0"
 	xmlns:html="http://www.w3.org/TR/REC-html40" 
@@ -167,7 +167,7 @@
 </xsl:template>
 
 <!-- recursive template to indent by inserting non-breaking spaces -->
-<xsl:template name="indent">
+<!-- <xsl:template name="indent"> -->
 <!-- <xsl:text>DEBUG: in indent template</xsl:text> -->
   <!-- <xsl:param name="num">0</xsl:param> -->
   <!-- <xsl:variable name="space">&#160;</xsl:variable> -->
@@ -179,11 +179,7 @@
   <!--      <xsl:with-param name="num" select="$num - 1"/> -->
   <!--   </xsl:call-template> -->
   <!-- </xsl:if> -->
-
-  
-
-
-</xsl:template>
+<!-- </xsl:template> -->
 
 
 </xsl:stylesheet>
