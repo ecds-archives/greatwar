@@ -1,0 +1,22 @@
+{% extends "postcards/postcard_base.html" %}
+{% block page_subtitle %} {{head}} {% endblock %}
+
+{% block content %}
+<p>View larger image</p> <!-- put link to 2x image here -->
+<table>
+  <tr>
+    <td><img src="{{entity}}"/></td>  <!-- put link to 2x image here -->
+    <td class="description"><h4>{{card.head}}</h4><p>{{card.figDesc}}</p>
+     {% if ana_list %}
+         <h5>Categories:</h5>
+         <ul>
+	   {% for ana in ana_list %}
+	      <li>{{ ana }}</li>
+            {% endfor %}        {# ana in ana_list #}
+	  </ul>	    
+        {% endif %}               {# if there is ana #}
+     </td>
+  </tr>
+</table>
+
+{% endblock %}

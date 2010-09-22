@@ -1,0 +1,19 @@
+{% extends "poetry/poetry_base.html" %}
+{% block page_subtitle %} {{ div.doctitle }} | {{ div.title }} {% endblock %}
+
+{% block content %}
+{% if div %}
+from <a href="{% url poetry:book-toc div.doc_id %}">{{ div.doctitle }}</a> (id =  {{div.doc_id}} )
+{# <h2>{{ div.title }}</h2> #}
+     {% if div.author %} {{div.author }} <br/> {% endif %}
+
+
+{{ body|safe }}
+{% if div.prevdiv.id %}
+     <a href="{% url poetry:poem div.doc_id div.prevdiv.id %}">Previous: {{ div.prevdiv.title }}</a> 
+{% endif %}
+{% if div.nextdiv.id %}
+    <br/> <a href="{% url poetry:poem div.doc_id div.nextdiv.id %}">Next: {{ div.nextdiv.title }}</a>
+{% endif %}
+{% endif %}<pre>{{div.serializeDocument}}</pre>
+{% endblock %}

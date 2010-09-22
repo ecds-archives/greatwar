@@ -1,0 +1,42 @@
+{% extends "postcards/postcard_base.html" %}
+{% block page_subtitle %} Browse Postcards {% endblock %}
+
+{% block content %}
+{% if postcards.paginator.count %}
+    <p>{{ postcards.paginator.count }} postcard{{ postcards.paginator.count|pluralize }} found,
+    displaying {{ postcards.start_index }} - {{ postcards.end_index }}</p>
+{# % assert False % #}
+{% endif %}
+
+
+{% if postcards %}
+     {% for postcard in postcards %}
+      <p class="thumbnail">
+       <a href="{% url postcards:repo-view pid=postcard.pid %}" class="img">
+      <img class="thumbnail" alt="postcard thumbnail" 
+        src="{% url postcards:img-thumb pid=postcard.pid %}" />
+      </a> 
+      <br/>
+       {{ postcard.label }}
+       </p>
+      {% endfor %}
+{% endif %}
+
+
+
+<div class="pagination">
+  <span class="postcardnav">
+       {% if postcards.has_previous %}
+           <a href="?page={{ postcards.previous_page_number }}">previous</a>
+       {% endif %}
+
+       <span class="current">
+            Page {{ postcards.number }} of {{ postcards.paginator.num_pages }}.
+       </span>
+
+       {% if postcards.has_next %}
+            <a href="?page={{ postcards.next_page_number }}">next</a>
+       {% endif %}
+  </span>
+</div>
+{% endblock %}
