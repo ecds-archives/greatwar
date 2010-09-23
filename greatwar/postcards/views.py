@@ -94,10 +94,7 @@ def search(request):
     form = SearchForm(request.GET)
     response_code = None
     context = {'search': form}
-    if form.is_valid() and \
-        'title' in request.GET or 'description' in request.GET:
-        # TODO: custom form validation -- at least one search term is required
-
+    if form.is_valid(): 
         # adding wildcards because fedora has a weird notion of what 'contains' means
 
         # TODO: terms search can't be used with with field search
