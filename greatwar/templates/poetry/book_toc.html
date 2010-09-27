@@ -4,13 +4,13 @@
 
 {% block content %}
 {% if book %}
-     {{ book.title }}
+  {{ book.title }}
      {% if book.author %} {{ book.author }} <br/> {% endif %}
      {% if book.editor %} {{ book.editor }} <br/> {% endif %}
 
   <ul>
   {% for div in book.front.div %}
-     <li><a href="{% url poetry:poem book.id,div.id %}">{{ div.title|default:div.type|title }}</a></li>
+     <li><a href="{% url poetry:poem book.id,div.id %}"> {% firstof div.title div.type %}</a></li>
   {% endfor %}
   
   {% if book.body %}
