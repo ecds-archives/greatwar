@@ -114,6 +114,7 @@ INSTALLED_APPS = (
    # 'eulcore.django.ldap.emory',
    # 'eulcore.django.util',
     'greatwar.postcards',
+    'greatwar.poetry',
 )
 
 EXISTDB_INDEX_CONFIGFILE = path.join(BASE_DIR, "exist_index.xconf")

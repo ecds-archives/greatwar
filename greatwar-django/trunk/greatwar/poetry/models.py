@@ -1,8 +1,8 @@
 from eulcore.django.existdb.manager import Manager
 from eulcore.django.existdb.models import XmlModel
 from eulcore.xmlmap import XmlObject
-from eulcore.xmlmap.fields import StringField, NodeField
-from eulcore.xmlmap.teimap import Tei, TeiDiv, TEI_NAMESPACE
+from eulcore.xmlmap.fields import StringField, NodeField, StringListField, NodeListField
+from eulcore.xmlmap.teimap import Tei, TeiDiv, TeiLineGroup, TEI_NAMESPACE
 
 # TEI poetry models
 # currently just slightly-modified versions of tei xmlmap objects
