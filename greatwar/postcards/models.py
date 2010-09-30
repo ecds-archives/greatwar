@@ -6,7 +6,7 @@ from eulcore.django.fedora import Repository
 from eulcore.fedora.models import DigitalObject, FileDatastream, XmlDatastream
 from eulcore.xmlmap import XmlObject
 from eulcore.xmlmap.fields import NodeListField
-from eulcore.xmlmap.teimap import TeiFigure, TeiInterpGroup, TeiInterp
+from eulcore.xmlmap.teimap import TeiFigure, TeiInterpGroup, TeiInterp, TeiLineGroup
 
 
 # TEI postcard models

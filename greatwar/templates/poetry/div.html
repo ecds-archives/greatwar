@@ -5,37 +5,10 @@
 {% block content %}
 {% if div %}
 from <a href="{% url poetry:book-toc div.doc_id %}">{{ div.doctitle }}</a> (id =  {{div.doc_id}} )
-{# <h2>{{ div.title|default:'' }}</h2> #}
 
-{# {{ body|safe }}  Use this if xslt working? #}
-{% if div.type == "poem" %}
-<div class="poem">
-
-  <p class="title">{{ div.title|default:"" }}</p>
-  {% if div.title.type == "sub" %}
-  <p class="title">{{ div.title|format_tei }} </p> {% endif %}
-
-       {% if div.author %} <p class="author">{{ div.author|format_tei }} <br/> {% endif %}
-<div class="poem-body">
-  {% for linegroup in div.linegroup %}
-    <div class="stanza">
-      {% for line in linegroup.line %}
-      <p class="line {{line.rend|default:''}}"{% if line.indent %} style="text-indent:{{line.indent}}%"{% endif %}>{{ line }}</p>
-      {% endfor %}
-      </div>
-{% endfor %}
-      {% if div.byline %}
-          {{ div.byline }}
-      {% endif %}
-{% endif %}
-{% if div.type == "epigraph" %}
-      <div class="epigraph">
-	{% for line in div.quote %}
-	 <p class="line {{line.rend|default:''}}"{% if line.indent %} style="text-indent:{{line.indent}}%"{% endif %}>{{ line|format_tei }}</p>
-	{% endfor %}
-{% endif %}
-    </div>
-
+<div class="content">
+{{ body|safe }}
+</div>
 {% if div.prevdiv.id %}
     <p class="next-prev"><a href="{% url poetry:poem div.doc_id div.prevdiv.id %}">Previous poem: {{ div.prevdiv.title }}</a> </p>
 {% endif %}
