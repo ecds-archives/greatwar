@@ -110,9 +110,9 @@ INSTALLED_APPS = (
     'eulcore', # https://svn.library.emory.edu/svn/python-eulcore/
     'eulcore.django.testsetup',
     'eulcore.django.fedora',
-   # 'eulcore.django.existdb',
+    'eulcore.django.existdb',
    # 'eulcore.django.ldap.emory',
-   # 'eulcore.django.util',
+    'eulcore.django.util',
     'greatwar.postcards',
     'greatwar.poetry',
 )
