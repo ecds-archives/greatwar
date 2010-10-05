@@ -23,9 +23,10 @@ def book_toc(request, doc_id):
 def div(request, doc_id, div_id):
     "Display a single div (poem)"
     div = Poem.objects.also('doctitle', 'doc_id', 'nextdiv__id', 'nextdiv__title', 'prevdiv__id', 'prevdiv__title').filter(doc_id__exact=doc_id).get(id__exact=div_id)
-    body = div.xsl_transform(filename='templates/xslt/div.xsl')
+    body = div.xsl_transform(filename='poetry/xslt/div.xsl')
+    print body.serialize()
     return render_to_response('poetry/div.html', { 'div' : div,
-                                                   'body' : body
+                                                   'body' : body.serialize()
                                                    })   
 def poets(request):
     "Browse list of poets"
