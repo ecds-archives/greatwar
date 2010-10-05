@@ -1,0 +1,1837 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?><TEI.2 TEIform="TEI.2">
+   <teiHeader TEIform="teiHeader" status="new" type="text">
+      <fileDesc TEIform="fileDesc">
+         <titleStmt TEIform="titleStmt" n="Flower of Youth: Poems in War Time">
+            <title TEIform="title">Flower of Youth: Poems in War Time</title>
+            <author TEIform="author" n="Tynan, Katharine">Tynan, Katharine</author>
+            <respStmt TEIform="respStmt">
+               <resp TEIform="resp">Compiled and edited by</resp>
+               <name TEIform="name">Beck Center</name>
+            </respStmt>
+         </titleStmt>
+         <extent TEIform="extent"></extent>
+         <publicationStmt TEIform="publicationStmt">
+            <publisher TEIform="publisher">Lewis H. Beck Center</publisher>
+            <pubPlace TEIform="pubPlace">Emory University</pubPlace>
+            <address TEIform="address">
+               <addrLine TEIform="addrLine">Atlanta, Georgia</addrLine>
+            </address>
+            <availability TEIform="availability" status="unknown">
+               <p TEIform="p">2001 Emory University. Permission is granted to
+download, transmit, or otherwise reproduce, distribute or display the contributions to the work claimed by Emory University for non-profit educational purposes, provided this header is included in its entirety.  For inquiries about commercial uses, contact either: Women Writers Resource Project or Lewis H. Beck Center for Electronic collections and services, Emory University, Atlanta, Georgia 30322</p>
+            </availability>
+            <date TEIform="date">2001</date>
+         </publicationStmt>
+         <seriesStmt TEIform="seriesStmt">
+            <title TEIform="title">Women Writers Resource Project</title>
+         </seriesStmt>
+         <sourceDesc TEIform="sourceDesc" default="NO">
+            <bibl TEIform="bibl" default="NO"> Tynan, Katharine &quot;Flower of Youth: Poems in War Time.&quot; London: Sidgwick &amp; Jackson, 1915.  80 pages.</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc TEIform="encodingDesc">
+         <projectDesc TEIform="projectDesc" default="NO">
+            <p TEIform="p">This digital text is produced from a first edition volume of Katharine Tynan&apos;s <hi TEIform="hi" rend="italic">Flower of Youth: Poems in War Time</hi> generously loaned to the Beck Center by Professor Harry Rusche.  The production of this digital text was undertaken by the Beck Center for the Women Writers Resource Project at Emory University.</p>
+         </projectDesc>
+      </encodingDesc>
+      <profileDesc TEIform="profileDesc">
+         <creation TEIform="creation">
+            <rs TEIform="rs" type="ethnicity">Caucasian</rs>
+            <rs TEIform="rs" type="form">Unedited</rs>
+            <rs TEIform="rs" type="genre">Poetry</rs>
+            <rs TEIform="rs" type="geography">Great Britain</rs>
+            <date TEIform="date">1900-1999</date>
+         </creation>
+      </profileDesc>
+      <revisionDesc TEIform="revisionDesc">
+         <change TEIform="change">
+            <date TEIform="date">2001</date>
+            <respStmt TEIform="respStmt">
+               <name TEIform="name">Erika Farr</name>
+               <resp TEIform="resp">Project Manager</resp>
+            </respStmt>
+            <item TEIform="item">SGML tags inserted in compliance with TEI guidelines using TEILITE</item>
+         </change>
+      </revisionDesc>
+   </teiHeader>
+   <text TEIform="text">
+      <body TEIform="body">
+         <div1 TEIform="div1" n="Flower of Youth: Poems in War Time" org="uniform" part="N" sample="complete" type="poetry">
+            <docAuthor TEIform="docAuthor" n="Tynan, Katharine">Katharine Tynan</docAuthor>
+            <head TEIform="head" rend="center">Flower of Youth: Poems in War Time</head>
+            <docDate TEIform="docDate">1915</docDate>
+            <bibl TEIform="bibl" default="NO">London: Sidgwick and Johnson, LTD.</bibl>
+            <pb TEIform="pb" n="9 JOINING THE COLOURS"></pb>
+            <div2 TEIform="div2" id="ktflower01" n="JOINING THE COLOURS" org="uniform" part="N" sample="complete" type="poem">
+               <head TEIform="head" rend="center">JOINING THE COLOURS</head>
+               <head TEIform="head" rend="center">(WEST KENTS, DUBLIN, <hi TEIform="hi" rend="italic">August</hi> 1914)</head>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">THERE they go marching all in step so gay!</l>
+                  <l TEIform="l" part="N">Smooth-cheeked and golden, food for shells and guns.</l>
+                  <l TEIform="l" part="N">Blithely they go as to a wedding day,</l>
+                  <l TEIform="l" part="N" rend="indent">The mothers&apos; sons. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">The drab street stares to see them row on row</l>
+                  <l TEIform="l" part="N">On the high tram-tops, singing like the lark. </l>
+                  <l TEIform="l" part="N">Too careless-gay for courage, singing they go </l>
+                  <l TEIform="l" part="N" rend="indent">Into the dark. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">With tin whistles, mouth-organs, any noise, </l>
+                  <l TEIform="l" part="N">They pipe the way to glory and the grave; </l>
+                  <l TEIform="l" part="N">Foolish and young, the gay and golden boys</l>
+                  <l TEIform="l" part="N" rend="indent">Love cannot save. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">High heart!  High courage!  The poor girls they kissed</l>
+                  <l TEIform="l" part="N">Run with them : they shall kiss no more, alas! </l>
+                  <l TEIform="l" part="N">Out of the mist they stepped-into the mist</l>
+                  <l TEIform="l" part="N" rend="indent">Singing they pass. </l>
+               </lg>
+            </div2>
+            <pb TEIform="pb" n="10 FLOWER OF YOUTH"></pb>
+            <div2 TEIform="div2" id="ktflower02" n="THE LOWLANDS OF FLANDERS" org="uniform" part="N" sample="complete" type="poem">
+               <head TEIform="head" rend="center">THE LOWLANDS OF FLANDERS</head>
+               <head TEIform="head" rend="center">
+                  <hi TEIform="hi" rend="italic">(An Old Song Resung)</hi> 
+               </head>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">THE night that I was married</l>
+                  <l TEIform="l" part="N" rend="indent">Our Captain came to me: </l>
+                  <l TEIform="l" part="N">Rise up, rise up, new-married man</l>
+                  <l TEIform="l" part="N" rend="indent">And come at once with me. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">For the Lowlands of Flanders, </l>
+                  <l TEIform="l" part="N" rend="indent">It&apos;s there that we must fight; </l>
+                  <l TEIform="l" part="N">So look your last and buss your last, </l>
+                  <l TEIform="l" part="N" rend="indent">For we shall sail to-night. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">&apos;Tis all for our Counterie</l>
+                  <l TEIform="l" part="N" rend="indent">And for our King we go</l>
+                  <l TEIform="l" part="N">To the Lowlands of Flanders</l>
+                  <l TEIform="l" part="N" rend="indent">Against the German foe. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">The girl that weds a soldier</l>
+                  <l TEIform="l" part="N" rend="indent">Must never blench for fear; </l>
+                  <l TEIform="l" part="N">I kissed my last and looked my last</l>
+                  <l TEIform="l" part="N" rend="indent">Upon my lovely dear. </l>
+               </lg>
+               <pb TEIform="pb" n="11 THE LOWLANDS OF FLANDERS"></pb>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">The Lowlands of Flanders, </l>
+                  <l TEIform="l" part="N" rend="indent">Their rivers run so red. </l>
+                  <l TEIform="l" part="N">But I must say Good-bye, my dear, </l>
+                  <l TEIform="l" part="N" rend="indent">My only dear, I said. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">For now I must go sailing</l>
+                  <l TEIform="l" part="N" rend="indent">Upon the stormy main; </l>
+                  <l TEIform="l" part="N">Good-bye, good-bye, my only Love, </l>
+                  <l TEIform="l" part="N" rend="indent">Till I shall come again. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">I put her white arms from me, </l>
+                  <l TEIform="l" part="N" rend="indent">Her cheek was cold as clay. </l>
+                  <l TEIform="l" part="N">The night that I was married </l>
+                  <l TEIform="l" part="N" rend="indent">No longer I might stay. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Our bugles they are blowing, </l>
+                  <l TEIform="l" part="N" rend="indent">And I must sail the sea, </l>
+                  <l TEIform="l" part="N">For the Lowlands of Flanders</l>
+                  <l TEIform="l" part="N" rend="indent">Betwixt my love and me. </l>
+               </lg>
+            </div2>
+            <pb TEIform="pb" n="12 FLOWER OF YOUTH"></pb>
+            <div2 TEIform="div2" id="ktflower43" n="THE CALL" org="uniform" part="N" sample="complete" type="poem">
+               <head TEIform="head" rend="center">THE CALL</head>
+               <l TEIform="l" part="N" rend="center">
+                  <hi TEIform="hi" rend="italic">I hear an Army!</hi>
+               </l>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Millions of men coming up from the edge of the world,</l>
+                  <l TEIform="l" part="N">The ring of unnumbered feet ever louder and louder</l>
+                  <l TEIform="l" part="N">Comes on and an like a mighty untameable tide, </l>
+                  <l TEIform="l" part="N">Steady, implacable, out of the North and the South, </l>
+                  <l TEIform="l" part="N">Out of the East, and the West, they answer the call</l>
+                  <l TEIform="l" part="N">Of her who stands, her eyes towards God and the stars, </l>
+                  <l TEIform="l" part="N">Liberty, daughter of God, calling her men. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">What manner of men are these?  Like the desert sands</l>
+                  <l TEIform="l" part="N">Uncounted, many as locusts, darkening the sky? </l>
+                  <l TEIform="l" part="N">White men, black men, men of the tawny gold, </l>
+                  <l TEIform="l" part="N">Golden-eyed like the lion, sons of the sun, </l>
+                  <l TEIform="l" part="N">Men from the snow, their eyes like frost or a sword: </l>
+                  <l TEIform="l" part="N">They have but one heart, one desire, they run one way. </l>
+                  <l TEIform="l" part="N">Hurrying, hurrying to the shrill trumpet call. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Men from the ice-floes, men from the jungles come; </l>
+                  <l TEIform="l" part="N">This from the arms of his bride, that from his dead. </l>
+                  <pb TEIform="pb" n="13 THE CALL"></pb>
+                  <l TEIform="l" part="N">Men from the plough, the mart, the mill and the street</l>
+                  <l TEIform="l" part="N">They run:  they are heroes:  the fire fuses them all. </l>
+                  <l TEIform="l" part="N">Head uplifted and proud, like heroes they step, </l>
+                  <l TEIform="l" part="N">Singing their battle song in the troubled dawn</l>
+                  <l TEIform="l" part="N">Of the day of Liberty, flaming torch of the world. </l>
+               </lg>
+               <l TEIform="l" part="N" rend="center">
+                  <hi TEIform="hi" rend="italic">I hear an Army!</hi>
+               </l>
+            </div2>
+            <pb TEIform="pb" n="14 FLOWER OF YOUTH"></pb>
+            <div2 TEIform="div2" id="ktflower03" n="THE GOLDEN BOY" org="uniform" part="N" sample="complete" type="poem">
+               <head TEIform="head" rend="center">THE GOLDEN BOY</head>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">IN times of peace, so clean and bright, </l>
+                  <l TEIform="l" part="N" rend="indent">And with a new-washed morning face, </l>
+                  <l TEIform="l" part="N">He walked Pall Mall, a goodly sight, </l>
+                  <l TEIform="l" part="N" rend="indent">The finished flower of all the race. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Or through Bond Street and Piccadilly,</l>
+                  <l TEIform="l" part="N" rend="indent">Went spick-and-span, without a soil, </l>
+                  <l TEIform="l" part="N">As careless as the July lily</l>
+                  <l TEIform="l" part="N" rend="indent">That spins not, neither does she toil. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">He took his soldiering as sport,</l>
+                  <l TEIform="l" part="N" rend="indent">And beauteous in his mufti stirred</l>
+                  <l TEIform="l" part="N">Romance i&apos; the simple female sort</l>
+                  <l TEIform="l" part="N" rend="indent">That loves a guardsman or a lord.</l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">And now, knee-deep in muddy water, </l>
+                  <l TEIform="l" part="N" rend="indent">Unwashed, unshaven, see him go! </l>
+                  <l TEIform="l" part="N">His garments stained with mud and slaughter</l>
+                  <l TEIform="l" part="N" rend="indent">Would break the heart of Savile Row. </l>
+               </lg>
+               <pb TEIform="pb" n="15 THE GOLDEN BOY"></pb>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">The danger&apos;s in his blood like wine, </l>
+                  <l TEIform="l" part="N" rend="indent">The old heroic passion leaps; </l>
+                  <l TEIform="l" part="N">The son of the mighty fighting line</l>
+                  <l TEIform="l" part="N" rend="indent">Goes glad whatever woman weeps. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">He plays the game, winning or losing, </l>
+                  <l TEIform="l" part="N" rend="indent">As in the playing-fields at home; </l>
+                  <l TEIform="l" part="N">This picnic&apos;s nothing of his choosing, </l>
+                  <l TEIform="l" part="N" rend="indent">But since it&apos;s started, let it come! </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">He lives his hour with keenest zest, </l>
+                  <l TEIform="l" part="N" rend="indent">And midst the flying death he spares</l>
+                  <l TEIform="l" part="N">A laugh to the light-heart schoolboy jest, </l>
+                  <l TEIform="l" part="N" rend="indent">Mingled with curses and with prayers. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Gay as at Eton or at Harrow, </l>
+                  <l TEIform="l" part="N" rend="indent">Counts battles as by goals and runs</l>
+                  <l TEIform="l" part="N">God keep him from Death&apos;s flying arrow</l>
+                  <l TEIform="l" part="N" rend="indent">To give his England fighting sons. </l>
+               </lg>
+            </div2>
+            <pb TEIform="pb" n="16 FLOWER OF YOUTH"></pb>
+            <div2 TEIform="div2" id="ktflower04" n="THE GREAT CHANCE" org="uniform" part="N" sample="complete" type="poem">
+               <head TEIform="head" rend="center">THE GREAT CHANCE</head>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">NOW strikes the hour upon the clock</l>
+                  <l TEIform="l" part="N" rend="indent">The black sheep may rebuild the years </l>
+                  <l TEIform="l" part="N">May lift the father&apos;s pride he broke</l>
+                  <l TEIform="l" part="N" rend="indent">And wipe away his mother&apos;s tears. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">To him, the mark for thrifty scorn; </l>
+                  <l TEIform="l" part="N" rend="indent">God hath another chance to give, </l>
+                  <l TEIform="l" part="N">Sets in his heart a flame new-born</l>
+                  <l TEIform="l" part="N" rend="indent">By which his muddied soul may live. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">This is the day of the prodigal, </l>
+                  <l TEIform="l" part="N" rend="indent">The decent people&apos;s shame and grief, </l>
+                  <l TEIform="l" part="N">When he shall make amends for all. </l>
+                  <l TEIform="l" part="N" rend="indent">The way to Glory&apos;s bloody and brief. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Clean from his baptism, of blood, </l>
+                  <l TEIform="l" part="N" rend="indent">New from the fire he springs again, </l>
+                  <l TEIform="l" part="N">In shining raiment white and good, </l>
+                  <l TEIform="l" part="N" rend="indent">Beyond the wise, home-keeping man. </l>
+               </lg>
+               <pb TEIform="pb" n="17 THE GREAT CHANCE"></pb>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Somewhere to-night--no tears be shed!-- </l>
+                  <l TEIform="l" part="N" rend="indent">With shaking hands they turn the sheet</l>
+                  <l TEIform="l" part="N">To find his name among the dead, </l>
+                  <l TEIform="l" part="N" rend="indent">Flower of the Army and the Fleet. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">They tell, with proud and stricken face, </l>
+                  <l TEIform="l" part="N" rend="indent">Of his white boyhood far away--</l>
+                  <l TEIform="l" part="N">Who talked of trouble or disgrace? </l>
+                  <l TEIform="l" part="N" rend="indent">&quot;Our splendid son is dead!&quot; they say. </l>
+               </lg>
+            </div2>
+            <pb TEIform="pb" n="18 FLOWER OF YOUTH"></pb>
+            <div2 TEIform="div2" id="ktflower05" n="THE WATCHERS" org="uniform" part="N" sample="complete" type="poem">
+               <head TEIform="head" rend="center">THE WATCHERS</head>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">THE cottages all lie asleep; </l>
+                  <l TEIform="l" part="N" rend="indent">The sheep and lambs are folded in </l>
+                  <l TEIform="l" part="N">Winged sentinels the vale will keep</l>
+                  <l TEIform="l" part="N" rend="indent">Until the hours of life begin. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">The children with their prayers all said</l>
+                  <l TEIform="l" part="N" rend="indent">Sleep until cockcrow shall awake </l>
+                  <l TEIform="l" part="N">The gardens in their gold and red</l>
+                  <l TEIform="l" part="N" rend="indent">And robins in the bush and brake. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">The fields of harvest golden-white, </l>
+                  <l TEIform="l" part="N" rend="indent">The fields of pasture rich and green, </l>
+                  <l TEIform="l" part="N">Sleep on nor fear the kindly night, </l>
+                  <l TEIform="l" part="N" rend="indent">The watching mountains set between. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">The river sings its sleepy song, </l>
+                  <l TEIform="l" part="N" rend="indent">Nought stirs the wakeful owl beside: </l>
+                  <l TEIform="l" part="N">Our peace is builded sure and strong</l>
+                  <l TEIform="l" part="N" rend="indent">No evil beast can creep inside. </l>
+               </lg>
+               <pb TEIform="pb" n="19 THE WATCHERS"></pb>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">St Patrick and St Brigid hold</l>
+                  <l TEIform="l" part="N" rend="indent">The vale its little houses all, </l>
+                  <l TEIform="l" part="N">While men-at-arms in white and gold</l>
+                  <l TEIform="l" part="N" rend="indent">Glide swiftly by the outer wall. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">St Brendan and St Kevin pluck</l>
+                  <l TEIform="l" part="N" rend="indent">The robes of God that He may hear--</l>
+                  <l TEIform="l" part="N">And Colum: &quot;Keep the Irish flock</l>
+                  <l TEIform="l" part="N" rend="indent">So that no shame or sin come near.&quot; </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">What news of Belgian folk to-day? </l>
+                  <l TEIform="l" part="N" rend="indent">How fare the village and the town? </l>
+                  <l TEIform="l" part="N">O Belgium&apos;s all on fire they say, </l>
+                  <l TEIform="l" part="N" rend="indent">And all her towers are toppling down. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">What are her angels doing then, </l>
+                  <l TEIform="l" part="N" rend="indent">And are the Belgian saints asleep, </l>
+                  <l TEIform="l" part="N">That in this night of dule and pain</l>
+                  <l TEIform="l" part="N" rend="indent">The Belgians mourn, the Belgians weep? </l>
+               </lg>
+            </div2>
+            <pb TEIform="pb" n="20 FLOWER OF YOUTH"></pb>
+            <div2 TEIform="div2" id="ktflower06" n="THE BRIDE" org="uniform" part="N" sample="complete" type="poem">
+               <head TEIform="head" rend="center">THE BRIDE</head>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">WEAVE me no wreath of orange blossom, </l>
+                  <l TEIform="l" part="N" rend="indent">No bridal white shall me adorn; </l>
+                  <l TEIform="l" part="N">I wear a red rose in my bosom; </l>
+                  <l TEIform="l" part="N" rend="indent">To-morrow I shall wear the thorn. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Bring me no gauds to deck my beauty, </l>
+                  <l TEIform="l" part="N" rend="indent">Put by the jewels and the lace; </l>
+                  <l TEIform="l" part="N">My love to honour and to duty</l>
+                  <l TEIform="l" part="N" rend="indent">Was plighted ere he saw my face. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">I hear his impatient charger neighing, </l>
+                  <l TEIform="l" part="N" rend="indent">I hear the trumpets blow afar! </l>
+                  <l TEIform="l" part="N">His comrades ride, as to a Maying, </l>
+                  <l TEIform="l" part="N" rend="indent">Jesting and splendid to the war. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Why is my lady-mother weeping? </l>
+                  <l TEIform="l" part="N" rend="indent">Why is my father grievèd sore? </l>
+                  <l TEIform="l" part="N">Oh, love, God have you in His keeping, </l>
+                  <l TEIform="l" part="N" rend="indent"> The day you leave your true-love&apos;s door. </l>
+               </lg>
+               <pb TEIform="pb" n="21 THE BRIDE"></pb>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Gay is the golden harvest spreading, </l>
+                  <l TEIform="l" part="N" rend="indent">The orchard&apos;s all in rose and gold; </l>
+                  <l TEIform="l" part="N">Who said it was a mournful wedding? </l>
+                  <l TEIform="l" part="N" rend="indent">My hand in yours, Love, is not cold. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Go glad and gay to meet the foeman, </l>
+                  <l TEIform="l" part="N" rend="indent">I love you to my latest breath; </l>
+                  <l TEIform="l" part="N">Oh, love, there is no happier woman. </l>
+                  <l TEIform="l" part="N" rend="indent"> See, I am smiling! Love-till death! </l>
+               </lg>
+            </div2>
+            <pb TEIform="pb" n="22 FLOWER OF YOUTH"></pb>
+            <div2 TEIform="div2" id="ktflower07" n="THE RIDERS" org="uniform" part="N" sample="complete" type="poem">
+               <head TEIform="head" rend="center">THE RIDERS</head>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">RHEIMS is down in fire and smoke, </l>
+                  <l TEIform="l" part="N">The hour of God is at the stroke. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Round and round the ruined place,-- </l>
+                  <l TEIform="l" part="N">Jesu, Mary, give us grace! </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">There are two riders clad in mail, </l>
+                  <l TEIform="l" part="N">Silver as the moon pale. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">One is tall as a knight&apos;s spear, </l>
+                  <l TEIform="l" part="N">The younger one is lowlier. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Small and slim and like a maid-</l>
+                  <l TEIform="l" part="N">Steeds and riders cast no shade. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Who are then these cavaliers? </l>
+                  <l TEIform="l" part="N">There was a sound as Heaven dropt tears. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Who are these that ride so light, </l>
+                  <l TEIform="l" part="N">Soundless in the flaming light, </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Where Rheims burns, that was given</l>
+                  <l TEIform="l" part="N">By France to Mary, Queen of Heaven? </l>
+               </lg>
+               <pb TEIform="pb" n="23 THE RIDERS"></pb>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">O our Rheims, our Rheims is down, </l>
+                  <l TEIform="l" part="N">Naught is left of her renown. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Hist! what sound is in the breeze, </l>
+                  <l TEIform="l" part="N">Like the sighing of forest trees? </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Or a great wind, or an army, </l>
+                  <l TEIform="l" part="N">Or the waves of the wild sea? </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">The tall knight rides fierce and fast</l>
+                  <l TEIform="l" part="N">To the sound of a trumpet-blast. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">The little knight in fire and flame, </l>
+                  <l TEIform="l" part="N">Slender and soft as a dame, </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Rides and is not far behind: </l>
+                  <l TEIform="l" part="N">His long hair floats on the wind. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">And ever the tramp of chivalry</l>
+                  <l TEIform="l" part="N">Comes like the sound of the sea. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">This is Michael rides abroad, </l>
+                  <l TEIform="l" part="N">Prince of the army of God, </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">And this like a lily arrayed, </l>
+                  <l TEIform="l" part="N">Is Joan, the blessed Maid. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Rheims is down in fire and smoke</l>
+                  <l TEIform="l" part="N">And the hour of God&apos;s at the stroke. </l>
+               </lg>
+            </div2>
+            <pb TEIform="pb" n="24 FLOWER OF YOUTH"></pb>
+            <div2 TEIform="div2" id="ktflower08" n="&apos;WHAT TURNED THE GERMANS BACK?&apos;" org="uniform" part="N" sample="complete" type="poem">
+               <head TEIform="head" rend="center">&quot;WHAT TURNED THE GERMANS BACK?&quot;</head>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">WHAT turned the German myriads back</l>
+                  <l TEIform="l" part="N" rend="indent">From Paris whither they had won? </l>
+                  <l TEIform="l" part="N">The sword dropped from their hold grown slack; </l>
+                  <l TEIform="l" part="N" rend="indent">Children of Attila the Hun, </l>
+                  <l TEIform="l" part="N">Like Attila, went backward driven</l>
+                  <l TEIform="l" part="N">By a young shepherdess of Heaven. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">A shepherdess is Genevieve, </l>
+                  <l TEIform="l" part="N" rend="indent">And though her flock should wander light, </l>
+                  <l TEIform="l" part="N">This shepherdess is quick to save</l>
+                  <l TEIform="l" part="N" rend="indent">The black, the speckled and the white. </l>
+                  <l TEIform="l" part="N">She takes her golden crook and goes</l>
+                  <l TEIform="l" part="N">And deals destruction to its foes. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">She who turned Attila back, so slim, </l>
+                  <l TEIform="l" part="N" rend="indent">A shepherdess that keeps the flock, </l>
+                  <l TEIform="l" part="N">Waited as once she did for him, </l>
+                  <l TEIform="l" part="N" rend="indent">Slight as a reed or her own crook; </l>
+                  <l TEIform="l" part="N"> &quot;Turn back in God&apos;s Name!&quot;  They went back. </l>
+                  <l TEIform="l" part="N">The tide is stemmed for her sweet sake. </l>
+               </lg>
+               <pb TEIform="pb" n="25 &apos;WHAT TURNED THE GERMANS BACK?&apos;"></pb>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">White Genevieve upon her hill</l>
+                  <l TEIform="l" part="N" rend="indent">Prays, and the German hosts retreat. </l>
+                  <l TEIform="l" part="N">She plucks the Robes of Heaven still</l>
+                  <l TEIform="l" part="N" rend="indent">That Heaven give victory for defeat; </l>
+                  <l TEIform="l" part="N">And keeps her motley flock in sight, </l>
+                  <l TEIform="l" part="N">The black, the speckled and the white. </l>
+               </lg>
+            </div2>
+            <pb TEIform="pb" n="26 FLOWER OF YOUTH"></pb>
+            <div2 TEIform="div2" id="ktflower09" n="A GIRL&apos;S SONG" org="uniform" part="N" sample="complete" type="poem">
+               <head TEIform="head" rend="center">A GIRL&apos;S SONG</head>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">THE Meuse and Marne have little waves; </l>
+                  <l TEIform="l" part="N" rend="indent">The slender poplars o&apos;er them lean. </l>
+                  <l TEIform="l" part="N">One day they will forget the graves</l>
+                  <l TEIform="l" part="N" rend="indent">That give the grass its living green. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Some brown French girl the rose will wear</l>
+                  <l TEIform="l" part="N" rend="indent">That springs above his comely head; </l>
+                  <l TEIform="l" part="N">Will twine it in her russet hair, </l>
+                  <l TEIform="l" part="N" rend="indent">Nor wonder why it is so red. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">His blood is in the rose&apos;s veins, </l>
+                  <l TEIform="l" part="N" rend="indent">His hair is in the yellow corn. </l>
+                  <l TEIform="l" part="N">My grief is in the weeping rains</l>
+                  <l TEIform="l" part="N" rend="indent">And in the keening wind forlorn. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Flow softly, softly, Marne and Meuse; </l>
+                  <l TEIform="l" part="N" rend="indent"> Tread lightly, all ye browsing sheep; </l>
+                  <l TEIform="l" part="N">Fall tenderly, O silver dews, </l>
+                  <l TEIform="l" part="N" rend="indent">For here my dear Love lies asleep. </l>
+               </lg>
+               <pb TEIform="pb" n="27 A GIRL&apos;S SONG"></pb>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">The earth is on his sealèd eyes, </l>
+                  <l TEIform="l" part="N" rend="indent"> The beauty marred that was my pride; </l>
+                  <l TEIform="l" part="N">Would I were lying where he lies, </l>
+                  <l TEIform="l" part="N" rend="indent">And sleeping sweetly by his side! </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">The Spring will come by Meuse and Marne, </l>
+                  <l TEIform="l" part="N" rend="indent"> The birds be blithesome in the tree. </l>
+                  <l TEIform="l" part="N">I heap the stones to make his cairn</l>
+                  <l TEIform="l" part="N" rend="indent">Where many sleep as sound as he. </l>
+               </lg>
+            </div2>
+            <pb TEIform="pb" n="28 FLOWER OF YOUTH"></pb>
+            <div2 TEIform="div2" id="ktflower10" n="THE YOUNG MOTHER" org="uniform" part="N" sample="complete" type="poem">
+               <head TEIform="head" rend="center"> THE YOUNG MOTHER </head>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">IN dreadful times of tears and war</l>
+                  <l TEIform="l" part="N">She sails, a little fixed star, </l>
+                  <l TEIform="l" part="N">Or like a little ship she glides </l>
+                  <l TEIform="l" part="N">With gentle winds and favouring tides</l>
+                  <l TEIform="l" part="N">Up to the harbour bar. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Wrapped in all mild tranquillities </l>
+                  <l TEIform="l" part="N">She muses: inward gaze her eyes; </l>
+                  <l TEIform="l" part="N">And lest she slip upon a stone</l>
+                  <l TEIform="l" part="N">Gabriel or some shining one </l>
+                  <l TEIform="l" part="N">Guards her high destinies. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">No rumour reaches her at all, </l>
+                  <l TEIform="l" part="N">Beyond her safe encompassing wall, </l>
+                  <l TEIform="l" part="N">Of a mad world that slays and slays: </l>
+                  <l TEIform="l" part="N">She sees a little one that plays </l>
+                  <l TEIform="l" part="N">And sleeps at evenfall. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">She is in the House of Life: and where </l>
+                  <l TEIform="l" part="N">She goes the angels bend to her, </l>
+                  <l TEIform="l" part="N">A little secret garden-close, </l>
+                  <l TEIform="l" part="N">Sweet with the lily and the rose, </l>
+                  <l TEIform="l" part="N">With frankincense and myrrh. </l>
+               </lg>
+            </div2>
+            <pb TEIform="pb" n="29 THE TEMPLE"></pb>
+            <div2 TEIform="div2" id="ktflower11" n="THE TEMPLE" org="uniform" part="N" sample="complete" type="poem">
+               <head TEIform="head" rend="center">THE TEMPLE</head>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">WHAT of Louvain and of Rheims</l>
+                  <l TEIform="l" part="N" rend="indent">Made for God by man? What then? </l>
+                  <l TEIform="l" part="N">Here be temples more than man&apos;s</l>
+                  <l TEIform="l" part="N" rend="indent">Wrought by God for His own men. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Scattered in the rain and frost, </l>
+                  <l TEIform="l" part="N" rend="indent">Marred of beauty, there they be, </l>
+                  <l TEIform="l" part="N">Temples of the Holy Ghost, </l>
+                  <l TEIform="l" part="N" rend="indent">Broken, ruined piteously. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Bodies all so finely wrought, </l>
+                  <l TEIform="l" part="N" rend="indent">Cunning deftness shaped them well; </l>
+                  <l TEIform="l" part="N">These, God&apos;s ultimate, loving thought</l>
+                  <l TEIform="l" part="N" rend="indent">For His Spirit&apos;s citadel. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Beautiful from head to foot, </l>
+                  <l TEIform="l" part="N" rend="indent">Young, dear darlings all unflawed</l>
+                  <l TEIform="l" part="N">For their mother&apos;s kiss. What brute</l>
+                  <l TEIform="l" part="N" rend="indent">Dares deface the image of God? </l>
+               </lg>
+               <pb TEIform="pb" n="30 FLOWER OF YOUTH"></pb>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Oh, the Temple&apos;s down! all marred</l>
+                  <l TEIform="l" part="N" rend="indent">Gay and golden boys must lie: </l>
+                  <l TEIform="l" part="N">Bitter-sweet as spikenard</l>
+                  <l TEIform="l" part="N" rend="indent">Is the old name we called them by. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Hush! God&apos;s Temple in its fall</l>
+                  <l TEIform="l" part="N" rend="indent">Breaks to set the spirit free</l>
+                  <l TEIform="l" part="N">From the golden cage and thrall. </l>
+                  <l TEIform="l" part="N" rend="indent">Into heaven-winged liberty. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">From the cage the bird is flown, </l>
+                  <l TEIform="l" part="N" rend="indent">Sings so high above our sphere. </l>
+                  <l TEIform="l" part="N">Hush,--be never a sigh or moan: </l>
+                  <l TEIform="l" part="N" rend="indent">The fledged bird flies without fear. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">All our loves are gathered in, </l>
+                  <l TEIform="l" part="N" rend="indent">Every gay and golden lad; </l>
+                  <l TEIform="l" part="N">On new raiment, white and clean, </l>
+                  <l TEIform="l" part="N" rend="indent">They behold God and are glad. </l>
+               </lg>
+            </div2>
+            <pb TEIform="pb" n="31 THE SUMMONS"></pb>
+            <div2 TEIform="div2" id="ktflower12" n="THE SUMMONS" org="uniform" part="N" sample="complete" type="poem">
+               <head TEIform="head" rend="center">THE SUMMONS</head>
+               <head TEIform="head" rend="center">(V. L., 14<hi TEIform="hi" rend="italic">th September</hi>  1914)</head>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">STRAIGHT to his death he went, </l>
+                  <l TEIform="l" part="N" rend="indent">A smile on his lips, </l>
+                  <l TEIform="l" part="N">All his life&apos;s joy unspent, </l>
+                  <l TEIform="l" part="N" rend="indent">Into eclipse. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">The song of the shell he heard</l>
+                  <l TEIform="l" part="N" rend="indent">Cleaving the dark, </l>
+                  <l TEIform="l" part="N">As though &apos;twere the song of a bird, </l>
+                  <l TEIform="l" part="N" rend="indent">Linnet or lark. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Why would he go so fast</l>
+                  <l TEIform="l" part="N" rend="indent">Out to the dead, </l>
+                  <l TEIform="l" part="N">All in a heavenly haste</l>
+                  <l TEIform="l" part="N" rend="indent">Not to be stayed? </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">What did he see afar</l>
+                  <l TEIform="l" part="N" rend="indent">That drew him after? </l>
+                  <l TEIform="l" part="N">Light from a merry star, </l>
+                  <l TEIform="l" part="N" rend="indent">Singing and laughter? </l>
+               </lg>
+               <pb TEIform="pb" n="32 FLOWER OF YOUTH"></pb>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Nay, but a face was his </l>
+                  <l TEIform="l" part="N" rend="indent">Only in dreams, </l>
+                  <l TEIform="l" part="N">Only in dreams of bliss </l>
+                  <l TEIform="l" part="N" rend="indent">In the star-gleams. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Nay, but a face that watched </l>
+                  <l TEIform="l" part="N" rend="indent">Long years to see</l>
+                  <l TEIform="l" part="N">Who came by the door unlatched, </l>
+                  <l TEIform="l" part="N" rend="indent">If it were he. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">What was the voice before</l>
+                  <l TEIform="l" part="N" rend="indent">That lured him on? </l>
+                  <l TEIform="l" part="N">&quot;Oh, thou long-hungered for, </l>
+                  <l TEIform="l" part="N" rend="indent">My son, my son!&quot; </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Lo, he hath heard, hath seen, </l>
+                  <l TEIform="l" part="N" rend="indent">He hath slipped over</l>
+                  <l TEIform="l" part="N">Where the great days begin </l>
+                  <l TEIform="l" part="N" rend="indent">For friend and lover. </l>
+               </lg>
+            </div2>
+            <pb TEIform="pb" n="33 THE LITTLE FLOCK"></pb>
+            <div2 TEIform="div2" id="ktflower13" n="THE LITTLE FLOCK" org="uniform" part="N" sample="complete" type="poem">
+               <head TEIform="head" rend="center">THE LITTLE FLOCK</head>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">CHRIST, now keep the little flock</l>
+                  <l TEIform="l" part="N" rend="indent">Which Thou bad&apos;st not to fear: </l>
+                  <l TEIform="l" part="N">Childing women and old folk</l>
+                  <l TEIform="l" part="N" rend="indent">And the little children dear. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">In this night of Hell revealed</l>
+                  <l TEIform="l" part="N" rend="indent">Call them that they run with Thee, </l>
+                  <l TEIform="l" part="N">And come out in a green field</l>
+                  <l TEIform="l" part="N" rend="indent">Where they gather round Thy knee. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">All poor women that give suck, </l>
+                  <l TEIform="l" part="N" rend="indent">All that are with child, lead Thou, </l>
+                  <l TEIform="l" part="N">By the margins of a brook</l>
+                  <l TEIform="l" part="N" rend="indent">Where is daisied peace enow. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Christ, remember now the sick; </l>
+                  <l TEIform="l" part="N" rend="indent">Feeble knees and hanging head. </l>
+                  <l TEIform="l" part="N">When they cry on Thee, come quick, </l>
+                  <l TEIform="l" part="N" rend="indent">And their sickness shall be stayed. </l>
+               </lg>
+               <pb TEIform="pb" n="34 FLOWER OF YOUTH"></pb>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Where Thou temperest the wind, </l>
+                  <l TEIform="l" part="N" rend="indent">Where the drenching rains leave off, </l>
+                  <l TEIform="l" part="N">When they run with Thee, O Kind! </l>
+                  <l TEIform="l" part="N" rend="indent">Dear, they shall be well enough! </l>
+               </lg>
+            </div2>
+            <pb TEIform="pb" n="35 A LAMENT"></pb>
+            <div2 TEIform="div2" id="ktflower14" n="A LAMENT" org="uniform" part="N" sample="complete" type="poem">
+               <head TEIform="head" rend="center">A LAMENT</head>
+               <head TEIform="head" rend="center">(FOR <hi TEIform="hi" rend="italic">Holy Cross Day, </hi>  1914)</head>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">CLOUDS is under clouds and rain</l>
+                  <l TEIform="l" part="N">For there will not come again </l>
+                  <l TEIform="l" part="N">Two, the beloved sire and son </l>
+                  <l TEIform="l" part="N">Whom all gifts were rained upon. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Kindness is all done, alas, </l>
+                  <l TEIform="l" part="N">Courtesy and grace must pass, </l>
+                  <l TEIform="l" part="N">Beauty, wit and charm lie dead, </l>
+                  <l TEIform="l" part="N">Love no more may wreathe the head. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Now the branch that waved so high </l>
+                  <l TEIform="l" part="N">No wind tosses to the sky; </l>
+                  <l TEIform="l" part="N">There&apos;s no flowering time to come, </l>
+                  <l TEIform="l" part="N">No sweet leafage and no bloom. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Percy, golden-hearted boy, </l>
+                  <l TEIform="l" part="N">In the heyday of his joy </l>
+                  <l TEIform="l" part="N">Left his new-made bride and chose</l>
+                  <l TEIform="l" part="N">The steep way that Honour goes. </l>
+               </lg>
+               <pb TEIform="pb" n="36 FLOWER OF YOUTH"></pb>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Took for his the deathless song </l>
+                  <l TEIform="l" part="N">Of the love that knows no wrong: </l>
+                  <l TEIform="l" part="N">Could I love thee, dear, so true </l>
+                  <l TEIform="l" part="N">Were not Honour more than you? </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N"> (Oh, forgive, dear Lovelace, laid </l>
+                  <l TEIform="l" part="N">In this mean Procrustean bed!) </l>
+                  <l TEIform="l" part="N">Dear, I love thee best of all </l>
+                  <l TEIform="l" part="N">When I go, at England&apos;s call. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">In our magnificent sky aglow </l>
+                  <l TEIform="l" part="N">How shall we this Percy know </l>
+                  <l TEIform="l" part="N">Where he shines among the suns </l>
+                  <l TEIform="l" part="N">And the planets and the moons? </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Percy died for England, why, </l>
+                  <l TEIform="l" part="N">Here&apos;s a sign to know him by! </l>
+                  <l TEIform="l" part="N">There&apos;s one dear and fixèd star, </l>
+                  <l TEIform="l" part="N">There&apos;s a youngling never far. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Percy and his father keep </l>
+                  <l TEIform="l" part="N">The old loved companionship, </l>
+                  <l TEIform="l" part="N">And shine downward in one ray </l>
+                  <l TEIform="l" part="N">Where at Clouds they wait for day. </l>
+               </lg>
+            </div2>
+            <pb TEIform="pb" n="37 A HERO"></pb>
+            <div2 TEIform="div2" id="ktflower15" n="A HERO" org="uniform" part="N" sample="complete" type="poem">
+               <head TEIform="head" rend="center">A HERO</head>
+               <head TEIform="head" rend="center">(<hi TEIform="hi" rend="italic">September </hi> 1914)</head>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">HE was so foolish, the poor lad, </l>
+                  <l TEIform="l" part="N" rend="indent">He made superior people smile </l>
+                  <l TEIform="l" part="N">Who knew not of the wings he had</l>
+                  <l TEIform="l" part="N" rend="indent">Budding and growing all the while; </l>
+                  <l TEIform="l" part="N">Nor that the laurel wreath was made </l>
+                  <l TEIform="l" part="N">Already for his curly head. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Silly and childish in his ways; </l>
+                  <l TEIform="l" part="N" rend="indent">They said: &quot;His future comes to naught.&quot; </l>
+                  <l TEIform="l" part="N">
+                     <hi TEIform="hi" rend="italic">His future! </hi>  In the dreadful days</l>
+                  <l TEIform="l" part="N" rend="indent">When in a toil his feet were caught</l>
+                  <l TEIform="l" part="N">He hacked his way to glory bright </l>
+                  <l TEIform="l" part="N">Before his day went down in night. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">He fretted wiser folk--small blame! </l>
+                  <l TEIform="l" part="N" rend="indent">Such futile, feeble brains were his. </l>
+                  <l TEIform="l" part="N">Now we doff hats to hear his name, </l>
+                  <l TEIform="l" part="N" rend="indent">Ask pardon where his sprit is, </l>
+                  <l TEIform="l" part="N">Because we never guessed him for </l>
+                  <l TEIform="l" part="N">A hero in the disguise he wore. </l>
+               </lg>
+               <pb TEIform="pb" n="38 FLOWER OF YOUTH"></pb>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">It matters little how we live</l>
+                  <l TEIform="l" part="N" rend="indent">So long as we may greatly die. </l>
+                  <l TEIform="l" part="N">Fashioned for great things, O forgive</l>
+                  <l TEIform="l" part="N" rend="indent">Our dullness in the days gone by! </l>
+                  <l TEIform="l" part="N">Now glory wraps you like a cloak </l>
+                  <l TEIform="l" part="N">From us, and all such common folk. </l>
+               </lg>
+            </div2>
+            <pb TEIform="pb" n="39 &apos;MID THE PITEOUS HEAPS OF DEAD"></pb>
+            <div2 TEIform="div2" id="ktflower16" n="&apos;MID THE PITEOUS HEAPS OF DEAD " org="uniform" part="N" sample="complete" type="poem">
+               <head TEIform="head" rend="center">&apos;MID THE PITEOUS HEAPS OF DEAD</head>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">&apos;MID the piteous heaps of dead </l>
+                  <l TEIform="l" part="N">Goes one weary golden head </l>
+                  <l TEIform="l" part="N">Tossing ever to and fro, </l>
+                  <l TEIform="l" part="N">Calling loud and calling low. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" rend="italic" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Mother, mother, step so light, </l>
+                  <l TEIform="l" part="N">Mother, lay your fingers white </l>
+                  <l TEIform="l" part="N">On my forehead like a dew ! </l>
+                  <l TEIform="l" part="N">Mother, mother, where are you?</l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Still so loud he makes his cry </l>
+                  <l TEIform="l" part="N">That the dying cannot die; </l>
+                  <l TEIform="l" part="N">All the writhing field&apos;s one groan</l>
+                  <l TEIform="l" part="N">While he lies and cries alone. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">But his mother&apos;s far away; </l>
+                  <l TEIform="l" part="N">Cannot hear him cry and say: </l>
+                  <l TEIform="l" part="N" rend="italic">Mother, I am dying, come!</l>
+                  <l TEIform="l" part="N" rend="italic">Mother, I am lost from home!</l>
+               </lg>
+               <pb TEIform="pb" n="40 FLOWER OF YOUTH"></pb>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Mary, Mother of all men, </l>
+                  <l TEIform="l" part="N">Come and comfort him in pain. </l>
+                  <l TEIform="l" part="N">Take his young head to the breast </l>
+                  <l TEIform="l" part="N">Where your Child and God had rest. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Mary, Mary, step so light. </l>
+                  <l TEIform="l" part="N">Mary, lay your fingers white </l>
+                  <l TEIform="l" part="N">On his forehead!  He shall dream </l>
+                  <l TEIform="l" part="N">That his mother comforts him. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Mary, Mother, croon him o&apos;er </l>
+                  <l TEIform="l" part="N">Lullabies you sang before! </l>
+                  <l TEIform="l" part="N">Mary, ease him, crooning low, </l>
+                  <l TEIform="l" part="N">In the way that mothers know! </l>
+               </lg>
+            </div2>
+            <pb TEIform="pb" n="41 TO ONE IN GRIEF"></pb>
+            <div2 TEIform="div2" id="ktflower17" n="TO ONE IN GRIEF" org="uniform" part="N" sample="complete" type="poem">
+               <head TEIform="head" rend="center">TO ONE IN GRIEF</head>
+               <head TEIform="head" rend="center">(FOR <hi TEIform="hi" rend="italic">June </hi> 1913. <hi TEIform="hi" rend="italic">September</hi>  1914)</head>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">SIMON the Cyrenean bore</l>
+                  <l TEIform="l" part="N" rend="indent">The Cross of Christ up Calvary Hill. </l>
+                  <l TEIform="l" part="N">Blessed be Simon&apos;s lot before</l>
+                  <l TEIform="l" part="N" rend="indent">Honour and ease and world&apos;s good-will</l>
+                  <l TEIform="l" part="N">You,--you would choose his lot above </l>
+                  <l TEIform="l" part="N">All gifts and glories, yea, all love! </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Now when for your two glorious men</l>
+                  <l TEIform="l" part="N" rend="indent">Your heart is broken, and your joy</l>
+                  <l TEIform="l" part="N">On earth shall not be built again,-- </l>
+                  <l TEIform="l" part="N" rend="indent">Oh, what a lover, what a boy !-- </l>
+                  <l TEIform="l" part="N">Dear heart, look up! Who helps you on </l>
+                  <l TEIform="l" part="N">The way that you must walk alone ? </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">For when the Cross that you must bear</l>
+                  <l TEIform="l" part="N" rend="indent">Galls your poor shoulders till they bleed, </l>
+                  <l TEIform="l" part="N">And when the thorns are on your hair, </l>
+                  <l TEIform="l" part="N" rend="indent">And Love-lies-bleeding: then indeed </l>
+                  <l TEIform="l" part="N">One will come stepping light and take </l>
+                  <l TEIform="l" part="N">The tears the burden, the heart-break. </l>
+               </lg>
+               <pb TEIform="pb" n="42 FLOWER OF YOUTH"></pb>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Happy is she who to Thine ears </l>
+                  <l TEIform="l" part="N" rend="indent">Pours all her lamentations!  Yea, </l>
+                  <l TEIform="l" part="N">When Thou dost wipe away her tears</l>
+                  <l TEIform="l" part="N" rend="indent">And healing words of comfort say. </l>
+                  <l TEIform="l" part="N">Thou makest Thy Cross both sweet and light </l>
+                  <l TEIform="l" part="N">For souls like hers that walk in white. </l>
+               </lg>
+            </div2>
+            <pb TEIform="pb" n="43 INDIAN SUMMER"></pb>
+            <div2 TEIform="div2" id="ktflower18" n="INDIAN SUMMER" org="uniform" part="N" sample="complete" type="poem">
+               <head TEIform="head" rend="center">INDIAN SUMMER</head>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N" rend="center">
+                     <hi TEIform="hi" rend="italic">This is the sign! </hi> 
+                  </l>
+                  <l TEIform="l" part="N">THIS flooding splendour, golden and hyaline, </l>
+                  <l TEIform="l" part="N">This sun a golden sea on hill and plain,-- </l>
+                  <l TEIform="l" part="N">That God forgets not, that He walks with men. </l>
+                  <l TEIform="l" part="N">His smile is on the mountain and the pool </l>
+                  <l TEIform="l" part="N">And all the fairy lakes are beautiful. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N" rend="center">
+                     <hi TEIform="hi" rend="italic">This is the word! </hi>
+                  </l>
+                  <l TEIform="l" part="N">That makes a thing of flame the water-bird. </l>
+                  <l TEIform="l" part="N">This mercy of His fulfilled in the magical </l>
+                  <l TEIform="l" part="N">Clear glow of skies from dawn to evenfall, </l>
+                  <l TEIform="l" part="N">Telling His Hand is over us, that we </l>
+                  <l TEIform="l" part="N">Are not delivered to the insatiable sea. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N" rend="center">
+                     <hi TEIform="hi" rend="italic">This is the pledge! </hi>
+                  </l>
+                  <l TEIform="l" part="N">The promise writ in gold to the water&apos;s edge: </l>
+                  <l TEIform="l" part="N">His bow&apos;s in Heaven and the great floods are over. </l>
+                  <l TEIform="l" part="N">Oh, broken hearts, lift up! The Immortal Lover</l>
+                  <l TEIform="l" part="N">Embraces, comforts with the enlivening sun, </l>
+                  <l TEIform="l" part="N">The sun He bids stand still till the day is won. </l>
+               </lg>
+            </div2>
+            <pb TEIform="pb" n="44 FLOWER OF YOUTH"></pb>
+            <div2 TEIform="div2" id="ktflower19" n="TO TWO BEREAVED" org="uniform" part="N" sample="complete" type="poem">
+               <head TEIform="head" rend="center">TO TWO BEREAVED </head>
+               <head TEIform="head" rend="center">(FOR G. S. C., 20<hi TEIform="hi" rend="italic">th October, </hi>  R. S. C., 28<hi TEIform="hi" rend="italic">th October</hi>  1914)</head>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Now in your days of worst distress, </l>
+                  <l TEIform="l" part="N" rend="indent">The empty days that stretch before, </l>
+                  <l TEIform="l" part="N">When all your sweet&apos;s turned bitterness;-- </l>
+                  <l TEIform="l" part="N" rend="indent">The Hand of the Lord is at your door. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">And when at morn beside your bed</l>
+                  <l TEIform="l" part="N" rend="indent">Grief waits to tell you it is true, </l>
+                  <l TEIform="l" part="N">That both your darling boys are dead; </l>
+                  <l TEIform="l" part="N" rend="indent">The Mercy of the Lord bends down to you. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">When you are frozen and stripped bare</l>
+                  <l TEIform="l" part="N" rend="indent">And over your joy is raised a stone, </l>
+                  <l TEIform="l" part="N">The foot of the Lord is on your stair; </l>
+                  <l TEIform="l" part="N" rend="indent">The Lord&apos;s mercy is never done. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">More than the joys of common men,-- </l>
+                  <l TEIform="l" part="N" rend="indent">The gifts of the Lord are past desire--</l>
+                  <l TEIform="l" part="N">They shall be given to you again, </l>
+                  <l TEIform="l" part="N" rend="indent">They shall sit down beside your fire. </l>
+               </lg>
+               <pb TEIform="pb" n="45 TO TWO BEREAVED"></pb>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">The young and laurelled heads shall shine, </l>
+                  <l TEIform="l" part="N" rend="indent">Making a glory in your days</l>
+                  <l TEIform="l" part="N">As a light burns in a secret shrine: </l>
+                  <l TEIform="l" part="N" rend="indent">The Love of the Lord is passing praise. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">The Lord recalls not gifts once given : </l>
+                  <l TEIform="l" part="N" rend="indent">They shall sit down beside your hearth; </l>
+                  <l TEIform="l" part="N">They shall come in, in white, new-shriven, </l>
+                  <l TEIform="l" part="N" rend="indent">Make you new Heaven and a new earth. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">The Will of the Lord is great and good, </l>
+                  <l TEIform="l" part="N" rend="indent">The cup of your joy shall He brim o&apos;er; </l>
+                  <l TEIform="l" part="N">They shall come in with life renewed. </l>
+                  <l TEIform="l" part="N" rend="indent">They shall go out from you no more. </l>
+               </lg>
+            </div2>
+            <pb TEIform="pb" n="46 FLOWER OF YOUTH"></pb>
+            <div2 TEIform="div2" id="ktflower20" n="AUTUMNAL" org="uniform" part="N" sample="complete" type="poem">
+               <head TEIform="head" rend="center">AUTUMNAL</head>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">THE Autumn leaves are dying quietly, </l>
+                  <l TEIform="l" part="N">Scarlet and orange, underfoot they lie; </l>
+                  <l TEIform="l" part="N" rend="indent">They had their youth and prime </l>
+                  <l TEIform="l" part="N" rend="indent">And now&apos;s the dying time; </l>
+                  <l TEIform="l" part="N">Alas, alas, the young, the beloved, must die! </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">They are dying like the leaves of Autumn fast, </l>
+                  <l TEIform="l" part="N">Scattered and broken, blown on every blast: </l>
+                  <l TEIform="l" part="N" rend="indent">The darling young, the brave, </l>
+                  <l TEIform="l" part="N" rend="indent">Love had no power to save. </l>
+                  <l TEIform="l" part="N">Poor Love-lies-bleeding, Love&apos;s in ruins, downcast. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Alas, alas, the Autumn leaves are flying! </l>
+                  <l TEIform="l" part="N">They had their Summer and &apos;tis time for dying. </l>
+                  <l TEIform="l" part="N" rend="indent">But these had barely Spring. </l>
+                  <l TEIform="l" part="N" rend="indent">Love trails a broken wing, </l>
+                  <l TEIform="l" part="N">Walks through deserted woods, moaning and sighing. </l>
+               </lg>
+            </div2>
+            <pb TEIform="pb" n="47 MEDIATION"></pb>
+            <div2 TEIform="div2" id="ktflower21" n="MEDIATION" org="uniform" part="N" sample="complete" type="poem">
+               <head TEIform="head" rend="center">MEDIATION</head>
+               <head TEIform="head" rend="center">(<hi TEIform="hi" rend="italic">After St Anselm</hi>)</head>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">IF Thou, Lord God, willest to judge </l>
+                  <l TEIform="l" part="N" rend="indent">This, Thy very piteous clay</l>
+                  <l TEIform="l" part="N">Which to save Christ did not grudge </l>
+                  <l TEIform="l" part="N" rend="indent">His last dying, I shall say: </l>
+                  <l TEIform="l" part="N" rend="italic">Lord, I interpose Christ&apos;s death</l>
+                  <l TEIform="l" part="N" rend="italic">&apos;Twixt these children and Thy wrath.</l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Then if Thou shouldst say: Their shame</l>
+                  <l TEIform="l" part="N" rend="indent">Is as scarlet in Mine eyes--</l>
+                  <l TEIform="l" part="N">I shall ask : <hi TEIform="hi" rend="italic">Who took their blame? </hi>
+                  </l>
+                  <l TEIform="l" part="N" rend="indent">
+                     <hi TEIform="hi" rend="italic">Look, Lord, on this Sacrifice! </hi>
+                  </l>
+                  <l TEIform="l" part="N" rend="italic">Is Thy Son&apos;s blood not more bright</l>
+                  <l TEIform="l" part="N" rend="italic">Which hath washed their scarlet white?</l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Then, if Thou Thy wrath should&apos;st keep </l>
+                  <l TEIform="l" part="N" rend="indent">And Thy gaze should&apos;st still avert</l>
+                  <l TEIform="l" part="N">From Thy Son&apos;s most piteous sheep, </l>
+                  <l TEIform="l" part="N" rend="indent">I shall ask : <hi TEIform="hi" rend="italic">Who bare the hurt? </hi>
+                  </l>
+                  <l TEIform="l" part="N" rend="italic">I Present Christ&apos;s death and Pain</l>
+                  <l TEIform="l" part="N" rend="italic">&apos;Twixt Thine anger and these men. </l>
+               </lg>
+               <pb TEIform="pb" n="48 FLOWER OF YOUTH"></pb>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Lord, they die by millions </l>
+                  <l TEIform="l" part="N" rend="indent">And they look to Thee--take thought!-- </l>
+                  <l TEIform="l" part="N">This dear flock, that is Thy Son&apos;s, </l>
+                  <l TEIform="l" part="N" rend="indent">By the richest ransom bought. </l>
+                  <l TEIform="l" part="N">See, Thy dead Son lies between, </l>
+                  <l TEIform="l" part="N">Thee, the High judge, and their sin. </l>
+               </lg>
+            </div2>
+            <pb TEIform="pb" n="49 THE HEROES"></pb>
+            <div2 TEIform="div2" id="ktflower22" n="THE HEROES" org="uniform" part="N" sample="complete" type="poem">
+               <head TEIform="head" rend="center">THE HEROES</head>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">By such strange and wonderful ways</l>
+                  <l TEIform="l" part="N" rend="indent">God would save His world again. </l>
+                  <l TEIform="l" part="N">All our days are holy days, </l>
+                  <l TEIform="l" part="N" rend="indent">Starry heroes all our men. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">There&apos;s naught common or unclean</l>
+                  <l TEIform="l" part="N" rend="indent">In this splendid new-made earth: </l>
+                  <l TEIform="l" part="N">Hearts uplifted, eyes serene, </l>
+                  <l TEIform="l" part="N" rend="indent">Grief goes gayer now than mirth. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Quietly in the sacred night</l>
+                  <l TEIform="l" part="N" rend="indent">Tears must fall, O noble tears! </l>
+                  <l TEIform="l" part="N">That are shed in the Lord&apos;s sight</l>
+                  <l TEIform="l" part="N" rend="indent">And are only for His ears. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Who would mourn aloud for sons</l>
+                  <l TEIform="l" part="N" rend="indent">Gorgeous in our firmament, </l>
+                  <l TEIform="l" part="N">Starry constellations</l>
+                  <l TEIform="l" part="N" rend="indent">In the way their fathers went? </l>
+               </lg>
+               <pb TEIform="pb" n="50 FLOWER OF YOUTH"></pb>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">From the innumerable grave</l>
+                  <l TEIform="l" part="N" rend="indent">There will spring a world new-born, </l>
+                  <l TEIform="l" part="N">With the austerest eyes and brave</l>
+                  <l TEIform="l" part="N" rend="indent">And its clear gaze towards the morn.</l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">He who gave His Son to die</l>
+                  <l TEIform="l" part="N" rend="indent">For man&apos;s purchase, gives once more </l>
+                  <l TEIform="l" part="N">These, His beloved sons, to buy</l>
+                  <l TEIform="l" part="N" rend="indent">Him a world worth dying for. </l>
+               </lg>
+            </div2>
+            <pb TEIform="pb" n="51 THE GREAT MERCY"></pb>
+            <div2 TEIform="div2" id="ktflower23" n="THE GREAT MERCY" org="uniform" part="N" sample="complete" type="poem">
+               <head TEIform="head" rend="center">THE GREAT MERCY</head>
+               <lg TEIform="lg" org="uniform" part="N" rend="italic" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Betwixt the saddle and the ground </l>
+                  <l TEIform="l" part="N">Was mercy sought and mercy found.</l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Yea, in the twinkling of an eye, </l>
+                  <l TEIform="l" part="N">He cried; and Thou hast heard his cry. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Between the bullet and its mark </l>
+                  <l TEIform="l" part="N">Thy face made morning in his dark. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">And while the shell sang on its path</l>
+                  <l TEIform="l" part="N">Thou hast run, Thou hast run, preventing death. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Thou hast run before and reached the goal, </l>
+                  <l TEIform="l" part="N">Gathered to Thee the unhoused soul. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Thou art not bound by Time or Space: </l>
+                  <l TEIform="l" part="N">So fast Death runs : Thou hast won the race. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Thou hast said to beaten Death: <hi TEIform="hi" rend="italic">Go tell</hi>
+                  </l>
+                  <l TEIform="l" part="N" rend="italic">Of victories thou once hadst. All&apos;s well! </l>
+               </lg>
+               <pb TEIform="pb" n="52 FLOWER OF YOUTH"></pb>
+               <lg TEIform="lg" org="uniform" part="N" rend="italic" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Death, here none die but thee and Sin </l>
+                  <l TEIform="l" part="N">Now the great days of Life begin. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">And to the Soul: <hi TEIform="hi" rend="italic">This day I rise </hi>
+                  </l>
+                  <l TEIform="l" part="N" rend="italic">And thee with Me to Paradise. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" rend="italic" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Betwixt the saddle and the ground</l>
+                  <l TEIform="l" part="N">Was Mercy sought and Mercy found.</l>
+               </lg>
+            </div2>
+            <pb TEIform="pb" n="53 MEETINGS"></pb>
+            <div2 TEIform="div2" id="ktflower24" n="MEETINGS" org="uniform" part="N" sample="complete" type="poem">
+               <head TEIform="head" rend="center">MEETINGS</head>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">As up and down I fare by road and street </l>
+                  <l TEIform="l" part="N">The mothers of our men-at-arms I meet</l>
+                  <l TEIform="l" part="N" rend="indent">Who die for mine and me, </l>
+                  <l TEIform="l" part="N" rend="indent">That we go safe and free, </l>
+                  <l TEIform="l" part="N">Sit in the sun, sleep soft and find life sweet. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">I have two sons too young to fight, too young, </l>
+                  <l TEIform="l" part="N">God grant if my hour comes I may be strong, </l>
+                  <l TEIform="l" part="N" rend="indent">And caught in such a strait </l>
+                  <l TEIform="l" part="N" rend="indent">May praise God and be great, </l>
+                  <l TEIform="l" part="N">Giving my sons to save some woman from wrong! </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Oh, mothers of dead heroes, ye I know, </l>
+                  <l TEIform="l" part="N">My heart sends you a greeting, soft and low; </l>
+                  <l TEIform="l" part="N" rend="indent">Blessed are ye whose sons </l>
+                  <l TEIform="l" part="N" rend="indent">Amid the ransomed ones</l>
+                  <l TEIform="l" part="N">Throng to the banners of Heaven as white as snow. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Somehow, by some secret and certain sign, </l>
+                  <l TEIform="l" part="N">The mothers of the beloved I divine </l>
+                  <l TEIform="l" part="N" rend="indent">Who died in my sons&apos; place. </l>
+                  <l TEIform="l" part="N" rend="indent">My heart kneels and gives grace. </l>
+                  <l TEIform="l" part="N">Gives thanks for you, for you, proud sisters of mine! </l>
+               </lg>
+            </div2>
+            <pb TEIform="pb" n="54 FLOWER OF YOUTH"></pb>
+            <div2 TEIform="div2" id="ktflower25" n="FLOWER OF YOUTH" org="uniform" part="N" sample="complete" type="poem">
+               <head TEIform="head" rend="center">FLOWER OF YOUTH</head>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">LEST Heaven be thronged with grey-beards hoary, </l>
+                  <l TEIform="l" part="N" rend="indent">God, who made boys for His delight, </l>
+                  <l TEIform="l" part="N">Stoops in a day of grief and glory</l>
+                  <l TEIform="l" part="N" rend="indent">And calls them in, in from the night. </l>
+                  <l TEIform="l" part="N">When they come trooping from the war</l>
+                  <l TEIform="l" part="N">Our skies have many a new gold star. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Heaven&apos;s thronged with gay and careless faces, </l>
+                  <l TEIform="l" part="N" rend="indent">New-waked from dreams of dreadful things, </l>
+                  <l TEIform="l" part="N">They walk in green and pleasant places</l>
+                  <l TEIform="l" part="N" rend="indent">And by the crystal water-springs </l>
+                  <l TEIform="l" part="N">Who dreamt of dying and the slain, </l>
+                  <l TEIform="l" part="N">And the fierce thirst and the strong pain. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Dear boys! They shall be young for ever. </l>
+                  <l TEIform="l" part="N" rend="indent">The Son of God was once a boy. </l>
+                  <l TEIform="l" part="N">They run and leap by a clear river</l>
+                  <l TEIform="l" part="N" rend="indent">And of their youth they have great joy. </l>
+                  <l TEIform="l" part="N">God who made boys so clean and good </l>
+                  <l TEIform="l" part="N">Smiles with the eyes of fatherhood. </l>
+               </lg>
+               <pb TEIform="pb" n="55 FLOWER OF YOUTH"></pb>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Now Heaven is by the young invaded; </l>
+                  <l TEIform="l" part="N" rend="indent">Their laughter&apos;s in the House of God. </l>
+                  <l TEIform="l" part="N">Stainless and simple as He made it</l>
+                  <l TEIform="l" part="N" rend="indent">God keeps the heart o&apos; the boy unflawed. </l>
+                  <l TEIform="l" part="N">The old wise Saints look on and smile, </l>
+                  <l TEIform="l" part="N">They are so young and without guile. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Oh, if the sonless mothers weeping, </l>
+                  <l TEIform="l" part="N" rend="indent">And widowed girls could look inside</l>
+                  <l TEIform="l" part="N">The glory that hath them in keeping</l>
+                  <l TEIform="l" part="N" rend="indent">Who went to the Great War and died, </l>
+                  <l TEIform="l" part="N">They would rise and put their mourning off, </l>
+                  <l TEIform="l" part="N">And say:  &quot;Thank God, he has enough!&quot; </l>
+               </lg>
+            </div2>
+            <div2 TEIform="div2" id="ktflower26" org="uniform" part="N" sample="complete" type="insert">
+               <head TEIform="head" rend="center">&quot;Flower of Youth&quot;</head>
+               <head TEIform="head" rend="center">(Pages 54, 55)</head>
+               <p TEIform="p">In response to numerous applications, the publishers can supply copies of this poem printed separately at twopence each (post free, 2 1/2d., or a dozen copies,   2s. 1d.). The profits will be given to the Dublin Castle Red Cross Hospital.</p>
+               <p TEIform="p">SIDGWICK &amp; JACKSON LTD.</p>
+               <p TEIform="p">3 ADAM STREET, LONDON, W.C.</p>
+               <note TEIform="note" anchored="yes" id="ktflower26.n1" place="unspecified">The preceding text speaks to the popularity of this particular poem.  Printed on a small slip of paper, this advertisement was pasted into the volume after publication.  The insert is found on the same page as the poem, &quot;The Flower of Youth.&quot;</note>
+            </div2>
+            <pb TEIform="pb" n="56 FLOWER OF YOUTH"></pb>
+            <div2 TEIform="div2" id="ktflower27" n="UNHOUSEL&apos;D, UNANOINTED, UNANEL&apos;D" org="uniform" part="N" sample="complete" type="poem">
+               <head TEIform="head" rend="center">&quot;UNHOUSEL&apos;D, UNANOINTED, UNANEL&apos;D&quot;</head>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">WHEN these men must go alone</l>
+                  <l TEIform="l" part="N">Sans an absolution, </l>
+                  <l TEIform="l" part="N">When their sins are heavy as lead, </l>
+                  <l TEIform="l" part="N">Thou Thyself will lift the head ; </l>
+                  <l TEIform="l" part="N">Thou, High Priest, wilt whisper low, </l>
+                  <l TEIform="l" part="N">
+                     <hi TEIform="hi" rend="italic">Te Absolvo! </hi>  ere they go. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">When there is no sacrifice, </l>
+                  <l TEIform="l" part="N">Bread and Wine for Thy disguise, </l>
+                  <l TEIform="l" part="N">Come Thou in the Spirit then; </l>
+                  <l TEIform="l" part="N">As at Agincourt our men </l>
+                  <l TEIform="l" part="N">With desire a blade of grass</l>
+                  <l TEIform="l" part="N">Served as Eucharist and Mass. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Lay Thyself the oil on lips, </l>
+                  <l TEIform="l" part="N">Limbs and eyes, before the eclipse--</l>
+                  <l TEIform="l" part="N">As once Magdalen did to Thee--</l>
+                  <l TEIform="l" part="N">And so speed them, safe and free, </l>
+                  <l TEIform="l" part="N">To lie down with Thee a while </l>
+                  <l TEIform="l" part="N">And to waken to Thy smile. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">They shall sit down at the Feast</l>
+                  <l TEIform="l" part="N">Where Thou are Sacrament and Priest. </l>
+               </lg>
+            </div2>
+            <pb TEIform="pb" n="57 ALL SOULS"></pb>
+            <div2 TEIform="div2" id="ktflower28" n="ALL SOULS" org="uniform" part="N" sample="complete" type="poem">
+               <head TEIform="head" rend="center">ALL SOULS</head>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">THERE&apos;S traffic in the worlds immortal, </l>
+                  <l TEIform="l" part="N" rend="indent">For many souls are flying home, </l>
+                  <l TEIform="l" part="N">Striving and pushing at the portal</l>
+                  <l TEIform="l" part="N" rend="indent">For sight of glorious things to come. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">What rout of wings against the sunset? </l>
+                  <l TEIform="l" part="N" rend="indent">What rosy plumes the dawning bar? </l>
+                  <l TEIform="l" part="N">Heaven&apos;s stormed with gay and happy onset</l>
+                  <l TEIform="l" part="N" rend="indent">Of youngling things home from the War. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Against the inverted cup of azure, </l>
+                  <l TEIform="l" part="N" rend="indent">Against the evening, peach and green, </l>
+                  <l TEIform="l" part="N">The frolicsome young souls take their pleasure, </l>
+                  <l TEIform="l" part="N" rend="indent">Darting the silver stars between. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Though the old nests be sad, forsaken, </l>
+                  <l TEIform="l" part="N" rend="indent">The cotes of Heaven are yet unfilled: </l>
+                  <l TEIform="l" part="N">In trees of Heaven as yet untaken</l>
+                  <l TEIform="l" part="N" rend="indent">The immortal Loves lift hearts and build. </l>
+               </lg>
+            </div2>
+            <pb TEIform="pb" n="58 FLOWER OF YOUTH"></pb>
+            <div2 TEIform="div2" id="ktflower29" n="THE PREDESTINED" org="uniform" part="N" sample="complete" type="poem">
+               <head TEIform="head" rend="center">THE PREDESTINED</head>
+               <head TEIform="head" rend="center">(W. E. H. 6<hi TEIform="hi" rend="italic">th November</hi>  1914)</head>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">DEAR, we might have known you were</l>
+                  <l TEIform="l" part="N" rend="indent">To die young--and were we blind </l>
+                  <l TEIform="l" part="N">To the light on face and hair? </l>
+                  <l TEIform="l" part="N" rend="indent">Dear, so simple and so kind. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">You were clean as your own sword</l>
+                  <l TEIform="l" part="N" rend="indent">And as straight too and steel true. </l>
+                  <l TEIform="l" part="N">In the Army of the Lord</l>
+                  <l TEIform="l" part="N" rend="indent">What promotion waits for you! </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">I can see you where you stand, </l>
+                  <l TEIform="l" part="N" rend="indent">Knightly soul, so clean, so brave. </l>
+                  <l TEIform="l" part="N">With a new sword in your hand</l>
+                  <l TEIform="l" part="N" rend="indent">Where the lilied banners wave. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Flower of simple chivalry, </l>
+                  <l TEIform="l" part="N" rend="indent">Marked for honour and for grace; </l>
+                  <l TEIform="l" part="N">It was very plain to see</l>
+                  <l TEIform="l" part="N" rend="indent">The clear shining of your face. </l>
+               </lg>
+               <pb TEIform="pb" n="59 THE PREDESTINED"></pb>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">You are gone now: it&apos;s turned cold: </l>
+                  <l TEIform="l" part="N" rend="indent">Very good you were and dear. </l>
+                  <l TEIform="l" part="N">Wear the looks you wore of old</l>
+                  <l TEIform="l" part="N" rend="indent">When we meet,--some other year. </l>
+               </lg>
+            </div2>
+            <pb TEIform="pb" n="60 FLOWER OF YOUTH"></pb>
+            <div2 TEIform="div2" id="ktflower30" n="THE OLD SOLDIER" org="uniform" part="N" sample="complete" type="poem">
+               <head TEIform="head" rend="center">THE OLD SOLDIER</head>
+               <head TEIform="head" rend="center">(14<hi TEIform="hi" rend="italic">th November</hi>  1914)</head>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">LEST the young soldiers be strange in Heaven, </l>
+                  <l TEIform="l" part="N" rend="indent">God bids the old soldier they all adored</l>
+                  <l TEIform="l" part="N">Come to Him and wait for them, clean, new-shriven, </l>
+                  <l TEIform="l" part="N" rend="indent">A happy door-keeper in the House of the Lord. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Lest it abash them, the great new splendour, </l>
+                  <l TEIform="l" part="N" rend="indent">Lest they affright them, the new robes clean, </l>
+                  <l TEIform="l" part="N">God sets an old face there, long-tried and tender, </l>
+                  <l TEIform="l" part="N" rend="indent">A word and a hand-clasp as they troop in. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">
+                     <hi TEIform="hi" rend="italic">My boys! </hi>  he welcomes them and Heaven is homely; </l>
+                  <l TEIform="l" part="N" rend="indent">He, their great Captain in days gone o&apos;er. </l>
+                  <l TEIform="l" part="N">Dear is the face of a friend, honest and comely, </l>
+                  <l TEIform="l" part="N" rend="indent">As they come home from the war and he at the door. </l>
+               </lg>
+            </div2>
+            <pb TEIform="pb" n="61 THE FIELDS OF FRANCE"></pb>
+            <div2 TEIform="div2" id="ktflower31" n="THE FIELDS OF FRANCE" org="uniform" part="N" sample="complete" type="poem">
+               <head TEIform="head" rend="center">THE FIELDS OF FRANCE</head>
+               <head TEIform="head" rend="center">&quot;<hi TEIform="hi" rend="italic">Nous avons chass&#x00E9; ce Jesus Christ&quot;</hi> 
+               </head>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">JESUS CHRIST they chased away</l>
+                  <l TEIform="l" part="N">Comes again another day. </l>
+                  <l TEIform="l" part="N">Could they do without Him then</l>
+                  <l TEIform="l" part="N">His poor lost unhappy men? </l>
+                  <l TEIform="l" part="N">He returns and is revealed </l>
+                  <l TEIform="l" part="N">In the trenches and the field. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Where the dead lie thick He goes, </l>
+                  <l TEIform="l" part="N">Where the brown earth&apos;s red as a rose, </l>
+                  <l TEIform="l" part="N">He who walked the waters wide </l>
+                  <l TEIform="l" part="N">Treads the wine-press, purple-dyed,</l>
+                  <l TEIform="l" part="N">Stoops, and bids the piteous slain </l>
+                  <l TEIform="l" part="N">That they rise with Him again. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">To His breast and in his cloak </l>
+                  <l TEIform="l" part="N">Bears the younglings of the flock: </l>
+                  <l TEIform="l" part="N">Calls His poor sheep to come home </l>
+                  <l TEIform="l" part="N">And His sheep rise up and come. </l>
+                  <pb TEIform="pb" n="62 FLOWER OF YOUTH"></pb>
+                  <l TEIform="l" part="N">They shall rest by a clear pool </l>
+                  <l TEIform="l" part="N">&apos;Mid the pastures beautiful! </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Jesus Christ they chased away </l>
+                  <l TEIform="l" part="N">Has come back another day. </l>
+               </lg>
+            </div2>
+            <pb TEIform="pb" n="63 THE OPEN ROAD"></pb>
+            <div2 TEIform="div2" id="ktflower32" n="THE OPEN ROAD" org="uniform" part="N" sample="complete" type="poem">
+               <head TEIform="head" rend="center">THE OPEN ROAD</head>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">THE roads of the Sea</l>
+                  <l TEIform="l" part="N" rend="indent">Are thronged with merchantmen; </l>
+                  <l TEIform="l" part="N">East and West, North and South</l>
+                  <l TEIform="l" part="N" rend="indent">They go and come again. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">All precious merchandise</l>
+                  <l TEIform="l" part="N" rend="indent">They bear in their hold: </l>
+                  <l TEIform="l" part="N">Lest the people be starving</l>
+                  <l TEIform="l" part="N" rend="indent">In the night and cold. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Now tell me, good merchants, </l>
+                  <l TEIform="l" part="N" rend="indent">How this thing can be</l>
+                  <l TEIform="l" part="N">That the white ships are thronging</l>
+                  <l TEIform="l" part="N" rend="indent">The roads of the sea? </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">For there&apos;s death in the skies</l>
+                  <l TEIform="l" part="N" rend="indent">And there&apos;s death on the earth; </l>
+                  <l TEIform="l" part="N">And men talked of famine</l>
+                  <l TEIform="l" part="N" rend="indent">And a frozen hearth. </l>
+               </lg>
+               <pb TEIform="pb" n="64 FLOWER OF YOUTH"></pb>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Yet the ships they go crowding</l>
+                  <l TEIform="l" part="N" rend="indent">The roads of the sea; </l>
+                  <l TEIform="l" part="N">They bring home their treasures</l>
+                  <l TEIform="l" part="N" rend="indent">To you and to me. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">O listen, good people, </l>
+                  <l TEIform="l" part="N" rend="indent">And hearing, praise God, </l>
+                  <l TEIform="l" part="N">That the watch-dogs are keeping</l>
+                  <l TEIform="l" part="N" rend="indent">The ships on their road! </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">They sit watchful and steady</l>
+                  <l TEIform="l" part="N" rend="indent">Where the North winds blow; </l>
+                  <l TEIform="l" part="N">Sleepless they are keeping</l>
+                  <l TEIform="l" part="N" rend="indent">The roads the ships go. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">In the day, in the hour, </l>
+                  <l TEIform="l" part="N" rend="indent">They will spring--until then, </l>
+                  <l TEIform="l" part="N">Their eyes keep the courses</l>
+                  <l TEIform="l" part="N" rend="indent">Of the merchantmen. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Forget not, good people, </l>
+                  <l TEIform="l" part="N" rend="indent">When ye heap the white board, </l>
+                  <l TEIform="l" part="N">When ye draw to the hearth-fire, </l>
+                  <l TEIform="l" part="N" rend="indent">To praise the Lord, </l>
+               </lg>
+               <pb TEIform="pb" n="65 THE OPEN ROAD "></pb>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">That the watch-dogs unsleeping</l>
+                  <l TEIform="l" part="N" rend="indent">Keep the roads of the Sea, </l>
+                  <l TEIform="l" part="N">Up by the Northern Lights </l>
+                  <l TEIform="l" part="N" rend="indent">Where the great ships be. </l>
+               </lg>
+            </div2>
+            <pb TEIform="pb" n="66 FLOWER OF YOUTH"></pb>
+            <div2 TEIform="div2" id="ktflower33" n="FOR THE AIRMEN" org="uniform" part="N" sample="complete" type="poem">
+               <head TEIform="head" rend="center">FOR THE AIRMEN</head>
+               <head TEIform="head" rend="center">(<hi TEIform="hi" rend="italic">To</hi>  MAURICE HEWLETT)</head>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">THOU who guidest the swallow and wren, </l>
+                  <l TEIform="l" part="N">Keep the paths of the flying men! </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Over the mountains, over the seas </l>
+                  <l TEIform="l" part="N">Thou hast given the bird-folk compasses. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Thou guidest them, yea, Thou leadest them home</l>
+                  <l TEIform="l" part="N">By the trackless ways and the venturesome. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Look Thou then on these bird-men, far </l>
+                  <l TEIform="l" part="N">More than the sparrows and swallows are. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">When they fly in the wintry weather </l>
+                  <l TEIform="l" part="N">Be their compass and chart together. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Keep them riding the wind. Uphold </l>
+                  <l TEIform="l" part="N">Their passion of flight lest it grow cold. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Thy right hand be under the wing, </l>
+                  <l TEIform="l" part="N">Thy left hand for their steadying. </l>
+               </lg>
+               <pb TEIform="pb" n="67 FOR THE AIRMEN"></pb>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">The Wings of the birds of Heaven be nigh</l>
+                  <l TEIform="l" part="N">Lest their wings fail them and they die. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Make Thou their flying as deft and fleet </l>
+                  <l TEIform="l" part="N">As the flight of the linnet or the blue-tit. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Thy hand over them, shall they fear </l>
+                  <l TEIform="l" part="N">The spears of lightning or any spear? </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Thy hand under them, what shall appal? </l>
+                  <l TEIform="l" part="N">Not the fierce foe nor the sudden fall. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Show them Thy moon at night: Thy stars </l>
+                  <l TEIform="l" part="N">Bid stand as sentinels in their wars. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Yea, make their lone tracks pleasant as </l>
+                  <l TEIform="l" part="N">A soft meandering path in grass. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Thou that launchest the wren, the swallow</l>
+                  <l TEIform="l" part="N">Guard our flying loves when they follow. </l>
+               </lg>
+            </div2>
+            <pb TEIform="pb" n="68 FLOWER OF YOUTH"></pb>
+            <div2 TEIform="div2" id="ktflower34" n="CHRISTMAS IN THE YEAR OF THE WAR" org="uniform" part="N" sample="complete" type="poem">
+               <head TEIform="head" rend="center">CHRISTMAS IN THE YEAR OF THE WAR</head>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">NEVERTHELESS this Year of Grief</l>
+                  <l TEIform="l" part="N">The Tree of God&apos;s in leaf. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">The stem, the branch quickeneth</l>
+                  <l TEIform="l" part="N">With sap, this year of Death. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">For in the time of the flowering thorn</l>
+                  <l TEIform="l" part="N">The Babe, the Babe, is born! </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Christ&apos;s folk, look up, be not dismayed, </l>
+                  <l TEIform="l" part="N">The Lord&apos;s in the cattle shed. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">He comes, a little trembling One, </l>
+                  <l TEIform="l" part="N">To a world else lost, undone. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">With His poor folk He wills to stay</l>
+                  <l TEIform="l" part="N">In this their difficult day. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Poor war-worn world, you shall have ease! </l>
+                  <l TEIform="l" part="N">He signs your lasting peace. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">He hath given His people rest from wars, </l>
+                  <l TEIform="l" part="N">By the cold light of stars. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">The charter of their peace shall stand </l>
+                  <l TEIform="l" part="N">Writ by His hour-old hand. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">The Tree of Paradise quickeneth. </l>
+                  <l TEIform="l" part="N">Be still,--there is no death! </l>
+               </lg>
+            </div2>
+            <pb TEIform="pb" n="69 A SONG FOR THE NEW YEAR"></pb>
+            <div2 TEIform="div2" id="ktflower35" n="A SONG FOR THE NEW YEAR" org="uniform" part="N" sample="complete" type="poem">
+               <head TEIform="head" rend="center">A SONG FOR THE NEW YEAR</head>
+               <head TEIform="head" rend="center">1915</head>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">THE Year of the Sorrows went out with great wind: </l>
+                  <l TEIform="l" part="N">Lift up, lift up, O broken hearts, your Lord is kind, </l>
+                  <l TEIform="l" part="N">And He shall call His flock home where no storms be</l>
+                  <l TEIform="l" part="N">Into a sheltered haven out of sound of the sea. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">There shall be bright sands there and a milken hill, </l>
+                  <l TEIform="l" part="N">They shall lie in the sun there and drink their fill, </l>
+                  <l TEIform="l" part="N">They shall have dew and shade there and grass to the knee, </l>
+                  <l TEIform="l" part="N">Safe in a sheltered haven out of sound of the sea. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">He shall bind their wounds up and their tears shall cease: </l>
+                  <l TEIform="l" part="N">They shall have sweetest pillows and a bed of ease. </l>
+                  <l TEIform="l" part="N">
+                     <hi TEIform="hi" rend="italic">Come up, come up and hither, O little flock,</hi> saith He, </l>
+                  <l TEIform="l" part="N" rend="italic">Ye shall have sheltered havens out of sound of the sea.</l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">The first day of New Year strewed the sea with dead. </l>
+                  <l TEIform="l" part="N">Lift up, lift up, O broken heart and hanging head! </l>
+                  <l TEIform="l" part="N">The Lord walks on the waters and a Shepherd is He </l>
+                  <l TEIform="l" part="N">They shall have sheltered havens out of sound of the sea. </l>
+               </lg>
+            </div2>
+            <pb TEIform="pb" n="70 FLOWER OF YOUTH"></pb>
+            <div2 TEIform="div2" id="ktflower36" n="DEAD--A PRISONER" org="uniform" part="N" sample="complete" type="poem">
+               <head TEIform="head" rend="center">DEAD--A PRISONER</head>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">HE died the loneliest death of all, </l>
+                  <l TEIform="l" part="N" rend="indent">Amid his foes he died. </l>
+                  <l TEIform="l" part="N">But Someone&apos;s leaped the outer wall</l>
+                  <l TEIform="l" part="N" rend="indent">And Someone&apos;s come inside, </l>
+                  <l TEIform="l" part="N">And he has gotten a golden key</l>
+                  <l TEIform="l" part="N">To set the lonesome prisoner free. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">It was not Peter with the keys, </l>
+                  <l TEIform="l" part="N" rend="indent">The heavenly janitor, </l>
+                  <l TEIform="l" part="N">Who has passed them like a rushing breeze, </l>
+                  <l TEIform="l" part="N" rend="indent">The gaolers at the door, </l>
+                  <l TEIform="l" part="N">And to His bosom as a bed</l>
+                  <l TEIform="l" part="N">Has taken the unmothered head. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">A great light in the prison shone</l>
+                  <l TEIform="l" part="N" rend="indent">That made the people blind: </l>
+                  <l TEIform="l" part="N" rend="italic">Rise up, rise up, new-ransomed one,</l>
+                  <l TEIform="l" part="N" rend="indent">
+                     <hi TEIform="hi" rend="italic">And taste the sun and wind: </hi>
+                  </l>
+                  <l TEIform="l" part="N" rend="italic">For I have gotten a golden key</l>
+                  <l TEIform="l" part="N" rend="italic">To set all lonesome prisoners free. </l>
+               </lg>
+               <pb TEIform="pb" n="71 DEAD-A PRISONER"></pb>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N" rend="italic">Yea they shall soar, shall spring aloft; </l>
+                  <l TEIform="l" part="N" rend="indent">
+                     <hi TEIform="hi" rend="italic">Their gyves shall not be rough, </hi>
+                  </l>
+                  <l TEIform="l" part="N" rend="italic">But just the links of love, so soft</l>
+                  <l TEIform="l" part="N" rend="indent">
+                     <hi TEIform="hi" rend="italic">That they shall not cast off. </hi>
+                  </l>
+                  <l TEIform="l" part="N" rend="italic">Rise up, my dear, and come away.&quot;</l>
+                  <l TEIform="l" part="N">And they went out to the great day. </l>
+               </lg>
+            </div2>
+            <pb TEIform="pb" n="72 FLOWER OF YOUTH"></pb>
+            <div2 TEIform="div2" id="ktflower37" n="TO R.A.A." org="uniform" part="N" sample="complete" type="poem">
+               <head TEIform="head" rend="center">TO R.A.A.</head>
+               <head TEIform="head" rend="center">(20<hi TEIform="hi" rend="italic">th October</hi>  1914. 24<hi TEIform="hi" rend="italic">th February</hi>  1915)</head>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N" rend="italic">Was it not a great end?</l>
+                  <l TEIform="l" part="N">Wrote your Philip, with a story</l>
+                  <l TEIform="l" part="N">Of a great deed, a great death--</l>
+                  <l TEIform="l" part="N">Not foreseeing his own glory </l>
+                  <l TEIform="l" part="N">And his budding laurel-wreath--</l>
+                  <l TEIform="l" part="N">In the last words he should send. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Philip&apos;s followed Alan&apos;s lead. </l>
+                  <l TEIform="l" part="N">They are gone into the night </l>
+                  <l TEIform="l" part="N">With the great heroes of old, </l>
+                  <l TEIform="l" part="N">With the stars, the stars they are bright; </l>
+                  <l TEIform="l" part="N">They are warm; they are not cold. </l>
+                  <l TEIform="l" part="N">They live: they are not dead. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">But the silence aches. O friend </l>
+                  <l TEIform="l" part="N">In the darkness, cold and stricken, </l>
+                  <l TEIform="l" part="N">For anodyne, antidote, </l>
+                  <l TEIform="l" part="N">Tell your dead heart, that it quicken, </l>
+                  <l TEIform="l" part="N">The last words that Philip wrote: </l>
+                  <l TEIform="l" part="N">&quot;Was it not a great end ?&quot; <hi TEIform="hi" rend="italic">A great end! </hi> 
+                  </l>
+               </lg>
+            </div2>
+            <pb TEIform="pb" n="73 SALUTATION"></pb>
+            <div2 TEIform="div2" id="ktflower38" n="SALUTATION" org="uniform" part="N" sample="complete" type="poem">
+               <head TEIform="head" rend="center">SALUTATION</head>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">To you and you and you who have given</l>
+                  <l TEIform="l" part="N" rend="indent">Two sons for England&apos;s sake,--what word? </l>
+                  <l TEIform="l" part="N">Oh, there is weeping heard in Heaven</l>
+                  <l TEIform="l" part="N" rend="indent">And Mary&apos;s heart has the Eighth Sword. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Henceforth as you go through the town</l>
+                  <l TEIform="l" part="N" rend="indent">The folk who see you go and come</l>
+                  <l TEIform="l" part="N">Will doff their hats to your renown, </l>
+                  <l TEIform="l" part="N" rend="indent">With: <hi TEIform="hi" rend="italic">Salvete flores Martyrum! </hi> 
+                  </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">O chosen from all women and men</l>
+                  <l TEIform="l" part="N" rend="indent">For that high lonely destiny! </l>
+                  <l TEIform="l" part="N">Now that we look at you, &apos;tis plain</l>
+                  <l TEIform="l" part="N" rend="indent">God set a mark to know you by. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Your cross was growing in the tree</l>
+                  <l TEIform="l" part="N" rend="indent">Before the golden world was made; </l>
+                  <l TEIform="l" part="N">Your martyr&apos;s palms began to be</l>
+                  <l TEIform="l" part="N" rend="indent">Before &quot;Let there be Light&quot; was said. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">And still where&apos;er you come and go</l>
+                  <l TEIform="l" part="N" rend="indent">The world&apos;s the lighter for your load. </l>
+                  <l TEIform="l" part="N">Who thinks on common things and low</l>
+                  <l TEIform="l" part="N" rend="indent">When your high sorrow takes the road? </l>
+               </lg>
+               <pb TEIform="pb" n="74 FLOWER OF YOUTH"></pb>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">O predestined and pre-elect </l>
+                  <l TEIform="l" part="N" rend="indent">&apos;Tis you must bear the glorious scars. </l>
+                  <l TEIform="l" part="N">Stand up, dear Saints, white and erect, </l>
+                  <l TEIform="l" part="N" rend="indent">The wounded in the heavenly wars. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Beloved, afflicted, marked for grace. </l>
+                  <l TEIform="l" part="N" rend="indent">God&apos;s folk who watch you go and come, </l>
+                  <l TEIform="l" part="N">Call, leaning from their Paradise place, </l>
+                  <l TEIform="l" part="N" rend="indent">
+                     <hi TEIform="hi" rend="italic">Salvete flores Martyrum! </hi> 
+                  </l>
+               </lg>
+            </div2>
+            <pb TEIform="pb" n="75 THE SAD SPRING"></pb>
+            <div2 TEIform="div2" id="ktflower39" n="THE SAD SPRING" org="uniform" part="N" sample="complete" type="poem">
+               <head TEIform="head" rend="center">THE SAD SPRING</head>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">THE Spring weeps, she is forlorn; </l>
+                  <l TEIform="l" part="N" rend="indent">Well that she may weep, alas! </l>
+                  <l TEIform="l" part="N">Now that many babes are born</l>
+                  <l TEIform="l" part="N" rend="indent">Whose dear fathers lie in grass. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Snowdrops in the frozen earth</l>
+                  <l TEIform="l" part="N" rend="indent">Faint and are not comforted; </l>
+                  <l TEIform="l" part="N">Never was so sad a birth, </l>
+                  <l TEIform="l" part="N" rend="indent">Never was so sad a bed. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">She must bear her pangs alone. </l>
+                  <l TEIform="l" part="N" rend="indent">Where is sorrow like to hers? </l>
+                  <l TEIform="l" part="N">In an anguish cold as stone</l>
+                  <l TEIform="l" part="N" rend="indent">Her dead soldier&apos;s child she bears. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Now her trembling arms will hold</l>
+                  <l TEIform="l" part="N" rend="indent">Close the piteous downy thing</l>
+                  <l TEIform="l" part="N">To a milky breast as cold</l>
+                  <l TEIform="l" part="N" rend="indent">As the frozen water-spring. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Now she hopes and dreads to find</l>
+                  <l TEIform="l" part="N" rend="indent">Likeness in the little son</l>
+                  <l TEIform="l" part="N">To his father, brave and kind. </l>
+                  <l TEIform="l" part="N" rend="indent">Like or not, her heart&apos;s undone. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Tender nurslings born in pain, </l>
+                  <l TEIform="l" part="N" rend="indent">Mother&apos;s comfort, mother&apos;s grief, </l>
+                  <l TEIform="l" part="N">When her tears run down like rain, </l>
+                  <l TEIform="l" part="N" rend="indent">Lord, bring Thou a handkerchief. </l>
+               </lg>
+               <pb TEIform="pb" n="76 FLOWER OF YOUTH"></pb>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Wipe the widow&apos;s tears away, </l>
+                  <l TEIform="l" part="N" rend="indent">Father orphan boys and girls. </l>
+                  <l TEIform="l" part="N">Lead them out where they may play, </l>
+                  <l TEIform="l" part="N" rend="indent">With Thy hand upon their curls. </l>
+               </lg>
+            </div2>
+            <pb TEIform="pb" n="77 A PRAYER"></pb>
+            <div2 TEIform="div2" id="ktflower40" n="A PRAYER" org="uniform" part="N" sample="complete" type="poem">
+               <head TEIform="head" rend="center">A PRAYER</head>
+               <head TEIform="head" rend="center">(<hi TEIform="hi" rend="italic">For Those Who Shall Return</hi>)</head>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">LORD, when they come back again</l>
+                  <l TEIform="l" part="N" rend="indent">From the dreadful battlefield</l>
+                  <l TEIform="l" part="N">To the common ways of men, </l>
+                  <l TEIform="l" part="N" rend="indent">Be Thy mercy, Lord, revealed! </l>
+                  <l TEIform="l" part="N">Make them to forget the dread</l>
+                  <l TEIform="l" part="N">Fields of dying and the dead! </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Let them go unhaunted, Lord, </l>
+                  <l TEIform="l" part="N" rend="indent">By the sights that they have seen: </l>
+                  <l TEIform="l" part="N">Guard their dreams from shell and sword; </l>
+                  <l TEIform="l" part="N" rend="indent">Lead them by the pastures green, </l>
+                  <l TEIform="l" part="N">That they wander all night long</l>
+                  <l TEIform="l" part="N">In the fields where they were young. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Grant no charnel horrors slip</l>
+                  <l TEIform="l" part="N" rend="indent">&apos;Twixt them and their child&apos;s soft face. </l>
+                  <l TEIform="l" part="N">Breast to breast and lip to lip, </l>
+                  <l TEIform="l" part="N" rend="indent">Let the lovers meet, embrace! </l>
+                  <l TEIform="l" part="N">Be they innocent of all</l>
+                  <l TEIform="l" part="N">Memories that affright, appal. </l>
+               </lg>
+               <pb TEIform="pb" n="78 FLOWER OF YOUTH"></pb>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Let their ears love music still, </l>
+                  <l TEIform="l" part="N" rend="indent">And their eyes rejoice to see</l>
+                  <l TEIform="l" part="N">Glory on the sea and hill, </l>
+                  <l TEIform="l" part="N" rend="indent">Beauty in the flower and tree. </l>
+                  <l TEIform="l" part="N">Drop a veil that none may raise </l>
+                  <l TEIform="l" part="N">Over dreadful nights and days. </l>
+               </lg>
+            </div2>
+            <pb TEIform="pb" n="79 RESURRECTION"></pb>
+            <div2 TEIform="div2" id="ktflower41" n="RESURRECTION" org="uniform" part="N" sample="complete" type="poem">
+               <head TEIform="head" rend="center">RESURRECTION</head>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Now the golden daffodil</l>
+                  <l TEIform="l" part="N" rend="indent">Lifts from earth his shining head</l>
+                  <l TEIform="l" part="N">That was lately frozen still</l>
+                  <l TEIform="l" part="N" rend="indent">In the gardens of the dead. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Sing to the Lord a new song! </l>
+                  <l TEIform="l" part="N" rend="indent">Roundelays and virelays, </l>
+                  <l TEIform="l" part="N">Who hath slain Death and is young</l>
+                  <l TEIform="l" part="N" rend="indent">Master of your holidays. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Now from places underground</l>
+                  <l TEIform="l" part="N" rend="indent">Gold and purple folk will go</l>
+                  <l TEIform="l" part="N">Haled by the shrill trumpet sound</l>
+                  <l TEIform="l" part="N" rend="indent">From their wormy beds below. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Now the stone is from the tomb! </l>
+                  <l TEIform="l" part="N" rend="indent">Now &apos;tis Easter and the morn! </l>
+                  <l TEIform="l" part="N">Christ the Lord of Life is come, </l>
+                  <l TEIform="l" part="N" rend="indent">Hath slain Death, and Life is born. </l>
+               </lg>
+               <pb TEIform="pb" n="80 FLOWER OF YOUTH"></pb>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Christ the Lord of Life new-risen, </l>
+                  <l TEIform="l" part="N" rend="indent">Calls the sleepers that they rise--</l>
+                  <l TEIform="l" part="N">From the unnumbered graves, break prison, </l>
+                  <l TEIform="l" part="N" rend="indent">Follow Him to Paradise. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Who be then these shining ones</l>
+                  <l TEIform="l" part="N" rend="indent">Dancing with a heavenly mirth, </l>
+                  <l TEIform="l" part="N">The King&apos;s daughters, the King&apos;s sons, </l>
+                  <l TEIform="l" part="N" rend="indent">Fairer than the folk of earth? </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Graves are busier than a hive</l>
+                  <l TEIform="l" part="N" rend="indent">The wind blows, the sun is warm; </l>
+                  <l TEIform="l" part="N">Now the dead are come alive--</l>
+                  <l TEIform="l" part="N" rend="indent">Loosed is many a golden swarm. </l>
+               </lg>
+               <lg TEIform="lg" org="uniform" part="N" sample="complete" type="stanza">
+                  <l TEIform="l" part="N">Sing to the Lord a new song! </l>
+                  <l TEIform="l" part="N" rend="indent">The Sun&apos;s risen in our East; </l>
+                  <l TEIform="l" part="N">Christ the Lord of Life is young. </l>
+                  <l TEIform="l" part="N" rend="indent">And the young sit to the feast. </l>
+               </lg>
+            </div2>
+         </div1>
+      </body>
+      <back TEIform="back">
+         <div1 TEIform="div1" id="ktflower42" org="uniform" part="N" sample="complete" type="colophon">
+            <p TEIform="p">THE RIVERSIDE PRESS LIMITED, EDINBURGH</p>
+         </div1>
+      </back>
+   </text>
+</TEI.2>
