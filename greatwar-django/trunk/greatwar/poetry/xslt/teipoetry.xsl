@@ -2,34 +2,57 @@
 
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0"
 	xmlns:html="http://www.w3.org/TR/REC-html40" 
-	xmlns:ino="http://namespaces.softwareag.com/tamino/response2" 
-	xmlns:xql="http://metalab.unc.edu/xql/"
 	xmlns:tei="http://www.tei-c.org/ns/1.0">
 
 <!-- templates to transform & display TEI poetry -->
-
+<xsl:include href="teinote.xsl"/>
 
 <!-- default indentation if number of spaces is not specified -->
 <xsl:param name="defaultindent">5</xsl:param>	  
 
-<xsl:template match="p">
-  <p><xsl:apply-templates/></p>
+<xsl:template match="tei:p">
+  <xsl:element name="p">  
+    <xsl:apply-templates/>
+  </xsl:element>
 </xsl:template>
 
-<xsl:template match="argument">
+<xsl:template match="tei:argument">
  <xsl:element name="p">
   <xsl:attribute name="class">argument</xsl:attribute>
    <xsl:apply-templates />
  </xsl:element>  <!-- p -->
 </xsl:template>
 
-<xsl:template match="epigraph">
+<xsl:template match="tei:q|tei:quote">
+  <xsl:element name="blockquote">
+    <xsl:apply-templates/>
+  </xsl:element>
+</xsl:template>
+
+<xsl:template match="tei:epigraph">
  <xsl:element name="p">
   <xsl:attribute name="class">epigraph</xsl:attribute>
      <xsl:apply-templates/>
  </xsl:element>  <!-- p -->
 </xsl:template>
 
+<xsl:template match="tei:bibl">
+  <xsl:element name="p">
+    <xsl:apply-templates/>
+</xsl:element>
+</xsl:template>
+
+<xsl:template match="tei:dateline">
+  <xsl:element name="p">
+    <xsl:apply-templates/>
+  </xsl:element>
+</xsl:template>
+
+<xsl:template match="floatingText">
+<blockquote>
+<xsl:apply-templates/>
+</blockquote>
+</xsl:template>
 
 <xsl:template match="tei:head">
   <xsl:element name="p">
@@ -161,6 +184,12 @@
       <xsl:element name="span">
         <xsl:attribute name="class">smallcaps</xsl:attribute>
         <xsl:apply-templates/>
+      </xsl:element>
+    </xsl:when>
+    <xsl:when test="@rend='right'">
+      <xsl:element name="span">
+	<xsl:attribute name="class">right</xsl:attribute>
+	<xsl:apply-templates/>
       </xsl:element>
     </xsl:when>
   </xsl:choose>

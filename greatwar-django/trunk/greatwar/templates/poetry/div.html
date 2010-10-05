@@ -6,9 +6,9 @@
 {% if div %}
 from <a href="{% url poetry:book-toc div.doc_id %}">{{ div.doctitle }}</a> (id =  {{div.doc_id}} )
 
-<div class="content">
+
 {{ body|safe }}
-</div>
+
 {% if div.prevdiv.id %}
     <p class="next-prev"><a href="{% url poetry:poem div.doc_id div.prevdiv.id %}">Previous poem: {{ div.prevdiv.title }}</a> </p>
 {% endif %}
