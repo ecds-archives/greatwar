@@ -1,8 +1,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-	<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
    <title>The Great War: {% block pagetitle %} PAGE TITLE {% endblock %} </title>
+   <link rel="icon" type="image/jpeg" href="/images/favicon.jpg">   
    <link rel="stylesheet" type="text/css" href="/css/site.css"/>
    <!-- <script language='Javascript' type='text/javascript' src='/js/toggle-list.js'/> --> <!-- Javascript causes Firefox display error -->
 </head>
@@ -13,7 +14,7 @@
 <table class="indexlinks">
 <tr>
      <td><a href='/'>Home</a></td>
-     <td class="separator">&bull;</td>	
+     <td class="separator">&bull;</td>  
      <td><a href="{% url postcards:index %}">Postcards</a></td>
      <td class="separator">&bull;</td>
      <td><a href="{% url poetry:books %}">Poetry</a></td>
@@ -55,7 +56,7 @@
 
 <div class="content">
 
-	    
+      
 {% block content %}
 {% endblock %}
 
@@ -81,4 +82,4 @@
 
 
 </body>
-</html>	
+</html> 
