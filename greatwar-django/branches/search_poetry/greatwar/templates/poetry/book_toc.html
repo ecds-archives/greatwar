@@ -1,0 +1,49 @@
+{% extends "poetry/poetry_base.html" %}
+{% block page_subtitle %} {{ book.title }} {% endblock %}
+
+
+{% block content %}
+{% if book %}
+  {{ book.title }}
+     {% if book.author %} {{ book.author }} <br/> {% endif %}
+     {% if book.editor %} {{ book.editor }} <br/> {% endif %}
+
+  <ul>
+  {% for div in book.front.div %}
+     <li><a href="{% url poetry:poem book.id,div.id %}"> {% firstof div.title div.type %}</a></li>
+  {% endfor %}
+  
+  {% if book.body %}
+    {% for d in book.body.div %}
+        <li> {{ d.title|default:"" }} 
+ 	     {% if d.author %} - {{ d.author }} {% endif %} 
+	     <font class="type">({{ d.type }})</font> 
+	  {% if d.div %}
+	    <ul>
+	    {% for subdiv in d.div %}
+	        <li> <a href="{% url poetry:poem book.id,subdiv.id %}">{{ subdiv.title }}</a>
+		     {% if subdiv.author %} - {{ subdiv.author }} {% endif %}
+		    {% ifnotequal subdiv.type|lower 'poem' %}  <font class="type">({{ subdiv.type }})</font> {% endifnotequal %}
+		</li>
+	    {% endfor %}
+	   </ul>
+	  {% endif %}
+        </li>
+    {% endfor %}
+  {% endif %}
+
+  {% for div in book.back.div %}
+     {% ifequal div.type "Colophon" %} {# other types ? #}
+	<li>{{ div.text }} <i>({{ div.type }})</i></li>
+     {% else %}
+     <li><a href="{% url poetry:poem book.id,div.id %}">{{ div.title|default:div.type|capfirst }}</a></li>
+     {% endifequal %}
+  {% endfor %}
+
+  </ul>
+
+{% else %}
+    <p>No book specified?</p>
+{% endif %}
+   <pre>{{div.serializeDocument}}</pre>
+{% endblock %}

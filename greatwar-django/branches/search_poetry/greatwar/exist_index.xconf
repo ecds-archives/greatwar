@@ -1,0 +1,16 @@
+<collection xmlns="http://exist-db.org/collection-config/1.0">
+	    <index xmlns:tei="http://www.tei-c.org/ns/1.0">
+            <!-- Disable the standard full text index -->
+            	 <fulltext default="none" attributes="false"/>
+		 <lucene>
+		   <analyzer class="org.apache.lucene.analysis.standard.StandardAnalyzer"/>
+			<text qname="tei:TEI"/>
+			<ignore qname="tei:publicationStmt"/>
+			<ignore qname="tei:seriesStmt"/>
+			<ignore qname="tei:sourceDesc"/>
+			<ignore qname="tei:encodingDesc"/>
+			<ignore qname="tei:revisionDesc"/>
+		</lucene>
+	    </index>
+</collection>
+
