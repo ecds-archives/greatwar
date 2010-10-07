@@ -1,11 +1,15 @@
 from django.shortcuts import render_to_response
-from greatwar.poetry.models import PoetryBook, Poem, Poet
 from django.http import HttpResponse
 from django.core.paginator import Paginator, InvalidPage, EmptyPage
+from django.template import RequestContext
 
 from eulcore.django.existdb.db import ExistDB
 from eulcore.existdb.exceptions import DoesNotExist # ReturnedMultiple needed also ?
 from eulcore.xmlmap.teimap import TEI_NAMESPACE
+
+from greatwar.poetry.models import PoetryBook, Poem, Poet
+from greatwar.poetry.forms import PoetrySearchForm
+
 
 def books(request):
     "Browse list of volumes"
@@ -65,3 +69,30 @@ def poet_list(request, name):
     return render_to_response('poetry/poem_list.html', { 'poems' : poems,
                                                          'poet'  : name,
                                                          'querytime' : poems.queryTime()})
+                                                         
+def search(request):
+    "Search poetry by title/author/keyword/date"
+    form = PoetrySearchForm(request.GET)
+    response_code = None
+    search_opts = {}
+    poetry = None
+    if form.is_valid(): 
+        if 'title' in form.cleaned_data and form.cleaned_data['title']:
+            search_opts['title__contains'] = '%s' % form.cleaned_data['title']
+        if 'author' in form.cleaned_data and form.cleaned_data['author']:
+            search_opts['author__contains'] = '%s' % form.cleaned_data['author']
+        if 'keyword' in form.cleaned_data and form.cleaned_data['keyword']:
+            search_opts['fulltext_terms'] = '%s' % form.cleaned_data['keyword']
+        if 'date' in form.cleaned_data and form.cleaned_data['date']:
+            search_opts['date__exact'] = '%s' % form.cleaned_data['date'] 
+                               
+        poetry = Poem.objects.filter(**search_opts)
+ 
+    response = render_to_response('poetry/search.html', {
+                "search": form,
+                "poetry": poetry,
+                },
+                context_instance=RequestContext(request))
+    if response_code is not None:
+        response.status_code = response_code
+    return response                                                         

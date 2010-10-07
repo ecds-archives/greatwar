@@ -56,3 +56,11 @@ class PoetryTestCase(DjangoTestCase):
     def test_poet_attributes(self):    
         self.assertEqual(self.poet.first_letter, 'P')
         self.assertEqual(self.poet.name, 'Peterson, Margaret')
+        
+    def test_view_simple(self):
+        gw_url = reverse('poetry:books')
+        response = self.client.get(gw_url)
+        expected = 200
+        self.assertEqual(response.status_code, expected,
+                        'Expected %s but returned %s for %s' % \
+                        (expected, response.status_code, gw_url)) 

@@ -1,0 +1,24 @@
+{% extends "poetry/poetry_base.html" %}
+{% block page_subtitle %} Search {% endblock %}
+
+{% block content %}
+
+<h2>Search for poetry.</h2>
+<form method="get" action="{% url poetry:search %}">
+    <table>
+    {{ search.as_table }}
+    </table>
+    <input type="submit" value="Search" />
+</form>
+
+<hr/>
+{% if server_error %}{{ server_error }}{% endif %}
+    <ul>
+    {% for poem in poetry %}
+    <li> {{ poem.title }}</li>
+    {% empty %}
+    <li>No records returned</li>
+    {% endfor %}
+</ul>
+
+{% endblock %}
