@@ -12,8 +12,11 @@
 </form>
 
 <hr/>
+
 {% if server_error %}{{ server_error }}{% endif %}
-    <ul>
+
+{% if poetry %} Found {{ poetry.count }} item{{ poetry.count|pluralize }}.<br/> {% endif %}
+<ul>
     {% for poem in poetry %}
     <li> {{ poem.title }}</li>
     {% empty %}
