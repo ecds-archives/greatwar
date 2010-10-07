@@ -17,8 +17,15 @@
     {% for d in book.body.div %}
         <li> {{ d.title|default:"" }} 
  	     {% if d.author %} - {{ d.author }} {% endif %} 
-	     <font class="type">({{ d.type }})</font> 
+	    {% if d.type %} <font class="type">({{ d.type }})</font> {% endif %}
 	  {% if d.div %}
+            <ul>
+            {% ifequal d.div.type|lower 'poem' %}
+              <li> <a href="{% url poetry:poem book.id,div.id %}">{{ div.title }}</a>
+		     {% if div.author %} - {{ div.author }} {% endif %} {% endifequal %}
+		    {% ifnotequal div.type|lower 'poem' %} {% if div.type %} <font class="type">({{ div.type }})</font> {% endif %} {% endifnotequal %}
+		</li>
+		</ul>
 	    <ul>
 	    {% for subdiv in d.div %}
 	        <li> <a href="{% url poetry:poem book.id,subdiv.id %}">{{ subdiv.title }}</a>
