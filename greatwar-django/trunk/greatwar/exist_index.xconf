@@ -5,6 +5,7 @@
 		 <lucene>
 		   <analyzer class="org.apache.lucene.analysis.standard.StandardAnalyzer"/>
 			<text qname="tei:TEI"/>
+			<text qname="tei:div"/>
 			<ignore qname="tei:publicationStmt"/>
 			<ignore qname="tei:seriesStmt"/>
 			<ignore qname="tei:sourceDesc"/>

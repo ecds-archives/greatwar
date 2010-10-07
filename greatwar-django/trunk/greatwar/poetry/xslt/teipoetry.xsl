@@ -156,7 +156,24 @@
   </p>
 </xsl:template>
 
+<!-- drama -->
+<xsl:template match="tei:sp">
+  <p class="speech">
+    <xsl:apply-templates/>
+  </p>
+</xsl:template>
 
+<xsl:template match="tei:sp/tei:speaker">
+  <span class="speaker">
+    <xsl:apply-templates/>
+  </span>
+</xsl:template>
+
+<xsl:template match="tei:stage">
+  <span class="stage">
+    <xsl:apply-templates/>
+  </span>
+</xsl:template>
 
 <!-- convert rend tags to their html equivalents 
      so far, converts: center, italic, bold, smallcaps   -->
