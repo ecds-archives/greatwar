@@ -71,7 +71,7 @@ def poet_list(request, name):
                                                          'querytime' : poems.queryTime()})
                                                          
 def search(request):
-    "Search poetry by title/author/keyword/date"
+    "Search poetry by title/author/keyword"
     form = PoetrySearchForm(request.GET)
     response_code = None
     search_opts = {}
@@ -83,8 +83,6 @@ def search(request):
             search_opts['author__contains'] = '%s' % form.cleaned_data['author']
         if 'keyword' in form.cleaned_data and form.cleaned_data['keyword']:
             search_opts['fulltext_terms'] = '%s' % form.cleaned_data['keyword']
-        if 'date' in form.cleaned_data and form.cleaned_data['date']:
-            search_opts['date__exact'] = '%s' % form.cleaned_data['date'] 
                                
         poetry = Poem.objects.filter(**search_opts)
  
