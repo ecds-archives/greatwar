@@ -61,7 +61,7 @@ def _show_poets(request, poets, current_letter=None):
     
 def poet_list(request, name):
     "List poems by a particular poet"
-    poems = Poem.objects.filter(poet__exact=name).also('doctitle', 'doc_id').order_by('title').all()
+    poems = Poem.objects.filter(poetrev__exact=name).also('doctitle', 'doc_id').order_by('title').all()
     return render_to_response('poetry/poem_list.html', { 'poems' : poems,
                                                          'poet'  : name,
                                                          'querytime' : poems.queryTime()})

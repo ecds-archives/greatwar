@@ -5,7 +5,7 @@
 Poems by <b>{{ poet }}</b>
 <ul>
  {% for poem in poems %} 
-   <li><a href="{% url greatwar.poetry.views.div poem.doc_id,poem.id %}">{{ poem.title }}</a> - {{ poem.doctitle }}</li>
+   <li><a href="{% url poetry:poem poem.doc_id,poem.id %}">{{ poem.title }}</a> - {{ poem.doctitle }}</li>
  {% empty %}
    <li>No match<li>
  {% endfor %}
