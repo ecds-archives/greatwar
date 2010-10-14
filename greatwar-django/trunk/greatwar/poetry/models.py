@@ -15,14 +15,15 @@ class PoetryBook(XmlModel, Tei):
 
 class Poem(XmlModel, TeiDiv):
     ROOT_NAMESPACES = {'tei' : TEI_NAMESPACE}
-    poet = StringField("tei:docAuthor/@n")
+    poet = StringField("tei:docAuthor/tei:name/tei:choice")
+    poetrev = StringField("tei:docAuthor/tei:name/tei:choice/tei:reg")
     nextdiv = NodeField("following::tei:div[@type='poem'][1]", "self")
     prevdiv = NodeField("preceding::tei:div[@type='poem'][1]", "self")
     objects = Manager('//tei:div')      # should this have [@type='poem'] ?
 
 class Poet(XmlModel, XmlObject):
     ROOT_NAMESPACES = {'tei' : TEI_NAMESPACE}
-    first_letter = StringField("substring(@n,1,1)")
-    name  = StringField("@n")
-    objects = Manager("//tei:div[@type='poem']/tei:docAuthor")
+    first_letter = StringField("substring(tei:reg,1,1)")
+    name  = StringField("tei:reg")
+    objects = Manager("//tei:div[@type='poem']/tei:docAuthor/tei:name/tei:choice")
     

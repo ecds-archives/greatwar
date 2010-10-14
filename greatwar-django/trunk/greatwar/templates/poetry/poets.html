@@ -4,12 +4,12 @@
 {% block content %}
 
 <p>
- <a href="{% url greatwar.poetry.views.poets %}">All</a>
+ <a href="{% url poetry:poets %}">All</a>
  {% for letter in first_letters %}
   {% ifequal letter current_letter %}
     {{ letter }}
   {% else %}
-    <a href="{% url greatwar.poetry.views.poets_by_firstletter letter %}">{{ letter }}</a>
+    <a href="{% url poetry:poets-by-letter letter %}">{{ letter }}</a>
   {% endifequal %}
 {% endfor %}
 </p>
@@ -18,7 +18,7 @@
 {{ poets.paginator.count }} poet{{ poets.paginator.count|pluralize }} found, displaying {{ poets.start_index }} - {{ poets.end_index }}
 <ul>
  {% for poet in poets.object_list %}
-   <li><a href="{% url greatwar.poetry.views.poet_list poet %}">{{ poet }}</a></li>
+   <li><a href="{% url poetry:poet-list poet %}">{{ poet }}</a></li>
  {% empty %}
    <li>No match<li>
  {% endfor %}
@@ -41,5 +41,5 @@
     </span>
 </div>
 {% endifnotequal %}
-
+      <pre>{{div.serializeDocument}}</pre>
 {% endblock %}
