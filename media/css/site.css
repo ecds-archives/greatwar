@@ -31,17 +31,20 @@ p.figure-text { padding: 5px; margin-left: 15px; font-size: 90%; }
 font.count { color: #2f2f2f; padding-left: 5px; font-size: 80%;vertical-align: middle;}
 
 div.content {	position: relative; 
-		margin-right: 215px;
+		margin-left: 25px;
+		margin-right: 225px;
 		margin-bottom: 100px;
 		padding-bottom: 2px;
 		z-index: 1;
 		overflow: visible;
 		min-height: 60%;
 	    }
-p.title { text-align: center;
+p.title { /* text-align: center; */ margin:auto;
+          margin-top: 1em;
 	  font-size: 120%;
 	  font-weight: bold;
               }
+p.author { font-weight: bold;}
 /* formatting for 'about the site' essay */
 div#about { margin-left: 1in; margin-right: 3in; }
 div.sig { margin-right: 1in; text-align: right; }
@@ -88,17 +91,26 @@ div.sidebar { position: absolute;
 	    }
 
 div.content div.categories { font-size: 80%; margin-left: 1cm;}
-div.sidebar div.categories { background-color:  #ffffff; margin-top: 5px; padding: 5px; border-style: double; font-size: 90%; } 
+div.sidebar div.categories { background-color:  #ffffff; 
+			     margin-top: 5px; 
+			     padding: 5px; 
+			     border-style: double; 
+			     font-size: 90%; } 
 div.categories h3 { background-color: #aaae9f /* #718154*/ ; padding: 2px; margin-top:0; margin-bottom:0;}
 div.categories ul { display: none; margin-top: -5px; padding-bottom: 0; }
 div.categories li { list-style-type: none;  } 
 
-div.nav { background-color: #cdcec9; font-size: 90%; padding-left: 5px;
-padding-bottom: 10px; margin-top: 5px; }
+div.nav { background-color: #cdcec9; 
+	  font-size: 90%; 
+	  padding-left: 5px;
+	  padding-bottom: 10px; 
+	  margin-top: 5px; }
 div.nav h3 { text-align: center; border-bottom: double; padding: 2px; }
 
-div.search { background-color: #aaae9f; font-size: 90%; padding-left:
-5px; padding-bottom: 10px; }
+div.search { background-color: #aaae9f; 
+	     font-size: 90%; 
+	     padding-left: 5px; 
+	     padding-bottom: 10px; }
 div.search h3 { text-align: center; border-bottom: double; padding: 2px;}
 div.search h4 { margin-top: 0; margin-bottom: 0; padding-top: 2px;}
 div.search input { font-size: 85%; margin-left: 2px; padding: 0; }
@@ -106,10 +118,18 @@ div.search hr { width: 75%; }
 p.searchdiv { background-color:#dfe3df;padding-left:15px;}
 
 /* index search box needs slightly different formatting */
-div.indexsearch { background-color: #aaae9f; font-size: 90%;
-padding-left: 5px; padding-bottom: 5px; margin: auto; text-align: center; width: 250px; }
-div.indexsearch h3 { text-align: center; border-bottom: double; padding: 0; 
-		     margin-bottom: 5px; margin-right: 5px; }
+div.indexsearch { background-color: #aaae9f; 
+		  font-size: 90%;
+		  padding-left: 5px; 
+		  padding-bottom: 5px; 
+		  margin: auto; 
+		  text-align: center; 
+		  width: 250px; }
+div.indexsearch h3 { text-align: center; 
+		     border-bottom: double; 
+		     padding: 0; 
+		     margin-bottom: 5px; 
+		     margin-right: 5px; }
 div.indexsearch h4 { margin-top: 0; margin-bottom: 0; padding-top: 2px;}
 div.indexsearch input { font-size: 85%; padding: 0; }
 div.indexsearch hr { width: 75%; }
@@ -206,7 +226,7 @@ padding: 5px; }
 table.poem { margin: 25px; }
 table.poem td, div.poem { text-align: left; }
 p.head { font-weight: bold; font-size: 115%; }
-p.subhead { font-weight: bold; font-size: 105%; }
+p.subhead { font-weight: bold; font-size: 105%; text-align:center; }
 p.argument { width: 60%; }
 p.epigraph,p.trailer,p.byline,p.dedication { font-style: italic; font-size: 90%; }
 p.source { font-size: 85%; }
@@ -214,6 +234,17 @@ p.next-prev { font-size: 85%; }
 /* poetry search results */
 p.linematch { margin: -10px; margin-left: 1cm; font-size: 80%;}
 font.extent { padding-left: 10px; font-size: 80%; vertical-align: middle;}
+
+/* poem */
+div.poem {margin:auto; width: 650px;  }
+/*div.poem-body {margin:auto; }*/
+div.stanza { margin-top: 1em;  }
+p.line { margin-bottom: 0px; margin-top: 0px; }
+p.indent {text-indent: 5%;} /* at the moment, % seems to work better than em. This is the default indent*/
+
+/* drama */
+span.speaker {font-variant: small-caps;}
+span.stage {font-style: italic;}
 
 /* footnotes & endnotes */
 a.footnote { font-size: 65%; vertical-align: text-top; text-decoration: none; padding-left: 3px;}
@@ -226,10 +257,15 @@ div.toggle li.toggle { list-style-type: none; margin-left: -15px; }
 
 /* highlighting search results */
 /* FIXME: these colors are taken directly from ILN... need to be adapted here... */
-span.term1 { background-color: #d1e1f9; }
+/*span.term1 { background-color: #d1e1f9; }
 span.term2 { background-color: #fffc7f; }
 span.term3 { background-color: #b4f7aa; }
-span.term4 { background-color: #f4b7aa; }
+span.term4 { background-color: #f4b7aa; }*/
+
+/*span tags from format_tei*/
+span.bold {font-weight: bold;}
+span.italic, span.title {font-weight: italic;}
+span.smallcaps { font-variant: small-caps; }
 
 
 /* Horizontal lists -- display inline, with lines between */
@@ -258,9 +294,10 @@ table.comment th { text-align: right; padding: 5px; border: none; vertical-align
 p.comment { font-size: 90%; margin-left: 0.5cm; }
 p.comment span.byline { font-style: italic; font-size: 90%; color: #666666; }
 
-span.smallcaps { font-variant: small-caps; }
+
 
 p.inline-note { font-size: 85%; }
 
 
-div.poem { margin:25px; width:650px;} 
+
+
