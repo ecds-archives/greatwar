@@ -84,7 +84,7 @@ def search(request):
         if 'keyword' in form.cleaned_data and form.cleaned_data['keyword']:
             search_opts['fulltext_terms'] = '%s' % form.cleaned_data['keyword']
                                
-        poetry = Poem.objects.also("doctitle","doc_id")filter(**search_opts)
+        poetry = Poem.objects.also("doctitle","doc_id").filter(**search_opts)
  
     response = render_to_response('poetry/search.html', {
                 "search": form,
