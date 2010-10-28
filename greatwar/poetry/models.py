@@ -19,7 +19,9 @@ class Poem(XmlModel, TeiDiv):
     poetrev = StringField("tei:docAuthor/tei:name/tei:choice/tei:reg")
     nextdiv = NodeField("following::tei:div[@type='poem'][1]", "self")
     prevdiv = NodeField("preceding::tei:div[@type='poem'][1]", "self")
-    objects = Manager('//tei:div')      # should this have [@type='poem'] ?
+    poem = NodeField("tei:div[@type='poem']", "self")
+    line_matches = StringListField('tei:l')   # place-holder: must be retrieved with raw xpath to use ft:query
+    objects = Manager("//tei:div")      # should this have [@type='poem'] ? No, then essays are not retrieved, e.g. "Swan Song" in Eaton.
 
 class Poet(XmlModel, XmlObject):
     ROOT_NAMESPACES = {'tei' : TEI_NAMESPACE}

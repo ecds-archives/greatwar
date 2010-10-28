@@ -29,7 +29,7 @@ def book_toc(request, doc_id):
     return render_to_response('poetry/book_toc.html', { 'book' : book})
 
 def div(request, doc_id, div_id):
-    "Display a single div (poem)"
+    "Display a single div (poem or essay?)"
     div = Poem.objects.also('doctitle', 'doc_id', 'nextdiv__id', 'nextdiv__title', 'prevdiv__id', 'prevdiv__title').filter(doc_id__exact=doc_id).get(id__exact=div_id)
     body = div.xsl_transform(filename='poetry/xslt/div.xsl')
     print body.serialize()
@@ -84,15 +84,16 @@ def search(request):
         if 'title' in form.cleaned_data and form.cleaned_data['title']:
             search_opts['title__fulltext_terms'] = '%s' % form.cleaned_data['title']
         if 'author' in form.cleaned_data and form.cleaned_data['author']:
-            search_opts['author__fulltext_terms'] = '%s' % form.cleaned_data['author']
+            search_opts['docauthor__fulltext_terms'] = '%s' % form.cleaned_data['author']
         if 'keyword' in form.cleaned_data and form.cleaned_data['keyword']:
             search_opts['fulltext_terms'] = '%s' % form.cleaned_data['keyword']
                     
-        poetry = Poem.objects.also("doctitle","doc_id").filter(type__exact="poem").filter(**search_opts)
+        poems = Poem.objects.only("doctitle","doc_id","title", "id").filter(type__exact="poem").filter(**search_opts)
+        if 'keyword' in form.cleaned_data and form.cleaned_data['keyword']:
+            # TODO: fix query escaping - use logic from eulcore?
+            poems = poems.also_raw(line_matches='%%(xq_var)s//tei:l[ft:query(., "%s")]' % form.cleaned_data['keyword'])
+        poetry = poems.all()
 
-    # select non-empty form values for use in template
-   # search_params = dict((key, value) for key, value in form.cleaned_data.iteritems()
-   #                                              if value) 
 
     response = render_to_response('poetry/search.html', {
                 "search": form,
