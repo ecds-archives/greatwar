@@ -209,6 +209,11 @@
 	<xsl:apply-templates/>
       </xsl:element>
     </xsl:when>
+    <xsl:when test="@rend='sup'">
+      <xsl:element name="sup">
+	<xsl:apply-templates/>
+      </xsl:element>
+    </xsl:when>
   </xsl:choose>
 </xsl:template>
 

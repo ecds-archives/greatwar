@@ -3,14 +3,28 @@
 
 {% block content %}
 
-<h2>Search for poetry.</h2>
+<h2>Search the poems.</h2>
+<table class="searchform">
+<tr><td>
 <form method="get" action="{% url poetry:search %}">
     <table>
     {{ search.as_table }}
     </table>
     <input type="submit" value="Search" />
+    <!-- <input type="reset" value="Reset"/> -->
 </form>
 
+<td>   
+    <ul class="rendright"><h4>Keyword searches within a poem.</h4>
+      <li>Multiple terms default to an "OR" search: <i>open sky</i> searches for <i>open</i> or <i>sky</i> within a poem</li>
+      <li>For an exact search, use quotes: "open sky".</li>
+      <li>To find all terms within a poem, use AND: open AND sky</li>
+    </ul>
+    <ul class="rendright"><h4>Author and title searches within a poem.</h4>
+      <li>Author searches find author names in anthologies. To view poems in single-author volumes, use the <a href="{% url poetry:books %}">contents view</a></li>
+      <li>Title searches find words in the poem titles. Searches work in the same way as keyword searches, but only search the titles.</li>
+</td></tr>
+</table>
 <hr/>
 
 {% if server_error %}{{ server_error }}{% endif %}
@@ -18,10 +32,14 @@
 {% if poetry %} Found {{ poetry.count }} item{{ poetry.count|pluralize }}.<br/> {% endif %}
 <ul>
     {% for poem in poetry %}
-    <li><a href="{% url poetry:poem poem.doc_id poem.id %}">{{ poem.title }}</a> in {{ poem.doctitle }}</li>
+    <li><a href="{% url poetry:poem poem.doc_id poem.id %}">{{ poem.title }}</a> in <a href="{% url poetry:book-toc poem.doc_id %}"><i>{{ poem.doctitle }}</i></a>
+  {% if poem.r_line_matches %}
+  <p>DEBUG: line match detected</p>
+   {% for line in poem.r_line_matches %} <p>{{ line }}</p> {% endfor %}
+  {% endif %}
+  </li>
     {% empty %}
     <li>No records returned</li>
     {% endfor %}
 </ul>
-      <pre>{{poetry.serializeDocument}}</pre>
 {% endblock %}

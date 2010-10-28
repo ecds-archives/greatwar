@@ -6,7 +6,9 @@
        <analyzer class="org.apache.lucene.analysis.standard.StandardAnalyzer"/>
       <text qname="tei:TEI"/>
       <text qname="tei:div"/>  
-      <text match="//tei:docAuthor/*"/>    
+      <text qname="tei:docAuthor"/>
+      <text qname="tei:head"/>
+      <text qname="tei:l"/>
       <ignore qname="tei:publicationStmt"/>
       <ignore qname="tei:seriesStmt"/>
       <ignore qname="tei:sourceDesc"/>
