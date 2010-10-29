@@ -22,7 +22,14 @@
     </ul>
     <ul class="rendright"><h4>Author and title searches within a poem.</h4>
       <li>Author searches find author names in anthologies. To view poems in single-author volumes, use the <a href="{% url poetry:books %}">contents view</a></li>
-      <li>Title searches find words in the poem titles. Searches work in the same way as keyword searches, but only search the titles.</li>
+      <li>Title searches find words in the poem titles. Searches work
+    in the same way as keyword searches, but only search the
+    titles.</li>
+    </ul>
+    <ul class="rendright"><h4>Wildcards</h4>
+      <li>You may search for multiple word forms by using ? (single
+    letter) or * (multi-letter) for wildcards.</li>
+    </ul>
 </td></tr>
 </table>
 <hr/>
@@ -33,11 +40,11 @@
 <ul>
     {% for poem in poetry %}
     <li><a href="{% url poetry:poem poem.doc_id poem.id %}">{{ poem.title }}</a> in <a href="{% url poetry:book-toc poem.doc_id %}"><i>{{ poem.doctitle }}</i></a>
-  {% if poem.r_line_matches %}
-  <p>DEBUG: line match detected</p>
-   {% for line in poem.r_line_matches %} <p>{{ line }}</p> {% endfor %}
-  {% endif %}
-  </li>
+       {% if poem.line_matches %}
+         <p>DEBUG: line match detected</p>
+         {% for line in line_matches %} <p>{{ line }}</p> {% endfor %}
+       {% endif %}
+    </li>
     {% empty %}
     <li>No records returned</li>
     {% endfor %}
