@@ -91,9 +91,18 @@ def search(request):
         poems = Poem.objects.only("doctitle","doc_id","title", "id").filter(type__exact="poem").filter(**search_opts)
         if 'keyword' in form.cleaned_data and form.cleaned_data['keyword']:
             # TODO: fix query escaping - use logic from eulcore?
-            poems = poems.also_raw(line_matches='%%(xq_var)s//tei:l[ft:query(., "%s")]' % form.cleaned_data['keyword'])
+            poems = poems.only_raw(line_matches='%%(xq_var)s//tei:l[ft:query(., "%s")]' % form.cleaned_data['keyword'])
         poetry = poems.all()
-
+        search_paginator = Paginator(poetry, 20)
+        try:
+            page = int(request.GET.get('page', '1'))
+        except ValueError:
+            page = 1
+        # If page request (9999) is out of range, deliver last page of results.
+        try:
+            search_page = search_paginator.page(page)
+        except (EmptyPage, InvalidPage):
+            search_page = search_paginator.page(paginator.num_pages)
 
     response = render_to_response('poetry/search.html', {
                 "search": form,
