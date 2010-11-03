@@ -33,7 +33,9 @@ exist_index_path = path.join(path.dirname(path.abspath(__file__)), '..', 'collec
 class PoetryTestCase(DjangoTestCase):
   
     FIXTURES = ['flower.xml', 'fiery.xml', 'lest.xml']
-    POET_STRING = '<docAuthor><name><choice><reg>Peterson, Margaret</reg></choice></name></docAuthor>' 
+    POET_STRING = '''<choice xmlns="http://www.tei-c.org/ns/1.0">
+        <reg>Peterson, Margaret</reg>
+    </choice>'''
 
     def setUp(self):
       
