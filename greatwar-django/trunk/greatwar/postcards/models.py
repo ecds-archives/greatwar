@@ -7,7 +7,7 @@ from eulcore.fedora.models import DigitalObject, FileDatastream, XmlDatastream
 from eulcore.xmlmap import XmlObject
 from eulcore.xmlmap.fields import NodeListField
 from eulcore.xmlmap.teimap import TeiFigure, TeiInterpGroup, TeiInterp, TeiLineGroup
-
+from eulcore.xmlmap.teimap import TEI_NAMESPACE
 
 # TEI postcard models
 
