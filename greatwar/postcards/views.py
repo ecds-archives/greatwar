@@ -1,3 +1,7 @@
+import logging
+from lxml import etree
+from urllib import urlencode
+
 from django.http import HttpResponse, Http404
 from django.conf import settings
 from django.core import serializers
@@ -9,6 +13,7 @@ from django.template import RequestContext
 from eulcore.django.existdb.db import ExistDB
 from eulcore.existdb.exceptions import DoesNotExist
 from eulcore.django.fedora.server import Repository
+from eulcore.xmlmap.teimap import TEI_NAMESPACE
 
 from greatwar.postcards.models import Postcard, Categories, KeyValue, ImageObject, PostcardCollection
 from greatwar.postcards.forms import SearchForm
@@ -44,11 +49,11 @@ def card(request, entity):
 def index(request):
    "Show the postcard home page"
    count = Postcard.objects.count()   
-   categories = PostcardCollection.get().interp.content
+   #categories = PostcardCollection.get().interp.content #As of 11-4-10 this gives NoneType error 
    #categories = Categories.objects.also('type', 'interp') #How to render interp groups?
    return render_to_response('postcards/index.html',
                              { 'index' : index,
-                               'categories' : categories,
+                               #'categories' : categories,
                                'count' : count,
                                },
                               context_instance=RequestContext(request))
