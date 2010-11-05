@@ -5,6 +5,8 @@ from django.shortcuts import render_to_response
 from django.template import RequestContext
 
 from eulcore.django.fedora.server import Repository
+from eulcore.fedora.util import RequestFailed
+
 from greatwar.postcards.models import ImageObject
 from greatwar.postcards.forms import SearchForm
 
@@ -56,11 +58,15 @@ def browse(request):
 def view_postcard(request, pid):
     '''View a single postcard at actual postcard size, with description.'''
     repo = Repository()
-    obj = repo.get_object(pid, type=ImageObject)
-    # TODO: 404 if not found
-    return render_to_response('postcards/view_postcard.html',
+    try:
+        obj = repo.get_object(pid, type=ImageObject)
+        obj.label
+        # TODO: 404 if not found
+        return render_to_response('postcards/view_postcard.html',
                               {'card' : obj },
                                 context_instance=RequestContext(request))                                                       
+    except RequestFailed:
+        raise Http404
 
 # TODO: clean up image disseminations, make more efficient
 # OR: can we just link to fedora image disseminations?
