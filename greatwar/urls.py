@@ -9,7 +9,7 @@ from django.conf.urls.defaults import patterns, url
 urlpatterns = patterns('',
     # Example:
     # (r'^greatwar/', include('greatwar.foo.urls')),
-    url(r'^greatwar/', 'views.index', name="index"),
+    url(r'^$', 'views.index', name="index"),
     url(r'^poetry/', include('greatwar.poetry.urls', namespace='poetry')),
     url(r'^postcards/', include('greatwar.postcards.urls', namespace='postcards')),
     # Uncomment the admin/doc line below and add 'django.contrib.admindocs' 
