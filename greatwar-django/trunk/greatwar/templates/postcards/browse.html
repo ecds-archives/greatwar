@@ -1,16 +1,15 @@
 {% extends "postcards/postcard_base.html" %}
-{% block page_subtitle %} Browse Postcards {% endblock %}
+{% block page_subtitle %} Browse postcards {% endblock %}
 
 {% block content %}
-{% if postcards.paginator.count %}
-    <p>{{ postcards.paginator.count }} postcard{{ postcards.paginator.count|pluralize }} found,
-    displaying {{ postcards.start_index }} - {{ postcards.end_index }}</p>
+{% if postcards_paginated.paginator.count %}
+    <p>Displaying {{ postcards_paginated.start_index }} - {{ postcards_paginated.end_index }} of {{ postcards_paginated.paginator.count }} postcard{{ postcards_paginated.paginator.count|pluralize }}.</p>
 {# % assert False % #}
 {% endif %}
 
 
-{% if postcards %}
-     {% for postcard in postcards %}
+{% if postcards_paginated %}
+     {% for postcard in postcards_paginated.object_list %}
       <p class="thumbnail">
        <a href="{% url postcards:card pid=postcard.pid %}" class="img">
       <img class="thumbnail" alt="postcard thumbnail" 
@@ -23,20 +22,33 @@
 {% endif %}
 
 
-
-<div class="pagination">
-  <span class="postcardnav">
-       {% if postcards.has_previous %}
-           <a href="?page={{ postcards.previous_page_number }}">previous</a>
-       {% endif %}
-
-       <span class="current">
-            Page {{ postcards.number }} of {{ postcards.paginator.num_pages }}.
-       </span>
-
-       {% if postcards.has_next %}
-            <a href="?page={{ postcards.next_page_number }}">next</a>
-       {% endif %}
-  </span>
-</div>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="150">
+    &nbsp;
+    {% if postcards_paginated.has_previous %}
+        <a href="?page={{ postcards_paginated.previous_page_number }}&keyword={{keyword}}&title={{title}}&author={{author}}">[ &nbsp;&lt;&lt; Previous &nbsp;]</a>
+    {% endif %}
+    </td>
+    
+     <td align="center">
+      [&nbsp; 
+      {% for current_page in postcards_paginated.paginator.page_range %}
+        {% if postcards_paginated.number == current_page %}
+          &nbsp;{{ current_page }}&nbsp;
+        {% else %}
+          <a href="?page={{ current_page }}">&nbsp;{{ current_page }}&nbsp;</a>
+        {% endif %}
+      {% endfor %}
+      &nbsp;]
+     </td>
+  
+      <td width="150" align="right">
+      {% if postcards_paginated.has_next %}
+          <a href="?page={{ postcards_paginated.next_page_number }}">[ &nbsp;Next &gt;&gt;&nbsp; ]</a>
+      {% endif %}
+      &nbsp;
+      </td>
+  </tr>
+</table>
 {% endblock %}
