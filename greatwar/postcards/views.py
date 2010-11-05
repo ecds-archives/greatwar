@@ -8,6 +8,8 @@ from eulcore.django.fedora.server import Repository
 from greatwar.postcards.models import ImageObject
 from greatwar.postcards.forms import SearchForm
 
+import logging
+
 # FIXME: set repo default type somewhere in a single place
 
 def summary(request):
@@ -26,13 +28,29 @@ def browse(request):
     repo.default_object_type = ImageObject
     # TEMPORARY: restrict to postcards by pidspace
     search_opts = {'pid__contains': '%s:*' % settings.FEDORA_PIDSPACE }
+    number_of_results = 15
+    context = {}
 
     if 'subject' in request.GET:
         search_opts['subject'] = request.GET['subject']
 
     postcards = repo.find_objects(**search_opts)
+    
+    postcard_paginator = Paginator(list(postcards), number_of_results)
+    try:
+        page = int(request.GET.get('page', '1'))
+    except ValueError:
+        page = 1
+    # If page request (9999) is out of range, deliver last page of results.
+    try:
+        postcard_page = postcard_paginator.page(page)
+    except (EmptyPage, InvalidPage):
+        postcard_page = postcard_paginator.page(paginator.num_pages)
+                
+    context['postcards_paginated'] = postcard_page
+    
     return render_to_response('postcards/browse.html',
-                              {'postcards' : postcards },
+                              context,
                                 context_instance=RequestContext(request))
 
 def view_postcard(request, pid):
@@ -72,6 +90,7 @@ def search(request):
     form = SearchForm(request.GET)
     response_code = None
     context = {'search': form}
+    number_of_results = 5
     if form.is_valid(): 
         # adding wildcards because fedora has a weird notion of what 'contains' means
 
@@ -88,8 +107,24 @@ def search(request):
         try:
             repo = Repository()          
             found = repo.find_objects(type=ImageObject, **search_opts)
-            context['postcards'] = list(found)
-        except:
+            
+            search_paginator = Paginator(list(found), number_of_results)
+            try:
+                page = int(request.GET.get('page', '1'))
+            except ValueError:
+                page = 1
+            # If page request (9999) is out of range, deliver last page of results.
+            try:
+                search_page = search_paginator.page(page)
+            except (EmptyPage, InvalidPage):
+                search_page = search_paginator.page(paginator.num_pages)
+                
+            
+            context['postcards_paginated'] = search_page   
+            context['title'] = form.cleaned_data['title']
+            context['description'] = form.cleaned_data['description']
+        except Exception as e:
+            logging.debug(e)
             response_code = 500
             context['server_error'] = 'There was an error ' + \
                     'contacting the digital repository. This ' + \
