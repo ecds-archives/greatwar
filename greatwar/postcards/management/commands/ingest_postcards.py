@@ -2,6 +2,7 @@ import os
 from optparse import make_option
 from rdflib import URIRef
 
+from django.conf import settings
 from django.core.management.base import BaseCommand
 
 from eulcore.django.fedora.server import Repository
@@ -67,7 +68,7 @@ class Command(BaseCommand):
             
             obj = repo.get_object(type=ImageObject)
             obj.label = c.head
-            obj.owner = 'smallpox'      # hack - take advantage of GHC xacml policy for now, for simplicity
+            obj.owner = settings.FEDORA_OBJECT_OWNERID
             obj.dc.content.title = obj.label
             obj.dc.content.description = c.description
             # TODO: handle postcards with text/poetry lines
