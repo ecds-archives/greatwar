@@ -39,11 +39,11 @@ body { text-align: center; }
 
 <table class="indexlinks">
 <tr>
-<td><a href="/postcards/about/">About the Site</a></td>
+<td><a href="{% url about %}">About the Site</a></td>
 <td class="separator">&bull;</td>
-<td><a href="/postcards/">Postcards</a></td>
+<td><a href="{% url postcards:index %}">Postcards</a></td>
 <td class="separator">&bull;</td>
-<td><a href="/poetry/">Poetry</a></td>
+<td><a href="{% url poetry:books %}">Poetry</a></td>
 <td class="separator">&bull;</td>
 <td><a href="/links/">Links</a></td>
 </tr>
