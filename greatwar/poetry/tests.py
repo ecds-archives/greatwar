@@ -68,22 +68,22 @@ class PoetryTestCase(DjangoTestCase):
                         (expected, response.status_code, gw_url)) 
              
     def test_view_search_title(self):
-        gw_url = "http://localhost:8001/poetry/search/?title=Flower"
-        response = self.client.get(gw_url)
+        search_url = reverse('poetry:search')
+        response = self.client.get(search_url, {"title" : "Flower"})
         expected = 200
         self.assertEqual(response.status_code, expected,
                         'Expected %s but returned %s for %s' % \
-                        (expected, response.status_code, gw_url))                         
+                        (expected, response.status_code, search_url))
         # should include 'Flower'
         self.assertContains(response, 'Flower')
         
     def test_view_search_author(self):
-        gw_url = "http://localhost:8001/poetry/search/?author=Smith"
-        response = self.client.get(gw_url)
+        search_url = reverse('poetry:search')
+        response = self.client.get(search_url, {"author" : "Smith"})
         expected = 200
         self.assertEqual(response.status_code, expected,
                         'Expected %s but returned %s for %s' % \
-                        (expected, response.status_code, gw_url))                         
+                        (expected, response.status_code, search_url))
         # should include 'Smith'
         self.assertContains(response, 'Smith')
 
