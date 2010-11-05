@@ -1,24 +1,23 @@
-import os
 from optparse import make_option
+import os
+import sys
+
 from rdflib import URIRef
-
 from django.conf import settings
-from django.core.management.base import BaseCommand
-
+from django.core.management.base import BaseCommand, CommandError
 from eulcore.django.fedora.server import Repository
+from eulcore.xmlmap import load_xmlobject_from_file
+from eulcore.xmlmap.teimap import Tei
 
 from greatwar.postcards.models import ImageObject, Postcard, Categories, PostcardCollection
-
- # very rough - preliminary version of ingest script
- # currently expects MASTERS_SOURCE directory configured in settings
- # - possibly should be switched to a command-line option
 
 #FIXME: there should be a better place to put this... (eulcore.fedora somewhere)
 MEMBER_OF_COLLECTION = 'info:fedora/fedora-system:def/relations-external#isMemberOfCollection'
 
 class Command(BaseCommand):        
-    """ingest postcards...
-"""
+    """Ingest Great War Project postcards from a local source directory into
+    a Fedora repository.
+    """
     help = __doc__
 
     option_list = BaseCommand.option_list + (
@@ -26,36 +25,37 @@ class Command(BaseCommand):
             dest='dry_run',
             action='store_true',
             help='''Test the ingest, but don't actually do anything.'''),
-        make_option('--directory', '-d',
-            dest='source_dir',
-            help='Directory where TIFF master files are located'),
         )
 
-    def handle(self, *args, **options):
+    args = 'postcards.xml image_dir'
+
+    def handle(self, cards_fname, image_dir, dry_run=False, **options):
         verbosity = int(options['verbosity'])    # 1 = normal, 0 = minimal, 2 = all
         v_normal = 1
 
-        if not options['source_dir']:
-            raise Exception("Source directory must be specified")
-
         repo = Repository()
-        interps = Categories.objects.all()
+        collection = repo.get_object('greatwar:postcards-collection',
+                                    type=PostcardCollection)
+        if not collection.exists:
+            raise Exception("greatwar:postcards-collection is not in the repository. Do you need to syncrepo?")
+
         # make a dictionary of subjects so type and value is easily accessible by id
+        interps = collection.interp.content.interp_groups
         subjects = {}
         for group in interps:
-            for interp in group.interps:
+            for interp in group.interp:
                 subjects[interp.id] = (group.type, interp.value)
 
-        cards = Postcard.objects.all()
+        cards_tei = load_xmlobject_from_file(cards_fname, xmlclass=Tei)
         files = 0
         ingested = 0
-        for c in cards:
-            file = os.path.join(options['source_dir'], '%s.tif' % c.entity)
+        for c in cards_tei.body.all_figures:
+            file = os.path.join(image_dir, '%s.tif' % c.entity)
             if os.access(file, os.F_OK):
                 if verbosity >= v_normal:
                     print "Found master file %s for %s" % (file, c.entity)
             else:
-                file = os.path.join(options['source_dir'], 'wwi_%s.tif' % c.entity)
+                file = os.path.join(image_dir, 'wwi_%s.tif' % c.entity)
                 if os.access(file, os.F_OK):
                     if verbosity >= v_normal:
                         print "Found master file %s for %s" % (file, c.entity)
@@ -75,7 +75,7 @@ class Command(BaseCommand):
 
             # convert interp text into dc: subjects
             obj.dc.content.subject_list.extend(['%s: %s' % subjects[ana_id]
-                                                for ana_id in c.ana.split(' ')])
+                                                for ana_id in c.ana.split()])
 
             # common DC for all postcards
             obj.dc.content.type = 'image'
@@ -97,7 +97,7 @@ class Command(BaseCommand):
                 print "Dublin Core\t\n", obj.dc.content.serialize(pretty=True)
                 print "RELS-EXT \t\n", obj.rels_ext.content.serialize(pretty=True)
             
-            if not options['dry_run']:
+            if not dry_run:
                 obj.save()
             print "ingested %s as %s" % (unicode(c.head).encode('latin-1'), obj.pid)
             ingested += 1
