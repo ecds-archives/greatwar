@@ -1,10 +1,9 @@
 from django.conf.urls.defaults import patterns, url
 
 urlpatterns = patterns('greatwar.postcards.views',
-    url(r'^$', 'index', name='index'),
+    url(r'^about/$', 'summary', name='index'),
     url(r'^view/$', 'postcards', name='browse'),
     url(r'^card/(?P<entity>[-A-Za-z_0-9]+)$', 'card'),
-    url(r'^about/$', 'about', name='about'),
     #url(r'^search/$', 'searchform'),
 
     ## experimental fedora-based version of postcards

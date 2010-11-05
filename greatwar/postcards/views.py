@@ -46,24 +46,17 @@ def card(request, entity):
                                 #'interp' : {'id': 'value'}
                                                        })
 
-def index(request):
+def summary(request):
    "Show the postcard home page"
    count = Postcard.objects.count()   
    #categories = PostcardCollection.get().interp.content #As of 11-4-10 this gives NoneType error 
    #categories = Categories.objects.also('type', 'interp') #How to render interp groups?
-   return render_to_response('postcards/index.html',
-                             { 'index' : index,
+   return render_to_response('postcards/index.html', { 
                                #'categories' : categories,
                                'count' : count,
                                },
                               context_instance=RequestContext(request))
 
-
-
-def about(request):
-    "Show the about page"
-    return render_to_response('postcards/about.html',
-                              { 'about' : about,})
 
 
 def searchform(request):
