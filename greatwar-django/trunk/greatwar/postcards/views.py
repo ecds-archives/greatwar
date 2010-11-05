@@ -1,79 +1,27 @@
-import logging
-from lxml import etree
-from urllib import urlencode
-
 from django.http import HttpResponse, Http404
 from django.conf import settings
-from django.core import serializers
 from django.core.paginator import Paginator, InvalidPage, EmptyPage
-from django.core.urlresolvers import reverse
 from django.shortcuts import render_to_response
 from django.template import RequestContext
 
-from eulcore.django.existdb.db import ExistDB
-from eulcore.existdb.exceptions import DoesNotExist
 from eulcore.django.fedora.server import Repository
-from eulcore.xmlmap.teimap import TEI_NAMESPACE
-
-from greatwar.postcards.models import Postcard, Categories, KeyValue, ImageObject, PostcardCollection
+from greatwar.postcards.models import ImageObject
 from greatwar.postcards.forms import SearchForm
 
-gwpc_listfields = ['head', 'entity' 'figDesc' ]
-
-def postcards(request):
-    "Browse thumbnail list of postcards"
-    postcards = Postcard.objects.only('head', 'entity')
-    count = Postcard.objects.count()
-    paginator = paginate_queryset(request, postcards) #show 50 thumbnails per page
-    postcard_subset, paginator = paginate_queryset(request, postcards, per_page=50, orphans=3) 
-    show_pages = pages_to_show(paginator, postcard_subset.number)
-    return render_to_response('postcards/postcards.html',
-                              { 'postcards' : postcard_subset, 
-                                'show_pages' : show_pages,
-                                'count' : count, },
-                                context_instance=RequestContext(request))
-
-def card(request, entity):
-    "Show an individual card at real size with description"
-    card = Postcard.objects.also('head', 'entity', 'ana', 'figDesc').filter(entity=entity).get()
-    # ana_list = str.split('card.ana')
-    #categories = Categories.objects.also('type', 'interp'('id', 'value')) #How to render interp groups?
-    #key_value = Interp.objects.only('id', 'value')
-    return render_to_response('postcards/card.html',
-                              { 'card' : card,
-                               # 'ana_list' : ana_list,
-                                #'categories' :  {'type': 'interp'},
-                                #'interp' : {'id': 'value'}
-                                                       })
+# FIXME: set repo default type somewhere in a single place
 
 def summary(request):
    "Show the postcard home page"
-   count = Postcard.objects.count()   
-   #categories = PostcardCollection.get().interp.content #As of 11-4-10 this gives NoneType error 
-   #categories = Categories.objects.also('type', 'interp') #How to render interp groups?
-   return render_to_response('postcards/index.html', { 
+   count = 0        # TODO: get count from fedora
+   # TODO: get categories from fedora collection object
+   return render_to_response('postcards/index.html', {
                                #'categories' : categories,
                                'count' : count,
                                },
                               context_instance=RequestContext(request))
 
-
-
-def searchform(request):
-    "Show a detailed search form page"
-    categories = Categories.objects.only('type', )
-    keyvalue = KeyValue.objects.only('id', 'value')
-    return render_to_response('postcards/search.html',
-                              {'categories' : categories,
-                               'keyvalue' : keyvalue, })
-    
-
-
-## EXPERIMENTAL - fedora-based views for postcards
-
-def fedora_postcards(request):
-    "EXPERIMENTAL fedora-based postcard browse"
-    
+def browse(request):
+    "Browse postcards and display thumbnail images."
     repo = Repository()
     repo.default_object_type = ImageObject
     # TEMPORARY: restrict to postcards by pidspace
@@ -83,9 +31,41 @@ def fedora_postcards(request):
         search_opts['subject'] = request.GET['subject']
 
     postcards = repo.find_objects(**search_opts)
-    return render_to_response('postcards/repo_postcards.html',
-                              { 'postcards' : postcards },
+    return render_to_response('postcards/browse.html',
+                              {'postcards' : postcards },
                                 context_instance=RequestContext(request))
+
+def view_postcard(request, pid):
+    '''View a single postcard at actual postcard size, with description.'''
+    repo = Repository()
+    obj = repo.get_object(pid, type=ImageObject)
+    # TODO: 404 if not found
+    return render_to_response('postcards/view_postcard.html',
+                              {'card' : obj },
+                                context_instance=RequestContext(request))                                                       
+
+# TODO: clean up image disseminations, make more efficient
+# OR: can we just link to fedora image disseminations?
+def thumbnail_image(request, pid):
+    # serve out thumbnail image
+    repo = Repository()
+    obj = repo.get_object(pid, type=ImageObject)
+    return HttpResponse(obj.thumbnail(), mimetype='image/jpeg')
+
+def medium_image(request, pid):
+    # serve out medium image dissemination
+    repo = Repository()
+    obj = repo.get_object(pid, type=ImageObject)
+    return HttpResponse(obj.getDissemination('djatoka:jp2SDef', 'getRegion', {'level': '3'}),
+            mimetype='image/jpeg')
+
+def large_image(request, pid):
+    # serve out large image dissemination
+    repo = Repository()
+    obj = repo.get_object(pid, type=ImageObject)
+    return HttpResponse(obj.getDissemination('djatoka:jp2SDef', 'getRegion', {'level': '5'}),
+            mimetype='image/jpeg')
+
 
 def search(request):
     # rough fedora-based postcard search (borrowed heavily from digital masters)
@@ -123,32 +103,8 @@ def search(request):
         response.status_code = response_code
     return response
 
-def repo_thumbnail(request, pid):
-    # serve out thumbnail image
-    repo = Repository()
-    obj = repo.get_object(pid, type=ImageObject)
-    return HttpResponse(obj.thumbnail(), mimetype='image/jpeg')
 
-def repo_medium_img(request, pid):
-    # serve out medium image dissemination
-    repo = Repository()
-    obj = repo.get_object(pid, type=ImageObject)
-    return HttpResponse(obj.getDissemination('djatoka:jp2SDef', 'getRegion', {'level': '3'}),
-            mimetype='image/jpeg')
 
-def repo_large_img(request, pid):
-    # serve out large image dissemination
-    repo = Repository()
-    obj = repo.get_object(pid, type=ImageObject)
-    return HttpResponse(obj.getDissemination('djatoka:jp2SDef', 'getRegion', {'level': '5'}),
-            mimetype='image/jpeg')
-
-def repo_postcard(request, pid):
-    repo = Repository()
-    obj = repo.get_object(pid, type=ImageObject)
-    return render_to_response('postcards/repo_postcard.html',
-                              { 'card' : obj },
-                                context_instance=RequestContext(request))
 
 
  # object pagination - adapted directly from django paginator documentation
@@ -190,35 +146,3 @@ def pages_to_show(paginator, page):
             show_pages.append(page + i)
 
     return show_pages
-
-def keyword_search(request):
-    "Simple keyword search - runs exist full-text terms query on all terms included."
-    form = KeywordSearchForm(request.GET)
-    if form.is_valid():
-        # not yet implemented - if no search terms, display search form
-        search_terms = request.GET.get('keywords')
-        # common ead fields for list display, plus full-text relevance score
-        return_fields = gwpc_listfields
-        return_fields.append('fulltext_score')
-        # NOTE: adding the "only" filter makes the query slower because eXist has
-        # to construct return results; the more documents in a result set, the bigger
-        # the cost in time - currently returning entire document plus fulltext relevance score
-        results = FindingAid.objects.filter(fulltext_terms=search_terms).order_by('-fulltext_score').only(*return_fields) #.also('fulltext_score') #.only(*return_fields)
-        result_subset, paginator = paginate_queryset(request, results)
-
-        query_times = results.queryTime()
-        # FIXME: does not currently include keyword param in generated urls
-        # create a better browse view - display search terms, etc.
-
-        return render_to_response('postcards/search_results.html',
-                {'postcards' : result_subset,
-                 'keywords'  : search_terms,
-                 'url_params' : '?' + urlencode({'keywords': search_terms}),
-                 'querytime': [query_times]},
-                 context_instance=RequestContext(request))
-    else:
-        form = KeywordSearchForm()
-            
-    return render_to_response('findingaids/search_form.html',
-                    {'form' : form, 'request': request },
-                    context_instance=RequestContext(request))
