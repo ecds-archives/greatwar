@@ -66,17 +66,7 @@ class PoetryTestCase(DjangoTestCase):
         self.assertEqual(response.status_code, expected,
                         'Expected %s but returned %s for %s' % \
                         (expected, response.status_code, gw_url)) 
-             
-    def test_view_search_title(self):
-        search_url = reverse('poetry:search')
-        response = self.client.get(search_url, {"title" : "Flower"})
-        expected = 200
-        self.assertEqual(response.status_code, expected,
-                        'Expected %s but returned %s for %s' % \
-                        (expected, response.status_code, search_url))
-        # should include 'Flower'
-        self.assertContains(response, 'Flower')
-        
+
     def test_view_search_author(self):
         search_url = reverse('poetry:search')
         response = self.client.get(search_url, {"author" : "Smith"})
@@ -125,3 +115,22 @@ class FullTextPoetryViewsTest(TestCase):
                         (expected, response.status_code, search_url))
         self.assertContains(response, '<span class="exist-match">Pale spectre</span> of the slain',
             msg_prefix='search results include poem line with exact phrase search term highlighted')
+
+
+    def test_view_search_title(self):
+        search_url = reverse('poetry:search')
+        response = self.client.get(search_url, {'title': 'Lowlands'})
+        expected = 200
+        self.assertEqual(response.status_code, expected, 'Expected %s but returned %s for %s' % \
+                        (expected, response.status_code, search_url))
+        #Should include link to elliott009
+        self.assertContains(response, reverse('poetry:poem', kwargs={'doc_id':'flower', 'div_id': 'flower02'}),
+            msg_prefix='search results include link to poem with match (elliott009)')
+
+        #includes link to containing book
+        self.assertContains(response, reverse('poetry:book-toc', kwargs={'doc_id':'flower'}),
+            msg_prefix='search results include link to book that contains poem with match')
+
+        #correct title apears in searh results
+        self.assertContains(response, "THE LOWLANDS OF FLANDERS(An Old Song Resung)")
+ 
