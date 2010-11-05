@@ -103,10 +103,10 @@ TEMPLATE_DIRS = (
 )
 
 INSTALLED_APPS = (
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.sites',
+    #'django.contrib.auth',
+    #'django.contrib.contenttypes',
+    #'django.contrib.sessions',
+    #'django.contrib.sites',
     'eulcore', # https://svn.library.emory.edu/svn/python-eulcore/
     'eulcore.django.testsetup',
     'eulcore.django.fedora',
@@ -122,6 +122,9 @@ EXISTDB_INDEX_CONFIGFILE = path.join(BASE_DIR, "exist_index.xconf")
 
 # temporary pid - should eventually use ARK. must match PID in fixture
 POSTCARD_COLLECTION_PID = 'greatwar:postcards-collection'
+
+# the default owner of all fedora objects created by this app
+FEDORA_OBJECT_OWNERID = 'beck-greatwar'
 
 EXTENSION_DIRS = (
     path.join(BASE_DIR, '../externals/django-modules'),
