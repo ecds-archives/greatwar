@@ -7,7 +7,7 @@ from eulcore.fedora.models import DigitalObject, FileDatastream, XmlDatastream
 from eulcore.xmlmap import XmlObject
 from eulcore.xmlmap.fields import NodeListField
 from eulcore.xmlmap.teimap import TeiFigure, TeiInterpGroup, TeiInterp, TeiLineGroup
-from eulcore.xmlmap.teimap import TEI_NAMESPACE
+from eulcore.xmlmap.teimap import _TeiBase
 
 # TEI postcard models
 
@@ -45,8 +45,8 @@ class ImageObject(DigitalObject):
 
 
 # map interpgroup into a categories object that can be used as fedora datastream class
-class RepoCategories(XmlObject):
-    interp_groups = NodeListField("interpGrp", TeiInterpGroup)
+class RepoCategories(_TeiBase):
+    interp_groups = NodeListField("tei:interpGrp", TeiInterpGroup)
 
 class PostcardCollection(DigitalObject):
     CONTENT_MODELS = [ 'info:fedora/emory-control:Collection-1.0' ]
