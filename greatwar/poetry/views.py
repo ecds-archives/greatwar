@@ -111,12 +111,10 @@ def search(request):
             
         response = render_to_response('poetry/search.html', {
                 "search": form,
-                "paginator": search_paginator,
-                "poetry": search_page,
+                "poetry_paginated": search_page,
                 "keyword": form.cleaned_data['keyword'],
                 "title": form.cleaned_data['title'],
                 "author": form.cleaned_data['author'],
-                "page": page
         },
         context_instance=RequestContext(request))
     #no search conducted yet, default form
