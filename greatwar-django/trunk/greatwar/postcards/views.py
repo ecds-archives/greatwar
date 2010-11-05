@@ -15,12 +15,21 @@ import logging
 # FIXME: set repo default type somewhere in a single place
 
 def summary(request):
-   "Show the postcard home page"
-   count = 0        # TODO: get count from fedora
-   # TODO: get categories from fedora collection object
-   return render_to_response('postcards/index.html', {
+    '''Postcard summary/about page with information about the postcards and
+    various entry points for accessing them.'''
+
+    # get a list of all the postcards by searching in fedora
+    # - used to get total count, and to display a random postcard
+    # NOTE: this may be inefficient when all postcards are loaded; consider caching
+    repo = Repository()
+    search_opts = {'pid__contains': '%s:*' % settings.FEDORA_PIDSPACE }
+    postcards = list(repo.find_objects(**search_opts))
+    count = len(postcards)
+    # TODO: get categories from fedora collection object
+    return render_to_response('postcards/index.html', {
                                #'categories' : categories,
                                'count' : count,
+                               'postcards': postcards,
                                },
                               context_instance=RequestContext(request))
 
@@ -29,6 +38,7 @@ def browse(request):
     repo = Repository()
     repo.default_object_type = ImageObject
     # TEMPORARY: restrict to postcards by pidspace
+    # NOTE: tests rely somewhat on restriction by pidspace...
     search_opts = {'pid__contains': '%s:*' % settings.FEDORA_PIDSPACE }
     number_of_results = 15
     context = {}

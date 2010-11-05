@@ -9,16 +9,9 @@
 
 
 {% if postcards_paginated %}
-     {% for postcard in postcards_paginated.object_list %}
-      <p class="thumbnail">
-       <a href="{% url postcards:card pid=postcard.pid %}" class="img">
-      <img class="thumbnail" alt="postcard thumbnail" 
-        src="{% url postcards:img-thumb pid=postcard.pid %}" />
-      </a> 
-      <br/>
-       {{ postcard.label }}
-       </p>
-      {% endfor %}
+   {% for postcard in postcards_paginated.object_list %}
+     {% include 'postcards/_thumbnail_view.html' %}
+   {% endfor %}
 {% endif %}
 
 
