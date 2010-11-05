@@ -31,6 +31,7 @@ class KeyValue(XmlModel, TeiInterp):
 # preliminary fedora object for images
 class ImageObject(DigitalObject):
     CONTENT_MODELS = [ 'info:fedora/djatoka:jp2CModel' ]
+    IMAGE_SERVICE = 'djatoka:jp2SDef'
     
     # DC & RELS-EXT inherited
     # NOTE: dsid 'source' required for djatoka cmodel image service
@@ -40,9 +41,16 @@ class ImageObject(DigitalObject):
         })
 
     def thumbnail(self):
-        # shortcut to image dissemination
-        return self.getDissemination('djatoka:jp2SDef', 'getRegion', {'level': '1'})
+        'Shortcut to thumbnail-size image dissemination.'
+        return self.getDissemination(self.IMAGE_SERVICE, 'getRegion', {'level': '1'})
 
+    def medium_image(self):
+        'Shortcut to medium-size image dissemination.'
+        return self.getDissemination(self.IMAGE_SERVICE, 'getRegion', {'level': '3'})
+
+    def large_image(self):
+        'Shortcut to large-size image dissemination.'
+        return self.getDissemination(self.IMAGE_SERVICE, 'getRegion', {'level': '5'})
 
 # map interpgroup into a categories object that can be used as fedora datastream class
 class RepoCategories(_TeiBase):

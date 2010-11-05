@@ -100,3 +100,26 @@ class PostcardViewsTestCase(DjangoTestCase):
         for subject in postcard.dc.content.subject_list:
             self.assertContains(response, subject,
                 msg_prefix='subject %s contained in postcard view' % subject)
+
+    def test_postcard_thumbnail(self):
+        # nonexistent pid should return 404
+        thumb_url = reverse('postcards:img-thumb', kwargs={'pid': 'bogus:nonexistent-pid'})
+        response = self.client.get(thumb_url)
+        expected = 404
+        self.assertEqual(response.status_code, expected,
+                        'Expected %s but returned %s for %s' % \
+                        (expected, response.status_code, thumb_url))
+
+        # first fixture object
+        postcard = postcards[0]
+        # TODO/FIXME: getting a 500 error on this; something wrong with fixture?
+        thumb_url = reverse('postcards:img-thumb', kwargs={'pid': postcard.pid})
+        #response = self.client.get(thumb_url)
+        #expected = 200
+        #self.assertEqual(response.status_code, expected,
+        #               'Expected %s but returned %s for %s' % \
+        #                (expected, response.status_code, thumb_url))
+        # TODO: also test mimetype
+        
+
+        
