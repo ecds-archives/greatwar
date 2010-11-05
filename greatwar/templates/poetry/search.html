@@ -39,11 +39,10 @@
 
 {% if search.is_valid %}
 
-  {% if poetry %} Found {{ poetry.count }} item{{ poetry.count|pluralize }}.<br/> {% endif %}
-  {{ poetry.count }} displaying {{ poetry.start_index }} - {{ poetry.end_index }} of {{ paginator.count }}
+  Displaying {{ poetry_paginated.start_index }} - {{ poetry_paginated.end_index }} of {{ poetry_paginated.paginator.count }}
   
   <ul>
-      {% for poem in poetry.object_list %}
+      {% for poem in poetry_paginated.object_list %}
       <li><a href="{% url poetry:poem poem.doc_id poem.id %}">{{ poem.title }}</a> in <a href="{% url poetry:book-toc poem.doc_id %}"><i>{{ poem.doctitle }}</i></a>
   
          {% if poem.line_matches %}
@@ -60,17 +59,17 @@
     <td colspan="3">&nbsp;</td>
   </tr>
   <tr>
-    <td width="150">
+    <td width="160">
     &nbsp;
-    {% if poetry.has_previous %}
-        <a href="?page={{ poetry.previous_page_number }}&keyword={{keyword}}&title={{title}}&author={{author}}">[&lt;&lt; Previous]</a>
+    {% if poetry_paginated.has_previous %}
+        <a href="?page={{ poetry_paginated.previous_page_number }}&keyword={{keyword}}&title={{title}}&author={{author}}">[ &nbsp;&lt;&lt; Previous&nbsp; ]</a>
     {% endif %}
     </td>
     
      <td align="center">
       [&nbsp; 
-      {% for current_page in paginator.page_range %}
-        {% if page == current_page %}
+      {% for current_page in poetry_paginated.paginator.page_range %}
+        {% if poetry_paginated.number == current_page %}
           &nbsp;{{ current_page }}&nbsp;
         {% else %}
           <a href="?page={{ current_page }}&keyword={{keyword}}&title={{title}}&author={{author}}">&nbsp;{{ current_page }}&nbsp;</a>
@@ -79,9 +78,9 @@
       &nbsp;]
      </td>
   
-      <td width="150" align="right">
-      {% if poetry.has_next %}
-          <a href="?page={{ poetry.next_page_number }}&keyword={{keyword}}&title={{title}}&author={{author}}">[Next &gt;&gt;]</a>
+      <td width="110" align="right">
+      {% if poetry_paginated.has_next %}
+          <a href="?page={{ poetry_paginated.next_page_number }}&keyword={{keyword}}&title={{title}}&author={{author}}">[ &nbsp;Next &gt;&gt;&nbsp; ]</a>
       {% endif %}
       &nbsp;
       </td>
