@@ -37,18 +37,57 @@
 
 {% if server_error %}{{ server_error }}{% endif %}
 
-{% if poetry %} Found {{ poetry.count }} item{{ poetry.count|pluralize }}.<br/> {% endif %}
-{{ search_page.paginator.count }} displaying {{ search_page.start_index }} - {{ search_page.end_index }}
-<ul>
-    {% for poem in poetry %}
-    <li><a href="{% url poetry:poem poem.doc_id poem.id %}">{{ poem.title }}</a> in <a href="{% url poetry:book-toc poem.doc_id %}"><i>{{ poem.doctitle }}</i></a>
+{% if search.is_valid %}
 
-       {% if poem.line_matches %}
-         {% for line in poem.line_matches %} <p class="kwic">...{{ line|exist_matches }}...</p> {% endfor %}
-       {% endif %}
-    </li>
-    {% empty %}
-    <li>No records returned</li>
-    {% endfor %}
-</ul>
+  {% if poetry %} Found {{ poetry.count }} item{{ poetry.count|pluralize }}.<br/> {% endif %}
+  {{ poetry.count }} displaying {{ poetry.start_index }} - {{ poetry.end_index }} of {{ paginator.count }}
+  
+  <ul>
+      {% for poem in poetry.object_list %}
+      <li><a href="{% url poetry:poem poem.doc_id poem.id %}">{{ poem.title }}</a> in <a href="{% url poetry:book-toc poem.doc_id %}"><i>{{ poem.doctitle }}</i></a>
+  
+         {% if poem.line_matches %}
+           {% for line in poem.line_matches %} <p class="kwic">...{{ line|exist_matches }}...</p> {% endfor %}
+         {% endif %}
+      </li>
+      {% empty %}
+      <li>No records returned</li>
+      {% endfor %}
+  </ul>
+  
+  <table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td colspan="3">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="150">
+    &nbsp;
+    {% if poetry.has_previous %}
+        <a href="?page={{ poetry.previous_page_number }}&keyword={{keyword}}&title={{title}}&author={{author}}">[&lt;&lt; Previous]</a>
+    {% endif %}
+    </td>
+    
+     <td align="center">
+      [&nbsp; 
+      {% for current_page in paginator.page_range %}
+        {% if page == current_page %}
+          &nbsp;{{ current_page }}&nbsp;
+        {% else %}
+          <a href="?page={{ current_page }}&keyword={{keyword}}&title={{title}}&author={{author}}">&nbsp;{{ current_page }}&nbsp;</a>
+        {% endif %}
+      {% endfor %}
+      &nbsp;]
+     </td>
+  
+      <td width="150" align="right">
+      {% if poetry.has_next %}
+          <a href="?page={{ poetry.next_page_number }}&keyword={{keyword}}&title={{title}}&author={{author}}">[Next &gt;&gt;]</a>
+      {% endif %}
+      &nbsp;
+      </td>
+  </tr>
+  </table>
+
+{% endif %}
+
 {% endblock %}
