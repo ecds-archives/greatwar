@@ -34,10 +34,9 @@ class Command(BaseCommand):
         v_normal = 1
 
         repo = Repository()
-        collection = repo.get_object('greatwar:postcards-collection',
-                                    type=PostcardCollection)
+        collection = PostcardCollection.get()
         if not collection.exists:
-            raise Exception("greatwar:postcards-collection is not in the repository. Do you need to syncrepo?")
+            raise Exception(collection.pid + " is not in the repository. Do you need to syncrepo?")
 
         # make a dictionary of subjects so type and value is easily accessible by id
         interps = collection.interp.content.interp_groups
@@ -47,9 +46,10 @@ class Command(BaseCommand):
                 subjects[interp.id] = (group.type, interp.value)
 
         cards_tei = load_xmlobject_from_file(cards_fname, xmlclass=Tei)
+        cards = cards_tei.body.all_figures
         files = 0
         ingested = 0
-        for c in cards_tei.body.all_figures:
+        for c in cards:
             file = os.path.join(image_dir, '%s.tif' % c.entity)
             if os.access(file, os.F_OK):
                 if verbosity >= v_normal:
@@ -74,8 +74,13 @@ class Command(BaseCommand):
             # TODO: handle postcards with text/poetry lines
 
             # convert interp text into dc: subjects
-            obj.dc.content.subject_list.extend(['%s: %s' % subjects[ana_id]
-                                                for ana_id in c.ana.split()])
+            new_subjects = []
+            for ana_id in c.ana.split():
+                if ana_id in subjects:
+                    new_subjects.append('%s: %s' % subjects[ana_id])
+                else:
+                    print 'ana id %s not recognized for %s' % (ana_id, c.entity)
+            obj.dc.content.subject_list.extend(new_subjects)
 
             # common DC for all postcards
             obj.dc.content.type = 'image'
@@ -104,7 +109,7 @@ class Command(BaseCommand):
 
 
         # summarize what was done
-        print "Found %d postcards " % cards.count()
+        print "Found %d postcards " % len(cards)
         print "Found %d postcard files " % files
         print "Ingested %d postcards " % ingested
 
