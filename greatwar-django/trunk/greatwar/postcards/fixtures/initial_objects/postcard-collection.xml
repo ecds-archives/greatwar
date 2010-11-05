@@ -21,59 +21,59 @@
       <foxml:xmlContent>
           <tei:div xmlns:tei="http://www.tei-c.org/ns/1.0">
             <tei:interpGrp type="nationality">
-                <tei:interp id="nat-brit" value="Britain"/>
-                <tei:interp id="nat-fr" value="France"/>
-                <tei:interp id="nat-us" value="United States"/>
-                <tei:interp id="nat-it" value="Italy"/>
-                <tei:interp id="nat-de" value="Germany"/>
-                <tei:interp id="nat-rus" value="Russia"/>
-                <tei:interp id="nat-ee" value="Eastern Europe"/>
-                <tei:interp id="nat-bel" value="Belgium"/>
-                <tei:interp id="nat-ca" value="Canada"/>
-                <tei:interp id="nat-jp" value="Japan"/>
-                <tei:interp id="nat-nl" value="Netherlands"/>
-                <tei:interp id="nat-au" value="Austria"/>
+                <tei:interp xml:id="nat-brit" value="Britain"/>
+                <tei:interp xml:id="nat-fr" value="France"/>
+                <tei:interp xml:id="nat-us" value="United States"/>
+                <tei:interp xml:id="nat-it" value="Italy"/>
+                <tei:interp xml:id="nat-de" value="Germany"/>
+                <tei:interp xml:id="nat-rus" value="Russia"/>
+                <tei:interp xml:id="nat-ee" value="Eastern Europe"/>
+                <tei:interp xml:id="nat-bel" value="Belgium"/>
+                <tei:interp xml:id="nat-ca" value="Canada"/>
+                <tei:interp xml:id="nat-jp" value="Japan"/>
+                <tei:interp xml:id="nat-nl" value="Netherlands"/>
+                <tei:interp xml:id="nat-au" value="Austria"/>
             </tei:interpGrp>
             <tei:interpGrp type="military">
-                <tei:interp id="mil-a" value="Army"/>
-                <tei:interp id="mil-na" value="Navy"/>
-                <tei:interp id="mil-p" value="propaganda"/>
-                <tei:interp id="mil-f" value="battle front"/>
-                <tei:interp id="mil-nur" value="nurse"/>
+                <tei:interp xml:id="mil-a" value="Army"/>
+                <tei:interp xml:id="mil-na" value="Navy"/>
+                <tei:interp xml:id="mil-p" value="propaganda"/>
+                <tei:interp xml:id="mil-f" value="battle front"/>
+                <tei:interp xml:id="mil-nur" value="nurse"/>
             </tei:interpGrp>
             <tei:interpGrp type="homefront">
-                <tei:interp id="hf-w" value="women"/>
-                <tei:interp id="hf-c" value="children"/>
-                <tei:interp id="hf-p" value="propaganda"/>
-                <tei:interp id="hf-re" value="religion"/>
-                <tei:interp id="hf-ro" value="romance"/>
-                <tei:interp id="hf-h" value="home"/>
+                <tei:interp xml:id="hf-w" value="women"/>
+                <tei:interp xml:id="hf-c" value="children"/>
+                <tei:interp xml:id="hf-p" value="propaganda"/>
+                <tei:interp xml:id="hf-re" value="religion"/>
+                <tei:interp xml:id="hf-ro" value="romance"/>
+                <tei:interp xml:id="hf-h" value="home"/>
             </tei:interpGrp>
             <tei:interpGrp type="content">
-                <tei:interp id="con-v" value="verse"/>
-                <tei:interp id="con-h" value="humor"/>
-                <tei:interp id="con-p" value="person"/>
-                <tei:interp id="con-m" value="memorial"/><!-- use with im-ph to indicate
+                <tei:interp xml:id="con-v" value="verse"/>
+                <tei:interp xml:id="con-h" value="humor"/>
+                <tei:interp xml:id="con-p" value="person"/>
+                <tei:interp xml:id="con-m" value="memorial"/><!-- use with im-ph to indicate
     photo of memorial -->
-                <tei:interp id="con-f" value="flag"/>
-                <tei:interp id="con-r" value="war ruins"/>
-                <tei:interp id="con-el" value="Uncle Elmer"/>
+                <tei:interp xml:id="con-f" value="flag"/>
+                <tei:interp xml:id="con-r" value="war ruins"/>
+                <tei:interp xml:id="con-el" value="Uncle Elmer"/>
             </tei:interpGrp>
             <tei:interpGrp type="image">
-                <tei:interp id="im-s" value="silks"/>
-                <tei:interp id="im-ph" value="photo"/>
-                <tei:interp id="im-pa" value="painting"/>
-                <tei:interp id="im-dr" value="drawing"/>
-                <tei:interp id="im-ca" value="cartoon"/>
-                <tei:interp id="im-en" value="engraving"/>
-                <tei:interp id="im-po" value="poster"/>
+                <tei:interp xml:id="im-s" value="silks"/>
+                <tei:interp xml:id="im-ph" value="photo"/>
+                <tei:interp xml:id="im-pa" value="painting"/>
+                <tei:interp xml:id="im-dr" value="drawing"/>
+                <tei:interp xml:id="im-ca" value="cartoon"/>
+                <tei:interp xml:id="im-en" value="engraving"/>
+                <tei:interp xml:id="im-po" value="poster"/>
             </tei:interpGrp>
             <tei:interpGrp type="time period">
-                <tei:interp id="t-pre" value="pre Great War"/>
-                <tei:interp id="t-wwi" value="during Great War"/>
-                <tei:interp id="t-post" value="post Great War"/>
-                <tei:interp id="t-ww2" value="World War II"/>
-                <tei:interp id="t-post2" value="post World War II"/>
+                <tei:interp xml:id="t-pre" value="pre Great War"/>
+                <tei:interp xml:id="t-wwi" value="during Great War"/>
+                <tei:interp xml:id="t-post" value="post Great War"/>
+                <tei:interp xml:id="t-ww2" value="World War II"/>
+                <tei:interp xml:id="t-post2" value="post World War II"/>
             </tei:interpGrp>
         </tei:div>
       </foxml:xmlContent>
