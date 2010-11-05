@@ -70,8 +70,7 @@ def view_postcard(request, pid):
     repo = Repository()
     try:
         obj = repo.get_object(pid, type=ImageObject)
-        obj.label
-        # TODO: 404 if not found
+        obj.label   # access object label to trigger 404 before we get to the template
         return render_to_response('postcards/view_postcard.html',
                               {'card' : obj },
                                 context_instance=RequestContext(request))                                                       
@@ -79,26 +78,26 @@ def view_postcard(request, pid):
         raise Http404
 
 # TODO: clean up image disseminations, make more efficient
-# OR: can we just link to fedora image disseminations?
-def thumbnail_image(request, pid):
-    # serve out thumbnail image
-    repo = Repository()
-    obj = repo.get_object(pid, type=ImageObject)
-    return HttpResponse(obj.thumbnail(), mimetype='image/jpeg')
+def postcard_image(request, pid, size):
+    '''Serve out postcard image in requested size.
 
-def medium_image(request, pid):
-    # serve out medium image dissemination
-    repo = Repository()
-    obj = repo.get_object(pid, type=ImageObject)
-    return HttpResponse(obj.getDissemination('djatoka:jp2SDef', 'getRegion', {'level': '3'}),
-            mimetype='image/jpeg')
-
-def large_image(request, pid):
-    # serve out large image dissemination
-    repo = Repository()
-    obj = repo.get_object(pid, type=ImageObject)
-    return HttpResponse(obj.getDissemination('djatoka:jp2SDef', 'getRegion', {'level': '5'}),
-            mimetype='image/jpeg')
+    :param pid: postcard object pid
+    :param size: size to return, one of thumbnail, medium, or large
+    '''
+    try:
+        repo = Repository()
+        obj = repo.get_object(pid, type=ImageObject)
+        if size == 'thumbnail':
+            image = obj.thumbnail()
+        elif size == 'medium':
+            image = obj.medium_image()
+        elif size == 'large':
+            image = obj.large_image()
+        
+        return HttpResponse(image, mimetype='image/jpeg')
+    
+    except RequestFailed as fail:
+        raise Http404
 
 
 def search(request):
