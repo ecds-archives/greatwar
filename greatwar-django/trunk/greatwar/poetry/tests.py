@@ -67,17 +67,6 @@ class PoetryTestCase(DjangoTestCase):
                         'Expected %s but returned %s for %s' % \
                         (expected, response.status_code, gw_url)) 
 
-    def test_view_search_author(self):
-        search_url = reverse('poetry:search')
-        response = self.client.get(search_url, {"author" : "Smith"})
-        expected = 200
-        self.assertEqual(response.status_code, expected,
-                        'Expected %s but returned %s for %s' % \
-                        (expected, response.status_code, search_url))
-        # should include 'Smith'
-        self.assertContains(response, 'Smith')
-
-        
 class FullTextPoetryViewsTest(TestCase):
     # tests for views that require eXist full-text index
     exist_fixtures = { 'index' : settings.EXISTDB_INDEX_CONFIGFILE,
@@ -123,9 +112,9 @@ class FullTextPoetryViewsTest(TestCase):
         expected = 200
         self.assertEqual(response.status_code, expected, 'Expected %s but returned %s for %s' % \
                         (expected, response.status_code, search_url))
-        #Should include link to elliott009
+        #Should include link to flower02
         self.assertContains(response, reverse('poetry:poem', kwargs={'doc_id':'flower', 'div_id': 'flower02'}),
-            msg_prefix='search results include link to poem with match (elliott009)')
+            msg_prefix='search results include link to poem with match')
 
         #includes link to containing book
         self.assertContains(response, reverse('poetry:book-toc', kwargs={'doc_id':'flower'}),
@@ -133,4 +122,35 @@ class FullTextPoetryViewsTest(TestCase):
 
         #correct title apears in searh results
         self.assertContains(response, "THE LOWLANDS OF FLANDERS(An Old Song Resung)")
- 
+
+    def test_view_search_author(self):
+        search_url = reverse('poetry:search')
+        response = self.client.get(search_url, {"author" : "Binyon"})
+        expected = 200
+        self.assertEqual(response.status_code, expected,
+                        'Expected %s but returned %s for %s' % \
+                        (expected, response.status_code, search_url))
+
+        #Result 1
+        #Should include link to fiery014
+        self.assertContains(response, reverse('poetry:poem', kwargs={'doc_id':'fiery', 'div_id': 'fiery014'}),
+            msg_prefix='search results include link to poem with match)')
+
+        #includes link to containing book
+        self.assertContains(response, reverse('poetry:book-toc', kwargs={'doc_id':'fiery'}),
+            msg_prefix='search results include link to book that contains poem with match')
+
+        #correct title apears in searh results
+        self.assertContains(response, "The Cause")
+
+        #Result 2
+        #Should include link to elliott005
+        self.assertContains(response, reverse('poetry:poem', kwargs={'doc_id':'elliot', 'div_id': 'elliott005'}),
+            msg_prefix='search results include link to poem with match)')
+
+        #includes link to containing book
+        self.assertContains(response, reverse('poetry:book-toc', kwargs={'doc_id':'elliot'}),
+            msg_prefix='search results include link to book that contains poem with match')
+
+        #correct title apears in searh results
+        self.assertContains(response, 'ODE')
