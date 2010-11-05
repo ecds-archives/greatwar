@@ -8,6 +8,7 @@ from django.core.paginator import Paginator, InvalidPage, EmptyPage
 from django.template import RequestContext
 
 from eulcore.django.existdb.db import ExistDB
+from eulcore.existdb.query import escape_string
 from eulcore.existdb.exceptions import DoesNotExist # ReturnedMultiple needed also ?
 from eulcore.xmlmap.teimap import TEI_NAMESPACE
 
@@ -23,8 +24,8 @@ def books(request):
 
 
 def book_toc(request, doc_id):
-    "Display the contents of a book"
-    #book = PoetryBook.objects.getDocument(docname)
+    "Display the contents of a single book."
+    # TODO: 404 if not found
     book = PoetryBook.objects.get(id__exact=doc_id)
     return render_to_response('poetry/book_toc.html', { 'book' : book})
 
@@ -88,10 +89,11 @@ def search(request):
         if 'keyword' in form.cleaned_data and form.cleaned_data['keyword']:
             search_opts['fulltext_terms'] = '%s' % form.cleaned_data['keyword']
                     
-        poems = Poem.objects.only("doctitle","doc_id","title", "id").filter(type__exact="poem").filter(**search_opts)
+        poems = Poem.objects.only("doctitle","doc_id","title", "id").filter(**search_opts)
         if 'keyword' in form.cleaned_data and form.cleaned_data['keyword']:
             # TODO: fix query escaping - use logic from eulcore?
-            poems = poems.only_raw(line_matches='%%(xq_var)s//tei:l[ft:query(., "%s")]' % form.cleaned_data['keyword'])
+            poems = poems.only_raw(line_matches='%%(xq_var)s//tei:l[ft:query(., "%s")]' \
+                                    % escape_string(form.cleaned_data['keyword']))
         poetry = poems.all()
         search_paginator = Paginator(poetry, 20)
         try:

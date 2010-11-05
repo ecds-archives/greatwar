@@ -86,13 +86,42 @@ class PoetryTestCase(DjangoTestCase):
                         (expected, response.status_code, gw_url))                         
         # should include 'Smith'
         self.assertContains(response, 'Smith')
+
         
+class FullTextPoetryViewsTest(TestCase):
+    # tests for views that require eXist full-text index
+    exist_fixtures = { 'index' : settings.EXISTDB_INDEX_CONFIGFILE,
+                       'directory' : exist_fixture_path }
+
     def test_view_search_keyword(self):
-        gw_url = "http://localhost:8001/poetry/search/?keyword=rainbow"
-        response = self.client.get(gw_url)
+        search_url = reverse('poetry:search')
+
+        # TODO: test/cleanup form display - shouldn't complain about no search terms,
+        # 0 results when user hasn't entered a query
+
+        response = self.client.get(search_url, {'keyword': 'spectre'})
         expected = 200
         self.assertEqual(response.status_code, expected,
                         'Expected %s but returned %s for %s' % \
-                        (expected, response.status_code, gw_url))                         
-        # should include 'rainbow'
-        self.assertContains(response, 'rainbow')                
+                        (expected, response.status_code, search_url))
+        
+        self.assertContains(response, reverse('poetry:poem', kwargs={'doc_id':'fiery',
+            'div_id': 'fiery012'}),
+            msg_prefix='search results include link to poem with match (fiery012)')
+        self.assertContains(response, 'From Germany',
+            msg_prefix='search results include title of poem with match')
+        self.assertContains(response, reverse('poetry:book-toc', kwargs={'doc_id':'fiery'}),
+            msg_prefix='search results include link to book that contains poem with match')
+        self.assertContains(response, 'Pale <span class="exist-match">spectre</span>',
+            msg_prefix='search results include poem line with search term highlighted')
+
+        # TODO: also matches fiery004 with title of 'None' - fix title display, test
+
+        # exact phrase search - should work in poem line matches
+        response = self.client.get(search_url, {'keyword': '"pale spectre"'})
+        expected = 200
+        self.assertEqual(response.status_code, expected,
+                        'Expected %s but returned %s for %s' % \
+                        (expected, response.status_code, search_url))
+        self.assertContains(response, '<span class="exist-match">Pale spectre</span> of the slain',
+            msg_prefix='search results include poem line with exact phrase search term highlighted')
