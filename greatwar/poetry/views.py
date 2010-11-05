@@ -81,6 +81,9 @@ def search(request):
     response_code = None
     search_opts = {}
     poetry = None
+    number_of_results = 5
+    
+    
     if form.is_valid(): 
         if 'title' in form.cleaned_data and form.cleaned_data['title']:
             search_opts['title__fulltext_terms'] = '%s' % form.cleaned_data['title']
@@ -95,7 +98,7 @@ def search(request):
             poems = poems.only_raw(line_matches='%%(xq_var)s//tei:l[ft:query(., "%s")]' \
                                     % escape_string(form.cleaned_data['keyword']))
         poetry = poems.all()
-        search_paginator = Paginator(poetry, 20)
+        search_paginator = Paginator(poetry, number_of_results)
         try:
             page = int(request.GET.get('page', '1'))
         except ValueError:
@@ -105,14 +108,24 @@ def search(request):
             search_page = search_paginator.page(page)
         except (EmptyPage, InvalidPage):
             search_page = search_paginator.page(paginator.num_pages)
-
-    response = render_to_response('poetry/search.html', {
+            
+        response = render_to_response('poetry/search.html', {
                 "search": form,
-                "poetry": poetry,
- #               'search_params': search_params,
- #               'url_params': '?' + urlencode('search_params'),
+                "paginator": search_paginator,
+                "poetry": search_page,
+                "keyword": form.cleaned_data['keyword'],
+                "title": form.cleaned_data['title'],
+                "author": form.cleaned_data['author'],
+                "page": page
         },
-                context_instance=RequestContext(request))
+        context_instance=RequestContext(request))
+    #no search conducted yet, default form
+    else:
+        response = render_to_response('poetry/search.html', {
+                    "search": form
+            },
+            context_instance=RequestContext(request))
+        
     if response_code is not None:
         response.status_code = response_code
     return response                                                         
