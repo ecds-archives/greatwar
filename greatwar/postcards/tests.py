@@ -41,6 +41,10 @@ class PostcardViewsTestCase(DjangoTestCase):
             msg_prefix='postcard index page includes link to postcard browse')
         self.assertContains(response, reverse('postcards:search'),
             msg_prefix='postcard index page includes link to postcard search')
+        # NOTE: currently, count may get off if tests fail and fixtures are not removed
+        self.assertContains(response, 'browse through all <b>3</b> postcards',
+            msg_prefix='postcard index page includes total postcard count')
+        # should contain one random postcard  - how to test?
 
     def test_browse(self):
         'Test postcard browse page'
