@@ -19,63 +19,63 @@
   <foxml:datastream ID="INTERP" CONTROL_GROUP="M" STATE="A" VERSIONABLE="true">
     <foxml:datastreamVersion ID="INTERP.0" MIMETYPE="text/xml" LABEL="Postcard Categories">
       <foxml:xmlContent>
-          <div>
-            <interpGrp type="nationality">
-                <interp id="nat-brit" value="Britain"/>
-                <interp id="nat-fr" value="France"/>
-                <interp id="nat-us" value="United States"/>
-                <interp id="nat-it" value="Italy"/>
-                <interp id="nat-de" value="Germany"/>
-                <interp id="nat-rus" value="Russia"/>
-                <interp id="nat-ee" value="Eastern Europe"/>
-                <interp id="nat-bel" value="Belgium"/>
-                <interp id="nat-ca" value="Canada"/>
-                <interp id="nat-jp" value="Japan"/>
-                <interp id="nat-nl" value="Netherlands"/>
-                <interp id="nat-au" value="Austria"/>
-            </interpGrp>
-            <interpGrp type="military">
-                <interp id="mil-a" value="Army"/>
-                <interp id="mil-na" value="Navy"/>
-                <interp id="mil-p" value="propaganda"/>
-                <interp id="mil-f" value="battle front"/>
-                <interp id="mil-nur" value="nurse"/>
-            </interpGrp>
-            <interpGrp type="homefront">
-                <interp id="hf-w" value="women"/>
-                <interp id="hf-c" value="children"/>
-                <interp id="hf-p" value="propaganda"/>
-                <interp id="hf-re" value="religion"/>
-                <interp id="hf-ro" value="romance"/>
-                <interp id="hf-h" value="home"/>
-            </interpGrp>
-            <interpGrp type="content">
-                <interp id="con-v" value="verse"/>
-                <interp id="con-h" value="humor"/>
-                <interp id="con-p" value="person"/>
-                <interp id="con-m" value="memorial"/><!-- use with im-ph to indicate
+          <tei:div xmlns:tei="http://www.tei-c.org/ns/1.0">
+            <tei:interpGrp type="nationality">
+                <tei:interp id="nat-brit" value="Britain"/>
+                <tei:interp id="nat-fr" value="France"/>
+                <tei:interp id="nat-us" value="United States"/>
+                <tei:interp id="nat-it" value="Italy"/>
+                <tei:interp id="nat-de" value="Germany"/>
+                <tei:interp id="nat-rus" value="Russia"/>
+                <tei:interp id="nat-ee" value="Eastern Europe"/>
+                <tei:interp id="nat-bel" value="Belgium"/>
+                <tei:interp id="nat-ca" value="Canada"/>
+                <tei:interp id="nat-jp" value="Japan"/>
+                <tei:interp id="nat-nl" value="Netherlands"/>
+                <tei:interp id="nat-au" value="Austria"/>
+            </tei:interpGrp>
+            <tei:interpGrp type="military">
+                <tei:interp id="mil-a" value="Army"/>
+                <tei:interp id="mil-na" value="Navy"/>
+                <tei:interp id="mil-p" value="propaganda"/>
+                <tei:interp id="mil-f" value="battle front"/>
+                <tei:interp id="mil-nur" value="nurse"/>
+            </tei:interpGrp>
+            <tei:interpGrp type="homefront">
+                <tei:interp id="hf-w" value="women"/>
+                <tei:interp id="hf-c" value="children"/>
+                <tei:interp id="hf-p" value="propaganda"/>
+                <tei:interp id="hf-re" value="religion"/>
+                <tei:interp id="hf-ro" value="romance"/>
+                <tei:interp id="hf-h" value="home"/>
+            </tei:interpGrp>
+            <tei:interpGrp type="content">
+                <tei:interp id="con-v" value="verse"/>
+                <tei:interp id="con-h" value="humor"/>
+                <tei:interp id="con-p" value="person"/>
+                <tei:interp id="con-m" value="memorial"/><!-- use with im-ph to indicate
     photo of memorial -->
-                <interp id="con-f" value="flag"/>
-                <interp id="con-r" value="war ruins"/>
-                <interp id="con-el" value="Uncle Elmer"/>
-            </interpGrp>
-            <interpGrp type="image">
-                <interp id="im-s" value="silks"/>
-                <interp id="im-ph" value="photo"/>
-                <interp id="im-pa" value="painting"/>
-                <interp id="im-dr" value="drawing"/>
-                <interp id="im-ca" value="cartoon"/>
-                <interp id="im-en" value="engraving"/>
-                <interp id="im-po" value="poster"/>
-            </interpGrp>
-            <interpGrp type="time period">
-                <interp id="t-pre" value="pre Great War"/>
-                <interp id="t-wwi" value="during Great War"/>
-                <interp id="t-post" value="post Great War"/>
-                <interp id="t-ww2" value="World War II"/>
-                <interp id="t-post2" value="post World War II"/>
-            </interpGrp>
-        </div>
+                <tei:interp id="con-f" value="flag"/>
+                <tei:interp id="con-r" value="war ruins"/>
+                <tei:interp id="con-el" value="Uncle Elmer"/>
+            </tei:interpGrp>
+            <tei:interpGrp type="image">
+                <tei:interp id="im-s" value="silks"/>
+                <tei:interp id="im-ph" value="photo"/>
+                <tei:interp id="im-pa" value="painting"/>
+                <tei:interp id="im-dr" value="drawing"/>
+                <tei:interp id="im-ca" value="cartoon"/>
+                <tei:interp id="im-en" value="engraving"/>
+                <tei:interp id="im-po" value="poster"/>
+            </tei:interpGrp>
+            <tei:interpGrp type="time period">
+                <tei:interp id="t-pre" value="pre Great War"/>
+                <tei:interp id="t-wwi" value="during Great War"/>
+                <tei:interp id="t-post" value="post Great War"/>
+                <tei:interp id="t-ww2" value="World War II"/>
+                <tei:interp id="t-post2" value="post World War II"/>
+            </tei:interpGrp>
+        </tei:div>
       </foxml:xmlContent>
     </foxml:datastreamVersion>
   </foxml:datastream>
