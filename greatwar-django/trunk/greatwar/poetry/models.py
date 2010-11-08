@@ -28,4 +28,9 @@ class Poet(XmlModel, XmlObject):
     first_letter = StringField("substring(tei:reg,1,1)")
     name  = StringField("tei:reg")
     objects = Manager("//tei:div[@type='poem']/tei:docAuthor/tei:name/tei:choice")
-    
+
+class PoemSearch(XmlModel, TeiDiv):
+    ROOT_NAMESPACES = {'tei' : TEI_NAMESPACE}
+    line_matches = NodeListField('tei:l',"self")   # place-holder: must be retrieved with raw xpath to use ft:query
+    objects = Manager("//tei:div[@type='poem' or @type='play' or @type='story' or @type='essay']")
+    #using PoemSearch to retrieve only poem level objects in the search, not chapters or whole books
