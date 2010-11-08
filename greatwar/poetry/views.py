@@ -12,7 +12,7 @@ from eulcore.existdb.query import escape_string
 from eulcore.existdb.exceptions import DoesNotExist # ReturnedMultiple needed also ?
 from eulcore.xmlmap.teimap import TEI_NAMESPACE
 
-from greatwar.poetry.models import PoetryBook, Poem, Poet
+from greatwar.poetry.models import PoetryBook, Poem, Poet, PoemSearch
 from greatwar.poetry.forms import PoetrySearchForm
 
 
@@ -81,7 +81,7 @@ def search(request):
     response_code = None
     search_opts = {}
     poetry = None
-    number_of_results = 5
+    number_of_results = 10
     
     
     if form.is_valid(): 
@@ -92,7 +92,7 @@ def search(request):
         if 'keyword' in form.cleaned_data and form.cleaned_data['keyword']:
             search_opts['fulltext_terms'] = '%s' % form.cleaned_data['keyword']
                     
-        poems = Poem.objects.only("doctitle","doc_id","title", "id").filter(**search_opts)
+        poems = PoemSearch.objects.only("doctitle","doc_id","title", "id").filter(**search_opts)
         if 'keyword' in form.cleaned_data and form.cleaned_data['keyword']:
             # TODO: fix query escaping - use logic from eulcore?
             poems = poems.only_raw(line_matches='%%(xq_var)s//tei:l[ft:query(., "%s")]' \
