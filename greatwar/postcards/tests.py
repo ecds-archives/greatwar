@@ -2,31 +2,31 @@
 Great War Postcards Test Cases
 """
 
-from datetime import datetime
 from os import path
-import re
-from time import sleep
-from types import ListType
-from lxml import etree
-from urllib import quote as urlquote
 
-from django.conf import settings
-from django.core.cache import cache
-from django.core.paginator import Paginator
 from django.core.urlresolvers import reverse
-from django.http import Http404, HttpRequest
-from django.template import RequestContext, Template
-from django.test import Client, TestCase as DjangoTestCase
+from django.test import TestCase as DjangoTestCase
+
+from eulcore.django.fedora.server import Repository
 
 from greatwar.postcards.fixtures.postcards import FedoraFixtures
 
 exist_fixture_path = path.join(path.dirname(path.abspath(__file__)), 'fixtures')
 exist_index_path = path.join(path.dirname(path.abspath(__file__)), '..', 'exist_index.xconf')
 
-# load fixture postcards to test pidspace - will be removed after tests complete
-postcards = FedoraFixtures().load_postcards()
+
 
 class PostcardViewsTestCase(DjangoTestCase):
+    repo = Repository()
+    
+    # load fixture postcards to test pidspace
+    postcards = FedoraFixtures().load_postcards()
+
+    
+    def __del__(self):
+        for p in self.postcards:
+            self.repo.purge_object(p.pid)
+
                                   
     def test_index(self):
         "Test postcard index/about page"
@@ -57,7 +57,7 @@ class PostcardViewsTestCase(DjangoTestCase):
                         (expected, response.status_code, browse_url))
 
         # all fixture objects should on browse page
-        for p in postcards:
+        for p in self.postcards:
             self.assertContains(response, reverse('postcards:card',
                     kwargs={'pid': p.pid}),
                     msg_prefix='link to postcard fixture %s should be linked from browse page' % p.pid)
@@ -79,7 +79,7 @@ class PostcardViewsTestCase(DjangoTestCase):
                         (expected, response.status_code, postcard_url))
 
         # first fixture object
-        postcard = postcards[0]
+        postcard = self.postcards[0]
         postcard_url = reverse('postcards:card', kwargs={'pid': postcard.pid})
         response = self.client.get(postcard_url)
         expected = 200
@@ -111,7 +111,7 @@ class PostcardViewsTestCase(DjangoTestCase):
                         (expected, response.status_code, thumb_url))
 
         # first fixture object
-        postcard = postcards[0]
+        postcard = self.postcards[0]
         # TODO/FIXME: getting a 500 error on this; something wrong with fixture?
         thumb_url = reverse('postcards:img-thumb', kwargs={'pid': postcard.pid})
         #response = self.client.get(thumb_url)
