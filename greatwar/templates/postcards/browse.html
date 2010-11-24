@@ -20,7 +20,7 @@
     <td width="150">
     &nbsp;
     {% if postcards_paginated.has_previous %}
-        <a href="?page={{ postcards_paginated.previous_page_number }}&keyword={{keyword}}&title={{title}}&author={{author}}">[ &nbsp;&lt;&lt; Previous &nbsp;]</a>
+        <a href="?page={{ postcards_paginated.previous_page_number }}"{# &keyword={{keyword}}&title={{title}}&author={{author}} #}>[ &nbsp;&lt;&lt; Previous &nbsp;]</a>
     {% endif %}
     </td>
     

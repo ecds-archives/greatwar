@@ -2,6 +2,7 @@ from django.conf.urls.defaults import patterns, url
 
 urlpatterns = patterns('greatwar.postcards.views',
     url(r'^$', 'browse', name='browse'),
+    url(r'^(?P<subject>.*)$', 'browse', name='browse'),                    
     url(r'^about/$', 'summary', name='index'),    
     url(r'^(?P<pid>[^/]+)$', 'view_postcard', name='card'),
     url(r'^(?P<pid>[^/]+)/thumbnail/$', 'postcard_image', {'size': 'thumbnail'}, name='img-thumb'),

@@ -33,6 +33,7 @@
                 <tei:interp xml:id="nat-jp" value="Japan"/>
                 <tei:interp xml:id="nat-nl" value="Netherlands"/>
                 <tei:interp xml:id="nat-au" value="Austria"/>
+		<tei:interp xml:id="nat-hu" value="Hungary"/>
             </tei:interpGrp>
             <tei:interpGrp type="military">
                 <tei:interp xml:id="mil-a" value="Army"/>
