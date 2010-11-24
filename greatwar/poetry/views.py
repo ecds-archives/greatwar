@@ -86,7 +86,7 @@ def search(request):
     
     if form.is_valid(): 
         if 'title' in form.cleaned_data and form.cleaned_data['title']:
-            search_opts['title__fulltext_terms'] = '%s' % form.cleaned_data['title']
+            search_opts['title_list__fulltext_terms'] = '%s' % form.cleaned_data['title']
         if 'author' in form.cleaned_data and form.cleaned_data['author']:
             search_opts['docauthor__fulltext_terms'] = '%s' % form.cleaned_data['author']
         if 'keyword' in form.cleaned_data and form.cleaned_data['keyword']:

@@ -1,31 +1,17 @@
 """
 Great War Poetry Test Cases
 """
-from datetime import datetime
 from os import path
-import re
-from time import sleep
-from types import ListType
-from lxml import etree
-from urllib import quote as urlquote
 
 from django.conf import settings
-from django.core.cache import cache
-from django.core.paginator import Paginator
 from django.core.urlresolvers import reverse
-from django.http import Http404, HttpRequest
-from django.template import RequestContext, Template
-from django.test import Client, TestCase as DjangoTestCase
+from django.test import TestCase as DjangoTestCase
 
-from eulcore.xmlmap  import load_xmlobject_from_file, load_xmlobject_from_string, XmlObject
-from eulcore.xmlmap.teimap import Tei, TeiDiv, TeiLineGroup, TEI_NAMESPACE
-from eulcore.django.existdb.db import ExistDB
+from eulcore.xmlmap  import load_xmlobject_from_file, load_xmlobject_from_string
 from eulcore.django.test import TestCase
 
-from greatwar.poetry.models import PoetryBook, Poem, Poet
-from greatwar.poetry.views import books, book_toc, div, poets, poets_by_firstletter, _show_poets, poet_list
+from greatwar.poetry.models import PoetryBook, Poet
 
-import logging
 
 exist_fixture_path = path.join(path.dirname(path.abspath(__file__)), 'fixtures')
 exist_index_path = path.join(path.dirname(path.abspath(__file__)), '..', 'collection.xconf')
@@ -108,20 +94,21 @@ class FullTextPoetryViewsTest(TestCase):
 
     def test_view_search_title(self):
         search_url = reverse('poetry:search')
-        response = self.client.get(search_url, {'title': 'Lowlands'})
+        response = self.client.get(search_url, {'title': 'Germany'})
         expected = 200
         self.assertEqual(response.status_code, expected, 'Expected %s but returned %s for %s' % \
                         (expected, response.status_code, search_url))
-        #Should include link to flower02
-        self.assertContains(response, reverse('poetry:poem', kwargs={'doc_id':'flower', 'div_id': 'flower02'}),
+        # should include link to fiery012
+        self.assertContains(response, reverse('poetry:poem',
+                    kwargs={'doc_id':'fiery', 'div_id': 'fiery012'}),
             msg_prefix='search results include link to poem with match')
 
-        #includes link to containing book
-        self.assertContains(response, reverse('poetry:book-toc', kwargs={'doc_id':'flower'}),
+        # includes link to containing book
+        self.assertContains(response, reverse('poetry:book-toc', kwargs={'doc_id':'fiery'}),
             msg_prefix='search results include link to book that contains poem with match')
 
-        #correct title apears in searh results
-        self.assertContains(response, "THE LOWLANDS OF FLANDERS(An Old Song Resung)")
+        # correct title apears in search results
+        self.assertContains(response, "From Germany")
 
     def test_view_search_author(self):
         search_url = reverse('poetry:search')
