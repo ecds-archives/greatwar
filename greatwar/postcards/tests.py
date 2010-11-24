@@ -88,7 +88,6 @@ class PostcardViewsTestCase(DjangoTestCase):
                         (expected, response.status_code, postcard_url))
         self.assertContains(response, postcard.label,
             msg_prefix='postcard view includes postcard label')
-        self.assertEqual('', postcard.ds_list)
         self.assertContains(response, postcard.dc.content.description,
             msg_prefix='postcard view includes postcard description')
         self.assertContains(response, reverse('postcards:img-medium',
