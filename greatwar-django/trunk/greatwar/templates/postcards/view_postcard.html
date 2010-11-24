@@ -14,7 +14,7 @@
          <h5>Categories:</h5>
          <ul>
             {% for subject in card.dc.content.subject_list %}
-             <li>{{ subject }}</li>
+             <li><a href="{% url postcards:browse %}?subject={{subject}}">{{ subject }}</a></li>
             {% endfor %}        
         </ul>	    
      </td>

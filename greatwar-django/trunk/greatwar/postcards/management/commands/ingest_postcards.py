@@ -59,41 +59,42 @@ class Command(BaseCommand):
 
         #dictionary of lc subjects, simple (using 1 ana id) and complex (using 2 ana ids).
         ana_lcs = {"nat-it":"World War, 1914-1918--Italy",
-                        "nat-fr":"World War, 1914-1918--France",
-                        "nat-us":"World War, 1914-1918--United States",
-                        "nat-de":"World War, 1914-1918--Germany",
-                        "nat-brit":"World War, 1914-1918--Great Britain",
-                        "nat-bel":"World War, 1914-1918--Belgium",
-                        "nat-au":"World War, 1914-1918--Austria",
-                        "nat-nl":"World War, 1914-1918--Netherlands",
-                        "nat-rus":"World War, 1914-1918--Russia",
-                        "nat-jp":" World War, 1914-1918--Japan",
-                        "nat-ee":"World War, 1914-1918--Eastern Europe",
-                        "nat-ca":"World War, 1914-1918--Canada", 
-                        "mil-nur":"Military Nursing",
-                        "con-h":"World War, 1914-1918--Humor", 
-                        "con-v":"World War, 1914-1918--Poetry", 
-                        "con-p":"World War, 1914-1918--Persons", 
-                        "con-m":"World War, 1914-1918--Memorials", 
-                        "con-r":"World War, 1914-1918--Destruction  and pillage",
-                        "con-f":"Flags in art",
-                        "con-el":"Uncle Elmer",
-                        "hf-p":"World War, 1914-1918--Propganda", 
-                        "hf-c":"World War, 1914-1918--Children", 
-                        "hf-w":"World War, 1914-1918--Women", 
-                        "hf-re":"World War, 1914-1918--Religious aspects", 
-                        "hf-ro":"World War, 1914-1918--Man-Woman relationships",
+                   "nat-fr":"World War, 1914-1918--France",
+                   "nat-us":"World War, 1914-1918--United States",
+                   "nat-de":"World War, 1914-1918--Germany",
+                   "nat-brit":"World War, 1914-1918--Great Britain",
+                   "nat-bel":"World War, 1914-1918--Belgium",
+                   "nat-au":"World War, 1914-1918--Austria",
+                   "nat-nl":"World War, 1914-1918--Netherlands",
+                   "nat-rus":"World War, 1914-1918--Russia",
+                   "nat-jp":" World War, 1914-1918--Japan",
+                   "nat-ee":"World War, 1914-1918--Eastern Europe",
+                   "nat-ca":"World War, 1914-1918--Canada",
+                   "nat-hu":"World War, 1914-1918--Hungary",
+                   "mil-nur":"Military Nursing",
+                   "con-h":"World War, 1914-1918--Humor", 
+                   "con-v":"World War, 1914-1918--Poetry", 
+                   "con-p":"World War, 1914-1918--Persons", 
+                   "con-m":"World War, 1914-1918--Memorials", 
+                   "con-r":"World War, 1914-1918--Destruction  and pillage",
+                   "con-f":"Flags in art",
+                   "con-el":"Uncle Elmer",
+                   "hf-p":"World War, 1914-1918--Propganda", 
+                   "hf-c":"World War, 1914-1918--Children", 
+                   "hf-w":"World War, 1914-1918--Women", 
+                   "hf-re":"World War, 1914-1918--Religious aspects", 
+                   "hf-ro":"World War, 1914-1918--Man-Woman relationships",
                         }
 
 
-        ana_lcc_army = {"nat-fr":"France. Arm\xe9e", 
+        ana_lcc_army = {"nat-fr":u"France. Arm\xe9e", 
                            "nat-brit":"Great Britain. Army", 
-                           "nat-bel":"Belgium. Arm\xe9e", 
+                           "nat-bel":u"Belgium. Arm\xe9e", 
                            "nat-de":"Germany. Heer", 
                            "nat-us":"United States. Army", 
                            "nat-ca":"Canada. Canadian Army", 
                            "nat-jp":"Japan. Rikugun", 
-                           "nat-au":"Austria. Arm\xe9e",
+                           "nat-au":u"Austria. Arm\xe9e",
                     }
         ana_lcc_navy = {"nat-brit":"Royal Navy. Great Britain", 
                            "nat-us":"United States. Navy", 
@@ -166,7 +167,8 @@ class Command(BaseCommand):
             lc_subjects = []
             ana_ids = []
             ana_ids = c.ana.split()
-            print 'DEBUG: %s are the ids for %s' % (ana_ids, c.entity) 
+            if verbosity > v_normal:
+                print 'DEBUG: %s are the ana ids for %s' % (ana_ids, c.entity) 
             for ana_id in ana_ids:
                 if ana_id in ana_lcc_army:
                     for ana_id2 in ana_ids:
@@ -192,9 +194,9 @@ class Command(BaseCommand):
             for ana_id in ana_ids:
                 my_dict = ana_lcimage
                 if ana_id in my_dict:
-                    print 'DEBUG %s found in image list' % ana_id
+#                    print 'DEBUG %s found in image list' % ana_id
                     ana_image = anas_simple(my_dict, ana_id)
-                    print 'DEBUG %s is the value for %s' % (ana_image, ana_id)
+#                    print 'DEBUG %s is the value for %s' % (ana_image, ana_id)
                     lc_subjects.append('%s' % ana_image)
                     print '%s added to LC subjects list-image type' % (ana_image)
 #                else:

@@ -40,7 +40,7 @@ def browse(request):
     # TEMPORARY: restrict to postcards by pidspace
     # NOTE: tests rely somewhat on restriction by pidspace...
     search_opts = {'pid__contains': '%s:*' % settings.FEDORA_PIDSPACE }
-    number_of_results = 15
+    number_of_results = 18
     context = {}
 
     if 'subject' in request.GET:
