@@ -20,18 +20,18 @@ View thumbnails with titles, or thumbnails with a brief description<br>
 
 <li>Browse by category
 <div class="categories">
-    {% for interp_group in categories.interp_groups %}
+    {% for interp_group in categories.digitalObject.datastream.datastreamVersion.xmlContent.div.interpGrp %}
     {# TODO: javascript not yet included #}
-      <div><a onclick="javascript:toggle_ul('{{interp_group.type}}')">
-          <img alt="." href="javascript:toggle_ul('{{interp_group.type}}')" src="/images/closed.gif" id="{{interp_group.type}}-gif"><h4>{{ interp_group.type }}</h4></a>
+      <div>
+          <h4>{{ interp_group.type }}</h4></a>
       <ul id="{{ interp_group.type }}" style="display:block"> {# force display for now #}
-          {% for interp in interp_group.interps %}
+          {% for interp in interp_group.interp %}
             <li><a href="{% url postcards:repo-browse %}?subject={{ interp_group.type }}: {{ interp.value }}">{{ interp.value }}</a></li>
           {% endfor %}
       </ul>
       </div>
     {% endfor %}
-{{categories}}
+<p>DEBUG: this the categories field: {{categories}}</p>
 </div>
 </li>
 <li><a href="{% url postcards:search %}">Search</a> the postcards by keyword, title, description, and category

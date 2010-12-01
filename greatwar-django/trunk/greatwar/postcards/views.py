@@ -7,7 +7,7 @@ from django.template import RequestContext
 from eulcore.django.fedora.server import Repository
 from eulcore.fedora.util import RequestFailed
 
-from greatwar.postcards.models import ImageObject
+from greatwar.postcards.models import ImageObject, PostcardCollection, RepoCategories
 from greatwar.postcards.forms import SearchForm
 
 import logging
@@ -26,8 +26,9 @@ def summary(request):
     postcards = list(repo.find_objects(**search_opts))
     count = len(postcards)
     # TODO: get categories from fedora collection object
+    categories = PostcardCollection.get() 
     return render_to_response('postcards/index.html', {
-                               #'categories' : categories,
+                               'categories' : categories,
                                'count' : count,
                                'postcards': postcards,
                                },
