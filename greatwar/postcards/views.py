@@ -26,7 +26,7 @@ def summary(request):
     postcards = list(repo.find_objects(**search_opts))
     count = len(postcards)
     # TODO: get categories from fedora collection object
-    categories = PostcardCollection.get() 
+    categories = PostcardCollection.get().interp.content.interp_groups
     return render_to_response('postcards/index.html', {
                                'categories' : categories,
                                'count' : count,

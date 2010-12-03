@@ -20,13 +20,14 @@ View thumbnails with titles, or thumbnails with a brief description<br>
 
 <li>Browse by category
 <div class="categories">
-    {% for interp_group in categories.digitalObject.datastream.datastreamVersion.xmlContent.div.interpGrp %}
+ <p>DEBUG: These are interp_groups: {{ interp_groups.type }}</p>
+  {% for type in interp_groups.type %}
     {# TODO: javascript not yet included #}
       <div>
-          <h4>{{ interp_group.type }}</h4></a>
-      <ul id="{{ interp_group.type }}" style="display:block"> {# force display for now #}
-          {% for interp in interp_group.interp %}
-            <li><a href="{% url postcards:repo-browse %}?subject={{ interp_group.type }}: {{ interp.value }}">{{ interp.value }}</a></li>
+          <h4>{{ type }}</h4>
+      <ul id="{{ type }}" style="display:block"> {# force display for now #}
+          {% for interp in interp_groups.interp %}
+            <li><a href="{% url postcards:repo-browse %}?subject={{ type }}: {{ interp.value }}">{{ interp.value }}</a></li>
           {% endfor %}
       </ul>
       </div>
