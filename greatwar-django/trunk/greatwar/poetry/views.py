@@ -30,12 +30,21 @@ def book_toc(request, doc_id):
     return render_to_response('poetry/book_toc.html', { 'book' : book})
 
 def div(request, doc_id, div_id):
-    "Display a single div (poem or essay?)"
-    div = Poem.objects.also('doctitle', 'doc_id', 'nextdiv__id', 'nextdiv__title', 'prevdiv__id', 'prevdiv__title').filter(doc_id__exact=doc_id).get(id__exact=div_id)
+    "Display a single div (poem or essay)"
+    if 'keyword' in request.GET:
+        search_terms = request.GET['keyword']
+        url_params = '?' + urlencode({'keywords': search_terms})
+        filter = {'highlight': search_terms}
+    else:
+        url_params = ''
+        filter = {}
+    div = Poem.objects.also('doctitle', 'doc_id', 'nextdiv__id', 'nextdiv__title', 'prevdiv__id', 'prevdiv__title').filter(doc_id__exact=doc_id).get(id__exact=div_id, filter=filter)
     body = div.xsl_transform(filename='poetry/xslt/div.xsl')
     print body.serialize()
+    
     return render_to_response('poetry/div.html', { 'div' : div,
-                                                   'body' : body.serialize()
+                                                   'body' : body.serialize(),
+                                                   'url_params' : url_params,
                                                    })   
 def poets(request):
     "Browse list of poets"
