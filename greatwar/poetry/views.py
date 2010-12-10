@@ -33,7 +33,7 @@ def div(request, doc_id, div_id):
     "Display a single div (poem or essay)"
     if 'keyword' in request.GET:
         search_terms = request.GET['keyword']
-        url_params = '?' + urlencode({'keywords': search_terms})
+        url_params = '?' + urlencode({'keyword': search_terms})
         filter = {'highlight': search_terms}
     else:
         url_params = ''
