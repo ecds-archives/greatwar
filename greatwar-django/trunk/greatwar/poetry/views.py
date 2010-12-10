@@ -38,7 +38,8 @@ def div(request, doc_id, div_id):
     else:
         url_params = ''
         filter = {}
-    div = Poem.objects.also('doctitle', 'doc_id', 'nextdiv__id', 'nextdiv__title', 'prevdiv__id', 'prevdiv__title').filter(doc_id__exact=doc_id).get(id__exact=div_id, filter=filter)
+    div = Poem.objects.also('doctitle', 'doc_id', 'nextdiv__id', 'nextdiv__title',
+        'prevdiv__id', 'prevdiv__title').filter(doc_id__exact=doc_id, **filter).get(id__exact=div_id)
     body = div.xsl_transform(filename='poetry/xslt/div.xsl')
     print body.serialize()
     
