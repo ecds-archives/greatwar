@@ -58,7 +58,11 @@ class Poem(XmlModel, TeiDiv):
     doctitle = StringField('ancestor::tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title')
     doc_id   = StringField('ancestor::tei:TEI/@xml:id')
 
-    objects = Manager("//tei:div")      # should this have [@type='poem'] ? No, then essays are not retrieved, e.g. "Swan Song" in Eaton.
+    objects = Manager("//tei:div")
+    # NOTE: this object could be restricted to poems only using [@type='poem']
+    # However, it is currently used to retrieve non-poem items, e.g. essays
+    # such as "Swan Song" in Eaton.  This should probably be re-thought; at the
+    # very least, we may want to rename the model so it is more accurate.
 
 class Poet(XmlModel, XmlObject):
     ROOT_NAMESPACES = {'tei' : TEI_NAMESPACE}
@@ -66,8 +70,7 @@ class Poet(XmlModel, XmlObject):
     name  = StringField("tei:reg")
     objects = Manager("//tei:div[@type='poem']/tei:docAuthor/tei:name/tei:choice")
 
-class PoemSearch(XmlModel, TeiDiv):
-    ROOT_NAMESPACES = {'tei' : TEI_NAMESPACE}
-    line_matches = NodeListField('tei:l',"self")   # place-holder: must be retrieved with raw xpath to use ft:query
+class PoemSearch(Poem):
+    # FIXME: consolidate with Poem? is this xpath appropriate for default Poem object?
     objects = Manager("//tei:div[@type='poem' or @type='play' or @type='story' or @type='essay']")
     #using PoemSearch to retrieve only poem-level objects in the search, not chapters or whole books
