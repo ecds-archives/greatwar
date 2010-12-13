@@ -1,16 +1,12 @@
-import logging
-from lxml import etree
 from urllib import urlencode
 
 from django.shortcuts import render_to_response
-from django.http import HttpResponse, Http404
+from django.http import Http404
 from django.core.paginator import Paginator, InvalidPage, EmptyPage
 from django.template import RequestContext
 
-from eulcore.django.existdb.db import ExistDB
 from eulcore.existdb.query import escape_string
 from eulcore.existdb.exceptions import DoesNotExist # ReturnedMultiple needed also ?
-from eulcore.xmlmap.teimap import TEI_NAMESPACE
 
 from greatwar.poetry.models import PoetryBook, Poem, Poet, PoemSearch
 from greatwar.poetry.forms import PoetrySearchForm
@@ -19,15 +15,14 @@ from greatwar.poetry.forms import PoetrySearchForm
 def books(request):
     "Browse list of volumes"
     books = PoetryBook.objects.only('id', 'title', 'author', 'editor').order_by('author')
-    return render_to_response('poetry/books.html', { 'books' : books,
-                                                     'querytime' : books.queryTime()})
+    return render_to_response('poetry/books.html', {'books' : books})
 
 
 def book_toc(request, doc_id):
     "Display the contents of a single book."
     try:
         book = PoetryBook.objects.get(id__exact=doc_id)
-        return render_to_response('poetry/book_toc.html', { 'book' : book})
+        return render_to_response('poetry/book_toc.html', {'book' : book})
     except DoesNotExist:
         raise Http404
 
@@ -42,9 +37,7 @@ def div(request, doc_id, div_id):
         filter = {}
     div = Poem.objects.also('doctitle', 'doc_id', 'nextdiv__id', 'nextdiv__title',
         'prevdiv__id', 'prevdiv__title').filter(doc_id__exact=doc_id, **filter).get(id__exact=div_id)
-    body = div.xsl_transform(filename='poetry/xslt/div.xsl')
-    print body.serialize()
-    
+    body = div.xsl_transform(filename='poetry/xslt/div.xsl')    
     return render_to_response('poetry/div.html', { 'div' : div,
                                                    'body' : body.serialize(),
                                                    'url_params' : url_params,
