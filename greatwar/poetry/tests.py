@@ -17,7 +17,8 @@ exist_fixture_path = path.join(path.dirname(path.abspath(__file__)), 'fixtures')
 exist_index_path = path.join(path.dirname(path.abspath(__file__)), '..', 'collection.xconf')
 
 class PoetryTestCase(DjangoTestCase):
-  
+    # tests for poetry model objects
+
     FIXTURES = ['flower.xml', 'fiery.xml', 'lest.xml']
     POET_STRING = '''<choice xmlns="http://www.tei-c.org/ns/1.0">
         <reg>Peterson, Margaret</reg>
@@ -45,17 +46,41 @@ class PoetryTestCase(DjangoTestCase):
         self.assertEqual(self.poet.first_letter, 'P')
         self.assertEqual(self.poet.name, 'Peterson, Margaret')
         
-    def test_view_simple(self):
-        gw_url = reverse('poetry:books')
-        response = self.client.get(gw_url)
+class PoetryViewsTestCase(TestCase):
+    # tests for ONLY those views that do NOT require eXist full-text index
+    exist_fixtures = {'directory' : exist_fixture_path }
+    
+    def test_index(self):
+        # poetry index should list all volumes loaded
+        books_url = reverse('poetry:books')
+        response = self.client.get(books_url)
         expected = 200
         self.assertEqual(response.status_code, expected,
                         'Expected %s but returned %s for %s' % \
-                        (expected, response.status_code, gw_url)) 
+                        (expected, response.status_code, books_url))
+        # should contain title, author, link for each fixture
+        self.assertContains(response, 'THE FIERY CROSS',
+            msg_prefix='poetry index includes title of "The Fiery Cross"')
+        self.assertContains(response, 'Mabel C. Edwards',
+            msg_prefix='poetry index includes editor of "The Fiery Cross"')
+        self.assertContains(response, reverse('poetry:book-toc', args=['fiery']),
+            msg_prefix='poetry index includes link to "The Fiery Cross"')
+        self.assertContains(response, 'Flower of Youth: Poems in War Time',
+            msg_prefix='poetry index includes title of "Flower of Youth"')
+        self.assertContains(response, 'Katharine Tynan',
+            msg_prefix='poetry index includes author of "Flower of Youth"')
+        self.assertContains(response, reverse('poetry:book-toc', args=['flower']),
+            msg_prefix='poetry index includes link to "Flower of Youth"')
+        self.assertContains(response, 'Lest We Forget',
+            msg_prefix='poetry index includes title of "Lest we Forget')
+        self.assertContains(response, 'H. B. Elliot',
+            msg_prefix='poetry index includes editor of "Lest we Forget')
+        self.assertContains(response, reverse('poetry:book-toc', args=['elliot']),
+            msg_prefix='poetry index includes link to "Lest we Forget')
 
 class FullTextPoetryViewsTest(TestCase):
     # tests for views that require eXist full-text index
-    exist_fixtures = { 'index' : settings.EXISTDB_INDEX_CONFIGFILE,
+    exist_fixtures = {'index' : settings.EXISTDB_INDEX_CONFIGFILE,
                        'directory' : exist_fixture_path }
 
     def test_view_search_keyword(self):

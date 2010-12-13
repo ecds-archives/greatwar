@@ -3,7 +3,7 @@ from lxml import etree
 from urllib import urlencode
 
 from django.shortcuts import render_to_response
-from django.http import HttpResponse
+from django.http import HttpResponse, Http404
 from django.core.paginator import Paginator, InvalidPage, EmptyPage
 from django.template import RequestContext
 
@@ -25,9 +25,12 @@ def books(request):
 
 def book_toc(request, doc_id):
     "Display the contents of a single book."
-    # TODO: 404 if not found
-    book = PoetryBook.objects.get(id__exact=doc_id)
-    return render_to_response('poetry/book_toc.html', { 'book' : book})
+    try:
+        # TODO: 404 if not found
+        book = PoetryBook.objects.get(id__exact=doc_id)
+        return render_to_response('poetry/book_toc.html', { 'book' : book})
+    except DoesNotExist:
+        raise Http404
 
 def div(request, doc_id, div_id):
     "Display a single div (poem or essay)"
