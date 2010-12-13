@@ -4,16 +4,16 @@
 
 {% block content %}
 {% if div %}
-from <a href="{% url poetry:book-toc div.doc_id %}">{{ div.doctitle }}</a> (id =  {{div.doc_id}} )
+from <a href="{% url poetry:book-toc div.doc_id %} rel='contents'">{{ div.doctitle }}</a>{# (id = {{div.doc_id}} ) #}
 
 
 {{ body|safe }}
 
 {% if div.prevdiv.id %}
-    <p class="next-prev"><a href="{% url poetry:poem div.doc_id div.prevdiv.id %}">Previous poem: {{ div.prevdiv.title }}</a> </p>
+    <p class="next-prev"><a href="{% url poetry:poem div.doc_id div.prevdiv.id %} rel='prev'">Previous poem: {{ div.prevdiv.title }}</a> </p>
 {% endif %}
 {% if div.nextdiv.id %}
-     <p class="next-prev"><a href="{% url poetry:poem div.doc_id div.nextdiv.id %}">Next poem: {{ div.nextdiv.title }}</a></p>
+     <p class="next-prev"><a href="{% url poetry:poem div.doc_id div.nextdiv.id %} rel='next'">Next poem: {{ div.nextdiv.title }}</a></p>
 {% endif %}
 {% endif %}
       </div>

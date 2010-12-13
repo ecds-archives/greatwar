@@ -20,7 +20,7 @@
     <td width="150">
     &nbsp;
     {% if postcards_paginated.has_previous %}
-        <a href="?page={{ postcards_paginated.previous_page_number }}"{# &keyword={{keyword}}&title={{title}}&author={{author}} #}>[ &nbsp;&lt;&lt; Previous &nbsp;]</a>
+        <a href="?page={{ postcards_paginated.previous_page_number }}&subject={{subject}}">[ &nbsp;&lt;&lt; Previous &nbsp;]</a>
     {% endif %}
     </td>
     
@@ -30,7 +30,7 @@
         {% if postcards_paginated.number == current_page %}
           &nbsp;{{ current_page }}&nbsp;
         {% else %}
-          <a href="?page={{ current_page }}">&nbsp;{{ current_page }}&nbsp;</a>
+          <a href="?page={{ current_page }}&subject={{ subject }}">&nbsp;{{ current_page }}&nbsp;</a>
         {% endif %}
       {% endfor %}
       &nbsp;]
@@ -38,7 +38,7 @@
   
       <td width="150" align="right">
       {% if postcards_paginated.has_next %}
-          <a href="?page={{ postcards_paginated.next_page_number }}">[ &nbsp;Next &gt;&gt;&nbsp; ]</a>
+          <a href="?page={{ postcards_paginated.next_page_number }}&subject={{subject}}">[ &nbsp;Next &gt;&gt;&nbsp; ]</a>
       {% endif %}
       &nbsp;
       </td>
