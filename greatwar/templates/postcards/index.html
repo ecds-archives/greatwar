@@ -20,19 +20,17 @@ View thumbnails with titles, or thumbnails with a brief description<br>
 
 <li>Browse by category
 <div class="categories">
- <p>DEBUG: These are interp_groups: {{ interp_groups.type }}</p>
-  {% for type in interp_groups.type %}
+  {% for group in categories %}
     {# TODO: javascript not yet included #}
       <div>
-          <h4>{{ type }}</h4>
-      <ul id="{{ type }}" style="display:block"> {# force display for now #}
-          {% for interp in interp_groups.interp %}
-            <li><a href="{% url postcards:repo-browse %}?subject={{ type }}: {{ interp.value }}">{{ interp.value }}</a></li>
+          <h4>{{ group.type }}</h4>
+      <ul id="{{ group.type }}" style="display:block"> {# force display for now #}
+          {% for interp in group.interp %}
+            <li><a href="{% url postcards:browse %}?subject={{ group.type }}: {{ interp.value }}">{{ interp.value }}</a></li>
           {% endfor %}
       </ul>
       </div>
     {% endfor %}
-<p>DEBUG: this the categories field: {{categories}}</p>
 </div>
 </li>
 <li><a href="{% url postcards:search %}">Search</a> the postcards by keyword, title, description, and category
