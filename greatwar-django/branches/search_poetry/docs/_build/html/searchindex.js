@@ -1,1 +1,0 @@
-Search.setIndex({desctypes:{},terms:{index:0,great:0,document:0,welcom:0,overview:0,modul:0,search:0,indic:0,histori:0,project:0,describ:0,version:0,thi:0,tabl:0,someon:0,sould:0,content:0,war:0,page:0},titles:["Welcome to Great War&#8217;s documentation!"],modules:{},descrefs:{},filenames:["index"]})
