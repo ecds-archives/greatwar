@@ -1,6 +1,11 @@
 {% extends "poetry/poetry_base.html" %}
 {% block page_subtitle %} {{ book.title }} {% endblock %}
 
+{% block page-head %}
+  {{block.super}}
+  {# Dublin Core metadata for this book #}
+  {% with book.dublin_core as dc %}{% include '_dc_meta.html' %}{% endwith %}
+{% endblock %}
 
 {% block content %}
 {% if book %}

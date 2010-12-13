@@ -2,10 +2,8 @@
 
 {% block page-head %}
   {{block.super}}
-  {# Dublin Core metadata for this postcard in html header format #}
-  <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" />
-  {% for el in card.dc.content.elements %}
-  <meta name="DC.{{el.name}}" content="{{el}}" />{% endfor %}
+  {# Dublin Core metadata for this postcard #}
+  {% with card.dc.content as dc %}{% include '_dc_meta.html' %}{% endwith %}
 {% endblock %}
 
 {% block page_subtitle %} {{head}} {% endblock %}
