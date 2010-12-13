@@ -1,5 +1,7 @@
+import os
 from urllib import urlencode
 
+from django.conf import settings
 from django.shortcuts import render_to_response
 from django.http import HttpResponse, Http404
 from django.core.paginator import Paginator, InvalidPage, EmptyPage
@@ -48,7 +50,7 @@ def div(request, doc_id, div_id):
     try:
         div = Poem.objects.also('doctitle', 'doc_id', 'nextdiv__id', 'nextdiv__title',
             'prevdiv__id', 'prevdiv__title').filter(doc_id__exact=doc_id, **filter).get(id__exact=div_id)
-        body = div.xsl_transform(filename='poetry/xslt/div.xsl')
+        body = div.xsl_transform(filename=os.path.join(settings.BASE_DIR, 'poetry', 'xslt', 'div.xsl'))
         return render_to_response('poetry/div.html', { 'div' : div,
                                                        'body' : body.serialize(),
                                                        'url_params' : url_params,
