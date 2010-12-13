@@ -120,6 +120,27 @@ class PoetryViewsTestCase(TestCase):
                         'Expected %s but returned %s for %s' % \
                         (expected, response.status_code, book_toc_url))
 
+    def test_book_xml(self):
+         # expose TEI xml for a book
+        book_xml_url = reverse('poetry:book-xml', args=['fiery'])
+        response = self.client.get(book_xml_url)
+        expected = 200
+        self.assertEqual(response.status_code, expected,
+                        'Expected %s but returned %s for %s' % \
+                        (expected, response.status_code, book_xml_url))
+        self.assertEqual('application/tei+xml', response['Content-Type'])
+        self.assertContains(response, '<TEI')
+
+        # xml request for non-existent book should 404
+        book_xml_url = reverse('poetry:book-toc', args=['nonexistent'])
+        response = self.client.get(book_xml_url)
+        expected = 404
+        self.assertEqual(response.status_code, expected,
+                        'Expected %s but returned %s for %s' % \
+                        (expected, response.status_code, book_xml_url))
+
+
+
 
 class FullTextPoetryViewsTest(TestCase):
     # tests for views that require eXist full-text index

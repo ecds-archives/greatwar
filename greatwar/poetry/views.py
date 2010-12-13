@@ -1,10 +1,11 @@
 from urllib import urlencode
 
 from django.shortcuts import render_to_response
-from django.http import Http404
+from django.http import HttpResponse, Http404
 from django.core.paginator import Paginator, InvalidPage, EmptyPage
 from django.template import RequestContext
 
+from eulcore.django.http import content_negotiation
 from eulcore.existdb.query import escape_string
 from eulcore.existdb.exceptions import DoesNotExist # ReturnedMultiple needed also ?
 
@@ -17,7 +18,16 @@ def books(request):
     books = PoetryBook.objects.only('id', 'title', 'author', 'editor').order_by('author')
     return render_to_response('poetry/books.html', {'books' : books})
 
+def book_xml(request, doc_id):
+    "Display the original TEI XML for a single book."
+    try:
+        book = PoetryBook.objects.get(id__exact=doc_id)
+        xml_tei = book.serialize(pretty=True)
+        return HttpResponse(xml_tei, mimetype='application/tei+xml')
+    except DoesNotExist:
+        raise Http404
 
+@content_negotiation({'application/tei+xml': book_xml})
 def book_toc(request, doc_id):
     "Display the contents of a single book."
     try:
@@ -99,7 +109,6 @@ def search(request):
                     
         poems = PoemSearch.objects.only("doctitle","doc_id","title", "id").filter(**search_opts)
         if 'keyword' in form.cleaned_data and form.cleaned_data['keyword']:
-            # TODO: fix query escaping - use logic from eulcore?
             poems = poems.only_raw(line_matches='%%(xq_var)s//tei:l[ft:query(., "%s")]' \
                                     % escape_string(form.cleaned_data['keyword']))
         poetry = poems.all()
