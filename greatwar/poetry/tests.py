@@ -78,6 +78,49 @@ class PoetryViewsTestCase(TestCase):
         self.assertContains(response, reverse('poetry:book-toc', args=['elliot']),
             msg_prefix='poetry index includes link to "Lest we Forget')
 
+    def test_book_toc(self):
+         # book toc should list all poems in a book
+        book_toc_url = reverse('poetry:book-toc', args=['fiery'])
+        response = self.client.get(book_toc_url)
+        expected = 200
+        self.assertEqual(response.status_code, expected,
+                        'Expected %s but returned %s for %s' % \
+                        (expected, response.status_code, book_toc_url))
+        # should contain title, author, link for each poem
+        # - first poem
+        self.assertContains(response, 'For the Red Cross',
+            msg_prefix='book ToC for fiery includes of "For the Red Cross" (first poem)')
+        self.assertContains(response, 'Owen Seaman',
+            msg_prefix='book ToC for fiery includes Owen Seaman,  author of ' +
+                '"For the Red Cross" (first poem)')
+        self.assertContains(response, reverse('poetry:poem', args=['fiery', 'fiery005']),
+            msg_prefix='book ToC for fiery includes link to "For the Red Cross" (first poem)')
+        # - poem in the middle somewhere
+        self.assertContains(response, 'Gifts',      # currently ToC does not list second head
+            msg_prefix='book ToC for fiery includes of "Gifts"')
+        self.assertContains(response, 'Mary Booth',
+            msg_prefix='book ToC for fiery includes Mary Booth,  author of Gifts')
+        self.assertContains(response, reverse('poetry:poem', args=['fiery', 'fiery030']),
+            msg_prefix='book ToC for fiery includes link to "Gifts"')
+        # - last poem
+        self.assertContains(response, u'Aux Po\xe8tes Futurs',
+            msg_prefix='book ToC for fiery includes of "Aux Poetes Futurs" (last poem)')
+        self.assertContains(response, 'Sully Prudhomme',
+            msg_prefix='book ToC for fiery includes Sully Prudhomme,  author of ' +
+                'Aux Poetes Futurs" (last poem)')
+        self.assertContains(response, reverse('poetry:poem', args=['fiery', 'fiery069']),
+            msg_prefix='book ToC for fiery includes link to "Aux Poetes Futurs" (last poem)')
+
+
+        # toc for non-existent book should 404
+        book_toc_url = reverse('poetry:book-toc', args=['nonexistent'])
+        response = self.client.get(book_toc_url)
+        expected = 404
+        self.assertEqual(response.status_code, expected,
+                        'Expected %s but returned %s for %s' % \
+                        (expected, response.status_code, book_toc_url))
+
+
 class FullTextPoetryViewsTest(TestCase):
     # tests for views that require eXist full-text index
     exist_fixtures = {'index' : settings.EXISTDB_INDEX_CONFIGFILE,

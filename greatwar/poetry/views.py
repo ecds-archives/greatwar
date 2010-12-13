@@ -26,7 +26,6 @@ def books(request):
 def book_toc(request, doc_id):
     "Display the contents of a single book."
     try:
-        # TODO: 404 if not found
         book = PoetryBook.objects.get(id__exact=doc_id)
         return render_to_response('poetry/book_toc.html', { 'book' : book})
     except DoesNotExist:
