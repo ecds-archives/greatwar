@@ -11,6 +11,7 @@ urlpatterns = patterns('',
     # (r'^greatwar/', include('greatwar.foo.urls')),
     url(r'^$', 'views.index', name="index"),
     url(r'^about/$', 'views.about', name="about"),
+    url(r'^links/$', 'views.links', name="links"),                   
     url(r'^poetry/', include('greatwar.poetry.urls', namespace='poetry')),
     url(r'^postcards/', include('greatwar.postcards.urls', namespace='postcards')),
     # Uncomment the admin/doc line below and add 'django.contrib.admindocs' 
