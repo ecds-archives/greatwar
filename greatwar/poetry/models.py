@@ -1,8 +1,10 @@
 from eulcore.django.existdb.manager import Manager
 from eulcore.django.existdb.models import XmlModel
 from eulcore.xmlmap import XmlObject
+from eulcore.xmlmap.dc import DublinCore
 from eulcore.xmlmap.fields import StringField, NodeField, StringListField, NodeListField
 from eulcore.xmlmap.teimap import Tei, TeiDiv, TeiLineGroup, TEI_NAMESPACE
+
 
 # TEI poetry models
 # currently just slightly-modified versions of tei xmlmap objects
@@ -13,6 +15,36 @@ class PoetryBook(XmlModel, Tei):
     ROOT_NAMESPACES = {'tei' : TEI_NAMESPACE}
     objects = Manager('/tei:TEI')
 
+    project_desc = StringField('tei:teiHeader/tei:encodingDesc/tei:projectDesc')
+    geo_coverage = StringField('tei:teiHeader/tei:profileDesc/tei:creation/tei:rs[@type="geography"]')
+    creation_date = StringField('tei:teiHeader/tei:profileDesc/tei:creation/tei:date')
+    lcsh_subjects = StringListField('tei:teiHeader//tei:keywords[@scheme="#lcsh"]/tei:list/tei:item')
+
+    @property
+    def dublin_core(self):
+        dc = DublinCore()
+        dc.title = self.title
+        dc.creator_list.extend([n.reg for n in self.header.author_list])
+        dc.contributor_list.extend([n.reg for n in self.header.editor_list])
+        dc.publisher = self.header.publisher
+        dc.date = self.header.publication_date
+        dc.rights = self.header.availability
+        dc.source = self.header.source_description
+        dc.subject_list.extend(self.lcsh_subjects)
+        dc.description = self.project_desc
+
+        if self.geo_coverage:
+            dc.coverage_list.append(self.geo_coverage)
+        if self.creation_date:
+            dc.coverage_list.append(self.creation_date)
+
+        if self.header.series_statement:
+            dc.relation_list.append(self.header.series_statement)
+        # FIXME: should we also include url? site name & url are currently
+        # hard-coded when setting dc:relation in postcard ingest
+
+        return dc
+
 class Poem(XmlModel, TeiDiv):
     ROOT_NAMESPACES = {'tei' : TEI_NAMESPACE}
     poet = StringField("tei:docAuthor/tei:name/tei:choice")
@@ -21,6 +53,11 @@ class Poem(XmlModel, TeiDiv):
     prevdiv = NodeField("preceding::tei:div[@type='poem'][1]", "self")
     poem = NodeField("tei:div[@type='poem']", "self")
     line_matches = NodeListField('tei:l',"self")   # place-holder: must be retrieved with raw xpath to use ft:query
+
+    # reference to top-level elements, e.g. for retrieving a single div
+    doctitle = StringField('ancestor::tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title')
+    doc_id   = StringField('ancestor::tei:TEI/@xml:id')
+
     objects = Manager("//tei:div")      # should this have [@type='poem'] ? No, then essays are not retrieved, e.g. "Swan Song" in Eaton.
 
 class Poet(XmlModel, XmlObject):

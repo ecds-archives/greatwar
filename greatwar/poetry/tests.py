@@ -7,7 +7,8 @@ from django.conf import settings
 from django.core.urlresolvers import reverse
 from django.test import TestCase as DjangoTestCase
 
-from eulcore.xmlmap  import load_xmlobject_from_file, load_xmlobject_from_string
+from eulcore.xmlmap import load_xmlobject_from_file, load_xmlobject_from_string
+from eulcore.xmlmap.dc import DublinCore
 from eulcore.django.test import TestCase
 
 from greatwar.poetry.models import PoetryBook, Poet
@@ -45,6 +46,52 @@ class PoetryTestCase(DjangoTestCase):
     def test_poet_attributes(self):    
         self.assertEqual(self.poet.first_letter, 'P')
         self.assertEqual(self.poet.name, 'Peterson, Margaret')
+
+    def test_dublin_core(self):
+        # anthology - 2 editors, no author
+        dc = self.poetry['fiery'].dublin_core
+        self.assert_(isinstance(dc, DublinCore))
+        self.assertEqual('THE FIERY CROSS: An Anthology of War Poems', dc.title,
+            'document title should be in dc:title')
+        self.assertFalse(dc.creator_list, 'dc:creator should not be set TEI has no document author')
+        self.assert_('Edwards, Mabel C.' in dc.contributor_list,
+            'first editor should be included in dc:contributor')
+        self.assert_('Booth, Mary' in dc.contributor_list,
+            'secdon editor should be included in dc:contributor')
+        self.assertEqual('Lewis H. Beck Center', dc.publisher,
+            'publisher from teiHeader should be set in dc:publisher')
+        self.assertEqual('2002', dc.date,
+            'publication date from teiHeader should be set in dc:date')
+        self.assert_('2002 Emory University. Permission is granted to download' in
+            dc.rights, 'availability statement in dc:rights')
+        self.assert_('Edwards, Mabel C. and Mary Booth' in dc.source,
+            'source editors should be listed in dc:source')
+        self.assert_('THE FIERY CROSS: An Anthology of War Poems' in dc.source,
+            'source title should be listed in dc:source')
+        self.assert_('London' in dc.source,
+            'source publication location should be listed in dc:source')
+        self.assert_('Grant Richards Ltd.' in dc.source,
+            'source publisher should be listed in dc:source')
+        self.assert_('1915' in dc.source,
+            'source publication date should be listed in dc:source')
+        # this fixture does not have LCSH subjects
+        self.assertFalse(dc.subject_list)
+        self.assert_('digital text is produced from a first-edition volume'
+            in dc.description, 'encoding/project description should be in dc:description')
+
+        self.assert_('Great Britain' in dc.coverage_list,
+            'creation/rs[@type="geography"] should be in dc:coverage')
+        self.assert_('1900-1999' in dc.coverage_list,
+            'creation/date should be in dc:coverage')
+        self.assert_('Women Writers Resource Project' in dc.relation,
+            'teiHeader seriesStmt should be in dc:relation')
+
+        # single-author volume, has LCSH subjects
+        dc = self.poetry['flower'].dublin_core
+        self.assertEqual('Tynan, Katharine, 1861-1931', dc.creator)
+        self.assert_('World War, 1914-1918--Poetry.' in dc.subject_list)
+        self.assert_('English poetry--Women authors--20th Century.' in dc.subject_list)
+        self.assert_('War.' in dc.subject_list)
         
 class PoetryViewsTestCase(TestCase):
     # tests for ONLY those views that do NOT require eXist full-text index
