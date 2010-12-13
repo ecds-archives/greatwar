@@ -97,6 +97,14 @@ class PostcardViewsTestCase(DjangoTestCase):
                     kwargs={'pid': postcard.pid}),
                     msg_prefix='large image for postcard linked from postcard view')
 
+        # DC metadata in header
+        self.assertContains(response, '<meta name="DC.title" content="%s" />' % \
+            postcard.dc.content.title)
+        self.assertContains(response, '<meta name="DC.subject" content="%s" />' % \
+            postcard.dc.content.subject)
+        self.assertContains(response, '<meta name="DC.type" content="%s" />' % \
+            postcard.dc.content.type)
+
         for subject in postcard.dc.content.subject_list:
             self.assertContains(response, subject,
                 msg_prefix='subject %s contained in postcard view' % subject)
