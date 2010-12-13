@@ -4,18 +4,22 @@
 
 {% block content %}
 {% if div %}
-from <a href="{% url poetry:book-toc div.doc_id %} rel='contents'">{{ div.doctitle }}</a>{# (id = {{div.doc_id}} ) #}
+    from <a href="{% url poetry:book-toc div.doc_id %}">{{ div.doctitle }}</a>
 
+    {{ body|safe }}
 
-{{ body|safe }}
-
-{% if div.prevdiv.id %}
-    <p class="next-prev"><a href="{% url poetry:poem div.doc_id div.prevdiv.id %} rel='prev'">Previous poem: {{ div.prevdiv.title }}</a> </p>
-{% endif %}
-{% if div.nextdiv.id %}
-     <p class="next-prev"><a href="{% url poetry:poem div.doc_id div.nextdiv.id %} rel='next'">Next poem: {{ div.nextdiv.title }}</a></p>
-{% endif %}
-{% endif %}
-      </div>
-      <pre>{{div.serializeDocument}}</pre>
+    {% if div.prevdiv.id %}
+        <p class="next-prev">
+            <a href="{% url poetry:poem div.doc_id div.prevdiv.id %}"
+                rel="prev">Previous poem{% if div.prevdiv.title %}: {{ div.prevdiv.title}}{% endif %}
+            </a>
+        </p>
+    {% endif %}
+    {% if div.nextdiv.id %}
+         <p class="next-prev">
+             <a href="{% url poetry:poem div.doc_id div.nextdiv.id %}"
+                rel="next">Next poem{% if div.nextdiv.title %}: {{ div.nextdiv.title }}{% endif %}
+            </a>
+        </p>
+    {% endif %}
 {% endblock %}

@@ -45,13 +45,18 @@ def div(request, doc_id, div_id):
     else:
         url_params = ''
         filter = {}
-    div = Poem.objects.also('doctitle', 'doc_id', 'nextdiv__id', 'nextdiv__title',
-        'prevdiv__id', 'prevdiv__title').filter(doc_id__exact=doc_id, **filter).get(id__exact=div_id)
-    body = div.xsl_transform(filename='poetry/xslt/div.xsl')    
-    return render_to_response('poetry/div.html', { 'div' : div,
-                                                   'body' : body.serialize(),
-                                                   'url_params' : url_params,
-                                                   })   
+    try:
+        div = Poem.objects.also('doctitle', 'doc_id', 'nextdiv__id', 'nextdiv__title',
+            'prevdiv__id', 'prevdiv__title').filter(doc_id__exact=doc_id, **filter).get(id__exact=div_id)
+        body = div.xsl_transform(filename='poetry/xslt/div.xsl')
+        return render_to_response('poetry/div.html', { 'div' : div,
+                                                       'body' : body.serialize(),
+                                                       'url_params' : url_params,
+                                                       })
+    except DoesNotExist:
+        raise Http404
+
+
 def poets(request):
     "Browse list of poets"
     return _show_poets(request, Poet.objects.only('name').distinct().order_by('name'))

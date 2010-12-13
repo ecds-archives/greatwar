@@ -11,7 +11,7 @@ from eulcore.xmlmap import load_xmlobject_from_file, load_xmlobject_from_string
 from eulcore.xmlmap.dc import DublinCore
 from eulcore.django.test import TestCase
 
-from greatwar.poetry.models import PoetryBook, Poet
+from greatwar.poetry.models import PoetryBook, Poet, Poem
 
 
 exist_fixture_path = path.join(path.dirname(path.abspath(__file__)), 'fixtures')
@@ -35,13 +35,21 @@ class PoetryTestCase(DjangoTestCase):
                                 file), PoetryBook)                                                  
         # load the poet fixture docAuthor
         self.poet = load_xmlobject_from_string(self.POET_STRING, Poet)
+        
                                   
     def test_init(self):
         for file, p in self.poetry.iteritems():   
             self.assert_(isinstance(p, PoetryBook))
           
     def test_xml_fixture_load(self):
-        self.assertEqual(3, len(self.poetry))    
+        self.assertEqual(3, len(self.poetry))
+
+    # TODO: test Poem object custom fields
+    # may have to be dne using eXist...
+        # reference to document-level info
+        #self.assertEqual('Flower of Youth: Poems in War Time, an electronic edition', self.poem.doctitle)
+        #self.assertEqual('flower', self.poem.doc_id)
+
       
     def test_poet_attributes(self):    
         self.assertEqual(self.poet.first_letter, 'P')
@@ -186,6 +194,65 @@ class PoetryViewsTestCase(TestCase):
                         'Expected %s but returned %s for %s' % \
                         (expected, response.status_code, book_xml_url))
 
+    def test_poem(self):
+        poem_url = reverse('poetry:poem', args=['fiery', 'fiery005'])
+        response = self.client.get(poem_url)
+        expected = 200
+        self.assertEqual(response.status_code, expected,
+                        'Expected %s but returned %s for %s' % \
+                        (expected, response.status_code, poem_url))
+
+        self.assertContains(response, 'For the Red Cross',
+            msg_prefix='response should contain poem title')
+        self.assertContains(response, 'Owen Seaman',
+            msg_prefix='response should contain poem author')
+        self.assertContains(response, 'YE that have gentle hearts',
+            msg_prefix='response should contain poem text (first line)')
+        self.assertContains(response, 'Broke yesterday o\'erhead,',
+            msg_prefix='response should contain poem text (middle line)')
+        self.assertContains(response, 'The gate of life restored.',
+            msg_prefix='response should contain poem text (last line)')
+        self.assertContains(response, 'Reprinted by special permission of the proprietors of Punch.',
+            msg_prefix='response should contain note text')
+
+        # book title/link
+        self.assertContains(response, 'THE FIERY CROSS',
+            msg_prefix='response should contain book title')
+        self.assertContains(response, reverse('poetry:book-toc', args=['fiery']),
+            msg_prefix='response should contain link to book')
+
+        # previous
+        self.assertContains(response, 'Previous poem',
+            msg_prefix='response should contain link to previous poem if there is one')
+        self.assertNotContains(response, 'Previous poem: None',
+            msg_prefix='response should not display "None" when previous poem has no title')
+        self.assertContains(response, reverse('poetry:poem', args=['fiery', 'fiery002']),
+            msg_prefix='response should link to previous poem')
+        # next
+        self.assertContains(response, 'Next poem: From Germany',
+            msg_prefix='response should contain link to next poem with title')        
+        self.assertContains(response, reverse('poetry:poem', args=['fiery', 'fiery012']),
+            msg_prefix='response should link to next poem')
+
+        # first poem - no next link
+        poem_url = reverse('poetry:poem', args=['fiery', 'fiery001'])
+        response = self.client.get(poem_url)
+        self.assertNotContains(response, 'Previous poem',
+            msg_prefix='response should not link to previous poem when showing first poem')
+
+        # last poem - no next link
+        poem_url = reverse('poetry:poem', args=['fiery', 'fiery069'])
+        response = self.client.get(poem_url)
+        self.assertNotContains(response, 'Next poem',
+            msg_prefix='response should not link to next poem when showing last poem')
+
+        # not found
+        poem_url = reverse('poetry:poem', args=['nonexistent', 'nonexistent01'])
+        response = self.client.get(poem_url)
+        expected = 404
+        self.assertEqual(response.status_code, expected,
+                        'Expected %s but returned %s for %s' % \
+                        (expected, response.status_code, poem_url))
 
 
 
