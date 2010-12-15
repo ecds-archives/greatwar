@@ -45,6 +45,7 @@ def browse(request):
     context = {}
 
     if 'subject' in request.GET:
+        context['subject'] = request.GET['subject']
         search_opts['subject'] = request.GET['subject']
  
 
@@ -63,8 +64,7 @@ def browse(request):
                 
     context['postcards_paginated'] = postcard_page
     
-    return render_to_response('postcards/browse.html',
-                              context,
+    return render_to_response('postcards/browse.html', context,
                                 context_instance=RequestContext(request))
 
 def view_postcard(request, pid):
