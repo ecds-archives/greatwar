@@ -6,7 +6,9 @@
     <p>Displaying {{ postcards_paginated.start_index }} - {{ postcards_paginated.end_index }} of {{ postcards_paginated.paginator.count }} postcard{{ postcards_paginated.paginator.count|pluralize }}.</p>
 {# % assert False % #}
 {% endif %}
-
+{% if subject %}
+    <p>Subject is {{subject}}.</p>
+{% endif %}
 
 {% if postcards_paginated %}
    {% for postcard in postcards_paginated.object_list %}
