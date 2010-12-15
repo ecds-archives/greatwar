@@ -25,12 +25,12 @@
      <td class="separator">&bull;</td>
      <td><a href="{% url about %}">About the Site</a></td>
      <td class="separator">&bull;</td>
-     <td><a href="">Credits</a></td>
+     <td><a href="{% url credits %}">Credits</a></td>
 </tr>
 
 </table>
         <hr align="left"/>
-
+{% block page_title %}{% endblock %}
 <div class="sidebar">
 
 <div class="nav">

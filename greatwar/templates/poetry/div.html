@@ -3,8 +3,8 @@
 
 {% block content %}
 {% if div %}
-    from <a href="{% url poetry:book-toc div.doc_id %}">{{ div.doctitle }}</a>
-
+   <p> from <a href="{% url poetry:book-toc div.doc_id %}">{{ div.doctitle }}</a></p>
+   <p> {% if url_params %}<a href="{% url poetry:search %}{{url_params}}">Return to search</a>{% endif %}</p>
     {{ body|safe }}
 
     {% if div.prevdiv.id %}
