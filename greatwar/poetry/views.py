@@ -40,9 +40,6 @@ def book_toc(request, doc_id):
 
 def div(request, doc_id, div_id):
     "Display a single div (poem or essay)"
-    if 'page' in request.GET:
-        page = request.GET['page']
-        url_params = '?' + {'page': page}
     if 'keyword' in request.GET:
         search_terms = request.GET['keyword']
         url_params = '?' + urlencode({'keyword': search_terms})

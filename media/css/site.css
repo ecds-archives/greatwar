@@ -43,7 +43,7 @@ p.title { /* text-align: center; */ margin:auto;
           margin-top: 1em;
 	  font-size: 120%;
 	  font-weight: bold;
-              }
+          }
 p.author { font-weight: bold;}
 /* formatting for 'about the site' essay */
 div#about { margin-left: 1in; margin-right: 3in; }
@@ -231,7 +231,8 @@ p.copyright { color: #666666; margin-top: 25px; border-top: double;
 padding: 5px; }
 table.poem { margin: 25px; }
 table.poem td, div.poem { text-align: left; }
-p.head { font-weight: bold; font-size: 115%; }
+p.head { font-weight: bold; font-size: 115%; font-variant: small-caps;
+          }
 p.subhead { font-weight: bold; font-size: 105%; text-align:center; }
 p.argument { width: 60%; }
 p.epigraph,p.trailer,p.byline,p.dedication { font-style: italic; font-size: 90%; }
@@ -299,6 +300,13 @@ p.comment span.byline { font-style: italic; font-size: 90%; color: #666666; }
 
 p.inline-note { font-size: 85%; }
 
+/* jQuery */
+h4.toggle { background: url(../images/closed.gif) no-repeat;
+	    padding-left: 10px;}
+ul.category { display: none;}
+h4.toggle active { background: url(../images/open.gif) no-repeat;
+		   padding-left: 10px;}
+ul.category active { display: block;}
 
 
 

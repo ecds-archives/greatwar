@@ -9,9 +9,9 @@
 
 {% block content %}
 {% if book %}
-  {{ book.title }}
-     {% if book.author %} {{ book.author }} <br/> {% endif %}
-     {% if book.editor %} {{ book.editor }} <br/> {% endif %}
+ <h3> {{ book.title }} </h3>
+     {% if book.author %} <h4>{{ book.author }}</h4> {% endif %}
+     {% if book.editor %} <h4>{{ book.editor }}</h4> {% endif %}
 
   <ul>
   {% for div in book.front.div %}

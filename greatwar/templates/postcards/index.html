@@ -1,6 +1,10 @@
 {% extends "postcards/postcard_base.html" %}
-{% block page_subtitle %} Introduction {% endblock %}
 
+{% block page_subtitle %} Introduction {% endblock %}
+{% block page-head %}
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+{# TODO: change this for staging/production: js should be installed #}
+{% endblock %}
 {% block content %}
 <div class="random_postcard">
     {% with postcards|random as postcard %}
@@ -22,15 +26,15 @@ View thumbnails with titles, or thumbnails with a brief description<br>
 <div class="categories">
   {% for group in categories %}
     {# TODO: javascript not yet included #}
-      <div>
-          <h4>{{ group.type }}</h4>
-      <ul id="{{ group.type }}" style="display:block"> {# force display for now #}
+  	  <a onClick="$('#{{ group.type|slugify }}').toggle()"> 
+          <h4 id="category-label" class ="toggle">{{ group.type }}</h4></a>
+     <ul id="{{ group.type|slugify }}" class="category">
           {% for interp in group.interp %}
             <li><a href="{% url postcards:browse %}?subject={{ group.type }}: {{ interp.value }}">{{ interp.value }}</a></li>
           {% endfor %}
       </ul>
-      </div>
-    {% endfor %}
+     
+   {% endfor %}
 </div>
 </li>
 <li><a href="{% url postcards:search %}">Search</a> the postcards by keyword, title, description, and category
