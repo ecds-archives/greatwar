@@ -5,7 +5,7 @@
    <title>The Great War {% block pagetitle %} PAGE TITLE {% endblock %} </title>
    <link rel="icon" type="image/jpeg" href="/images/favicon.jpg">   
    <link rel="stylesheet" type="text/css" href="/css/site.css"/>
-   <!-- <script language='Javascript' type='text/javascript' src='/js/toggle-list.js'/> --> <!-- Javascript causes Firefox display error -->
+  
   {% block page-head %}
   {% endblock %}
 </head>
@@ -35,6 +35,17 @@
 
 <div class="nav">
 {% block section_nav %}
+ <h3>Navigation</h3>
+  <p>Poetry:
+   <a href="{% url poetry:books %}">Browse Volumes</a><br/>
+   <a href="{% url poetry:poets %}">Browse by Poet</a><br/>
+   <a href="{% url poetry:search %}">Advanced Search</a>
+  </p>
+   <p>Postcards:
+   <a href="{% url postcards:browse %}">Browse Postcards</a><br>
+   <a href="{% url postcards:index %}">Postcards Home</a><br>
+   <a href="{% url postcards:search %}">Advanced Search</a>
+  </p>
 {% endblock %}
 </div>
 
