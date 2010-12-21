@@ -10,13 +10,19 @@ from eulcore.xmlmap import load_xmlobject_from_file
 from eulcore.xmlmap.teimap import Tei
 
 from greatwar.postcards.models import ImageObject, Postcard, Categories, PostcardCollection
+'''
 
+'''
 #FIXME: there should be a better place to put this... (eulcore.fedora somewhere)
 MEMBER_OF_COLLECTION = 'info:fedora/fedora-system:def/relations-external#isMemberOfCollection'
 
 class Command(BaseCommand):        
     """Ingest Great War Project postcards from a local source directory into
     a Fedora repository.
+    The command to run this script from Alice Hickcoxs computer is:
+    ./manage.py ingest_postcards /Beck-files/WWI/greatwar/trunk/xml/postcards/postcards.xml /Volumes/FreeAgent\ Drive/GreatWar/images-fullsize/
+    The full size (tiff) images are stored on the external hard drive /Volumes/FreeAgent\ Drive/GreatWar/images-fullsize
+    To test the ingest use the --dry-run switch.
     """
     help = __doc__
 
@@ -152,8 +158,11 @@ class Command(BaseCommand):
             obj.owner = settings.FEDORA_OBJECT_OWNERID
             obj.dc.content.title = obj.label
             obj.dc.content.description = c.description
+            # Store local identifier in DC
+            obj.dc.content.identifier = c.entity
             # TODO: handle postcards with text/poetry lines
 
+           
             # convert interp text into dc: subjects
             local_subjects = []
             for ana_id in c.ana.split():
