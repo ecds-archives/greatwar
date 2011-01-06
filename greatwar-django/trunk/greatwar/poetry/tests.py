@@ -166,7 +166,9 @@ class PoetryViewsTestCase(TestCase):
         self.assertContains(response, reverse('poetry:poem', args=['fiery', 'fiery069']),
             msg_prefix='book ToC for fiery includes link to "Aux Poetes Futurs" (last poem)')
 
-
+        # - copyright info for book
+        self.assertContains(response, '1915', # the date in the sourceDesc
+            msg_prefix='source bibl for fiery contains "1915" (copyright date)') 
         # toc for non-existent book should 404
         book_toc_url = reverse('poetry:book-toc', args=['nonexistent'])
         response = self.client.get(book_toc_url)
