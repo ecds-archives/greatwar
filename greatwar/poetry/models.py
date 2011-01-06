@@ -3,7 +3,7 @@ from eulcore.django.existdb.models import XmlModel
 from eulcore.xmlmap import XmlObject
 from eulcore.xmlmap.dc import DublinCore
 from eulcore.xmlmap.fields import StringField, NodeField, StringListField, NodeListField
-from eulcore.xmlmap.teimap import Tei, TeiDiv, TeiLineGroup, TEI_NAMESPACE
+from eulcore.xmlmap.teimap import Tei, TeiHeader, TeiDiv, TeiLineGroup, TEI_NAMESPACE
 
 
 # TEI poetry models
@@ -19,6 +19,15 @@ class PoetryBook(XmlModel, Tei):
     geo_coverage = StringField('tei:teiHeader/tei:profileDesc/tei:creation/tei:rs[@type="geography"]')
     creation_date = StringField('tei:teiHeader/tei:profileDesc/tei:creation/tei:date')
     lcsh_subjects = StringListField('tei:teiHeader//tei:keywords[@scheme="#lcsh"]/tei:list/tei:item')
+
+    source_title = StringField('tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:bibl/tei:title')
+    source_author = StringField('tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:bibl/tei:author')
+    source_editor = StringField('tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:bibl/tei:editor')
+    source_publisher = StringField('tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:bibl/tei:publisher')
+    source_pubplace = StringField('tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:bibl/tei:pubPlace')
+    source_date = StringField('tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:bibl/tei:date')
+
+    
 
     @property
     def dublin_core(self):
@@ -45,6 +54,16 @@ class PoetryBook(XmlModel, Tei):
 
         return dc
 
+    def bibl(self):
+        """Creates formatted citation from sourceDesc"""
+        cit = {"author" : self.source_author, "editor": self.source_editor, "title" : self.source_title, "pubplace" : self.source_pubplace, "publisher" :  self.source_publisher, "date" : self.source_date }
+       
+           
+        if cit['author']:  return "%(author)s, <i>%(title)s</i>. %(pubplace)s: %(publisher)s, %(date)s." % cit
+        elif cit['editor']:  return "%(editor)s, ed., <i>%(title)s</i>. %(pubplace)s: %(publisher)s, %(date)s." % cit
+        else: return "<i>%(title)s</i>. %(pubplace)s: %(publisher)s, %(date)s." % cit
+        
+        
 class Poem(XmlModel, TeiDiv):
     ROOT_NAMESPACES = {'tei' : TEI_NAMESPACE}
     poet = StringField("tei:docAuthor/tei:name/tei:choice")

@@ -53,9 +53,12 @@
   {% endfor %}
 
   </ul>
-
+  
+    <p class="copyright">{% autoescape off %}{{ bibl }}{% endautoescape %} </p>
+ 
+  
 {% else %}
     <p>No book specified?</p>
 {% endif %}
-   <pre>{{div.serializeDocument}}</pre>
+  
 {% endblock %}
