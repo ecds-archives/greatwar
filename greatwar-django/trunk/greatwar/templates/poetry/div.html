@@ -21,6 +21,6 @@
             </a>
         </p>
     {% endif %}
-    {{ div.book.source.citation }}
+    {% with div.book as book %}{% include 'poetry/snippets/citation.html' %}{% endwith %}
 {% endif %}
 {% endblock %}
