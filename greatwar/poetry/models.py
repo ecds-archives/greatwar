@@ -1,15 +1,54 @@
+from django.utils.safestring import mark_safe
+
 from eulcore.django.existdb.manager import Manager
 from eulcore.django.existdb.models import XmlModel
 from eulcore.xmlmap import XmlObject
 from eulcore.xmlmap.dc import DublinCore
 from eulcore.xmlmap.fields import StringField, NodeField, StringListField, NodeListField
-from eulcore.xmlmap.teimap import Tei, TeiHeader, TeiDiv, TeiLineGroup, TEI_NAMESPACE
+from eulcore.xmlmap.teimap import Tei, TeiDiv, TEI_NAMESPACE
 
 
 # TEI poetry models
 # currently just slightly-modified versions of tei xmlmap objects
 
+class Bibliography(XmlObject):
+    ROOT_NAMESPACES = {'tei' : TEI_NAMESPACE}
+    # TODO: handle repeating elements
+    title = StringField('tei:title')
+    author = StringField('tei:author')
+    editor = StringField('tei:editor')
+    publisher = StringField('tei:publisher')
+    pubplace = StringField('tei:pubPlace')
+    date = StringField('tei:date')
 
+    def formatted_citation(self):
+        """Generate an HTML formatted citation."""
+        cit = {
+            "author": '',
+            "editor": '',
+            "title": self.title,
+            "pubplace": self.pubplace,
+            "publisher":  self.publisher,
+            "date": self.date
+        }
+        if self.author:
+            cit['author'] = '%s. ' % self.author
+        if self.editor:
+            cit['editor'] = '%s, ed. ' % self.editor
+
+        return mark_safe('%(author)s%(editor)s<i>%(title)s</i>. %(pubplace)s: %(publisher)s, %(date)s.' \
+                % cit)
+
+
+class SourceDescription(XmlObject):
+    'XmlObject for TEI Source Description (sourceDesc element).'
+    ROOT_NAMESPACES = {'tei' : TEI_NAMESPACE}
+    bibl = NodeField('tei:bibl', Bibliography)
+    ':class:`Bibliography` - `@bibl`'
+
+    def citation(self):
+        'Shortcut for :meth:`Bibligraphy.formatted_citation` to render source bibl'
+        return self.bibl.formatted_citation()
 
 class PoetryBook(XmlModel, Tei):
     ROOT_NAMESPACES = {'tei' : TEI_NAMESPACE}
@@ -20,13 +59,7 @@ class PoetryBook(XmlModel, Tei):
     creation_date = StringField('tei:teiHeader/tei:profileDesc/tei:creation/tei:date')
     lcsh_subjects = StringListField('tei:teiHeader//tei:keywords[@scheme="#lcsh"]/tei:list/tei:item')
 
-    source_title = StringField('tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:bibl/tei:title')
-    source_author = StringField('tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:bibl/tei:author')
-    source_editor = StringField('tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:bibl/tei:editor')
-    source_publisher = StringField('tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:bibl/tei:publisher')
-    source_pubplace = StringField('tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:bibl/tei:pubPlace')
-    source_date = StringField('tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:bibl/tei:date')
-
+    source = NodeField('tei:teiHeader/tei:fileDesc/tei:sourceDesc', SourceDescription)
     
 
     @property
@@ -53,15 +86,6 @@ class PoetryBook(XmlModel, Tei):
         # hard-coded when setting dc:relation in postcard ingest
 
         return dc
-
-    def bibl(self):
-        """Creates formatted citation from sourceDesc"""
-        cit = {"author" : self.source_author, "editor": self.source_editor, "title" : self.source_title, "pubplace" : self.source_pubplace, "publisher" :  self.source_publisher, "date" : self.source_date }
-       
-           
-        if cit['author']:  return "%(author)s, <i>%(title)s</i>. %(pubplace)s: %(publisher)s, %(date)s." % cit
-        elif cit['editor']:  return "%(editor)s, ed., <i>%(title)s</i>. %(pubplace)s: %(publisher)s, %(date)s." % cit
-        else: return "<i>%(title)s</i>. %(pubplace)s: %(publisher)s, %(date)s." % cit
         
         
 class Poem(XmlModel, TeiDiv):
@@ -73,7 +97,8 @@ class Poem(XmlModel, TeiDiv):
     poem = NodeField("tei:div[@type='poem']", "self")
     line_matches = NodeListField('tei:l',"self")   # place-holder: must be retrieved with raw xpath to use ft:query
 
-    # reference to top-level elements, e.g. for retrieving a single div
+    # reference to book for access to document-level information
+    book = NodeField('ancestor::tei:TEI', PoetryBook)
     doctitle = StringField('ancestor::tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title')
     doc_id   = StringField('ancestor::tei:TEI/@xml:id')
 

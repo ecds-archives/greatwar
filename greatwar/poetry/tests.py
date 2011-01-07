@@ -7,15 +7,21 @@ from django.conf import settings
 from django.core.urlresolvers import reverse
 from django.test import TestCase as DjangoTestCase
 
-from eulcore.xmlmap import load_xmlobject_from_file, load_xmlobject_from_string
+from eulcore.xmlmap import load_xmlobject_from_file, load_xmlobject_from_string, \
+    NodeListField
 from eulcore.xmlmap.dc import DublinCore
 from eulcore.django.test import TestCase
 
-from greatwar.poetry.models import PoetryBook, Poet, Poem
+from greatwar.poetry.models import PoetryBook, Poet, Poem, SourceDescription, \
+    Bibliography
 
 
 exist_fixture_path = path.join(path.dirname(path.abspath(__file__)), 'fixtures')
 exist_index_path = path.join(path.dirname(path.abspath(__file__)), '..', 'collection.xconf')
+
+# extend PoetryBook model
+class TestPoetryBook(PoetryBook):
+    poems = NodeListField('//tei:div[@type="poem"]', Poem)
 
 class PoetryTestCase(DjangoTestCase):
     # tests for poetry model objects
@@ -32,7 +38,7 @@ class PoetryTestCase(DjangoTestCase):
         for file in self.FIXTURES:    
           filebase = file.split('.')[0]       
           self.poetry[filebase] = load_xmlobject_from_file(path.join(exist_fixture_path,
-                                file), PoetryBook)                                                  
+                                file), TestPoetryBook)
         # load the poet fixture docAuthor
         self.poet = load_xmlobject_from_string(self.POET_STRING, Poet)
         
@@ -44,11 +50,13 @@ class PoetryTestCase(DjangoTestCase):
     def test_xml_fixture_load(self):
         self.assertEqual(3, len(self.poetry))
 
+    def test_poem_model(self):
     # TODO: test Poem object custom fields
     # may have to be dne using eXist...
         # reference to document-level info
-        #self.assertEqual('Flower of Youth: Poems in War Time, an electronic edition', self.poem.doctitle)
-        #self.assertEqual('flower', self.poem.doc_id)
+        self.assertEqual('Flower of Youth: Poems in War Time, an electronic edition',
+            self.poetry['flower'].poems[0].book.title)
+        self.assertEqual('flower', self.poetry['flower'].poems[0].book.id)
 
       
     def test_poet_attributes(self):    
@@ -100,6 +108,22 @@ class PoetryTestCase(DjangoTestCase):
         self.assert_('World War, 1914-1918--Poetry.' in dc.subject_list)
         self.assert_('English poetry--Women authors--20th Century.' in dc.subject_list)
         self.assert_('War.' in dc.subject_list)
+
+    def test_source_description(self):
+        # check source/bibl mapping & types
+        self.assert_(isinstance(self.poetry['flower'].source, SourceDescription))
+        self.assert_(isinstance(self.poetry['flower'].source.bibl, Bibliography))
+        # check formatted citation
+        self.assertEqual('H. B. Elliot, ed. <i>Lest We Forget</i>. London: Jarrold & Sons, 1915.',
+            self.poetry['lest'].source.citation())
+        self.assertEqual('Edwards, Mabel C. and Mary Booth, ed. ' +
+            '<i>THE FIERY CROSS: An Anthology of War Poems</i>. ' +
+            'London: Grant Richards Ltd., 1915.',
+            self.poetry['fiery'].source.citation())
+        self.assertEqual('Tynan, Katharine. <i>Flower of Youth: Poems in War Time</i>. ' +
+            'London: Sidgwick & Jackson, 1915.',
+            self.poetry['flower'].source.citation())
+        
         
 class PoetryViewsTestCase(TestCase):
     # tests for ONLY those views that do NOT require eXist full-text index
@@ -168,7 +192,8 @@ class PoetryViewsTestCase(TestCase):
 
         # - copyright info for book
         self.assertContains(response, '1915', # the date in the sourceDesc
-            msg_prefix='source bibl for fiery contains "1915" (copyright date)') 
+            msg_prefix='source bibl for fiery contains "1915" (copyright date)')
+
         # toc for non-existent book should 404
         book_toc_url = reverse('poetry:book-toc', args=['nonexistent'])
         response = self.client.get(book_toc_url)
@@ -222,6 +247,10 @@ class PoetryViewsTestCase(TestCase):
             msg_prefix='response should contain book title')
         self.assertContains(response, reverse('poetry:book-toc', args=['fiery']),
             msg_prefix='response should contain link to book')
+        # book citation
+        self.assertContains(response, '1915', # the date in the sourceDesc
+            msg_prefix='source bibl for fiery005 contains "1915" (book copyright date)')
+
 
         # previous
         self.assertContains(response, 'Previous poem',
