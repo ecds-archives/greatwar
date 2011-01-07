@@ -46,7 +46,7 @@
 
   {% for div in book.back.div %}
      {% ifequal div.type "Colophon" %} {# other types ? #}
-	<li>{{ div.text }} <i>({{ div.type }})</i></li>
+	<li>{{ div.text }} <font class="type"><i>({{ div.type }})</i></font></li>
      {% else %}
      <li><a href="{% url poetry:poem book.id,div.id %}">{{ div.title|default:div.type|capfirst }}</a></li>
      {% endifequal %}
