@@ -48,9 +48,9 @@ def div(request, doc_id, div_id):
         url_params = ''
         filter = {}
     try:
-        extra_fields = ['doc_id', 'doctitle', 'nextdiv__id', 'nextdiv__title',
+        extra_fields = ['book__id', 'book__title', 'nextdiv__id', 'nextdiv__title',
             'prevdiv__id', 'prevdiv__title', 'book__source']
-        div = Poem.objects.also(*extra_fields).filter(doc_id__exact=doc_id, **filter).get(id__exact=div_id)
+        div = Poem.objects.also(*extra_fields).filter(book__id=doc_id, **filter).get(id=div_id)
         body = div.xsl_transform(filename=os.path.join(settings.BASE_DIR, 'poetry', 'xslt', 'div.xsl'))
         return render_to_response('poetry/div.html', { 'div' : div,
                                                        'body' : body.serialize(),
@@ -87,16 +87,16 @@ def _show_poets(request, poets, current_letter=None):
     return render_to_response('poetry/poets.html', { 'poets' : poets,
                                                      'first_letters' : first_letters,
                                                      'current_letter' : current_letter,
-                                                     'querytime' : [poets.object_list.queryTime(),first_letters.queryTime()]
                                                      })    
     
     
 def poet_list(request, name):
     "List poems by a particular poet"
-    poems = Poem.objects.filter(poetrev__exact=name).also('doctitle', 'doc_id').order_by('title').all()
+    poems = Poem.objects.filter(poetrev__exact=name).also('book__title',
+                        'book__id').order_by('title').all()
     return render_to_response('poetry/poem_list.html', { 'poems' : poems,
                                                          'poet'  : name,
-                                                         'querytime' : poems.queryTime()})
+                                                         })
                                                          
 def search(request):
     "Search poetry by title/author/keyword"
@@ -115,7 +115,7 @@ def search(request):
         if 'keyword' in form.cleaned_data and form.cleaned_data['keyword']:
             search_opts['fulltext_terms'] = '%s' % form.cleaned_data['keyword']
                     
-        poems = PoemSearch.objects.only("doctitle","doc_id","title", "id").filter(**search_opts)
+        poems = PoemSearch.objects.only("book__title","book__id","title", "id").filter(**search_opts)
         if 'keyword' in form.cleaned_data and form.cleaned_data['keyword']:
             poems = poems.only_raw(line_matches='%%(xq_var)s//tei:l[ft:query(., "%s")]' \
                                     % escape_string(form.cleaned_data['keyword']))

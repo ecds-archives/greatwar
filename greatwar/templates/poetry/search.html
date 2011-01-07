@@ -43,7 +43,9 @@
   
   <ul>
       {% for poem in poetry_paginated.object_list %}
-      <li><a href="{% url poetry:poem poem.doc_id poem.id %}{% if keyword %}?keyword={{ keyword }}{% endif %}">{{ poem.title }}</a> in <a href="{% url poetry:book-toc poem.doc_id %}"><i>{{ poem.doctitle }}</i></a>
+      <li><a href="{% url poetry:poem poem.book.id poem.id %}{% if keyword %}?keyword={{ keyword }}{% endif %}">
+            {{ poem.title }}</a> in
+            <a href="{% url poetry:book-toc poem.book.id %}"><i>{{ poem.book.title }}</i></a>
   
          {% if poem.line_matches %}
            {% for line in poem.line_matches %} <p class="kwic">...{{ line|exist_matches }}...</p> {% endfor %}

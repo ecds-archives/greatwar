@@ -99,8 +99,6 @@ class Poem(XmlModel, TeiDiv):
 
     # reference to book for access to document-level information
     book = NodeField('ancestor::tei:TEI', PoetryBook)
-    doctitle = StringField('ancestor::tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title')
-    doc_id   = StringField('ancestor::tei:TEI/@xml:id')
 
     objects = Manager("//tei:div")
     # NOTE: this object could be restricted to poems only using [@type='poem']
