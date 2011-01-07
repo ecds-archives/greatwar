@@ -7,9 +7,7 @@ from django.conf import settings
 from django.core.urlresolvers import reverse
 from django.test import TestCase as DjangoTestCase
 
-from eulcore.xmlmap import load_xmlobject_from_file, load_xmlobject_from_string, \
-    NodeListField
-from eulcore.xmlmap.dc import DublinCore
+from eulcore import xmlmap
 from eulcore.django.test import TestCase
 
 from greatwar.poetry.models import PoetryBook, Poet, Poem, SourceDescription, \
@@ -21,7 +19,7 @@ exist_index_path = path.join(path.dirname(path.abspath(__file__)), '..', 'collec
 
 # extend PoetryBook model
 class TestPoetryBook(PoetryBook):
-    poems = NodeListField('//tei:div[@type="poem"]', Poem)
+    poems = xmlmap.NodeListField('//tei:div[@type="poem"]', Poem)
 
 class PoetryTestCase(DjangoTestCase):
     # tests for poetry model objects
@@ -37,10 +35,10 @@ class PoetryTestCase(DjangoTestCase):
         self.poetry = dict()
         for file in self.FIXTURES:    
           filebase = file.split('.')[0]       
-          self.poetry[filebase] = load_xmlobject_from_file(path.join(exist_fixture_path,
+          self.poetry[filebase] = xmlmap.load_xmlobject_from_file(path.join(exist_fixture_path,
                                 file), TestPoetryBook)
         # load the poet fixture docAuthor
-        self.poet = load_xmlobject_from_string(self.POET_STRING, Poet)
+        self.poet = xmlmap.load_xmlobject_from_string(self.POET_STRING, Poet)
         
                                   
     def test_init(self):
@@ -66,7 +64,7 @@ class PoetryTestCase(DjangoTestCase):
     def test_dublin_core(self):
         # anthology - 2 editors, no author
         dc = self.poetry['fiery'].dublin_core
-        self.assert_(isinstance(dc, DublinCore))
+        self.assert_(isinstance(dc, xmlmap.dc.DublinCore))
         self.assertEqual('THE FIERY CROSS: An Anthology of War Poems', dc.title,
             'document title should be in dc:title')
         self.assertFalse(dc.creator_list, 'dc:creator should not be set TEI has no document author')
