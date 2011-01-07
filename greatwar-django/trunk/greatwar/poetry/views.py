@@ -34,9 +34,7 @@ def book_toc(request, doc_id):
     "Display the contents of a single book."
     try:
         book = PoetryBook.objects.get(id__exact=doc_id)
-        citation = PoetryBook.bibl(book)
-        return render_to_response('poetry/book_toc.html', {'book' : book,
-                                                           'bibl' : citation})
+        return render_to_response('poetry/book_toc.html', {'book': book})
     except DoesNotExist:
         raise Http404
 
@@ -50,8 +48,9 @@ def div(request, doc_id, div_id):
         url_params = ''
         filter = {}
     try:
-        div = Poem.objects.also('doctitle', 'doc_id', 'nextdiv__id', 'nextdiv__title',
-            'prevdiv__id', 'prevdiv__title').filter(doc_id__exact=doc_id, **filter).get(id__exact=div_id)
+        extra_fields = ['doc_id', 'doctitle', 'nextdiv__id', 'nextdiv__title',
+            'prevdiv__id', 'prevdiv__title', 'book__source']
+        div = Poem.objects.also(*extra_fields).filter(doc_id__exact=doc_id, **filter).get(id__exact=div_id)
         body = div.xsl_transform(filename=os.path.join(settings.BASE_DIR, 'poetry', 'xslt', 'div.xsl'))
         return render_to_response('poetry/div.html', { 'div' : div,
                                                        'body' : body.serialize(),
