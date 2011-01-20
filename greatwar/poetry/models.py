@@ -54,13 +54,14 @@ class PoetryBook(XmlModel, Tei):
     ROOT_NAMESPACES = {'tei' : TEI_NAMESPACE}
     objects = Manager('/tei:TEI')
 
+    site_url = 'http://beck.library.emory.edu/greatwar'
     project_desc = StringField('tei:teiHeader/tei:encodingDesc/tei:projectDesc')
     geo_coverage = StringField('tei:teiHeader/tei:profileDesc/tei:creation/tei:rs[@type="geography"]')
     creation_date = StringField('tei:teiHeader/tei:profileDesc/tei:creation/tei:date')
     lcsh_subjects = StringListField('tei:teiHeader//tei:keywords[@scheme="#lcsh"]/tei:list/tei:item')
-
+    identifier_ark = StringField('tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:idno[@type="ark"]')
     source = NodeField('tei:teiHeader/tei:fileDesc/tei:sourceDesc', SourceDescription)
-    
+
 
     @property
     def dublin_core(self):
@@ -74,6 +75,8 @@ class PoetryBook(XmlModel, Tei):
         dc.source = self.header.source_description
         dc.subject_list.extend(self.lcsh_subjects)
         dc.description = self.project_desc
+        dc.identifier = self.identifier_ark
+
 
         if self.geo_coverage:
             dc.coverage_list.append(self.geo_coverage)
