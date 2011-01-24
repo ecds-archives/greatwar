@@ -1,4 +1,5 @@
 from django.conf.urls.defaults import patterns, url
+from django.views.decorators.cache import cache_page
 
 urlpatterns = patterns('greatwar.postcards.views',
     url(r'^$', 'browse', name='browse'),

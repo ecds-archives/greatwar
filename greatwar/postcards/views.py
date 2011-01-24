@@ -3,6 +3,7 @@ from django.conf import settings
 from django.core.paginator import Paginator, InvalidPage, EmptyPage
 from django.shortcuts import render_to_response
 from django.template import RequestContext
+from django.views.decorators.cache import cache_page
 
 from eulcore.django.fedora.server import Repository
 from eulcore.fedora.util import RequestFailed
@@ -14,6 +15,7 @@ import logging
 
 # FIXME: set repo default type somewhere in a single place
 
+@cache_page(900)
 def summary(request):
     '''Postcard summary/about page with information about the postcards and
     various entry points for accessing them.'''
