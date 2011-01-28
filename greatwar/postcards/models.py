@@ -30,12 +30,11 @@ class KeyValue(XmlModel, TeiInterp):
 
 # preliminary fedora object for images
 class ImageObject(DigitalObject):
-    CONTENT_MODELS = [ 'info:fedora/djatoka:jp2CModel' ]
-    IMAGE_SERVICE = 'djatoka:jp2SDef'
+    CONTENT_MODELS = [ 'info:fedora/emory-control:Image-1.0' ]
+    IMAGE_SERVICE = 'emory-control:DjatokaImageService'
     
     # DC & RELS-EXT inherited
-    # NOTE: dsid 'source' required for djatoka cmodel image service
-    image = FileDatastream("source", "Master TIFF image", defaults={
+    image = FileDatastream("image-source", "Master TIFF image", defaults={
             'mimetype': 'image/tiff',
             # FIXME: versioned? checksum?
         })
