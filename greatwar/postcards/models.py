@@ -34,7 +34,7 @@ class ImageObject(DigitalObject):
     IMAGE_SERVICE = 'emory-control:DjatokaImageService'
     
     # DC & RELS-EXT inherited
-    image = FileDatastream("image-source", "Master TIFF image", defaults={
+    image = FileDatastream("source-image", "Master TIFF image", defaults={
             'mimetype': 'image/tiff',
             # FIXME: versioned? checksum?
         })
