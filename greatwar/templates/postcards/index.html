@@ -8,11 +8,13 @@
 {% endblock %}
 {% block postcard %}
 <div class="random_postcard">
-    {% with postcards|random as postcard %}
-        {% include 'postcards/_thumbnail_view.html' %}
-     {% endwith %}
-</div>
-{% endblock %}
+    {% if count > 0 %}
+        {% with postcards|random as postcard %}
+            {% include 'postcards/_thumbnail_view.html' %}
+         {% endwith %}
+{% endif %}
+    </div>
+    {% endblock %}
 
 {% block content %}
 <p>For more information about the postcards, read <a href="{% url about %}">about
