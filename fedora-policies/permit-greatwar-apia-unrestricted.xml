@@ -44,17 +44,15 @@
             <AttributeValue
             DataType="http://www.w3.org/2001/XMLSchema#string">urn:fedora:names:fedora:2.1:action:api-a</AttributeValue>
             <ActionAttributeDesignator
-            AttributeId="urn:fedora:names:fedora:2.1:action:id"
+            AttributeId="urn:fedora:names:fedora:2.1:action:api"
             DataType="http://www.w3.org/2001/XMLSchema#string"/>
           </ActionMatch>
         </Action>
         <!-- allow access to datastream profile info (technically part of api-m) -->
         <Action>
           <ActionMatch MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
-            <AttributeValue
-            DataType="http://www.w3.org/2001/XMLSchema#string">urn:fedora:names:fedora:2.1:action:id-getDatastream</AttributeValue>
-            <ActionAttributeDesignator
-            AttributeId="urn:fedora:names:fedora:2.1:action:id"
+            <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">urn:fedora:names:fedora:2.1:action:id-getDatastream</AttributeValue>
+            <ActionAttributeDesignator AttributeId="urn:fedora:names:fedora:2.1:action:id"
             DataType="http://www.w3.org/2001/XMLSchema#string"/>
           </ActionMatch>
         </Action>
