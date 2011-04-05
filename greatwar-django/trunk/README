@@ -10,6 +10,7 @@ README
 Dependencies
 ------------
  * django 1.2
+ * pidmanclient
  * eXist-db 1.4
  * eulcore (currently included as a subversion external); see
    :ref:`eulcore dependencies <eulcore-deps>` for per-module
@@ -23,6 +24,43 @@ Dependencies
 
 Installation
 ------------
+To install all the necessary components for a development environment
+on an Ubuntu 10.04 workstation:
+
+sudo apt-get install python-ldap python-lxml python-ply python-dateutil fop libldap2-dev libsasl2-dev libssl-dev
+
+This assumes you already have a django 1.2 installation and python bindings
+for the database platform you are using (e.g., python-mysqldb for mysql).
+
+
+Create a virtualenvironment
+---------------------------
+sudo pip install virtualenv
+
+If the source is in /home/greatwar/src, consider creating an environment in  /home/greatwar/greatwarEnv.
+To create the environment, su into apache's user (for local development do not su to another user)
+and::
+	  $ virtualenv --no-site-packages /home/greatwar/greatwarEnv
+
+This creates a new virtual environment in that directory. Source the activation
+file to invoke the virtual environment (requires that you use the bash shell)::
+
+	  $ . /home/greatwar/greatwarEnv/bin/activate
+
+Once the environment has been activated inside a shell, Python programs
+spawned from that shell will read their environment only from this
+directory, not from the system-wide site packages. Installations will
+correspondingly be installed into this environment.
+
+Note::
+Installation instructions and upgrade notes below assume that
+you are already in an activated shell.
+
+Install python dependencies
+---------------------------
+To install python dependencies, cd into the repository checkout and::
+
+	  $ pip install -r pip-dependencies
 
 Install and configure like other django applications. 
 
@@ -39,21 +77,5 @@ For a first-time install, you will should run these two steps:
 (Note that if all finding aids are loaded, the reindex step can take quite a while)::
 
      $ ./manage.py existdb_index load
-     $ ./manage.py existdb_reindex  
-
-
-.. _eulcore-deps:
-
-eulcore dependencies
-^^^^^^^^^^^^^^^^^^^^
-.. include:: externals/django-modules/eulcore/README.dependencies 
-
-
-To install all the necessary components for a development environment
-on an Ubuntu 10.04 workstation:
-
-sudo apt-get install python-ldap python-lxml python-ply python-dateutil fop
-
-This assumes you already have a django 1.2 installation and python bindings
-for the database platform you are using (e.g., python-mysqldb for mysql).
+     $ ./manage.py existdb_reindex
 
