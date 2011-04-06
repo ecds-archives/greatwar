@@ -52,6 +52,12 @@ AUTH_LDAP_SEARCH_FILTER = '' # i.e. '(uid=%s)'
 AUTH_LDAP_CHECK_SERVER_CERT = False # ALWAYS SET True in production.
 AUTH_LDAP_CA_CERT_PATH = '' # absolute path of cert
 
+# pidman PID generation
+PIDMAN_HOST = 'http://pid.emory.edu/' # the web root where we'll ask for pids
+PIDMAN_USER = 'user'
+PIDMAN_PASSWORD = 'pass'
+PIDMAN_DOMAIN = 'http://pid.emory.edu/domains/123/' # the full url of the domain we'll create pids in
+
 
 ADDITIONAL_DATA_INDEX   = ""
 DOI_PURL_HOST = "http://dx.doi.org/"
