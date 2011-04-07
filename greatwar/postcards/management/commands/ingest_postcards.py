@@ -10,9 +10,23 @@ from eulcore.xmlmap import load_xmlobject_from_file
 from eulcore.xmlmap.teimap import Tei
 from greatwar.postcards.models import ImageObject, Postcard, Categories, PostcardCollection
 from greatwar.common.utils import get_pid_target, absolutize_url
+from pidservices.djangowrapper.shortcuts import DjangoPidmanRestClient
 '''
 
 '''
+
+# try to configure a pidman client to get pids.
+try:
+    pidman = DjangoPidmanRestClient()
+except:
+    # if we're in dev mode then we can fall back on the fedora default
+    # pid allocator. in non-dev, though, we really need pidman
+    if getattr(settings, 'DEV_ENV', False):
+        pidman = None
+    else:
+        raise
+
+
 #FIXME: there should be a better place to put this... (eulcore.fedora somewhere)
 MEMBER_OF_COLLECTION = 'info:fedora/fedora-system:def/relations-external#isMemberOfCollection'
 
@@ -156,13 +170,18 @@ class Command(BaseCommand):
             #create ark
             target = get_pid_target('postcards:card')
             print "***%s***" % (target) #REMOVE THIS LINE
+            ark = pidman.create_ark(settings.PIDMAN_DOMAIN, target, c.head)
+            arkbase, slash, noid = ark.rpartition('/')
+            pid = '%s:%s' % (settings.FEDORA_PIDSPACE, noid)
             obj = repo.get_object(type=ImageObject)
+            obj.pid = pid
             obj.label = c.head
             obj.owner = settings.FEDORA_OBJECT_OWNERID
             obj.dc.content.title = obj.label
             obj.dc.content.description = c.description
             # Store local identifier in DC
-            obj.dc.content.identifier = c.entity
+            #obj.dc.content.identifier = c.entity
+            obj.dc.content.identifier_list.extend([ark, c.entity])
             # TODO: handle postcards with text/poetry lines
 
            
