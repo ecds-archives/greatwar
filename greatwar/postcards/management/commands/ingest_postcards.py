@@ -8,8 +8,8 @@ from django.core.management.base import BaseCommand, CommandError
 from eulcore.django.fedora.server import Repository
 from eulcore.xmlmap import load_xmlobject_from_file
 from eulcore.xmlmap.teimap import Tei
-
 from greatwar.postcards.models import ImageObject, Postcard, Categories, PostcardCollection
+from greatwar.common.utils import get_pid_target, absolutize_url
 '''
 
 '''
@@ -153,6 +153,9 @@ class Command(BaseCommand):
 
             files += 1
             
+            #create ark
+            target = get_pid_target('postcards:card')
+            print "***%s***" % (target) #REMOVE THIS LINE
             obj = repo.get_object(type=ImageObject)
             obj.label = c.head
             obj.owner = settings.FEDORA_OBJECT_OWNERID
