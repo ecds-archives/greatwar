@@ -12,6 +12,10 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
+#This setting is used instead of the referencing :class:`~django.contrib.sites.models.Site`
+#If admin section is ever activated, this logic should be moved there
+BASE_URL='http://myurl.com'  #no trailing slash
+
 #We will not be using a RDB but this will allow tests to run
 DATABASE_ENGINE = 'sqlite3'
 DATABASE_NAME = 'no_db'

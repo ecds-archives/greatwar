@@ -115,6 +115,7 @@ INSTALLED_APPS = (
     'eulcore.django.util',
     'greatwar.postcards',
     'greatwar.poetry',
+    'greatwar.common',
     'greatwar',
 )
 
@@ -122,6 +123,8 @@ EXISTDB_INDEX_CONFIGFILE = path.join(BASE_DIR, "exist_index.xconf")
 
 # temporary pid - should eventually use ARK. must match PID in fixture
 POSTCARD_COLLECTION_PID = 'greatwar:postcards-collection'
+
+PID_TOKEN = '{%PID%}'
 
 # the default owner of all fedora objects created by this app
 FEDORA_OBJECT_OWNERID = 'beck-greatwar'

@@ -75,6 +75,8 @@ Use the permissions:
 The 'Great War' will have to be created as a sub-domain of BeckCenter if it does not already exist.
 Host, user, pass, and doman wil have to be configured in local_settings in the PIDMAN_* variables.
 
+BASE_URL should be configured in localsettings
+
 Install and configure like other django applications. 
 
 Copy ``localsettings-sample.py`` to ``localsettings.py`` and customize the settings.
