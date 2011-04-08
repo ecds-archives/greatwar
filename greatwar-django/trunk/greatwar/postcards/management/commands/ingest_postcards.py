@@ -167,21 +167,24 @@ class Command(BaseCommand):
 
             files += 1
             
+            # allows to run in noact mode without wasting a pid
+            pid = "not:assigned"
+            ark = "notark"
+
             #create ark
-            target = get_pid_target('postcards:card')
-            print "***%s***" % (target) #REMOVE THIS LINE
-            ark = pidman.create_ark(settings.PIDMAN_DOMAIN, target, c.head)
-            arkbase, slash, noid = ark.rpartition('/')
-            pid = '%s:%s' % (settings.FEDORA_PIDSPACE, noid)
+            if not dry_run:
+                target = get_pid_target('postcards:card')
+                ark = pidman.create_ark(settings.PIDMAN_DOMAIN, target, c.head)
+                arkbase, slash, noid = ark.rpartition('/')
+                pid = '%s:%s' % (settings.FEDORA_PIDSPACE, noid)
+
             obj = repo.get_object(type=ImageObject)
             obj.pid = pid
+            obj.dc.content.identifier_list.extend([ark, c.entity]) # Store local identifiers in DC
             obj.label = c.head
             obj.owner = settings.FEDORA_OBJECT_OWNERID
             obj.dc.content.title = obj.label
             obj.dc.content.description = c.description
-            # Store local identifier in DC
-            #obj.dc.content.identifier = c.entity
-            obj.dc.content.identifier_list.extend([ark, c.entity])
             # TODO: handle postcards with text/poetry lines
 
            
