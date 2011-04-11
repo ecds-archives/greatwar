@@ -62,20 +62,14 @@ To install python dependencies, cd into the repository checkout and::
 
 	  $ pip install -r pip-dependencies
 
-The user 'greatwarusr' will have to be created through the pidman admin interface
-Use the permissions:
-    Staff = true
-    Can add pid
-    Can change pid
-    Can delete pid
-    Can add target
-    Can change target
-    Can delete target
+The user 'greatwar' will have to be created if it does not already exist through the pidman admin interface.
+It shold belong to the group 'Resource Manager' and have staff set to true.
 
 The 'Great War' will have to be created as a sub-domain of BeckCenter if it does not already exist.
 Host, user, pass, and domain will have to be configured in local_settings in the PIDMAN_* variables.
 
-BASE_URL should be configured in localsettings
+BASE_URL should be configured in localsettings.
+When creating arks, this will be the base of the target uri.
 
 Install and configure like other django applications. 
 
