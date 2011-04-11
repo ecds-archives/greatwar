@@ -13,7 +13,11 @@ ADMINS = (
 MANAGERS = ADMINS
 
 #This setting is used instead of the referencing :class:`~django.contrib.sites.models.Site`
-#If admin section is ever activated, this logic should be moved there
+#When creating arks, this will be the base of the target uri.
+#Usually, this value will be tied to the site through the Django framework.
+#Since we are not using the admin portion for anything else it would be a lot
+#of overhead to activate it for this one variable.
+#If admin section is ever activated, this logic should be moved there.
 BASE_URL='http://myurl.com'  #no trailing slash
 
 #We will not be using a RDB but this will allow tests to run
