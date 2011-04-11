@@ -73,7 +73,7 @@ Use the permissions:
     Can delete target
 
 The 'Great War' will have to be created as a sub-domain of BeckCenter if it does not already exist.
-Host, user, pass, and doman wil have to be configured in local_settings in the PIDMAN_* variables.
+Host, user, pass, and domain will have to be configured in local_settings in the PIDMAN_* variables.
 
 BASE_URL should be configured in localsettings
 
