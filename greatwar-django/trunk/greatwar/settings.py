@@ -115,7 +115,6 @@ INSTALLED_APPS = (
     'eulcore.django.util',
     'greatwar.postcards',
     'greatwar.poetry',
-    'greatwar.common',
     'greatwar',
 )
 
