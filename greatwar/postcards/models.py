@@ -1,5 +1,5 @@
 from django.conf import settings
-
+from django.core.management.base import CommandError
 from eulcore.django.existdb.manager import Manager
 from eulcore.django.existdb.models import XmlModel
 from eulcore.django.fedora import Repository
@@ -8,6 +8,8 @@ from eulcore.xmlmap import XmlObject
 from eulcore.xmlmap.fields import NodeListField
 from eulcore.xmlmap.teimap import TeiFigure, TeiInterpGroup, TeiInterp, TeiLineGroup
 from eulcore.xmlmap.teimap import _TeiBase
+from pidservices.djangowrapper.shortcuts import DjangoPidmanRestClient
+from util import get_pid_target
 
 # TEI postcard models
 
@@ -50,6 +52,22 @@ class ImageObject(DigitalObject):
     def large_image(self):
         'Shortcut to large-size image dissemination.'
         return self.getDissemination(self.IMAGE_SERVICE, 'getRegion', {'level': '5'})
+
+    #THIS METHOD WILL NOT WORK UNTIL get_object FUNCTION IS FIXED IN EULCORE
+    def _getDefaultPid(self):
+        # try to configure a pidman client to get pids.
+        try:
+            pidman = DjangoPidmanRestClient()
+        except:
+            raise CommandError("PIDMAN Not Configured. Plese check localsetting.py")
+
+        target = get_pid_target('postcards:card')
+        ark = pidman.create_ark(settings.PIDMAN_DOMAIN, target, self.label)
+        arkbase, slash, noid = ark.rpartition('/')
+        pid = '%s:%s' % (settings.FEDORA_PIDSPACE, noid)
+        self.dc.content.identifier_list.append(ark) # Store local identifiers in DC
+        return pid
+        
 
 # map interpgroup into a categories object that can be used as fedora datastream class
 class RepoCategories(_TeiBase):
