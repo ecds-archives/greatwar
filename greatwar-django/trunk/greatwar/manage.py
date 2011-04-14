@@ -8,8 +8,14 @@ except ImportError:
     sys.exit(1)
 
 if __name__ == "__main__":
-         #setup logger
+    #setup logger
+    import sys
     import localsettings
     import logging
     logging.basicConfig(level=localsettings.LOGGING_LEVEL, format=localsettings.LOGGING_FORMAT, filename=localsettings.LOGGING_FILENAME)
+
+    # load test settings when running tests
+    if sys.argv[1] == 'test':
+        import testsettings as settings
+
     execute_manager(settings)
