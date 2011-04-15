@@ -75,8 +75,15 @@ def view_postcard(request, pid):
     try:
         obj = repo.get_object(pid, type=ImageObject)
         obj.label   # access object label to trigger 404 before we get to the template
+
+        #get ark from object
+        ark = filter(lambda ident: 'ark' in ident, obj.dc.content.identifier_list)
+        if len(ark) > 0:
+            ark =  ark[0]
+        else:
+            ark = ''
         return render_to_response('postcards/view_postcard.html',
-                              {'card' : obj },
+                              {'card' : obj, 'ark' : ark },
                                 context_instance=RequestContext(request))                                                       
     except RequestFailed:
         raise Http404
