@@ -98,7 +98,10 @@ class PostcardViewsTestCase(DjangoTestCase):
         self.assertContains(response, reverse('postcards:img-large',
                     kwargs={'pid': postcard.pid}),
                     msg_prefix='large image for postcard linked from postcard view')
-
+        
+        self.assertContains(response, "Permanent link for this postcard:", msg_prefix='bookmark text')
+        self.assertContains(response, postcard.dc.content.identifier_list[0], msg_prefix='bookmark url')
+        
         # DC metadata in header
         self.assertContains(response, '<meta name="DC.title" content="%s" />' % \
             postcard.dc.content.title)

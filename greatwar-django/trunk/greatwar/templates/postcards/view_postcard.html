@@ -23,7 +23,8 @@
             {% for subject in card.dc.content.subject_list %}
              <li><a href="{% url postcards:browse %}?subject={{subject}}">{{ subject }}</a></li>
             {% endfor %}        
-        </ul>	    
+        </ul>
+         Permanent link for this postcard: <a href="{{ark}}">{{ark}}</a>
      </td>
   </tr>
 </table>
