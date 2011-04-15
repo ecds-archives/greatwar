@@ -55,7 +55,7 @@
   </ul>
   
 {% include 'poetry/snippets/citation.html' %}
-<p class="ark">Permanent link for this book: {{ book.identifier_ark }} </p>  
+<p class="ark">Permanent link for this book: <a href="{{ book.identifier_ark }}">{{ book.identifier_ark }}</a> </p>  
   
 {% else %}
     <p>No book specified?</p>
