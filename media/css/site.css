@@ -229,6 +229,7 @@ p.kwic { font-size: 90%;
 font.type { color: #b9b9b9; padding-left: 10px; font-size: 80%;vertical-align: middle;}
 p.copyright { color: #666666; margin-top: 25px; border-top: double;
 padding: 5px; }
+p.ark { color: #666666; margin-top: 15px; padding: 5px;}
 table.poem { margin: 25px; }
 table.poem td, div.poem { text-align: left; }
 p.head { font-weight: bold; font-size: 115%; font-variant: small-caps;
