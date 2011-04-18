@@ -128,10 +128,6 @@ PID_TOKEN = '{%PID%}'
 # the default owner of all fedora objects created by this app
 FEDORA_OBJECT_OWNERID = 'beck-greatwar'
 
-EXTENSION_DIRS = (
-    path.join(BASE_DIR, '../externals/django-modules'),
-)
-
 import sys
 try:
     sys.path.extend(EXTENSION_DIRS)

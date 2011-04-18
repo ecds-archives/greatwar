@@ -12,7 +12,7 @@ Dependencies
  * django 1.2
  * pidmanclient
  * eXist-db 1.4
- * eulcore (currently included as a subversion external); see
+ * eulcore; see
    :ref:`eulcore dependencies <eulcore-deps>` for per-module
    dependencies. eulcore modules currently in use:
 
