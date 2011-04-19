@@ -40,6 +40,8 @@ class ImageObject(DigitalObject):
             'mimetype': 'image/tiff',
             # FIXME: versioned? checksum?
         })
+        
+    default_pidspace = getattr(settings, 'FEDORA_PIDSPACE', None)
 
     def thumbnail(self):
         'Shortcut to thumbnail-size image dissemination.'
@@ -54,7 +56,7 @@ class ImageObject(DigitalObject):
         return self.getDissemination(self.IMAGE_SERVICE, 'getRegion', {'level': '5'})
 
     #THIS METHOD WILL NOT WORK UNTIL get_object FUNCTION IS FIXED IN EULCORE
-    def getDefaultPid(self):
+    def get_default_pid(self):
         # try to configure a pidman client to get pids.
         try:
             pidman = DjangoPidmanRestClient()
@@ -64,7 +66,7 @@ class ImageObject(DigitalObject):
         target = get_pid_target('postcards:card')
         ark = pidman.create_ark(settings.PIDMAN_DOMAIN, target, self.label)
         arkbase, slash, noid = ark.rpartition('/')
-        pid = '%s:%s' % (settings.FEDORA_PIDSPACE, noid)
+        pid = '%s:%s' % (self.default_pidspace, noid)
         self.dc.content.identifier_list.append(ark) # Store local identifiers in DC
         return pid
         
