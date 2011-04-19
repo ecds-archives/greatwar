@@ -1,6 +1,7 @@
 from django.conf import settings
 from django.utils.encoding import iri_to_uri
 from django.core.urlresolvers import reverse
+from pidservices.djangowrapper.shortcuts import DjangoPidmanRestClient
 
 def absolutize_url(local_url):
     '''Convert a local url to an absolute url, with scheme and server name,
@@ -24,13 +25,13 @@ def absolutize_url(local_url):
 def get_pid_target(view_name):
     '''Get a pidman-ready target for a named view.'''
 
-    ENCODED_PID_TOKEN = iri_to_uri(settings.PID_TOKEN)
+    ENCODED_PID_TOKEN = iri_to_uri(DjangoPidmanRestClient.pid_token)
 
     # first just reverse the view name.
-    pid = '%s:%s' % (settings.FEDORA_PIDSPACE, settings.PID_TOKEN)
+    pid = '%s:%s' % (settings.FEDORA_PIDSPACE, DjangoPidmanRestClient.pid_token)
     target = reverse(view_name, kwargs={'pid': pid})
-    # reverse() encodes the PID_TOKEN, so unencode just that part
-    target = target.replace(ENCODED_PID_TOKEN, settings.PID_TOKEN)
+    # reverse() encodes the pid_token, so unencode just that part
+    target = target.replace(ENCODED_PID_TOKEN, DjangoPidmanRestClient.pid_token)
 
     # reverse() returns a full path - absolutize so we get scheme & server also
     return absolutize_url(target)

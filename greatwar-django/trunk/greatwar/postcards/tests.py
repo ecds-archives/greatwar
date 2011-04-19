@@ -12,6 +12,7 @@ from eulcore.django.fedora.server import Repository
 
 from greatwar.postcards.fixtures.postcards import FedoraFixtures
 from util import get_pid_target, absolutize_url
+from pidservices.djangowrapper.shortcuts import DjangoPidmanRestClient
 
 exist_fixture_path = path.join(path.dirname(path.abspath(__file__)), 'fixtures')
 exist_index_path = path.join(path.dirname(path.abspath(__file__)), '..', 'exist_index.xconf')
@@ -157,7 +158,7 @@ class UtilTest(DjangoTestCase):
 
     def test_get_pid_target(self):
         target = get_pid_target('postcards:card')
-        expected = '%s/postcards/%s:%s' %(settings.BASE_URL, settings.FEDORA_PIDSPACE, settings.PID_TOKEN)
+        expected = '%s/postcards/%s:%s' %(settings.BASE_URL, settings.FEDORA_PIDSPACE, DjangoPidmanRestClient.pid_token)
         self.assertEqual(target,expected)
         
 
