@@ -55,7 +55,6 @@ class ImageObject(DigitalObject):
         'Shortcut to large-size image dissemination.'
         return self.getDissemination(self.IMAGE_SERVICE, 'getRegion', {'level': '5'})
 
-    #THIS METHOD WILL NOT WORK UNTIL get_object FUNCTION IS FIXED IN EULCORE
     def get_default_pid(self):
         # try to configure a pidman client to get pids.
         try:

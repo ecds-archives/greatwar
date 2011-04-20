@@ -159,10 +159,27 @@ class Command(BaseCommand):
             obj.label = c.head
             obj.owner = settings.FEDORA_OBJECT_OWNERID
             obj.dc.content.title = obj.label
-            obj.dc.content.description = c.description
-            # TODO: handle postcards with text/poetry lines
+            obj.dc.content.description_list.append(c.description)
 
-           
+            #Add floating text from postcards (text written on the card)
+            float_lines = [] # list of lines of text from the postcard
+            linegroups = c.floatingText_lg #if text is stored in linegroups use this variable
+            lines = c.floatingText_l #if text is only lines w/o linegroup then use this 
+            if len(linegroups) > 0:
+                for group in linegroups:
+                    if group.head is not None: #treat head as normal line
+                        float_lines.append(group.head)
+                    for line in group.line: #add the rest of the lines
+                        float_lines.append(line)
+                    float_lines.append('\n') #each linegroup needs an extra \n at the end to make a paragraph
+            elif len(lines) > 0:
+                for line in lines:
+                    float_lines.append(line)
+            float_lines = map(unicode, float_lines) #convert all lines to unicode
+            float_lines = str.join("\n", float_lines) #Add \n for each line break and convert to a str
+            obj.dc.content.description_list.append(float_lines)
+
+
             # convert interp text into dc: subjects
             local_subjects = []
             for ana_id in c.ana.split():
