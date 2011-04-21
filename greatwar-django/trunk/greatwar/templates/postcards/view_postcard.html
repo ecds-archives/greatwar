@@ -17,14 +17,21 @@
     </td>  <!-- put link to 2x image here -->
     <td class="description">
         <h4>{{card.label}}</h4>
-        <p>{{card.dc.content.description}}</p>
-         <h5>Categories:</h5>
-         <ul>
+        <p>{{description}}</p>
+
+        {% if postcard_text != '' %}
+            <div class="postcardText">
+                <h5>Text on postcard:</h5>
+                <p>{{postcard_text}}</p>
+            </div>
+        {% endif %}
+        <h5>Categories:</h5>
+        <ul>
             {% for subject in card.dc.content.subject_list %}
              <li><a href="{% url postcards:browse %}?subject={{subject}}">{{ subject }}</a></li>
             {% endfor %}        
         </ul>
-         Permanent link for this postcard: <a href="{{ark}}">{{ark}}</a>
+        {% if ark != '' %}  Permanent link for this postcard: <a href="{{ark}}">{{ark}}</a> {% endif %}
      </td>
   </tr>
 </table>

@@ -152,3 +152,9 @@ try:
 except ImportError:
     pass
 
+# used to identidy the description for the postcard in the description elements
+POSTCARD_DESCRIPTION_LABEL = 'Description:\n'
+
+# used to identidy the floating text in the description elements
+POSTCARD_FLOATINGTEXT_LABEL = 'Text on postcard:\n'
+
