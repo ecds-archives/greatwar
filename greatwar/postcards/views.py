@@ -82,8 +82,27 @@ def view_postcard(request, pid):
             ark =  ark[0]
         else:
             ark = ''
+            
+#        #get description from description elements
+        description = filter(lambda desc: desc.startswith(settings.POSTCARD_DESCRIPTION_LABEL), obj.dc.content.description_list)
+        if len(description) > 0:
+            description =  description[0]
+            description = description[len(settings.POSTCARD_DESCRIPTION_LABEL):] #trim off label used to identify description
+        else:
+            description = ''
+
+        #get postcard text from description elements
+        postcard_text = filter(lambda desc:  desc.startswith(settings.POSTCARD_FLOATINGTEXT_LABEL), obj.dc.content.description_list)
+        if len(postcard_text) > 0:
+            postcard_text =  postcard_text[0]
+            postcard_text =  postcard_text[len(settings.POSTCARD_FLOATINGTEXT_LABEL):] #trim off label used to identify postcard text
+
+        else:
+            postcard_text = ''
+
+
         return render_to_response('postcards/view_postcard.html',
-                              {'card' : obj, 'ark' : ark },
+                              {'card' : obj, 'ark' : ark, 'description' : description, 'postcard_text' : postcard_text },
                                 context_instance=RequestContext(request))                                                       
     except RequestFailed:
         raise Http404

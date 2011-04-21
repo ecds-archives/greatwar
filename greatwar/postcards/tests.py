@@ -91,7 +91,7 @@ class PostcardViewsTestCase(DjangoTestCase):
                         (expected, response.status_code, postcard_url))
         self.assertContains(response, postcard.label,
             msg_prefix='postcard view includes postcard label')
-        self.assertContains(response, postcard.dc.content.description,
+        self.assertContains(response, postcard.dc.content.description[len(settings.POSTCARD_DESCRIPTION_LABEL):],
             msg_prefix='postcard view includes postcard description')
         self.assertContains(response, reverse('postcards:img-medium',
                     kwargs={'pid': postcard.pid}),
@@ -100,6 +100,13 @@ class PostcardViewsTestCase(DjangoTestCase):
                     kwargs={'pid': postcard.pid}),
                     msg_prefix='large image for postcard linked from postcard view')
         
+
+
+        #Test for floating text
+        self.assertContains(response, "Text on postcard:", msg_prefix='Text on postcard heading is present')
+        self.assertContains(response, 'This is some floating text', msg_prefix='floating text is present')
+
+        #Test for permanent link
         self.assertContains(response, "Permanent link for this postcard:", msg_prefix='bookmark text')
         self.assertContains(response, postcard.dc.content.identifier_list[0], msg_prefix='bookmark url')
         

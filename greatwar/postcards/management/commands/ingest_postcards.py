@@ -159,7 +159,9 @@ class Command(BaseCommand):
             obj.label = c.head
             obj.owner = settings.FEDORA_OBJECT_OWNERID
             obj.dc.content.title = obj.label
-            obj.dc.content.description_list.append(c.description)
+
+            #append label so postcard description can be identified in the description elements
+            obj.dc.content.description_list.append('%s%s' % (settings.POSTCARD_DESCRIPTION_LABEL, c.description))
 
             #Add floating text from postcards (text written on the card)
             float_lines = [] # list of lines of text from the postcard
@@ -177,7 +179,9 @@ class Command(BaseCommand):
                     float_lines.append(line)
             float_lines = map(unicode, float_lines) #convert all lines to unicode
             float_lines = str.join("\n", float_lines) #Add \n for each line break and convert to a str
-            obj.dc.content.description_list.append(float_lines)
+
+            #append label so floating text (postcard text) can be identified in the description elements
+            obj.dc.content.description_list.append('%s%s' % (settings.POSTCARD_FLOATINGTEXT_LABEL, float_lines))
 
 
             # convert interp text into dc: subjects

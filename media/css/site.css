@@ -145,6 +145,8 @@ p.postcardnav { font-size: 85%; }
 
 div.random_postcard { float: right; width: 175px; }
 
+div.postcardText > p{white-space:pre;}
+
 table.maxdisplay { float: right; margin-right: 215px; font-size: 85%; }
 table.maxdisplay td { text-align: right; }
 table.maxdisplay select,input,submit { font-size: 85%; padding: 0; }
