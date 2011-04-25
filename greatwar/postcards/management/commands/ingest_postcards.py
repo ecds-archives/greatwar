@@ -43,7 +43,10 @@ class Command(BaseCommand):
         verbosity = int(options['verbosity'])    # 1 = normal, 0 = minimal, 2 = all
         v_normal = 1
 
-        repo = Repository()
+        #prompt for user and password
+        user = raw_input('user:')
+        password = raw_input('password:')
+        repo = Repository(username=user, password=password)
         collection = PostcardCollection.get()
         if not collection.exists:
             raise Exception(collection.pid + " is not in the repository. Do you need to syncrepo?")

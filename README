@@ -74,6 +74,8 @@ When creating arks, this will be the base of the target uri.
 Install and configure like other django applications. 
 
 Copy ``localsettings-sample.py`` to ``localsettings.py`` and customize the settings.
+The site does not require special permission to access Fedora.
+FEDORA_USER and FEDORA_PASS variables should NOT be configured in production.
 
 The configured eXist-db user should be in the DBA group if you plan to
 use the app to manage the eXist index configuration. For more
@@ -88,3 +90,7 @@ For a first-time install, you will should run these two steps:
      $ ./manage.py existdb_index load
      $ ./manage.py existdb_reindex
 
+
+Developer Notes
+------------
+To run unit tests FEDORA_USER and FEDORA_PASS must be configured int settings.py
