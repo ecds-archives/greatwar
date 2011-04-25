@@ -53,7 +53,7 @@ class ImageObject(DigitalObject):
 
     def large_image(self):
         'Shortcut to large-size image dissemination.'
-        return self.getDissemination(self.IMAGE_SERVICE, 'getRegion', {'level': '5'})
+        return self.getDissemination(self.IMAGE_SERVICE, 'getRegion', {'level': '4'})
 
     def get_default_pid(self):
         # try to configure a pidman client to get pids.
