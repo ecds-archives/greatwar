@@ -1,0 +1,22 @@
+{% extends "postcards/postcard_base.html" %}
+
+{% block page-head %}
+  {{block.super}}
+  {# Dublin Core metadata for this postcard #}
+  {% with card.dc.content as dc %}{% include '_dc_meta.html' %}{% endwith %}
+{% endblock %}
+
+{% block page_subtitle %} {{head}} {% endblock %}
+
+{% block content %}
+<p><a href="{% url postcards:card pid=card.pid %}">View full details</a></p>
+<h4>{{card.label}}</h4>
+<table>
+  <tr>
+    <td>
+        <img src="{% url postcards:img-large pid=card.pid %}" />
+    </td>  <!-- put link to 2x image here -->
+  </tr>
+</table>
+
+{% endblock %}

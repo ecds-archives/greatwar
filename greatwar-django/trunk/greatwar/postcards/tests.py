@@ -96,7 +96,7 @@ class PostcardViewsTestCase(DjangoTestCase):
         self.assertContains(response, reverse('postcards:img-medium',
                     kwargs={'pid': postcard.pid}),
                     msg_prefix='medium image for postcard displayed on postcard view')
-        self.assertContains(response, reverse('postcards:img-large',
+        self.assertContains(response, reverse('postcards:card-large',
                     kwargs={'pid': postcard.pid}),
                     msg_prefix='large image for postcard linked from postcard view')
         
@@ -121,6 +121,23 @@ class PostcardViewsTestCase(DjangoTestCase):
         for subject in postcard.dc.content.subject_list:
             self.assertContains(response, subject,
                 msg_prefix='subject %s contained in postcard view' % subject)
+
+    def test_view_postcard_large(self):
+            'Test large view page.'
+
+            # page with large postcard display
+            postcard = self.postcards[0]
+            postcard_url = reverse('postcards:card-large', kwargs={'pid': postcard.pid})
+            response = self.client.get(postcard_url)
+            expected = 200
+            self.assertEqual(response.status_code, expected,
+                            'Expected %s but returned %s for %s' % \
+                            (expected, response.status_code, postcard_url))
+
+            self.assertContains(response, 'View full details', msg_prefix='View full details text exists')
+            self.assertContains(response, reverse('postcards:img-large', kwargs={'pid': postcard.pid}),
+                    msg_prefix='large image for postcard on page')
+
 
     def test_postcard_thumbnail(self):
         # nonexistent pid should return 404

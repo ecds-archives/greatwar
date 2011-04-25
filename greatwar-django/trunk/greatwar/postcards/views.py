@@ -107,6 +107,19 @@ def view_postcard(request, pid):
     except RequestFailed:
         raise Http404
 
+def view_postcard_large(request, pid):
+    '''View a large image of postcard with title only.'''
+    repo = Repository()
+    try:
+        obj = repo.get_object(pid, type=ImageObject)
+        obj.label   # access object label to trigger 404 before we get to the template
+
+        return render_to_response('postcards/view_postcard_large.html',
+                              {'card' : obj },
+                                context_instance=RequestContext(request))
+    except RequestFailed:
+        raise Http404
+
 # TODO: clean up image disseminations, make more efficient
 def postcard_image(request, pid, size):
     '''Serve out postcard image in requested size.
