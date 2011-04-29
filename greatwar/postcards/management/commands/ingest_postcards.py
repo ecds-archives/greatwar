@@ -1,4 +1,5 @@
 from optparse import make_option
+from getpass import getpass
 import os
 import sys
 
@@ -18,19 +19,27 @@ MEMBER_OF_COLLECTION = 'info:fedora/fedora-system:def/relations-external#isMembe
 
 class Command(BaseCommand):        
     """Ingest Great War Project postcards from a local source directory into
-    a Fedora repository.
-    The command to run this script from Alice Hickcoxs computer is:
-    ./manage.py ingest_postcards /Beck-files/WWI/greatwar/trunk/xml/postcards/postcards.xml /Volumes/FreeAgent\ Drive/GreatWar/images-fullsize/
-    The full size (tiff) images are stored on the external hard drive /Volumes/FreeAgent\ Drive/GreatWar/images-fullsize
-    To test the ingest use the --dry-run switch.
+    a Fedora repository. To test the ingest use the --dry-run switch.
+    if running on staging or production the -u and --password options are required.
     """
     help = __doc__
+
+    def get_password_option(option, opt, value, parser):
+        setattr(parser.values, option.dest, getpass())
 
     option_list = BaseCommand.option_list + (
         make_option('--dry-run', '-n',
             dest='dry_run',
             action='store_true',
             help='''Test the ingest, but don\'t actually do anything.'''),
+        make_option('--username', '-u',
+            dest='username',
+            action='store',
+            help='''Username to connect to fedora'''),
+        make_option('--password',
+            dest='password',
+            action='callback', callback=get_password_option,
+            help='''Prompt for password required when username used'''),
         )
 
 
@@ -43,10 +52,14 @@ class Command(BaseCommand):
         verbosity = int(options['verbosity'])    # 1 = normal, 0 = minimal, 2 = all
         v_normal = 1
 
-        #prompt for user and password
-        user = raw_input('user:')
-        password = raw_input('password:')
-        repo = Repository(username=user, password=password)
+        #populate usr and pass
+        repo_args = {}
+        if  options.get('username') is not None:
+            repo_args['username'] = options.get('username')
+        if options.get('password') is not None:
+            repo_args['password'] = options.get('password')
+
+        repo = Repository(**repo_args)
         collection = PostcardCollection.get()
         if not collection.exists:
             raise Exception(collection.pid + " is not in the repository. Do you need to syncrepo?")
