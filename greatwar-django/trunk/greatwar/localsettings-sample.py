@@ -28,15 +28,18 @@ DATABASE_NAME = 'no_db'
 CACHE_BACKEND = 'file:///tmp/django_cache'
 SESSION_ENGINE = 'django.contrib.sessions.backends.cache'
 
+# configure an HTTP PROXY to enable lxml to cache XML Schemas (e.g., EAD XSD)
+import os
+os.environ['HTTP_PROXY'] = 'http://spiderman.library.emory.edu:3128'
+
 #Exist DB Settings
 EXISTDB_SERVER_PROTOCOL = "http://"
 # hostname, port, & path to exist xmlrpc - e.g., "localhost:8080/exist/xmlrpc"
 EXISTDB_SERVER_HOST     = ""
 EXISTDB_SERVER_USER     = ""
 EXISTDB_SERVER_PWD      = ""
-#EXISTDB_SERVER_URL      = EXISTDB_SERVER_PROTOCOL + EXISTDB_SERVER_USER + ":" + \
-#    EXISTDB_SERVER_PWD + "@" + EXISTDB_SERVER_HOST
-EXISTDB_SERVER_URL      = 'http://user:password@existdb.example.com/exist/xmlrpc' #from fa/localsettings-sample.py
+#EXISTDB_SERVER_URL      = EXISTDB_SERVER_PROTOCOL + EXISTDB_SERVER_HOST
+EXISTDB_SERVER_URL  = EXISTDB_SERVER_PROTOCOL + EXISTDB_SERVER_HOST
 # collection should begin with / -  e.g., /edc
 EXISTDB_ROOT_COLLECTION = ""
 EXISTDB_TEST_COLLECTION = ""
@@ -64,7 +67,7 @@ AUTH_LDAP_CA_CERT_PATH = '' # absolute path of cert
 PIDMAN_HOST = 'http://pid.emory.edu/' # the web root where we'll ask for pids
 PIDMAN_USER = 'user'
 PIDMAN_PASSWORD = 'pass'
-PIDMAN_DOMAIN = 'http://pid.emory.edu/domains/123/' # the full url of the domain we'll create pids in
+PIDMAN_DOMAIN = 'http://pid.emory.edu/domains/123/' # the full url of the domain or subdomain we'll create pids in
 
 
 ADDITIONAL_DATA_INDEX   = ""
