@@ -181,23 +181,26 @@ class Command(BaseCommand):
 
             #Add floating text from postcards (text written on the card)
             float_lines = [] # list of lines of text from the postcard
-            linegroups = c.floatingText_lg #if text is stored in linegroups use this variable
-            lines = c.floatingText_l #if text is only lines w/o linegroup then use this 
-            if len(linegroups) > 0:
-                for group in linegroups:
-                    if group.head is not None: #treat head as normal line
-                        float_lines.append(group.head)
-                    for line in group.line: #add the rest of the lines
+            f_text = c.floatingText
+            if len(f_text) > 0:
+                f_text = f_text[0]
+		if f_text.head:
+			float_lines.append(f_text.head)
+                if len(f_text.line_group) > 0:
+                    for group in f_text.line_group:
+                        if group.head is not None: #treat head as normal line
+                            float_lines.append(group.head)
+                        for line in group.line: #add the rest of the lines
+                            float_lines.append(line)
+                        float_lines.append('\n') #each linegroup needs an extra \n at the end to make a paragraph
+                elif len(f_text.line) > 0:
+                    for line in f_text.line:
                         float_lines.append(line)
-                    float_lines.append('\n') #each linegroup needs an extra \n at the end to make a paragraph
-            elif len(lines) > 0:
-                for line in lines:
-                    float_lines.append(line)
-            float_lines = map(unicode, float_lines) #convert all lines to unicode
-            float_lines = str.join("\n", float_lines) #Add \n for each line break and convert to a str
+                float_lines = map(unicode, float_lines) #convert all lines to unicode
+                float_lines = str.join("\n", float_lines) #Add \n for each line break and convert to a str
 
-            #append label so floating text (postcard text) can be identified in the description elements
-            obj.dc.content.description_list.append('%s%s' % (settings.POSTCARD_FLOATINGTEXT_LABEL, float_lines))
+                #append label so floating text (postcard text) can be identified in the description elements
+                obj.dc.content.description_list.append('%s%s' % (settings.POSTCARD_FLOATINGTEXT_LABEL, float_lines))
 
 
             # convert interp text into dc: subjects
