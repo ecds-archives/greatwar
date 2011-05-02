@@ -46,11 +46,6 @@ The site does not require special permission to access Fedora.
 FEDORA_USER and FEDORA_PASS variables should NOT be configured in staging or production.
 
 
-Apache
-^^^^^^
-This should be configured to run under WSGI.  
-Create an apache config to use the provided .wsgi.
-
 PidMan
 ^^^^^^
 * The user 'greatwar' will have to be created through the pidman admin interface
@@ -93,3 +88,8 @@ For a first-time install, you will should run these two steps:
 
          $ python ./manage.py existdb_index load
          $ python ./manage.py existdb_reindex
+
+Apache
+^^^^^^
+This should be configured to run under WSGI.
+Create an apache config to use the provided .wsgi.
