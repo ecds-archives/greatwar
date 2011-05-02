@@ -12,6 +12,7 @@ Great War Project Contents:
 
    readme
    changelog
+   deploynotes
    greatwar
 
 Indices and tables:
