@@ -1,0 +1,13 @@
+{% extends "poetry/poetry_base.html" %}
+{% block page_subtitle %}  Poems by {{ poet }} {% endblock %}
+
+{% block content %}
+Poems by <b>{{ poet }}</b>
+<ul>
+ {% for poem in poems %} 
+   <li><a href="{% url poetry:poem poem.book.id,poem.id %}">{{ poem.title }}</a> - {{ poem.book.title }}</li>
+ {% empty %}
+   <li>No match<li>
+ {% endfor %}
+</ul>
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends "postcards/postcard_base.html" %}
+
+{% block page-head %}
+  {{block.super}}
+  {# Dublin Core metadata for this postcard #}
+  {% with card.dc.content as dc %}{% include '_dc_meta.html' %}{% endwith %}
+{% endblock %}
+
+{% block page_subtitle %} {{head}} {% endblock %}
+
+{% block content %}
+<p><a href="{% url postcards:card-large pid=card.pid %}">View larger image</a></p>
+<table>
+  <tr>
+    <td>
+        <img src="{% url postcards:img-medium pid=card.pid %}" />
+    </td>  <!-- put link to 2x image here -->
+    <td class="description">
+        <h4>{{card.label}}</h4>
+        <p>{{description}}</p>
+
+        {% if postcard_text != '' %}
+            <div class="postcardText">
+                <h5>Text on postcard:</h5>
+                <p>{{postcard_text}}</p>
+            </div>
+        {% endif %}
+        <h5>Categories:</h5>
+        <ul>
+            {% for subject in card.dc.content.subject_list %}
+             <li><a href="{% url postcards:browse %}?subject={{subject}}">{{ subject }}</a></li>
+            {% endfor %}        
+        </ul>
+        {% if ark != '' %}  Permanent link for this postcard: <a href="{{ark}}">{{ark}}</a> {% endif %}
+     </td>
+  </tr>
+</table>
+
+{% endblock %}

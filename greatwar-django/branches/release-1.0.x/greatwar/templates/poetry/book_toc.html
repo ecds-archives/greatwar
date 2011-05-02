@@ -1,0 +1,64 @@
+{% extends "poetry/poetry_base.html" %}
+{% block page_subtitle %} {{ book.title }} {% endblock %}
+
+{% block page-head %}
+  {{block.super}}
+  {# Dublin Core metadata for this book #}
+  {% with book.dublin_core as dc %}{% include '_dc_meta.html' %}{% endwith %}
+{% endblock %}
+
+{% block content %}
+{% if book %}
+ <h3> {{ book.title }} </h3>
+     {% if book.author %} <h4>{{ book.author }}</h4> {% endif %}
+     {% if book.editor %} <h4>{{ book.editor }}</h4> {% endif %}
+
+  <ul>
+  {% for div in book.front.div %}
+     <li><a href="{% url poetry:poem book.id,div.id %}"> {% firstof div.title div.type %}</a></li>
+  {% endfor %}
+  
+  {% if book.body %}
+    {% for d in book.body.div %}
+        <li> {{ d.title|default:"" }} 
+ 	     {% if d.author %} - {{ d.author }} {% endif %} 
+	    {% if d.type %} <font class="type">({{ d.type }})</font> {% endif %}
+	  {% if d.div %}
+            <ul>
+            {% ifequal d.div.type|lower 'poem' %}
+              <li> <a href="{% url poetry:poem book.id,div.id %}">{{ div.title }}</a>
+		     {% if div.author %} - {{ div.author }} {% endif %} {% endifequal %}
+		    {% ifnotequal div.type|lower 'poem' %} {% if div.type %} <font class="type">({{ div.type }})</font> {% endif %} {% endifnotequal %}
+		</li>
+		</ul>
+	    <ul>
+	    {% for subdiv in d.div %}
+	        <li> <a href="{% url poetry:poem book.id,subdiv.id %}">{{ subdiv.title }}</a>
+		     {% if subdiv.author %} - {{ subdiv.author }} {% endif %}
+		    {% ifnotequal subdiv.type|lower 'poem' %}  <font class="type">({{ subdiv.type }})</font> {% endifnotequal %}
+		</li>
+	    {% endfor %}
+	   </ul>
+	  {% endif %}
+        </li>
+    {% endfor %}
+  {% endif %}
+
+  {% for div in book.back.div %}
+     {% ifequal div.type "Colophon" %} {# other types ? #}
+	<li>{{ div.text }} <font class="type"><i>({{ div.type }})</i></font></li>
+     {% else %}
+     <li><a href="{% url poetry:poem book.id,div.id %}">{{ div.title|default:div.type|capfirst }}</a></li>
+     {% endifequal %}
+  {% endfor %}
+
+  </ul>
+  
+{% include 'poetry/snippets/citation.html' %}
+<p class="ark">Permanent link for this book: <a href="{{ book.identifier_ark }}">{{ book.identifier_ark }}</a> </p>  
+  
+{% else %}
+    <p>No book specified?</p>
+{% endif %}
+  
+{% endblock %}

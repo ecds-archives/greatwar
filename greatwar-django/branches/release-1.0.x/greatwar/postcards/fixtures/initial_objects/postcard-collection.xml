@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<foxml:digitalObject xmlns:foxml="info:fedora/fedora-system:def/foxml#" VERSION="1.1" PID="greatwar:postcards-collection">
+  <foxml:objectProperties>
+    <foxml:property NAME="info:fedora/fedora-system:def/model#state" VALUE="A"/>
+    <foxml:property NAME="info:fedora/fedora-system:def/model#label" VALUE="The Great War: Postcards"/>
+    <foxml:property NAME="info:fedora/fedora-system:def/model#ownerId" VALUE="beck-greatwar"/>
+  </foxml:objectProperties>
+  <foxml:datastream ID="RELS-EXT" CONTROL_GROUP="X" STATE="A" VERSIONABLE="false">
+    <foxml:datastreamVersion ID="RELS-EXT.0" MIMETYPE="application/rdf+xml" FORMAT_URI="info:fedora/fedora-system:FedoraRELSExt-1.0" LABEL="External Relations">
+      <foxml:xmlContent>
+        <rdf:RDF xmlns:fedora-model="info:fedora/fedora-system:def/model#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+          <rdf:Description rdf:about="info:fedora/greatwar:postcards-collection">
+            <fedora-model:hasModel rdf:resource="info:fedora/emory-control:Collection-1.0"/>
+          </rdf:Description>
+        </rdf:RDF>
+      </foxml:xmlContent>
+    </foxml:datastreamVersion>
+  </foxml:datastream>
+  <foxml:datastream ID="INTERP" CONTROL_GROUP="M" STATE="A" VERSIONABLE="true">
+    <foxml:datastreamVersion ID="INTERP.0" MIMETYPE="text/xml" LABEL="Postcard Categories">
+      <foxml:xmlContent>
+          <tei:div xmlns:tei="http://www.tei-c.org/ns/1.0">
+            <tei:interpGrp type="nationality">
+                <tei:interp xml:id="nat-brit" value="Britain"/>
+                <tei:interp xml:id="nat-fr" value="France"/>
+                <tei:interp xml:id="nat-us" value="United States"/>
+                <tei:interp xml:id="nat-it" value="Italy"/>
+                <tei:interp xml:id="nat-de" value="Germany"/>
+                <tei:interp xml:id="nat-rus" value="Russia"/>
+                <tei:interp xml:id="nat-ee" value="Eastern Europe"/>
+                <tei:interp xml:id="nat-bel" value="Belgium"/>
+                <tei:interp xml:id="nat-ca" value="Canada"/>
+                <tei:interp xml:id="nat-jp" value="Japan"/>
+                <tei:interp xml:id="nat-nl" value="Netherlands"/>
+                <tei:interp xml:id="nat-au" value="Austria"/>
+		<tei:interp xml:id="nat-hu" value="Hungary"/>
+            </tei:interpGrp>
+            <tei:interpGrp type="military">
+                <tei:interp xml:id="mil-a" value="Army"/>
+                <tei:interp xml:id="mil-na" value="Navy"/>
+                <tei:interp xml:id="mil-p" value="propaganda"/>
+                <tei:interp xml:id="mil-f" value="battle front"/>
+                <tei:interp xml:id="mil-nur" value="nurse"/>
+            </tei:interpGrp>
+            <tei:interpGrp type="homefront">
+                <tei:interp xml:id="hf-w" value="women"/>
+                <tei:interp xml:id="hf-c" value="children"/>
+                <tei:interp xml:id="hf-p" value="propaganda"/>
+                <tei:interp xml:id="hf-re" value="religion"/>
+                <tei:interp xml:id="hf-ro" value="romance"/>
+                <tei:interp xml:id="hf-h" value="home"/>
+            </tei:interpGrp>
+            <tei:interpGrp type="content">
+                <tei:interp xml:id="con-v" value="verse"/>
+                <tei:interp xml:id="con-h" value="humor"/>
+                <tei:interp xml:id="con-p" value="person"/>
+                <tei:interp xml:id="con-m" value="memorial"/><!-- use with im-ph to indicate
+    photo of memorial -->
+                <tei:interp xml:id="con-f" value="flag"/>
+                <tei:interp xml:id="con-r" value="war ruins"/>
+                <tei:interp xml:id="con-el" value="Uncle Elmer"/>
+            </tei:interpGrp>
+            <tei:interpGrp type="image">
+                <tei:interp xml:id="im-s" value="silks"/>
+                <tei:interp xml:id="im-ph" value="photo"/>
+                <tei:interp xml:id="im-pa" value="painting"/>
+                <tei:interp xml:id="im-dr" value="drawing"/>
+                <tei:interp xml:id="im-ca" value="cartoon"/>
+                <tei:interp xml:id="im-en" value="engraving"/>
+                <tei:interp xml:id="im-po" value="poster"/>
+            </tei:interpGrp>
+            <tei:interpGrp type="time period">
+                <tei:interp xml:id="t-pre" value="pre Great War"/>
+                <tei:interp xml:id="t-wwi" value="during Great War"/>
+                <tei:interp xml:id="t-post" value="post Great War"/>
+                <tei:interp xml:id="t-ww2" value="World War II"/>
+                <tei:interp xml:id="t-post2" value="post World War II"/>
+            </tei:interpGrp>
+        </tei:div>
+      </foxml:xmlContent>
+    </foxml:datastreamVersion>
+  </foxml:datastream>
+  <foxml:datastream ID="DC" CONTROL_GROUP="X" STATE="A" VERSIONABLE="false">
+    <foxml:datastreamVersion ID="DC.0" MIMETYPE="text/xml" FORMAT_URI="http://www.openarchives.org/OAI/2.0/oai_dc/" LABEL="Dublin Core">
+      <foxml:xmlContent>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+          <dc:title>The Great War: Postcards</dc:title>
+        </oai_dc:dc>
+      </foxml:xmlContent>
+    </foxml:datastreamVersion>
+  </foxml:datastream>
+</foxml:digitalObject>

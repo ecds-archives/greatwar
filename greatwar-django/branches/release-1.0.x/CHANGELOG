@@ -1,0 +1,30 @@
+Change & Version Information
+============================
+
+The following is a summary of changes and improvements to the dWrangler
+application.  New features in each version should be explained below as well
+as any additional relavant information about new components and user notes.
+
+Version Information
+-------------------
+
+Information in these sections refers to delivered by version number of the
+software.  These corrispond to the version tag in the source code as well
+as the version number of the tag.
+
+0.1.0 Django Poetry Search
+--------------------------
+
+RDF data and content negotiation available for user and project information.
+
+To upgrade from any previous version the basic steps are:
+
+#. GoTo to the greatwar source directory
+#. Do an SVN switch to
+   https://svn.library.emory.edu/svn/greatwar/greatwar-django/branches/release_0.1.X/src
+#. Do an SVN Update
+#. Restart apache and confirm application is running.
+
+**New Features**
+
+* User should be able to search the poetry by title, author, keyword and date.

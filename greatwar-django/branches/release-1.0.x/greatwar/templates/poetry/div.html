@@ -1,0 +1,26 @@
+{% extends "poetry/poetry_base.html" %}
+{% block page_subtitle %} {{ div.book.title }} | {{ div.title }} {% endblock %}
+
+{% block content %}
+{% if div %}
+   <p> from <a href="{% url poetry:book-toc div.book.id %}">{{ div.book.title }}</a></p>
+
+    {{ body|safe }}
+
+    {% if div.prevdiv.id %}
+        <p class="next-prev">
+            <a href="{% url poetry:poem div.book.id div.prevdiv.id %}"
+                rel="prev">Previous poem{% if div.prevdiv.title %}: {{ div.prevdiv.title}}{% endif %}
+            </a>
+        </p>
+    {% endif %}
+    {% if div.nextdiv.id %}
+         <p class="next-prev">
+             <a href="{% url poetry:poem div.book.id div.nextdiv.id %}"
+                rel="next">Next poem{% if div.nextdiv.title %}: {{ div.nextdiv.title }}{% endif %}
+            </a>
+        </p>
+    {% endif %}
+    {% with div.book as book %}{% include 'poetry/snippets/citation.html' %}{% endwith %}
+{% endif %}
+{% endblock %}
