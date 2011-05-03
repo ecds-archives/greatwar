@@ -45,6 +45,15 @@ EXISTDB_ROOT_COLLECTION = ""
 EXISTDB_TEST_COLLECTION = ""
 # NOTE: EXISTDB_INDEX_CONFIGFILE is configured in settings.py (for fa; is it for gw?)
 
+# Fedora Repository settings
+FEDORA_ROOT = 'https://host:port/fedora/'
+FEDORA_PIDSPACE = 'greatwar'
+#configure these for unit tests only
+#FEDORA_USER = 'user'
+#FEDORA_PASS = 'pass'
+
+
+
 # from fa:
 # a bug in python xmlrpclib loses the timezone; override it here
 # most likely, you want either tz.tzlocal() or tz.tzutc()
@@ -106,3 +115,11 @@ ADMIN_MEDIA_PREFIX = '/media/'
 
 # Make this unique, and don't share it with anybody.
 SECRET_KEY = ''
+
+
+#Logger Settings
+import logging
+#logging levels: NOLOG, CRITICAL, ERROR, WARNING, INFO, DEBUG
+LOGGING_LEVEL=logging.NOLOG
+LOGGING_FORMAT="%(asctime)s : %(name)s:  %(levelname)s : %(message)s"
+LOGGING_FILENAME="" # "" will print to stdout
