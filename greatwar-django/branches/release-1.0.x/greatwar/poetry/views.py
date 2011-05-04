@@ -18,7 +18,7 @@ from greatwar.poetry.forms import PoetrySearchForm
 def books(request):
     "Browse list of volumes"
     books = PoetryBook.objects.only('id', 'title', 'author', 'editor').order_by('author')
-    return render_to_response('poetry/books.html', {'books' : books})
+    return render_to_response('poetry/books.html', {'books' : books}, context_instance=RequestContext(request))
 
 def book_xml(request, doc_id):
     "Display the original TEI XML for a single book."
@@ -34,7 +34,7 @@ def book_toc(request, doc_id):
     "Display the contents of a single book."
     try:
         book = PoetryBook.objects.get(id__exact=doc_id)
-        return render_to_response('poetry/book_toc.html', {'book': book})
+        return render_to_response('poetry/book_toc.html', {'book': book}, context_instance=RequestContext(request))
     except DoesNotExist:
         raise Http404
 
@@ -55,7 +55,7 @@ def div(request, doc_id, div_id):
         return render_to_response('poetry/div.html', { 'div' : div,
                                                        'body' : body.serialize(),
                                                        'url_params' : url_params,
-                                                       })
+                                                       }, context_instance=RequestContext(request))
     except DoesNotExist:
         raise Http404
 
@@ -87,7 +87,7 @@ def _show_poets(request, poets, current_letter=None):
     return render_to_response('poetry/poets.html', { 'poets' : poets,
                                                      'first_letters' : first_letters,
                                                      'current_letter' : current_letter,
-                                                     })    
+                                                     }, context_instance=RequestContext(request))
     
     
 def poet_list(request, name):
@@ -96,7 +96,7 @@ def poet_list(request, name):
                         'book__id').order_by('title').all()
     return render_to_response('poetry/poem_list.html', { 'poems' : poems,
                                                          'poet'  : name,
-                                                         })
+                                                         }, context_instance=RequestContext(request))
                                                          
 def search(request):
     "Search poetry by title/author/keyword"
