@@ -1,5 +1,5 @@
 # Django local settings for edc project.
-
+from os import path
 # all settings in debug section should be false in production environment
 [debug]
 DEBUG = True
@@ -11,6 +11,8 @@ ADMINS = (
 )
 
 MANAGERS = ADMINS
+
+BASE_DIR = path.dirname(path.abspath(__file__))
 
 #This setting is used instead of the referencing :class:`~django.contrib.sites.models.Site`
 #When creating arks, this will be the base of the target uri.
@@ -98,15 +100,6 @@ SITE_ID = 1
 # If you set this to False, Django will make some optimizations so as not
 # to load the internationalization machinery.
 USE_I18N = True
-
-# Absolute path to the directory that holds media.
-# Example: "/home/media/media.lawrence.com/"
-MEDIA_ROOT = ''
-
-# URL that handles the media served from MEDIA_ROOT. Make sure to use a
-# trailing slash if there is a path component (optional in other cases).
-# Examples: "http://media.lawrence.com", "http://example.com/media/"
-MEDIA_URL = ''
 
 # URL prefix for admin media -- CSS, JavaScript and images. Make sure to use a
 # trailing slash.
