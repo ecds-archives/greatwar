@@ -39,7 +39,7 @@ EXISTDB_SERVER_PROTOCOL = "http://"
 # hostname, port, & path to exist xmlrpc - e.g., "localhost:8080/exist/xmlrpc"
 EXISTDB_SERVER_HOST     = ""
 EXISTDB_SERVER_USER     = ""
-EXISTDB_SERVER_PWD      = ""
+EXISTDB_SERVER_PASSWORD      = ""
 #EXISTDB_SERVER_URL      = EXISTDB_SERVER_PROTOCOL + EXISTDB_SERVER_HOST
 EXISTDB_SERVER_URL  = EXISTDB_SERVER_PROTOCOL + EXISTDB_SERVER_HOST
 # collection should begin with / -  e.g., /edc
