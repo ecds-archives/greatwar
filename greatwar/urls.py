@@ -24,9 +24,12 @@ urlpatterns = patterns('',
           
 )
 
-if settings.DEBUG:
-    urlpatterns += patterns('django.views.static',
-        (r'^(?P<path>(?:css|icons|javascripts|images)/.*)$', 'serve',
-            {'document_root': '../media'})
+# DISABLE THIS IN PRODUCTION
+if settings.DEV_ENV:
+
+    urlpatterns += patterns('',
+        (r'^static/(?P<path>.*)$', 'django.views.static.serve', {
+            'document_root': settings.MEDIA_ROOT,
+            }),
     )
- 
+
