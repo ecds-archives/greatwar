@@ -3,19 +3,19 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
    <title>The Great War {% block pagetitle %} PAGE TITLE {% endblock %} </title>
-   <link rel="icon" type="image/jpeg" href="/images/favicon.jpg">   
-   <link rel="stylesheet" type="text/css" href="/css/site.css"/>
+   <link rel="icon" type="image/jpeg" href="{{ MEDIA_URL }}/images/favicon.jpg">
+   <link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}/css/site.css"/>
   
   {% block page-head %}
   {% endblock %}
 </head>
 
-<body> 
- <div class="topimage"><img src="/images/topbanner.jpg" alt="The Great War" width='800' height='90' border='0'/></div>
+<body>
+ <div class="topimage"><img src="{{ MEDIA_URL }}/images/topbanner.jpg" alt="The Great War" width='800' height='90' border='0'/></div>
 
 <table class="indexlinks">
 <tr>
-     <td><a href='/'>Home</a></td>
+     <td><a href='{% url index %}'>Home</a></td>
      <td class="separator">&bull;</td>  
      <td><a href="{% url postcards:index %}">Postcards</a></td>
      <td class="separator">&bull;</td>

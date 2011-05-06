@@ -1,5 +1,5 @@
 # Django local settings for edc project.
-
+from os import path
 # all settings in debug section should be false in production environment
 [debug]
 DEBUG = True
@@ -11,6 +11,8 @@ ADMINS = (
 )
 
 MANAGERS = ADMINS
+
+BASE_DIR = path.dirname(path.abspath(__file__))
 
 #This setting is used instead of the referencing :class:`~django.contrib.sites.models.Site`
 #When creating arks, this will be the base of the target uri.
@@ -37,13 +39,22 @@ EXISTDB_SERVER_PROTOCOL = "http://"
 # hostname, port, & path to exist xmlrpc - e.g., "localhost:8080/exist/xmlrpc"
 EXISTDB_SERVER_HOST     = ""
 EXISTDB_SERVER_USER     = ""
-EXISTDB_SERVER_PWD      = ""
+EXISTDB_SERVER_PASSWORD      = ""
 #EXISTDB_SERVER_URL      = EXISTDB_SERVER_PROTOCOL + EXISTDB_SERVER_HOST
 EXISTDB_SERVER_URL  = EXISTDB_SERVER_PROTOCOL + EXISTDB_SERVER_HOST
 # collection should begin with / -  e.g., /edc
 EXISTDB_ROOT_COLLECTION = ""
 EXISTDB_TEST_COLLECTION = ""
 # NOTE: EXISTDB_INDEX_CONFIGFILE is configured in settings.py (for fa; is it for gw?)
+
+# Fedora Repository settings
+FEDORA_ROOT = 'https://host:port/fedora/'
+FEDORA_PIDSPACE = 'greatwar'
+#configure these for unit tests only
+#FEDORA_USER = 'user'
+#FEDORA_PASS = 'pass'
+
+
 
 # from fa:
 # a bug in python xmlrpclib loses the timezone; override it here
@@ -90,14 +101,11 @@ SITE_ID = 1
 # to load the internationalization machinery.
 USE_I18N = True
 
-# Absolute path to the directory that holds media.
-# Example: "/home/media/media.lawrence.com/"
-MEDIA_ROOT = ''
-
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash if there is a path component (optional in other cases).
 # Examples: "http://media.lawrence.com", "http://example.com/media/"
-MEDIA_URL = ''
+MEDIA_URL = '/project/static'
+
 
 # URL prefix for admin media -- CSS, JavaScript and images. Make sure to use a
 # trailing slash.
@@ -106,3 +114,11 @@ ADMIN_MEDIA_PREFIX = '/media/'
 
 # Make this unique, and don't share it with anybody.
 SECRET_KEY = ''
+
+
+#Logger Settings
+import logging
+#logging levels: NOLOG, CRITICAL, ERROR, WARNING, INFO, DEBUG
+LOGGING_LEVEL=logging.NOLOG
+LOGGING_FORMAT="%(asctime)s : %(name)s:  %(levelname)s : %(message)s"
+LOGGING_FILENAME="" # "" will print to stdout

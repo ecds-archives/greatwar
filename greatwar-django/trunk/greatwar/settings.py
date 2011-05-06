@@ -62,13 +62,8 @@ USE_I18N = True
 
 # Absolute path to the directory that holds media.
 # Example: "/home/media/media.lawrence.com/"
-MEDIA_ROOT = '/Beck-files/WWI/greatwar/greatwar-django/trunk/media/'
+MEDIA_ROOT = path.join(BASE_DIR, '../media')
 # '/home/rsutton/workarea/django-greatwar/media/'
-
-# URL that handles the media served from MEDIA_ROOT. Make sure to use a
-# trailing slash if there is a path component (optional in other cases).
-# Examples: "http://media.lawrence.com", "http://example.com/media/"
-MEDIA_URL = ''
 
 # URL prefix for admin media -- CSS, JavaScript and images. Make sure to use a
 # trailing slash.
@@ -117,6 +112,18 @@ INSTALLED_APPS = (
     'greatwar.poetry',
     'greatwar',
 )
+
+
+TEMPLATE_CONTEXT_PROCESSORS = (
+    "django.core.context_processors.auth",
+    "django.core.context_processors.debug",
+    "django.core.context_processors.i18n",
+    "django.core.context_processors.media",
+    "django.contrib.messages.context_processors.messages",
+    # additional context processors
+    "django.core.context_processors.request", # always include request in render context
+    )
+
 
 EXISTDB_INDEX_CONFIGFILE = path.join(BASE_DIR, "exist_index.xconf")
 
