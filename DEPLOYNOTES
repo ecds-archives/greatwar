@@ -100,7 +100,7 @@ For a first-time install, you will should run these two steps:
 Apache
 ^^^^^^
 This should be configured to run under WSGI.
-Create an apache config to use the provided .wsgi.
+greatwar.wsgi and greatwar.conf have been provied as starting ponts for the Apache / WSGI config
 
 Trouble Shooting
 ^^^^^^^^^^^^^^^^
