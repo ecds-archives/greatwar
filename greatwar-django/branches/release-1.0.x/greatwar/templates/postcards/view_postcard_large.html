@@ -6,7 +6,7 @@
   {% with card.dc.content as dc %}{% include '_dc_meta.html' %}{% endwith %}
 {% endblock %}
 
-{% block page_subtitle %} {{head}} {% endblock %}
+{% block page_subtitle %} {{head}} {{ card.label }}{% endblock %}
 
 {% block content %}
 <p><a href="{% url postcards:card pid=card.pid %}">View full details</a></p>
