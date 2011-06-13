@@ -128,7 +128,10 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 EXISTDB_INDEX_CONFIGFILE = path.join(BASE_DIR, "exist_index.xconf")
 
 # temporary pid - should eventually use ARK. must match PID in fixture
-POSTCARD_COLLECTION_PID = 'greatwar:postcards-collection'
+POSTCARD_COLLECTION_PID = 'emory-control:Beck-GreatWar-Postcards-collection'
+
+#This is used to identify Great War records.  The relation is stored on each postcard object
+RELATION = 'The Great War 1914-1918'
 
 # the default owner of all fedora objects created by this app
 FEDORA_OBJECT_OWNERID = 'beck-greatwar'

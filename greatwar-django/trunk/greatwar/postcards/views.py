@@ -24,7 +24,7 @@ def summary(request):
     # - used to get total count, and to display a random postcard
     # NOTE: this may be inefficient when all postcards are loaded; consider caching
     repo = Repository()
-    search_opts = {'pid__contains': '%s:*' % settings.FEDORA_PIDSPACE }
+    search_opts = {'relation': settings.RELATION }
     postcards = list(repo.find_objects(**search_opts))
     count = len(postcards)
     # TODO: get categories from fedora collection object
@@ -42,7 +42,7 @@ def browse(request):
     repo.default_object_type = ImageObject
     # TEMPORARY: restrict to postcards by pidspace
     # NOTE: tests rely somewhat on restriction by pidspace...
-    search_opts = {'pid__contains': '%s:*' % settings.FEDORA_PIDSPACE }
+    search_opts = {'relation': settings.RELATION }
     number_of_results = 15
     context = {}
 
@@ -157,7 +157,7 @@ def search(request):
         #keywords = '%s*' % form.cleaned_data['keyword'].rstrip('*')
         
         # TEMPORARY: restrict to postcards by pidspace
-        search_opts = {'pid__contains': '%s:*' % settings.FEDORA_PIDSPACE }
+        search_opts = {'relation': settings.RELATION }
         if 'title' in form.cleaned_data:
             search_opts['title__contains'] = '%s*' % form.cleaned_data['title'].rstrip('*')
         if 'description' in form.cleaned_data:
