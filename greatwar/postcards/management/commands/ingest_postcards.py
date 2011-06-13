@@ -101,7 +101,7 @@ class Command(BaseCommand):
                    "con-r":"World War, 1914-1918--Destruction  and pillage",
                    "con-f":"Flags in art",
                    "con-el":"Uncle Elmer",
-                   "hf-p":"World War, 1914-1918--Propganda", 
+                   "hf-p":"World War, 1914-1918--Propaganda", 
                    "hf-c":"World War, 1914-1918--Children", 
                    "hf-w":"World War, 1914-1918--Women", 
                    "hf-re":"World War, 1914-1918--Religious aspects", 
