@@ -38,7 +38,7 @@ class FedoraFixtures:
         # common DC for all postcards
         obj.dc.content.type = 'image'
         # FIXME: configure this somewhere?
-        obj.dc.content.relation_list.extend(['The Great War 1914-1918',
+        obj.dc.content.relation_list.extend([settings.RELATION,
                                  'http://beck.library.emory.edu/greatwar/'])
         # set file as content of image datastream
         obj.image.content = open(path.join(fixture_path, filename))
