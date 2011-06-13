@@ -49,7 +49,7 @@ EXISTDB_TEST_COLLECTION = ""
 
 # Fedora Repository settings
 FEDORA_ROOT = 'https://host:port/fedora/'
-FEDORA_PIDSPACE = 'greatwar'
+FEDORA_PIDSPACE = 'emory'
 #configure these for unit tests only
 #FEDORA_USER = 'user'
 #FEDORA_PASS = 'pass'

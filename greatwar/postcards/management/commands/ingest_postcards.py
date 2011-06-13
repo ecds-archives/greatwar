@@ -266,7 +266,7 @@ class Command(BaseCommand):
             # common DC for all postcards
             obj.dc.content.type = 'image'
             obj.dc.content.type = 'postcard'
-            obj.dc.content.relation_list.extend(['The Great War 1914-1918',
+            obj.dc.content.relation_list.extend([settings.RELATION,
                                  'http://beck.library.emory.edu/greatwar/'])
 
             # set file as content of image datastream
