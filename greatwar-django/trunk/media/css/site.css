@@ -76,8 +76,10 @@ p.endfloats { clear: both; }
 img.thumbnail { text-align: center; vertical-align: middle; padding:
 10px; border-style: none;}
 
+
+/* site sidebar */
 div.sidebar { position: absolute; 
-	      z-index: 2;
+	      z-index: -1;
 	      top: 150px;
 	      right: 20px; 
 	      width: 175px;
@@ -304,11 +306,11 @@ p.comment span.byline { font-style: italic; font-size: 90%; color: #666666; }
 p.inline-note { font-size: 85%; }
 
 /* jQuery */
-h4.toggle { background: url(../images/closed.gif) no-repeat;
+h4.toggle:before { content: url(../images/closed.gif) no-repeat;
 	    padding-left: 10px;}
 ul.category { display: none;}
-h4.toggle active { background: url(../images/open.gif) no-repeat;
-		   padding-left: 10px;}
+/*h4.toggle:before active { content: url(../images/open.gif) no-repeat;
+		   padding-left: 10px;} */
 ul.category active { display: block;}
 
 
