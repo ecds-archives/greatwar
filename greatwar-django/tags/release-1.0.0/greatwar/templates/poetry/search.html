@@ -1,0 +1,94 @@
+{% extends "poetry/poetry_base.html" %}
+{% load existdb %}
+{% block page_subtitle %} Search {% endblock %}
+
+{% block content %}
+
+<h2>Search the poems.</h2>
+<table class="searchform">
+<tr><td>
+<form method="get" action="{% url poetry:search %}">
+    <table>
+    {{ search.as_table }}
+    </table>
+    <input type="submit" value="Search" />
+    <!-- <input type="reset" value="Reset"/> -->
+</form>
+
+<td>   
+    <ul class="searchtips"><h4>Keyword searches within a poem.</h4>
+      <li>Multiple terms default to an "OR" search: <i>open sky</i> searches for <i>open</i> or <i>sky</i> within a poem</li>
+      <li>For an exact search, use quotes: "open sky".</li>
+      <li>To find all terms within a poem, use AND: open AND sky</li>
+    </ul>
+    <ul class="searchtips"><h4>Author and title searches within a poem.</h4>
+      <li>Author searches find author names in anthologies. To view poems in single-author volumes, use the <a href="{% url poetry:books %}">contents view</a></li>
+      <li>Title searches find words in the poem titles. Searches work
+    in the same way as keyword searches, but only search the
+    titles.</li>
+    </ul>
+    <ul class="searchtips"><h4>Wildcards</h4>
+      <li>You may search for multiple word forms by using ? (single
+    letter) or * (multi-letter) for wildcards.</li>
+    </ul>
+</td></tr>
+</table>
+<hr/>
+
+{% if server_error %}{{ server_error }}{% endif %}
+
+{% if search.is_valid %}
+
+  Displaying {{ poetry_paginated.start_index }} - {{ poetry_paginated.end_index }} of {{ poetry_paginated.paginator.count }}
+  
+  <ul>
+      {% for poem in poetry_paginated.object_list %}
+      <li><a href="{% url poetry:poem poem.book.id poem.id %}{% if keyword %}?keyword={{ keyword }}{% endif %}">
+            {{ poem.title }}</a> in
+            <a href="{% url poetry:book-toc poem.book.id %}"><i>{{ poem.book.title }}</i></a>
+  
+         {% if poem.line_matches %}
+           {% for line in poem.line_matches %} <p class="kwic">...{{ line|exist_matches }}...</p> {% endfor %}
+         {% endif %}
+      </li>
+      {% empty %}
+      <li>No records returned</li>
+      {% endfor %}
+  </ul>
+  
+  <table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td colspan="3">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="160">
+    &nbsp;
+    {% if poetry_paginated.has_previous %}
+        <a href="?page={{ poetry_paginated.previous_page_number }}&keyword={{keyword}}&title={{title}}&author={{author}}">[ &nbsp;&lt;&lt; Previous&nbsp; ]</a>
+    {% endif %}
+    </td>
+    
+     <td align="center">
+      [&nbsp; 
+      {% for current_page in poetry_paginated.paginator.page_range %}
+        {% if poetry_paginated.number == current_page %}
+          &nbsp;{{ current_page }}&nbsp;
+        {% else %}
+          <a href="?page={{ current_page }}&keyword={{keyword}}&title={{title}}&author={{author}}">&nbsp;{{ current_page }}&nbsp;</a>
+        {% endif %}
+      {% endfor %}
+      &nbsp;]
+     </td>
+  
+      <td width="110" align="right">
+      {% if poetry_paginated.has_next %}
+          <a href="?page={{ poetry_paginated.next_page_number }}&keyword={{keyword}}&title={{title}}&author={{author}}">[ &nbsp;Next &gt;&gt;&nbsp; ]</a>
+      {% endif %}
+      &nbsp;
+      </td>
+  </tr>
+  </table>
+
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,49 @@
+{% extends "postcards/postcard_base.html" %}
+{% block page_subtitle %} Browse postcards {% endblock %}
+
+{% block content %}
+{% if postcards_paginated.paginator.count %}
+    <p>Displaying {{ postcards_paginated.start_index }} - {{ postcards_paginated.end_index }} of {{ postcards_paginated.paginator.count }} postcard{{ postcards_paginated.paginator.count|pluralize }}.</p>
+{# % assert False % #}
+{% endif %}
+{% if subject %}
+    <p>Subject is {{subject}}.</p>
+{% endif %}
+
+{% if postcards_paginated %}
+   {% for postcard in postcards_paginated.object_list %}
+     {% include 'postcards/_thumbnail_view.html' %}
+   {% endfor %}
+{% endif %}
+
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="150">
+    &nbsp;
+    {% if postcards_paginated.has_previous %}
+        <a href="?page={{ postcards_paginated.previous_page_number }}{% if subject %}&subject={{subject}}{% endif %}">[ &nbsp;&lt;&lt; Previous &nbsp;]</a>
+    {% endif %}
+    </td>
+    
+     <td align="center">
+      [&nbsp; 
+      {% for current_page in postcards_paginated.paginator.page_range %}
+        {% if postcards_paginated.number == current_page %}
+          &nbsp;{{ current_page }}&nbsp;
+        {% else %}
+          <a href="?page={{ current_page }}{% if subject %}&subject={{ subject }}{% endif %}">&nbsp;{{ current_page }}&nbsp;</a>
+        {% endif %}
+      {% endfor %}
+      &nbsp;]
+     </td>
+  
+      <td width="150" align="right">
+      {% if postcards_paginated.has_next %}
+          <a href="?page={{ postcards_paginated.next_page_number }}{% if subject %}&subject={{subject}}{% endif %}">[ &nbsp;Next &gt;&gt;&nbsp; ]</a>
+      {% endif %}
+      &nbsp;
+      </td>
+  </tr>
+</table>
+{% endblock %}

@@ -1,0 +1,2691 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="fiery">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt n="THE FIERY CROSS">
+            <title>THE FIERY CROSS: An Anthology of War Poems</title>
+            <editor>
+               <name type="person">
+                  <choice>
+                     <reg>Edwards, Mabel C.</reg>
+                     <sic> Mabel C. Edwards</sic>
+                  </choice>
+               </name> and <name type="person">
+                  <choice>
+                     <reg>Booth, Mary</reg>
+                     <sic>Mary Booth</sic>
+                  </choice>
+               </name>
+            </editor>
+            <respStmt>
+               <resp>Compiled and edited by</resp>
+               <name>Beck Center</name>
+               <name/>
+            </respStmt>
+         </titleStmt>
+         <extent/>
+         <publicationStmt>
+            <publisher>Lewis H. Beck Center</publisher>
+            <pubPlace>Emory University</pubPlace>
+            <address>
+               <addrLine>Atlanta, Georgia</addrLine>
+            </address>
+            <availability>
+               <p>2002 Emory University. Permission is granted to download, transmit, or otherwise reproduce, distribute or display the contributions to the work claimed by Emory University for non-profit educational purposes, provided this header is included in its entirety.  For inquiries about commercial uses, contact: Lewis H. Beck Center for Electronic collections and services, Emory University, Atlanta, Georgia 30322</p>
+            </availability>
+            <date>2002</date>
+         </publicationStmt>
+         <seriesStmt>
+            <title>Women Writers Resource Project</title>
+         </seriesStmt>
+         <sourceDesc>
+            <bibl>
+               <editor>Edwards, Mabel C. and Mary Booth</editor> 
+               <title>THE FIERY CROSS: An Anthology of War Poems</title>
+               <pubPlace>London</pubPlace>
+               <publisher>Grant Richards Ltd.</publisher>
+               <date>1915</date>  <biblScope>96 pages.</biblScope> <note>Sold for the benefit of the funds of the Red Cross.</note></bibl>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <projectDesc>
+            <p>This digital text is produced from a first-edition volume of the 1915 anthology <hi rend="italic">The Fiery Cross: An Anthology of War Poems</hi> compiled by Mabel C. Edwards and Mary Booth.  This anthology, charitably produced to benefit the funds of the Red Cross, includes verse from a range of historical periods and poems by both male and female poets.  We have included in this electronic edition only those poems written by women that do not appear elsewhere on this site and that have not been recently re-published.  The production of this digital text was undertaken by the Beck Center for the Women Writers Resource Project at Emory University.</p>
+         </projectDesc>
+      </encodingDesc>
+      <profileDesc>
+         <creation>
+            <rs type="ethnicity">Caucasian</rs>
+            <rs type="form">Unedited</rs>
+            <rs type="genre">Poetry</rs>
+            <rs type="geography">Great Britain</rs>
+            <date>1900-1999</date>
+         </creation>
+      </profileDesc>
+      <revisionDesc>
+         <change>
+            <name>Stewart Varner</name> transformed this document from p4 to p5 on <date when="2010-03-22">March 22, 2010</date>
+         </change>
+         <change>
+            <date>2002</date>
+            <label>Project Manager</label>
+            <name>Erika Farr</name>SGML tags inserted in compliance with TEI guidelines using TEILITE</change>
+         <change>
+            <date>2002</date>
+            <label>Beck Center staff</label>
+            <name>Alden Mahler</name>scanned, proofread, and encoded additional poems</change>
+      </revisionDesc>
+   </teiHeader>
+
+   <text>
+      <front>
+
+         <pb n="5"/>
+
+         <div xml:id="fiery001" type="dedication">
+            <p rend="center">
+               <hi rend="smallcaps">To</hi>
+               <lb/>
+Her Majesty Queen Alexandra<lb/>
+               <hi rend="smallcaps">Who Has Graciously Accepted the</hi>
+               <lb/>
+               <hi rend="smallcaps">Dedication of this Book</hi>
+            </p>
+
+            <div xml:id="fiery002" type="poem" n="Dedication">
+               <lg type="stanza">
+                  <l n="1">Oh, Queen, whose gracious mind doth dwell</l>
+                  <l rend="indent">Upon the sorrows of our war,</l>
+                  <l>We pray you, take this little book,</l>
+                  <l rend="indent">And sometimes turn its pages o'er.</l>
+               </lg>
+
+               <lg>
+                  <l>If in the printed page you find</l>
+                  <l rend="indent">Some semblance of the spirit keen,</l>
+                  <l>Some meed of praise for our great Dead,</l>
+                  <l rend="indent">Some echo from a world unseen:</l>
+               </lg>
+
+               <lg>
+                  <l>Then is our labour (done in love)</l>
+                  <l rend="indent">Amply repaid: the poet's pen</l>
+                  <l>Shall draw a tiny stream of gold</l>
+                  <l rend="indent">To help and comfort wounded men.</l>
+               </lg>
+            </div>
+         </div>
+
+         <pb n="6"/>
+         <pb n="7"/>
+         <div xml:id="fiery003" type="preface" n="Preface">
+            <head rend="center">Preface</head>
+
+            <p>
+THE compilers of the collection of Poems which follows have asked me to write for them, and for it, a few words by way of Preface. I willingly make the attempt, though I do not think it is really needed. The true occasion and justification of such books is the Great War, in which we, one and all, desire to do, and also to say, anything we can, however small, that can help or comfort, and to do, or say, it quite simply, looking for no praise, but letting it go in with the rest, and therefore not attempting ourselves to reckon its value very closely.</p>
+
+            <p>
+That is the underlying reason of many of the Anthologies which are being put forth to-day. It is certainly the reason of this one. The poems which are contained in this little volume, some seventy in number, show as much of themselves. When they are the work of living poets they have been given freely by their authors. They are drawn from every quarter, from old and favourite writers, and also from writers newer <choice>
+                  <corr>and</corr>
+                  <sic>anl</sic>
+               </choice> less known. Mr Thomas Hardy, Sir Owen Seaman and Sir Henry Newbolt, Mr William Watson and Alfred Noyes, Mr Austin Dobson and Mr W. L. Courtney, Canon Rawnsley and Mr Laurence Binyon, Mr G. K. Chesterton and Mr C. L. Graves, the Duchess of Sutherland and the Marquess of Crewe, Mrs Meynell nd Mrs Woods and Mrs Katharine Tynan, may be said to lead the way, but, as can be seen, there are many other well-accredited and well-graced names.</p>
+
+            <p>
+To each and all, the volume is indebted, and its com<pb n="8"/>pilers are grateful. One poem deserves special notice, the very remarkable piece "The Day," the work of Mr Henry Chappell, a railway porter at the Great Western Station at Bath. Put out at the very beginning of the War, it struck with sure force the note of splendid indignation then roused, and it is well that it should find here a permanent and accessible place.</p>
+
+            <p>
+Canada is well represented by "The Lads of the Maple Leaf," and Australia by a fine example from Mr Archibald Strong's just published volume <hi rend="italic">Sonnets Of the Empire</hi>. The thrilling poetry of the American Civil War, some of the finest war poetry in the world, has also been drawn upon, and the older war poetry of our own country, the verse of Ben Jonson, Massinger and Lovelace.</p>
+
+            <p>
+Two pieces belong to the language and literature and genius of our illustrious Allies, the <hi rend="italic">Angelus</hi> of M. Emile Cammaerts and a beautiful sonnet by that pensive "Poet of Science," Sully Prudhomme, which appropriately closes the series, and in doing so points forward to what poetry may be hereafter in some far future when these tribulations and this tyranny are overpast.</p>
+
+            <p>
+The arrangement of the poems under their subjects will also speak for itself.</p>
+
+            <p>
+All of us alike must feel that "debt unpayable" of which Mr Bourdillon writes so tersely and so touchingly in these pages.</p>
+
+            <p>
+For the rest, the "Red Cross" is a symbol which has only to be lifted up to "draw all men to it," from the Red Indian Chief "Painted Cap," one hundred and eight years of age, who, as we read in <hi rend="italic">The Times</hi> the other day, heads the Branch in Saskatchewan, to the child in <pb n="9"/>the English nursery just beginning to toddle and to talk.</p>
+
+            <p>
+It is truly a "fiery cross," but the very negation of the token of war, for it is fiery with the kindling, not of the torch of hate, but of the hearth-flame of love, that love which "teaches itself so quickly," as Dante sang, "to the gentle heart," that love which "will conquer at the last."</p>
+
+            <q>
+               <l>Ye that have gentle hearts and fain</l>
+               <l rend="indent">To succour men in need,</l>
+               <l>There is no voice could ask in vain</l>
+               <l rend="indent">With such a cause to plead --</l>
+            </q>
+
+            <p>Most true, --</p>
+
+            <p>
+But these are eloquent voices and potent in their pleading. To inspire and to console, this is a very large part of the province of the poet, who, as all know, so often learns in suffering what he teaches in song.</p>
+
+            <p>
+Those too who favour this little book will help its authors to give, they will receive, and what is better, they will also give themselves.</p>
+
+            <p>
+And they will aid a gracious and tender Patroness, Queen Alexandra, whose coming as a Princess Bride to this land seemed so poetic, and waked such beautiful verse, who has shared so sympathetically its joys and its sorrows, who has been the leader of so many of its best causes, and in whose name, by her most kind acceptance of our Dedication, our volume goes forth to speak its message.</p>
+
+            <byline>
+               <hi rend="smallcaps">Herbert Warren</hi>.</byline>
+         </div>
+      </front>
+
+      <body>
+
+         <pb n="10"/>
+         <pb n="11"/>
+         <pb n="12"/>
+
+         <div xml:id="fiery004" type="anthology" n="The Fiery Cross:  An Anthology">
+
+
+            <pb n="13"/>
+            <div xml:id="fiery005" type="poem" n="For the Red Cross">
+               <head rend="center">For the Red Cross</head>
+               <docAuthor>
+                  <name>
+                     <choice>
+                        <reg>Seaman, Owen</reg>
+                        <sic>Owen Seaman</sic>
+                     </choice>
+                  </name>
+               </docAuthor>
+               <note rend="center">
+                  <hi rend="italic">Reprinted by special permission of the proprietors of </hi>Punch.</note>
+
+               <lg type="stanza">
+                  <l n="1">YE that have gentle hearts and fain</l>
+                  <l rend="indent">To succour men in need,</l>
+                  <l>There is no voice could ask in vain</l>
+                  <l rend="indent">With such a cause to plead --</l>
+                  <l>The cause of those that in your care,</l>
+                  <l rend="indent">Who know the debt to honour due,</l>
+                  <l>Confide the wounds they proudly wear,</l>
+                  <l rend="indent">The wounds they took for you.</l>
+               </lg>
+
+               <lg>
+                  <l>And yonder where the battle's waves</l>
+                  <l rend="indent">Broke yesterday o'erhead,</l>
+                  <l>Where now the swift and shallow graves</l>
+                  <l rend="indent">Cover our English dead,</l>
+                  <l>Think how your sisters play their part,</l>
+                  <l rend="indent">Who serve as in a holy shrine,</l>
+                  <l>Tender of hand and brave of heart,</l>
+                  <l rend="indent">Under the Red Cross Sign.</l>
+               </lg>
+
+               <lg>
+                  <l>Ah, by that symbol, worshipped still,</l>
+                  <l rend="indent">Of life-blood sacrificed,</l>
+                  <l>That lonely Cross on Calvary's hill</l>
+                  <l rend="indent">Red with the wounds of Christ;</l>
+                  <l>By that free gift to none denied,</l>
+                  <l rend="indent">Let Pity pierce you like a sword,</l>
+                  <l>And love go out to open wide</l>
+                  <l rend="indent">The gate of life restored.</l>
+               </lg>
+               <byline>Owen Seaman.</byline>
+            </div>
+
+
+            <pb n="14"/>
+
+
+
+            <pb n="15"/>
+
+
+
+            <pb n="16"/>
+
+            <pb n="17"/>
+
+
+
+            <pb n="18"/>
+
+            <pb n="19"/>
+
+
+
+            <pb n="20"/>
+
+            <pb n="21"/>
+
+
+
+            <pb n="22"/>
+
+            <pb n="23"/>
+
+
+
+            <pb n="24"/>
+            <div xml:id="fiery012" type="poem" n="From Germany">
+               <head rend="center">From Germany</head>
+               <head rend="center">
+                  <hi rend="smallcaps">"Lusitania," 7th May 1915.</hi>
+               </head>
+               <docAuthor>
+                  <name>
+                     <choice>
+                        <reg>Booth, Mary</reg>
+                        <sic>Mary Booth</sic>
+                     </choice>
+                  </name>
+               </docAuthor>
+               <lg type="stanza">
+                  <l n="1">REJOICE! Rejoice! the deed is done!</l>
+                  <l>The Innocents are dead.</l>
+                  <l>Hell's deepest teachings are outdone!</l>
+                  <l>Justice and Mercy fled.</l>
+               </lg>
+
+               <lg>
+                  <l>Rejoice! for in a thousand homes</l>
+                  <l>The English mothers weep</l>
+                  <l>The thousand sons our secret arm</l>
+                  <l>Has plunged beneath the deep.</l>
+               </lg>
+
+               <lg>
+                  <l>Rejoice! -- but what this bitter brand --</l>
+                  <l>Pale spectre of the slain --</l>
+                  <l>You press upon my shrinking brow?</l>
+                  <l>"It is the mark of Cain."</l>
+               </lg>
+               <byline>Mary Booth.</byline>
+            </div>
+
+
+            <pb n="25"/>
+
+
+
+            <pb n="26"/>
+            <div xml:id="fiery014" type="poem" n="The Cause">
+               <head rend="center">The Cause</head>
+               <docAuthor>
+                  <name>
+                     <choice>
+                        <reg>Binyon, Laurence</reg>
+                        <sic>Laurence Binyon</sic>
+                     </choice>
+                  </name>
+               </docAuthor>
+               <lg type="stanza">
+                  <l n="1">OUT of these throes that search and sear</l>
+                  <l>What is it so deep that rises in us</l>
+                  <l>Above the shaken thoughts of fear,</l>
+                  <l>Whatever thread the Fates may spin us,</l>
+                  <l>Above the horror that would drown,</l>
+                  <l>The tempest that would strike us down?</l>
+               </lg>
+
+               <lg>
+                  <l>It is to stand in cleansing light,</l>
+                  <l>The cloud of dullard habit lifted,</l>
+                  <l>To use a certainty of sight,</l>
+                  <l>And breathe an air by peril sifted,</l>
+                  <l>The things that once we deemed of price</l>
+                  <l>Consumed in smoke of sacrifice:</l>
+               </lg>
+
+               <lg>
+                  <l>It is to feel the world we knew</l>
+                  <l>Changed to a wonder past our knowing;</l>
+                  <l>The grass, the trees, the skiey blue,</l>
+                  <l>The very stones are inly glowing</l>
+                  <l>With something infinite, behind</l>
+                  <l>These shadows, ardently divined.</l>
+               </lg>
+
+               <lg>
+                  <l>We went our ways: each bosom bore</l>
+                  <l>Its spark of separate desire.</l>
+                  <l>But each now kindles to the core</l>
+                  <l>With faith from this transfusing fire</l>
+                  <l>Whereto our inmost longings run</l>
+                  <l>To be made infinitely one</l>
+               </lg>
+
+               <lg>
+                  <pb n="27"/>
+                  <l>With that which nothing can destroy,</l>
+                  <l>With that which lives, when all is taken,</l>
+                  <l>The home of dearer than our joy,</l>
+                  <l>By all save by the soul forsaken,</l>
+                  <l>Who strips her clean of doubt and care,</l>
+                  <l>Because she breathes her native air,</l>
+               </lg>
+
+               <lg>
+                  <l>Yet not for scorn of lovely earth</l>
+                  <l>And human sweetness born of living,</l>
+                  <l>For these are grown of dearer worth,</l>
+                  <l>A gift more precious in the giving,</l>
+                  <l>Since through that raiment's hues and lines</l>
+                  <l>The glory of the spirit shines.</l>
+               </lg>
+
+               <lg>
+                  <l>Faces of radiant youth, who go</l>
+                  <l>Like rivers, singing to the sea!</l>
+                  <l>You count no careful cost; you know;</l>
+                  <l>Of this far secret you are free;</l>
+                  <l>And life in you its splendour spending</l>
+                  <l>Sings the stars' song, that has no ending.</l>
+               </lg>
+               <byline>Laurence Binyon.</byline>
+            </div>
+
+
+            <pb n="28"/>
+            <div xml:id="fiery015" type="poem" n="To the Allies">
+               <head rend="center">To the Allies</head>
+               <head rend="center">
+                  <hi rend="smallcaps">From America</hi>.</head>
+               <docAuthor>
+                  <name>
+                     <choice>
+                        <reg>Jevons, Seton</reg>
+                        <sic>Seton Jevons</sic>
+                     </choice>
+                  </name>
+               </docAuthor>
+               <lg type="stanza">
+                  <l n="1">TO arms! Fair England o'er the sea</l>
+                  <l>In arms an empire answers thee;</l>
+                  <l>The enemy is at the gates anon,</l>
+                  <l>Almost he hath his hasty battle won</l>
+                  <l>By subterfuge and base deceit.</l>
+                  <l>In clash of arms the nations meet</l>
+                  <l>For Freedom's sake, in Freedom's name</l>
+                  <l>His fiery swollen mind and bloody hand to tame.</l>
+               </lg>
+
+               <lg>
+                  <l>And oh! the shame that we who might</l>
+                  <l>In wrath and anger join the fight</l>
+                  <l>Sit placidly; and though our loins we gird</l>
+                  <l>'Tis not to avenge his broken Belgian word,</l>
+                  <l>But our own right. When shall the Lord</l>
+                  <l>Fling us against the heathen horde?</l>
+                  <l>The world is ours that he hath stained,</l>
+                  <l>And Freedom's glorious cause we have ourselves ordained.</l>
+               </lg>
+
+               <lg>
+                  <l>France, England, Russia strive ye on</l>
+                  <l>Till the Lord's fight be bravely won,</l>
+                  <l>The jacket placed about his madness quite,</l>
+                  <l>Who broke the house and entered in the night,</l>
+                  <l>Honour of women and blood of the hearts of men</l>
+                  <l>'Venged and the Victor Peace throned in the land again.</l>
+               </lg>
+               <byline>Seton Jevons.</byline>
+            </div>
+
+
+            <pb n="29"/>
+            <div xml:id="fiery016" type="poem" n="Probation">
+               <head rend="center">Probation</head>
+               <head rend="center">
+                  <hi rend="smallcaps">To A King's
+Recruit.</hi>
+               </head>
+               <docAuthor>
+                  <name>
+                     <choice>
+                        <reg>Seaman, Owen</reg>
+                        <sic>Owen Seaman</sic>
+                     </choice>
+                  </name>
+               </docAuthor>
+               <note rend="center">
+                  <hi rend="italic">Reprinted by special permission of the proprietors of</hi> Punch.</note>
+
+               <lg type="stanza">
+                  <l n="1">Now is your time of trial, now</l>
+                  <l rend="indent">When into dusk the glamour pales</l>
+                  <l rend="indent">And the first glow of passion fails</l>
+                  <l>That lit your eyes and flushed your brow</l>
+                  <l>In that great moment when you made your vow.</l>
+               </lg>
+
+               <lg>
+                  <l>The Vision fades; you scarce recall</l>
+                  <l rend="indent">The sudden swelling of the heart,</l>
+                  <l rend="indent">The swift resolve to have your part</l>
+                  <l>In this the noblest quest of all</l>
+                  <l>By which our word is given to stand or fall.</l>
+               </lg>
+
+               <lg>
+                  <l>Your mother's pride, your comrades' praise --</l>
+                  <l rend="indent">All that romance that seemed so fair</l>
+                  <l rend="indent">Grows dim, and you are left to bear</l>
+                  <l>The prose of duty's sombre ways</l>
+                  <l>And labour of the long unlovely days.</l>
+               </lg>
+
+               <lg>
+                  <l>Yet here's the test to prove you kin</l>
+                  <l rend="indent">With those to whom we trust our fate,</l>
+                  <l rend="indent">Sober and stedfast, clean and straight,</l>
+                  <l>In that stern school of discipline</l>
+                  <l>Hardened to war against the foe within.</l>
+               </lg>
+
+               <lg>
+                  <l>For only so, in England's sight,</l>
+                  <l rend="indent">By that ordeal's searching flame</l>
+                  <l rend="indent">Found worthy of your fathers' fame,</l>
+                  <l>With all your spirit's armour bright</l>
+                  <l>Can you go forth in her dear cause to fight.</l>
+               </lg>
+               <byline>Owen Seaman.</byline>
+            </div>
+
+
+            <pb n="30"/>
+
+
+
+            <pb n="31"/>
+            <div xml:id="fiery018" type="poem" n="The Nation's Teachers">
+               <head rend="center">The Nation's Teachers</head>
+               <docAuthor>
+                  <name>
+                     <choice>
+                        <reg>Rawnsley, H. D. </reg>
+                        <sic>H. D. Rawnsley</sic>
+                     </choice>
+                  </name>
+               </docAuthor>
+               <lg type="stanza">
+                  <l n="1">I SAW in dream an Empire on its knees;</l>
+                  <l>There on the mount of God, linked hand in hand,</l>
+                  <l>Behold, two mighty angels seemed to stand</l>
+                  <l>Whose trumpet voices drowned the litanies;</l>
+                  <l>I cried, "Oh, Heavenly Father, what are these?"</l>
+                  <l>And He made answer, "These at my command</l>
+                  <l>Are sent to be the teachers of your land.</l>
+                  <l>They bear to men my judgment's stern decrees."</l>
+               </lg>
+
+               <lg>
+                  <l>"What are their names?" E'en as I spake, a voice</l>
+                  <l>Came clear from Heaven, "One Angel is called Pain</l>
+                  <l>And one Adversity or Tribulation;</l>
+                  <l>Hark to their words, so strength shall ye regain,</l>
+                  <l>Hear them aright, and lo! a humbler nation</l>
+                  <l>Shall rise to heights of greatness and rejoice."</l>
+               </lg>
+               <byline>H. D. Rawnsley.</byline>
+               <trailer>The Great European War: Poems.</trailer>
+            </div>
+
+
+            <pb n="32"/>
+            <div xml:id="fiery019" type="poem" n="L'Angelus">
+               <head rend="center">L'Angelus</head>
+               <docAuthor>
+                  <name>
+                     <choice>
+                        <reg>Cammaerts, Emile</reg>
+                        <sic>Emile Cammaerts</sic>
+                     </choice>
+                  </name>
+               </docAuthor>
+               <note rend="center">
+                  <hi rend="italic">Written for the Anniversary of the German ultimatum to Belgium.</hi>
+               </note>
+
+               <lg type="stanza">
+                  <l n="1">QUAND le vent vient de chez nous</l>
+                  <l>Et que la mer est sage,</l>
+                  <l>On peut entendre, certains soirs, sur la plage</l>
+                  <l>Mourir le son plaintif et doux</l>
+                  <l>De 1'Angelus: Don, dé,</l>
+                  <l>Din don, din don dé.</l>
+               </lg>
+
+               <lg>
+                  <l>Pourtant à trois lieues é la ronde</l>
+                  <l>Toutes les tours sont abattues,</l>
+                  <l>Depuis dix mois que le canon gronde</l>
+                  <l>Toutes les cloches se sont tues,</l>
+                  <l>Et l'on écoute, sans trop comprendre,</l>
+                  <l>Cette voix mystérieuse et tendre</l>
+                  <l>Qui ne cesse de murmurer:</l>
+                  <l>Din don, din don dé.</l>
+               </lg>
+
+               <lg>
+                  <l>D'oú vient-elle?</l>
+                  <l>De plus loin que Nieuport, de plus loin que 1'Escaut,</l>
+                  <l>De plus loin et de plus haut.</l>
+                  <l>D'oú sonne-t-elle?</l>
+                  <l>D'une église et d'un beffroi</l>
+                  <l>Que les obus n'atteindront pas,</l>
+                  <l>L'entendez vous vibrer</l>
+                  <l>Au fond de vos poitrines? Don dé,</l>
+                  <l>Din don, din don dé.</l>
+               </lg>
+
+               <lg>
+                  <l>C'est le coeur du pays</l>
+                  <l>Qui sonne comme une cloche,</l>
+                  <pb n="33"/>
+                  <l>Avec ses villages, ses prés fleuris,</l>
+                  <l>Ses bois, ses ruisseaux et ses roches.</l>
+                  <l>C'est notre sang qui bat</l>
+                  <l>Contre les murs de sa prison</l>
+                  <l>Et qui répète tout bas</l>
+                  <l>Son éternelle chanson.</l>
+                  <l>C'est notre âme qui, sans trop comprendre,</l>
+                  <l>Murmure d'une voix <choice>
+                        <corr>mystérieuse</corr>
+                        <sic>mysterieuse</sic>
+                     </choice> et tendre</l>
+                  <l>Les trois notes de l'Angelus: Don dé,</l>
+                  <l>Din don, din don dé.</l>
+               </lg>
+               <byline>Emile Cammaerts.</byline>
+               <trailer>Observer.</trailer>
+            </div>
+
+
+            <pb n="34"/>
+
+            <pb n="35"/>
+
+
+
+            <pb n="36"/>
+            <div xml:id="fiery021" type="poem" n="St George for England">
+               <head rend="center">St George for England</head>
+               <docAuthor>
+                  <name>
+                     <choice>
+                        <reg>Booth, Mary</reg>
+                        <sic>Mary Booth</sic>
+                     </choice>
+                  </name>
+               </docAuthor>
+               <lg type="stanza">
+                  <l n="1">ST GEORGE! St George for England!</l>
+                  <l>Clear rings the ancient cry;</l>
+                  <l>St George! St George for England!</l>
+                  <l>Who dares to do and die?</l>
+               </lg>
+
+               <lg>
+                  <l>The fiery cross has called them</l>
+                  <l>From the lonely Highland glen,</l>
+                  <l>And Cambria's lovely vales resound</l>
+                  <l>To the tramp of marching men.</l>
+               </lg>
+
+               <lg>
+                  <l>From Erin's shimmering island</l>
+                  <l>They cry is still "They come!"</l>
+                  <l>And Tara's sacred halls resound</l>
+                  <l>To the music of the drum.</l>
+               </lg>
+
+               <lg>
+                  <l>They have left the dead unburied,</l>
+                  <l>And the marriage feast delayed</l>
+                  <l>Till Belgium's wrongs are all avenged,</l>
+                  <l>And the Huns' mad march is stayed.</l>
+               </lg>
+
+               <lg>
+                  <l>They come from sunny Devon,</l>
+                  <l>From Derby's vales and rocks;</l>
+                  <l>Left are the pen, the loom, the plough,</l>
+                  <l>Deserted are the flocks.</l>
+               </lg>
+
+               <lg>
+                  <l>And St George is fighting for them,</l>
+                  <l>While Heaven's vast Hosts, as one</l>
+                  <l>Shall watch by them, and fight for them,</l>
+                  <l>Till victory is won.</l>
+               </lg>
+               <byline>Mary Booth.</byline>
+            </div>
+
+
+            <pb n="37"/>
+            <div xml:id="fiery022" type="poem" n="The Coming of the Colonies">
+               <head rend="center">The Coming of the Colonies</head>
+               <docAuthor>
+                  <name>
+                     <choice>
+                        <reg>Gurney, Dorothy Frances </reg>
+                        <sic>Dorothy Frances Gurney</sic>
+                     </choice>
+                  </name>
+               </docAuthor>
+               <lg type="stanza">
+                  <l n="1">I OF the bleeding heart, bent head, and stricken tongue,</l>
+                  <l>Old, old with years, and honours, and despairs,</l>
+                  <l>Watch them go forth to fight and die, last heirs</l>
+                  <l>And children of my womb, the happy young.</l>
+                  <l>I took the challenge, by the oppressors flung,</l>
+                  <l>I and my peers, -- and far my beacon flares,</l>
+                  <l>"Up, up, ye lion cubs, from out your lairs!"</l>
+                  <l>Wide o'er the world my cry of need has rung.</l>
+               </lg>
+
+               <lg>
+                  <l>They came, my splendid daughters -- to the fray --</l>
+                  <l>India and Australasia and the Isles,</l>
+                  <l>Swart Afric, and my swift cold Canada --</l>
+                  <l>With ardour, and with laughter and with smiles;</l>
+                  <l>And, though my every son of Britain fall,</l>
+                  <l>With these no man shall hold me as a thrall.</l>
+               </lg>
+               <byline>Dorothy Frances Gurney.</byline>
+               <trailer>A Little Book of Quiet.</trailer>
+            </div>
+
+
+            <pb n="38"/>
+            <div xml:id="fiery023" type="poem" n="For the Men at the Front">
+               <head rend="center">For the Men at the Front</head>
+               <docAuthor>
+                  <name>
+                     <choice>
+                        <reg>Oxenham, John</reg>
+                        <sic>John Oxenham</sic>
+                     </choice>
+                  </name>
+               </docAuthor>
+               <lg type="stanza">
+                  <l n="1">LORD GOD OF HOSTS, whose mighty hand</l>
+                  <l>Dominion holds on sea and land,</l>
+                  <l>In Peace and War Thy Will we see</l>
+                  <l>Shaping the larger liberty.</l>
+                  <l rend="indent">Nations may rise and nations fall,</l>
+                  <l rend="indent">Thy Changeless Purpose rules them all.</l>
+               </lg>
+
+               <lg>
+                  <l>When Death flies swift on wave and field,</l>
+                  <l>Be Thou a sure defence and shield!</l>
+                  <l>Console and succour those who fall,</l>
+                  <l>And help and hearten each and all!</l>
+                  <l rend="indent">O, hear a people's prayers for those</l>
+                  <l rend="indent">Who fearless face their country's foes!</l>
+               </lg>
+
+               <lg>
+                  <l>For those who weak and broken lie,</l>
+                  <l>In weariness and agony --</l>
+                  <l>Great Healer, to their beds of pain</l>
+                  <l>Come, touch, and make them whole again.</l>
+                  <l rend="indent">O, hear a people's prayers, and bless</l>
+                  <l rend="indent">Thy servants in their hour of stress!</l>
+               </lg>
+
+               <lg>
+                  <l>For those to whom the call shall come</l>
+                  <l>We pray Thy tender welcome home,</l>
+                  <l>The toil, the bitterness, all past,</l>
+                  <l>We trust them to Thy Love at last.</l>
+                  <l rend="indent">O, hear a people's prayers for all</l>
+                  <l rend="indent">Who, nobly striving, nobly fall!</l>
+               </lg>
+
+               <lg>
+                  <pb n="39"/>
+                  <l>For those who minister and heal,</l>
+                  <l>And spend themselves, their skill, and zeal --</l>
+                  <l>Renew their hearts with Christ-like faith,</l>
+                  <l>And guard them from disease and death.</l>
+                  <l rend="indent">And in Thine own good time, Lord, send</l>
+                  <l rend="indent">Thy Peace on earth till Time shall end!</l>
+               </lg>
+               <byline>John Oxenham.</byline>
+            </div>
+
+
+            <div xml:id="fiery024" type="poem" n="The Admonition">
+               <head rend="center">The Admonition</head>
+               <head rend="center">
+                  <hi rend="smallcaps">To Betsey.</hi>
+               </head>
+               <docAuthor>
+                  <name>
+                     <choice>
+                        <reg>Eden, Helen Parry </reg>
+                        <sic>Helen Parry Eden</sic>
+                     </choice>
+                  </name>
+               </docAuthor>
+               <lg rend="italic" type="stanza">
+                  <l n="1">REMEMBER, on your knees,</l>
+                  <l>The men who guard your slumbers --</l>
+               </lg>
+
+               <lg>
+                  <l>And guard a house in a still street</l>
+                  <l>Of drifting leaves and drifting feet,</l>
+                  <l>A deep blue window where below</l>
+                  <l>Lies moonlight on the roofs like snow,</l>
+                  <l>A clock that still his quarters tells</l>
+                  <l>To the dove that roosts beneath the bell's</l>
+                  <l>Grave canopy of silent brass,</l>
+                  <l>Round which the little night-winds pass</l>
+                  <l>Yet stir it not in the grey steeple;</l>
+                  <l>And guard all small and drowsy people</l>
+                  <l>Whom gentlest dusk doth disattire,</l>
+                  <l>Undressing by the nursery fire</l>
+                  <l>In unperturbed numbers</l>
+                  <l>On this side of the seas --</l>
+               </lg>
+
+               <lg rend="italic">
+                  <l>Remember, on your knees,</l>
+                  <l>The men who guard your slumbers.</l>
+               </lg>
+               <byline>Helen Parry Eden.</byline>
+               <trailer>Westminster Gazette.</trailer>
+            </div>
+
+
+            <pb n="40"/>
+            <div xml:id="fiery025" type="poem" n="The Tirailleur">
+               <head rend="center">The Tirailleur</head>
+               <head rend="center">
+                  <hi rend="smallcaps">To the Memory of René.</hi>
+               </head>
+               <docAuthor>
+                  <name>
+                     <choice>
+                        <reg>Sutherland, Millicent</reg>
+                        <sic>Millicent Sutherland</sic>
+                     </choice>
+                  </name>
+               </docAuthor>
+               <lg type="stanza">
+                  <l n="1">HE was so young to die --</l>
+                  <l>Ah; these are catchwords now</l>
+                  <l>When Death sucks red lips white</l>
+                  <l>Yet laurel-crowns the brow!</l>
+               </lg>
+
+               <lg>
+                  <l>The while we slaked his thirst</l>
+                  <l>Around us night-flies sang,</l>
+                  <l>Why did we wish him life?</l>
+                  <l>Why did we feel a pang?</l>
+               </lg>
+
+               <lg>
+                  <l>He lived the night, to dawn,</l>
+                  <l>And all the hot day through</l>
+                  <l>The fever lit his eyes,</l>
+                  <l>His limbs no resting knew.</l>
+               </lg>
+
+               <lg>
+                  <l>"Je pars tout seul," he said.</l>
+                  <l>Yet radiance on his face</l>
+                  <l>Bespoke him radiant dreams</l>
+                  <l>Veiled in eternal grace.</l>
+               </lg>
+
+               <lg>
+                  <l>The hour he died, a moth</l>
+                  <l>With golden quivering wings</l>
+                  <l>Upon his pillow poised,</l>
+                  <l>And whispered lovely things</l>
+               </lg>
+
+               <lg>
+                  <l>To his dear fluttering soul --</l>
+                  <l>Of brothers at his side,</l>
+                  <l>And comrades crying "Haste,</l>
+                  <l>The boat is on the tide" --</l>
+               </lg>
+               <pb n="41"/>
+               <lg>
+                  <l>Till with the setting sun</l>
+                  <l>Outward his spirit leapt --</l>
+                  <l>In calm the moon arose,</l>
+                  <l>Only the Sister wept.</l>
+               </lg>
+               <byline>Millicent Sutherland. </byline>
+            </div>
+
+
+
+
+
+            <pb n="42"/>
+
+            <pb n="43"/>
+
+
+
+            <div xml:id="fiery028" type="poem" n="Searchlights on the Mersey">
+               <head rend="center">Searchlights on the Mersey</head>
+               <docAuthor>
+                  <name>
+                     <choice>
+                        <reg>Haselden, P.</reg>
+                        <sic>P. Haselden</sic>
+                     </choice>
+                  </name>
+               </docAuthor>
+               <note rend="center">
+                  <hi rend="italic">Reprinted by special permission of the proprietors of</hi> Punch.</note>
+
+               <lg type="stanza">
+                  <l n="1">A LONG lean bar of silver spans</l>
+                  <l rend="indent">The ebon-rippled water-way,</l>
+                  <l>And like a lost moon's errant ray</l>
+                  <l rend="indent">Strikes on the passing caravans.</l>
+               </lg>
+
+               <lg>
+                  <l>Ghost ships that from the desert seas</l>
+                  <l rend="indent">Loom silent through the steady beams,</l>
+                  <l>Pale phantoms of elusive dreams</l>
+                  <l rend="indent">Cargoed with ancient memories.</l>
+               </lg>
+
+               <lg>
+                  <l>Through the long night, across the cool</l>
+                  <l rend="indent">Black waters to their shrouded berth;</l>
+                  <l>Bearing the treasures of the earth</l>
+                  <l rend="indent">Glide the fair ships to Liverpool.</l>
+               </lg>
+               <byline>P. Haselden.</byline>
+            </div>
+
+
+            <pb n="44"/>
+            <div xml:id="fiery029" type="poem" n="Here and There">
+               <head rend="center">Here and There</head>
+               <docAuthor>
+                  <name>
+                     <choice>
+                        <reg>Allsopp, Henry</reg>
+                        <sic>Henry Allsopp</sic>
+                     </choice>
+                  </name>
+               </docAuthor>
+               <lg type="stanza">
+                  <head rend="center">I. -- <hi rend="smallcaps">Here.</hi>
+                  </head>
+                  <l n="1">IT is harvest-time in England,</l>
+                  <l>And I see the sheaves of corn</l>
+                  <l>In their lines like sentries standing</l>
+                  <l>Round the farm where I was born.</l>
+                  <l>And the wives and children labour</l>
+                  <l>With the guidance of the grey;</l>
+                  <l>For the strong young men are marching</l>
+                  <l>In the fields of Death to-day!</l>
+                  <l rend="indent">Yet it's harvest-time in England,</l>
+                  <l rend="indent">And the scythes are sharp again;</l>
+                  <l rend="indent">So the weak and old must swing them,</l>
+                  <l rend="indent">For the corn is lives of men.</l>
+               </lg>
+
+               <lg>
+                  <head rend="center">II. -- <hi rend="smallcaps">There.</hi>
+                  </head>
+                  <l>It is harvest-time in Flanders,</l>
+                  <l>And the Reaper leaves behind,</l>
+                  <l>Lying strewn along the valley,</l>
+                  <l>Lines of dead and halt and blind.</l>
+                  <l>And he darkly moves beside them</l>
+                  <l>Piling sheaves across the plain;</l>
+                  <l>Or he stands awhile in silence</l>
+                  <l>Gloating o'er his treasured slain.</l>
+                  <l rend="indent">For it's harvest-time in Flanders,</l>
+                  <l rend="indent">And the scythes are sharp again;</l>
+                  <l rend="indent">But it's Death the Reaper swings them,</l>
+                  <l rend="indent">And his sheaves are lives of men.</l>
+               </lg>
+               <byline>Henry Allsopp.</byline>
+               <trailer>Westminster Gazette.</trailer>
+            </div>
+
+
+            <pb n="45"/>
+            <div xml:id="fiery030" type="poem" n="Gifts">
+               <head rend="center">Gifts</head>
+               <head rend="center">
+                  <hi rend="smallcaps">To Queen Elisabeth of the Belgians.</hi>
+               </head>
+               <docAuthor>
+                  <name>
+                     <choice>
+                        <reg>Booth, Mary</reg>
+                        <sic>Mary Booth</sic>
+                     </choice>
+                  </name>
+               </docAuthor>
+               <lg type="stanza">
+                  <head rend="italic">From the Mother of John the Baptist.</head>
+                  <l n="1">"WHEN all my fruitful years were done,</l>
+                  <l>God breathed on me His gracious breath;</l>
+                  <l>And I conceived and bore a son;</l>
+                  <l>I, even I, Elisabeth.</l>
+               </lg>
+
+               <lg>
+                  <l>Courage I give you, and the calm</l>
+                  <l>With which I faced my childless years;</l>
+                  <l>I give you too a healing grace,</l>
+                  <l>The balm of hero-mourning tears."</l>
+               </lg>
+
+               <lg>
+                  <head rend="italic">From St Elisabeth.</head>
+                  <l>"I, who was mated to a brute;</l>
+                  <l>I give you charity and grace;</l>
+                  <l>A healing power from you shall flow</l>
+                  <l>To all who look upon your face."</l>
+               </lg>
+
+               <lg>
+                  <head rend="italic">From Elizabeth of England.</head>
+                  <l>"The mighty Virgin-queen was I;</l>
+                  <l>Who reigned supreme on land and sea;</l>
+                  <l>I give you of the mettle high</l>
+                  <l>That made my people great and free."</l>
+               </lg>
+
+               <lg>
+                  <head rend="italic">From Elizabeth Barrett Browning.</head>
+                  <l>"And I, whose fire-tipped tongue did tell</l>
+                  <l>My message to a waiting world,</l>
+                  <l>I give you power to walk thro' Hell,</l>
+                  <l>And find your garment-hem unsoiled."</l>
+               </lg>
+               <byline>Mary Booth.</byline>
+            </div>
+
+
+            <pb n="46"/>
+            <div xml:id="fiery031" type="poem" n="Chalk and Flint">
+               <head rend="center">Chalk and Flint</head>
+               <docAuthor>
+                  <name>
+                     <choice>
+                        <reg>Clarke, Dudley</reg>
+                        <sic>Dudley Clarke</sic>
+                     </choice>
+                  </name>
+               </docAuthor>
+               <note rend="center">
+                  <hi rend="italic">Reprinted by special permission of the proprietors of</hi> Punch.</note>
+
+               <lg type="stanza">
+                  <l n="1">COMES there now a mighty rally</l>
+                  <l rend="indent">From the weald and from the coast,</l>
+                  <l>Down from cliff and up from valley,</l>
+                  <l rend="indent">Spirits of an ancient host;</l>
+                  <l>Castle grey and village mellow,</l>
+                  <l rend="indent">Coastguard's track and shepherd's fold,</l>
+                  <l>Crumbling church and cracked martello</l>
+                  <l rend="indent">Echo to this chant of old --</l>
+                  <l rend="indent4">Chant of knight and chant of bowman:</l>
+                  <l rend="indent4">
+                     <hi rend="italic">Kent and Sussex feared no foeman</hi>
+                  </l>
+                  <l rend="indent6">
+                     <hi rend="italic">In the valiant days of old!</hi>
+                  </l>
+               </lg>
+
+               <lg>
+                  <l>Screaming gull and lark a-singing,</l>
+                  <l rend="indent">Bubbling brook and booming sea,</l>
+                  <l>Church and cattle bells a-ringing</l>
+                  <l rend="indent">Swell the ghostly melody;</l>
+                  <l>"Chalk and flint, Sirs, lie beneath ye,</l>
+                  <l rend="indent">Mingling with our dust below!</l>
+                  <l>Chalk and flint, Sirs, they bequeath ye</l>
+                  <l rend="indent">This our chant of long ago!"</l>
+                  <l rend="indent4">Chant of knight and chant of bowman,</l>
+                  <l rend="indent4">Chant of squire and chant of yeoman:</l>
+                  <l rend="indent4">
+                     <hi rend="italic">Kent and Sussex feared no foeman</hi>
+                  </l>
+                  <l rend="indent6">
+                     <hi rend="italic">In the days of long ago!</hi>
+                  </l>
+               </lg>
+
+               <lg>
+                  <l>Hills that heed not Time or weather,</l>
+                  <l rend="indent">Sussex down and Kentish lane,</l>
+                  <l>Roads that wind through marsh and heather</l>
+                  <l rend="indent">Feel the mail-shod feet again;</l>
+                  <pb n="47"/>
+                  <l>Chalk and flint their dead are giving --</l>
+                  <l rend="indent">Spectres grim and spectres bold --</l>
+                  <l>Marching on to cheer the living</l>
+                  <l rend="indent">With their battle-chant of old --</l>
+                  <l rend="indent4">Chant of knight and chant of bowman,</l>
+                  <l rend="indent4">Chant of squire and chant of yeoman:</l>
+                  <l rend="indent4">
+                     <hi rend="italic">Witness Norman! Witness Roman!</hi>
+                  </l>
+                  <l rend="indent4">
+                     <hi rend="italic">Kent and Sussex feared no foeman</hi>
+                  </l>
+                  <l rend="indent6">
+                     <hi rend="italic">In the valiant days of old.</hi>
+                  </l>
+               </lg>
+               <byline>Dudley Clarke.</byline>
+            </div>
+
+
+            <pb n="48"/>
+            <div xml:id="fiery032" type="poem" n="Devon Men">
+               <head rend="center">Devon Men</head>
+               <docAuthor>
+                  <name>
+                     <choice>
+                        <reg>Haselden, P.</reg>
+                        <sic>P. Haselden</sic>
+                     </choice>
+                  </name>
+               </docAuthor>
+               <note rend="center">
+                  <hi rend="italic">Reprinted by special permission of the proprietors of</hi> Punch.</note>
+
+               <lg type="stanza">
+                  <l n="1">FROM Bideford to Appledore the meadows lie aglow</l>
+                  <l>With kingcup and buttercup, that flout the summer snow;</l>
+                  <l>And crooked back and silver head shall mow the grass to-day,</l>
+                  <l>And lasses turn and toss it till it ripen into hay;</l>
+                  <l>For gone are all the careless youth, did reap the land of yore,</l>
+                  <l rend="indent4">The lithe men, and long men,</l>
+                  <l rend="indent4">The brown men, and strong men,</l>
+                  <l>The men that hie from Bideford and ruddy Appledore.</l>
+               </lg>
+
+               <lg>
+                  <l>From Bideford and Appledore, they swept the sea of old</l>
+                  <l>With cross-bow and falconet, to tap the Spaniard's gold,</l>
+                  <l>They sped away with dauntless Drake to traffic on the main,</l>
+                  <l>To trick the drowsy galleon, and loot the treasure train;</l>
+                  <l>For fearless were the gallant hands that pulled the sweeping oar,</l>
+                  <l rend="indent4">The strong men, the free men,</l>
+                  <l rend="indent4">The bold men, the seamen,</l>
+                  <l>The men that sailed from Bideford and ruddy Appledore.</l>
+               </lg>
+
+               <lg>
+                  <l>From Bideford and Appledore, in craft of subtle grey</l>
+                  <l>Are strong hearts, and steady hearts to keep the sea to-day;</l>
+                  <pb n="49"/>
+                  <l>So well may fare the garden where the cider apples bloom</l>
+                  <l>And Summer weaves her colour threads upon a golden loom,</l>
+                  <l>For ready are the tawny hands that guard the Devon shore,</l>
+                  <l rend="indent4">The cool men, the bluff men,</l>
+                  <l rend="indent4">The keen men, the tough men,</l>
+                  <l>The men that hie from Bideford and ruddy Appledore.</l>
+               </lg>
+               <byline>P. Haselden.</byline>
+            </div>
+
+
+            <div xml:id="fiery033" type="poem" n="If e'er my Son">
+               <head rend="center">If e'er my Son</head>
+               <docAuthor>
+                  <name>
+                     <choice>
+                        <reg>Massinger</reg>
+                        <sic>Massinger</sic>
+                     </choice>
+                  </name>
+               </docAuthor>
+               <lg type="stanza">
+                  <l n="1">"If e'er my son</l>
+                  <l>Follow the war, tell him it is a school</l>
+                  <l>Where all the principles tending to honour</l>
+                  <l>Are taught, if truly followed --</l>
+                  <l rend="indent33">To dare boldly</l>
+                  <l>In a fair cause, and for the country's safety,</l>
+                  <l>To run upon the cannon's mouth undaunted;</l>
+                  <l>To obey their leaders, and shun mutinies;</l>
+                  <l>To bear with patience the Winter's cold</l>
+                  <l>And Summer's scorching heat --</l>
+                  <l>Are the essential parts make up a soldier."</l>
+               </lg>
+               <byline>Massinger.</byline>
+            </div>
+
+
+            <pb n="50"/>
+            <div xml:id="fiery034" type="poem" n="The Knitting Song">
+               <head rend="center">The Knitting Song</head>
+               <docAuthor>
+                  <name>
+                     <choice>
+                        <reg>Pope, Jessie</reg>
+                        <sic>Jessie Pope</sic>
+                     </choice>
+                  </name>
+               </docAuthor>
+               <lg type="stanza">
+                  <l n="1">SOLDIER lad, on the sodden ground,</l>
+                  <l rend="indent">Sailor lad on the seas,</l>
+                  <l>Can't you hear a little clicketty sound</l>
+                  <l rend="indent">Stealing across on the breeze?</l>
+                  <l>It's the knitting-needles singing their song</l>
+                  <l rend="indent">As they twine the khaki or blue,</l>
+                  <l>Thousands and thousands and thousands strong,</l>
+                  <l rend="indent">Tommy and Jack, for you.</l>
+               </lg>
+
+               <lg>
+                  <l rend="indent4">Click -- click -- click,</l>
+                  <l rend="indent">How they dart and flick,</l>
+                  <l rend="indent4">Flashing in the firelight to and fro!</l>
+                  <l rend="indent4">Now for purl and plain,</l>
+                  <l rend="indent4">Round and round again,</l>
+                  <l rend="indent">Knitting love and luck in every row.</l>
+               </lg>
+
+               <lg>
+                  <l>The busy hands may be rough or white,</l>
+                  <l rend="indent">The fingers gouty or slim,</l>
+                  <l>The careful eyes may be youthfully bright,</l>
+                  <l rend="indent">Or they may be weary and dim,</l>
+                  <l>Lady and workgirl, young and old,</l>
+                  <l>They've all got one end in view,</l>
+                  <l>Knitting warm comforts against the cold,</l>
+                  <l rend="indent">Tommy and Jack, for you.</l>
+               </lg>
+
+               <lg>
+                  <l>Knitting away by the midnight oil,</l>
+                  <l rend="indent">Knitting when day begins,</l>
+                  <l>Lads, in the stress of your splendid toil,</l>
+                  <l rend="indent">Can't you hear the song of the pins?</l>
+                  <pb n="51"/>
+                  <l>Clicketty, click -- through the wind and the foam</l>
+                  <l rend="indent">It's telling the boys over there</l>
+                  <l>That every "woolly" that comes from home</l>
+                  <l rend="indent">Brings a smile and a hope and a prayer.</l>
+               </lg>
+
+               <lg>
+                  <l rend="indent4">Click -- click -- click,</l>
+                  <l rend="indent">How they dart and flick,</l>
+                  <l rend="indent4">Flashing in the firelight to and fro!</l>
+                  <l rend="indent4">Now for purl and plain,</l>
+                  <l rend="indent4">Round and round again,</l>
+                  <l rend="indent">Knitting love and luck in every row.</l>
+               </lg>
+               <byline>Jessie Pope.</byline>
+            </div>
+
+
+            <pb n="52"/>
+            <div xml:id="fiery035" type="poem" n="Burgomaster Max">
+               <head rend="center">Burgomaster Max</head>
+               <docAuthor>
+                  <name>
+                     <choice>
+                        <reg>Graves, C. L. </reg>
+                        <sic>C. L. Graves</sic>
+                     </choice>
+                  </name>
+               </docAuthor>
+               <note rend="center">
+                  <hi rend="italic">Reprinted by special permission of the proprietors of</hi> Punch.</note>
+
+               <lg type="stanza">
+                  <l n="1">BELGIAN soldiers, martial heroes, in a world of fire and flame,</l>
+                  <l>By their fortitude and daring have achieved immortal fame,</l>
+                  <l>But there's one, a mere civilian, who a <hi rend="italic">vates sacer</hi> lacks --</l>
+                  <l rend="indent10">Burgomaster Max!</l>
+               </lg>
+
+               <lg>
+                  <l>Therefore, let a sorry rhymer offer you his humble meed,</l>
+                  <l>And salute your priceless service to your country in her need,</l>
+                  <l>All unarmed, yet undefeated, never turning in your tracks --</l>
+                  <l rend="indent10">Burgomaster Max!</l>
+               </lg>
+
+               <lg>
+                  <l>Athanasius <hi rend="italic">contra mundum</hi> -- you remind us of the tag,</l>
+                  <l>You, whose fearless manifestoes never brooked the German gag;</l>
+                  <l>Bucking up your fellow-townsmen, when their hearts were weak as wax --</l>
+                  <l rend="indent10">Burgomaster Max!</l>
+               </lg>
+
+               <lg>
+                  <l>Now alas! we read the foemen have decided to deport,</l>
+                  <l>And intern you for a season in some dismal German fort,</l>
+                  <l>For your presence was distasteful to the Hun who sacks and "hacks" --</l>
+                  <l rend="indent10">Burgomaster Max!</l>
+               </lg>
+
+               <lg>
+                  <pb n="53"/>
+                  <l>Yet, whatever fate befalls you, as the ages onward roll</l>
+                  <l>You will live in deathless lustre on your Country's Golden Roll,</l>
+                  <l>For you faced the German bullies, with the stiffest of stiff backs --</l>
+                  <l rend="indent10">Burgomaster Max!</l>
+               </lg>
+               <byline>C. L. Graves.</byline>
+            </div>
+
+
+
+
+
+            <pb n="54"/>
+            <div xml:id="fiery037" type="poem" n="The Lads of the Maple Leaf">
+               <head rend="center">The Lads of the Maple Leaf</head>
+               <docAuthor>
+                  <name>
+                     <choice>
+                        <reg>Pope, Jessie</reg>
+                        <sic>Jessie Pope</sic>
+                     </choice>
+                  </name>
+               </docAuthor>
+               <lg type="stanza">
+                  <l n="1">RIPE for any adventure, sturdy, loyal and game,</l>
+                  <l>Quick to the call of the Mother, the young Canadians came.</l>
+                  <l>Eager to show their mettle, ready to shed their blood,</l>
+                  <l>They bowed their neck to the collar and trained in the Wiltshire mud;</l>
+               </lg>
+
+               <lg>
+                  <l>Shipped, in the fulness of time, across to the other shore,</l>
+                  <l>Heard a deep hum in the distance, the <hi rend="italic">basso profundo</hi> of war,</l>
+                  <l>Fretted to get to the business, chafed for the firing line;</l>
+                  <l>Forward, with throbbing pulses, like pilgrims who near their shrine;</l>
+               </lg>
+
+               <lg>
+                  <l>Spoiled for a fight, and got it -- lurid, merciless, red --</l>
+                  <l>Trifled with death in the trenches, braved, and battled, and bled;</l>
+                  <l>Then, at a given order, gathered together and backed --</l>
+                  <l>Not because they were bending, but to keep the line intact.</l>
+               </lg>
+
+               <lg>
+                  <l>Four of their guns defenceless -- left in the enemy's hand!</l>
+                  <l>That was a bitter buffet, more than the lads could stand.</l>
+                  <l>Back charged the men of the Maple, routed the jubilant Huns,</l>
+                  <l>Captured a pack of Germans, and saved their beloved guns.</l>
+               </lg>
+
+               <lg>
+                  <pb n="55"/>
+                  <l>Ripe for any adventure, sturdy, loyal, and game,</l>
+                  <l>Quick to the call of the Mother, the keen Canadians came.</l>
+                  <l>Hurrah for the young Dominion! Then cheer them with heart and voice,</l>
+                  <l>The Maple shall never wither! Bravo, Canada boys!</l>
+               </lg>
+               <byline>Jessie Pope.</byline>
+            </div>
+
+
+            <div xml:id="fiery038" type="poem" n="The Noble Nature">
+               <head rend="center">The Noble Nature</head>
+               <docAuthor>
+                  <name>
+                     <choice>
+                        <reg>Jonson, Ben</reg>
+                        <sic>Ben Jonson</sic>
+                     </choice>
+                  </name>
+               </docAuthor>
+               <lg type="stanza">
+                  <l n="1">IT is not growing like a tree</l>
+                  <l>In bulk, doth make Man better be;</l>
+                  <l>Or standing long an oak, three hundred year,</l>
+                  <l>To fall a log at last, dry, bald, and sere:</l>
+                  <l rend="indent4">A lily of a day</l>
+                  <l rend="indent4">Is fairer far in May,</l>
+                  <l rend="indent">Although it fall and die that night --</l>
+                  <l rend="indent">It was the plant and flower of Light.</l>
+                  <l>In small proportions we just beauties see;</l>
+                  <l>And in short measures life may perfect be.</l>
+               </lg>
+               <byline>Ben Jonson.</byline>
+            </div>
+
+
+            <pb n="56"/>
+            <div xml:id="fiery039" type="poem" n="The Day">
+               <head rend="center">The Day</head>
+               <docAuthor>
+                  <name>
+                     <choice>
+                        <reg>Chappell, Henry</reg>
+                        <sic>Henry Chappell</sic>
+                     </choice>
+                  </name>
+               </docAuthor>
+               <lg type="stanza">
+                  <l n="1">YOU boasted the Day, and you toasted the Day,</l>
+                  <l rend="indent">And now the Day has come.</l>
+                  <l>Blasphemer, braggart and coward all,</l>
+                  <l>Little you reck of the numbing ball,</l>
+                  <l>The blasting shell, or the "white arm's" fall,</l>
+                  <l rend="indent">As they speed poor humans home.</l>
+               </lg>
+
+               <lg>
+                  <l>You spied for the Day, you lied for the Day,</l>
+                  <l rend="indent">And woke the Day's red spleen.</l>
+                  <l>Monster, who asked God's aid Divine,</l>
+                  <l>Then strewed His seas with the ghastly mine;</l>
+                  <l>Not all the waters of the Rhine</l>
+                  <l rend="indent">Can wash thy foul hands clean.</l>
+               </lg>
+
+               <lg>
+                  <l>You dreamed for the Day, you schemed for the Day;</l>
+                  <l rend="indent">Watch how the Day will go,</l>
+                  <l>Slayer of age and youth and prime,</l>
+                  <l>(Defenceless slain for never a crime),</l>
+                  <l>Thou art steeped in blood as a hog in slime,</l>
+                  <l rend="indent">False friend and cowardly foe.</l>
+               </lg>
+
+               <lg>
+                  <l>You have sown for the Day, you have grown for the Day;</l>
+                  <l rend="indent4">Yours is the harvest red.</l>
+                  <l>Can you hear the groans and the awful cries?</l>
+                  <l>Can you see the heap of slain that lies,</l>
+                  <l>And sightless turned to the flame-split skies</l>
+                  <l rend="indent4">The glassy eyes of the dead?</l>
+               </lg>
+
+               <lg>
+                  <pb n="57"/>
+                  <l>You have wronged for the Day, you have longed for the Day</l>
+                  <l rend="indent4">That lit the awful flame.</l>
+                  <l>'Tis nothing to you that hill and plain</l>
+                  <l>Yield sheaves of dead men amid the grain;</l>
+                  <l>That widows mourn for their loved ones slain,</l>
+                  <l rend="indent4">And mothers curse thy name.</l>
+               </lg>
+
+               <lg>
+                  <l>But after the Day there's a price to pay</l>
+                  <l rend="indent4">For the sleepers under the sod,</l>
+                  <l>And He you have mocked for many a day --</l>
+                  <l>Listen, and hear what He has to say:</l>
+                  <l>"VENGEANCE IS MINE, I WILL REPAY."</l>
+                  <l rend="indent4">What can you say to God?</l>
+               </lg>
+               <byline>Henry Chappell.</byline>
+               <trailer>Daily Express.</trailer>
+            </div>
+
+
+            <pb n="58"/>
+            <div xml:id="fiery040" type="poem" n="Valhalla">
+               <head rend="center">Valhalla</head>
+               <head rend="smallcaps">A Vision and a Protest.</head>
+               <docAuthor>
+                  <name>
+                     <choice>
+                        <reg>Knox, E. G. V.</reg>
+                        <sic>E. G. V. Knox</sic>
+                     </choice>
+                  </name>
+               </docAuthor>
+               <note rend="center">
+                  <hi rend="italic">Reprinted by special permission of the proprietors of</hi> Punch.</note>
+
+               <lg type="stanza">
+                  <l n="1">I SAW in the night unbroken,</l>
+                  <l rend="indent">In the land the daylight shuns,</l>
+                  <l>At their long tables oaken</l>
+                  <l rend="indent">The Sea-kings and the Huns.</l>
+               </lg>
+
+               <lg>
+                  <l>Strong arms had they for smiting,</l>
+                  <l rend="indent">To them death only gave</l>
+                  <l>More feasting and more fighting,</l>
+                  <l rend="indent">More plunder for the brave.</l>
+               </lg>
+
+               <lg>
+                  <l>Scant use had they for pleaders,</l>
+                  <l rend="indent">They boasted of their war,</l>
+                  <l>The pitiless bright-eyed leaders,</l>
+                  <l rend="indent">And their battle-god was Thor.</l>
+               </lg>
+
+               <lg>
+                  <l>And "When this right hand falters,"</l>
+                  <l rend="indent">Quoth one, "the soul is fled";</l>
+                  <l>"And I made so many altars</l>
+                  <l rend="indent">Ruinous," this one said.</l>
+               </lg>
+
+               <lg>
+                  <l>And lo! as they sat and vaunted</l>
+                  <l rend="indent">Across the mist of the years,</l>
+                  <l>There came to them one that flaunted</l>
+                  <l rend="indent">The helm of the war-god's peers.</l>
+               </lg>
+
+               <lg>
+                  <l>A little shape and a mightless,</l>
+                  <l rend="indent">And the strong men laughed and roared:</l>
+                  <pb n="59"/>
+                  <l>"Is our father Odin sightless</l>
+                  <l rend="indent">That bade <hi rend="italic">him</hi> share the board?</l>
+               </lg>
+
+               <lg>
+                  <l>"From what realms spoilt and plundered,</l>
+                  <l rend="indent">From what shrines burnt art come?</l>
+                  <l>Has thine hand hewed and thundered</l>
+                  <l rend="indent">On the crosses of Christendom?"</l>
+               </lg>
+
+               <lg>
+                  <l>And he said, "I too had legions,</l>
+                  <l rend="indent">I fouled where ye defiled,</l>
+                  <l>I trod in the selfsame regions</l>
+                  <l rend="indent">And warred on woman and child.</l>
+               </lg>
+
+               <lg>
+                  <l>"Tricked out in my shining armour</l>
+                  <l rend="indent">And riding behind my Huns,</l>
+                  <l>I harried the priest and farmer,</l>
+                  <l rend="indent">I followed the smoking guns."</l>
+               </lg>
+
+               <lg>
+                  <l>But the kings cried out and shouted</l>
+                  <l rend="indent">As they drained the sweetened mead:</l>
+                  <l>"Was it thus that the Franks were routed,</l>
+                  <l rend="indent">When we made Europe bleed?</l>
+               </lg>
+
+               <lg>
+                  <l>This king with a leaden rattle</l>
+                  <l rend="indent">And death that comes from afar,</l>
+                  <l>What pride hath he of the battle?</l>
+                  <l rend="indent">What lust to maim or mar?</l>
+               </lg>
+
+               <lg>
+                  <l>"The loot and the red blood running</l>
+                  <l rend="indent">Were the only signs we saw;</l>
+                  <l>But the gods that gave thee cunning</l>
+                  <l rend="indent">Have also given thee law."</l>
+               </lg>
+
+               <lg>
+                  <pb n="60"/>
+                  <l>And a Northman spake: "With seven</l>
+                  <l rend="indent">Fair churches when I died</l>
+                  <l>I had paved my path to heaven;</l>
+                  <l rend="indent">Their pillage was my pride.</l>
+               </lg>
+
+               <lg>
+                  <l>"I tore the saints from their niches</l>
+                  <l rend="indent">With the red hands of my rage;</l>
+                  <l>But what hast thou in thy ditches</l>
+                  <l rend="indent">To do with a craftless age?</l>
+               </lg>
+
+               <lg>
+                  <l>"Thou hast felt no Viking's starkness;</l>
+                  <l rend="indent">Thou hast lost a Christian's throne."</l>
+                  <l>And they drove him forth in the darkness</l>
+                  <l rend="indent">To find a place of his own.</l>
+               </lg>
+               <byline>E. G. V. Knox.</byline>
+            </div>
+
+
+            <pb n="61"/>
+            <div xml:id="fiery041" type="poem" n="Britain to Belgium">
+               <head rend="center">Britain to Belgium</head>
+               <docAuthor>
+                  <name>
+                     <choice>
+                        <reg>Lyon, L. Bowes </reg>
+                        <sic>L. Bowes Lyon</sic>
+                     </choice>
+                  </name>
+               </docAuthor>
+               <note rend="center">
+                  <hi rend="italic">Reprinted by special permission of the proprietors of</hi> Punch.</note>
+
+               <lg type="stanza">
+                  <l n="1">SISTER, for the tears that thou hast shed,</l>
+                  <l>Sister, for thy dear undying dead,</l>
+                  <l>For the sons thou hast not grudge to give</l>
+                  <l>Loyally, that Liberty might live;</l>
+                  <l>Sister, for the little child</l>
+                  <l>Dead beside a hearth defiled --</l>
+                  <l>Do I dream my love alone</l>
+                  <l rend="indent6">Can atone?</l>
+               </lg>
+
+               <lg>
+                  <l>Can I bring again the brave that fell</l>
+                  <l>When thy heaven crumbled into hell?</l>
+                  <l>Can I banish from before thine eyes</l>
+                  <l>Haunting visions under haggard skies?</l>
+                  <l>Blazing home, and blackened plain</l>
+                  <l>Can I make them fair again?</l>
+                  <l>Can I ever heal thy smart,</l>
+                  <l rend="indent6">Broken heart?</l>
+               </lg>
+
+               <lg>
+                  <l>Sister, we be women, thou and I --</l>
+                  <l>Sorrow's craving who can satisfy?</l>
+                  <l>None may pay thee back so dear a loss,</l>
+                  <l>Only let me help to bear thy cross.</l>
+                  <l>Sick and hungry, in their need,</l>
+                  <l>Let me succour, let me feed;</l>
+                  <l>Little Sister, freely take</l>
+                  <l rend="indent6">For their sake.</l>
+               </lg>
+               <byline>L. Bowes Lyon.</byline>
+            </div>
+
+
+            <pb n="62"/>
+
+            <pb n="63"/>
+
+
+
+            <div xml:id="fiery043" type="poem" n="Requiescant">
+               <head rend="center">Requiescant</head>
+               <docAuthor>
+                  <name>
+                     <choice>
+                        <reg>Gurney, Dorothy Frances </reg>
+                        <sic>Dorothy Frances Gurney</sic>
+                     </choice>
+                  </name>
+               </docAuthor>
+               <lg type="stanza">
+                  <l n="1">Now are they come unto the place of quiet,</l>
+                  <l>Into the heart of silence, where God is,</l>
+                  <l>Far, far away from all the mortal riot</l>
+                  <l>Safe in the home of lovely sanctities.</l>
+               </lg>
+
+               <lg>
+                  <l>And there they rest, who fought with no surrender,</l>
+                  <l>Lapt round with peace like water cool and bright</l>
+                  <l>Till God shall armour them again in splendour,</l>
+                  <l>To battle with the spirits of the night!</l>
+               </lg>
+
+               <lg>
+                  <l>My soul, forestall awhile the ultimate fiat,</l>
+                  <l>A moment doff the body's hindrance,</l>
+                  <l>And come thou too unto the place of quiet,</l>
+                  <l>Into the heart of silence, where God is.</l>
+               </lg>
+               <byline>Dorothy Frances Gurney.</byline>
+               <trailer>A Little Book of Quiet.</trailer>
+            </div>
+
+
+            <pb n="64"/>
+
+
+
+            <pb n="65"/>
+            <div xml:id="fiery045" type="poem" n="The Hour">
+               <head rend="center">The Hour</head>
+               <docAuthor>
+                  <name>
+                     <choice>
+                        <reg>Fagan, James Bernard </reg>
+                        <sic>James Bernard Fagan</sic>
+                     </choice>
+                  </name>
+               </docAuthor>
+               <lg type="stanza">
+                  <l n="1">WE'VE shut the gates by Dover Straits,</l>
+                  <l rend="indent">And North, where the tides run free,</l>
+                  <l>Cheek by jowl, our watch-dogs prowl,</l>
+                  <l rend="indent">Grey hulks in a greyer sea.</l>
+                  <l>And the prayer that England prays to-night --</l>
+                  <l rend="indent">O Lord of our destiny!</l>
+                  <l>As the foam of our plunging prows is white;</l>
+                  <l>We have stood for peace, and we war for right.</l>
+                  <l rend="indent">God give us victory!</l>
+               </lg>
+
+               <lg>
+                  <l>Now slack, now strung, from the mainmast flung,</l>
+                  <l rend="indent">The flag throbs fast in the breeze;</l>
+                  <l>Strained o'er the foam, like the hearts at home</l>
+                  <l rend="indent">That beat for their sons on the seas.</l>
+                  <l>For mothers and wives are praying to-night --</l>
+                  <l rend="indent">O Lord of our destiny!</l>
+                  <l>But we've no time, for our lips are tight,</l>
+                  <l>Our fists are clenched, and we're stripped to fight.</l>
+                  <l rend="indent">God give us victory!</l>
+               </lg>
+
+               <lg>
+                  <l>The west winds blow in the face of the foe --</l>
+                  <l rend="indent">Old Drake is beating his drum --</l>
+                  <l>They drank to "The Day"; for "The Hour" we pray,</l>
+                  <l rend="indent">The day and hour have come.</l>
+                  <l>The sea-strewn Empire prays to-night --</l>
+                  <l rend="indent">O Lord of our destiny!</l>
+                  <l>Thou didst give the seas into Britain's might,</l>
+                  <l>For the freedom of Thy seas we smite.</l>
+                  <l rend="indent">God give us victory!</l>
+               </lg>
+               <byline>James Bernard Fagan.</byline>
+               <trailer>Daily Telegraph.</trailer>
+            </div>
+
+
+            <pb n="66"/>
+            <div xml:id="fiery046" type="poem" n="Called Up">
+               <head rend="center">Called Up</head>
+               <docAuthor>
+                  <name>
+                     <choice>
+                        <reg>Clarke, Dudley</reg>
+                        <sic>Dudley Clarke</sic>
+                     </choice>
+                  </name>
+               </docAuthor>
+               <lg type="stanza">
+                  <l n="1">COME, tumble up, Lord Nelson, the British Fleet's a-looming!</l>
+                  <l>Come, show a leg, Lord Nelson, the guns they are a-booming!</l>
+                  <l>'Tis a longish line of battle -- such as we did never see;</l>
+                  <l>An' 'tis not the same old round-shot as was fired by you an' me!</l>
+               </lg>
+
+               <lg>
+                  <l>
+                     <hi rend="italic">What see'st thou, Sir Francis?</hi> -- Strange things I see appearing!</l>
+                  <l>
+                     <hi rend="italic">What hearest thou, Sir Francis?</hi> -- Strange sounds I do be hearing!</l>
+                  <l>They are fighting in the heavens; they're at war beneath the sea!</l>
+                  <l>Ay, their ways are mighty different from the ways o' you an' me!</l>
+               </lg>
+
+               <lg>
+                  <l>
+                     <hi rend="italic">See'st thou nought else, Sir Francis?</hi> -- I see great lights a-seeking!</l>
+                  <l>
+                     <hi rend="italic">Hearest thou nought else, Sir Francis?</hi> -- I hear thin wires a-speaking!</l>
+                  <l>Three leagues that shot hath carried! -- God, that such could ever be!</l>
+                  <l>There's no mortal doubt, Lord Nelson -- they ha' done wi' you an' me!</l>
+               </lg>
+
+               <lg>
+                  <l>
+                     <hi rend="italic">Look thou again, Sir Francis?</hi> -- I see the flags a-flapping!</l>
+                  <l>
+                     <hi rend="italic">Hearken once more, Sir Francis!</hi> -- I hear the sticks a-tapping!</l>
+                  <pb n="67"/>
+                  <l>
+                     <hi rend="italic">'Tis a sight that calls me thither!</hi> -- 'Tis a sound that bids me "Come!"</l>
+                  <l>
+                     <hi rend="italic">'Tis the old Trafalgar signal!</hi> -- 'Tis the beating of my drum!</l>
+               </lg>
+
+               <lg>
+                  <l rend="italic">Art thou ready, good Sir Francis? See, they wait upon the quay!</l>
+                  <l>Praise be to God, Lord Nelson, they ha' thought of you an' me!</l>
+               </lg>
+               <byline>Dudley Clarke.</byline>
+            </div>
+
+
+            <div xml:id="fiery047" type="poem" n="Expiation">
+               <head rend="center">Expiation</head>
+               <docAuthor>
+                  <name>
+                     <choice>
+                        <reg>Booth, Mary</reg>
+                        <sic>Mary Booth</sic>
+                     </choice>
+                  </name>
+               </docAuthor>
+               <lg type="stanza">
+                  <l n="1">"I, WAVERING like a candle in the wind:</l>
+                  <l>I on the margin of Eternity:</l>
+                  <l>Alone -- alone -- and knowing I have sinned:</l>
+                  <l>Pale Galilean, will you watch with me?"</l>
+               </lg>
+
+               <lg>
+                  <l>"Lo! I am here, My son: if any sin</l>
+                  <l>I am the Advocate for such as he.</l>
+                  <l>The good to Heaven unmediated win:</l>
+                  <l>You not till death's dark hour have turned to me.</l>
+                  <l>Here on the battlefield are sins forgiven:</l>
+                  <l>Your wounds are sacred: they do expiate:</l>
+                  <l>Again-again -- My side for you is riven."</l>
+                  <l>"On healing streams I float thro' Death's dark gate."</l>
+               </lg>
+               <byline>Mary Booth.</byline>
+            </div>
+
+
+            <pb n="68"/>
+
+            <pb n="69"/>
+
+
+
+            <pb n="70"/>
+            <div xml:id="fiery049" type="poem" n="Veterans">
+               <head rend="center">Veterans</head>
+               <docAuthor>
+                  <name>
+                     <choice>
+                        <reg>Noyes, Alfred</reg>
+                        <sic>Alfred Noyes</sic>
+                     </choice>
+                  </name>
+               </docAuthor>
+               <lg type="stanza">
+                  <l n="1">WHEN the last charge sounds</l>
+                  <l rend="indent">And the battle thunders o'er the plain,</l>
+                  <l>Thunders o'er the trenches where the red streams flow,</l>
+                  <l rend="indent">Will it not be well with us,</l>
+                  <l rend="indent6">Veterans, veterans,</l>
+                  <l>If, beneath your torn old flag, we burst upon the foe?</l>
+               </lg>
+
+               <lg>
+                  <l>When the last post sounds</l>
+                  <l rend="indent">And the night is on the battle-field,</l>
+                  <l>Night and rest at last from all the tumult of our wars,</l>
+                  <l rend="indent">Will it not be well with us,</l>
+                  <l rend="indent6">Veterans, veterans,</l>
+                  <l>If, with duty done like yours, we lie beneath the stars?</l>
+               </lg>
+
+               <lg>
+                  <l>When the great réveillé sounds</l>
+                  <l rend="indent">For the terrible last Sabaoth,</l>
+                  <l>All the legions of the dead shall hear the trumpet ring!</l>
+                  <l rend="indent">Will it not be well with us,</l>
+                  <l rend="indent6">Veterans, veterans,</l>
+                  <l>If, beneath your torn old flag, we rise to meet our King?</l>
+               </lg>
+               <byline>Alfred Noyes.</byline>
+            </div>
+
+
+            <pb n="71"/>
+            <div xml:id="fiery050" type="poem" n="To Lucasta on going to the Wars">
+               <head rend="center">To Lucasta on going to the Wars</head>
+               <docAuthor>
+                  <name>
+                     <choice>
+                        <reg>Lovelace</reg>
+                        <sic>Lovelace</sic>
+                     </choice>
+                  </name>
+               </docAuthor>
+               <lg type="stanza">
+                  <l n="1">TELL me not, sweet, I am unkind</l>
+                  <l rend="indent">That from the nunnery</l>
+                  <l>Of thy chaste breast and quiet mind</l>
+                  <l rend="indent">To war and arms I fly.</l>
+               </lg>
+
+               <lg>
+                  <l>True, a new mistress now I chase,</l>
+                  <l rend="indent">The first foe in the field;</l>
+                  <l>And with a stronger faith embrace</l>
+                  <l rend="indent">A sword, a horse, a shield.</l>
+               </lg>
+
+               <lg>
+                  <l>Yet this inconstancy is such</l>
+                  <l rend="indent">As you too shall adore;</l>
+                  <l>I could not love thee, Dear, so much</l>
+                  <l rend="indent">Loved I not honour more.</l>
+               </lg>
+               <byline>Lovelace.</byline>
+            </div>
+
+
+            <pb n="72"/>
+            <div xml:id="fiery051" type="poem" n="The Réveillé">
+               <head rend="center">The Réveillé</head>
+               <docAuthor>
+                  <name>
+                     <choice>
+                        <reg>Harte, Bret</reg>
+                        <sic>Bret Harte</sic>
+                     </choice>
+                  </name>
+               </docAuthor>
+               <lg type="stanza">
+                  <l n="1">HARK! I hear the tramp of thousands,</l>
+                  <l rend="indent">And of armèd men the hum;</l>
+                  <l>Lo! a nation's host have gathered</l>
+                  <l rend="indent">Round the quick alarming drum --</l>
+                  <l rend="indent4">Saying, "Come,</l>
+                  <l rend="indent4">Freeman! Come!</l>
+                  <l>Ere your heritage be wasted," said the quick-alarming drum.</l>
+               </lg>
+
+               <lg>
+                  <l>"Let me of my heart take counsel:</l>
+                  <l rend="indent">War is not of life the sum;</l>
+                  <l>Who shall stay and reap the harvest</l>
+                  <l rend="indent">When the autumn days shall come?"</l>
+                  <l rend="indent4">But the drum</l>
+                  <l rend="indent4">Echoed, "Come!</l>
+                  <l>Death shall reap the braver harvest," said the solemn-sounding drum.</l>
+               </lg>
+
+               <lg>
+                  <l>"What if, 'mid the cannon's thunder,</l>
+                  <l rend="indent">Whistling shot and bursting bomb,</l>
+                  <l>When my brothers fall around me,</l>
+                  <l rend="indent">Should my heart grow cold and numb?"</l>
+                  <l rend="indent4">But the drum</l>
+                  <l rend="indent4">Answered, "Come!</l>
+                  <l>Better there in death united than in life a recreant -- come!"</l>
+               </lg>
+
+               <lg>
+                  <pb n="73"/>
+                  <l>Thus they answered -- hoping, fearing,</l>
+                  <l rend="indent">Some in faith, and doubting some,</l>
+                  <l>Till a trumpet-voice proclaiming,</l>
+                  <l rend="indent4">Said, "My chosen people, come!"</l>
+                  <l rend="indent4">Then the drum</l>
+                  <l rend="indent4">Lo! was dumb,</l>
+                  <l>For the great heart of the nation, throbbing, answered, "Lord, we come!"</l>
+               </lg>
+               <byline>Bret Harte.</byline>
+            </div>
+
+
+            <div xml:id="fiery052" type="poem" n="'Despise not the Day of Small Things'">
+               <head rend="center">"Despise not the Day of Small Things"</head>
+               <docAuthor>
+                  <name>
+                     <choice>
+                        <reg>Cruttwell, E. Mary </reg>
+                        <sic>E. Mary Cruttwell</sic>
+                     </choice>
+                  </name>
+               </docAuthor>
+               <note>
+                  <hi rend="italic">Niuü, a little island in the South Seas, sent a message, on the outbreak of war, to offer to Great Britain "From a little child of the Empire," two portions -- first, men; secondly, money.</hi>
+               </note>
+
+               <lg type="stanza">
+                  <l n="1">A LITTLE child of Empire, I</l>
+                  <l>My little gifts give willingly;</l>
+                  <l>Two portions have I, men and gold,</l>
+                  <l>Would I could give a hundredfold!</l>
+                  <l>To Britain's mighty army then</l>
+                  <l>Does "Niuü" offer twenty men</l>
+                  <l>And money in a like degree,</l>
+                  <l>With dark hearts' love and loyalty.</l>
+                  <l>For surely he, our Great White King,</l>
+                  <l>Can look upon a little thing,</l>
+                  <l>And will the burning spirit see</l>
+                  <l>In us, dark children though we be.</l>
+               </lg>
+               <byline>E. Mary Cruttwell.</byline>
+            </div>
+
+
+            <pb n="74"/>
+            <div xml:id="fiery053" type="poem" n="Commemoration Ode">
+               <head rend="center">Commemoration Ode</head>
+               <docAuthor>
+                  <name>
+                     <choice>
+                        <reg>Lowell, James Russell </reg>
+                        <sic>James Russell Lowell</sic>
+                     </choice>
+                  </name>
+               </docAuthor>
+               <lg type="stanza">
+                  <l n="1">WE sit here in the promised land</l>
+                  <l>That flows with Freedom's honey and milk:</l>
+                  <l>But 'twas they won it, sword in hand,</l>
+                  <l>Making the nettle danger soft for us as silk.</l>
+                  <l>We welcome back our bravest and our best:</l>
+                  <l>Ah me! not all! some come not with the rest,</l>
+                  <l>Who went forth brave and bright as any here!</l>
+                  <l>I strive to mix some gladness with my strain,</l>
+                  <l rend="indent">But the sad strings complain,</l>
+                  <l rend="indent">And will not please the ear.</l>
+                  <l>I sweep them for a Pæan, but they wane</l>
+                  <l rend="indent">Again and yet again</l>
+                  <l>Into a dirge, and die away, in pain.</l>
+                  <l>In these brave ranks I only see the gaps,</l>
+                  <l>Thinking of dear ones whom the dumb turf wraps,</l>
+                  <l>Dark to the triumph which they died to gain.</l>
+                  <l rend="indent">Fitlier may others greet the living,</l>
+                  <l rend="indent">For me the past is unforgiving;</l>
+                  <l rend="indent4">I with uncovered head</l>
+                  <l rend="indent4">Salute the sacred dead,</l>
+                  <l>Who went, and who return not. -- Say not so!</l>
+                  <l>'Tis not the grapes of Canaan that repay,</l>
+                  <l>But the high faith that failed not by the way.</l>
+                  <l>Virtue treads paths that end not in the grave;</l>
+                  <l>No ban of endless night exiles the brave;</l>
+                  <l rend="indent">And to the saner mind</l>
+                  <l>We rather seem the dead that stayed behind.</l>
+               </lg>
+               <byline>James Russell Lowell.</byline>
+            </div>
+
+
+            <pb n="75"/>
+            <div xml:id="fiery054" type="poem" n="Valour">
+               <head rend="center">Valour</head>
+               <docAuthor>
+                  <name>
+                     <choice>
+                        <reg>Crosland, T. W. H.</reg>
+                        <sic>T. W. H. Crosland</sic>
+                     </choice>
+                  </name>
+               </docAuthor>
+               <lg type="stanza">
+                  <l n="1">MOUNTING his stairs of azure and of gold,</l>
+                  <l>The English lark sings in the August weather</l>
+                  <l>For joy which knoweth neither tie nor tether</l>
+                  <l>And is not troubled if the world grows old;</l>
+                  <l>While you, who were as blithesome and as bold,</l>
+                  <l>Sleep the high sleep that dead men sleep together,</l>
+                  <l>Careless of what is done and what is told.</l>
+               </lg>
+
+               <lg>
+                  <l>I know that all our England shone before you</l>
+                  <l>When you went down. It made a radiance</l>
+                  <l>Even of the front of Death. Oh, woman's son,</l>
+                  <l>You died for England . . . valiant as she that bore you,</l>
+                  <l>And sent you forth with a still countenance,</l>
+                  <l>And broke her heart for England and lives on!</l>
+               </lg>
+               <byline>T. W. H. Crosland.</byline>
+               <trailer>Sunday Times.</trailer>
+            </div>
+
+
+            <pb n="76"/>
+            <div xml:id="fiery055" type="poem" n="21st September 1870">
+               <head rend="center">21st September 1870</head>
+               <docAuthor>
+                  <name>
+                     <choice>
+                        <reg>Kingsley, Charles</reg>
+                        <sic>Charles Kingsley</sic>
+                     </choice>
+                  </name>
+               </docAuthor>
+               <lg type="stanza">
+                  <l n="1">SPEAK low, speak little: who may sing</l>
+                  <l>While yonder cannon thunders boom?</l>
+                  <l>Watch, shuddering, what each day may bring:</l>
+                  <l>Nor "pipe amid the crack of doom"!</l>
+               </lg>
+
+               <lg>
+                  <l>And yet -- the pines sing overhead,</l>
+                  <l>The robins by the alder-pool,</l>
+                  <l>The bees about the garden-bed,</l>
+                  <l>The children dancing home from school.</l>
+               </lg>
+
+               <lg>
+                  <l>And ever at the loom of Birth</l>
+                  <l>The mighty Mother weaves and sings:</l>
+                  <l>She weaves -- fresh robes for mangled earth;</l>
+                  <l>She sings -- fresh hopes for desperate things.</l>
+               </lg>
+
+               <lg>
+                  <l>And thou, too: if through nature's calm</l>
+                  <l>Some strain of music touch thine ears</l>
+                  <l>Accept and share that soothing balm,</l>
+                  <l>And sing, though choked with pitying tears.</l>
+               </lg>
+               <byline>Charles Kingsley.</byline>
+            </div>
+
+
+            <pb n="77"/>
+            <div xml:id="fiery056" type="poem" n="A New Song to an Old Tune">
+               <head rend="center">A New Song to an Old Tune</head>
+               <docAuthor>
+                  <name>
+                     <choice>
+                        <reg>Henley, W. E. </reg>
+                        <sic>W. E. Henley</sic>
+                     </choice>
+                  </name>
+               </docAuthor>
+               <lg type="stanza">
+                  <l n="1">SONS of Shannon, Tamar, Trent,</l>
+                  <l>Men of the Lothians, Men of Kent,</l>
+                  <l>Essex, Wessex, shore and shire,</l>
+                  <l>Mates of the net, the mine, the fire,</l>
+                  <l>Lads of the wheel and desk and loom,</l>
+                  <l>Noble and trader, squire and groom,</l>
+                  <l>Come where the bugles of England play,</l>
+                  <l rend="italic">"Over the hills and far away!"</l>
+               </lg>
+
+               <lg>
+                  <l>Southern Cross and Polar Star --</l>
+                  <l>Here are the Britons bred afar;</l>
+                  <l>Serry, O serry them, fierce and keen,</l>
+                  <l>Under the flag of the Empress-Queen;</l>
+                  <l>Shoulder to shoulder down the track,</l>
+                  <l>Where, to the unretreating Jack,</l>
+                  <l>The victor bugles of England play,</l>
+                  <l rend="italic">"Over the hills and far away!"</l>
+               </lg>
+
+               <lg>
+                  <l>What if the best of our wages be</l>
+                  <l>An empty sleeve, a stiff-set knee,</l>
+                  <l>A crutch for the rest of life -- who cares,</l>
+                  <l>So long as the One Flag floats and dares?</l>
+                  <l>So long as the One Race dares and grows?</l>
+                  <l>Death -- what is death but God's own rose?</l>
+                  <l>Let but the bugles of England play,</l>
+                  <l rend="italic">"Over the hills and far away!"</l>
+               </lg>
+               <byline>W. E. Henley.</byline>
+            </div>
+
+
+            <pb n="78"/>
+            <div xml:id="fiery057" type="poem" n="Before Sedan">
+               <head rend="center">Before Sedan</head>
+               <docAuthor>
+                  <name>
+                     <choice>
+                        <reg>Dobson, Austin</reg>
+                        <sic>Austin Dobson</sic>
+                     </choice>
+                  </name>
+               </docAuthor>
+               <lg type="stanza">
+                  <l n="1">HERE in this leafy place</l>
+                  <l rend="indent">Quiet he lies</l>
+                  <l>Cold, with his sightless face</l>
+                  <l rend="indent">Turned to the skies.</l>
+                  <l>'Tis but another dead;</l>
+                  <l>All you can say is said.</l>
+               </lg>
+
+               <lg>
+                  <l>Carry his body hence, --</l>
+                  <l rend="indent">Kings must have slaves;</l>
+                  <l>Kings climb to eminence</l>
+                  <l rend="indent">Over men's graves;</l>
+                  <l>So this man's eye is dim; --</l>
+                  <l>Throw the earth over him.</l>
+               </lg>
+
+               <lg>
+                  <l>What was the white you touched</l>
+                  <l rend="indent">There by his side?</l>
+                  <l>Paper his hand had clutched</l>
+                  <l rend="indent">Tight, ere he died; --</l>
+                  <l>Message, or wish may be; --</l>
+                  <l>Smooth the folds out and see.</l>
+               </lg>
+
+               <lg>
+                  <l>Hardly the worst of us</l>
+                  <l rend="indent">Here could have smiled! --</l>
+                  <l>Only the tremulous</l>
+                  <l rend="indent">Words of a child; --</l>
+                  <l>Prattle that has for stops</l>
+                  <l>Just a few ruddy drops.</l>
+               </lg>
+
+               <lg>
+                  <pb n="79"/>
+                  <l>Look. She is sad to miss</l>
+                  <l rend="indent">Morning and night,</l>
+                  <l>His -- her dead father's -- kiss;</l>
+                  <l rend="indent">Tries to be bright,</l>
+                  <l>Good to mamma, and sweet.</l>
+                  <l>That is all. "Marguerite."</l>
+               </lg>
+
+               <lg>
+                  <l>Ah, if beside the dead</l>
+                  <l rend="indent">Slumbered the pain!</l>
+                  <l>Ah, if the hearts that bled</l>
+                  <l rend="indent">Slept with the slain!</l>
+                  <l>If the grief died; -- But no; --</l>
+                  <l>Death will not have it so.</l>
+               </lg>
+               <byline>Austin Dobson.</byline>
+            </div>
+
+
+            <pb n="80"/>
+            <div xml:id="fiery058" type="poem" n="Men who die for England">
+               <head rend="center">Men who die for England</head>
+               <docAuthor>
+                  <name>
+                     <choice>
+                        <reg>Woods, Margaret L. </reg>
+                        <sic>Margaret L. Woods</sic>
+                     </choice>
+                  </name>
+               </docAuthor>
+               <lg type="stanza">
+                  <l n="1">MEN who die for England</l>
+                  <l>Never die in vain.</l>
+                  <l>Dying conquerors, dying masters,</l>
+                  <l>Dying firm 'mid fierce disasters.</l>
+                  <l rend="indent">England's every son</l>
+                  <l rend="indent">Dying duty done</l>
+                  <l>Gives the life she lent him back again.</l>
+                  <l rend="indent">Men who die for England</l>
+                  <l rend="indent4">Never die in vain.</l>
+               </lg>
+
+               <lg>
+                  <l>Rushing seas they rode victorious,</l>
+                  <l>Conquering seas have made them glorious,</l>
+                  <l rend="indent">Where in marshalled rank</l>
+                  <l rend="indent">Down to death they sank.</l>
+                  <l>Met in order stern the roaring main</l>
+                  <l rend="indent">Proud for pride of England</l>
+                  <l rend="indent4">Died, and not in vain.</l>
+               </lg>
+
+               <lg>
+                  <l>Sons of Vikings, old the story,</l>
+                  <l>Desperate odds and death-fight gory.</l>
+                  <l rend="indent">Over all your graves,</l>
+                  <l rend="indent">Late or soon, there waves</l>
+                  <l>Proud the flag you held us high from stain,</l>
+                  <l rend="indent">Floats the flag of England</l>
+                  <l rend="indent4">Fought for-not in vain.</l>
+               </lg>
+
+               <lg>
+                  <l>Beacon fires are ye whose ashes</l>
+                  <l>Fade, yet forth their splendour flashes.</l>
+                  <l rend="indent">Answers height on height,</l>
+                  <l rend="indent">Bright and yet more bright,</l>
+                  <pb n="81"/>
+                  <l>Answers all your England, hill and plain,</l>
+                  <l rend="indent">Men who die for England</l>
+                  <l rend="indent4">Do not die in vain.</l>
+               </lg>
+
+               <lg>
+                  <l>Prince and labourer, clerk and yeoman!</l>
+                  <l>One we rise to front the foeman.</l>
+                  <l rend="indent">Who can dare forget</l>
+                  <l rend="indent">Now to pay his debt,</l>
+                  <l>Give what England gave to her again?</l>
+                  <l rend="indent">Men who died for England</l>
+                  <l rend="indent4">Have not died in vain.</l>
+               </lg>
+               <byline>Margaret L. Woods.</byline>
+            </div>
+
+
+            <pb n="82"/>
+            <div xml:id="fiery059" type="poem" n="Pro Rege Nostro">
+               <head rend="center">Pro Rege Nostro</head>
+               <docAuthor>
+                  <name>
+                     <choice>
+                        <reg>Henley, W. E. </reg>
+                        <sic>W. E. Henley</sic>
+                     </choice>
+                  </name>
+               </docAuthor>
+               <lg type="stanza">
+                  <l n="1">WHAT have I done for you,</l>
+                  <l rend="indent">England, my England?</l>
+                  <l>What is there I would not do,</l>
+                  <l rend="indent">England, my own?</l>
+                  <l>With your glorious eyes austere,</l>
+                  <l>As the Lord were walking near,</l>
+                  <l>Whispering terrible things and dear</l>
+                  <l rend="indent">As the Song on your bugles blown, England --</l>
+                  <l rend="indent">Round the world on your bugles blown!</l>
+               </lg>
+
+               <lg>
+                  <l>Where shall the watchful Sun,</l>
+                  <l rend="indent">England, my England,</l>
+                  <l>Match the master-work you've done,</l>
+                  <l rend="indent">England, my own?</l>
+                  <l>When shall he rejoice again</l>
+                  <l>Such a breed of mighty men</l>
+                  <l>As come forward, one to ten,</l>
+                  <l rend="indent">To the Song on your bugles blown, England --</l>
+                  <l rend="indent">Down the years on your bugles blown?</l>
+               </lg>
+
+               <lg>
+                  <l>Ever the faith endures,</l>
+                  <l rend="indent">England, my England: --</l>
+                  <l>"Take and break us: we are yours,</l>
+                  <l rend="indent">England, my own!</l>
+                  <l>Life is good, and joy runs high</l>
+                  <l>Between English earth and sky:</l>
+                  <l>Death is death; but we shall die</l>
+                  <pb n="83"/>
+                  <l rend="indent">To the Song on your bugles blown, England --</l>
+                  <l rend="indent">To the stars on your bugles blown!"</l>
+               </lg>
+
+               <lg>
+                  <l>They call you proud and hard,</l>
+                  <l rend="indent">England, my England:</l>
+                  <l>You with worlds to watch and ward,</l>
+                  <l rend="indent">England, my own!</l>
+                  <l>You whose mailed hand keeps the keys</l>
+                  <l>Of such teeming destinies,</l>
+                  <l>You could know nor dread nor ease,</l>
+                  <l rend="indent">Were the Song on your bugles blown, England --</l>
+                  <l rend="indent">Round the Pit on your bugles blown!</l>
+               </lg>
+
+               <lg>
+                  <l>Mother of Ships whose might,</l>
+                  <l rend="indent">England, my England,</l>
+                  <l>Is the fierce old Sea's delight,</l>
+                  <l rend="indent">England, my own,</l>
+                  <l>Chosen daughter of the Lord,</l>
+                  <l>Spouse-in-Chief of the ancient Sword,</l>
+                  <l>There's the menace of the Word</l>
+                  <l rend="indent">In the Song of your bugles blown, England --</l>
+                  <l rend="indent">Out of heaven on your bugles blown!</l>
+               </lg>
+               <byline>W. E. Henley.</byline>
+            </div>
+
+
+            <pb n="84"/>
+
+            <pb n="85"/>
+
+
+
+            <pb n="86"/>
+            <div xml:id="fiery061" type="poem" n="Last Post">
+               <head rend="center">Last Post</head>
+               <docAuthor>
+                  <name>
+                     <choice>
+                        <reg>Henley, W. E. </reg>
+                        <sic>W. E. Henley</sic>
+                     </choice>
+                  </name>
+               </docAuthor>
+               <lg type="stanza">
+                  <l n="1">THE day's high work is over and done,</l>
+                  <l>And these no more will need the sun:</l>
+                  <l>Blow, you bugles of England, blow!</l>
+                  <l>These are gone where all must go,</l>
+                  <l>Mightily gone from the field they won.</l>
+                  <l>So in the workaday wear of battle,</l>
+                  <l>Touched to glory with God's own red,</l>
+                  <l>Bear we our chosen to their bed!</l>
+                  <l>Settle them lovingly where they fell,</l>
+                  <l>In that good lap they loved so well;</l>
+                  <l>And, their deliveries to the dear Lord said,</l>
+                  <l>And the last desperate volleys ranged and sped,</l>
+                  <l>Blow, you bugles of England, blow,</l>
+                  <l>Over the camps of her beaten foe --</l>
+                  <l>Blow glory and pity to the victor Mother,</l>
+                  <l>Sad, O sad in her sacrificial dead!</l>
+               </lg>
+
+               <lg>
+                  <l>Labour, and love, and strife, and mirth,</l>
+                  <l>They gave their part in this kindly earth --</l>
+                  <l>Blow, you bugles of England, blow!</l>
+                  <l>That her Name as a sun among stars might glow,</l>
+                  <l>Till the dusk of time, with honour and worth:</l>
+                  <l>That stung by lust and the pain of battle,</l>
+                  <l>The One Race ever might starkly spread,</l>
+                  <l>And the One Flag eagle it overhead!</l>
+                  <l>In a rapture of wrath and faith and pride,</l>
+                  <l>Thus they felt it, and thus they died;</l>
+                  <pb n="87"/>
+                  <l>So to the Maker of homes, to the Giver of bread,</l>
+                  <l>For whose dear sake their triumphing souls they shed,</l>
+                  <l>Blow, you bugles of England, blow,</l>
+                  <l>Though you break the heart of her beaten foe,</l>
+                  <l>Glory and praise to the everlasting Mother,</l>
+                  <l>Glory and peace to her lovely and faithful dead!</l>
+               </lg>
+               <byline>W. E. Henley.</byline>
+            </div>
+
+
+
+
+
+            <pb n="88"/>
+            <div xml:id="fiery063" type="poem" n="Farewell">
+               <head rend="center">Farewell</head>
+               <docAuthor>
+                  <name>
+                     <choice>
+                        <reg>Newbolt, Henry</reg>
+                        <sic>Henry Newbolt</sic>
+                     </choice>
+                  </name>
+               </docAuthor>
+               <lg type="stanza">
+                  <l n="1" rend="indent">MOTHER, with unbowed head</l>
+                  <l rend="indent4">Hear thou across the sea</l>
+                  <l rend="indent">The farewell of the dead,</l>
+                  <l rend="indent4">The dead who died for thee.</l>
+                  <l>Greet them again with tender words and grave,</l>
+                  <l>For saving thee, themselves they could not save.</l>
+               </lg>
+
+               <lg>
+                  <l rend="indent">To keep the house unharmed</l>
+                  <l rend="indent4">Their fathers built so fair,</l>
+                  <l rend="indent">Deeming endurance armed</l>
+                  <l rend="indent4">Better than brute despair,</l>
+                  <l>They found the secret of the word that saith,</l>
+                  <l>"Service is sweet, for all true life is death."</l>
+               </lg>
+
+               <lg>
+                  <l rend="indent">So greet thou well thy dead</l>
+                  <l rend="indent4">Across the homeless sea,</l>
+                  <l rend="indent">And be thou comforted</l>
+                  <l rend="indent4">Because they died for thee.</l>
+                  <l>Far off they served, but now their deed is done</l>
+                  <l>For evermore their life and thine are one.</l>
+               </lg>
+               <byline>Henry Newbolt.</byline>
+               <trailer>Poems New and Old.</trailer>
+            </div>
+
+
+            <pb n="89"/>
+
+
+
+            <pb n="90"/>
+            <div xml:id="fiery065" type="poem" n="Flower of Youth">
+               <head rend="center">Flower of Youth</head>
+               <docAuthor>
+                  <name>
+                     <choice>
+                        <reg>Tynan, Katharine</reg>
+                        <sic>Katharine Tynan</sic>
+                     </choice>
+                  </name>
+               </docAuthor>
+               <lg type="stanza">
+                  <l n="1">LEST Heaven be thronged with grey-beards hoary,</l>
+                  <l rend="indent">God, who made boys for His delight,</l>
+                  <l>Stoops in a day of grief and glory</l>
+                  <l rend="indent">And calls them in, in from the night.</l>
+                  <l>When they come trooping from the war</l>
+                  <l>Our skies have many a new gold star.</l>
+               </lg>
+
+               <lg>
+                  <l>Heaven's thronged with gay and careless faces,</l>
+                  <l rend="indent">New-waked from dreams of dreadful things,</l>
+                  <l>They walk in green and pleasant places</l>
+                  <l rend="indent">And by the crystal water-springs</l>
+                  <l>Who dreamt of dying and the slain,</l>
+                  <l>And the fierce thirst and the strong pain.</l>
+               </lg>
+
+               <lg>
+                  <l>Dear boys! They shall be young for ever.</l>
+                  <l rend="indent">The Son of God was once a boy.</l>
+                  <l>They run and leap by a clear river</l>
+                  <l rend="indent">And of their youth they have great joy.</l>
+                  <l>God, who made boys so clean and good,</l>
+                  <l>Smiles with the eyes of fatherhood.</l>
+               </lg>
+
+               <lg>
+                  <l>Now Heaven is by the young invaded;</l>
+                  <l rend="indent">Their laughter's in the House of God.</l>
+                  <l>Stainless and simple as He made it</l>
+                  <l rend="indent">God keeps the heart o' the boy unflawed.</l>
+                  <l>The old wise Saints look on and smile,</l>
+                  <l>They are so young and without guile.</l>
+               </lg>
+
+               <lg>
+                  <pb n="91"/>
+                  <l>Oh! if the sonless mothers, weeping,</l>
+                  <l rend="indent">And widowed girls could look inside</l>
+                  <l>The glory that hath them in keeping</l>
+                  <l rend="indent">Who went to the Great War, and died,</l>
+                  <l>They would rise and put their mourning off,</l>
+                  <l>And say: "Thank God, he has enough!"</l>
+               </lg>
+               <byline>Katharine Tynan.</byline>
+            </div>
+
+
+            <pb n="92"/>
+            <div xml:id="fiery066" type="poem" n="Lay your Head on the Earth's Breast">
+               <head rend="center">Lay your Head on the Earth's Breast</head>
+               <docAuthor>
+                  <name>
+                     <choice>
+                        <reg>Congreve, Celia</reg>
+                        <sic>Celia Congreve</sic>
+                     </choice>
+                  </name>
+               </docAuthor>
+               <epigraph>
+                  <p>
+                     <hi rend="italic">"Have you heard the earth crying?" said Vassily Vassilitch.</hi>
+                  </p>
+                  <p>
+                     <hi rend="italic">"What do you mean?" I asked.</hi>
+                  </p>
+                  <p>
+                     <hi rend="italic">"Why," said he, "I've heard her crying as I lay in the grass with my ear to the ground. I heard her. Like this,</hi> oo--m, oo--m, oo--m. <hi rend="italic">It was the time the soldiers were being mobilised and women were sobbing in every cottage and in every turning of the road, so it may only have been that I heard. But it seemed to me the earth herself was crying, so gently, so sadly that my own heart ached."</hi> -- <hi rend="smallcaps">Stephen Graham.</hi>
+                  </p>
+               </epigraph>
+
+               <lg rend="italic" type="stanza">
+                  <l n="1">LAY your head on the Earth's breast and you will hear her crying,</l>
+                  <l>Sobbing, softly, hopelessly, for her sons who are dead and dying.</l>
+               </lg>
+
+               <lg>
+                  <l>Splendid and gay they are marching still to the music of bugle and band,</l>
+                  <l>Bravest and best of my beautiful sons they are going from every land.</l>
+               </lg>
+
+               <lg>
+                  <l>Are there none who will stay of all my sons? Must you all go?</l>
+                  <l>Yes; all that you love, the pride of your eyes, Mother, you'd have it so.</l>
+               </lg>
+
+               <lg>
+                  <l>Mangled and torn they lie in heaps, broken, dying and dead.</l>
+                  <l>O scarlet blood of my splendid sons, you have dyed my green fields red.</l>
+               </lg>
+
+               <lg>
+                  <pb n="93"/>
+                  <l>What can I do for you, O my sons? My last, last gift is small,</l>
+                  <l>A few poor sods to cover your heads and a scatter of snow o'er all.</l>
+               </lg>
+
+               <lg rend="italic">
+                  <l>Lay your head on the Earth's breast and you will hear her crying,</l>
+                  <l>Grieving, softly, hopelessly, for her sons who are dead and dying.</l>
+               </lg>
+               <byline>Celia Congreve.</byline>
+               <trailer>Country Life.</trailer>
+            </div>
+
+
+            <pb n="94"/>
+            <div xml:id="fiery067" type="poem" n="The Roll of Honour">
+               <head rend="center">The Roll of Honour</head>
+               <docAuthor>
+                  <name>
+                     <choice>
+                        <reg>Coulson, F. Raymond </reg>
+                        <sic>F. Raymond Coulson</sic>
+                     </choice>
+                  </name>
+               </docAuthor>
+               <lg type="stanza">
+                  <l n="1">THE world grows young in the smile of Spring --</l>
+                  <l rend="indent">The Spring they never will see;</l>
+                  <l>For them in vain will the skylark sing</l>
+                  <l rend="indent">And the green burst forth on the tree.</l>
+                  <l>They do not know that the daffodil's here</l>
+                  <l rend="indent">And the gardens are gay with gold,</l>
+                  <l>Dead heroes who went to the war last year,</l>
+                  <l rend="indent">The young who will never grow old.</l>
+               </lg>
+
+               <lg>
+                  <l>They were planning their lives a year ago,</l>
+                  <l rend="indent">With visions and hopes they thrilled --</l>
+                  <l>With visions and hopes that were all laid low,</l>
+                  <l rend="indent">And with dreams that were unfulfilled.</l>
+                  <l>Now some of them lie 'neath the restless wave,</l>
+                  <l rend="indent">And some lie under the mould,</l>
+                  <l>The strong and handsome, the noble and brave --</l>
+                  <l rend="indent">The young who will never grow old.</l>
+               </lg>
+
+               <lg>
+                  <l>The hand of Time cannot hurt them now,</l>
+                  <l rend="indent">Nor burden their hearts with cares;</l>
+                  <l>Age cannot furrow the cheek or brow,</l>
+                  <l rend="indent">Bright youth is eternally theirs.</l>
+                  <l>In history written, by poets sung,</l>
+                  <l rend="indent">Their deathless deeds shall be told,</l>
+                  <l>And England will cherish immortal the young --</l>
+                  <l rend="indent">The young who will never grow old.</l>
+               </lg>
+               <byline>F. Raymond Coulson.</byline>
+            </div>
+
+
+            <pb n="95"/>
+            <div xml:id="fiery068" type="poem" n="In Memory">
+               <head rend="center">In Memory</head>
+               <head>
+                  <hi rend="smallcaps">To Those who died in the Early Days of the War.</hi>
+               </head>
+               <docAuthor>
+                  <name>
+                     <choice>
+                        <reg>Boyle, W. S. </reg>
+                        <sic>W. S. Boyle</sic>
+                     </choice>
+                  </name>
+               </docAuthor>
+               <note rend="center">
+                  <hi rend="italic">Reprinted by special permission of the proprietors of</hi> Punch.</note>
+
+               <lg type="stanza">
+                  <l n="1">NOT theirs to triumph yet: but, where they stood,</l>
+                  <l>Falling, to dye the earth with brave men's blood</l>
+                  <l>For England's sake and duty. Be their name</l>
+                  <l>Sacred among us! Wouldst thou seek to frame</l>
+                  <l>Their fitting epitaph? Then let it be</l>
+                  <l>Simple, as that which marked Thermopylæ,</l>
+                  <l>"Tell it in England, thou that passest by,</l>
+                  <l>Here faithful to their charge, her soldiers lie."</l>
+               </lg>
+               <byline>W. S. Boyle.</byline>
+            </div>
+
+
+            <pb n="96"/>
+            <div xml:id="fiery069" type="poem" n="Aux Poètes Futurs">
+               <head rend="center">Aux Poètes Futurs</head>
+               <docAuthor>
+                  <name>
+                     <choice>
+                        <reg>Prudhomme, Sully</reg>
+                        <sic>Sully Prudhomme</sic>
+                     </choice>
+                  </name>
+               </docAuthor>
+               <lg type="stanza">
+                  <l n="1">POèTES à venir, qui saurez tant de choses,</l>
+                  <l>Et les direz sans doute en un verbe plus beau,</l>
+                  <l>Portant plus loin que nous un plus large flambeau</l>
+                  <l>Sur les suprêmes fins et les premières causes;</l>
+                  <l>Quand vos vers sacreront des pensers grandioses,</l>
+                  <l>Depuis longtemps déjà nous serons au tombeau;</l>
+                  <l>Rien ne vivra de nous qu'un terne et froid lambeau</l>
+                  <l>De notre œuvre enfouie avec nos lèvres closes.</l>
+               </lg>
+
+               <lg>
+                  <l>Songez que nous chantions les fleurs et les amours</l>
+                  <l>Dans un âge plein d'ombre, au mortel bruit des armes,</l>
+                  <l>Pour des cœurs anxieux que ce bruit rendait sourds;</l>
+                  <l>Lors plaignez nos chansons, où tremblaient tant d'alarmes,</l>
+                  <l>Vous qui, mieux écoutés, ferez en d'heureux jours</l>
+                  <l>Sur de plus hauts objets des poèmes sans larmes.</l>
+               </lg>
+               <byline>Sully Prudhomme.</byline>
+            </div>
+
+         </div>
+
+      </body>
+   </text>
+</TEI>

@@ -1,0 +1,27 @@
+Overview
+========
+
+The Great War is a website produced from texts encoded in the Text Encoding Initiative’s (TEI) standards.
+It consists of 3 parts, poetry, postcards, and links.
+
+README
+======
+
+Dependencies
+------------
+ * django 1.2
+ * pidmanclient
+ * eXist-db 1.4
+ * eulcore; see
+   :ref:`eulcore dependencies <eulcore-deps>` for per-module
+   dependencies. eulcore modules currently in use:
+
+   * eulcore.xmlmap
+   * eulcore.existdb and eulcore.django.existdb
+   * eulcore.django.ldap
+   * eulcore.django.testsetup
+   * eulcore.django.http
+
+Developer Notes
+------------
+To run unit tests FEDORA_USER and FEDORA_PASS must be configured in localsettings.py
