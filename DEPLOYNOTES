@@ -15,15 +15,16 @@ Create A Virtual Environment
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 sudo pip install virtualenv
 
-If the source is in /home/greatwar/src, consider creating an environment in  /home/greatwar/greatwarEnv.
+If the source is in /home/greatwar/src, consider creating an environment in  /home/greatwar/env .
+Currently the standard practice is to create the virtualenv in the project root.
 To create the environment, su into apache's user (for local development do not su to another user)
 and::
-	  $ virtualenv --no-site-packages /home/greatwar/greatwarEnv
+	  $ virtualenv --no-site-packages <path to project root>/env
 
 This creates a new virtual environment in that directory. Source the activation
 file to invoke the virtual environment (requires that you use the bash shell)::
 
-	  $ . /home/greatwar/greatwarEnv/bin/activate
+	  $ . <path to project root>/env/bin/activate
 
 Once the environment has been activated inside a shell, Python programs
 spawned from that shell will read their environment only from this
@@ -73,26 +74,31 @@ You should use the fedoraAdmin user with this command.
 It is expected that Djatoka is configured correctly in Fedora.
 
 * To ingest postcards into fedora run the followng command::
+
           $ python ./manage.py ingest_postcards <postcards.xml> <image_dir> -u <username> --password
+
 You should use the fedoraAdmin user with this command.
 NOTE: This sep will most likely be done after the deployment because the dat is stored in another location.
+      The postcard.xml can be obtained here: https://svn.library.emory.edu/svn/greatwar/trunk/xml/postcards/postcards.xml
+      The image files can be obtained from the Beck Center.
 
 
 eXist
 ^^^^^
 * The user 'greatwar' will have to be created through the eXist admin interface
 if it does not already exist. It should be assigned to the beck and DBA groups.
-Once alll the loading of data a configs are done greatwar should be removed from the DBA group.
+Once alll the loading of data and configs are done greatwar should be removed from the DBA group.
 
 * The collection 'greatwar' will have to be created through the eXist admin interface
 if it does not already exist. It should exist under the group beck group and owned by greatwar.
 
-* Run the following command to load the index::
-          $ python ./manage.py help existdb_index
-          $ python ./manage.py help existdb_reindex
+* To load the poetry XMLs login to Exist as the greatwar user, navigate to the greatwar collection an select the files to upload.
+NOTE: The poetry XMLs can be obtained from here: https://svn.library.emory.edu/svn/greatwar/trunk/xml
+      Only use the .xml files in this directory. 
+      In most enviroments this step should alreayd be done.
 
-For a first-time install, you will should run these two steps:
-(Note that if all poetry is loaded, the reindex step can take quite a while)::
+* Run the following command to load the index for the first time::
+NOTE: If all poetry is loaded, the reindex step can take quite a while::
 
          $ python ./manage.py existdb_index load
          $ python ./manage.py existdb_reindex
