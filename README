@@ -23,5 +23,5 @@ Dependencies
    * eulcore.django.http
 
 Developer Notes
-------------
+---------------
 To run unit tests FEDORA_USER and FEDORA_PASS must be configured in localsettings.py
