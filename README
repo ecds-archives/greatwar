@@ -12,9 +12,7 @@ Dependencies
  * django 1.2
  * pidmanclient
  * eXist-db 1.4
- * eulcore; see
-   :ref:`eulcore dependencies <eulcore-deps>` for per-module
-   dependencies. eulcore modules currently in use:
+ * eulcore; modules currently in use:
 
    * eulcore.xmlmap
    * eulcore.existdb and eulcore.django.existdb
