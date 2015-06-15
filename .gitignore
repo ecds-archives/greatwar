@@ -1,0 +1,5 @@
+# python default ignores from github
+*.py[cod]
+
+# local ignores
+localsettings.py
