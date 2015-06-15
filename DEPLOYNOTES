@@ -15,15 +15,17 @@ Create A Virtual Environment
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 sudo pip install virtualenv
 
-If the source is in /home/greatwar/src, consider creating an environment in  /home/greatwar/greatwarEnv.
+If the source is in /home/greatwar/src, consider creating an environment in  /home/greatwar/env .
+Currently the standard practice is to create the virtualenv in the project root.
 To create the environment, su into apache's user (for local development do not su to another user)
 and::
-	  $ virtualenv --no-site-packages /home/greatwar/greatwarEnv
+
+	  $ virtualenv --no-site-packages <path to project root>/env
 
 This creates a new virtual environment in that directory. Source the activation
 file to invoke the virtual environment (requires that you use the bash shell)::
 
-	  $ . /home/greatwar/greatwarEnv/bin/activate
+	  $ . <path to project root>/env/bin/activate
 
 Once the environment has been activated inside a shell, Python programs
 spawned from that shell will read their environment only from this
@@ -51,10 +53,11 @@ FEDORA_USER and FEDORA_PASS variables should NOT be configured in staging or pro
 
 PidMan
 ^^^^^^
+
 * The user 'greatwar' will have to be created through the pidman admin interface
-if it does not already exist. It shold be able to add and edit pids and targets.
-The 'Resource Manager' permission group should be suficent for this user.
-Also, the staff flag  shold be set to true.
+  if it does not already exist. It shold be able to add and edit pids and targets.
+  The 'Resource Manager' permission group should be suficent for this user.
+  Also, the staff flag  shold be set to true.
 
 * The 'Great War' will have to be created as a sub-domain of BeckCenter if it does not already exist.
 
@@ -64,7 +67,11 @@ Fedora
 ^^^^^^
 * Make sure that the greatwar fedora policies are updated to the specified version.
 * To create the Greatwar fedora Collection run the following command from witin
+<<<<<<< HEAD
 the the directory <repocheckout>/greatwar::
+=======
+  the the directory <repocheckout>/greatwar::
+>>>>>>> master
 
           $ python ./manage.py syncrepo -u <username> --password
 
@@ -73,29 +80,52 @@ You should use the fedoraAdmin user with this command.
 It is expected that Djatoka is configured correctly in Fedora.
 
 * To ingest postcards into fedora run the followng command::
+
           $ python ./manage.py ingest_postcards <postcards.xml> <image_dir> -u <username> --password
+
 You should use the fedoraAdmin user with this command.
-NOTE: This sep will most likely be done after the deployment because the dat is stored in another location.
+
+.. Note:
+
+  This step will most likely be done after the deployment because the data is stored in another location.
+
+  The postcard.xml can be obtained here: https://svn.library.emory.edu/svn/greatwar/trunk/xml/postcards/postcards.xml
+  The image files can be obtained from the Beck Center.
 
 
 eXist
 ^^^^^
 * The user 'greatwar' will have to be created through the eXist admin interface
+<<<<<<< HEAD
 if it does not already exist. It should be assigned to the beck and DBA groups.
 Once alll the loading of data a configs are done greatwar should be removed from the DBA group.
+=======
+  if it does not already exist. It should be assigned to the beck and DBA groups.
+  Once alll the loading of data and configs are done greatwar should be removed from the DBA group.
+>>>>>>> master
 
 * The collection 'greatwar' will have to be created through the eXist admin interface
-if it does not already exist. It should exist under the group beck group and owned by greatwar.
+  if it does not already exist. It should exist under the group beck group and owned by greatwar.
 
-* Run the following command to load the index::
-          $ python ./manage.py help existdb_index
-          $ python ./manage.py help existdb_reindex
+* To load the poetry XMLs login to Exist as the greatwar user, navigate to the greatwar collection 
+  and select the  files to upload.
 
-For a first-time install, you will should run these two steps:
-(Note that if all poetry is loaded, the reindex step can take quite a while)::
+.. Note:
+
+   The poetry XMLs can be obtained from here: https://svn.library.emory.edu/svn/greatwar/trunk/xml 
+
+   Only use the .xml files in this directory. 
+   In most enviroments this step should already be done.
+
+* Run the following command to load the index for the first time::
+
 
          $ python ./manage.py existdb_index load
          $ python ./manage.py existdb_reindex
+
+.. Note:
+
+  If all poetry is loaded, the reindex step can take quite a while::
 
 Apache
 ^^^^^^
@@ -106,7 +136,15 @@ Trouble Shooting
 ^^^^^^^^^^^^^^^^
 
 If postcard images are not show make sure that the followng objects are loaded to Fedora:
+<<<<<<< HEAD
 * emory-control:DjatokaImageService (DjatokaImageService.xml)
 
 * emory-control:DjatokaImageService_image-source (DjatokaImageService_sdep.xml)
 - Make sure that the WSDL > FedoraDjatoka section is configured with and appropriate host and port
+=======
+
+* emory-control:DjatokaImageService (DjatokaImageService.xml)
+* emory-control:DjatokaImageService_image-source (DjatokaImageService_sdep.xml)
+
+ - Make sure that the WSDL > FedoraDjatoka section is configured with and appropriate host and port
+>>>>>>> master
