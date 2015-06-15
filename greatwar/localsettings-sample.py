@@ -22,8 +22,12 @@ BASE_DIR = path.dirname(path.abspath(__file__))
 BASE_URL='http://myurl.com'  #no trailing slash
 
 #We will not be using a RDB but this will allow tests to run
-DATABASE_ENGINE = 'sqlite3'
-DATABASE_NAME = 'no_db'
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': path.join(BASE_DIR, 'no_db'),
+    }
+}
 
 #Specify Session Engine
 CACHE_BACKEND = 'file:///tmp/django_cache'
