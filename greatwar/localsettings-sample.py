@@ -1,7 +1,6 @@
 # Django local settings for edc project.
 from os import path
 # all settings in debug section should be false in production environment
-[debug]
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 DEV_ENV = True
@@ -30,10 +29,6 @@ DATABASE_NAME = 'no_db'
 CACHE_BACKEND = 'file:///tmp/django_cache'
 SESSION_ENGINE = 'django.contrib.sessions.backends.cache'
 
-# configure an HTTP PROXY to enable lxml to cache XML Schemas (e.g., EAD XSD)
-import os
-os.environ['HTTP_PROXY'] = 'http://spiderman.library.emory.edu:3128'
-
 #Exist DB Settings
 EXISTDB_SERVER_PROTOCOL = "http://"
 # hostname, port, & path to exist xmlrpc - e.g., "localhost:8080/exist/xmlrpc"
@@ -53,8 +48,6 @@ FEDORA_PIDSPACE = 'emory'
 #configure these for unit tests only
 #FEDORA_USER = 'user'
 #FEDORA_PASS = 'pass'
-
-
 
 # from fa:
 # a bug in python xmlrpclib loses the timezone; override it here
@@ -113,12 +106,56 @@ MEDIA_URL = '/project/static'
 ADMIN_MEDIA_PREFIX = '/media/'
 
 # Make this unique, and don't share it with anybody.
+# Generate one here: http://www.miniwebtool.com/django-secret-key-generator/
 SECRET_KEY = ''
 
 
-#Logger Settings
-import logging
-#logging levels: NOLOG, CRITICAL, ERROR, WARNING, INFO, DEBUG
-LOGGING_LEVEL=logging.NOLOG
-LOGGING_FORMAT="%(asctime)s : %(name)s:  %(levelname)s : %(message)s"
-LOGGING_FILENAME="" # "" will print to stdout
+# Sample logging configuration, with option to send an email to
+# the site admins on every HTTP 500 error when DEBUG=False.
+# See http://docs.djangoproject.com/en/dev/topics/logging for
+# more details on how to customize your logging configuration.
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'basic': {
+            'format': '[%(asctime)s] %(levelname)s:%(name)s::%(message)s',
+            'datefmt': '%d/%b/%Y %H:%M:%S',
+        },
+    },
+    'filters': {
+        'require_debug_false': {
+            '()': 'django.utils.log.RequireDebugFalse'
+        }
+    },
+    'handlers': {
+        'mail_admins': {
+            'level': 'ERROR',
+            'filters': ['require_debug_false'],
+            'class': 'django.utils.log.AdminEmailHandler'
+        },
+        'console': {
+            'level': 'DEBUG',
+            'class': 'logging.StreamHandler',
+            'formatter': 'basic'
+        },
+    },
+    'loggers': {
+        'django.request': {
+            'handlers': ['mail_admins'],
+            'level': 'ERROR',
+            'propagate': True,
+        },
+        'greatwar': {
+            'handlers': ['console'],
+            'level': 'INFO',
+            'propagate': True,
+        },
+        'eulexistdb': {
+            'handlers': ['console'],
+            'level': 'INFO',
+            'propagate': True,
+        },
+
+    }
+}

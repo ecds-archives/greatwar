@@ -10,9 +10,6 @@ except ImportError:
 if __name__ == "__main__":
     #setup logger
     import sys
-    import localsettings
-    import logging
-    logging.basicConfig(level=localsettings.LOGGING_LEVEL, format=localsettings.LOGGING_FORMAT, filename=localsettings.LOGGING_FILENAME)
 
     # load test settings when running tests
     if len(sys.argv) > 1 and sys.argv[1] == 'test':
