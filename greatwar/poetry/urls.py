@@ -1,4 +1,4 @@
-from django.conf.urls.defaults import patterns, url
+from django.conf.urls import patterns, url
 
 urlpatterns = patterns('greatwar.poetry.views',
     url(r'^$', 'books', name='books'),
@@ -9,6 +9,6 @@ urlpatterns = patterns('greatwar.poetry.views',
     url(r'^(?P<doc_id>[^/]+)/$', 'book_toc', name="book-toc"),
     url(r'^(?P<doc_id>[^/]+)/TEI/$', 'book_xml', name="book-xml"),
     url(r'^(?P<doc_id>[^/]+)/(?P<div_id>[a-zA-Z_0-9]+)/', 'div', name="poem"),
-    
+
 )
- 
+
