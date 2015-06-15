@@ -8,7 +8,7 @@ from django.core.urlresolvers import reverse
 from django.test import TestCase as DjangoTestCase
 from django.conf import settings
 
-from eulcore.django.fedora.server import Repository
+from eulfedora.server import Repository
 
 from greatwar.postcards.fixtures.postcards import FedoraFixtures
 from util import get_pid_target, absolutize_url
@@ -21,16 +21,16 @@ exist_index_path = path.join(path.dirname(path.abspath(__file__)), '..', 'exist_
 
 class PostcardViewsTestCase(DjangoTestCase):
     repo = Repository()
-    
+
     # load fixture postcards to test pidspace
     postcards = FedoraFixtures().load_postcards()
 
-    
+
     def __del__(self):
         for p in self.postcards:
             self.repo.purge_object(p.pid)
 
-                                  
+
     def test_index(self):
         "Test postcard index/about page"
         about_url = reverse('postcards:index')
@@ -99,7 +99,7 @@ class PostcardViewsTestCase(DjangoTestCase):
         self.assertContains(response, reverse('postcards:card-large',
                     kwargs={'pid': postcard.pid}),
                     msg_prefix='large image for postcard linked from postcard view')
-        
+
 
 
         #Test for floating text
@@ -109,7 +109,7 @@ class PostcardViewsTestCase(DjangoTestCase):
         #Test for permanent link
         self.assertContains(response, "Permanent link for this postcard:", msg_prefix='bookmark text')
         self.assertContains(response, postcard.dc.content.identifier_list[0], msg_prefix='bookmark url')
-        
+
         # DC metadata in header
         self.assertContains(response, '<meta name="DC.title" content="%s" />' % \
             postcard.dc.content.title)
@@ -166,6 +166,6 @@ class UtilTest(DjangoTestCase):
        target = get_pid_target('postcards:card')
        expected = '%s/postcards/%s:%s' %(settings.BASE_URL, settings.FEDORA_PIDSPACE, DjangoPidmanRestClient.pid_token)
        self.assertEqual(target,expected)
-        
 
-        
+
+

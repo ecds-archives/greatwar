@@ -1,23 +1,26 @@
 from django.conf import settings
 from django.core.management.base import CommandError
-from eulcore.django.existdb.manager import Manager
-from eulcore.django.existdb.models import XmlModel
-from eulcore.django.fedora import Repository
-from eulcore.fedora.models import DigitalObject, FileDatastream, XmlDatastream
-from eulcore.xmlmap import XmlObject
-from eulcore.xmlmap.fields import NodeListField
-from eulcore.xmlmap.teimap import TeiFigure, TeiInterpGroup, TeiInterp, TeiLineGroup
-from eulcore.xmlmap.teimap import _TeiBase
+
+from eulxml.xmlmap.fields import NodeListField
+from eulxml.xmlmap.teimap import TeiFigure, TeiInterpGroup, TeiInterp, \
+    _TeiBase
+from eulexistdb.manager import Manager
+from eulexistdb.models import XmlModel
+
+from eulfedora.server import Repository
+from eulfedora.models import DigitalObject, FileDatastream, XmlDatastream
+
+
 from pidservices.djangowrapper.shortcuts import DjangoPidmanRestClient
 from util import get_pid_target
 
 # TEI postcard models
 
 class Postcard(XmlModel, TeiFigure):
-    # entity, head, ana, and description all inherited from TeiFigure    
+    # entity, head, ana, and description all inherited from TeiFigure
     objects = Manager("//figure")
     interp_groups = NodeListField('ancestor::text//interpGrp', TeiInterpGroup)
-    
+
     interps = NodeListField('ancestor::text//interp[contains(string($n/@ana), @id)]', TeiInterp)
     #interp_xquery='''for $i in collection("/db/greatwar")//interp
     #            where contains($n/@ana, $i/@id)
@@ -34,13 +37,13 @@ class KeyValue(XmlModel, TeiInterp):
 class ImageObject(DigitalObject):
     CONTENT_MODELS = [ 'info:fedora/emory-control:Image-1.0' ]
     IMAGE_SERVICE = 'emory-control:DjatokaImageService'
-    
+
     # DC & RELS-EXT inherited
     image = FileDatastream("source-image", "Master TIFF image", defaults={
             'mimetype': 'image/tiff',
             # FIXME: versioned? checksum?
         })
-        
+
     default_pidspace = getattr(settings, 'FEDORA_PIDSPACE', None)
 
     def thumbnail(self):
@@ -68,7 +71,7 @@ class ImageObject(DigitalObject):
         pid = '%s:%s' % (self.default_pidspace, noid)
         self.dc.content.identifier_list.append(ark) # Store local identifiers in DC
         return pid
-        
+
 
 # map interpgroup into a categories object that can be used as fedora datastream class
 class RepoCategories(_TeiBase):

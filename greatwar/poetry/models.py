@@ -1,11 +1,12 @@
 from django.utils.safestring import mark_safe
 
-from eulcore.django.existdb.manager import Manager
-from eulcore.django.existdb.models import XmlModel
-from eulcore.xmlmap import XmlObject
-from eulcore.xmlmap.dc import DublinCore
-from eulcore.xmlmap.fields import StringField, NodeField, StringListField, NodeListField
-from eulcore.xmlmap.teimap import Tei, TeiDiv, TEI_NAMESPACE
+
+from eulxml.xmlmap import XmlObject
+from eulxml.xmlmap.dc import DublinCore
+from eulxml.xmlmap.fields import StringField, NodeField, StringListField, NodeListField
+from eulxml.xmlmap.teimap import Tei, TeiDiv, TEI_NAMESPACE
+from eulexistdb.manager import Manager
+from eulexistdb.models import XmlModel
 
 
 # TEI poetry models
@@ -89,8 +90,8 @@ class PoetryBook(XmlModel, Tei):
         # hard-coded when setting dc:relation in postcard ingest
 
         return dc
-        
-        
+
+
 class Poem(XmlModel, TeiDiv):
     ROOT_NAMESPACES = {'tei' : TEI_NAMESPACE}
     poet = StringField("tei:docAuthor/tei:name/tei:choice")

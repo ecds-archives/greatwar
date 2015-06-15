@@ -7,9 +7,9 @@ from django.http import HttpResponse, Http404
 from django.core.paginator import Paginator, InvalidPage, EmptyPage
 from django.template import RequestContext
 
-from eulcore.django.http import content_negotiation
-from eulcore.existdb.query import escape_string
-from eulcore.existdb.exceptions import DoesNotExist # ReturnedMultiple needed also ?
+from eulcommon.djangoextras.http import content_negotiation
+from eulexistdb.query import escape_string
+from eulexistdb.exceptions import DoesNotExist # ReturnedMultiple needed also ?
 
 from greatwar.poetry.models import PoetryBook, Poem, Poet, PoemSearch
 from greatwar.poetry.forms import PoetrySearchForm
@@ -43,7 +43,7 @@ def div(request, doc_id, div_id):
     if 'keyword' in request.GET:
         search_terms = request.GET['keyword']
         url_params = '?' + urlencode({'keyword': search_terms})
-        filter = {'highlight': search_terms}    
+        filter = {'highlight': search_terms}
     else:
         url_params = ''
         filter = {}
@@ -83,13 +83,13 @@ def _show_poets(request, poets, current_letter=None):
         poets = poet_paginator.page(page)
     except (EmptyPage, InvalidPage):
         poets = poet_paginator.page(paginator.num_pages)
-    
+
     return render_to_response('poetry/poets.html', { 'poets' : poets,
                                                      'first_letters' : first_letters,
                                                      'current_letter' : current_letter,
                                                      }, context_instance=RequestContext(request))
-    
-    
+
+
 def poet_list(request, name):
     "List poems by a particular poet"
     poems = Poem.objects.filter(poetrev__exact=name).also('book__title',
@@ -97,7 +97,7 @@ def poet_list(request, name):
     return render_to_response('poetry/poem_list.html', { 'poems' : poems,
                                                          'poet'  : name,
                                                          }, context_instance=RequestContext(request))
-                                                         
+
 def search(request):
     "Search poetry by title/author/keyword"
     form = PoetrySearchForm(request.GET)
@@ -105,16 +105,16 @@ def search(request):
     search_opts = {}
     poetry = None
     number_of_results = 10
-    
-    
-    if form.is_valid(): 
+
+
+    if form.is_valid():
         if 'title' in form.cleaned_data and form.cleaned_data['title']:
             search_opts['title_list__fulltext_terms'] = '%s' % form.cleaned_data['title']
         if 'author' in form.cleaned_data and form.cleaned_data['author']:
             search_opts['docauthor__fulltext_terms'] = '%s' % form.cleaned_data['author']
         if 'keyword' in form.cleaned_data and form.cleaned_data['keyword']:
             search_opts['fulltext_terms'] = '%s' % form.cleaned_data['keyword']
-                    
+
         poems = PoemSearch.objects.only("book__title","book__id","title", "id").filter(**search_opts)
         if 'keyword' in form.cleaned_data and form.cleaned_data['keyword']:
             poems = poems.only_raw(line_matches='%%(xq_var)s//tei:l[ft:query(., "%s")]' \
@@ -130,7 +130,7 @@ def search(request):
             search_page = search_paginator.page(page)
         except (EmptyPage, InvalidPage):
             search_page = search_paginator.page(paginator.num_pages)
-            
+
         response = render_to_response('poetry/search.html', {
                 "search": form,
                 "poetry_paginated": search_page,
@@ -145,7 +145,7 @@ def search(request):
                     "search": form
             },
             context_instance=RequestContext(request))
-        
+
     if response_code is not None:
         response.status_code = response_code
-    return response                                                         
+    return response

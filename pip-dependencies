@@ -1,7 +1,11 @@
 django==1.2
 python-dateutil
-soaplib==0.8.1
+#soaplib==0.8.1
 rdflib>=3.0
 ply
--e svn+https://svn.library.emory.edu/svn/python-eulcore/branches/release-0.14.x
--e svn+https://svn.library.emory.edu/svn/persis/pidmanclient/tags/release-1.1.1
+eulxml
+eulexistdb
+eulcommon
+eulfedora
+https://wilson.library.emory.edu/jenkins/job/pidman-rest-client_1.2.x/lastSuccessfulBuild/artifact/pidmanclient/dist/pidservices-1.2.0.tar.gz
+unittest2

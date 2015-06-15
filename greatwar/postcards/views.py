@@ -5,10 +5,10 @@ from django.shortcuts import render_to_response
 from django.template import RequestContext
 from django.views.decorators.cache import cache_page
 
-from eulcore.django.fedora.server import Repository
-from eulcore.fedora.util import RequestFailed
+from eulfedora.server import Repository
+from eulfedora.util import RequestFailed
 
-from greatwar.postcards.models import ImageObject, PostcardCollection, RepoCategories
+from greatwar.postcards.models import ImageObject, PostcardCollection
 from greatwar.postcards.forms import SearchForm
 
 import logging
@@ -49,10 +49,10 @@ def browse(request):
     if 'subject' in request.GET:
         context['subject'] = request.GET['subject']
         search_opts['subject'] = request.GET['subject']
- 
+
 
     postcards = repo.find_objects(**search_opts)
-    
+
     postcard_paginator = Paginator(list(postcards), number_of_results)
     try:
         page = int(request.GET.get('page', '1'))
@@ -63,9 +63,9 @@ def browse(request):
         postcard_page = postcard_paginator.page(page)
     except (EmptyPage, InvalidPage):
         postcard_page = postcard_paginator.page(paginator.num_pages)
-                
+
     context['postcards_paginated'] = postcard_page
-    
+
     return render_to_response('postcards/browse.html', context,
                                 context_instance=RequestContext(request))
 
@@ -82,7 +82,7 @@ def view_postcard(request, pid):
             ark =  ark[0]
         else:
             ark = ''
-            
+
 #        #get description from description elements
         description = filter(lambda desc: desc.startswith(settings.POSTCARD_DESCRIPTION_LABEL), obj.dc.content.description_list)
         if len(description) > 0:
@@ -103,7 +103,7 @@ def view_postcard(request, pid):
 
         return render_to_response('postcards/view_postcard.html',
                               {'card' : obj, 'ark' : ark, 'description' : description, 'postcard_text' : postcard_text },
-                                context_instance=RequestContext(request))                                                       
+                                context_instance=RequestContext(request))
     except RequestFailed:
         raise Http404
 
@@ -136,9 +136,9 @@ def postcard_image(request, pid, size):
             image = obj.medium_image()
         elif size == 'large':
             image = obj.large_image()
-        
+
         return HttpResponse(image, mimetype='image/jpeg')
-    
+
     except RequestFailed as fail:
         raise Http404
 
@@ -149,13 +149,13 @@ def search(request):
     response_code = None
     context = {'search': form}
     number_of_results = 5
-    if form.is_valid(): 
+    if form.is_valid():
         # adding wildcards because fedora has a weird notion of what 'contains' means
 
         # TODO: terms search can't be used with with field search
         # -- how to allow a keyword search but restrict to postcards?
         #keywords = '%s*' % form.cleaned_data['keyword'].rstrip('*')
-        
+
         # TEMPORARY: restrict to postcards by pidspace
         search_opts = {'relation': settings.RELATION }
         if 'title' in form.cleaned_data:
@@ -163,9 +163,9 @@ def search(request):
         if 'description' in form.cleaned_data:
             search_opts['description__contains'] = '%s*' % form.cleaned_data['description'].rstrip('*')
         try:
-            repo = Repository()          
+            repo = Repository()
             found = repo.find_objects(type=ImageObject, **search_opts)
-            
+
             search_paginator = Paginator(list(found), number_of_results)
             try:
                 page = int(request.GET.get('page', '1'))
@@ -176,9 +176,9 @@ def search(request):
                 search_page = search_paginator.page(page)
             except (EmptyPage, InvalidPage):
                 search_page = search_paginator.page(paginator.num_pages)
-                
-            
-            context['postcards_paginated'] = search_page   
+
+
+            context['postcards_paginated'] = search_page
             context['title'] = form.cleaned_data['title']
             context['description'] = form.cleaned_data['description']
         except Exception as e:

@@ -2,7 +2,7 @@ from os import path
 from rdflib import URIRef
 
 from django.conf import settings
-from eulcore.django.fedora.server import Repository
+from eulfedora.server import Repository
 
 from greatwar.postcards.models import ImageObject, PostcardCollection
 
@@ -53,7 +53,7 @@ class FedoraFixtures:
 
     def load_postcards(self):
         'Load postcard fixture object and return a list of the objects.'
-        
+
         #This fixture has floating_text (text printed on the postcard)
         self._load_postcard('Boys at Mess,- Camp Sherman, Chillicothe, Ohio.',
             ['%s%s' % (descLab, 'soldiers at mess'), '%s%s' % (postTxtLab, 'This is some floating text')],
