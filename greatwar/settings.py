@@ -3,7 +3,7 @@ from os import path
 
 # Get the directory of this file for relative dir paths.
 # Django sets too many absolute paths.
-BASE_DIR = path.dirname(path.abspath(__file__))
+BASE_DIR = path.dirname(path.dirname(__file__))
 
 MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
@@ -21,13 +21,6 @@ ADMINS = (
 )
 
 MANAGERS = ADMINS
-
-DATABASE_ENGINE = ''           # 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-DATABASE_NAME = ''             # Or path to database file if using sqlite3.
-DATABASE_USER = ''             # Not used with sqlite3.
-DATABASE_PASSWORD = ''         # Not used with sqlite3.
-DATABASE_HOST = ''             # Set to empty string for localhost. Not used with sqlite3.
-DATABASE_PORT = ''             # Set to empty string for default. Not used with sqlite3.
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
@@ -66,16 +59,13 @@ STATICFILES_DIRS = [
 
 # Absolute path to the directory that holds media.
 # Example: "/home/media/media.lawrence.com/"
-MEDIA_ROOT = path.join(BASE_DIR, '../media')
+MEDIA_ROOT = path.join(BASE_DIR, 'media')
 # '/home/rsutton/workarea/django-greatwar/media/'
 
 # URL prefix for admin media -- CSS, JavaScript and images. Make sure to use a
 # trailing slash.
 # Examples: "http://foo.com/media/", "/media/".
 ADMIN_MEDIA_PREFIX = '/media/'
-
-# Make this unique, and don't share it with anybody.
-SECRET_KEY = 'ha=7$wd7wq7n)8!#h&qn_%0*rul!ez*h-xm#v)l$wg&5nkjk%7'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
@@ -127,7 +117,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     )
 
 
-EXISTDB_INDEX_CONFIGFILE = path.join(BASE_DIR, "exist_index.xconf")
+EXISTDB_INDEX_CONFIGFILE = path.join(BASE_DIR, "greatwar", "exist_index.xconf")
 
 # temporary pid - should eventually use ARK. must match PID in fixture
 POSTCARD_COLLECTION_PID = 'emory-control:Beck-GreatWar-Postcards-collection'
