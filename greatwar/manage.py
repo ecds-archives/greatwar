@@ -15,7 +15,7 @@ if __name__ == "__main__":
     logging.basicConfig(level=localsettings.LOGGING_LEVEL, format=localsettings.LOGGING_FORMAT, filename=localsettings.LOGGING_FILENAME)
 
     # load test settings when running tests
-    if sys.argv[1] == 'test':
+    if len(sys.argv) > 1 and sys.argv[1] == 'test':
         import testsettings as settings
 
     execute_manager(settings)
