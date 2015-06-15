@@ -46,6 +46,25 @@ SITE_ID = 1
 # to load the internationalization machinery.
 USE_I18N = True
 
+# Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/1.6/howto/static-files/
+
+STATIC_URL = '/static/'
+
+# Absolute path to the directory static files should be collected to.
+# Don't put anything in this directory yourself; store your static files
+# in apps' "static/" subdirectories and in STATICFILES_DIRS.
+# Example: "/home/media/media.lawrence.com/static/"
+STATIC_ROOT = path.join(BASE_DIR, 'static')
+
+# Additional locations of static files
+STATICFILES_DIRS = [
+    # Put strings here, like "/home/html/static" or "C:/www/django/static".
+    # Always use forward slashes, even on Windows.
+    # Don't forget to use absolute paths, not relative paths.
+    path.join(BASE_DIR, 'sitemedia'),
+]
+
 # Absolute path to the directory that holds media.
 # Example: "/home/media/media.lawrence.com/"
 MEDIA_ROOT = path.join(BASE_DIR, '../media')
@@ -88,14 +107,10 @@ INSTALLED_APPS = (
     #'django.contrib.contenttypes',
     #'django.contrib.sessions',
     #'django.contrib.sites',
-#    'eulcore.django.testsetup',
- #   'eulcore.django.fedora',
-  #  'eulcore.django.existdb',
+    'django.contrib.staticfiles',
     'eulxml',
     'eulexistdb',
     'eulfedora',
-   # 'eulcore.django.ldap.emory',
-    # 'eulcore.django.util',
     'greatwar.postcards',
     'greatwar.poetry',
     'greatwar',
