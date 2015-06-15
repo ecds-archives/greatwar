@@ -139,6 +139,13 @@ RELATION = 'The Great War 1914-1918'
 # the default owner of all fedora objects created by this app
 FEDORA_OBJECT_OWNERID = 'beck-greatwar'
 
+# used to identidy the description for the postcard in the description elements
+POSTCARD_DESCRIPTION_LABEL = 'Description:\n'
+
+# used to identidy the floating text in the description elements
+POSTCARD_FLOATINGTEXT_LABEL = 'Text on postcard:\n'
+
+
 import sys
 try:
     sys.path.extend(EXTENSION_DIRS)
@@ -156,18 +163,18 @@ except ImportError:
     pass
 
 try:
-    # use xmlrunner if it's installed; default runner otherwise. download
-    # it from http://github.com/danielfm/unittest-xml-reporting/ to output
-    # test results in JUnit-compatible XML.
-    import xmlrunner
-    TEST_RUNNER='xmlrunner.extra.djangotestrunner.run_tests'
-    TEST_OUTPUT_DIR='test-results'
+    # NOTE: errors if DATABASES is not configured (in some cases),
+    # so this must be done after importing localsettings
+    import django_nose
+    INSTALLED_APPS.append('django_nose')
+    TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
+    NOSE_PLUGINS = [
+        'eulfedora.testutil.EulfedoraSetUp',
+        'eulexistdb.testutil.ExistDBSetUp',
+        # ...
+    ]
+    NOSE_ARGS = ['--with-eulfedorasetup', '--with-existdbsetup']
 except ImportError:
     pass
 
-# used to identidy the description for the postcard in the description elements
-POSTCARD_DESCRIPTION_LABEL = 'Description:\n'
-
-# used to identidy the floating text in the description elements
-POSTCARD_FLOATINGTEXT_LABEL = 'Text on postcard:\n'
 
