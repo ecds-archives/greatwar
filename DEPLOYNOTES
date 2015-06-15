@@ -67,7 +67,11 @@ Fedora
 ^^^^^^
 * Make sure that the greatwar fedora policies are updated to the specified version.
 * To create the Greatwar fedora Collection run the following command from witin
+<<<<<<< HEAD
+the the directory <repocheckout>/greatwar::
+=======
   the the directory <repocheckout>/greatwar::
+>>>>>>> master
 
           $ python ./manage.py syncrepo -u <username> --password
 
@@ -92,8 +96,13 @@ You should use the fedoraAdmin user with this command.
 eXist
 ^^^^^
 * The user 'greatwar' will have to be created through the eXist admin interface
+<<<<<<< HEAD
+if it does not already exist. It should be assigned to the beck and DBA groups.
+Once alll the loading of data a configs are done greatwar should be removed from the DBA group.
+=======
   if it does not already exist. It should be assigned to the beck and DBA groups.
   Once alll the loading of data and configs are done greatwar should be removed from the DBA group.
+>>>>>>> master
 
 * The collection 'greatwar' will have to be created through the eXist admin interface
   if it does not already exist. It should exist under the group beck group and owned by greatwar.
@@ -127,8 +136,15 @@ Trouble Shooting
 ^^^^^^^^^^^^^^^^
 
 If postcard images are not show make sure that the followng objects are loaded to Fedora:
+<<<<<<< HEAD
+* emory-control:DjatokaImageService (DjatokaImageService.xml)
+
+* emory-control:DjatokaImageService_image-source (DjatokaImageService_sdep.xml)
+- Make sure that the WSDL > FedoraDjatoka section is configured with and appropriate host and port
+=======
 
 * emory-control:DjatokaImageService (DjatokaImageService.xml)
 * emory-control:DjatokaImageService_image-source (DjatokaImageService_sdep.xml)
 
  - Make sure that the WSDL > FedoraDjatoka section is configured with and appropriate host and port
+>>>>>>> master
