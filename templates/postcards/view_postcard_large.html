@@ -9,12 +9,12 @@
 {% block page_subtitle %} {{head}} {{ card.label }}{% endblock %}
 
 {% block content %}
-<p><a href="{% url postcards:card pid=card.pid %}">View full details</a></p>
+<p><a href="{% url 'postcards:card' pid=card.pid %}">View full details</a></p>
 <h4>{{card.label}}</h4>
 <table>
   <tr>
     <td>
-        <img src="{% url postcards:img-large pid=card.pid %}" />
+        <img src="{% url 'postcards:img-large' pid=card.pid %}" />
     </td>  <!-- put link to 2x image here -->
   </tr>
 </table>

@@ -16,17 +16,17 @@
 
 <table class="indexlinks">
 <tr>
-     <td><a href='{% url index %}'>Home</a></td>
+     <td><a href='{% url 'index' %}'>Home</a></td>
      <td class="separator">&bull;</td>
-     <td><a href="{% url postcards:index %}">Postcards</a></td>
+     <td><a href="{% url 'postcards:index' %}">Postcards</a></td>
      <td class="separator">&bull;</td>
-     <td><a href="{% url poetry:books %}">Poetry</a></td>
+     <td><a href="{% url 'poetry:books' %}">Poetry</a></td>
      <td class="separator">&bull;</td>
-     <td><a href="{% url links %}">Links</a></td>
+     <td><a href="{% url 'links' %}">Links</a></td>
      <td class="separator">&bull;</td>
-     <td><a href="{% url about %}">About the Site</a></td>
+     <td><a href="{% url 'about' %}">About the Site</a></td>
      <td class="separator">&bull;</td>
-     <td><a href="{% url credits %}">Credits</a></td>
+     <td><a href="{% url 'credits' %}">Credits</a></td>
 </tr>
 
 </table>
@@ -38,21 +38,21 @@
 {% block section_nav %}
  <h3>Navigation</h3>
   <p>Poetry:
-   <a href="{% url poetry:books %}">Browse Volumes</a><br/>
-   <a href="{% url poetry:poets %}">Browse by Poet</a><br/>
-   <a href="{% url poetry:search %}">Advanced Search</a>
+   <a href="{% url 'poetry:books' %}">Browse Volumes</a><br/>
+   <a href="{% url 'poetry:poets' %}">Browse by Poet</a><br/>
+   <a href="{% url 'poetry:search' %}">Advanced Search</a>
   </p>
    <p>Postcards:
-   <a href="{% url postcards:browse %}">Browse Postcards</a><br>
-   <a href="{% url postcards:index %}">Postcards Home</a><br>
-   <a href="{% url postcards:search %}">Advanced Search</a>
+   <a href="{% url 'postcards:browse' %}">Browse Postcards</a><br>
+   <a href="{% url 'postcards:index' %}">Postcards Home</a><br>
+   <a href="{% url 'postcards:search' %}">Advanced Search</a>
   </p>
 {% endblock %}
 </div>
 
 <div class='search'>
 <h3>Search the poetry</h3>
-<form method="get" action="{% url poetry:search %}">
+<form method="get" action="{% url 'poetry:search' %}">
     <table>
     {# { search.as_table } #}
     </table>
@@ -62,7 +62,7 @@
 
 </form>
 <h3>Search the postcards</h3>
-    <form method="get" action="{% url postcards:search %}">
+    <form method="get" action="{% url 'postcards:search' %}">
 <input type='text' name='description' size='15'/>
 <input type='submit' value='Go'/>
 

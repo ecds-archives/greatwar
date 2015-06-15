@@ -9,11 +9,11 @@
 {% block page_subtitle %} {{head}} {{card.label}} {% endblock %}
 
 {% block content %}
-<p><a href="{% url postcards:card-large pid=card.pid %}">View larger image</a></p>
+<p><a href="{% url 'postcards:card-large' pid=card.pid %}">View larger image</a></p>
 <table>
   <tr>
     <td>
-        <img src="{% url postcards:img-medium pid=card.pid %}" />
+        <img src="{% url 'postcards:img-medium' pid=card.pid %}" />
     </td>  <!-- put link to 2x image here -->
     <td class="description">
         <h4>{{card.label}}</h4>
@@ -28,8 +28,8 @@
         <h5>Categories:</h5>
         <ul>
             {% for subject in card.dc.content.subject_list %}
-             <li><a href="{% url postcards:browse %}?subject={{subject}}">{{ subject }}</a></li>
-            {% endfor %}        
+             <li><a href="{% url 'postcards:browse' %}?subject={{subject}}">{{ subject }}</a></li>
+            {% endfor %}
         </ul>
         {% if ark != '' %}  Permanent link for this postcard: <a href="{{ark}}">{{ark}}</a> {% endif %}
      </td>

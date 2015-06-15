@@ -4,7 +4,7 @@
 {% block content %}
 
 <h2>Search for postcards.</h2>
-<form method="get" action="{% url postcards:search %}">
+<form method="get" action="{% url 'postcards:search' %}">
     <table>
     {{ search.as_table }}
     </table>
@@ -14,18 +14,18 @@
 <hr/>
 {% if server_error %}{{ server_error }}{% endif %}
 
-{% if postcards_paginated %}     
+{% if postcards_paginated %}
   <br />
   Displaying {{ postcards_paginated.start_index }} - {{ postcards_paginated.end_index }} of {{ postcards_paginated.paginator.count }} total records.
   <br /><br />
-  
+
   <table class="thumbnail">
       {% for postcard in postcards_paginated.object_list %}
       <tr>
          <td>
-           <a href="{% url postcards:card pid=postcard.pid %}" class="img">
+           <a href="{% url 'postcards:card' pid=postcard.pid %}" class="img">
               <img class="thumbnail" alt="postcard thumbnail"
-                  src="{% url postcards:img-thumb pid=postcard.pid %}" />
+                  src="{% url 'postcards:img-thumb' pid=postcard.pid %}" />
            </a>
          </td>
          <td class="description">
@@ -44,7 +44,7 @@
         <tr><td>no results</td></tr>
       {% endfor %}
   </table>
-  
+
     <table width="100%" border="0" cellpadding="0" cellspacing="0">
     <tr>
       <td colspan="3">&nbsp;</td>
@@ -56,9 +56,9 @@
           <a href="?page={{ postcards_paginated.previous_page_number }}&keyword={{keyword}}&title={{title}}&author={{author}}">[ &nbsp;&lt;&lt; Previous &nbsp;]</a>
       {% endif %}
       </td>
-      
+
        <td align="center">
-        [&nbsp; 
+        [&nbsp;
         {% for current_page in postcards_paginated.paginator.page_range %}
           {% if postcards_paginated.number == current_page %}
             &nbsp;{{ current_page }}&nbsp;
@@ -68,7 +68,7 @@
         {% endfor %}
         &nbsp;]
        </td>
-    
+
         <td width="150" align="right">
         {% if postcards_paginated.has_next %}
             <a href="?page={{ postcards_paginated.next_page_number }}&title={{title}}&description={{description}}">[ &nbsp;Next &gt;&gt;&nbsp; ]</a>

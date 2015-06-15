@@ -40,13 +40,13 @@ body { text-align: center; }
 
 <table class="indexlinks">
 <tr>
-<td><a href="{% url about %}">About the Site</a></td>
+<td><a href="{% url 'about' %}">About the Site</a></td>
 <td class="separator">&bull;</td>
-<td><a href="{% url postcards:index %}">Postcards</a></td>
+<td><a href="{% url 'postcards:index' %}">Postcards</a></td>
 <td class="separator">&bull;</td>
-<td><a href="{% url poetry:books %}">Poetry</a></td>
+<td><a href="{% url 'poetry:books' %}">Poetry</a></td>
 <td class="separator">&bull;</td>
-<td><a href="{% url links %}">Links</a></td>
+<td><a href="{% url 'links' %}">Links</a></td>
 </tr>
 
 </table>

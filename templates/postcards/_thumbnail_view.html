@@ -1,8 +1,8 @@
 {# display a postcard with thumbnail and label, linking to main postcard record #}
 <p class="thumbnail">
-  <a href="{% url postcards:card pid=postcard.pid %}" class="img">
+  <a href="{% url 'postcards:card' pid=postcard.pid %}" class="img">
   <img class="thumbnail" alt="postcard thumbnail"
-      src="{% url postcards:img-thumb pid=postcard.pid %}" />
+      src="{% url 'postcards:img-thumb' pid=postcard.pid %}" />
   </a>
   <br/>
    {{ postcard.label }}
