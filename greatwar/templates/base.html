@@ -1,22 +1,23 @@
+{% load static %}
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
    <title>The Great War {% block pagetitle %} PAGE TITLE {% endblock %} </title>
-   <link rel="icon" type="image/jpeg" href="{{ MEDIA_URL }}/images/favicon.jpg">
-   <link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}/css/site.css"/>
-  
+   <link rel="icon" type="image/jpeg" href="{% static 'images/favicon.jpg' %}">
+   <link rel="stylesheet" type="text/css" href="{% static 'css/site.css' %}"/>
+
   {% block page-head %}
   {% endblock %}
 </head>
 
 <body>
- <div class="topimage"><img src="{{ MEDIA_URL }}/images/topbanner.jpg" alt="The Great War" width='800' height='90' border='0'/></div>
+ <div class="topimage"><img src="{% static 'images/topbanner.jpg' %}" alt="The Great War" width='800' height='90' border='0'/></div>
 
 <table class="indexlinks">
 <tr>
      <td><a href='{% url index %}'>Home</a></td>
-     <td class="separator">&bull;</td>  
+     <td class="separator">&bull;</td>
      <td><a href="{% url postcards:index %}">Postcards</a></td>
      <td class="separator">&bull;</td>
      <td><a href="{% url poetry:books %}">Poetry</a></td>
@@ -50,7 +51,7 @@
 </div>
 
 <div class='search'>
-<h3>Search the poetry</h3> 
+<h3>Search the poetry</h3>
 <form method="get" action="{% url poetry:search %}">
     <table>
     {# { search.as_table } #}
@@ -99,4 +100,4 @@
 
 
 </body>
-</html> 
+</html>

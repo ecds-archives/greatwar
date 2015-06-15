@@ -11,6 +11,10 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
+INTERNAL_IPS = ['127.0.0.1', 'localhost']
+
+ALLOWED_HOSTS = ['localhost']
+
 BASE_DIR = path.dirname(path.abspath(__file__))
 
 #This setting is used instead of the referencing :class:`~django.contrib.sites.models.Site`
@@ -101,13 +105,13 @@ USE_I18N = True
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash if there is a path component (optional in other cases).
 # Examples: "http://media.lawrence.com", "http://example.com/media/"
-MEDIA_URL = '/project/static'
+# MEDIA_URL = '/project/static'
 
 
 # URL prefix for admin media -- CSS, JavaScript and images. Make sure to use a
 # trailing slash.
 # Examples: "http://foo.com/media/", "/media/".
-ADMIN_MEDIA_PREFIX = '/media/'
+# ADMIN_MEDIA_PREFIX = '/media/'
 
 # Make this unique, and don't share it with anybody.
 # Generate one here: http://www.miniwebtool.com/django-secret-key-generator/

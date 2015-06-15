@@ -48,7 +48,6 @@ USE_I18N = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
-
 STATIC_URL = '/static/'
 
 # Absolute path to the directory static files should be collected to.
@@ -102,7 +101,7 @@ TEMPLATE_DIRS = (
     # Don't forget to use absolute paths, not relative paths.
 )
 
-INSTALLED_APPS = (
+INSTALLED_APPS = [
     #'django.contrib.auth',
     #'django.contrib.contenttypes',
     #'django.contrib.sessions',
@@ -114,7 +113,7 @@ INSTALLED_APPS = (
     'greatwar.postcards',
     'greatwar.poetry',
     'greatwar',
-)
+]
 
 
 TEMPLATE_CONTEXT_PROCESSORS = (

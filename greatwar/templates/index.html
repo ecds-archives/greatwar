@@ -1,13 +1,14 @@
+{% load static %}
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-    <link rel="icon" type="image/jpeg" href="{{ MEDIA_URL }}/images/favicon.jpg">
-    <link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}/css/site.css">
+    <link rel="icon" type="image/jpeg" href="{% static '/images/favicon.jpg' %}">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/site.css' %}">
 <title>The Great War</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <style type="text/css">
 a:link	  { color: #000000; }
-a:active  { color: #687c54; } 
+a:active  { color: #687c54; }
 a:visited { color: #800000; }
 a:hover   { background-color: #ededed; }
 body { text-align: center; }
@@ -15,8 +16,8 @@ body { text-align: center; }
   <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"/>
   <link rel="schema.DCTERMS" href="http://purl.org/dc/terms/"/>
   <meta name="DC.title" content="The Great War, 1914-1918"/>
-  <meta name="DC.creator" content="Lewis H. Beck Center for Electronic Collections & Services"/>
-  <meta name="DC.publisher" content="Lewis H. Beck Center for Electronic Collections & Services"/>
+  <meta name="DC.creator" content="Lewis H. Beck Center for Electronic Collections &amp; Services"/>
+  <meta name="DC.publisher" content="Lewis H. Beck Center for Electronic Collections &amp;  Services"/>
   <meta name="DC.subject" content="Poetry"/>
   <meta name="DC.subject" content="Postcards"/>
   <meta name="DC.subject" content="World War I"/>
@@ -33,7 +34,7 @@ body { text-align: center; }
 
 <div class="index">
 <p>
-<img src="{{ MEDIA_URL }}/images/front.jpg" width="600" height="400" border="0"
+<img src="{% static 'images/front.jpg %}" width="600" height="400" border="0"
   alt="The Great War">
 </p>
 
@@ -50,22 +51,22 @@ body { text-align: center; }
 
 </table>
 </div>
-<div class="footer"> 
- 
-   <table width="500" border="0" align="center"> 
-     <tr> 
-        <td><a href="http://beck.library.emory.edu/">The Beck Center</a></td> 
-        <td><a href="http://www.library.emory.edu/">EUCLID</a></td> 
-        <td><a href="http://discovere.emory.edu">DiscoverE</a></td> 
-        <td><a href="http://web.library.emory.edu/">Emory Main Library</a></td> 
-        <td><a href="http://www.emory.edu/">Emory University</a></td> 
-      </tr> 
-    </table> 
- 
- 
+<div class="footer">
+
+   <table width="500" border="0" align="center">
+     <tr>
+        <td><a href="http://beck.library.emory.edu/">The Beck Center</a></td>
+        <td><a href="http://www.library.emory.edu/">EUCLID</a></td>
+        <td><a href="http://discovere.emory.edu">DiscoverE</a></td>
+        <td><a href="http://web.library.emory.edu/">Emory Main Library</a></td>
+        <td><a href="http://www.emory.edu/">Emory University</a></td>
+      </tr>
+    </table>
+
+
 <p class="copy">&copy; 2004 Emory University</p>
-</div> 
- 
- 
-</body> 
-</html> 
+</div>
+
+
+</body>
+</html>
