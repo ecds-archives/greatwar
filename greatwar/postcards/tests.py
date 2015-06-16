@@ -11,25 +11,27 @@ from django.conf import settings
 from eulfedora.server import Repository
 
 from greatwar.postcards.fixtures.postcards import FedoraFixtures
-from util import get_pid_target, absolutize_url
+from util import get_pid_target
 from pidservices.djangowrapper.shortcuts import DjangoPidmanRestClient
 
 exist_fixture_path = path.join(path.dirname(path.abspath(__file__)), 'fixtures')
 exist_index_path = path.join(path.dirname(path.abspath(__file__)), '..', 'exist_index.xconf')
 
 
-
-class PostcardViewsTestCase(DjangoTestCase):
-    repo = Repository()
-
+postcards = []
+def setUpModule():
+    global postcards
     # load fixture postcards to test pidspace
     postcards = FedoraFixtures().load_postcards()
 
+def tearDownModule():
+    global postcards
+    repo = Repository()
+    for p in postcards:
+        repo.purge_object(p.pid)
 
-    def __del__(self):
-        for p in self.postcards:
-            self.repo.purge_object(p.pid)
-
+class PostcardViewsTestCase(DjangoTestCase):
+    repo = Repository()
 
     def test_index(self):
         "Test postcard index/about page"
@@ -45,7 +47,7 @@ class PostcardViewsTestCase(DjangoTestCase):
         self.assertContains(response, reverse('postcards:search'),
             msg_prefix='postcard index page includes link to postcard search')
         # NOTE: currently, count may get off if tests fail and fixtures are not removed
-        self.assertContains(response, 'browse through all <b>3</b> postcards',
+        self.assertContains(response, 'browse through all <b>%d</b> postcards' % len(postcards),
             msg_prefix='postcard index page includes total postcard count')
         # should contain one random postcard  - how to test?
 
@@ -60,7 +62,7 @@ class PostcardViewsTestCase(DjangoTestCase):
                         (expected, response.status_code, browse_url))
 
         # all fixture objects should on browse page
-        for p in self.postcards:
+        for p in postcards:
             self.assertContains(response, reverse('postcards:card',
                     kwargs={'pid': p.pid}),
                     msg_prefix='link to postcard fixture %s should be linked from browse page' % p.pid)
@@ -82,7 +84,7 @@ class PostcardViewsTestCase(DjangoTestCase):
                         (expected, response.status_code, postcard_url))
 
         # first fixture object
-        postcard = self.postcards[0]
+        postcard = postcards[0]
         postcard_url = reverse('postcards:card', kwargs={'pid': postcard.pid})
         response = self.client.get(postcard_url)
         expected = 200
@@ -126,7 +128,7 @@ class PostcardViewsTestCase(DjangoTestCase):
             'Test large view page.'
 
             # page with large postcard display
-            postcard = self.postcards[0]
+            postcard = postcards[0]
             postcard_url = reverse('postcards:card-large', kwargs={'pid': postcard.pid})
             response = self.client.get(postcard_url)
             expected = 200
@@ -149,7 +151,7 @@ class PostcardViewsTestCase(DjangoTestCase):
                         (expected, response.status_code, thumb_url))
 
         # first fixture object
-        postcard = self.postcards[0]
+        postcard = postcards[0]
         # TODO/FIXME: getting a 500 error on this; something wrong with fixture?
         thumb_url = reverse('postcards:img-thumb', kwargs={'pid': postcard.pid})
         #response = self.client.get(thumb_url)
