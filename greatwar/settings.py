@@ -59,13 +59,13 @@ STATICFILES_DIRS = [
 
 # Absolute path to the directory that holds media.
 # Example: "/home/media/media.lawrence.com/"
-MEDIA_ROOT = path.join(BASE_DIR, 'media')
-# '/home/rsutton/workarea/django-greatwar/media/'
+#MEDIA_ROOT = path.join(BASE_DIR, 'media')
+#'Users/sepalme/Desktop/greatwar/sitemedia'
 
 # URL prefix for admin media -- CSS, JavaScript and images. Make sure to use a
 # trailing slash.
 # Examples: "http://foo.com/media/", "/media/".
-ADMIN_MEDIA_PREFIX = '/media/'
+#ADMIN_MEDIA_PREFIX = '/media/'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
