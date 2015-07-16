@@ -4,3 +4,8 @@
 # local ignores
 localsettings.py
 static
+.coverage
+.noseids
+coverage.xml
+nosetests.xml
+no_db
