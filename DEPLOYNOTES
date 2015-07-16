@@ -98,14 +98,14 @@ eXist
 * The collection 'greatwar' will have to be created through the eXist admin interface
   if it does not already exist. It should exist under the group beck group and owned by greatwar.
 
-* To load the poetry XMLs login to Exist as the greatwar user, navigate to the greatwar collection 
+* To load the poetry XMLs login to Exist as the greatwar user, navigate to the greatwar collection
   and select the  files to upload.
 
 .. Note:
 
-   The poetry XMLs can be obtained from here: https://svn.library.emory.edu/svn/greatwar/trunk/xml 
+   The poetry XMLs can be obtained from here: https://svn.library.emory.edu/svn/greatwar/trunk/xml
 
-   Only use the .xml files in this directory. 
+   Only use the .xml files in this directory.
    In most enviroments this step should already be done.
 
 * Run the following command to load the index for the first time::
@@ -132,3 +132,20 @@ If postcard images are not show make sure that the followng objects are loaded t
 * emory-control:DjatokaImageService_image-source (DjatokaImageService_sdep.xml)
 
  - Make sure that the WSDL > FedoraDjatoka section is configured with and appropriate host and port
+
+
+
+0.2
+---
+
+* This update includes an upgrade to Django 1.5, so some files have moved.
+  The wsgi script is now greatwar/wsgi.py, manage.py is at the top level
+  of the project instead if inside it, and static content should be
+  configured in apache at a static/ url instead of a media/ url.
+
+* Now requires a minimal database to support downtime and banners.  Update
+  the database::
+
+      python manage.py syncdb
+
+
