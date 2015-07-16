@@ -38,6 +38,12 @@ you are already in an activated shell.
 
 Pip Dependancies
 ^^^^^^^^^^^^^^^^
+
+You can use fabric to install dependencies::
+
+    pip install fabric
+    fab build
+
 To install python dependencies, cd into the repository checkout and::
 
 	  $ pip install -r pip-dependencies
