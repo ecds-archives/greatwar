@@ -52,7 +52,7 @@ Settings
 ^^^^^^^^
 Install and configure like other django applications.
 
-Copy localsettings-sample.py to localsettings.py and customize the settings.
+Copy localsettings.py.sample to localsettings.py and customize the settings.
 The site does not require special permission to access Fedora.
 FEDORA_USER and FEDORA_PASS variables should NOT be configured in staging or production.
 
