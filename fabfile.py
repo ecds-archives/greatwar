@@ -100,21 +100,6 @@ def prep_source():
     # create a tar archive of the specified version and extract inside the bulid directory
     local('git archive --format=tar --prefix=%(build_dir)s/ %(git_rev)s | (cd build && tar xf -)' % env)
 
-    # local settings handled remotely
-
-    if env.url_prefix:
-        env.apache_conf = 'build/%(build_dir)s/apache/%(project)s.conf' % env
-        # back up the unmodified apache conf
-        orig_conf = env.apache_conf + '.orig'
-        local('cp %s %s' % (env.apache_conf, orig_conf))
-        with open(orig_conf) as original:
-            text = original.read()
-        text = text.replace('WSGIScriptAlias / ', 'WSGIScriptAlias %(url_prefix)s ' % env)
-        text = text.replace('Alias /static/ ', 'Alias %(url_prefix)s/static ' % env)
-        text = text.replace('<Location />', '<Location %(url_prefix)s/>' % env)
-        with open(env.apache_conf, 'w') as conf:
-            conf.write(text)
-
 
 def package_source():
     'Create a tarball of the source tree.'
@@ -153,7 +138,7 @@ def setup_virtualenv(python=None):
             % (env['build_dir'], python_opt), user=env.remote_acct)
         # activate the environment and install required packages
         with prefix('source env/bin/activate'):
-            pip_cmd = 'pip install -r pip-install-req.txt'
+            pip_cmd = 'pip install -r pip-dependencies'
             if env.remote_proxy:
                 pip_cmd += ' --proxy=%(remote_proxy)s' % env
             sudo(pip_cmd, user=env.remote_acct)
