@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-.. image:: ../media/images/topbanner.jpg
+.. image:: ../sitemedia/images/topbanner.jpg
 
 Great War Project Contents:
 

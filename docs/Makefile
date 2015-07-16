@@ -2,10 +2,10 @@
 #
 
 # Putting the project source on the python path.
-export PYTHONPATH=..:../externals/django-modules:../greatwar
-# sphinx needs django settings while loading eulcore.django.* to introspect
-# those modules for autodocs
-export DJANGO_SETTINGS_MODULE=doc_djangosettings
+export PYTHONPATH:=$(PYTHONPATH):.:..
+# sphinx needs django settings to load django code for introspection
+export DJANGO_SETTINGS_MODULE=greatwar.settings
+
 
 # You can set these variables from the command line.
 SPHINXOPTS    =
