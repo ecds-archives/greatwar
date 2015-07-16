@@ -137,7 +137,7 @@ def postcard_image(request, pid, size):
         elif size == 'large':
             image = obj.large_image()
 
-        return HttpResponse(image, mimetype='image/jpeg')
+        return HttpResponse(image, content_type='image/jpeg')
 
     except RequestFailed as fail:
         raise Http404

@@ -7,6 +7,7 @@ from os import path
 from django.core.urlresolvers import reverse
 from django.test import TestCase as DjangoTestCase
 from django.conf import settings
+from django.utils.http import urlquote
 
 from eulfedora.server import Repository
 
@@ -166,7 +167,9 @@ class UtilTest(DjangoTestCase):
 
    def test_get_pid_target(self):
        target = get_pid_target('postcards:card')
-       expected = '%s/postcards/%s:%s' %(settings.BASE_URL, settings.FEDORA_PIDSPACE, DjangoPidmanRestClient.pid_token)
+
+       expected = '%s/postcards/%s:%s' %(settings.BASE_URL,
+           settings.FEDORA_PIDSPACE, urlquote(DjangoPidmanRestClient.pid_token))
        self.assertEqual(target,expected)
 
 

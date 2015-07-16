@@ -10,3 +10,5 @@ coverage.xml
 nosetests.xml
 no_db
 docs/_build
+build
+dist

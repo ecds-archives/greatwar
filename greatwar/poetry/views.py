@@ -25,7 +25,7 @@ def book_xml(request, doc_id):
     try:
         book = PoetryBook.objects.get(id__exact=doc_id)
         xml_tei = book.serialize(pretty=True)
-        return HttpResponse(xml_tei, mimetype='application/tei+xml')
+        return HttpResponse(xml_tei, content_type='application/tei+xml')
     except DoesNotExist:
         raise Http404
 

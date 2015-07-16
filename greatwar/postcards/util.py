@@ -3,7 +3,6 @@ from django.utils.encoding import iri_to_uri
 from django.core.urlresolvers import reverse
 from pidservices.djangowrapper.shortcuts import DjangoPidmanRestClient
 
-default_pidspace = getattr(settings, 'FEDORA_PIDSPACE', None)
 
 def absolutize_url(local_url):
     '''Convert a local url to an absolute url, with scheme and server name,
@@ -28,6 +27,7 @@ def get_pid_target(view_name):
     '''Get a pidman-ready target for a named view.'''
 
     ENCODED_PID_TOKEN = iri_to_uri(DjangoPidmanRestClient.pid_token)
+    default_pidspace = getattr(settings, 'FEDORA_PIDSPACE', None)
 
     # first just reverse the view name.
     pid = '%s:%s' % (default_pidspace, DjangoPidmanRestClient.pid_token)

@@ -177,10 +177,9 @@ def update_links():
 @task
 def syncdb():
     '''Remotely run syncdb and migrate after deploy and configuration.'''
+    configure()
     with cd('%(remote_path)s/%(build_dir)s' % env):
         with prefix('source env/bin/activate'):
-            sudo('python manage.py syncdb --noinput' % env,
-                 user=env.remote_acct)
             sudo('python manage.py migrate --noinput' % env,
                  user=env.remote_acct)
 
