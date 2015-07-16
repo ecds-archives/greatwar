@@ -1,9 +1,7 @@
-django>=1.5,<1.6
+django>=1.6,<1.7
 python-dateutil
-rdflib>=3.0
-ply
 eulxml
-# need next version to remove unittest2 dep
+# need next version of eulexistdb to remove unittest2 dep
 #eulexistdb
 -e git://github.com/emory-libraries/eulexistdb.git@develop#egg=eulexistdb
 eulcommon
