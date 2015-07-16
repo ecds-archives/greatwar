@@ -7,5 +7,3 @@ eulexistdb
 eulcommon
 eulfedora
 https://wilson.library.emory.edu/jenkins/job/pidman-rest-client_1.2.x/lastSuccessfulBuild/artifact/pidmanclient/dist/pidservices-1.2.0.tar.gz
-unittest2
-django-nose
