@@ -12,6 +12,13 @@
 </head>
 
 <body>
+
+  {% block mx_banner %}
+      {% if banner %}
+         {% include 'mx/banner.html' %}
+      {% endif %}
+  {% endblock %}
+
  <div class="topimage"><img src="{% static 'images/topbanner.jpg' %}" alt="The Great War" width='800' height='90' border='0'/></div>
 
 <table class="indexlinks">

@@ -32,6 +32,13 @@ body { text-align: center; }
 
 <body bgcolor="#5d6a50">
 
+  {% block mx_banner %}
+      {% if banner %}
+         {% include 'mx/banner.html' %}
+      {% endif %}
+  {% endblock %}
+
+
 <div class="index">
 <p>
 <img src="{% static 'images/front.jpg' %}" width="600" height="400" border="0"
