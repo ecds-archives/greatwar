@@ -7,5 +7,6 @@ eulxml
 #eulexistdb
 -e git://github.com/emory-libraries/eulexistdb.git@develop#egg=eulexistdb
 eulcommon
-eulfedora
+#eulfedora
+-e git://github.com/emory-libraries/eulfedora.git@feature/fedora3.8-compatibility#egg=eulfedora
 https://wilson.library.emory.edu/jenkins/job/pidman-rest-client_1.2.x/lastSuccessfulBuild/artifact/pidmanclient/dist/pidservices-1.2.0.tar.gz
