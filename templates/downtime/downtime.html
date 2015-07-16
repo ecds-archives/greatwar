@@ -1,0 +1,35 @@
+{% extends 'eultheme/downtime_base.html' %}
+{% load static %}
+
+{% block css %}
+  {{ block.super }}
+<style type="text/css">{# tweak styles to include site banner image #}
+.navbar {
+    padding-bottom: 100px;
+    background-image: url('{% static "images/topbanner.jpg" %}');
+    background-repeat: no-repeat;
+    background-color: #f8f8f8;
+    background-position: 0 50px;
+}
+body {
+    margin-top: 50px;
+}
+</style>
+{% endblock %}
+
+
+{% block navlinks %}
+    <li><a href='{% url 'index' %}'>The Great War</a></li>
+    <li><a href="{% url 'postcards:index' %}">Postcards</a></li>
+    <li><a href="{% url 'poetry:books' %}">Poetry</a></li>
+    <li><a href="{% url 'links' %}">Links</a></li>
+    <li><a href="{% url 'about' %}">About the Site</a></li>
+    <li><a href="{% url 'credits' %}">Credits</a></li>
+{% endblock %}
+
+{% block admin-navlink %} {# adding block to allow override/disable #}
+    {% if user.is_staff %}
+    <li><a href="{% block admin-url %}{% url 'admin:index' %}{% endblock %}">Admin</a></li>
+    {% endif %}
+
+{% endblock %}

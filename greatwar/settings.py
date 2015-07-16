@@ -5,14 +5,6 @@ from os import path
 # Django sets too many absolute paths.
 BASE_DIR = path.dirname(path.dirname(__file__))
 
-MIDDLEWARE_CLASSES = (
-    'django.middleware.common.CommonMiddleware',
-    'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.messages.middleware.MessageMiddleware',
-
-)
-
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
@@ -80,6 +72,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
+    'eultheme.middleware.DownpageMiddleware'
 )
 
 ROOT_URLCONF = 'greatwar.urls'
@@ -92,29 +85,36 @@ TEMPLATE_DIRS = (
 )
 
 INSTALLED_APPS = [
-    #'django.contrib.auth',
-    #'django.contrib.contenttypes',
-    #'django.contrib.sessions',
+    'django.contrib.auth',
+    'django.contrib.admin',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
     #'django.contrib.sites',
     'django.contrib.staticfiles',
+    'django.contrib.humanize',
     'eulxml',
     'eulexistdb',
     'eulfedora',
+    'eultheme',
+    'widget_tweaks',
+    'downtime',
     'greatwar.postcards',
     'greatwar.poetry',
-    'greatwar',
 ]
 
 
 TEMPLATE_CONTEXT_PROCESSORS = (
-    # "django.core.context_processors.auth",
+    "django.contrib.auth.context_processors.auth",
     "django.core.context_processors.debug",
     "django.core.context_processors.i18n",
     "django.core.context_processors.media",
     "django.contrib.messages.context_processors.messages",
     # additional context processors
     "django.core.context_processors.request", # always include request in render context
-    )
+    "eultheme.context_processors.template_settings"
+)
+
+
 
 
 EXISTDB_INDEX_CONFIGFILE = path.join(BASE_DIR, "greatwar", "exist_index.xconf")
@@ -133,6 +133,24 @@ POSTCARD_DESCRIPTION_LABEL = 'Description:\n'
 
 # used to identidy the floating text in the description elements
 POSTCARD_FLOATINGTEXT_LABEL = 'Text on postcard:\n'
+
+# exempted paths for downtime; exempts any urls starting with these strings
+DOWNTIME_EXEMPT_PATHS = (
+    '/about',
+    '/admin',
+    '/poetry',
+    '/links',
+    '/credits'
+    '/credits/foo'
+    '/credits/foo/bar/baz'
+    '/credits/foo/bar'
+)
+DOWNTIME_EXEMPT_EXACT_URLS = (
+    '/',
+)
+
+# list of IPs that can access the site despite downtime
+# DOWNTIME_ALLOWED_IPS = ['127.0.0.1']
 
 
 import sys

@@ -1,15 +1,16 @@
 from django.conf import settings
 from django.conf.urls import patterns, url, include
 from django.conf.urls.static import static
+from django.contrib import admin
 
-# Uncomment the next two lines to enable the admin:
-# from django.contrib import admin
-# admin.autodiscover()
+
+admin.autodiscover()
+
 
 urlpatterns = patterns('',
     # Example:
-    # (r'^greatwar/', include('greatwar.foo.urls')),
     url(r'^$', 'greatwar.views.index', name="index"),
+    url(r'^$', 'greatwar.views.index', name="site-index"), # required by eultheme
     url(r'^about/$', 'greatwar.views.about', name="about"),
     url(r'^links/$', 'greatwar.views.links', name="links"),
     url(r'^credits/$', 'greatwar.views.credits', name="credits"),
@@ -19,9 +20,8 @@ urlpatterns = patterns('',
     # to INSTALLED_APPS to enable admin documentation:
     # (r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
-    # Uncomment the next line to enable the admin:
-    # (r'^admin/', include(admin.site.urls)),
-
+    # django admin, for downtime/banners
+    (r'^admin/', include(admin.site.urls)),
 )
 
 if settings.DEV_ENV:
