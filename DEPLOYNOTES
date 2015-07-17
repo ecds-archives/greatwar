@@ -154,4 +154,4 @@ If postcard images are not show make sure that the followng objects are loaded t
 
       python manage.py syncdb
 
-
+* Configure settings for LDAP (see ``localsettings.py.sample``)
