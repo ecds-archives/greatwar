@@ -51,7 +51,7 @@ def div(request, doc_id, div_id):
         extra_fields = ['book__id', 'book__title', 'nextdiv__id', 'nextdiv__title',
             'prevdiv__id', 'prevdiv__title', 'book__source']
         div = Poem.objects.also(*extra_fields).filter(book__id=doc_id, **filter).get(id=div_id)
-        body = div.xsl_transform(filename=os.path.join(settings.BASE_DIR, 'poetry', 'xslt', 'div.xsl'))
+        body = div.to_html()
         return render_to_response('poetry/div.html', { 'div' : div,
                                                        'body' : body.serialize(),
                                                        'url_params' : url_params,
