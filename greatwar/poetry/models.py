@@ -114,11 +114,11 @@ class Poem(XmlModel, TeiDiv):
 
     xsl_file = os.path.join(settings.BASE_DIR, 'poetry', 'xslt', 'div.xsl')
 
-    # load compiled xslt
-    xsl = load_xslt(xsl_file)
+    # NOTE: it *should* be more efficient to load the xslt once,
+    # but that seems to cause problems under apache wsgi
 
     def to_html(self):
-        return self.xsl_transform(xsl=self.xsl)
+        return self.xsl_transform(filename=self.xsl_file)
 
 
 class Poet(XmlModel, XmlObject):
