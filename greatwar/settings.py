@@ -98,6 +98,7 @@ INSTALLED_APPS = [
     'eultheme',
     'widget_tweaks',
     'downtime',
+    'django_auth_ldap',
     'greatwar.postcards',
     'greatwar.poetry',
 ]
