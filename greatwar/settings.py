@@ -147,9 +147,6 @@ DOWNTIME_EXEMPT_PATHS = (
     '/poetry',
     '/links',
     '/credits'
-    '/credits/foo'
-    '/credits/foo/bar/baz'
-    '/credits/foo/bar'
 )
 DOWNTIME_EXEMPT_EXACT_URLS = (
     '/',
