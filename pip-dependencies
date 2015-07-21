@@ -9,5 +9,7 @@ eulcommon
 #eulfedora
 -e git://github.com/emory-libraries/eulfedora.git@feature/fedora3.8-compatibility#egg=eulfedora
 https://wilson.library.emory.edu/jenkins/job/pidman-rest-client_1.2.x/lastSuccessfulBuild/artifact/pidmanclient/dist/pidservices-1.2.0.tar.gz
+# require at least downtime 1.0.4 for exempting exact urls
+django-downtime>=1.0.4
 -e git://github.com/emory-libraries/django-eultheme.git@1.1#egg=eultheme
 django-auth-ldap
