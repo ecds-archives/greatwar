@@ -155,3 +155,8 @@ If postcard images are not show make sure that the followng objects are loaded t
       python manage.py syncdb
 
 * Configure settings for LDAP (see ``localsettings.py.sample``)
+
+* Make sure that the Apache configuration includes the following,
+  so that XSLT files can be loaded and used for poetry display::
+
+      WSGIApplicationGroup %{GLOBAL}
