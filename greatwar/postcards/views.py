@@ -15,6 +15,14 @@ import logging
 
 # FIXME: set repo default type somewhere in a single place
 
+
+# search options for finding postcards
+# note that pidspace restriction is largely for testing purposes
+postcard_search_opts = {
+    'relation': settings.RELATION,
+    'pid': '%s:*' % settings.FEDORA_PIDSPACE
+}
+
 @cache_page(900)
 def summary(request):
     '''Postcard summary/about page with information about the postcards and
@@ -24,8 +32,7 @@ def summary(request):
     # - used to get total count, and to display a random postcard
     # NOTE: this may be inefficient when all postcards are loaded; consider caching
     repo = Repository()
-    search_opts = {'relation': settings.RELATION }
-    postcards = list(repo.find_objects(**search_opts))
+    postcards = list(repo.find_objects(**postcard_search_opts))
     count = len(postcards)
     # TODO: get categories from fedora collection object
     categories = PostcardCollection.get().interp.content.interp_groups
@@ -40,16 +47,13 @@ def browse(request):
     "Browse postcards and display thumbnail images."
     repo = Repository()
     repo.default_object_type = ImageObject
-    # TEMPORARY: restrict to postcards by pidspace
-    # NOTE: tests rely somewhat on restriction by pidspace...
-    search_opts = {'relation': settings.RELATION }
     number_of_results = 15
     context = {}
 
+    search_opts = postcard_search_opts.copy()
     if 'subject' in request.GET:
         context['subject'] = request.GET['subject']
         search_opts['subject'] = request.GET['subject']
-
 
     postcards = repo.find_objects(**search_opts)
 
@@ -62,7 +66,7 @@ def browse(request):
     try:
         postcard_page = postcard_paginator.page(page)
     except (EmptyPage, InvalidPage):
-        postcard_page = postcard_paginator.page(paginator.num_pages)
+        postcard_page = postcard_paginator.page(postcard_paginator.num_pages)
 
     context['postcards_paginated'] = postcard_page
 
@@ -139,7 +143,7 @@ def postcard_image(request, pid, size):
 
         return HttpResponse(image, content_type='image/jpeg')
 
-    except RequestFailed as fail:
+    except RequestFailed:
         raise Http404
 
 
@@ -175,7 +179,7 @@ def search(request):
             try:
                 search_page = search_paginator.page(page)
             except (EmptyPage, InvalidPage):
-                search_page = search_paginator.page(paginator.num_pages)
+                search_page = search_paginator.page(search_paginator.num_pages)
 
 
             context['postcards_paginated'] = search_page

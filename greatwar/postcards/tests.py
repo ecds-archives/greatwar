@@ -1,7 +1,7 @@
 """
 Great War Postcards Test Cases
 """
-
+import logging
 from os import path
 
 from django.core.urlresolvers import reverse
@@ -19,11 +19,16 @@ exist_fixture_path = path.join(path.dirname(path.abspath(__file__)), 'fixtures')
 exist_index_path = path.join(path.dirname(path.abspath(__file__)), '..', 'exist_index.xconf')
 
 
+logger = logging.getLogger(__name__)
+
+
 postcards = []
 def setUpModule():
     global postcards
     # load fixture postcards to test pidspace
     postcards = FedoraFixtures().load_postcards()
+    logger.debug('Loaded postcard fixtures as %s' % \
+        ', '.join(pc.pid for pc in postcards))
 
 def tearDownModule():
     global postcards
@@ -48,8 +53,11 @@ class PostcardViewsTestCase(DjangoTestCase):
         self.assertContains(response, reverse('postcards:search'),
             msg_prefix='postcard index page includes link to postcard search')
         # NOTE: currently, count may get off if tests fail and fixtures are not removed
-        self.assertContains(response, 'browse through all <b>%d</b> postcards' % len(postcards),
-            msg_prefix='postcard index page includes total postcard count')
+        self.assertEqual(len(postcards), response.context['count'],
+            'postcard index context should include total postcard count of %d, got %d' % \
+            (len(postcards), response.context['count']))
+        # self.assertContains(response, 'browse through all <b>%d</b> postcards' % len(postcards),
+        #     msg_prefix='postcard index page includes total postcard count')
         # should contain one random postcard  - how to test?
 
     def test_browse(self):
