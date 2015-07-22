@@ -141,7 +141,7 @@ def search(request):
         })
     #no search conducted yet, default form
     else:
-        response = render(requiest, 'poetry/search.html', {
+        response = render(request, 'poetry/search.html', {
             "search": form
             })
 
