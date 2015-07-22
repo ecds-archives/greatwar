@@ -14,7 +14,7 @@
 <hr/>
 {% if server_error %}{{ server_error }}{% endif %}
 
-{% if postcards_paginated %}
+{% if search.is_valid %} {# check if there was a search; empty paginator seems to evaluate as false in current djangos #}
   <br />
   Displaying {{ postcards_paginated.start_index }} - {{ postcards_paginated.end_index }} of {{ postcards_paginated.paginator.count }} total records.
   <br /><br />
