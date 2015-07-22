@@ -1,19 +1,18 @@
-from django.shortcuts import render_to_response
-from django.template import RequestContext
+from django.shortcuts import render
 
 def index(request):
     "Front page"
-    return render_to_response('index.html', {}, context_instance=RequestContext(request))
+    return render(request, 'index.html')
 
 
 def about(request):
     "About the site"
-    return render_to_response('about.html', {}, context_instance=RequestContext(request))
+    return render(request ,'about.html')
 
 def links(request):
     "Links to sites about World War I"
-    return render_to_response('links.html', {}, context_instance=RequestContext(request))
+    return render(request, 'links.html')
 
 def credits(request):
     "Site production credits"
-    return render_to_response('credits.html', {}, context_instance=RequestContext(request))
+    return render(request, 'credits.html')

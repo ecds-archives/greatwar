@@ -1,7 +1,7 @@
 from django.http import HttpResponse, Http404
 from django.conf import settings
 from django.core.paginator import Paginator, InvalidPage, EmptyPage
-from django.shortcuts import render_to_response
+from django.shortcuts import render
 from django.template import RequestContext
 from django.views.decorators.cache import cache_page
 
@@ -34,14 +34,13 @@ def summary(request):
     repo = Repository()
     postcards = list(repo.find_objects(**postcard_search_opts))
     count = len(postcards)
-    # TODO: get categories from fedora collection object
+    # get categories from fedora collection object
     categories = PostcardCollection.get().interp.content.interp_groups
-    return render_to_response('postcards/index.html', {
-                               'categories' : categories,
-                               'count' : count,
-                               'postcards': postcards,
-                               },
-                              context_instance=RequestContext(request))
+    return render(request, 'postcards/index.html', {
+       'categories' : categories,
+       'count' : count,
+       'postcards': postcards,
+       })
 
 def browse(request):
     "Browse postcards and display thumbnail images."
@@ -70,8 +69,7 @@ def browse(request):
 
     context['postcards_paginated'] = postcard_page
 
-    return render_to_response('postcards/browse.html', context,
-                                context_instance=RequestContext(request))
+    return render(request, 'postcards/browse.html', context)
 
 def view_postcard(request, pid):
     '''View a single postcard at actual postcard size, with description.'''
@@ -105,9 +103,8 @@ def view_postcard(request, pid):
             postcard_text = ''
 
 
-        return render_to_response('postcards/view_postcard.html',
-                              {'card' : obj, 'ark' : ark, 'description' : description, 'postcard_text' : postcard_text },
-                                context_instance=RequestContext(request))
+        return render(request, 'postcards/view_postcard.html',
+            {'card': obj, 'ark': ark, 'description': description, 'postcard_text': postcard_text})
     except RequestFailed:
         raise Http404
 
@@ -118,9 +115,8 @@ def view_postcard_large(request, pid):
         obj = repo.get_object(pid, type=ImageObject)
         obj.label   # access object label to trigger 404 before we get to the template
 
-        return render_to_response('postcards/view_postcard_large.html',
-                              {'card' : obj },
-                                context_instance=RequestContext(request))
+        return render(request, 'postcards/view_postcard_large.html',
+            {'card': obj })
     except RequestFailed:
         raise Http404
 
@@ -194,8 +190,7 @@ def search(request):
                     'this problem persists, please alert the ' + \
                     'repository administrator.'
 
-    response = render_to_response('postcards/search.html', context,
-                context_instance=RequestContext(request))
+    response = render(request, 'postcards/search.html', context)
     if response_code is not None:
         response.status_code = response_code
     return response
