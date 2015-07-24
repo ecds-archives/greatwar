@@ -3,7 +3,6 @@ from django.utils.safestring import mark_safe
 import os
 
 from eulxml.xmlmap import XmlObject
-from eulxml.xmlmap.core import load_xslt
 from eulxml.xmlmap.dc import DublinCore
 from eulxml.xmlmap.fields import StringField, NodeField, StringListField, NodeListField
 from eulxml.xmlmap.teimap import Tei, TeiDiv, TEI_NAMESPACE
