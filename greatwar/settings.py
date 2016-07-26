@@ -115,9 +115,10 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     "django.core.context_processors.media",
     "django.contrib.messages.context_processors.messages",
     # additional context processors
-    "django.core.context_processors.request", # always include request in render context
+    "django.core.context_processors.request",  # always include request in render context
     "eultheme.context_processors.template_settings",
-    "eultheme.context_processors.downtime_context"
+    "eultheme.context_processors.downtime_context",
+    "greatwar.version_context",  # include app version
 )
 
 
