@@ -11,3 +11,7 @@ __version_info__ = (0, 3, 0, 'dev')
 __version__ = '.'.join([ str(i) for i in __version_info__[:-1] ])
 if __version_info__[-1] is not None: # Adds dash
     __version__ += ('-%s' % (__version_info__[-1],))
+
+# context processor to add version to the template environment
+def version_context(request):
+    return {'SW_VERSION': __version__}
