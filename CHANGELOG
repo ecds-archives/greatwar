@@ -19,6 +19,8 @@ as the version number of the tag.
 * Updated to Django 1.9.
 * Converted GitHub repository to Git Flow for branch management.
 * Software version is now displayed in site footer.
+* Enabled django-debug-toolbar with eulexist and eulfedora panels for
+  development.
 
 0.2 - Maintenance and Fedora 3.8 migration support
 --------------------------------------------------

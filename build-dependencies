@@ -1,3 +1,5 @@
 sphinx
 coverage
 django-nose
+django-debug-toolbar
+
