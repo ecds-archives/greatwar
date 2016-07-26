@@ -12,6 +12,11 @@ Information in these sections refers to delivered by version number of the
 software.  These corrispond to the version tag in the source code as well
 as the version number of the tag.
 
+0.3 - Maintenance and eXist 2.2 upgrade
+---------------------------------------
+
+* Updated and tested against eXist 2.2
+* Converted GitHub repository to Git Flow for branch management.
 
 0.2 - Maintenance and Fedora 3.8 migration support
 --------------------------------------------------
