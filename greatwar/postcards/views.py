@@ -114,9 +114,8 @@ def view_postcard_large(request, pid):
     try:
         obj = repo.get_object(pid, type=ImageObject)
         obj.label   # access object label to trigger 404 before we get to the template
-
         return render(request, 'postcards/view_postcard_large.html',
-            {'card': obj })
+                      {'card': obj})
     except RequestFailed:
         raise Http404
 
