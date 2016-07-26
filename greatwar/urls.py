@@ -1,19 +1,20 @@
 from django.conf import settings
-from django.conf.urls import patterns, url, include
+from django.conf.urls import url, include
 from django.conf.urls.static import static
 from django.contrib import admin
+
+from greatwar import views
 
 
 admin.autodiscover()
 
-
-urlpatterns = patterns('',
+urlpatterns = [
     # Example:
-    url(r'^$', 'greatwar.views.index', name="index"),
-    url(r'^$', 'greatwar.views.index', name="site-index"), # required by eultheme
-    url(r'^about/$', 'greatwar.views.about', name="about"),
-    url(r'^links/$', 'greatwar.views.links', name="links"),
-    url(r'^credits/$', 'greatwar.views.credits', name="credits"),
+    url(r'^$', views.index, name="index"),
+    url(r'^$', views.index, name="site-index"), # required by eultheme
+    url(r'^about/$', views.about, name="about"),
+    url(r'^links/$', views.links, name="links"),
+    url(r'^credits/$', views.credits, name="credits"),
     url(r'^poetry/', include('greatwar.poetry.urls', namespace='poetry')),
     url(r'^postcards/', include('greatwar.postcards.urls', namespace='postcards')),
     # Uncomment the admin/doc line below and add 'django.contrib.admindocs'
@@ -21,8 +22,8 @@ urlpatterns = patterns('',
     # (r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
     # django admin, for downtime/banners
-    (r'^admin/', include(admin.site.urls)),
-)
+    url(r'^admin/', include(admin.site.urls)),
+]
 
 if settings.DEV_ENV:
 #     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
