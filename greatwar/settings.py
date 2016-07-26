@@ -121,14 +121,12 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 )
 
 
-
-
 EXISTDB_INDEX_CONFIGFILE = path.join(BASE_DIR, "greatwar", "exist_index.xconf")
 
 # temporary pid - should eventually use ARK. must match PID in fixture
 POSTCARD_COLLECTION_PID = 'emory-control:Beck-GreatWar-Postcards-collection'
 
-#This is used to identify Great War records.  The relation is stored on each postcard object
+# This is used to identify Great War records.  The relation is stored on each postcard object
 RELATION = 'The Great War 1914-1918'
 
 # the default owner of all fedora objects created by this app
@@ -154,7 +152,6 @@ DOWNTIME_EXEMPT_EXACT_URLS = (
 
 # list of IPs that can access the site despite downtime
 # DOWNTIME_ALLOWED_IPS = ['127.0.0.1']
-
 
 import sys
 try:
