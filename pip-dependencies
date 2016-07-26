@@ -1,9 +1,9 @@
-django>=1.8
+django>=1.8,<1.9
 python-dateutil
-eulxml>=0.21.2
-eulexistdb>=0.19.2
+eulxml>=1.1
+eulexistdb>=0.20
 eulcommon
-eulfedora>=1.1
+eulfedora>=1.6
 https://wilson.library.emory.edu/jenkins/job/pidman-rest-client_1.2.x/lastSuccessfulBuild/artifact/pidmanclient/dist/pidservices-1.2.0.tar.gz
 # require at least downtime 1.0.4 for exempting exact urls
 django-downtime>=1.0.4
