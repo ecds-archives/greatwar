@@ -15,8 +15,10 @@ as the version number of the tag.
 0.3 - Maintenance and eXist 2.2 upgrade
 ---------------------------------------
 
-* Updated and tested against eXist 2.2
+* Updated to use and tested against eXist 2.2
+* Updated to Django 1.9.
 * Converted GitHub repository to Git Flow for branch management.
+* Software version is now displayed in site footer.
 
 0.2 - Maintenance and Fedora 3.8 migration support
 --------------------------------------------------
@@ -28,7 +30,7 @@ as the version number of the tag.
 * As a greatwar site user I will see a banner that displays an
   informative message on every page of the site so that I can be
   informed of future site maintenance or other events.
-* Upgrade to Django 1.5 and current versions of eulfedora, eulexistdb
+* Upgrade to Django 1.8 and current versions of eulfedora, eulexistdb
 * Minimal Django admin site with LDAP login
 
 0.1.0 Django Poetry Search
