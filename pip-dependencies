@@ -1,13 +1,9 @@
-django>=1.8
+django>=1.8,<1.9
 python-dateutil
-#eulxml  # dev eulxml for load_xslt, should be 0.22
--e git://github.com/emory-libraries/eulxml.git@develop#egg=eulxml
-# need next version of eulexistdb to remove unittest2 dep
-#eulexistdb
--e git://github.com/emory-libraries/eulexistdb.git@develop#egg=eulexistdb
+eulxml>=1.1
+eulexistdb>=0.20
 eulcommon
-#eulfedora
--e git://github.com/emory-libraries/eulfedora.git@feature/fedora3.8-compatibility#egg=eulfedora
+eulfedora>=1.6
 https://wilson.library.emory.edu/jenkins/job/pidman-rest-client_1.2.x/lastSuccessfulBuild/artifact/pidmanclient/dist/pidservices-1.2.0.tar.gz
 # require at least downtime 1.0.4 for exempting exact urls
 django-downtime>=1.0.4
