@@ -84,7 +84,7 @@ def _show_poets(request, poets, current_letter=None):
     except (EmptyPage, InvalidPage):
         poets = poet_paginator.page(poet_paginator.num_pages)
 
-    return render('poetry/poets.html', {
+    return render(request, 'poetry/poets.html', {
         'poets': poets,
         'first_letters': first_letters,
         'current_letter': current_letter,
