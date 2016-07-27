@@ -140,6 +140,12 @@ If postcard images are not show make sure that the followng objects are loaded t
  - Make sure that the WSDL > FedoraDjatoka section is configured with and appropriate host and port
 
 
+0.3
+---
+
+* Postcard images are now require a IIIF Image server, rather than relying
+  on Djatoka integrated with Fedora.  Configure appropriate values for
+  **IIIF_API_ENDPOINT** and **IIIF_ID_PREFIX** in ``localsettings.py``.
 
 0.2
 ---
