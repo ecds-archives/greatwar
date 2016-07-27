@@ -17,6 +17,7 @@ as the version number of the tag.
 
 * Updated to use and tested against eXist 2.2
 * Updated to Django 1.9.
+* Postcard images now served out via IIIF Image server.
 * Converted GitHub repository to Git Flow for branch management.
 * Software version is now displayed in site footer.
 * Enabled django-debug-toolbar with eulexist and eulfedora panels for
