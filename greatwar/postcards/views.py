@@ -1,4 +1,4 @@
-from django.http import HttpResponse, Http404
+from django.http import HttpResponse, Http404, HttpResponsePermanentRedirect
 from django.conf import settings
 from django.core.paginator import Paginator, InvalidPage, EmptyPage
 from django.shortcuts import render
@@ -20,7 +20,8 @@ import logging
 # note that pidspace restriction is largely for testing purposes
 postcard_search_opts = {
     'relation': settings.RELATION,
-    'pid': '%s:*' % settings.FEDORA_PIDSPACE
+    'pid': '%s:*' % settings.FEDORA_PIDSPACE,
+    'type': ImageObject
 }
 
 @cache_page(900)
@@ -37,8 +38,8 @@ def summary(request):
     # get categories from fedora collection object
     categories = PostcardCollection.get().interp.content.interp_groups
     return render(request, 'postcards/index.html', {
-       'categories' : categories,
-       'count' : count,
+       'categories': categories,
+       'count': count,
        'postcards': postcards,
        })
 
@@ -119,24 +120,29 @@ def view_postcard_large(request, pid):
     except RequestFailed:
         raise Http404
 
-# TODO: clean up image disseminations, make more efficient
 def postcard_image(request, pid, size):
-    '''Serve out postcard image in requested size.
+    '''Lin to postcard image in requested size.
 
     :param pid: postcard object pid
     :param size: size to return, one of thumbnail, medium, or large
     '''
+
+    # NOTE: formerly this served out actual image content, via
+    # fedora dissemination & djatoka
+    # Images now use an IIIF image server; adding redirects here
+    # for the benefit of search engines or indexes referencing
+    # the old urls
     try:
         repo = Repository()
         obj = repo.get_object(pid, type=ImageObject)
         if size == 'thumbnail':
-            image = obj.thumbnail()
+            url = obj.thumbnail_url
         elif size == 'medium':
-            image = obj.medium_image()
+            url = obj.medium_img_url
         elif size == 'large':
-            image = obj.large_image()
+            url = obj.large_img_url
 
-        return HttpResponse(image, content_type='image/jpeg')
+        return HttpResponsePermanentRedirect(url)
 
     except RequestFailed:
         raise Http404

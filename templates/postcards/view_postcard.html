@@ -13,7 +13,7 @@
 <table>
   <tr>
     <td>
-        <img src="{% url 'postcards:img-medium' pid=card.pid %}" />
+        <img src="{{ card.medium_img_url }}" />
     </td>  <!-- put link to 2x image here -->
     <td class="description">
         <h4>{{card.label}}</h4>

@@ -14,7 +14,7 @@
 <table>
   <tr>
     <td>
-        <img src="{% url 'postcards:img-large' pid=card.pid %}" />
+        <img src="{{ card.large_img_url }}"/>
     </td>  <!-- put link to 2x image here -->
   </tr>
 </table>
