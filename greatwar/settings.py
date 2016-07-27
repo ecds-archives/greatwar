@@ -106,12 +106,12 @@ TEMPLATES = [
                 # Insert your TEMPLATE_CONTEXT_PROCESSORS here or use this
                 # list if you haven't customized them:
                 "django.contrib.auth.context_processors.auth",
-                "django.core.context_processors.debug",
-                "django.core.context_processors.i18n",
-                "django.core.context_processors.media",
+                "django.template.context_processors.debug",
+                "django.template.context_processors.i18n",
+                "django.template.context_processors.media",
                 "django.contrib.messages.context_processors.messages",
                 # additional context processors
-                "django.core.context_processors.request",  # always include request in render context
+                "django.template.context_processors.request",  # always include request in render context
                 "eultheme.context_processors.template_settings",
                 "eultheme.context_processors.downtime_context",
                 "greatwar.version_context",  # include app version
