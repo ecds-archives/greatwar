@@ -5,7 +5,7 @@ import logging
 from os import path
 
 from django.core.urlresolvers import reverse
-from django.test import TestCase as DjangoTestCase
+from django.test import TestCase as DjangoTestCase, override_settings
 from django.conf import settings
 from django.utils.http import urlquote
 
@@ -36,6 +36,8 @@ def tearDownModule():
     for p in postcards:
         repo.purge_object(p.pid)
 
+
+@override_settings(IIIF_API_ENDPOINT='http://lor.is/', IIIF_ID_PREFIX='i:')
 class PostcardViewsTestCase(DjangoTestCase):
     repo = Repository()
 
@@ -75,8 +77,7 @@ class PostcardViewsTestCase(DjangoTestCase):
             self.assertContains(response, reverse('postcards:card',
                     kwargs={'pid': p.pid}),
                     msg_prefix='link to postcard fixture %s should be linked from browse page' % p.pid)
-            self.assertContains(response, reverse('postcards:img-thumb',
-                    kwargs={'pid': p.pid}),
+            self.assertContains(response, p.thumbnail_url,
                     msg_prefix='thumbnail image for postcard fixture %s displayed on browse page' % p.pid)
             self.assertContains(response, p.label,
                     msg_prefix='label from postcard fixture %s should be listed on browse page' % p.pid)
@@ -104,14 +105,11 @@ class PostcardViewsTestCase(DjangoTestCase):
             msg_prefix='postcard view includes postcard label')
         self.assertContains(response, postcard.dc.content.description[len(settings.POSTCARD_DESCRIPTION_LABEL):],
             msg_prefix='postcard view includes postcard description')
-        self.assertContains(response, reverse('postcards:img-medium',
-                    kwargs={'pid': postcard.pid}),
+        self.assertContains(response, postcard.medium_img_url,
                     msg_prefix='medium image for postcard displayed on postcard view')
         self.assertContains(response, reverse('postcards:card-large',
                     kwargs={'pid': postcard.pid}),
                     msg_prefix='large image for postcard linked from postcard view')
-
-
 
         #Test for floating text
         self.assertContains(response, "Text on postcard:", msg_prefix='Text on postcard heading is present')
@@ -146,7 +144,7 @@ class PostcardViewsTestCase(DjangoTestCase):
                             (expected, response.status_code, postcard_url))
 
             self.assertContains(response, 'View full details', msg_prefix='View full details text exists')
-            self.assertContains(response, reverse('postcards:img-large', kwargs={'pid': postcard.pid}),
+            self.assertContains(response, postcard.large_img_url,
                     msg_prefix='large image for postcard on page')
 
 
@@ -159,26 +157,21 @@ class PostcardViewsTestCase(DjangoTestCase):
                         'Expected %s but returned %s for %s' % \
                         (expected, response.status_code, thumb_url))
 
-        # first fixture object
+        # local image views should now be redirects to IIIF server urls
+
         postcard = postcards[0]
-        # TODO/FIXME: getting a 500 error on this; something wrong with fixture?
-        thumb_url = reverse('postcards:img-thumb', kwargs={'pid': postcard.pid})
-        #response = self.client.get(thumb_url)
-        #expected = 200
-        #self.assertEqual(response.status_code, expected,
-        #               'Expected %s but returned %s for %s' % \
-        #                (expected, response.status_code, thumb_url))
-        # TODO: also test mimetype
+        thumb_resp = self.client.get(reverse('postcards:img-thumb', kwargs={'pid': postcard.pid}))
+        self.assertEqual(301, thumb_resp.status_code,
+            'local image views should return a redirect moved permanently')
+        self.assertEqual(unicode(postcard.thumbnail_url), thumb_resp['location'],
+            'location should be postcard thumbnail image via IIIF')
 
 
 class UtilTest(DjangoTestCase):
-
-   def test_get_pid_target(self):
-       target = get_pid_target('postcards:card')
-
-       expected = '%s/postcards/%s:%s' %(settings.BASE_URL,
-           settings.FEDORA_PIDSPACE, urlquote(DjangoPidmanRestClient.pid_token))
-       self.assertEqual(target,expected)
-
-
+    def test_get_pid_target(self):
+        target = get_pid_target('postcards:card')
+        expected = '%s/postcards/%s:%s' % \
+            (settings.BASE_URL, settings.FEDORA_PIDSPACE,
+             urlquote(DjangoPidmanRestClient.pid_token))
+        self.assertEqual(target, expected)
 

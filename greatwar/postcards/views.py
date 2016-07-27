@@ -18,11 +18,12 @@ import logging
 
 # search options for finding postcards
 # note that pidspace restriction is largely for testing purposes
-postcard_search_opts = {
-    'relation': settings.RELATION,
-    'pid': '%s:*' % settings.FEDORA_PIDSPACE,
-    'type': ImageObject
-}
+def postcard_search_opts():
+    return  {
+        'relation': settings.RELATION,
+        'pid': '%s:*' % settings.FEDORA_PIDSPACE,
+        'type': ImageObject
+    }
 
 @cache_page(900)
 def summary(request):
@@ -33,7 +34,7 @@ def summary(request):
     # - used to get total count, and to display a random postcard
     # NOTE: this may be inefficient when all postcards are loaded; consider caching
     repo = Repository()
-    postcards = list(repo.find_objects(**postcard_search_opts))
+    postcards = list(repo.find_objects(**postcard_search_opts()))
     count = len(postcards)
     # get categories from fedora collection object
     categories = PostcardCollection.get().interp.content.interp_groups
@@ -50,7 +51,7 @@ def browse(request):
     number_of_results = 15
     context = {}
 
-    search_opts = postcard_search_opts.copy()
+    search_opts = postcard_search_opts().copy()
     if 'subject' in request.GET:
         context['subject'] = request.GET['subject']
         search_opts['subject'] = request.GET['subject']
@@ -135,6 +136,9 @@ def postcard_image(request, pid, size):
     try:
         repo = Repository()
         obj = repo.get_object(pid, type=ImageObject)
+        if not obj.exists:
+            raise Http404
+
         if size == 'thumbnail':
             url = obj.thumbnail_url
         elif size == 'medium':
