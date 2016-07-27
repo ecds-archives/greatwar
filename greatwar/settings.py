@@ -1,4 +1,4 @@
-# Django settings for findingaids project. Or great war project.
+# Django settings for great war project.
 from os import path
 
 # Get the directory of this file for relative dir paths.
@@ -6,7 +6,6 @@ from os import path
 BASE_DIR = path.dirname(path.dirname(__file__))
 
 DEBUG = True
-TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
     # ('Your Name', 'your_email@domain.com'),
@@ -59,13 +58,6 @@ STATICFILES_DIRS = [
 # Examples: "http://foo.com/media/", "/media/".
 #ADMIN_MEDIA_PREFIX = '/media/'
 
-# List of callables that know how to import templates from various sources.
-TEMPLATE_LOADERS = (
-    'django.template.loaders.filesystem.Loader',
-    'django.template.loaders.app_directories.Loader',
-#     'django.template.loaders.eggs.load_template_source',
-)
-
 MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -76,13 +68,6 @@ MIDDLEWARE_CLASSES = (
 )
 
 ROOT_URLCONF = 'greatwar.urls'
-
-TEMPLATE_DIRS = (
-    path.join(BASE_DIR, 'templates'),
-    # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
-    # Always use forward slashes, even on Windows.
-    # Don't forget to use absolute paths, not relative paths.
-)
 
 INSTALLED_APPS = [
     'django.contrib.auth',
@@ -108,19 +93,35 @@ AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
 )
 
-TEMPLATE_CONTEXT_PROCESSORS = (
-    "django.contrib.auth.context_processors.auth",
-    "django.core.context_processors.debug",
-    "django.core.context_processors.i18n",
-    "django.core.context_processors.media",
-    "django.contrib.messages.context_processors.messages",
-    # additional context processors
-    "django.core.context_processors.request",  # always include request in render context
-    "eultheme.context_processors.template_settings",
-    "eultheme.context_processors.downtime_context",
-    "greatwar.version_context",  # include app version
-)
-
+# updated django 1.8 style template config
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [
+            path.join(BASE_DIR, 'templates'),
+        ],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                # Insert your TEMPLATE_CONTEXT_PROCESSORS here or use this
+                # list if you haven't customized them:
+                "django.contrib.auth.context_processors.auth",
+                "django.core.context_processors.debug",
+                "django.core.context_processors.i18n",
+                "django.core.context_processors.media",
+                "django.contrib.messages.context_processors.messages",
+                # additional context processors
+                "django.core.context_processors.request",  # always include request in render context
+                "eultheme.context_processors.template_settings",
+                "eultheme.context_processors.downtime_context",
+                "greatwar.version_context",  # include app version
+            ],
+            # using default template loaders (filesystem, app directories)
+            # 'loaders': []
+            'debug': False
+        },
+    },
+]
 
 EXISTDB_INDEX_CONFIGFILE = path.join(BASE_DIR, "greatwar", "exist_index.xconf")
 
