@@ -19,7 +19,7 @@ import logging
 # search options for finding postcards
 # note that pidspace restriction is largely for testing purposes
 def postcard_search_opts():
-    return  {
+    return {
         'relation': settings.RELATION,
         'pid': '%s:*' % settings.FEDORA_PIDSPACE,
         'type': ImageObject
