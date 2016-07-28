@@ -4,7 +4,9 @@ eulxml>=1.1
 #eulexistdb>=0.20
 -e git://github.com/emory-libraries/eulexistdb.git@release/0.21#egg=eulexistdb
 eulcommon
-eulfedora>=1.6
+#eulfedora>=1.6
+-e git://github.com/emory-libraries/eulfedora.git@release/1.7#egg=eulfedora
+-e git://github.com/emory-libraries/eulexistdb.git@release/0.21#egg=eulexistdb
 https://wilson.library.emory.edu/jenkins/job/pidman-rest-client_1.2.x/lastSuccessfulBuild/artifact/pidmanclient/dist/pidservices-1.2.0.tar.gz
 # require at least downtime 1.0.4 for exempting exact urls
 django-downtime>=1.0.4
