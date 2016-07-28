@@ -1,9 +1,8 @@
 from django.conf import settings
 from django.core.management.base import CommandError
 
-from eulxml.xmlmap.fields import NodeListField
-from eulxml.xmlmap.teimap import TeiFigure, TeiInterpGroup, TeiInterp, \
-    _TeiBase
+from eulxml.xmlmap.fields import NodeListField, StringField
+from eulxml.xmlmap import teimap
 from eulexistdb.manager import Manager
 from eulexistdb.models import XmlModel
 
@@ -11,12 +10,24 @@ from eulfedora.server import Repository
 from eulfedora.models import DigitalObject, FileDatastream, XmlDatastream
 from piffle.iiif import IIIFImageClient
 
-from pidservices.djangowrapper.shortcuts import DjangoPidmanRestClient
 from util import get_pid_target
 
 # TEI postcard models
 
-class Postcard(XmlModel, TeiFigure):
+# NOTE: extending eulxml.teimap to find interp value in value attribute;
+# this was used previously, but for correct TEI it should be the text
+# content within the interp element; supporting both here so that the
+# postcard interp data need not be changed.
+
+class TeiInterp(teimap.TeiInterp):
+    value = StringField('text()|@value')
+
+
+class TeiInterpGroup(teimap.TeiInterpGroup):
+    interp = NodeListField("tei:interp", TeiInterp)
+
+
+class Postcard(XmlModel, teimap.TeiFigure):
     # entity, head, ana, and description all inherited from TeiFigure
     objects = Manager("//figure")
     interp_groups = NodeListField('ancestor::text//interpGrp', TeiInterpGroup)
@@ -27,11 +38,13 @@ class Postcard(XmlModel, TeiFigure):
     #            return <interp>{$i/@*}{$i/parent::node()/@type}</interp>'''
 
 
-class Categories(XmlModel, TeiInterpGroup):
+class Categories(XmlModel, teimap.TeiInterpGroup):
     objects = Manager("//interpGrp")
+
 
 class KeyValue(XmlModel, TeiInterp):
     objects = Manager("//interp")
+
 
 # preliminary fedora object for images
 class ImageObject(DigitalObject):
@@ -75,15 +88,18 @@ class ImageObject(DigitalObject):
         ark = pidman.create_ark(settings.PIDMAN_DOMAIN, target, self.label)
         arkbase, slash, noid = ark.rpartition('/')
         pid = '%s:%s' % (self.default_pidspace, noid)
-        self.dc.content.identifier_list.append(ark) # Store local identifiers in DC
+        # Store local identifiers in DC
+        self.dc.content.identifier_list.append(ark)
         return pid
 
+
 # map interpgroup into a categories object that can be used as fedora datastream class
-class RepoCategories(_TeiBase):
+class RepoCategories(teimap._TeiBase):
     interp_groups = NodeListField("tei:interpGrp", TeiInterpGroup)
 
+
 class PostcardCollection(DigitalObject):
-    CONTENT_MODELS = [ 'info:fedora/emory-control:Collection-1.0' ]
+    CONTENT_MODELS = ['info:fedora/emory-control:Collection-1.0']
 
     interp = XmlDatastream("INTERP", "Postcard Categories", RepoCategories, defaults={
             'mimetype': 'application/xml',
