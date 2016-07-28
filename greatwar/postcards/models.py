@@ -1,3 +1,4 @@
+import logging
 from django.conf import settings
 from django.core.management.base import CommandError
 
@@ -8,9 +9,14 @@ from eulexistdb.models import XmlModel
 
 from eulfedora.server import Repository
 from eulfedora.models import DigitalObject, FileDatastream, XmlDatastream
+from pidservices.djangowrapper.shortcuts import DjangoPidmanRestClient
 from piffle.iiif import IIIFImageClient
 
 from util import get_pid_target
+
+
+logger = logging.getLogger(__name__)
+
 
 # TEI postcard models
 
@@ -82,15 +88,24 @@ class ImageObject(DigitalObject):
         try:
             pidman = DjangoPidmanRestClient()
         except:
-            raise CommandError("PIDMAN Not Configured. Plese check localsetting.py")
+            if getattr(settings, 'DEV_ENV', False):
+                logger.warn('Failed to configure PID manager client; default pid logic will be used')
+                pidman = None
+            else:
+                raise CommandError("PID manager is not configured. Please check localsetting.py")
 
-        target = get_pid_target('postcards:card')
-        ark = pidman.create_ark(settings.PIDMAN_DOMAIN, target, self.label)
-        arkbase, slash, noid = ark.rpartition('/')
-        pid = '%s:%s' % (self.default_pidspace, noid)
-        # Store local identifiers in DC
-        self.dc.content.identifier_list.append(ark)
-        return pid
+        if pidman:
+            target = get_pid_target('postcards:card')
+            ark = pidman.create_ark(settings.PIDMAN_DOMAIN, target, self.label)
+            arkbase, slash, noid = ark.rpartition('/')
+            pid = '%s:%s' % (self.default_pidspace, noid)
+            # Store local identifiers in DC
+            self.dc.content.identifier_list.append(ark)
+            return pid
+
+        else:
+            # if pidmanager is not available, fall back to default pid behavior
+            return super(ImageObject, self).get_default_pid()
 
 
 # map interpgroup into a categories object that can be used as fedora datastream class
