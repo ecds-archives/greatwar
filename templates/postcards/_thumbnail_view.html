@@ -2,7 +2,7 @@
 <p class="thumbnail">
   <a href="{% url 'postcards:card' pid=postcard.pid %}" class="img">
   <img class="thumbnail" alt="postcard thumbnail"
-      src="{% url 'postcards:img-thumb' pid=postcard.pid %}" />
+      src="{{ postcard.thumbnail_url }}" />
   </a>
   <br/>
    {{ postcard.label }}

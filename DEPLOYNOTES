@@ -140,6 +140,15 @@ If postcard images are not show make sure that the followng objects are loaded t
  - Make sure that the WSDL > FedoraDjatoka section is configured with and appropriate host and port
 
 
+0.3
+---
+
+* Updated to use eXist 2.2; update **EXIST_** settings as needed.
+* Postcard images are now require a IIIF Image server, rather than relying
+  on Djatoka integrated with Fedora.  Configure appropriate values for
+  **IIIF_API_ENDPOINT** and **IIIF_ID_PREFIX** in ``localsettings.py``.
+* Updates to a newer version of Django; may require running
+  ``python manage.py migrate`` to update database models.
 
 0.2
 ---

@@ -1,4 +1,4 @@
-# Django settings for findingaids project. Or great war project.
+# Django settings for great war project.
 from os import path
 
 # Get the directory of this file for relative dir paths.
@@ -6,7 +6,6 @@ from os import path
 BASE_DIR = path.dirname(path.dirname(__file__))
 
 DEBUG = True
-TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
     # ('Your Name', 'your_email@domain.com'),
@@ -59,13 +58,6 @@ STATICFILES_DIRS = [
 # Examples: "http://foo.com/media/", "/media/".
 #ADMIN_MEDIA_PREFIX = '/media/'
 
-# List of callables that know how to import templates from various sources.
-TEMPLATE_LOADERS = (
-    'django.template.loaders.filesystem.Loader',
-    'django.template.loaders.app_directories.Loader',
-#     'django.template.loaders.eggs.load_template_source',
-)
-
 MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -77,19 +69,12 @@ MIDDLEWARE_CLASSES = (
 
 ROOT_URLCONF = 'greatwar.urls'
 
-TEMPLATE_DIRS = (
-    path.join(BASE_DIR, 'templates'),
-    # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
-    # Always use forward slashes, even on Windows.
-    # Don't forget to use absolute paths, not relative paths.
-)
-
 INSTALLED_APPS = [
     'django.contrib.auth',
     'django.contrib.admin',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
-    #'django.contrib.sites',
+    'django.contrib.sites',
     'django.contrib.staticfiles',
     'django.contrib.humanize',
     'eulxml',
@@ -108,27 +93,42 @@ AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
 )
 
-TEMPLATE_CONTEXT_PROCESSORS = (
-    "django.contrib.auth.context_processors.auth",
-    "django.core.context_processors.debug",
-    "django.core.context_processors.i18n",
-    "django.core.context_processors.media",
-    "django.contrib.messages.context_processors.messages",
-    # additional context processors
-    "django.core.context_processors.request", # always include request in render context
-    "eultheme.context_processors.template_settings",
-    "eultheme.context_processors.downtime_context"
-)
-
-
-
+# updated django 1.8 style template config
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [
+            path.join(BASE_DIR, 'templates'),
+        ],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                # Insert your TEMPLATE_CONTEXT_PROCESSORS here or use this
+                # list if you haven't customized them:
+                "django.contrib.auth.context_processors.auth",
+                "django.template.context_processors.debug",
+                "django.template.context_processors.i18n",
+                "django.template.context_processors.media",
+                "django.contrib.messages.context_processors.messages",
+                # additional context processors
+                "django.template.context_processors.request",  # always include request in render context
+                "eultheme.context_processors.template_settings",
+                "eultheme.context_processors.downtime_context",
+                "greatwar.version_context",  # include app version
+            ],
+            # using default template loaders (filesystem, app directories)
+            # 'loaders': []
+            'debug': False
+        },
+    },
+]
 
 EXISTDB_INDEX_CONFIGFILE = path.join(BASE_DIR, "greatwar", "exist_index.xconf")
 
 # temporary pid - should eventually use ARK. must match PID in fixture
 POSTCARD_COLLECTION_PID = 'emory-control:Beck-GreatWar-Postcards-collection'
 
-#This is used to identify Great War records.  The relation is stored on each postcard object
+# This is used to identify Great War records.  The relation is stored on each postcard object
 RELATION = 'The Great War 1914-1918'
 
 # the default owner of all fedora objects created by this app
@@ -155,7 +155,6 @@ DOWNTIME_EXEMPT_EXACT_URLS = (
 # list of IPs that can access the site despite downtime
 # DOWNTIME_ALLOWED_IPS = ['127.0.0.1']
 
-
 import sys
 try:
     sys.path.extend(EXTENSION_DIRS)
@@ -170,7 +169,6 @@ except ImportError:
     print >>sys.stderr, 'No local settings. Trying to start, but if ' + \
         'stuff blows up, try copying localsettings-sample.py to ' + \
         'localsettings.py and setting appropriately for your environment.'
-    pass
 
 try:
     # NOTE: errors if DATABASES is not configured (in some cases),
@@ -188,3 +186,32 @@ except ImportError:
     pass
 
 
+# enable django-debug-toolbar when available & in debug/dev modes
+if DEBUG or DEV_ENV:
+    try:
+        import debug_toolbar
+        # import to ensure debug panel is available before configuring
+        # (not yet in released version of eulfedora)
+        # from eulfedora import debug_panel
+        INSTALLED_APPS.append('debug_toolbar')
+    except ImportError:
+        pass
+
+# configure: default toolbars + existdb query panel
+DEBUG_TOOLBAR_PANELS = [
+    'debug_toolbar.panels.versions.VersionsPanel',
+    'debug_toolbar.panels.timer.TimerPanel',
+    'debug_toolbar.panels.settings.SettingsPanel',
+    'debug_toolbar.panels.headers.HeadersPanel',
+    'debug_toolbar.panels.request.RequestPanel',
+    'eulexistdb.debug_panel.ExistDBPanel',
+    'eulfedora.debug_panel.FedoraPanel',
+    'debug_toolbar.panels.sql.SQLPanel',
+    'debug_toolbar.panels.staticfiles.StaticFilesPanel',
+    'debug_toolbar.panels.templates.TemplatesPanel',
+    'debug_toolbar.panels.cache.CachePanel',
+    'debug_toolbar.panels.signals.SignalsPanel',
+    'debug_toolbar.panels.logging.LoggingPanel',
+    'debug_toolbar.panels.redirects.RedirectsPanel',
+    # 'debug_toolbar.panels.profiling.ProfilingPanel',
+]

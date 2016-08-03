@@ -15,6 +15,10 @@ import greatwar
 # automated build/test tasks
 ##
 
+# set -H prefix for all sudo commands (sets home to match user)
+# (this is particularly important for pip install commands)
+env.sudo_prefix = 'sudo -H'
+
 
 def all_deps():
     '''Locally install all dependencies.'''
@@ -222,7 +226,7 @@ def deploy(path=None, user=None, url_prefix='', remote_proxy=None,
     '''
 
     configure(path=path, user=user, url_prefix=url_prefix,
-        remote_proxy=remote_proxy)
+              remote_proxy=remote_proxy)
     prep_source()
     package_source()
     upload_source()
@@ -231,6 +235,7 @@ def deploy(path=None, user=None, url_prefix='', remote_proxy=None,
     configure_site()
     update_links()
     compare_localsettings()
+    rm_old_builds()
 
 
 @task

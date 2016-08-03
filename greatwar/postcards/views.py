@@ -1,4 +1,4 @@
-from django.http import HttpResponse, Http404
+from django.http import HttpResponse, Http404, HttpResponsePermanentRedirect
 from django.conf import settings
 from django.core.paginator import Paginator, InvalidPage, EmptyPage
 from django.shortcuts import render
@@ -18,10 +18,12 @@ import logging
 
 # search options for finding postcards
 # note that pidspace restriction is largely for testing purposes
-postcard_search_opts = {
-    'relation': settings.RELATION,
-    'pid': '%s:*' % settings.FEDORA_PIDSPACE
-}
+def postcard_search_opts():
+    return {
+        'relation': settings.RELATION,
+        'pid': '%s:*' % settings.FEDORA_PIDSPACE,
+        'type': ImageObject
+    }
 
 @cache_page(900)
 def summary(request):
@@ -32,13 +34,13 @@ def summary(request):
     # - used to get total count, and to display a random postcard
     # NOTE: this may be inefficient when all postcards are loaded; consider caching
     repo = Repository()
-    postcards = list(repo.find_objects(**postcard_search_opts))
+    postcards = list(repo.find_objects(**postcard_search_opts()))
     count = len(postcards)
     # get categories from fedora collection object
     categories = PostcardCollection.get().interp.content.interp_groups
     return render(request, 'postcards/index.html', {
-       'categories' : categories,
-       'count' : count,
+       'categories': categories,
+       'count': count,
        'postcards': postcards,
        })
 
@@ -49,7 +51,7 @@ def browse(request):
     number_of_results = 15
     context = {}
 
-    search_opts = postcard_search_opts.copy()
+    search_opts = postcard_search_opts().copy()
     if 'subject' in request.GET:
         context['subject'] = request.GET['subject']
         search_opts['subject'] = request.GET['subject']
@@ -114,30 +116,37 @@ def view_postcard_large(request, pid):
     try:
         obj = repo.get_object(pid, type=ImageObject)
         obj.label   # access object label to trigger 404 before we get to the template
-
         return render(request, 'postcards/view_postcard_large.html',
-            {'card': obj })
+                      {'card': obj})
     except RequestFailed:
         raise Http404
 
-# TODO: clean up image disseminations, make more efficient
 def postcard_image(request, pid, size):
-    '''Serve out postcard image in requested size.
+    '''Lin to postcard image in requested size.
 
     :param pid: postcard object pid
     :param size: size to return, one of thumbnail, medium, or large
     '''
+
+    # NOTE: formerly this served out actual image content, via
+    # fedora dissemination & djatoka
+    # Images now use an IIIF image server; adding redirects here
+    # for the benefit of search engines or indexes referencing
+    # the old urls
     try:
         repo = Repository()
         obj = repo.get_object(pid, type=ImageObject)
-        if size == 'thumbnail':
-            image = obj.thumbnail()
-        elif size == 'medium':
-            image = obj.medium_image()
-        elif size == 'large':
-            image = obj.large_image()
+        if not obj.exists:
+            raise Http404
 
-        return HttpResponse(image, content_type='image/jpeg')
+        if size == 'thumbnail':
+            url = obj.thumbnail_url
+        elif size == 'medium':
+            url = obj.medium_img_url
+        elif size == 'large':
+            url = obj.large_img_url
+
+        return HttpResponsePermanentRedirect(url)
 
     except RequestFailed:
         raise Http404

@@ -5,9 +5,13 @@ __credits__ = ["Rebecca Koeser", "Sari Connard", "Alex Thomas", "Scott Turnbull"
 __email__ = "libsys-dev@listserv.cc.emory.edu"
 
 # Version Info, parsed below for actual version number.
-__version_info__ = (0, 2, 0, None)
+__version_info__ = (0, 3, 0, None)
 
 # Dot-connect all but the last. Last is dash-connected if not None.
 __version__ = '.'.join([ str(i) for i in __version_info__[:-1] ])
 if __version_info__[-1] is not None: # Adds dash
     __version__ += ('-%s' % (__version_info__[-1],))
+
+# context processor to add version to the template environment
+def version_context(request):
+    return {'SW_VERSION': __version__}
